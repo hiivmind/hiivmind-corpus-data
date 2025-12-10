@@ -1,0 +1,9 @@
+{
+  "name": "github-docs",
+  "description": "Always-current GitHub documentation navigation. Use when working with GitHub Actions, Copilot, APIs, security, or administration.",
+  "version": "1.0.0",
+  "author": {
+    "name": "hiivmind"
+  },
+  "keywords": ["github", "documentation", "actions", "copilot", "api"]
+}

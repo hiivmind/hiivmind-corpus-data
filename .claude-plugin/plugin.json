@@ -1,0 +1,9 @@
+{
+  "name": "hiivmind-corpus-data",
+  "description": "Collection of always-current documentation navigation plugins for popular open source projects",
+  "version": "1.0.0",
+  "author": {
+    "name": "hiivmind"
+  },
+  "keywords": ["documentation", "navigation", "clickhouse", "polars", "github"]
+}

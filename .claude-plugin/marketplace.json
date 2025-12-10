@@ -1,0 +1,33 @@
+{
+  "name": "hiivmind-corpus-data",
+  "owner": {
+    "name": "hiivmind"
+  },
+  "metadata": {
+    "description": "Collection of always-current documentation navigation plugins for popular open source projects",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "clickhouse-docs",
+      "source": "./clickhouse-docs",
+      "description": "Always-current ClickHouse documentation with indexed navigation. Use when working with ClickHouse data modeling, ETL, query optimization, or operations.",
+      "version": "1.0.0",
+      "keywords": ["clickhouse", "documentation", "database", "analytics", "olap"]
+    },
+    {
+      "name": "polars-docs",
+      "source": "./polars-docs",
+      "description": "Always-current Polars documentation navigation. Use when working with Polars DataFrames, expressions, lazy API, or data transformations.",
+      "version": "1.0.0",
+      "keywords": ["polars", "documentation", "dataframe", "python", "rust"]
+    },
+    {
+      "name": "github-docs",
+      "source": "./github-docs",
+      "description": "Always-current GitHub documentation navigation. Use when working with GitHub Actions, Copilot, APIs, security, or administration.",
+      "version": "1.0.0",
+      "keywords": ["github", "documentation", "actions", "copilot", "api"]
+    }
+  ]
+}
