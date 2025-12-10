@@ -1,9 +1,0 @@
-{
-  "name": "polars-docs",
-  "description": "Always-current Polars documentation navigation. Use when working with Polars DataFrames, expressions, lazy API, or data transformations.",
-  "version": "1.0.0",
-  "author": {
-    "name": "hiivmind"
-  },
-  "keywords": ["polars", "documentation", "dataframe", "python", "rust"]
-}

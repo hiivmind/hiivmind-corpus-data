@@ -1,0 +1,10 @@
+{
+  "name": "hiivmind-corpus-substrait",
+  "description": "Always-current Substrait documentation with intelligent navigation",
+  "version": "1.0.0",
+  "author": {
+    "name": "hiivmind"
+  },
+  "repository": "https://github.com/hiivmind/hiivmind-corpus-substrait",
+  "keywords": ["corpus", "documentation", "substrait", "query-plan", "sql", "arrow", "calcite", "interoperability"]
+}

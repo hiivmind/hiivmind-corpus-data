@@ -1,0 +1,10 @@
+{
+  "name": "hiivmind-corpus-narwhals",
+  "description": "Always-current Narwhals documentation with intelligent navigation",
+  "version": "1.0.0",
+  "author": {
+    "name": "hiivmind"
+  },
+  "repository": "https://github.com/hiivmind/hiivmind-corpus-narwhals",
+  "keywords": ["corpus", "documentation", "narwhals", "dataframe", "polars", "pandas", "pyarrow", "agnostic"]
+}

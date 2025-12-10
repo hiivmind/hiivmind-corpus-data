@@ -1,0 +1,31 @@
+# Narwhals Corpus Configuration
+schema_version: 2
+
+corpus:
+  name: "narwhals"
+  display_name: "Narwhals"
+  created_at: "2025-12-10T15:40:00Z"
+
+# Multiple sources - each with its own type and tracking
+sources:
+  - id: "narwhals"
+    type: "git"
+    repo_url: "https://github.com/narwhals-dev/narwhals"
+    repo_owner: "narwhals-dev"
+    repo_name: "narwhals"
+    branch: "main"
+    docs_root: "docs"
+    last_commit_sha: "868ab3e22da9bdf262f310d41e6c5fc449117be0"
+    last_indexed_at: "2025-12-10T15:50:00Z"
+
+index:
+  format: "markdown"
+  last_updated_at: "2025-12-10T15:50:00Z"
+
+settings:
+  include_patterns:
+    - "**/*.md"
+  exclude_patterns:
+    - "**/assets/**"
+    - "**/css/**"
+    - "**/javascripts/**"

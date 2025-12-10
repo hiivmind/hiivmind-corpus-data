@@ -1,0 +1,32 @@
+# Ibis Corpus Configuration
+schema_version: 2
+
+corpus:
+  name: "ibis"
+  display_name: "Ibis"
+  created_at: "2025-12-10T15:34:00Z"
+
+# Multiple sources - each with its own type and tracking
+sources:
+  - id: "ibis"
+    type: "git"
+    repo_url: "https://github.com/ibis-project/ibis"
+    repo_owner: "ibis-project"
+    repo_name: "ibis"
+    branch: "main"
+    docs_root: "docs"
+    last_commit_sha: "9126733b38e1c92f6e787f92dc9954e88ab6400d"
+    last_indexed_at: "2025-12-10T15:45:00Z"
+
+index:
+  format: "markdown"
+  last_updated_at: "2025-12-10T15:45:00Z"
+
+settings:
+  include_patterns:
+    - "**/*.qmd"
+    - "**/*.md"
+  exclude_patterns:
+    - "**/_freeze/**"
+    - "**/posts/**"
+    - "**/presentations/**"

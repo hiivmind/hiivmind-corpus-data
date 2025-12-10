@@ -1,0 +1,10 @@
+{
+  "name": "hiivmind-corpus-ibis",
+  "description": "Always-current Ibis documentation with intelligent navigation",
+  "version": "1.0.0",
+  "author": {
+    "name": "hiivmind"
+  },
+  "repository": "https://github.com/hiivmind/hiivmind-corpus-ibis",
+  "keywords": ["corpus", "documentation", "ibis", "dataframe", "sql", "python", "duckdb", "bigquery", "backends"]
+}

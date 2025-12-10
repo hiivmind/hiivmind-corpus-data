@@ -1,0 +1,32 @@
+# Polars Corpus Configuration
+schema_version: 2
+
+corpus:
+  name: "polars"
+  display_name: "Polars"
+  created_at: "2025-12-10T15:23:00Z"
+
+# Multiple sources - each with its own type and tracking
+sources:
+  - id: "polars"
+    type: "git"
+    repo_url: "https://github.com/pola-rs/polars"
+    repo_owner: "pola-rs"
+    repo_name: "polars"
+    branch: "main"
+    docs_root: "docs/source"
+    last_commit_sha: "2a151c10fa76790711c2f75e6d012dd69c627ddd"
+    last_indexed_at: "2025-12-10T15:30:00Z"
+
+index:
+  format: "markdown"
+  last_updated_at: "2025-12-10T15:30:00Z"
+
+settings:
+  include_patterns:
+    - "**/*.md"
+    - "**/*.mdx"
+  exclude_patterns:
+    - "**/_*.md"
+    - "**/_snippets/**"
+    - "**/_build/**"

@@ -3,31 +3,39 @@
   "owner": {
     "name": "hiivmind"
   },
+  "repository": "https://github.com/hiivmind/hiivmind-corpus-data",
   "metadata": {
     "description": "Collection of always-current documentation navigation plugins for popular open source projects",
     "version": "1.0.0"
   },
   "plugins": [
     {
-      "name": "clickhouse-docs",
-      "source": "./clickhouse-docs",
-      "description": "Always-current ClickHouse documentation with indexed navigation. Use when working with ClickHouse data modeling, ETL, query optimization, or operations.",
+      "name": "hiivmind-corpus-polars",
+      "source": "./hiivmind-corpus-polars",
+      "description": "Always-current Polars documentation with intelligent navigation. Use when working with Polars DataFrames, expressions, lazy API, or Rust dataframe operations.",
       "version": "1.0.0",
-      "keywords": ["clickhouse", "documentation", "database", "analytics", "olap"]
+      "keywords": ["polars", "documentation", "dataframe", "python", "rust", "arrow"]
     },
     {
-      "name": "polars-docs",
-      "source": "./polars-docs",
-      "description": "Always-current Polars documentation navigation. Use when working with Polars DataFrames, expressions, lazy API, or data transformations.",
+      "name": "hiivmind-corpus-ibis",
+      "source": "./hiivmind-corpus-ibis",
+      "description": "Always-current Ibis documentation with intelligent navigation. Use when working with portable dataframe expressions across 20+ SQL backends.",
       "version": "1.0.0",
-      "keywords": ["polars", "documentation", "dataframe", "python", "rust"]
+      "keywords": ["ibis", "documentation", "dataframe", "sql", "duckdb", "bigquery", "postgres"]
     },
     {
-      "name": "github-docs",
-      "source": "./github-docs",
-      "description": "Always-current GitHub documentation navigation. Use when working with GitHub Actions, Copilot, APIs, security, or administration.",
+      "name": "hiivmind-corpus-narwhals",
+      "source": "./hiivmind-corpus-narwhals",
+      "description": "Always-current Narwhals documentation with intelligent navigation. Use when writing dataframe-agnostic code for pandas, Polars, PyArrow, and more.",
       "version": "1.0.0",
-      "keywords": ["github", "documentation", "actions", "copilot", "api"]
+      "keywords": ["narwhals", "documentation", "dataframe", "polars", "pandas", "pyarrow", "agnostic"]
+    },
+    {
+      "name": "hiivmind-corpus-substrait",
+      "source": "./hiivmind-corpus-substrait",
+      "description": "Always-current Substrait documentation with intelligent navigation. Use when working with cross-language query plans and data compute interoperability.",
+      "version": "1.0.0",
+      "keywords": ["substrait", "documentation", "query-plan", "sql", "arrow", "calcite", "interoperability"]
     }
   ]
 }
