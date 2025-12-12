@@ -14,7 +14,7 @@ A Claude Code plugin providing always-current access to Narwhals documentation w
 
 ```bash
 # Add the marketplace containing this plugin
-/plugin marketplace add hiivmind/hiivmind-corpus-narwhals
+/plugin marketplace add hiivmind/hiivmind-corpus-data
 
 # Install the plugin
 /plugin install hiivmind-corpus-narwhals
@@ -26,18 +26,26 @@ A Claude Code plugin providing always-current access to Narwhals documentation w
 
 Clone this repository to your Claude Code plugins directory.
 
-## First-Time Setup
+## Maintenance Skills
 
-After installing, invoke the maintenance skill to build the index:
+This corpus is managed by **hiivmind-corpus** skills:
+
+| Skill | Purpose |
+|-------|---------|
+| `hiivmind-corpus-add-source` | Add new documentation sources |
+| `hiivmind-corpus-build` | Build/rebuild the documentation index |
+| `hiivmind-corpus-enhance` | Deepen coverage on specific topics |
+| `hiivmind-corpus-refresh` | Update index from upstream changes |
+
+### First-Time Setup
+
+After installing, use the `hiivmind-corpus-build` skill to build the index:
 
 ```
 Please build the Narwhals documentation index
 ```
 
-This will:
-1. Clone the Narwhals docs repository to `.source/`
-2. Build the full index
-3. Write `data/config.yaml` and `data/index.yaml`
+This requires the `hiivmind-corpus` meta-plugin to be installed.
 
 ## Usage
 
@@ -54,18 +62,24 @@ What backends does Narwhals support?
 
 Claude will automatically find and cite relevant documentation.
 
-### Manual Index Updates
+### Index Updates
 
-Check if updates are available:
+Refresh from upstream changes (uses `hiivmind-corpus-refresh`):
 
 ```
-Check if the Narwhals documentation index needs updating
+Refresh the Narwhals corpus from upstream
 ```
 
-Force a full rebuild:
+Full rebuild (uses `hiivmind-corpus-build`):
 
 ```
 Rebuild the Narwhals documentation index from scratch
+```
+
+Enhance a specific topic (uses `hiivmind-corpus-enhance`):
+
+```
+Add more detail about @narwhalify decorator to the Narwhals index
 ```
 
 ## Skills
@@ -100,15 +114,13 @@ hiivmind-corpus-narwhals/
 
 ## Configuration
 
-Edit `data/config.yaml` to customize:
+The `data/config.yaml` and `data/index.md` files are managed by hiivmind-corpus skills. Do not edit them manually.
 
-- **include_patterns**: File patterns to index
-- **exclude_patterns**: Files to skip
-- **language_filter**: Documentation language
-- **priority_paths**: Sections to index with more detail
+To add new sources, use `hiivmind-corpus-add-source`. To rebuild or enhance the index, use `hiivmind-corpus-build` or `hiivmind-corpus-enhance`.
 
 ## Requirements
 
+- `hiivmind-corpus` meta-plugin installed (provides maintenance skills)
 - Git (for cloning and updating documentation)
 - Claude Code with plugin support
 
