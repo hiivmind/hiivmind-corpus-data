@@ -91,22 +91,45 @@ Examples:
 
 ## Source Access
 
+### Worked Example (IMPORTANT - Follow This Pattern!)
+
+**Index entry found:** `narwhals:basics/dataframe.md`
+
+**Step 1 - Parse the path:**
+- `source_id` = `narwhals` (everything before the colon)
+- `relative_path` = `basics/dataframe.md` (everything after the colon)
+
+**Step 2 - Look up source in config.yaml:**
+```yaml
+sources:
+  - id: narwhals
+    type: git
+    repo_owner: narwhals-dev
+    repo_name: narwhals
+    branch: main
+    docs_root: docs
+```
+
+**Step 3 - Construct the full path:**
+- Local clone: `.source/narwhals/docs/basics/dataframe.md`
+- GitHub URL: `https://raw.githubusercontent.com/narwhals-dev/narwhals/main/docs/basics/dataframe.md`
+
+**CRITICAL:** The `relative_path` from the index is used EXACTLY as-is. NEVER invent or guess filenames!
+
 ### For git sources
 
-Look up the source in `data/config.yaml` to get `repo_owner`, `repo_name`, `branch`, and `docs_root`.
-
 **If `.source/{source_id}/` exists (local clone):**
-Read directly from `.source/{source_id}/{docs_root}/{path}`
+Read directly from `.source/{source_id}/{docs_root}/{relative_path}`
 
 **If no local clone:**
 
-Option A - Fetch on demand:
+Fetch from GitHub using the EXACT path from the index:
 ```
-https://raw.githubusercontent.com/{repo_owner}/{repo_name}/{branch}/{docs_root}/{path}
+https://raw.githubusercontent.com/{repo_owner}/{repo_name}/{branch}/{docs_root}/{relative_path}
 ```
-Use WebFetch to retrieve content. No clone needed.
+Use WebFetch to retrieve content.
 
-Option B - Clone locally:
+Or clone locally:
 ```bash
 git clone --depth 1 {repo_url} .source/{source_id}
 ```
