@@ -1,5 +1,5 @@
 ---
-name: hiivmind-corpus-ibis-navigate
+name: hiivmind-corpus-navigate-ibis
 description: Find relevant Ibis documentation. Use when working with Ibis code, APIs, backends, or expressions.
 ---
 

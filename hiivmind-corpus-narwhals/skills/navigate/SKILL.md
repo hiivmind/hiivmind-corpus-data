@@ -1,5 +1,5 @@
 ---
-name: hiivmind-corpus-narwhals-navigate
+name: hiivmind-corpus-navigate-narwhals
 description: Find relevant Narwhals documentation. Use when writing dataframe-agnostic code that works with pandas, Polars, PyArrow, cuDF, Modin, Dask, DuckDB, Ibis, or PySpark.
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: hiivmind-corpus-substrait-navigate
+name: hiivmind-corpus-navigate-substrait
 description: Find relevant Substrait documentation. Use when working with cross-language query plans, data compute operations, or interoperability between SQL engines and Arrow.
 ---
 

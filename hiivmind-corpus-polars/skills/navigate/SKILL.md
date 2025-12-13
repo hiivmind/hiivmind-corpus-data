@@ -1,5 +1,5 @@
 ---
-name: hiivmind-corpus-polars-navigate
+name: hiivmind-corpus-navigate-polars
 description: Find relevant Polars documentation. Use when working with Polars code, APIs, or configuration.
 ---
 
