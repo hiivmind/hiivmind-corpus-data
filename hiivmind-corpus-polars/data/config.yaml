@@ -15,8 +15,8 @@ sources:
     repo_name: "polars"
     branch: "main"
     docs_root: "docs/source"
-    last_commit_sha: "2a151c10fa76790711c2f75e6d012dd69c627ddd"
-    last_indexed_at: "2025-12-10T15:30:00Z"
+    last_commit_sha: "fe85677075151187768ab639ccc3ffb501b8522b"
+    last_indexed_at: "2025-12-13T12:00:00Z"
 
 index:
   format: "markdown"
