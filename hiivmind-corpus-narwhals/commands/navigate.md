@@ -1,7 +1,7 @@
 ---
-description: Ask questions about Narwhals documentation or manage this corpus
-argument-hint: Question or command (e.g., "how do I write agnostic code?", "refresh", "enhance")
-allowed-tools: ["Read", "Grep", "Glob", "WebFetch", "AskUserQuestion", "Skill", "Task", "TodoWrite"]
+description: Ask questions about Narwhals documentation
+argument-hint: Your question (e.g., "how do I write agnostic code?", "converting between frameworks")
+allowed-tools: ["Read", "Grep", "Glob", "WebFetch", "AskUserQuestion", "Task", "TodoWrite"]
 ---
 
 # Narwhals Corpus Navigator
@@ -14,9 +14,7 @@ Direct access to Narwhals documentation. Covers dataframe-agnostic code for pand
 
 ---
 
-## Routing
-
-### If no arguments provided
+## If No Arguments Provided
 
 Show a brief help message:
 
@@ -28,31 +26,10 @@ Examples:
   /hiivmind-corpus-narwhals:navigate converting between frameworks
   /hiivmind-corpus-narwhals:navigate supported operations
 
-Maintenance:
-  /hiivmind-corpus-narwhals:navigate refresh     - Update index from upstream
-  /hiivmind-corpus-narwhals:navigate enhance X   - Add depth to topic X
-  /hiivmind-corpus-narwhals:navigate status      - Check corpus freshness
+For maintenance, use the parent plugin:
+  /hiivmind-corpus refresh narwhals
+  /hiivmind-corpus enhance narwhals [topic]
 ```
-
-### If arguments match a maintenance command
-
-| Pattern | Skill to Load |
-|---------|---------------|
-| `refresh`, `update`, `sync` | `hiivmind-corpus-refresh` |
-| `enhance {topic}` | `hiivmind-corpus-enhance` |
-| `status`, `freshness`, `stale?` | `hiivmind-corpus-refresh` (status mode) |
-| `add source {url}` | `hiivmind-corpus-add-source` |
-| `awareness`, `inject`, `claude.md` | `hiivmind-corpus-awareness` |
-
-**How to invoke parent skills:**
-
-1. **Set corpus context** - All paths are relative to `${CLAUDE_PLUGIN_ROOT}`
-2. **Load the skill** via the Skill tool (e.g., `hiivmind-corpus-refresh`)
-3. **Pass context** in your message: "Working in Narwhals corpus at ${CLAUDE_PLUGIN_ROOT}. User wants to {action}."
-
-### Otherwise: Navigate (default path)
-
-This is a documentation question. Follow the navigation process below.
 
 ---
 
@@ -61,9 +38,10 @@ This is a documentation question. Follow the navigation process below.
 1. **Search the indexes first** - Grep `data/` for relevant terms
 2. **If no search matches, read the index**: `data/index.md`
 3. **Parse path format**: `{source_id}:{relative_path}`
-4. **Look up source** in `data/config.yaml` by ID
-5. **Get content** based on source type
-6. **Answer** with citation to source and file path
+4. **Check for `⚡ GREP` marker** - if present, use Grep instead of Read
+5. **Look up source** in `data/config.yaml` by ID
+6. **Get content** based on source type
+7. **Answer** with citation to source and file path
 
 ---
 
@@ -95,7 +73,7 @@ grep -ri "{term}" data/ --include="*.md"
 If only related content found, use AskUserQuestion to:
 1. Clarify the request
 2. Show what's available
-3. Identify index gaps and suggest `/hiivmind-corpus-narwhals:navigate enhance {topic}`
+3. Identify index gaps and suggest `/hiivmind-corpus enhance narwhals {topic}`
 
 ---
 
@@ -133,6 +111,14 @@ Read from cache: `.cache/web/{source_id}/{relative_path}`
 
 ---
 
+## Making Projects Aware of This Corpus
+
+If you're working in a project that uses Narwhals but doesn't know about this corpus, you can add awareness to the project's CLAUDE.md.
+
+**The `references/project-awareness.md` file** contains a ready-to-use snippet.
+
+---
+
 ## Example Sessions
 
 ### Documentation Question
@@ -144,9 +130,14 @@ Read from cache: `.cache/web/{source_id}/{relative_path}`
 3. Read the source file
 4. Answer with code examples
 
-### Maintenance
+---
 
-**User:** `/hiivmind-corpus-narwhals:navigate refresh`
+## Corpus Maintenance
 
-1. Detect maintenance keyword
-2. Load `hiivmind-corpus-refresh` with corpus context
+For corpus maintenance, use the parent plugin:
+
+```
+/hiivmind-corpus refresh narwhals     - Update index from upstream
+/hiivmind-corpus enhance narwhals X   - Add depth to topic X
+/hiivmind-corpus status narwhals      - Check corpus freshness
+```
