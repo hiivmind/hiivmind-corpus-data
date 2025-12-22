@@ -27,8 +27,8 @@ Examples:
   /hiivmind-corpus-polars:navigate reading parquet files
 
 For maintenance, use the parent plugin:
-  /hiivmind-corpus refresh polars
-  /hiivmind-corpus enhance polars [topic]
+  /hiivmind-corpus:hiivmind_corpus refresh polars
+  /hiivmind-corpus:hiivmind_corpus enhance polars [topic]
 ```
 
 ---
@@ -137,7 +137,7 @@ If you're working in a project that uses Polars but doesn't know about this corp
 For corpus maintenance, use the parent plugin:
 
 ```
-/hiivmind-corpus refresh polars     - Update index from upstream
-/hiivmind-corpus enhance polars X   - Add depth to topic X
-/hiivmind-corpus status polars      - Check corpus freshness
+/hiivmind-corpus:hiivmind_corpus refresh polars     - Update index from upstream
+/hiivmind-corpus:hiivmind_corpus enhance polars X   - Add depth to topic X
+/hiivmind-corpus:hiivmind_corpus status polars      - Check corpus freshness
 ```

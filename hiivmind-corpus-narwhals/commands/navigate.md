@@ -27,8 +27,8 @@ Examples:
   /hiivmind-corpus-narwhals:navigate supported operations
 
 For maintenance, use the parent plugin:
-  /hiivmind-corpus refresh narwhals
-  /hiivmind-corpus enhance narwhals [topic]
+  /hiivmind-corpus:hiivmind_corpus refresh narwhals
+  /hiivmind-corpus:hiivmind_corpus enhance narwhals [topic]
 ```
 
 ---
@@ -137,7 +137,7 @@ If you're working in a project that uses Narwhals but doesn't know about this co
 For corpus maintenance, use the parent plugin:
 
 ```
-/hiivmind-corpus refresh narwhals     - Update index from upstream
-/hiivmind-corpus enhance narwhals X   - Add depth to topic X
-/hiivmind-corpus status narwhals      - Check corpus freshness
+/hiivmind-corpus:hiivmind_corpus refresh narwhals     - Update index from upstream
+/hiivmind-corpus:hiivmind_corpus enhance narwhals X   - Add depth to topic X
+/hiivmind-corpus:hiivmind_corpus status narwhals      - Check corpus freshness
 ```

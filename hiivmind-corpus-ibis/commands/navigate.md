@@ -27,8 +27,8 @@ Examples:
   /hiivmind-corpus-ibis:navigate expressions and operations
 
 For maintenance, use the parent plugin:
-  /hiivmind-corpus refresh ibis
-  /hiivmind-corpus enhance ibis [topic]
+  /hiivmind-corpus:hiivmind_corpus refresh ibis
+  /hiivmind-corpus:hiivmind_corpus enhance ibis [topic]
 ```
 
 ---
@@ -137,7 +137,7 @@ If you're working in a project that uses Ibis but doesn't know about this corpus
 For corpus maintenance, use the parent plugin:
 
 ```
-/hiivmind-corpus refresh ibis     - Update index from upstream
-/hiivmind-corpus enhance ibis X   - Add depth to topic X
-/hiivmind-corpus status ibis      - Check corpus freshness
+/hiivmind-corpus:hiivmind_corpus refresh ibis     - Update index from upstream
+/hiivmind-corpus:hiivmind_corpus enhance ibis X   - Add depth to topic X
+/hiivmind-corpus:hiivmind_corpus status ibis      - Check corpus freshness
 ```
