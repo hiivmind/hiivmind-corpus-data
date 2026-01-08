@@ -22,12 +22,12 @@ sources:
     repo_name: "narwhals"
     branch: "main"
     docs_root: "docs"
-    last_commit_sha: "3d7038dac4ff61f0cbc661cd3ffdec5186348843"
-    last_indexed_at: "2025-12-17T12:00:00Z"
+    last_commit_sha: "d7bb050e91a6a6528eba5fcf8e81fa8bfeecaa8b"
+    last_indexed_at: "2026-01-08T12:00:00Z"
 
 index:
   format: "markdown"
-  last_updated_at: "2025-12-17T12:00:00Z"
+  last_updated_at: "2026-01-08T12:00:00Z"
 
 settings:
   include_patterns:

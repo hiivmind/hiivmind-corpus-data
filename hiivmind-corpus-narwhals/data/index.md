@@ -1,7 +1,7 @@
 # Narwhals Documentation Index
 
 > Source: narwhals (git) | 50 docs | Dataframe-agnostic compatibility layer
-> Last updated: 2025-12-17
+> Last updated: 2026-01-08
 
 ---
 
@@ -98,13 +98,13 @@ Shows which methods are supported across backends (pandas, Polars, PyArrow, cuDF
 - **Narwhals Module** `narwhals:api-reference/narwhals.md` - Top-level functions: `from_native`, `to_native`, `narwhalify`, `col`, `lit`, `all`, `sum_horizontal`, `mean_horizontal`, `concat`, `when/then/otherwise`, etc.
 - **DataFrame** `narwhals:api-reference/dataframe.md` - `DataFrame` class: `select`, `with_columns`, `filter`, `group_by`, `join`, `sort`, `head`, `tail`, `unique`, `drop`, `rename`, `cast`, `to_native`, `schema`, `columns`, `shape`
 - **LazyFrame** `narwhals:api-reference/lazyframe.md` - `LazyFrame` class: lazy equivalents of DataFrame methods plus `collect`, `explain`
-- **Series** `narwhals:api-reference/series.md` - `Series` class: element-wise operations, aggregations, type conversions, `any_value` for arbitrary value selection
+- **Series** `narwhals:api-reference/series.md` - `Series` class: element-wise operations, aggregations, type conversions, `any_value` for arbitrary value selection, trigonometric functions (`cos`, `sin`)
 
 ### Expression API
-- **Expr** `narwhals:api-reference/expr.md` - `Expr` class: column expressions, arithmetic, comparisons, aggregations, window functions via `over()`, `any_value` for arbitrary group value selection
+- **Expr** `narwhals:api-reference/expr.md` - `Expr` class: column expressions, arithmetic, comparisons, aggregations, window functions via `over()`, `any_value` for arbitrary group value selection, trigonometric functions (`cos`, `sin`)
 - **Expr.cat** `narwhals:api-reference/expr_cat.md` - Categorical namespace: `get_categories`
 - **Expr.dt** `narwhals:api-reference/expr_dt.md` - Datetime namespace: `year`, `month`, `day`, `hour`, `minute`, `second`, `millisecond`, `microsecond`, `nanosecond`, `ordinal_day`, `weekday`, `total_minutes`, `total_seconds`, etc.
-- **Expr.list** `narwhals:api-reference/expr_list.md` - List namespace: `len`, `get`, `contains`, `mean`, `median`, `min`, `max`, `sum`, `unique`
+- **Expr.list** `narwhals:api-reference/expr_list.md` - List namespace: `len`, `get`, `contains`, `mean`, `median`, `min`, `max`, `sort`, `sum`, `unique`
 - **Expr.name** `narwhals:api-reference/expr_name.md` - Name manipulation: `keep`, `map`, `prefix`, `suffix`, `to_lowercase`, `to_uppercase`
 - **Expr.str** `narwhals:api-reference/expr_str.md` - String namespace: `len`, `to_lowercase`, `to_uppercase`, `starts_with`, `ends_with`, `contains`, `slice`, `head`, `tail`, `strip`, `replace`, `split`
 - **Expr.struct** `narwhals:api-reference/expr_struct.md` - Struct namespace: `field`
@@ -112,7 +112,7 @@ Shows which methods are supported across backends (pandas, Polars, PyArrow, cuDF
 ### Series Namespaces
 - **Series.cat** `narwhals:api-reference/series_cat.md` - Series categorical methods
 - **Series.dt** `narwhals:api-reference/series_dt.md` - Series datetime methods
-- **Series.list** `narwhals:api-reference/series_list.md` - Series list methods: `len`, `get`, `contains`, `mean`, `median`, `min`, `max`, `sum`, `unique`
+- **Series.list** `narwhals:api-reference/series_list.md` - Series list methods: `len`, `get`, `contains`, `mean`, `median`, `min`, `max`, `sort`, `sum`, `unique`
 - **Series.str** `narwhals:api-reference/series_str.md` - Series string methods
 - **Series.struct** `narwhals:api-reference/series_struct.md` - Series struct methods
 
@@ -128,5 +128,5 @@ Shows which methods are supported across backends (pandas, Polars, PyArrow, cuDF
 - **Dependencies** `narwhals:api-reference/dependencies.md` - Backend detection utilities: `is_pandas_dataframe`, `is_polars_dataframe`, `get_polars`, `get_pandas`, etc.
 - **Implementation** `narwhals:api-reference/implementation.md` - Backend implementation details
 - **Exceptions** `narwhals:api-reference/exceptions.md` - Exception classes
-- **Testing** `narwhals:api-reference/testing.md` - Testing utilities for Narwhals code
+- **Testing** `narwhals:api-reference/testing.md` - Testing utilities: `assert_frame_equal`, `assert_series_equal`
 - **Utils** `narwhals:api-reference/utils.md` - Utility functions
