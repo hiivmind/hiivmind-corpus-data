@@ -1,7 +1,7 @@
 # Substrait Documentation Index
 
-> Source: substrait (git) | 42 docs | Cross-language specification for data compute operations
-> Last updated: 2025-12-10
+> Source: substrait (git) | 43 docs | Cross-language specification for data compute operations
+> Last updated: 2026-01-08
 
 ---
 
@@ -35,15 +35,16 @@
 - **Type Classes** `substrait:types/type_classes.md` - Simple types: integers (`i8`-`i128`), floats (`fp32`, `fp64`), `boolean`, `string`, `binary`, `date`, `time`, `timestamp`, `timestamp_tz`, `interval_year`, `interval_day`, `uuid`, `fixedchar`, `varchar`, `fixedbinary`, `decimal`. Compound types: `STRUCT`, `LIST`, `MAP`. User-defined types via extensions
 - **Type Variations** `substrait:types/type_variations.md` - Physical variations of base types, distinguished by in-memory format
 - **Type Aliases** `substrait:types/type_aliases.md` - Shorthand names for common type configurations
-- **Type Parsing** `substrait:types/type_parsing.md` - Syntax for describing types in text form
+- **Type Parsing** `substrait:types/type_parsing.md` - Syntax for describing types in text form. Includes function types: `func<any1 -> any2>` (single param), `func<(any1, any2) -> any3>` (multiple params)
 - **Named Structs** `substrait:types/named_structs.md` - Structs with named fields for schemas. `NamedStruct` = struct type + column names. Names in depth-first order for nested types
 
 ---
 
 ## Expressions
 
-- **Field References** `substrait:expressions/field_references.md` - Identify portions of a record to operate on. Always numeric (not by name). `structField.field: 1` = second field. `rootReference: {}` = relative to current schema. References only make sense relative to a schema context
+- **Field References** `substrait:expressions/field_references.md` - Identify portions of a record to operate on. Always numeric (not by name). `structField.field: 1` = second field. Root types: `RootReference` (incoming record), `OuterReference` (correlated subqueries), `Expression` (expression result), `LambdaParameterReference` (lambda params). References only make sense relative to a schema context
 - **Scalar Functions** `substrait:expressions/scalar_functions.md` - Function specification: `functionReference` (ID into extension list), `outputType`, `arguments` (positional). Functions defined in extension YAML files. Examples: `is_null`, `index_in`, `equal`, `multiply`. Arguments wrapped in `value` objects
+- **Lambda Expressions** `substrait:expressions/lambda_expressions.md` - Inline anonymous functions for higher-order operations. Components: `parameters` (struct type), `body` (expression). Type is `func<params -> return>`. Parameter access via `LambdaParameterReference` with `steps_out` for nested scopes. `LambdaInvocation` for direct calls. Used with functions like `transform` and `filter` on collections. Supports closures referencing outer lambdas, input records, and outer queries
 - **Aggregate Functions** `substrait:expressions/aggregate_functions.md` - Functions that collapse many records into one value. Examples: SUM, COUNT, AVG. Used in `measures` of Aggregate relations. May have optional filter
 - **Window Functions** `substrait:expressions/window_functions.md` - Relate a record to encompassing records. SQL examples: RANK, NTILE, ROW_NUMBER. Frame specification, partitioning, ordering
 - **Specialized Record Expressions** `substrait:expressions/specialized_record_expressions.md` - Expressions outside function paradigm: if/then/else, switch/case, cast. Cast is an expression type, not a function
