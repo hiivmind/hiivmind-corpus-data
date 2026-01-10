@@ -92,9 +92,9 @@ Don't start exploring, guessing paths, or searching the source files. Instead, *
 Index entries use the format: `{source_id}:{relative_path}`
 
 Examples:
-- `substrait:relations/index.md` - Git source
-- `local:team-standards/guidelines.md` - Local uploads
-- `web:blog-posts/article.md` - Cached web content
+- `substrait:relations/index.md` - Relation operators overview
+- `substrait:types/type_classes.md` - Type system documentation
+- `substrait:expressions/scalar_functions.md` - Scalar function reference
 
 ---
 

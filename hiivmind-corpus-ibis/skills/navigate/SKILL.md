@@ -92,9 +92,9 @@ Don't start exploring, guessing paths, or searching the source files. Instead, *
 Index entries use the format: `{source_id}:{relative_path}`
 
 Examples:
-- `ibis:backends/duckdb.md` - Git source
-- `local:team-standards/guidelines.md` - Local uploads
-- `web:blog-posts/article.md` - Cached web content
+- `ibis:backends/duckdb.qmd` - DuckDB backend documentation
+- `ibis:how-to/input-output/csv.qmd` - CSV I/O guide
+- `ibis:concepts/expressions.qmd` - Expressions overview
 
 ---
 

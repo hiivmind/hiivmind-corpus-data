@@ -92,9 +92,9 @@ Don't start exploring, guessing paths, or searching the source files. Instead, *
 Index entries use the format: `{source_id}:{relative_path}`
 
 Examples:
-- `narwhals:api-reference/index.md` - Git source
-- `local:team-standards/guidelines.md` - Local uploads
-- `web:blog-posts/article.md` - Cached web content
+- `narwhals:api-reference/index.md` - API reference overview
+- `narwhals:basics/series.md` - Series operations
+- `narwhals:extending/index.md` - Writing agnostic library code
 
 ---
 
