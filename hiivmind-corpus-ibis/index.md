@@ -1,14 +1,14 @@
 # Ibis Documentation Index
 
-> Source: ibis (git) | 143 docs | The portable Python dataframe library
-> Last updated: 2025-12-10
+> Source: ibis (git) | 146 docs | The portable Python dataframe library
+> Last updated: 2026-03-25
 
 ---
 
 ## Getting Started
 
-- **Introduction** `ibis:index.qmd` - Ibis: the portable Python dataframe library. Same API for ~20 backends, fast local dataframes with DuckDB (default), Polars, DataFusion. Iterate locally, deploy remotely by changing one line. Bridges SQL and Python
-- **Why Ibis?** `ibis:why.qmd` - Comprehensive overview: portable API across backends, Python + SQL integration, scaling up/out, stream-batch unification, ecosystem integrations (pandas, Polars, visualization, ML libraries)
+- **Introduction** `ibis:index.qmd` - Ibis: the portable Python dataframe library. Same API for 20+ backends, fast local dataframes with DuckDB (default), Polars, DataFusion. Iterate locally, deploy remotely by changing one line. Bridges SQL and Python
+- **Why Ibis?** `ibis:why.qmd` - Comprehensive overview: portable API across 20+ backends, Python + SQL integration, scaling up/out, stream-batch unification, ecosystem integrations (pandas, Polars, visualization, ML libraries)
 - **10 Minutes to Ibis** `ibis:tutorials/basics.qmd` - Quick tutorial: `filter`, `select`, `mutate`, `order_by`, `group_by`, `aggregate`. Uses DuckDB + Palmer penguins dataset. Interactive mode with `ibis.options.interactive = True`
 - **Installation** `ibis:install.qmd` - Installing Ibis with backend-specific extras
 
@@ -57,6 +57,8 @@
 - **Druid** `ibis:backends/druid.qmd` - Apache Druid backend
 - **Impala** `ibis:backends/impala.qmd` - Apache Impala backend
 - **RisingWave** `ibis:backends/risingwave.qmd` - RisingWave streaming database
+- **Materialize** `ibis:backends/materialize.qmd` - Materialize streaming database backend. Install via `ibis-framework[materialize]`, connects on port 6875. Supports streaming via `SUBSCRIBE`. Added in Ibis 12.0.0
+- **SingleStoreDB** `ibis:backends/singlestoredb.qmd` - SingleStoreDB backend. Install via `ibis-framework[singlestoredb]`, connects on port 3306. Added in Ibis 12.0.0
 
 ### Streaming & Big Data
 - **PySpark** `ibis:backends/pyspark.qmd` - Apache Spark via PySpark
@@ -171,3 +173,4 @@
 - **Code Style** `ibis:contribute/03_style.qmd` - Code style guidelines
 - **Maintainer's Guide** `ibis:contribute/04_maintainers_guide.qmd` - For maintainers
 - **Reference** `ibis:contribute/05_reference.qmd` - Contributing reference
+- **AI & Automated Code Policy** `ibis:contribute/06_automated_code_and_ai.qmd` - AI/LLM contribution policy: AI tools allowed to assist, but all contributions require meaningful human review. Fully automated PR submissions (agents without human review) prohibited
