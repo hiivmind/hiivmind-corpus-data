@@ -1,7 +1,7 @@
 # Polars Documentation Index
 
-> Source: polars (git) | 119 docs | Focus: expressions, transformations, Arrow interop
-> Last updated: 2025-12-10
+> Source: polars (git) | 128 docs | Focus: expressions, transformations, Arrow interop, Polars Cloud, on-premises deployment
+> Last updated: 2026-03-25
 
 ---
 
@@ -26,7 +26,7 @@
 - **Schemas in Lazy** `polars:user-guide/lazy/schemas.md` - Schema inference and validation
 - **Query Plans** `polars:user-guide/lazy/query-plan.md` - Understanding and visualizing query plans with `explain()`
 - **Execution** `polars:user-guide/lazy/execution.md` - Collecting results, streaming execution
-- **Sources & Sinks** `polars:user-guide/lazy/sources_sinks.md` - Lazy reading/writing from various formats
+- **Sources & Sinks** `polars:user-guide/lazy/sources_sinks.md` - Lazy reading/writing from various formats. Multiplexing sinks for writing to multiple outputs simultaneously. `PartitionBy` for splitting output across files with `max_rows_per_file`
 - **Streaming** `polars:user-guide/concepts/streaming.md` - Out-of-core processing for datasets larger than RAM
 
 ---
@@ -41,7 +41,7 @@
 ### Data Type Operations
 - **Strings** `polars:user-guide/expressions/strings.md` - String namespace (`str`): splitting, slicing, regex matching, replacement, case conversion
 - **Lists & Arrays** `polars:user-guide/expressions/lists-and-arrays.md` - `List` (variable length) vs `Array` (fixed shape). List namespace for slicing (`head`, `tail`), `explode()`, element-wise ops with `eval()` and `element`, row-wise aggregation with `concat_list()`
-- **Categorical Data & Enums** `polars:user-guide/expressions/categorical-data-and-enums.md` - Efficient string encoding. `Categorical` (runtime inference) vs `Enum` (predetermined categories)
+- **Categorical Data & Enums** `polars:user-guide/expressions/categorical-data-and-enums.md` - Efficient string encoding. `Categorical` (runtime inference) vs `Enum` (predetermined categories). Note: v1.32.0+ categoricals always use lexical ordering (`ordering` param deprecated)
 - **Structs** `polars:user-guide/expressions/structs.md` - Composite type for multiple fields. Created by `value_counts()`, dict inference. `unnest()` to expand, `field()` to extract, `rename_fields()`. Use for multi-column deduplication and ranking
 - **Missing Data** `polars:user-guide/expressions/missing-data.md` - Handling `null` values: `is_null()`, `fill_null()`, `drop_nulls()`, forward/backward fill
 
@@ -51,7 +51,7 @@
 - **Folds** `polars:user-guide/expressions/folds.md` - Horizontal operations with `fold()`. Custom row-wise computations across columns, similar to `functools.reduce`. Use `concat_str()` for string concatenation
 
 ### Advanced
-- **User-Defined Python Functions** `polars:user-guide/expressions/user-defined-python-functions.md` - `map_elements()`, `map_batches()` for custom Python logic. Performance implications with GIL
+- **User-Defined Python Functions** `polars:user-guide/expressions/user-defined-python-functions.md` - `map_elements()`, `map_batches()` for custom Python logic. Performance implications with GIL. Recommends Polars plugins (expression/IO) as higher-performance alternative
 - **NumPy Functions** `polars:user-guide/expressions/numpy-functions.md` - Using NumPy ufuncs with Polars data
 
 ---
@@ -68,7 +68,7 @@
 
 ### Reshaping
 - **Concatenation** `polars:user-guide/transformations/concatenation.md` - `concat()` modes: vertical (stack rows), horizontal (add columns), diagonal (combine both). Rechunking considerations
-- **Pivot** `polars:user-guide/transformations/pivot.md` - Reshape data: group by columns become y-axis, pivot column becomes x-axis. Aggregations: first, last, sum, min, max, mean, median, len. Note: schema depends on data, collect before pivot in lazy
+- **Pivot** `polars:user-guide/transformations/pivot.md` - Reshape data: group by columns become y-axis, pivot column becomes x-axis. Aggregations: first, last, sum, min, max, mean, median, len. Lazy workarounds: collect first or specify `on_columns` for static schema declaration
 - **Unpivot** `polars:user-guide/transformations/unpivot.md` - Reverse of pivot, wide to long format
 
 ### Time Series
@@ -96,10 +96,10 @@
 - **IO Overview** `polars:user-guide/io/index.md` - Supported formats and common patterns
 - **CSV** `polars:user-guide/io/csv.md` - `read_csv()`, `scan_csv()`, `write_csv()`
 - **Parquet** `polars:user-guide/io/parquet.md` - Columnar format, predicate pushdown
-- **JSON** `polars:user-guide/io/json.md` - JSON and NDJSON support
+- **JSON** `polars:user-guide/io/json.md` - JSON and NDJSON support. Lazy scanning with `scan_ndjson()` for LazyFrame-based NDJSON reading
 - **Excel** `polars:user-guide/io/excel.md` - Reading Excel files
 - **Database** `polars:user-guide/io/database.md` - SQL database connections
-- **Cloud Storage** `polars:user-guide/io/cloud-storage.md` - S3, GCS, Azure Blob
+- **Cloud Storage** `polars:user-guide/io/cloud-storage.md` - S3, GCS, Azure Blob. Cloud retry configuration via `storage_options`, global credential providers, writing to file objects for unsupported formats
 - **Multiple Files** `polars:user-guide/io/multiple.md` - Glob patterns, lazy scanning
 - **Hive Partitioning** `polars:user-guide/io/hive.md` - Partitioned datasets
 - **BigQuery** `polars:user-guide/io/bigquery.md` - Google BigQuery integration
@@ -140,9 +140,39 @@
 ### Misc
 - **Visualization** `polars:user-guide/misc/visualization.md` - Plotting with hvPlot, Altair, Plotly
 - **Styling** `polars:user-guide/misc/styling.md` - DataFrame display formatting
-- **Polars for LLMs** `polars:user-guide/misc/polars_llms.md` - Using Polars with language models
+- **Polars for LLMs** `polars:user-guide/misc/polars_llms.md` - Using Polars with language models. Official MCP server at `https://mcp.pola.rs/mcp` for LLM access to Polars/Cloud docs via `npx mcp-remote`
 - **Comparison** `polars:user-guide/misc/comparison.md` - Polars vs other tools
 - **Ecosystem** `polars:user-guide/ecosystem.md` - Related libraries and integrations
+
+---
+
+## Polars Cloud
+
+- **Compute Context** `polars:polars-cloud/context/compute-context.md` - Create and configure compute contexts for distributed execution. Save as named manifests via `register()`, set global defaults with `pc.set_compute_context()`. Ephemeral contexts create new clusters; reuse clusters via manifests
+- **Distributed Engine** `polars:polars-cloud/run/distributed-engine.md` - Running queries on Polars Cloud distributed engine
+- **Query Profiler** `polars:polars-cloud/run/query-profile.md` - Visual query profiling with bottleneck indicators (CPU time, I/O time, memory-intensive, single-node, in-memory fallback). Distributed query walkthrough with stage graph analysis and cross-region I/O diagnosis
+- **Glossary** `polars:polars-cloud/run/glossary.md` - Key distributed execution terms: DSL, query, logical/physical plans, scheduler, worker, stage graph, stage, partition, shuffle
+- **Airflow Integration** `polars:polars-cloud/integrations/airflow.md` - Comprehensive Airflow patterns: auth decorators, `await_result()`, cluster lifecycle management (context managers, named manifests, manual shutdown), parallel single-node execution, multi-stage pipelines
+
+---
+
+## Polars On-Premises
+
+- **On-Premises Overview** `polars:polars-on-premises/index.md` - Deploying Polars as a self-hosted distributed engine
+- **Getting Started** `polars:polars-on-premises/bare-metal/getting-started.md` - Initial bare-metal deployment setup
+- **Python Environment** `polars:polars-on-premises/bare-metal/python-environment.md` - Python environment configuration for on-premises
+- **Environment Variables** `polars:polars-on-premises/bare-metal/environment-variables.md` - Environment variable reference
+
+### Configuration
+- **Configuration Reference** `polars:polars-on-premises/bare-metal/configuration/reference.md` - Complete TOML config reference: `cluster_id`, `instance_id`, `license`, `memory_limit`, `[scheduler]`, `[worker]`, `[observatory]`, `[monitoring]`, `[static_leader]`. Env var overrides via `PC_CUBLET__section__key`
+- **Example Configurations** `polars:polars-on-premises/bare-metal/configuration/example-configurations.md` - Complete TOML examples for single-node and multi-node clusters with all network ports customized
+- **Network Addresses** `polars:polars-on-premises/bare-metal/configuration/network-addresses.md` - All configurable network services: scheduler client/worker, observatory/REST API, worker task/shuffle. Default bind addresses and public address config for NAT/multi-node
+- **Resource Limits** `polars:polars-on-premises/bare-metal/configuration/resource-limits.md` - CPU and memory management: two-process architecture (main + executor), OOM behavior, delegated cgroup setup via `memory_limit`, manual systemd cgroup config
+- **License** `polars:polars-on-premises/bare-metal/configuration/license.md` - License key requirements (JSON format), file path config, EULA acceptance via `POLARS_EULA_ACCEPTED`
+- **Monitoring** `polars:polars-on-premises/bare-metal/configuration/monitoring.md` - Observatory and monitoring: SQLite profiling storage, in-memory host metrics buffer, cgroup-based metrics collection
+- **Anonymous Results** `polars:polars-on-premises/bare-metal/configuration/anonymous-results.md` - Configure anonymous results sink for remote queries without explicit output: shared filesystem (NFS/CephFS) and S3-compatible storage backends
+- **Shuffle Data** `polars:polars-on-premises/bare-metal/configuration/shuffle-data.md` - Three shuffle storage options: worker-local SSD, shared filesystem (NFS/CephFS), S3-compatible. Performance trade-offs per option
+- **Static Leader** `polars:polars-on-premises/bare-metal/configuration/static-leader.md` - `[static_leader]` section identifying cluster leader node and public addresses, enabling shared config files with per-node `instance_id` overrides
 
 ---
 
@@ -154,7 +184,7 @@
 
 ## Development
 
-- **Contributing** `polars:development/contributing/index.md` - How to contribute to Polars
+- **Contributing** `polars:development/contributing/index.md` - How to contribute to Polars. Includes `git bisect` workflow for bug hunting. AI contribution policy: must disclose AI-generated code, attest personal review, no AI on "good first issue" tickets
 - **IDE Setup** `polars:development/contributing/ide.md` - Development environment
 - **Testing** `polars:development/contributing/test.md` - Running tests
 - **CI** `polars:development/contributing/ci.md` - Continuous integration

@@ -23,12 +23,12 @@ sources:
     repo_name: "polars"
     branch: "main"
     docs_root: "docs/source"
-    last_commit_sha: "a73d13a8d8bc12a4dac6155331db6bf2b63e4dd6"
-    last_indexed_at: "2026-01-08T12:00:00Z"
+    last_commit_sha: "3ac8d875bf5bb59d74c56e08bc4ce1146e20c262"
+    last_indexed_at: "2026-03-25T12:00:00Z"
 
 index:
   format: "markdown"
-  last_updated_at: "2025-12-10T15:30:00Z"
+  last_updated_at: "2026-03-25T12:00:00Z"
 
 settings:
   include_patterns:
