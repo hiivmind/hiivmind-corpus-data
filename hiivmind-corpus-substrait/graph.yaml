@@ -1,0 +1,121 @@
+schema_version: 1
+
+concepts:
+  query-plan-spec:
+    label: "Query Plan Specification"
+    description: "Cross-language format for describing compute operations on structured data"
+    entries:
+      - "substrait:index.md"
+      - "substrait:about.md"
+      - "substrait:spec/specification.md"
+      - "substrait:spec/technology_principles.md"
+      - "substrait:spec/versioning.md"
+    tags: ["specification", "query-plan", "cross-language", "interop"]
+    entry_count: 5
+
+  type-system:
+    label: "Type System"
+    description: "Strict type system with classes, nullability, variations, parameters, and user-defined types"
+    entries:
+      - "substrait:types/type_system.md"
+      - "substrait:types/type_classes.md"
+      - "substrait:types/type_variations.md"
+      - "substrait:types/type_aliases.md"
+      - "substrait:types/type_parsing.md"
+      - "substrait:types/named_structs.md"
+    tags: ["types", "schema", "nullability", "strict", "casting"]
+    entry_count: 6
+
+  expressions:
+    label: "Expressions"
+    description: "Scalar, aggregate, window, lambda, table functions and field references"
+    entries:
+      - "substrait:expressions/field_references.md"
+      - "substrait:expressions/scalar_functions.md"
+      - "substrait:expressions/lambda_expressions.md"
+      - "substrait:expressions/aggregate_functions.md"
+      - "substrait:expressions/window_functions.md"
+      - "substrait:expressions/specialized_record_expressions.md"
+      - "substrait:expressions/user_defined_functions.md"
+      - "substrait:expressions/embedded_functions.md"
+      - "substrait:expressions/table_functions.md"
+      - "substrait:expressions/dynamic_parameters.md"
+      - "substrait:expressions/subqueries.md"
+    tags: ["expressions", "functions", "scalar", "aggregate", "window", "lambda"]
+    entry_count: 11
+
+  relational-algebra:
+    label: "Relational Algebra"
+    description: "Logical and physical relations — read, filter, join, aggregate, sort, project, set ops"
+    entries:
+      - "substrait:relations/basics.md"
+      - "substrait:relations/common_fields.md"
+      - "substrait:relations/logical_relations.md"
+      - "substrait:relations/physical_relations.md"
+      - "substrait:relations/user_defined_relations.md"
+      - "substrait:relations/embedded_relations.md"
+    tags: ["relations", "join", "filter", "aggregate", "sort", "relational-algebra"]
+    entry_count: 6
+
+  serialization:
+    label: "Serialization"
+    description: "Binary (protobuf) and text serialization formats for Substrait plans"
+    entries:
+      - "substrait:serialization/basics.md"
+      - "substrait:serialization/binary_serialization.md"
+      - "substrait:serialization/text_serialization.md"
+    tags: ["serialization", "protobuf", "binary", "text"]
+    entry_count: 3
+
+  extensions:
+    label: "Extensions"
+    description: "Extension mechanism for types and functions via YAML files, deprecation support"
+    entries:
+      - "substrait:extensions/index.md"
+      - "substrait:spec/extending.md"
+    tags: ["extensions", "yaml", "functions", "deprecation", "metadata"]
+    entry_count: 2
+
+  ecosystem:
+    label: "Ecosystem"
+    description: "Projects using Substrait: Arrow, Calcite, DataFusion, DuckDB, Ibis, Spark, Trino"
+    entries:
+      - "substrait:community/powered_by.md"
+      - "substrait:tools/producer_tools.md"
+      - "substrait:tools/substrait_validator.md"
+      - "substrait:tools/third_party_tools.md"
+    tags: ["ecosystem", "arrow", "calcite", "datafusion", "duckdb", "ibis"]
+    entry_count: 4
+
+relationships:
+  - from: "expressions"
+    to: "type-system"
+    type: "depends-on"
+    origin: "manual"
+  - from: "relational-algebra"
+    to: "expressions"
+    type: "includes"
+    origin: "manual"
+  - from: "serialization"
+    to: "relational-algebra"
+    type: "see-also"
+    origin: "manual"
+  - from: "extensions"
+    to: "type-system"
+    type: "extends"
+    origin: "manual"
+  - from: "extensions"
+    to: "expressions"
+    type: "extends"
+    origin: "manual"
+  - from: "ecosystem"
+    to: "query-plan-spec"
+    type: "see-also"
+    origin: "manual"
+
+meta:
+  generated_at: "2026-03-25T12:00:00Z"
+  entry_count: 37
+  concept_count: 7
+  relationship_count: 6
+  sources_extracted: ["substrait"]

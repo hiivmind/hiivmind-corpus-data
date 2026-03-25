@@ -1,0 +1,131 @@
+schema_version: 1
+
+concepts:
+  deferred-execution:
+    label: "Deferred Execution"
+    description: "Lazy expression evaluation across backends, compile-once run-anywhere"
+    entries:
+      - "ibis:concepts/internals.qmd"
+      - "ibis:why.qmd"
+    tags: ["lazy", "deferred", "performance", "expression-trees"]
+    entry_count: 2
+
+  backend-portability:
+    label: "Backend Portability"
+    description: "Same API across 20+ backends — DuckDB, Polars, BigQuery, Spark, Flink, etc."
+    entries:
+      - "ibis:index.qmd"
+      - "ibis:why.qmd"
+      - "ibis:backends/duckdb.qmd"
+      - "ibis:backends/polars.qmd"
+      - "ibis:backends/bigquery.qmd"
+      - "ibis:backends/snowflake.qmd"
+      - "ibis:backends/pyspark.qmd"
+      - "ibis:backends/flink.qmd"
+      - "ibis:backends/materialize.qmd"
+      - "ibis:backends/singlestoredb.qmd"
+      - "ibis:backends/support/matrix.qmd"
+    tags: ["backends", "portable", "sql", "duckdb", "polars", "bigquery"]
+    entry_count: 11
+
+  type-system:
+    label: "Type System"
+    description: "Datatypes, datashapes (Scalar/Column), casting, and schema definitions"
+    entries:
+      - "ibis:concepts/datatypes.qmd"
+      - "ibis:concepts/casting.qmd"
+      - "ibis:reference/datatypes.qmd"
+      - "ibis:reference/schemas.qmd"
+    tags: ["types", "schema", "casting", "scalar", "column"]
+    entry_count: 4
+
+  expression-api:
+    label: "Expression API"
+    description: "Table, column, numeric, string, temporal, collection, and geospatial expressions"
+    entries:
+      - "ibis:reference/expression-tables.qmd"
+      - "ibis:reference/expression-generic.qmd"
+      - "ibis:reference/expression-numeric.qmd"
+      - "ibis:reference/expression-strings.qmd"
+      - "ibis:reference/expression-temporal.qmd"
+      - "ibis:reference/expression-collections.qmd"
+      - "ibis:reference/expression-geospatial.qmd"
+      - "ibis:reference/selectors.qmd"
+    tags: ["expressions", "dsl", "api", "columns", "selectors"]
+    entry_count: 8
+
+  sql-integration:
+    label: "SQL Integration"
+    description: "Mixing SQL with Ibis expressions, .sql() method, SQL-to-Ibis translation"
+    entries:
+      - "ibis:how-to/extending/sql.qmd"
+      - "ibis:tutorials/coming-from/sql.qmd"
+    tags: ["sql", "query", "translation"]
+    entry_count: 2
+
+  udfs:
+    label: "User-Defined Functions"
+    description: "Scalar and aggregate UDFs for custom computation"
+    entries:
+      - "ibis:reference/scalar-udfs.qmd"
+      - "ibis:reference/aggregate-udfs.qmd"
+    tags: ["udf", "custom-functions", "extensibility"]
+    entry_count: 2
+
+  streaming:
+    label: "Streaming"
+    description: "Stream processing with Flink, RisingWave, Materialize backends"
+    entries:
+      - "ibis:backends/flink.qmd"
+      - "ibis:backends/risingwave.qmd"
+      - "ibis:backends/materialize.qmd"
+      - "ibis:how-to/extending/streaming.qmd"
+    tags: ["streaming", "flink", "risingwave", "materialize", "real-time"]
+    entry_count: 4
+
+  migration:
+    label: "Migration"
+    description: "Coming from pandas, SQL, or dplyr — translation guides"
+    entries:
+      - "ibis:tutorials/coming-from/pandas.qmd"
+      - "ibis:tutorials/coming-from/sql.qmd"
+      - "ibis:tutorials/coming-from/dplyr.qmd"
+    tags: ["migration", "pandas", "sql", "dplyr"]
+    entry_count: 3
+
+relationships:
+  - from: "deferred-execution"
+    to: "expression-api"
+    type: "depends-on"
+    origin: "manual"
+  - from: "backend-portability"
+    to: "deferred-execution"
+    type: "includes"
+    origin: "manual"
+  - from: "expression-api"
+    to: "type-system"
+    type: "depends-on"
+    origin: "manual"
+  - from: "sql-integration"
+    to: "expression-api"
+    type: "extends"
+    origin: "manual"
+  - from: "udfs"
+    to: "expression-api"
+    type: "extends"
+    origin: "manual"
+  - from: "streaming"
+    to: "backend-portability"
+    type: "see-also"
+    origin: "manual"
+  - from: "migration"
+    to: "expression-api"
+    type: "see-also"
+    origin: "manual"
+
+meta:
+  generated_at: "2026-03-25T12:00:00Z"
+  entry_count: 36
+  concept_count: 8
+  relationship_count: 7
+  sources_extracted: ["ibis"]

@@ -1,0 +1,202 @@
+schema_version: 1
+
+bridges:
+  # === Lazy / Deferred Execution ===
+  - concept_a: "polars:lazy-evaluation"
+    concept_b: "ibis:deferred-execution"
+    type: "see-also"
+    note: "Both implement deferred query execution for performance — Polars via LazyFrame, Ibis via expression trees compiled to backend-specific SQL/IR"
+
+  - concept_a: "polars:lazy-evaluation"
+    concept_b: "narwhals:lazy-support"
+    type: "see-also"
+    note: "Narwhals wraps Polars LazyFrame as one of its lazy-only backends"
+
+  - concept_a: "ibis:deferred-execution"
+    concept_b: "narwhals:lazy-support"
+    type: "see-also"
+    note: "Ibis is one of Narwhals' lazy-only supported backends"
+
+  # === Expression Systems ===
+  - concept_a: "polars:expressions"
+    concept_b: "ibis:expression-api"
+    type: "see-also"
+    note: "Both provide expression DSLs for column operations — Polars native, Ibis backend-portable"
+
+  - concept_a: "polars:expressions"
+    concept_b: "narwhals:expression-model"
+    type: "see-also"
+    note: "Narwhals uses a subset of Polars expression API as its interface model"
+
+  - concept_a: "polars:expressions"
+    concept_b: "substrait:expressions"
+    type: "see-also"
+    note: "Polars expressions are high-level DSL; Substrait expressions are low-level IR for cross-engine interchange"
+
+  - concept_a: "ibis:expression-api"
+    concept_b: "substrait:expressions"
+    type: "see-also"
+    note: "Ibis expressions can compile to Substrait plans via the Substrait producer"
+
+  - concept_a: "narwhals:expression-model"
+    concept_b: "ibis:expression-api"
+    type: "see-also"
+    note: "Both abstract over multiple backends — Narwhals at the dataframe level, Ibis at the SQL engine level"
+
+  # === Type Systems ===
+  - concept_a: "polars:data-types"
+    concept_b: "ibis:type-system"
+    type: "see-also"
+    note: "Both define rich type systems — Polars native types, Ibis portable types mapped to backend types"
+
+  - concept_a: "polars:data-types"
+    concept_b: "narwhals:type-system"
+    type: "see-also"
+    note: "Narwhals type system mirrors Polars dtypes for cross-backend compatibility"
+
+  - concept_a: "polars:data-types"
+    concept_b: "substrait:type-system"
+    type: "see-also"
+    note: "Substrait defines the interchange type system; Polars types map to Arrow types which align with Substrait simple types"
+
+  - concept_a: "ibis:type-system"
+    concept_b: "substrait:type-system"
+    type: "see-also"
+    note: "Ibis type system bridges Python types to backend types; Substrait provides the cross-engine type specification"
+
+  - concept_a: "narwhals:type-system"
+    concept_b: "ibis:type-system"
+    type: "see-also"
+    note: "Both provide cross-backend type abstractions at different levels"
+
+  # === SQL ===
+  - concept_a: "polars:sql-interface"
+    concept_b: "ibis:sql-integration"
+    type: "see-also"
+    note: "Polars has a SQL context for DataFrames; Ibis compiles expressions to SQL for database backends"
+
+  - concept_a: "polars:sql-interface"
+    concept_b: "narwhals:sql-generation"
+    type: "see-also"
+    note: "Both enable SQL interaction — Polars via SQL context, Narwhals via expression-to-SQL generation"
+
+  - concept_a: "narwhals:sql-generation"
+    concept_b: "ibis:sql-integration"
+    type: "see-also"
+    note: "Both generate SQL from Python expressions, at different abstraction levels"
+
+  # === Arrow / Interop ===
+  - concept_a: "polars:arrow-interop"
+    concept_b: "substrait:ecosystem"
+    type: "see-also"
+    note: "Both connect to the Apache Arrow ecosystem — Polars uses Arrow memory format, Substrait plans are consumed by Arrow compute kernels"
+
+  # === Extensibility / UDFs ===
+  - concept_a: "polars:plugins-extensibility"
+    concept_b: "ibis:udfs"
+    type: "see-also"
+    note: "Both provide extensibility — Polars via Rust expression/IO plugins, Ibis via Python scalar/aggregate UDFs"
+
+  - concept_a: "substrait:extensions"
+    concept_b: "ibis:udfs"
+    type: "see-also"
+    note: "Substrait defines extension YAML for custom functions; Ibis UDFs are one way those functions get authored"
+
+  # === Streaming ===
+  - concept_a: "ibis:streaming"
+    concept_b: "polars:distributed-execution"
+    type: "see-also"
+    note: "Ibis supports streaming backends (Flink, Materialize); Polars Cloud provides distributed batch execution"
+
+  # === Relational Algebra ===
+  - concept_a: "polars:transformations"
+    concept_b: "substrait:relational-algebra"
+    type: "see-also"
+    note: "Polars transformations (joins, aggregates) map to Substrait logical relations (Join, Aggregate, Filter)"
+
+  # === Backend Portability ===
+  - concept_a: "ibis:backend-portability"
+    concept_b: "narwhals:dataframe-agnostic"
+    type: "see-also"
+    note: "Both solve portability — Ibis across SQL engines, Narwhals across dataframe libraries. Ibis is a Narwhals lazy-only backend"
+
+  - concept_a: "ibis:backend-portability"
+    concept_b: "substrait:query-plan-spec"
+    type: "see-also"
+    note: "Both enable cross-engine interop — Ibis via API portability, Substrait via serialized query plan interchange"
+
+aliases:
+  "lazy evaluation":
+    - corpus: "polars"
+      concept: "lazy-evaluation"
+    - corpus: "ibis"
+      concept: "deferred-execution"
+    - corpus: "narwhals"
+      concept: "lazy-support"
+
+  "expression system":
+    - corpus: "polars"
+      concept: "expressions"
+    - corpus: "ibis"
+      concept: "expression-api"
+    - corpus: "narwhals"
+      concept: "expression-model"
+    - corpus: "substrait"
+      concept: "expressions"
+
+  "type system":
+    - corpus: "polars"
+      concept: "data-types"
+    - corpus: "ibis"
+      concept: "type-system"
+    - corpus: "narwhals"
+      concept: "type-system"
+    - corpus: "substrait"
+      concept: "type-system"
+
+  "sql":
+    - corpus: "polars"
+      concept: "sql-interface"
+    - corpus: "ibis"
+      concept: "sql-integration"
+    - corpus: "narwhals"
+      concept: "sql-generation"
+
+  "portability":
+    - corpus: "ibis"
+      concept: "backend-portability"
+    - corpus: "narwhals"
+      concept: "dataframe-agnostic"
+    - corpus: "substrait"
+      concept: "query-plan-spec"
+
+  "user-defined functions":
+    - corpus: "polars"
+      concept: "plugins-extensibility"
+    - corpus: "ibis"
+      concept: "udfs"
+    - corpus: "substrait"
+      concept: "extensions"
+
+  "arrow":
+    - corpus: "polars"
+      concept: "arrow-interop"
+    - corpus: "substrait"
+      concept: "ecosystem"
+
+  "joins":
+    - corpus: "polars"
+      concept: "transformations"
+    - corpus: "substrait"
+      concept: "relational-algebra"
+
+  "streaming":
+    - corpus: "ibis"
+      concept: "streaming"
+    - corpus: "polars"
+      concept: "distributed-execution"
+
+meta:
+  updated_at: "2026-03-25T12:00:00Z"
+  bridge_count: 23
+  corpora_linked: ["polars", "ibis", "narwhals", "substrait"]

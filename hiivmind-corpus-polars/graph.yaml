@@ -1,0 +1,180 @@
+schema_version: 1
+
+concepts:
+  lazy-evaluation:
+    label: "Lazy Evaluation"
+    description: "Deferred query execution with LazyFrame, query optimization, and streaming"
+    entries:
+      - "polars:user-guide/concepts/lazy-api.md"
+      - "polars:user-guide/lazy/using.md"
+      - "polars:user-guide/lazy/optimizations.md"
+      - "polars:user-guide/lazy/schemas.md"
+      - "polars:user-guide/lazy/query-plan.md"
+      - "polars:user-guide/lazy/execution.md"
+      - "polars:user-guide/lazy/sources_sinks.md"
+      - "polars:user-guide/concepts/streaming.md"
+      - "polars:user-guide/lazy/multiplexing.md"
+    tags: ["lazy", "performance", "query-plan", "optimization", "streaming"]
+    entry_count: 9
+
+  expressions:
+    label: "Expressions"
+    description: "Column expressions, contexts, aggregations, window functions, and UDFs"
+    entries:
+      - "polars:user-guide/concepts/expressions-and-contexts.md"
+      - "polars:user-guide/expressions/basic-operations.md"
+      - "polars:user-guide/expressions/expression-expansion.md"
+      - "polars:user-guide/expressions/casting.md"
+      - "polars:user-guide/expressions/aggregation.md"
+      - "polars:user-guide/expressions/window-functions.md"
+      - "polars:user-guide/expressions/folds.md"
+      - "polars:user-guide/expressions/user-defined-python-functions.md"
+      - "polars:user-guide/expressions/numpy-functions.md"
+    tags: ["expressions", "dsl", "aggregation", "window", "udf"]
+    entry_count: 9
+
+  data-types:
+    label: "Data Types"
+    description: "Type system, Series, DataFrame, strings, lists, categoricals, structs, missing data"
+    entries:
+      - "polars:user-guide/concepts/data-types-and-structures.md"
+      - "polars:user-guide/expressions/strings.md"
+      - "polars:user-guide/expressions/lists-and-arrays.md"
+      - "polars:user-guide/expressions/categorical-data-and-enums.md"
+      - "polars:user-guide/expressions/structs.md"
+      - "polars:user-guide/expressions/missing-data.md"
+    tags: ["types", "schema", "series", "dataframe", "categorical", "struct"]
+    entry_count: 6
+
+  transformations:
+    label: "Transformations"
+    description: "Joins, reshaping (pivot/unpivot/concat), and time series operations"
+    entries:
+      - "polars:user-guide/transformations/joins.md"
+      - "polars:user-guide/transformations/concatenation.md"
+      - "polars:user-guide/transformations/pivot.md"
+      - "polars:user-guide/transformations/unpivot.md"
+      - "polars:user-guide/transformations/time-series/parsing.md"
+      - "polars:user-guide/transformations/time-series/filter.md"
+      - "polars:user-guide/transformations/time-series/rolling.md"
+      - "polars:user-guide/transformations/time-series/resampling.md"
+      - "polars:user-guide/transformations/time-series/timezones.md"
+    tags: ["joins", "pivot", "time-series", "reshape"]
+    entry_count: 9
+
+  io-operations:
+    label: "IO Operations"
+    description: "Reading/writing CSV, Parquet, JSON, databases, cloud storage, and more"
+    entries:
+      - "polars:user-guide/io/index.md"
+      - "polars:user-guide/io/csv.md"
+      - "polars:user-guide/io/parquet.md"
+      - "polars:user-guide/io/json.md"
+      - "polars:user-guide/io/excel.md"
+      - "polars:user-guide/io/database.md"
+      - "polars:user-guide/io/cloud-storage.md"
+      - "polars:user-guide/io/multiple.md"
+      - "polars:user-guide/io/hive.md"
+      - "polars:user-guide/io/bigquery.md"
+      - "polars:user-guide/io/hugging-face.md"
+    tags: ["io", "parquet", "csv", "cloud", "database"]
+    entry_count: 11
+
+  arrow-interop:
+    label: "Arrow Interoperability"
+    description: "Zero-copy data exchange via Apache Arrow, PyCapsule Interface, C Data Interface"
+    entries:
+      - "polars:user-guide/misc/arrow.md"
+    tags: ["arrow", "interop", "zero-copy", "pyarrow", "pycapsule"]
+    entry_count: 1
+
+  sql-interface:
+    label: "SQL Interface"
+    description: "SQL context for querying Polars DataFrames with SQL syntax"
+    entries:
+      - "polars:user-guide/sql/intro.md"
+      - "polars:user-guide/sql/select.md"
+      - "polars:user-guide/sql/create.md"
+      - "polars:user-guide/sql/cte.md"
+      - "polars:user-guide/sql/show.md"
+    tags: ["sql", "query"]
+    entry_count: 5
+
+  gpu-acceleration:
+    label: "GPU Acceleration"
+    description: "NVIDIA GPU support for in-memory workloads and lazy API execution"
+    entries:
+      - "polars:user-guide/gpu-support.md"
+      - "polars:user-guide/lazy/gpu.md"
+    tags: ["gpu", "performance", "nvidia", "acceleration"]
+    entry_count: 2
+
+  plugins-extensibility:
+    label: "Plugins & Extensibility"
+    description: "Expression plugins (Rust) and IO plugins for extending Polars"
+    entries:
+      - "polars:user-guide/plugins/index.md"
+      - "polars:user-guide/plugins/expr_plugins.md"
+      - "polars:user-guide/plugins/io_plugins.md"
+    tags: ["plugins", "extensions", "rust"]
+    entry_count: 3
+
+  distributed-execution:
+    label: "Distributed Execution"
+    description: "Polars Cloud and on-premises distributed query engine deployment"
+    entries:
+      - "polars:polars-cloud/context/compute-context.md"
+      - "polars:polars-cloud/run/distributed-engine.md"
+      - "polars:polars-cloud/run/query-profile.md"
+      - "polars:polars-cloud/run/glossary.md"
+      - "polars:polars-cloud/integrations/airflow.md"
+      - "polars:polars-on-premises/index.md"
+      - "polars:polars-on-premises/bare-metal/getting-started.md"
+      - "polars:polars-on-premises/bare-metal/configuration/reference.md"
+    tags: ["distributed", "cloud", "on-premises", "cluster", "scheduler"]
+    entry_count: 8
+
+relationships:
+  - from: "lazy-evaluation"
+    to: "expressions"
+    type: "depends-on"
+    origin: "manual"
+  - from: "lazy-evaluation"
+    to: "gpu-acceleration"
+    type: "see-also"
+    origin: "manual"
+  - from: "lazy-evaluation"
+    to: "io-operations"
+    type: "see-also"
+    origin: "manual"
+  - from: "expressions"
+    to: "data-types"
+    type: "depends-on"
+    origin: "manual"
+  - from: "expressions"
+    to: "transformations"
+    type: "see-also"
+    origin: "manual"
+  - from: "sql-interface"
+    to: "expressions"
+    type: "extends"
+    origin: "manual"
+  - from: "distributed-execution"
+    to: "lazy-evaluation"
+    type: "depends-on"
+    origin: "manual"
+  - from: "plugins-extensibility"
+    to: "expressions"
+    type: "extends"
+    origin: "manual"
+  - from: "arrow-interop"
+    to: "data-types"
+    type: "see-also"
+    origin: "manual"
+
+meta:
+  generated_at: "2026-03-25T12:00:00Z"
+  entry_count: 63
+  concept_count: 10
+  relationship_count: 9
+  sources_extracted: ["polars"]

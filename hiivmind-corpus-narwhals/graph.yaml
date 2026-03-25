@@ -1,0 +1,107 @@
+schema_version: 1
+
+concepts:
+  dataframe-agnostic:
+    label: "Dataframe-Agnostic API"
+    description: "Unified API across pandas, Polars, PyArrow, cuDF, Modin — write once, run anywhere"
+    entries:
+      - "narwhals:index.md"
+      - "narwhals:why.md"
+      - "narwhals:basics/dataframe.md"
+      - "narwhals:basics/series.md"
+      - "narwhals:basics/complete_example.md"
+      - "narwhals:basics/dataframe_conversion.md"
+    tags: ["agnostic", "portable", "pandas", "polars", "pyarrow", "cudf"]
+    entry_count: 6
+
+  expression-model:
+    label: "Expression Model"
+    description: "How Narwhals expressions work — theory, nodes, metadata, broadcasting, elementwise pushdown"
+    entries:
+      - "narwhals:how_it_works.md"
+    tags: ["expressions", "dsl", "internals", "broadcasting"]
+    entry_count: 1
+
+  lazy-support:
+    label: "Lazy-Only Support"
+    description: "Lazy-only backends: Daft, Dask, DuckDB, Ibis, PySpark, SQLFrame"
+    entries:
+      - "narwhals:index.md"
+      - "narwhals:concepts/order_dependence.md"
+    tags: ["lazy", "deferred", "dask", "duckdb", "ibis", "pyspark"]
+    entry_count: 2
+
+  type-system:
+    label: "Type System"
+    description: "Data types, schemas, selectors, and cross-backend type handling"
+    entries:
+      - "narwhals:api-reference/dtypes.md"
+      - "narwhals:api-reference/schema.md"
+      - "narwhals:api-reference/selectors.md"
+      - "narwhals:api-reference/typing.md"
+    tags: ["types", "schema", "dtypes", "selectors"]
+    entry_count: 4
+
+  sql-generation:
+    label: "SQL Generation"
+    description: "Generating SQL from Narwhals expressions via narwhals.sql module"
+    entries:
+      - "narwhals:generating_sql.md"
+      - "narwhals:api-reference/sql.md"
+    tags: ["sql", "generation", "query"]
+    entry_count: 2
+
+  backwards-compatibility:
+    label: "Backwards Compatibility"
+    description: "Stable API versioning (v1, v2), Rust-editions-inspired compatibility policy"
+    entries:
+      - "narwhals:backcompat.md"
+      - "narwhals:overhead.md"
+    tags: ["stability", "versioning", "compatibility"]
+    entry_count: 2
+
+  behavioral-concepts:
+    label: "Behavioral Concepts"
+    description: "Order dependence, pandas index handling, null semantics, boolean ops across backends"
+    entries:
+      - "narwhals:concepts/order_dependence.md"
+      - "narwhals:concepts/pandas_index.md"
+      - "narwhals:concepts/column_names.md"
+      - "narwhals:concepts/boolean.md"
+      - "narwhals:concepts/null_handling.md"
+      - "narwhals:concepts/improve_group_by_operation.md"
+    tags: ["behavior", "nulls", "ordering", "pandas-index"]
+    entry_count: 6
+
+relationships:
+  - from: "expression-model"
+    to: "dataframe-agnostic"
+    type: "depends-on"
+    origin: "manual"
+  - from: "lazy-support"
+    to: "dataframe-agnostic"
+    type: "extends"
+    origin: "manual"
+  - from: "sql-generation"
+    to: "expression-model"
+    type: "extends"
+    origin: "manual"
+  - from: "type-system"
+    to: "dataframe-agnostic"
+    type: "depends-on"
+    origin: "manual"
+  - from: "behavioral-concepts"
+    to: "dataframe-agnostic"
+    type: "see-also"
+    origin: "manual"
+  - from: "backwards-compatibility"
+    to: "dataframe-agnostic"
+    type: "see-also"
+    origin: "manual"
+
+meta:
+  generated_at: "2026-03-25T12:00:00Z"
+  entry_count: 23
+  concept_count: 7
+  relationship_count: 6
+  sources_extracted: ["narwhals"]

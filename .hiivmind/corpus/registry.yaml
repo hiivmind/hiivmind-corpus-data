@@ -1,0 +1,34 @@
+schema_version: 1
+
+corpora:
+  - id: polars
+    source:
+      type: local
+      path: ./hiivmind-corpus-polars
+    cache:
+      strategy: none
+    registered_at: "2026-03-25T12:00:00Z"
+
+  - id: ibis
+    source:
+      type: local
+      path: ./hiivmind-corpus-ibis
+    cache:
+      strategy: none
+    registered_at: "2026-03-25T12:00:00Z"
+
+  - id: narwhals
+    source:
+      type: local
+      path: ./hiivmind-corpus-narwhals
+    cache:
+      strategy: none
+    registered_at: "2026-03-25T12:00:00Z"
+
+  - id: substrait
+    source:
+      type: local
+      path: ./hiivmind-corpus-substrait
+    cache:
+      strategy: none
+    registered_at: "2026-03-25T12:00:00Z"
