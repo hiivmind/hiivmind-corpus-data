@@ -1,7 +1,7 @@
 # Narwhals Documentation Index
 
-> Source: narwhals (git) | 50 docs | Dataframe-agnostic compatibility layer
-> Last updated: 2026-01-08
+> Source: narwhals (git) | 51 docs | Dataframe-agnostic compatibility layer
+> Last updated: 2026-03-25
 
 ---
 
@@ -36,7 +36,7 @@
   - **Group-by**: simple aggregations use native groupby, complex ones use `apply` with warning
 
 ### Behavioral Concepts
-- **Order Dependence** `narwhals:concepts/order_dependence.md` - LazyFrames have undefined row order. Order-dependent operations (diff, shift, rolling) require explicit `order_by` in `over()`. `n_orderable_ops` metadata tracks this
+- **Order Dependence** `narwhals:concepts/order_dependence.md` - LazyFrames have undefined row order. Order-dependent operations (diff, shift, rolling) require explicit `order_by` in `over()`. `first`/`last` now accept optional `order_by` parameter. `n_orderable_ops` metadata tracks this
 - **pandas Index Handling** `narwhals:concepts/pandas_index.md` - Narwhals ignores pandas index. Use `reset_index()` before `from_native()` if you need index as column
 - **Improving Group-By** `narwhals:concepts/improve_group_by_operation.md` - Optimizing group-by performance, avoiding `apply` overhead
 - **Column Names** `narwhals:concepts/column_names.md` - Column naming conventions and handling duplicates
@@ -61,7 +61,7 @@
 ## Advanced Topics
 
 - **Extensions & Plugins** `narwhals:extending.md` - Extending Narwhals with custom functionality
-- **Generating SQL** `narwhals:generating_sql.md` - SQL generation from Narwhals expressions
+- **Generating SQL** `narwhals:generating_sql.md` - SQL generation from Narwhals expressions. New `narwhals.sql` module with `nw.sql.table()` for creating `SQLTable` objects and `to_sql()` for converting expressions to SQL strings
 - **Ecosystem** `narwhals:ecosystem.md` - Libraries and tools using Narwhals
 - **Security** `narwhals:security.md` - Security considerations
 - **Resources** `narwhals:resources.md` - Additional learning resources
@@ -106,7 +106,7 @@ Shows which methods are supported across backends (pandas, Polars, PyArrow, cuDF
 - **Expr.dt** `narwhals:api-reference/expr_dt.md` - Datetime namespace: `year`, `month`, `day`, `hour`, `minute`, `second`, `millisecond`, `microsecond`, `nanosecond`, `ordinal_day`, `weekday`, `total_minutes`, `total_seconds`, etc.
 - **Expr.list** `narwhals:api-reference/expr_list.md` - List namespace: `len`, `get`, `contains`, `mean`, `median`, `min`, `max`, `sort`, `sum`, `unique`
 - **Expr.name** `narwhals:api-reference/expr_name.md` - Name manipulation: `keep`, `map`, `prefix`, `suffix`, `to_lowercase`, `to_uppercase`
-- **Expr.str** `narwhals:api-reference/expr_str.md` - String namespace: `len`, `to_lowercase`, `to_uppercase`, `starts_with`, `ends_with`, `contains`, `slice`, `head`, `tail`, `strip`, `replace`, `split`
+- **Expr.str** `narwhals:api-reference/expr_str.md` - String namespace: `len`, `to_lowercase`, `to_uppercase`, `starts_with`, `ends_with`, `contains`, `slice`, `head`, `tail`, `strip`, `replace`, `split`, `pad_start`, `pad_end`
 - **Expr.struct** `narwhals:api-reference/expr_struct.md` - Struct namespace: `field`
 
 ### Series Namespaces
@@ -119,6 +119,9 @@ Shows which methods are supported across backends (pandas, Polars, PyArrow, cuDF
 ### GroupBy
 - **GroupBy** `narwhals:api-reference/group_by.md` - `GroupBy` class: `agg`, `iter`
 - **LazyGroupBy** `narwhals:api-reference/lazy_group_by.md` - `LazyGroupBy` class for lazy operations
+
+### SQL
+- **SQL Module** `narwhals:api-reference/sql.md` - `narwhals.sql` module: `nw.sql.table()` to create `SQLTable` objects, `SQLTable.to_sql()` to generate SQL from Narwhals expressions
 
 ### Types & Utilities
 - **Schema** `narwhals:api-reference/schema.md` - `Schema` class for column type definitions
