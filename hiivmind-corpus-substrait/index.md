@@ -1,7 +1,7 @@
 # Substrait Documentation Index
 
 > Source: substrait (git) | 43 docs | Cross-language specification for data compute operations
-> Last updated: 2026-01-08
+> Last updated: 2026-03-25
 
 ---
 
@@ -32,10 +32,10 @@
   3. **Variation** (always): system-preferred `[0]` or extension - in-memory format variations
   4. **Parameters** (compound only): `<10, 2>` for DECIMAL, `<i32, string>` for STRUCT
   - **Strict type system**: no coercion, all changes via explicit cast expressions
-- **Type Classes** `substrait:types/type_classes.md` - Simple types: integers (`i8`-`i128`), floats (`fp32`, `fp64`), `boolean`, `string`, `binary`, `date`, `time`, `timestamp`, `timestamp_tz`, `interval_year`, `interval_day`, `uuid`, `fixedchar`, `varchar`, `fixedbinary`, `decimal`. Compound types: `STRUCT`, `LIST`, `MAP`. User-defined types via extensions
+- **Type Classes** `substrait:types/type_classes.md` - Simple types: integers (`i8`-`i128`), floats (`fp32`, `fp64`), `boolean`, `string`, `binary`, `date`, `time`, `timestamp`, `timestamp_tz`, `interval_year`, `interval_day`, `uuid`, `fixedchar`, `varchar`, `fixedbinary`, `decimal`. Compound types: `STRUCT`, `LIST`, `MAP`, `FUNC<T->R>` (function/lambda types). User-defined types via extensions (must use `u!` prefix)
 - **Type Variations** `substrait:types/type_variations.md` - Physical variations of base types, distinguished by in-memory format
 - **Type Aliases** `substrait:types/type_aliases.md` - Shorthand names for common type configurations
-- **Type Parsing** `substrait:types/type_parsing.md` - Syntax for describing types in text form. Includes function types: `func<any1 -> any2>` (single param), `func<(any1, any2) -> any3>` (multiple params)
+- **Type Parsing** `substrait:types/type_parsing.md` - Syntax for describing types in text form. Function types: `func<any1 -> any2>` (single param), `func<(any1, any2) -> any3>` (multiple params). User-defined types use `u!typename` syntax. Precision type naming updated to match grammar
 - **Named Structs** `substrait:types/named_structs.md` - Structs with named fields for schemas. `NamedStruct` = struct type + column names. Names in depth-first order for nested types
 
 ---
@@ -43,7 +43,7 @@
 ## Expressions
 
 - **Field References** `substrait:expressions/field_references.md` - Identify portions of a record to operate on. Always numeric (not by name). `structField.field: 1` = second field. Root types: `RootReference` (incoming record), `OuterReference` (correlated subqueries), `Expression` (expression result), `LambdaParameterReference` (lambda params). References only make sense relative to a schema context
-- **Scalar Functions** `substrait:expressions/scalar_functions.md` - Function specification: `functionReference` (ID into extension list), `outputType`, `arguments` (positional). Functions defined in extension YAML files. Examples: `is_null`, `index_in`, `equal`, `multiply`. Arguments wrapped in `value` objects
+- **Scalar Functions** `substrait:expressions/scalar_functions.md` - Function specification: `functionReference` (ID into extension list), `outputType`, `arguments` (positional). Functions defined in extension YAML files. Optional `description` field at function-level and per-implementation. Examples: `is_null`, `index_in`, `equal`, `multiply`. Arguments wrapped in `value` objects
 - **Lambda Expressions** `substrait:expressions/lambda_expressions.md` - Inline anonymous functions for higher-order operations. Components: `parameters` (struct type), `body` (expression). Type is `func<params -> return>`. Parameter access via `LambdaParameterReference` with `steps_out` for nested scopes. `LambdaInvocation` for direct calls. Used with functions like `transform` and `filter` on collections. Supports closures referencing outer lambdas, input records, and outer queries
 - **Aggregate Functions** `substrait:expressions/aggregate_functions.md` - Functions that collapse many records into one value. Examples: SUM, COUNT, AVG. Used in `measures` of Aggregate relations. May have optional filter
 - **Window Functions** `substrait:expressions/window_functions.md` - Relate a record to encompassing records. SQL examples: RANK, NTILE, ROW_NUMBER. Frame specification, partitioning, ordering
@@ -91,7 +91,7 @@
 
 ## Extensions
 
-- **Extensions Overview** `substrait:extensions/index.md` - Extension mechanism for types and functions. Simple extensions in YAML files. URN identifiers reference extension files. Extension anchors link plan references to definitions. Core extensions in `extensions/` directory: `functions_arithmetic.yaml`, `functions_comparison.yaml`, `functions_set.yaml`, etc.
+- **Extensions Overview** `substrait:extensions/index.md` - Extension mechanism for types and functions. Simple extensions in YAML files. URN identifiers reference extension files. Extension anchors link plan references to definitions. Optional `metadata` field at top-level, type, and function scopes. Deprecation support: `deprecated` field with `since` version, optional `reason`/`metadata` (applies to types, type variations, functions, implementations). Core extensions in `extensions/` directory: `functions_arithmetic.yaml`, `functions_comparison.yaml`, `functions_set.yaml`, etc.
 
 ---
 
@@ -125,6 +125,6 @@
 
 ## Community
 
-- **Community Overview** `substrait:community/index.md` - Community resources and participation
+- **Community Overview** `substrait:community/index.md` - Community resources and participation. AI contribution policy: AI-assisted contributions accepted with disclosure of tools used; contributors must self-review generated content before requesting review
 - **Powered By** `substrait:community/powered_by.md` - Projects using Substrait: Arrow (C++, Rust compute kernels), Calcite, DataFusion, DuckDB, Ibis, Velox, Spark, Trino, Iceberg
 - **Governance** `substrait:governance.md` - Project governance model. Bar for inclusion: at least two of top four OSS data technologies (Arrow, Spark, Iceberg, Trino) must support feature

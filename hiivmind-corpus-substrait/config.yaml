@@ -22,12 +22,12 @@ sources:
     repo_name: "substrait"
     branch: "main"
     docs_root: "site/docs"
-    last_commit_sha: "92d2e757a330f9c973bb566817dc92afd1badcb2"
-    last_indexed_at: "2026-01-08T17:15:00Z"
+    last_commit_sha: "00bc3c24078443a23b3b4c92228fae8e2aba3778"
+    last_indexed_at: "2026-03-25T12:00:00Z"
 
 index:
   format: "markdown"
-  last_updated_at: "2026-01-08T17:15:00Z"
+  last_updated_at: "2026-03-25T12:00:00Z"
 
 settings:
   include_patterns:
