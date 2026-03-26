@@ -22,6 +22,61 @@ concepts:
     tags: ["expressions", "dsl", "internals", "broadcasting"]
     entry_count: 1
 
+  expression-methods:
+    label: "Expression Methods"
+    description: "Core Expr methods: arithmetic, comparisons, aggregations, over(), trig functions"
+    entries:
+      - "narwhals:api-reference/expr.md"
+      - "narwhals:api-completeness/expr.md"
+    tags: ["expr", "methods", "arithmetic", "comparison"]
+    entry_count: 2
+
+  string-expressions:
+    label: "String Expressions"
+    description: "Expr.str namespace: len, lower, upper, contains, replace, split, slice"
+    entries:
+      - "narwhals:api-reference/expr_str.md"
+      - "narwhals:api-completeness/expr_str.md"
+    tags: ["string", "text", "str-namespace"]
+    entry_count: 2
+
+  temporal-expressions:
+    label: "Temporal Expressions"
+    description: "Expr.dt namespace: year, month, day, hour, minute, second, weekday extraction"
+    entries:
+      - "narwhals:api-reference/expr_dt.md"
+      - "narwhals:api-completeness/expr_dt.md"
+    tags: ["datetime", "temporal", "dt-namespace"]
+    entry_count: 2
+
+  null-handling:
+    label: "Null Handling"
+    description: "Cross-backend null semantics, fill_null, is_null, drop_nulls behavior differences"
+    entries:
+      - "narwhals:concepts/null_handling.md"
+    tags: ["null", "missing", "fill", "semantics"]
+    entry_count: 1
+
+  name-expressions:
+    label: "Name Expressions"
+    description: "Expr.name namespace: keep, map, prefix, suffix for column renaming"
+    entries:
+      - "narwhals:api-reference/expr_name.md"
+      - "narwhals:api-completeness/expr_name.md"
+    tags: ["name", "rename", "alias", "column-naming"]
+    entry_count: 2
+
+  collection-expressions:
+    label: "Collection Expressions"
+    description: "Expr.list and Expr.struct namespace operations"
+    entries:
+      - "narwhals:api-reference/expr_list.md"
+      - "narwhals:api-reference/expr_struct.md"
+      - "narwhals:api-completeness/expr_list.md"
+      - "narwhals:api-completeness/expr_struct.md"
+    tags: ["list", "struct", "nested"]
+    entry_count: 4
+
   lazy-support:
     label: "Lazy-Only Support"
     description: "Lazy-only backends: Daft, Dask, DuckDB, Ibis, PySpark, SQLFrame"
@@ -98,10 +153,34 @@ relationships:
     to: "dataframe-agnostic"
     type: "see-also"
     origin: "manual"
+  - from: "expression-methods"
+    to: "expression-model"
+    type: "part-of"
+    origin: "manual"
+  - from: "string-expressions"
+    to: "expression-model"
+    type: "part-of"
+    origin: "manual"
+  - from: "temporal-expressions"
+    to: "expression-model"
+    type: "part-of"
+    origin: "manual"
+  - from: "null-handling"
+    to: "expression-model"
+    type: "part-of"
+    origin: "manual"
+  - from: "name-expressions"
+    to: "expression-model"
+    type: "part-of"
+    origin: "manual"
+  - from: "collection-expressions"
+    to: "expression-model"
+    type: "part-of"
+    origin: "manual"
 
 meta:
-  generated_at: "2026-03-25T12:00:00Z"
-  entry_count: 23
-  concept_count: 7
-  relationship_count: 6
+  generated_at: "2026-03-26T00:00:00Z"
+  entry_count: 36
+  concept_count: 13
+  relationship_count: 12
   sources_extracted: ["narwhals"]
