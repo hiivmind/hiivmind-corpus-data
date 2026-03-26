@@ -33,6 +33,67 @@ concepts:
     tags: ["expressions", "dsl", "aggregation", "window", "udf"]
     entry_count: 9
 
+  string-expressions:
+    label: "String Expressions"
+    description: "String namespace (Expr.str): case conversion, splitting, slicing, regex, contains, replace"
+    entries:
+      - "polars:user-guide/expressions/strings.md"
+    tags: ["string", "regex", "text", "str-namespace"]
+    entry_count: 1
+
+  temporal-expressions:
+    label: "Temporal Expressions"
+    description: "Datetime parsing, temporal filtering, rolling windows, resampling, timezone handling"
+    entries:
+      - "polars:user-guide/transformations/time-series/parsing.md"
+      - "polars:user-guide/transformations/time-series/filter.md"
+      - "polars:user-guide/transformations/time-series/rolling.md"
+      - "polars:user-guide/transformations/time-series/resampling.md"
+      - "polars:user-guide/transformations/time-series/timezones.md"
+    tags: ["datetime", "temporal", "time-series", "dt-namespace"]
+    entry_count: 5
+
+  null-handling:
+    label: "Null Handling"
+    description: "Missing data semantics: is_null, fill_null, drop_nulls, forward/backward fill, NaN handling"
+    entries:
+      - "polars:user-guide/expressions/missing-data.md"
+    tags: ["null", "missing", "nan", "fill"]
+    entry_count: 1
+
+  casting-expressions:
+    label: "Casting"
+    description: "Type conversion between dtypes, strict vs lenient casting"
+    entries:
+      - "polars:user-guide/expressions/casting.md"
+    tags: ["cast", "types", "conversion"]
+    entry_count: 1
+
+  aggregation-expressions:
+    label: "Aggregation Expressions"
+    description: "group_by aggregations, conditional aggregation, nested grouping"
+    entries:
+      - "polars:user-guide/expressions/aggregation.md"
+    tags: ["aggregation", "group-by", "reduce"]
+    entry_count: 1
+
+  window-expressions:
+    label: "Window Expressions"
+    description: "Window functions via over(), ranking, mapping strategies"
+    entries:
+      - "polars:user-guide/expressions/window-functions.md"
+    tags: ["window", "over", "ranking", "partition"]
+    entry_count: 1
+
+  collection-expressions:
+    label: "Collection Expressions"
+    description: "List/array namespace and struct namespace operations"
+    entries:
+      - "polars:user-guide/expressions/lists-and-arrays.md"
+      - "polars:user-guide/expressions/structs.md"
+    tags: ["list", "array", "struct", "nested"]
+    entry_count: 2
+
   data-types:
     label: "Data Types"
     description: "Type system, Series, DataFrame, strings, lists, categoricals, structs, missing data"
@@ -171,10 +232,38 @@ relationships:
     to: "data-types"
     type: "see-also"
     origin: "manual"
+  - from: "string-expressions"
+    to: "expressions"
+    type: "part-of"
+    origin: "manual"
+  - from: "temporal-expressions"
+    to: "expressions"
+    type: "part-of"
+    origin: "manual"
+  - from: "null-handling"
+    to: "expressions"
+    type: "part-of"
+    origin: "manual"
+  - from: "casting-expressions"
+    to: "expressions"
+    type: "part-of"
+    origin: "manual"
+  - from: "aggregation-expressions"
+    to: "expressions"
+    type: "part-of"
+    origin: "manual"
+  - from: "window-expressions"
+    to: "expressions"
+    type: "part-of"
+    origin: "manual"
+  - from: "collection-expressions"
+    to: "expressions"
+    type: "part-of"
+    origin: "manual"
 
 meta:
-  generated_at: "2026-03-25T12:00:00Z"
-  entry_count: 63
-  concept_count: 10
-  relationship_count: 9
+  generated_at: "2026-03-26T00:00:00Z"
+  entry_count: 75
+  concept_count: 17
+  relationship_count: 16
   sources_extracted: ["polars"]
