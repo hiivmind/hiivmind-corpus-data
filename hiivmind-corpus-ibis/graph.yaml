@@ -54,6 +54,54 @@ concepts:
     tags: ["expressions", "dsl", "api", "columns", "selectors"]
     entry_count: 8
 
+  string-expressions:
+    label: "String Expressions"
+    description: "StringValue methods: case conversion, contains, replace, split, regex, padding"
+    entries:
+      - "ibis:reference/expression-strings.qmd"
+    tags: ["string", "text", "regex", "str"]
+    entry_count: 1
+
+  numeric-expressions:
+    label: "Numeric Expressions"
+    description: "NumericValue, IntegerValue, FloatingValue, DecimalValue, BooleanValue, arithmetic ops"
+    entries:
+      - "ibis:reference/expression-numeric.qmd"
+    tags: ["numeric", "arithmetic", "boolean", "math"]
+    entry_count: 1
+
+  temporal-expressions:
+    label: "Temporal Expressions"
+    description: "TimestampValue, DateValue, TimeValue, IntervalValue, DayOfWeek, temporal operations"
+    entries:
+      - "ibis:reference/expression-temporal.qmd"
+    tags: ["datetime", "temporal", "timestamp", "interval"]
+    entry_count: 1
+
+  generic-expressions:
+    label: "Generic Expressions"
+    description: "Value, Column, Scalar: comparisons, coalesce, greatest, least, ifelse, cases, null handling"
+    entries:
+      - "ibis:reference/expression-generic.qmd"
+    tags: ["comparison", "boolean", "null", "coalesce", "conditional"]
+    entry_count: 1
+
+  collection-expressions:
+    label: "Collection Expressions"
+    description: "ArrayValue, MapValue, StructValue, JSON expressions"
+    entries:
+      - "ibis:reference/expression-collections.qmd"
+    tags: ["array", "map", "struct", "json", "nested"]
+    entry_count: 1
+
+  table-expressions:
+    label: "Table Expressions"
+    description: "Table, GroupedTable: joins, aggregations, window functions, set operations"
+    entries:
+      - "ibis:reference/expression-tables.qmd"
+    tags: ["table", "join", "aggregate", "window", "group-by"]
+    entry_count: 1
+
   sql-integration:
     label: "SQL Integration"
     description: "Mixing SQL with Ibis expressions, .sql() method, SQL-to-Ibis translation"
@@ -122,10 +170,34 @@ relationships:
     to: "expression-api"
     type: "see-also"
     origin: "manual"
+  - from: "string-expressions"
+    to: "expression-api"
+    type: "part-of"
+    origin: "manual"
+  - from: "numeric-expressions"
+    to: "expression-api"
+    type: "part-of"
+    origin: "manual"
+  - from: "temporal-expressions"
+    to: "expression-api"
+    type: "part-of"
+    origin: "manual"
+  - from: "generic-expressions"
+    to: "expression-api"
+    type: "part-of"
+    origin: "manual"
+  - from: "collection-expressions"
+    to: "expression-api"
+    type: "part-of"
+    origin: "manual"
+  - from: "table-expressions"
+    to: "expression-api"
+    type: "part-of"
+    origin: "manual"
 
 meta:
-  generated_at: "2026-03-25T12:00:00Z"
-  entry_count: 36
-  concept_count: 8
-  relationship_count: 7
+  generated_at: "2026-03-26T00:00:00Z"
+  entry_count: 42
+  concept_count: 14
+  relationship_count: 13
   sources_extracted: ["ibis"]
