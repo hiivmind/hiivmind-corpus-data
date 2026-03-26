@@ -125,6 +125,128 @@ bridges:
     type: "see-also"
     note: "Both enable cross-engine interop — Ibis via API portability, Substrait via serialized query plan interchange"
 
+  # === String Expressions (4-way) ===
+  - concept_a: "polars:string-expressions"
+    concept_b: "ibis:string-expressions"
+    type: "see-also"
+    note: "Both provide string manipulation methods on column expressions — upper, lower, contains, replace, etc."
+
+  - concept_a: "polars:string-expressions"
+    concept_b: "narwhals:string-expressions"
+    type: "see-also"
+    note: "Narwhals string namespace mirrors Polars .str accessor for cross-backend string operations"
+
+  - concept_a: "polars:string-expressions"
+    concept_b: "substrait:scalar-functions"
+    type: "see-also"
+    note: "Substrait scalar-functions includes string function definitions (substring, concat, like, etc.)"
+
+  - concept_a: "ibis:string-expressions"
+    concept_b: "narwhals:string-expressions"
+    type: "see-also"
+    note: "Both abstract string operations across backends — Ibis via SQL compilation, Narwhals via dataframe-agnostic API"
+
+  - concept_a: "ibis:string-expressions"
+    concept_b: "substrait:scalar-functions"
+    type: "see-also"
+    note: "Ibis string expressions map to Substrait scalar string function definitions"
+
+  # === Temporal Expressions (4-way) ===
+  - concept_a: "polars:temporal-expressions"
+    concept_b: "ibis:temporal-expressions"
+    type: "see-also"
+    note: "Both provide datetime extraction, arithmetic, and truncation on column expressions"
+
+  - concept_a: "polars:temporal-expressions"
+    concept_b: "narwhals:temporal-expressions"
+    type: "see-also"
+    note: "Narwhals temporal namespace mirrors Polars .dt accessor for cross-backend datetime operations"
+
+  - concept_a: "polars:temporal-expressions"
+    concept_b: "substrait:scalar-functions"
+    type: "see-also"
+    note: "Substrait scalar-functions includes datetime function definitions (extract, add, diff, etc.)"
+
+  - concept_a: "ibis:temporal-expressions"
+    concept_b: "narwhals:temporal-expressions"
+    type: "see-also"
+    note: "Both abstract temporal operations across backends — Ibis via SQL compilation, Narwhals via dataframe-agnostic API"
+
+  - concept_a: "ibis:temporal-expressions"
+    concept_b: "substrait:scalar-functions"
+    type: "see-also"
+    note: "Ibis temporal expressions map to Substrait scalar datetime function definitions"
+
+  # === Null Handling (3-way) ===
+  - concept_a: "polars:null-handling"
+    concept_b: "narwhals:null-handling"
+    type: "see-also"
+    note: "Both provide null detection (is_null) and replacement (fill_null) on column expressions"
+
+  - concept_a: "polars:null-handling"
+    concept_b: "ibis:generic-expressions"
+    type: "see-also"
+    note: "Ibis null/coalesce operations live in generic-expressions; Polars has dedicated null-handling methods"
+
+  - concept_a: "narwhals:null-handling"
+    concept_b: "ibis:generic-expressions"
+    type: "see-also"
+    note: "Ibis null/coalesce operations live in generic-expressions; Narwhals has dedicated null-handling methods"
+
+  # === Collection Expressions (3-way) ===
+  - concept_a: "polars:collection-expressions"
+    concept_b: "ibis:collection-expressions"
+    type: "see-also"
+    note: "Both provide operations on array/list and struct/map column types"
+
+  - concept_a: "polars:collection-expressions"
+    concept_b: "narwhals:collection-expressions"
+    type: "see-also"
+    note: "Both provide list/array operations on nested column types"
+
+  - concept_a: "ibis:collection-expressions"
+    concept_b: "narwhals:collection-expressions"
+    type: "see-also"
+    note: "Both abstract collection operations (arrays, maps) across backends"
+
+  # === Aggregation (3-way) ===
+  - concept_a: "polars:aggregation-expressions"
+    concept_b: "ibis:table-expressions"
+    type: "see-also"
+    note: "Ibis aggregation is performed on Table expressions; Polars has dedicated aggregation expression methods"
+
+  - concept_a: "polars:aggregation-expressions"
+    concept_b: "substrait:aggregate-functions"
+    type: "see-also"
+    note: "Polars aggregation methods map to Substrait aggregate function definitions (sum, count, avg, etc.)"
+
+  - concept_a: "ibis:table-expressions"
+    concept_b: "substrait:aggregate-functions"
+    type: "see-also"
+    note: "Ibis Table.aggregate() compiles to Substrait AggregateRel with aggregate function references"
+
+  # === Window Functions (3-way) ===
+  - concept_a: "polars:window-expressions"
+    concept_b: "ibis:table-expressions"
+    type: "see-also"
+    note: "Ibis window functions are expressed on Table expressions; Polars uses .over() on column expressions"
+
+  - concept_a: "polars:window-expressions"
+    concept_b: "substrait:window-functions"
+    type: "see-also"
+    note: "Polars .over() window expressions map to Substrait window function definitions"
+
+  - concept_a: "ibis:table-expressions"
+    concept_b: "substrait:window-functions"
+    type: "see-also"
+    note: "Ibis window expressions on Tables compile to Substrait WindowRel with window function references"
+
+  # === Casting (2-way) ===
+  - concept_a: "polars:casting-expressions"
+    concept_b: "substrait:specialized-expressions"
+    type: "see-also"
+    note: "Substrait cast is a specialized expression type; Polars provides .cast() on column expressions"
+
 aliases:
   "lazy evaluation":
     - corpus: "polars"
@@ -196,7 +318,59 @@ aliases:
     - corpus: "polars"
       concept: "distributed-execution"
 
+  "string expressions":
+    - corpus: "polars"
+      concept: "string-expressions"
+    - corpus: "ibis"
+      concept: "string-expressions"
+    - corpus: "narwhals"
+      concept: "string-expressions"
+    - corpus: "substrait"
+      concept: "scalar-functions"
+
+  "datetime expressions":
+    - corpus: "polars"
+      concept: "temporal-expressions"
+    - corpus: "ibis"
+      concept: "temporal-expressions"
+    - corpus: "narwhals"
+      concept: "temporal-expressions"
+    - corpus: "substrait"
+      concept: "scalar-functions"
+
+  "null handling":
+    - corpus: "polars"
+      concept: "null-handling"
+    - corpus: "narwhals"
+      concept: "null-handling"
+    - corpus: "ibis"
+      concept: "generic-expressions"
+
+  "aggregation":
+    - corpus: "polars"
+      concept: "aggregation-expressions"
+    - corpus: "ibis"
+      concept: "table-expressions"
+    - corpus: "substrait"
+      concept: "aggregate-functions"
+
+  "window functions":
+    - corpus: "polars"
+      concept: "window-expressions"
+    - corpus: "ibis"
+      concept: "table-expressions"
+    - corpus: "substrait"
+      concept: "window-functions"
+
+  "collections":
+    - corpus: "polars"
+      concept: "collection-expressions"
+    - corpus: "ibis"
+      concept: "collection-expressions"
+    - corpus: "narwhals"
+      concept: "collection-expressions"
+
 meta:
-  updated_at: "2026-03-25T12:00:00Z"
-  bridge_count: 23
+  updated_at: "2026-03-26T00:00:00Z"
+  bridge_count: 46
   corpora_linked: ["polars", "ibis", "narwhals", "substrait"]
