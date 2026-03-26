@@ -44,6 +44,46 @@ concepts:
     tags: ["expressions", "functions", "scalar", "aggregate", "window", "lambda"]
     entry_count: 11
 
+  scalar-functions:
+    label: "Scalar Functions"
+    description: "Scalar function definitions: arithmetic, comparison, string, boolean, datetime via extension YAMLs"
+    entries:
+      - "substrait:expressions/scalar_functions.md"
+    tags: ["scalar", "arithmetic", "comparison", "string", "boolean", "datetime"]
+    entry_count: 1
+
+  aggregate-functions:
+    label: "Aggregate Functions"
+    description: "Aggregate function definitions: SUM, COUNT, AVG, measures, optional filter"
+    entries:
+      - "substrait:expressions/aggregate_functions.md"
+    tags: ["aggregate", "sum", "count", "group-by"]
+    entry_count: 1
+
+  window-functions:
+    label: "Window Functions"
+    description: "Window function definitions: RANK, NTILE, ROW_NUMBER, frame spec, partitioning"
+    entries:
+      - "substrait:expressions/window_functions.md"
+    tags: ["window", "ranking", "partition", "frame"]
+    entry_count: 1
+
+  field-references:
+    label: "Field References"
+    description: "Column references: RootReference, OuterReference, LambdaParameterReference"
+    entries:
+      - "substrait:expressions/field_references.md"
+    tags: ["field", "column", "reference"]
+    entry_count: 1
+
+  specialized-expressions:
+    label: "Specialized Expressions"
+    description: "If/then/else, switch/case, cast expressions"
+    entries:
+      - "substrait:expressions/specialized_record_expressions.md"
+    tags: ["conditional", "cast", "if-then", "switch"]
+    entry_count: 1
+
   relational-algebra:
     label: "Relational Algebra"
     description: "Logical and physical relations — read, filter, join, aggregate, sort, project, set ops"
@@ -112,10 +152,30 @@ relationships:
     to: "query-plan-spec"
     type: "see-also"
     origin: "manual"
+  - from: "scalar-functions"
+    to: "expressions"
+    type: "part-of"
+    origin: "manual"
+  - from: "aggregate-functions"
+    to: "expressions"
+    type: "part-of"
+    origin: "manual"
+  - from: "window-functions"
+    to: "expressions"
+    type: "part-of"
+    origin: "manual"
+  - from: "field-references"
+    to: "expressions"
+    type: "part-of"
+    origin: "manual"
+  - from: "specialized-expressions"
+    to: "expressions"
+    type: "part-of"
+    origin: "manual"
 
 meta:
-  generated_at: "2026-03-25T12:00:00Z"
-  entry_count: 37
-  concept_count: 7
-  relationship_count: 6
+  generated_at: "2026-03-26T00:00:00Z"
+  entry_count: 42
+  concept_count: 12
+  relationship_count: 11
   sources_extracted: ["substrait"]
