@@ -15,9 +15,23 @@
 
 ## Core Concepts
 
-### Data Types and Structures
-- **Data Types & Structures** `polars:user-guide/concepts/data-types-and-structures.md` - Series, DataFrame, Schema. Data types: numeric (Int8-Int128, Float16-64, Decimal), nested (List, Array, Struct), temporal (Date, Datetime, Duration), strings, categoricals. Uses Arrow Columnar Format internally
+### Data Structures
+- **Data Types & Structures** `polars:user-guide/concepts/data-types-and-structures.md` - Series (1D homogeneous), DataFrame (2D heterogeneous, uniquely named series), Schema (column-to-type mapping). Inspection methods: `head`, `tail`, `glimpse`, `sample`, `describe`. Schema override via `schema` dict or `schema_overrides` parameter. Arrow Columnar Format internally
+
+### Data Types
+- **Data Types & Structures** `polars:user-guide/concepts/data-types-and-structures.md#data-types` - Full type table:
+  - **Numeric**: `Int8`–`Int128`, `UInt8`–`UInt128`, `Float16`/`Float32`/`Float64`, `Decimal` (128-bit with precision/scale)
+  - **Temporal**: `Date`, `Time`, `Datetime`, `Duration`
+  - **Nested**: `List` (variable length), `Array` (fixed shape per series), `Struct` (composite product type with named fields)
+  - **String/Binary**: `String` (UTF-8), `Binary` (raw bytes)
+  - **Categorical**: `Categorical` (runtime-inferred categories), `Enum` (predetermined ordered categories)
+  - **Special**: `Boolean` (bit-packed), `Null`, `Object` (arbitrary Python objects)
+- **Data Types & Structures** `polars:user-guide/concepts/data-types-and-structures.md#floating-point-numbers` - IEEE 754 with exceptions: NaN compares equal to NaN and greater than all non-NaN. No guarantees on sign of zero/NaN or NaN payload. Operations may canonicalize zeros/NaNs for efficiency
+
+### Expression Model
 - **Expressions & Contexts** `polars:user-guide/concepts/expressions-and-contexts.md` - Core DSL concepts. Expressions are lazy transformations. Four contexts: `select` (column operations), `with_columns` (add columns), `filter` (row filtering), `group_by` (aggregations). Expression expansion for multi-column operations
+- **Expressions Overview** `polars:user-guide/expressions/index.md` - Expression categories: essentials (basic ops, expansion, casting), type-specific namespaces (`str`, `list`, `arr`, `cat`, `struct`, `dt`), operation types (aggregation, window, folds), user-defined functions
+- **DataType Expressions** `polars:user-guide/lazy/datatype_exprs.md` - Runtime type inspection and manipulation with `pl.dtype_of()`. Express relations between expression datatypes, inspect type info at runtime, cast columns to match another column's type. Useful for utility functions, heterogeneous data sources, compartmentalized code
 
 ### Lazy API
 - **Lazy API Overview** `polars:user-guide/concepts/lazy-api.md` - LazyFrame vs DataFrame, query optimization benefits
@@ -38,12 +52,12 @@
 - **Expression Expansion** `polars:user-guide/expressions/expression-expansion.md` - Apply same transformation to multiple columns: `pl.col("a", "b")`, `pl.col(pl.Float64)`, `pl.all()`, `pl.exclude()`
 - **Casting** `polars:user-guide/expressions/casting.md` - Type conversion with `cast()`, strict vs lenient casting
 
-### Data Type Operations
-- **Strings** `polars:user-guide/expressions/strings.md` - String namespace (`str`): splitting, slicing, regex matching, replacement, case conversion
-- **Lists & Arrays** `polars:user-guide/expressions/lists-and-arrays.md` - `List` (variable length) vs `Array` (fixed shape). List namespace for slicing (`head`, `tail`), `explode()`, element-wise ops with `eval()` and `element`, row-wise aggregation with `concat_list()`
-- **Categorical Data & Enums** `polars:user-guide/expressions/categorical-data-and-enums.md` - Efficient string encoding. `Categorical` (runtime inference) vs `Enum` (predetermined categories). Note: v1.32.0+ categoricals always use lexical ordering (`ordering` param deprecated)
-- **Structs** `polars:user-guide/expressions/structs.md` - Composite type for multiple fields. Created by `value_counts()`, dict inference. `unnest()` to expand, `field()` to extract, `rename_fields()`. Use for multi-column deduplication and ranking
-- **Missing Data** `polars:user-guide/expressions/missing-data.md` - Handling `null` values: `is_null()`, `fill_null()`, `drop_nulls()`, forward/backward fill
+### Data Type Namespaces
+- **Strings** `polars:user-guide/expressions/strings.md` - String namespace (`str`): splitting, slicing, regex matching, replacement, case conversion. Access via `col("name").str.to_uppercase()`
+- **Lists & Arrays** `polars:user-guide/expressions/lists-and-arrays.md` - `List` (variable length) vs `Array` (fixed shape). List namespace (`list`): slicing (`head`, `tail`), `explode()`, element-wise ops with `eval()` and `element`, row-wise aggregation with `concat_list()`. Array namespace (`arr`): fixed-shape operations
+- **Categorical Data & Enums** `polars:user-guide/expressions/categorical-data-and-enums.md` - Efficient string encoding. `Categorical` (runtime inference) vs `Enum` (predetermined categories). Cat namespace (`cat`). Note: v1.32.0+ categoricals always use lexical ordering (`ordering` param deprecated)
+- **Structs** `polars:user-guide/expressions/structs.md` - Composite type for multiple fields. Struct namespace (`struct`): `unnest()` to expand, `field()` to extract, `rename_fields()`. Created by `value_counts()`, dict inference. Use for multi-column deduplication and ranking
+- **Missing Data** `polars:user-guide/expressions/missing-data.md` - Handling `null` values: `is_null()`, `fill_null()`, `drop_nulls()`, forward/backward fill. `null` is distinct from `NaN` (floating point only)
 
 ### Aggregation & Window Functions
 - **Aggregation** `polars:user-guide/expressions/aggregation.md` - `group_by().agg()` context. Multiple aggregations, conditional aggregations, filtering within groups, nested grouping, sorting within groups. Avoid Python lambdas to preserve parallelization

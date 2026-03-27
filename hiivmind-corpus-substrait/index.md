@@ -32,7 +32,13 @@
   3. **Variation** (always): system-preferred `[0]` or extension - in-memory format variations
   4. **Parameters** (compound only): `<10, 2>` for DECIMAL, `<i32, string>` for STRUCT
   - **Strict type system**: no coercion, all changes via explicit cast expressions
-- **Type Classes** `substrait:types/type_classes.md` - Simple types: integers (`i8`-`i128`), floats (`fp32`, `fp64`), `boolean`, `string`, `binary`, `date`, `time`, `timestamp`, `timestamp_tz`, `interval_year`, `interval_day`, `uuid`, `fixedchar`, `varchar`, `fixedbinary`, `decimal`. Compound types: `STRUCT`, `LIST`, `MAP`, `FUNC<T->R>` (function/lambda types). User-defined types via extensions (must use `u!` prefix)
+- **Type Classes** `substrait:types/type_classes.md` - Complete type catalog:
+  - **Simple numeric**: `boolean`, `i8`, `i16`, `i32`, `i64`, `i128`, `fp32`, `fp64`, `decimal<P,S>`
+  - **Simple string/binary**: `string`, `binary`, `fixedchar<L>`, `varchar<L>`, `fixedbinary<L>`
+  - **Simple temporal**: `date`, `time`, `timestamp`, `timestamp_tz`, `interval_year`, `interval_day`
+  - **Simple other**: `uuid`
+  - **Compound**: `STRUCT<T1,T2,...>`, `LIST<T>`, `MAP<K,V>`, `FUNC<T->R>` (function/lambda types for higher-order operations)
+  - **User-defined**: extension types with `u!` prefix (e.g., `u!point`)
 - **Type Variations** `substrait:types/type_variations.md` - Physical variations of base types, distinguished by in-memory format
 - **Type Aliases** `substrait:types/type_aliases.md` - Shorthand names for common type configurations
 - **Type Parsing** `substrait:types/type_parsing.md` - Syntax for describing types in text form. Function types: `func<any1 -> any2>` (single param), `func<(any1, any2) -> any3>` (multiple params). User-defined types use `u!typename` syntax. Precision type naming updated to match grammar
@@ -91,7 +97,40 @@
 
 ## Extensions
 
-- **Extensions Overview** `substrait:extensions/index.md` - Extension mechanism for types and functions. Simple extensions in YAML files. URN identifiers reference extension files. Extension anchors link plan references to definitions. Optional `metadata` field at top-level, type, and function scopes. Deprecation support: `deprecated` field with `since` version, optional `reason`/`metadata` (applies to types, type variations, functions, implementations). Core extensions in `extensions/` directory: `functions_arithmetic.yaml`, `functions_comparison.yaml`, `functions_set.yaml`, etc.
+- **Extensions Overview** `substrait:extensions/index.md` - Extension mechanism for types and functions. Simple extensions in YAML files. URN identifiers reference extension files. Extension anchors link plan references to definitions. Optional `metadata` field at top-level, type, and function scopes. Deprecation support: `deprecated` field with `since` version, optional `reason`/`metadata` (applies to types, type variations, functions, implementations). Core extensions in `extensions/` directory
+
+### Standard Function Extensions
+
+#### Arithmetic & Math
+- **Arithmetic Functions** `substrait:../extensions/functions_arithmetic.yaml` ⚡ GREP - 1951 lines. Scalar functions: `add`, `subtract`, `multiply`, `divide`, `negate`, `modulus`, `power`, `sqrt`, `exp`, `cos`, `sin`, `tan`, `cosh`, `sinh`, `tanh`, `acos`, `asin`, `atan`, `acosh`, `asinh`, `atanh`, `atan2`, `sign`, `abs`, `factorial`, `bitwise_not`, `bitwise_and`, `bitwise_or`, `bitwise_xor`. Each with typed implementations (i8–i64, fp32, fp64) and overflow/rounding options. Search: `grep -n "name:" functions_arithmetic.yaml`
+- **Decimal Arithmetic** `substrait:../extensions/functions_arithmetic_decimal.yaml` ⚡ GREP - 249 lines. Decimal-specific: `add`, `subtract`, `multiply`, `divide`, `modulus`, `abs`, `power` with precision/scale tracking
+- **Logarithmic Functions** `substrait:../extensions/functions_logarithmic.yaml` ⚡ GREP - 255 lines. `ln`, `log10`, `log2`, `logb` (arbitrary base), `log1p`. Typed for fp32/fp64
+- **Rounding Functions** `substrait:../extensions/functions_rounding.yaml` ⚡ GREP - 271 lines. `ceil`, `floor`, `round` with rounding mode options (TIE_TO_EVEN, TIE_AWAY_FROM_ZERO, TRUNCATE, CEILING, FLOOR)
+- **Decimal Rounding** `substrait:../extensions/functions_rounding_decimal.yaml` - 83 lines. `ceil`, `floor`, `round` for decimal types
+
+#### Comparison & Boolean
+- **Comparison Functions** `substrait:../extensions/functions_comparison.yaml` ⚡ GREP - 323 lines. `not_equal`, `equal`, `is_not_distinct_from`, `is_distinct_from`, `lt`, `gt`, `lte`, `gte`, `between`, `is_null`, `is_not_null`, `is_nan`, `is_finite`, `is_infinite`, `nullif`, `coalesce`, `least`, `greatest`
+- **Boolean Functions** `substrait:../extensions/functions_boolean.yaml` - 141 lines. `or`, `and`, `and_not`, `xor`, `not` using Kleene logic (null = unknown). Aggregate: `bool_and`, `bool_or`
+
+#### String & DateTime
+- **String Functions** `substrait:../extensions/functions_string.yaml` ⚡ GREP - 1577 lines. `concat`, `like`, `substring`, `regexp_match_substring`, `regexp_replace`, `regexp_count_substring`, `replace`, `reverse`, `lower`, `upper`, `char_length`, `bit_length`, `octet_length`, `trim`, `ltrim`, `rtrim`, `left`, `right`, `repeat`, `starts_with`, `ends_with`, `cap`, `lpad`, `rpad`, `string_agg`, `center`, `count_substring`. Null handling and case sensitivity options
+- **DateTime Functions** `substrait:../extensions/functions_datetime.yaml` ⚡ GREP - 1119 lines. `extract` (YEAR, MONTH, DAY, HOUR, MINUTE, SECOND, ISO_WEEK, etc.), `add`, `subtract`, `multiply` for temporal arithmetic, `assume_timezone`, `local_timestamp`, `strptime_time`, `strptime_date`, `strptime_timestamp`, `strftime`, `round_temporal`, `round_calendar`
+
+#### Collections & Sets
+- **List Functions** `substrait:../extensions/functions_list.yaml` - 132 lines. Higher-order: `transform` (map), `filter`, `any_match`, `all_match`. Utility: `cardinality`, `sort` (with direction/null placement options). Uses `func<T -> R>` lambda types
+- **Set Functions** `substrait:../extensions/functions_set.yaml` - 28 lines. `index_in` for membership testing
+
+#### Aggregate Functions
+- **Generic Aggregates** `substrait:../extensions/functions_aggregate_generic.yaml` - 42 lines. `count` (values or records, with overflow options), `any_value` (arbitrary value from group, with ignore_nulls option). Both decomposable for distributed execution
+- **Decimal Aggregates** `substrait:../extensions/functions_aggregate_decimal_output.yaml` - 42 lines. Aggregates with decimal output types
+- **Approximate Aggregates** `substrait:../extensions/functions_aggregate_approx.yaml` - 19 lines. Approximate aggregate functions
+
+#### Geometry
+- **Geometry Functions** `substrait:../extensions/functions_geometry.yaml` ⚡ GREP - 240 lines. `point`, `make_line`, `x_coordinate`, `y_coordinate`, `num_points`, `is_empty`, `is_closed`, `is_simple`, `is_ring`, `geometry_type`, `envelope`, `dimension`, `is_valid`, `collection_extract`, `flip_coordinates`, `remove_repeated_points`, `buffer`, `centroid`, `minimum_bounding_circle`
+
+### Extension Type Definitions
+- **Extension Types** `substrait:../extensions/extension_types.yaml` - User-defined type examples: `point` (latitude/longitude as i32), `line` (start/end as `u!point`). Demonstrates `u!` prefix for user-defined types
+- **Type Variations** `substrait:../extensions/type_variations.yaml` - Physical format variations: `dict4` (4-byte dictionary encoded string, INHERITS), `bigoffset` (Arrow large string, SEPARATE), `avro` (Avro encoded struct), `cstruct` (C struct representation), `dict2` (2-byte dictionary string)
 
 ---
 

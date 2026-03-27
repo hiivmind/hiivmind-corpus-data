@@ -16,11 +16,20 @@
 
 ## Core Concepts
 
-### Data Types and Structures
-- **Datatypes and Datashapes** `ibis:concepts/datatypes.qmd` - Every value has type (Integer, Float, String, Array) and shape (Scalar or Column). Broadcasting rules: Scalar+Scalar=Scalar, Column+Scalar=Column. Columns must be from same Table (no positional alignment like NumPy)
+### Data Types and Shapes
+- **Datatypes and Datashapes** `ibis:concepts/datatypes.qmd` - Every value has two properties: **type** (Integer, Float, String, Array, etc.) and **shape** (Scalar or Column). Type flavors define precision (e.g., int8 vs int64) without changing capabilities. Shape determines available methods: Columns have `.mean()`, `.max()`; Scalars don't. Broadcasting: Scalar+Scalar=Scalar, Column+Scalar=Column, Column+Column=Column (must be from same Table — no positional alignment like NumPy, requires explicit join)
 - **Type Casting** `ibis:concepts/casting.qmd` - Converting between data types with `cast()`
+- **Data Types Reference** `ibis:reference/datatypes.qmd` - Complete type system: `dtype()`, `DataType` base class. Numeric: `Int8`–`Int64`, `UInt8`–`UInt64`, `Float16`–`Float64`, `Decimal`. String/Binary: `String`, `Binary`. Boolean: `Boolean`. Temporal: `Date`, `Time`, `Timestamp`, `Interval`. Collections: `Array`, `Map`, `Struct`. Special: `JSON`, `UUID`, `INET`, `MACADDR`, geospatial types. `GeoSpatial`, `Point`, `LineString`, `Polygon`, `MultiPoint`, `MultiLineString`, `MultiPolygon`
+- **Schemas** `ibis:reference/schemas.qmd` - `schema()`, `Schema` class for defining and inspecting table column types
+
+### Data Structures
 - **Backend & Table Hierarchy** `ibis:concepts/backend-table-hierarchy.qmd` - How backends, connections, and tables relate
+- **Table Expressions** `ibis:reference/expression-tables.qmd` - `Table`, `GroupedTable`, `read_csv`, `read_parquet`, `read_json`, `read_delta`, `memtable`, `table`, `join`, `union`, `intersect`, `difference`, window functions (`row_number`, `rank`, `dense_rank`, `ntile`)
+- **Column Selectors** `ibis:reference/selectors.qmd` - `ibis.selectors` module: `s.numeric()`, `s.matches()`, `s.all()`, `~s.matches()` for column selection patterns
+
+### Expression Architecture
 - **Internals** `ibis:concepts/internals.qmd` - Under the hood: expression trees, compilation to SQL
+- **Generic Expressions** `ibis:reference/expression-generic.qmd` - `Value`, `Column`, `Scalar`, `Deferred`, `literal`, `param`, `null`, `range`, `coalesce`, `least`, `greatest`, `ifelse`, `cases`, `asc`, `desc`, `to_sql`
 - **Versioning** `ibis:concepts/versioning.qmd` - Version policy and compatibility
 
 ### Architecture
@@ -132,20 +141,29 @@
 
 ## API Reference
 
-### Expression API
-- **Table Expressions** `ibis:reference/expression-tables.qmd` - `Table`, `GroupedTable`, `read_csv`, `read_parquet`, `read_json`, `read_delta`, `memtable`, `table`, `join`, `union`, `intersect`, `difference`, window functions (`row_number`, `rank`, `dense_rank`, `ntile`)
-- **Column Selectors** `ibis:reference/selectors.qmd` - `ibis.selectors` module: `s.numeric()`, `s.matches()`, `s.all()`, `~s.matches()` for column selection patterns
-- **Generic Expressions** `ibis:reference/expression-generic.qmd` - `Value`, `Column`, `Scalar`, `Deferred`, `literal`, `param`, `null`, `range`, `coalesce`, `least`, `greatest`, `ifelse`, `cases`, `asc`, `desc`, `to_sql`
-- **Numeric Expressions** `ibis:reference/expression-numeric.qmd` - `NumericValue`, `NumericColumn`, `IntegerValue`, `FloatingValue`, `DecimalValue`, `BooleanValue`, `and_`, `or_`, `random`, constants `e`, `pi`
-- **String Expressions** `ibis:reference/expression-strings.qmd` - `StringValue` with string manipulation methods
-- **Temporal Expressions** `ibis:reference/expression-temporal.qmd` - `TimestampValue`, `DateValue`, `TimeValue`, `IntervalValue`, `DayOfWeek`, `now`, `today`, `date`, `time`, `timestamp`, `interval`
-- **Collection Expressions** `ibis:reference/expression-collections.qmd` - `ArrayValue`, `MapValue`, `StructValue`, `array`, `map`, `struct` constructors
-- **JSON Expressions** `ibis:reference/expression-json.qmd` - `JSONValue` for JSON manipulation
-- **Geospatial Expressions** `ibis:reference/expression-geospatial.qmd` - `GeoSpatialValue`, `GeoSpatialColumn`, `point` for geospatial data
-- **Misc Expressions** `ibis:reference/expression-misc.qmd` - `uuid`, `UUIDValue`, `INETValue`, `MACADDRValue`
+### Expression API by Type
+
+#### Numeric & Boolean
+- **Numeric Expressions** `ibis:reference/expression-numeric.qmd` - `NumericValue` (arithmetic, abs, ceil, floor, round, log, exp, trig), `NumericColumn` (sum, mean, std, var, median, quantile, corr, cov), `IntegerValue`, `FloatingValue` (isnan, isinf), `DecimalValue`, `BooleanValue` (any, all, ifelse), `and_`, `or_`, `random`, constants `e`, `pi`
+
+#### String
+- **String Expressions** `ibis:reference/expression-strings.qmd` - `StringValue`: length, lower, upper, strip, lstrip, rstrip, reverse, capitalize, contains, find, like, re_search, re_extract, re_replace, replace, split, concat, join, repeat, left, right, substr, lpad, rpad, translate, startswith, endswith, ascii_str, byte_length
+
+#### Temporal
+- **Temporal Expressions** `ibis:reference/expression-temporal.qmd` - `TimestampValue` (year, month, day, hour, minute, second, epoch_seconds, truncate, between), `DateValue` (day_of_week, day_of_year), `TimeValue`, `IntervalValue`, `DayOfWeek`. Constructors: `now`, `today`, `date`, `time`, `timestamp`, `interval`
+
+#### Collections (Array, Map, Struct)
+- **Collection Expressions** `ibis:reference/expression-collections.qmd` - `ArrayValue` (length, contains, unnest, filter, map, zip, sort, unique, flatten, intersection, union, remove, index, join), `MapValue` (get, keys, values, length, contains), `StructValue` (names, types, destructure). Constructors: `array`, `map`, `struct`
+
+#### JSON & Geospatial
+- **JSON Expressions** `ibis:reference/expression-json.qmd` - `JSONValue`: unwrap_as (cast JSON to typed values), JSON path access
+- **Geospatial Expressions** `ibis:reference/expression-geospatial.qmd` - `GeoSpatialValue` (area, buffer, contains, covers, distance, intersection, transform, union, within, x, y), `GeoSpatialColumn`, `point` constructor
+
+#### Misc Types
+- **Misc Expressions** `ibis:reference/expression-misc.qmd` - `uuid` generator, `UUIDValue`, `INETValue` (host, family), `MACADDRValue`
 
 ### Type System
-- **Data Types** `ibis:reference/datatypes.qmd` - `dtype`, `DataType`, all type classes (Int8-64, UInt8-64, Float16-64, Decimal, String, Binary, Boolean, Date, Time, Timestamp, Interval, Array, Map, Struct, JSON, UUID, INET, MACADDR, geospatial types)
+- **Data Types** `ibis:reference/datatypes.qmd` - Complete type hierarchy and type inference. See Core Concepts > Data Types Reference for full listing
 - **Schemas** `ibis:reference/schemas.qmd` - `schema`, `Schema` for table schemas
 
 ### UDFs

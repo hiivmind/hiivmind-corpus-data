@@ -34,6 +34,8 @@
   - **Broadcasting**: scalars broadcast to column length, backends handle differently
   - **Elementwise pushdown**: `over` nodes pushed past elementwise ops for SQL compatibility
   - **Group-by**: simple aggregations use native groupby, complex ones use `apply` with warning
+- **Boolean Operations** `narwhals:concepts/boolean.md` - Boolean logic across backends, how `&`, `|`, `~` work consistently
+- **Null Handling** `narwhals:concepts/null_handling.md` - NULL/NaN semantics across backends. Narwhals normalizes null behavior for consistent results regardless of backend
 
 ### Behavioral Concepts
 - **Order Dependence** `narwhals:concepts/order_dependence.md` - LazyFrames have undefined row order. Order-dependent operations (diff, shift, rolling) require explicit `order_by` in `over()`. `first`/`last` now accept optional `order_by` parameter. `n_orderable_ops` metadata tracks this
@@ -125,8 +127,13 @@ Shows which methods are supported across backends (pandas, Polars, PyArrow, cuDF
 
 ### Types & Utilities
 - **Schema** `narwhals:api-reference/schema.md` - `Schema` class for column type definitions
-- **Data Types** `narwhals:api-reference/dtypes.md` - All dtypes: `Int8`-`Int128`, `UInt8`-`UInt64`, `Float32`, `Float64`, `Boolean`, `String`, `Categorical`, `Enum`, `Date`, `Datetime`, `Duration`, `Object`, `Array`, `List`, `Struct`, `Unknown`
-- **Selectors** `narwhals:api-reference/selectors.md` - Column selectors: `by_dtype`, `numeric`, `boolean`, `string`, `categorical`, `all`
+- **Data Types** `narwhals:api-reference/dtypes.md` - Full type hierarchy with abstract base classes:
+  - `DType` (base) → `NumericType` → `FloatType` (`Float32`, `Float64`), `IntegerType` → `SignedIntegerType` (`Int8`–`Int128`), `UnsignedIntegerType` (`UInt8`–`UInt128`), `Decimal`
+  - `DType` → `TemporalType` → `Date`, `Datetime`, `Duration`, `Time`
+  - `DType` → `NestedType` → `Array`, `List`, `Struct` (with `Field` for named fields)
+  - `DType` → `String`, `Boolean`, `Categorical`, `Enum`, `Binary`, `Object`, `Unknown`
+  - Type comparison via `__eq__`, abstract classes useful for `isinstance` checks and selectors
+- **Selectors** `narwhals:api-reference/selectors.md` - Column selectors: `by_dtype`, `numeric`, `boolean`, `string`, `categorical`, `all`. Use type hierarchy for selection (e.g., `by_dtype(nw.NumericType)` selects all numeric columns)
 - **Typing** `narwhals:api-reference/typing.md` - Type hints: `FrameT`, `DataFrameT`, `IntoFrameT`, `IntoDataFrameT`, `IntoFrame`, `IntoDataFrame`, `IntoExpr`, `IntoSeries`
 - **Dependencies** `narwhals:api-reference/dependencies.md` - Backend detection utilities: `is_pandas_dataframe`, `is_polars_dataframe`, `get_polars`, `get_pandas`, etc.
 - **Implementation** `narwhals:api-reference/implementation.md` - Backend implementation details
