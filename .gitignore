@@ -4,6 +4,9 @@
 # Cached web content (in all child plugins)
 **/.cache/
 
+# Cross-corpus registry embeddings (project-local, rebuilt from concepts.yaml)
+.hiivmind/corpus/registry-embeddings.lance/
+
 # OS files
 .DS_Store
 Thumbs.db
