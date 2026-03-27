@@ -1,0 +1,595 @@
+entries:
+  # Getting Started
+  - id: "ibis:index.qmd"
+    source: "ibis"
+    title: "Introduction"
+    summary: "Ibis: the portable Python dataframe library. Same API for 20+ backends, fast local dataframes with DuckDB (default), Polars, DataFusion. Iterate locally, deploy remotely by changing one line. Bridges SQL and Python"
+    tags: [ibis, introduction, getting-started, duckdb, portable, dataframe]
+
+  - id: "ibis:why.qmd"
+    source: "ibis"
+    title: "Why Ibis?"
+    summary: "Comprehensive overview: portable API across 20+ backends, Python + SQL integration, scaling up/out, stream-batch unification, ecosystem integrations (pandas, Polars, visualization, ML libraries)"
+    tags: [ibis, overview, portable, sql, python, ecosystem]
+
+  - id: "ibis:tutorials/basics.qmd"
+    source: "ibis"
+    title: "10 Minutes to Ibis"
+    summary: "Quick tutorial: filter, select, mutate, order_by, group_by, aggregate. Uses DuckDB + Palmer penguins dataset. Interactive mode with ibis.options.interactive = True"
+    tags: [ibis, tutorial, basics, filter, select, mutate, aggregate, duckdb]
+
+  - id: "ibis:install.qmd"
+    source: "ibis"
+    title: "Installation"
+    summary: "Installing Ibis with backend-specific extras"
+    tags: [ibis, installation, setup]
+
+  # Core Concepts - Data Types and Shapes
+  - id: "ibis:concepts/datatypes.qmd"
+    source: "ibis"
+    title: "Datatypes and Datashapes"
+    summary: "Every value has two properties: type (Integer, Float, String, Array, etc.) and shape (Scalar or Column). Type flavors define precision (e.g., int8 vs int64) without changing capabilities. Shape determines available methods: Columns have .mean(), .max(); Scalars don't. Broadcasting: Scalar+Scalar=Scalar, Column+Scalar=Column, Column+Column=Column (must be from same Table, no positional alignment like NumPy, requires explicit join)"
+    tags: [ibis, datatypes, datashapes, scalar, column, broadcasting, type-system]
+
+  - id: "ibis:concepts/casting.qmd"
+    source: "ibis"
+    title: "Type Casting"
+    summary: "Converting between data types with cast()"
+    tags: [ibis, casting, type-conversion]
+
+  - id: "ibis:reference/datatypes.qmd"
+    source: "ibis"
+    title: "Data Types Reference"
+    summary: "Complete type system: dtype(), DataType base class. Numeric: Int8-Int64, UInt8-UInt64, Float16-Float64, Decimal. String/Binary: String, Binary. Boolean: Boolean. Temporal: Date, Time, Timestamp, Interval. Collections: Array, Map, Struct. Special: JSON, UUID, INET, MACADDR, geospatial types. GeoSpatial, Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygon"
+    tags: [ibis, datatypes, reference, numeric, string, temporal, geospatial, collections]
+
+  - id: "ibis:reference/schemas.qmd"
+    source: "ibis"
+    title: "Schemas"
+    summary: "schema(), Schema class for defining and inspecting table column types"
+    tags: [ibis, schema, table-structure]
+
+  # Core Concepts - Data Structures
+  - id: "ibis:concepts/backend-table-hierarchy.qmd"
+    source: "ibis"
+    title: "Backend & Table Hierarchy"
+    summary: "How backends, connections, and tables relate"
+    tags: [ibis, backend, table, hierarchy, architecture]
+
+  - id: "ibis:reference/expression-tables.qmd"
+    source: "ibis"
+    title: "Table Expressions"
+    summary: "Table, GroupedTable, read_csv, read_parquet, read_json, read_delta, memtable, table, join, union, intersect, difference, window functions (row_number, rank, dense_rank, ntile)"
+    tags: [ibis, table, expressions, join, union, window-functions, read-csv, read-parquet]
+
+  - id: "ibis:reference/selectors.qmd"
+    source: "ibis"
+    title: "Column Selectors"
+    summary: "ibis.selectors module: s.numeric(), s.matches(), s.all(), ~s.matches() for column selection patterns"
+    tags: [ibis, selectors, column-selection, patterns]
+
+  # Core Concepts - Expression Architecture
+  - id: "ibis:concepts/internals.qmd"
+    source: "ibis"
+    title: "Internals"
+    summary: "Under the hood: expression trees, compilation to SQL"
+    tags: [ibis, internals, expression-trees, sql-compilation]
+
+  - id: "ibis:reference/expression-generic.qmd"
+    source: "ibis"
+    title: "Generic Expressions"
+    summary: "Value, Column, Scalar, Deferred, literal, param, null, range, coalesce, least, greatest, ifelse, cases, asc, desc, to_sql"
+    tags: [ibis, expressions, value, column, scalar, deferred, coalesce, ifelse]
+
+  - id: "ibis:concepts/versioning.qmd"
+    source: "ibis"
+    title: "Versioning"
+    summary: "Version policy and compatibility"
+    tags: [ibis, versioning, compatibility]
+
+  # Core Concepts - Architecture
+  - id: "ibis:concepts/composable-ecosystem.qmd"
+    source: "ibis"
+    title: "Composable Ecosystem"
+    summary: "How Ibis fits into the data ecosystem"
+    tags: [ibis, ecosystem, composable, architecture]
+
+  - id: "ibis:concepts/who.qmd"
+    source: "ibis"
+    title: "Who Uses Ibis"
+    summary: "Users and organizations using Ibis"
+    tags: [ibis, users, organizations]
+
+  - id: "ibis:concepts/user-testimonials.qmd"
+    source: "ibis"
+    title: "User Testimonials"
+    summary: "Real-world experiences from Ibis users"
+    tags: [ibis, testimonials, real-world]
+
+  # Backends - Local/Embedded
+  - id: "ibis:backends/duckdb.qmd"
+    source: "ibis"
+    title: "DuckDB Backend"
+    summary: "Default backend. ibis.connect('duckdb://'). Supports CSV, Parquet, Delta Lake, JSON, PyArrow. MotherDuck cloud support. Geospatial operations. Secret management for S3/cloud storage"
+    tags: [ibis, duckdb, backend, parquet, csv, delta-lake, geospatial, motherduck]
+
+  - id: "ibis:backends/polars.qmd"
+    source: "ibis"
+    title: "Polars Backend"
+    summary: "Fast local dataframes with Polars backend"
+    tags: [ibis, polars, backend, local]
+
+  - id: "ibis:backends/datafusion.qmd"
+    source: "ibis"
+    title: "DataFusion Backend"
+    summary: "Apache DataFusion backend"
+    tags: [ibis, datafusion, backend, apache]
+
+  - id: "ibis:backends/pandas.qmd"
+    source: "ibis"
+    title: "pandas Backend"
+    summary: "pandas backend for compatibility"
+    tags: [ibis, pandas, backend, compatibility]
+
+  - id: "ibis:backends/dask.qmd"
+    source: "ibis"
+    title: "Dask Backend"
+    summary: "Distributed computing with Dask backend"
+    tags: [ibis, dask, backend, distributed]
+
+  # Backends - Cloud Data Warehouses
+  - id: "ibis:backends/bigquery.qmd"
+    source: "ibis"
+    title: "BigQuery Backend"
+    summary: "Google BigQuery backend"
+    tags: [ibis, bigquery, backend, google, cloud]
+
+  - id: "ibis:backends/snowflake.qmd"
+    source: "ibis"
+    title: "Snowflake Backend"
+    summary: "Snowflake backend"
+    tags: [ibis, snowflake, backend, cloud]
+
+  - id: "ibis:backends/databricks.qmd"
+    source: "ibis"
+    title: "Databricks Backend"
+    summary: "Databricks backend"
+    tags: [ibis, databricks, backend, cloud]
+
+  - id: "ibis:backends/athena.qmd"
+    source: "ibis"
+    title: "Athena Backend"
+    summary: "AWS Athena backend"
+    tags: [ibis, athena, backend, aws, cloud]
+
+  # Backends - Databases
+  - id: "ibis:backends/postgresql.qmd"
+    source: "ibis"
+    title: "PostgreSQL Backend"
+    summary: "PostgreSQL backend"
+    tags: [ibis, postgresql, postgres, backend, database]
+
+  - id: "ibis:backends/mysql.qmd"
+    source: "ibis"
+    title: "MySQL Backend"
+    summary: "MySQL backend"
+    tags: [ibis, mysql, backend, database]
+
+  - id: "ibis:backends/sqlite.qmd"
+    source: "ibis"
+    title: "SQLite Backend"
+    summary: "SQLite backend"
+    tags: [ibis, sqlite, backend, database]
+
+  - id: "ibis:backends/clickhouse.qmd"
+    source: "ibis"
+    title: "ClickHouse Backend"
+    summary: "ClickHouse backend"
+    tags: [ibis, clickhouse, backend, database, analytics]
+
+  - id: "ibis:backends/mssql.qmd"
+    source: "ibis"
+    title: "MS SQL Backend"
+    summary: "Microsoft SQL Server backend"
+    tags: [ibis, mssql, backend, database, microsoft]
+
+  - id: "ibis:backends/oracle.qmd"
+    source: "ibis"
+    title: "Oracle Backend"
+    summary: "Oracle database backend"
+    tags: [ibis, oracle, backend, database]
+
+  - id: "ibis:backends/trino.qmd"
+    source: "ibis"
+    title: "Trino Backend"
+    summary: "Trino distributed SQL backend"
+    tags: [ibis, trino, backend, database, distributed]
+
+  - id: "ibis:backends/exasol.qmd"
+    source: "ibis"
+    title: "Exasol Backend"
+    summary: "Exasol backend"
+    tags: [ibis, exasol, backend, database]
+
+  - id: "ibis:backends/druid.qmd"
+    source: "ibis"
+    title: "Druid Backend"
+    summary: "Apache Druid backend"
+    tags: [ibis, druid, backend, database, apache]
+
+  - id: "ibis:backends/impala.qmd"
+    source: "ibis"
+    title: "Impala Backend"
+    summary: "Apache Impala backend"
+    tags: [ibis, impala, backend, database, apache]
+
+  - id: "ibis:backends/risingwave.qmd"
+    source: "ibis"
+    title: "RisingWave Backend"
+    summary: "RisingWave streaming database"
+    tags: [ibis, risingwave, backend, streaming, database]
+
+  - id: "ibis:backends/materialize.qmd"
+    source: "ibis"
+    title: "Materialize Backend"
+    summary: "Materialize streaming database backend. Install via ibis-framework[materialize], connects on port 6875. Supports streaming via SUBSCRIBE. Added in Ibis 12.0.0"
+    tags: [ibis, materialize, backend, streaming, database]
+
+  - id: "ibis:backends/singlestoredb.qmd"
+    source: "ibis"
+    title: "SingleStoreDB Backend"
+    summary: "SingleStoreDB backend. Install via ibis-framework[singlestoredb], connects on port 3306. Added in Ibis 12.0.0"
+    tags: [ibis, singlestoredb, backend, database]
+
+  # Backends - Streaming & Big Data
+  - id: "ibis:backends/pyspark.qmd"
+    source: "ibis"
+    title: "PySpark Backend"
+    summary: "Apache Spark via PySpark"
+    tags: [ibis, pyspark, spark, backend, big-data]
+
+  - id: "ibis:backends/flink.qmd"
+    source: "ibis"
+    title: "Flink Backend"
+    summary: "Apache Flink streaming backend"
+    tags: [ibis, flink, backend, streaming, apache]
+
+  # Backend Support
+  - id: "ibis:backends/support/matrix.qmd"
+    source: "ibis"
+    title: "Support Matrix"
+    summary: "Operations supported per backend"
+    tags: [ibis, support-matrix, backends, operations, compatibility]
+
+  - id: "ibis:backends/support/cloud_support_policy.qmd"
+    source: "ibis"
+    title: "Cloud Support Policy"
+    summary: "Cloud backend support guidelines"
+    tags: [ibis, cloud, support, policy]
+
+  # Coming From...
+  - id: "ibis:tutorials/coming-from/pandas.qmd"
+    source: "ibis"
+    title: "Coming from pandas"
+    summary: "Comprehensive migration guide: immutable tables, lazy evaluation, no row index, filter vs loc, mutate vs column assignment, order_by vs sort_values, aggregate vs agg, join vs merge, union vs concat, NULL handling, type casting"
+    tags: [ibis, pandas, migration, tutorial, filter, mutate, join, lazy-evaluation]
+
+  - id: "ibis:tutorials/coming-from/sql.qmd"
+    source: "ibis"
+    title: "Coming from SQL"
+    summary: "SQL to Ibis translation guide"
+    tags: [ibis, sql, migration, tutorial, translation]
+
+  - id: "ibis:tutorials/coming-from/dplyr.qmd"
+    source: "ibis"
+    title: "Coming from dplyr"
+    summary: "R dplyr to Ibis translation guide"
+    tags: [ibis, dplyr, r, migration, tutorial]
+
+  # How-To Guides - Analytics
+  - id: "ibis:how-to/analytics/basics.qmd"
+    source: "ibis"
+    title: "Analytics Basics"
+    summary: "Core analytics operations"
+    tags: [ibis, analytics, basics, how-to]
+
+  - id: "ibis:how-to/analytics/chain_expressions.qmd"
+    source: "ibis"
+    title: "Chaining Expressions"
+    summary: "Method chaining patterns"
+    tags: [ibis, chaining, expressions, patterns, how-to]
+
+  - id: "ibis:how-to/analytics/imdb.qmd"
+    source: "ibis"
+    title: "IMDB Analysis"
+    summary: "Real-world example with IMDB data"
+    tags: [ibis, imdb, analysis, example, how-to]
+
+  # How-To Guides - Configuration
+  - id: "ibis:how-to/configure/basics.qmd"
+    source: "ibis"
+    title: "Configuration Basics"
+    summary: "Setting Ibis options and defaults"
+    tags: [ibis, configuration, options, how-to]
+
+  # How-To Guides - Input/Output
+  - id: "ibis:how-to/input-output/basics.qmd"
+    source: "ibis"
+    title: "IO Basics"
+    summary: "Reading and writing data"
+    tags: [ibis, io, input-output, read, write, how-to]
+
+  - id: "ibis:how-to/input-output/duckdb-parquet.qmd"
+    source: "ibis"
+    title: "DuckDB + Parquet"
+    summary: "Working with Parquet files using DuckDB backend"
+    tags: [ibis, duckdb, parquet, how-to]
+
+  - id: "ibis:how-to/input-output/gcs_duckdb.qmd"
+    source: "ibis"
+    title: "GCS + DuckDB"
+    summary: "Google Cloud Storage integration with DuckDB"
+    tags: [ibis, gcs, duckdb, cloud-storage, how-to]
+
+  - id: "ibis:how-to/input-output/multiple-backends.qmd"
+    source: "ibis"
+    title: "Multiple Backends"
+    summary: "Working with multiple backends simultaneously"
+    tags: [ibis, multiple-backends, how-to]
+
+  # How-To Guides - Time Series
+  - id: "ibis:how-to/timeseries/ffill_bfill_w_window.qmd"
+    source: "ibis"
+    title: "Forward/Backward Fill"
+    summary: "Fill missing values with window functions"
+    tags: [ibis, timeseries, ffill, bfill, window, how-to]
+
+  - id: "ibis:how-to/timeseries/sessionize.qmd"
+    source: "ibis"
+    title: "Sessionization"
+    summary: "Session detection in time series"
+    tags: [ibis, timeseries, sessionization, how-to]
+
+  # How-To Guides - Visualization
+  - id: "ibis:how-to/visualization/altair.qmd"
+    source: "ibis"
+    title: "Altair Visualization"
+    summary: "Vega-Altair integration for visualization"
+    tags: [ibis, altair, visualization, how-to]
+
+  - id: "ibis:how-to/visualization/matplotlib.qmd"
+    source: "ibis"
+    title: "Matplotlib Visualization"
+    summary: "Matplotlib plotting integration"
+    tags: [ibis, matplotlib, visualization, how-to]
+
+  - id: "ibis:how-to/visualization/plotly.qmd"
+    source: "ibis"
+    title: "Plotly Visualization"
+    summary: "Plotly interactive charts"
+    tags: [ibis, plotly, visualization, interactive, how-to]
+
+  - id: "ibis:how-to/visualization/plotnine.qmd"
+    source: "ibis"
+    title: "plotnine Visualization"
+    summary: "ggplot2-style plotting with plotnine"
+    tags: [ibis, plotnine, ggplot, visualization, how-to]
+
+  - id: "ibis:how-to/visualization/seaborn.qmd"
+    source: "ibis"
+    title: "Seaborn Visualization"
+    summary: "Seaborn statistical visualization"
+    tags: [ibis, seaborn, visualization, statistics, how-to]
+
+  - id: "ibis:how-to/visualization/streamlit.qmd"
+    source: "ibis"
+    title: "Streamlit Dashboards"
+    summary: "Streamlit dashboard integration"
+    tags: [ibis, streamlit, dashboard, visualization, how-to]
+
+  - id: "ibis:how-to/visualization/marimo.qmd"
+    source: "ibis"
+    title: "Marimo Notebooks"
+    summary: "Marimo notebook integration"
+    tags: [ibis, marimo, notebooks, visualization, how-to]
+
+  - id: "ibis:how-to/visualization/graphs.qmd"
+    source: "ibis"
+    title: "Graph Visualization"
+    summary: "Graph/network visualization"
+    tags: [ibis, graphs, network, visualization, how-to]
+
+  # How-To Guides - Extending Ibis
+  - id: "ibis:how-to/extending/builtin.qmd"
+    source: "ibis"
+    title: "Built-in Functions"
+    summary: "Using built-in functions"
+    tags: [ibis, builtin, functions, extending, how-to]
+
+  - id: "ibis:how-to/extending/sql.qmd"
+    source: "ibis"
+    title: "SQL Integration"
+    summary: "Mixing SQL with Ibis expressions via .sql() method"
+    tags: [ibis, sql, integration, extending, how-to]
+
+  - id: "ibis:how-to/extending/streaming.qmd"
+    source: "ibis"
+    title: "Streaming"
+    summary: "Stream processing patterns with Ibis"
+    tags: [ibis, streaming, extending, how-to]
+
+  - id: "ibis:how-to/extending/unbound_expression.qmd"
+    source: "ibis"
+    title: "Unbound Expressions"
+    summary: "Creating reusable expression templates"
+    tags: [ibis, unbound, expressions, reusable, templates, how-to]
+
+  # Tutorials - Backend-Specific
+  - id: "ibis:tutorials/backends/clickhouse.qmd"
+    source: "ibis"
+    title: "ClickHouse Tutorial"
+    summary: "Getting started with ClickHouse backend"
+    tags: [ibis, clickhouse, tutorial, backend]
+
+  - id: "ibis:tutorials/backends/apache-flink/0_setup.qmd"
+    source: "ibis"
+    title: "Flink Setup"
+    summary: "Apache Flink setup tutorial"
+    tags: [ibis, flink, setup, tutorial, backend]
+
+  - id: "ibis:tutorials/backends/apache-flink/1_single_feature.qmd"
+    source: "ibis"
+    title: "Flink Single Feature"
+    summary: "Feature engineering with Flink"
+    tags: [ibis, flink, feature-engineering, tutorial, backend]
+
+  - id: "ibis:tutorials/backends/starburst-galaxy/0_setup.qmd"
+    source: "ibis"
+    title: "Starburst Galaxy Setup"
+    summary: "Starburst Galaxy setup tutorial"
+    tags: [ibis, starburst, galaxy, setup, tutorial, backend]
+
+  - id: "ibis:tutorials/backends/starburst-galaxy/1_basics.qmd"
+    source: "ibis"
+    title: "Starburst Galaxy Basics"
+    summary: "Basic operations with Starburst Galaxy"
+    tags: [ibis, starburst, galaxy, basics, tutorial, backend]
+
+  # Tutorials - Browser
+  - id: "ibis:tutorials/browser/repl.qmd"
+    source: "ibis"
+    title: "Browser REPL"
+    summary: "In-browser Ibis REPL (WebAssembly)"
+    tags: [ibis, browser, repl, webassembly, tutorial]
+
+  # API Reference - Expression API by Type
+  - id: "ibis:reference/expression-numeric.qmd"
+    source: "ibis"
+    title: "Numeric Expressions"
+    summary: "NumericValue (arithmetic, abs, ceil, floor, round, log, exp, trig), NumericColumn (sum, mean, std, var, median, quantile, corr, cov), IntegerValue, FloatingValue (isnan, isinf), DecimalValue, BooleanValue (any, all, ifelse), and_, or_, random, constants e, pi"
+    tags: [ibis, numeric, expressions, arithmetic, aggregation, boolean, reference]
+
+  - id: "ibis:reference/expression-strings.qmd"
+    source: "ibis"
+    title: "String Expressions"
+    summary: "StringValue: length, lower, upper, strip, lstrip, rstrip, reverse, capitalize, contains, find, like, re_search, re_extract, re_replace, replace, split, concat, join, repeat, left, right, substr, lpad, rpad, translate, startswith, endswith, ascii_str, byte_length"
+    tags: [ibis, string, expressions, regex, contains, replace, reference]
+
+  - id: "ibis:reference/expression-temporal.qmd"
+    source: "ibis"
+    title: "Temporal Expressions"
+    summary: "TimestampValue (year, month, day, hour, minute, second, epoch_seconds, truncate, between), DateValue (day_of_week, day_of_year), TimeValue, IntervalValue, DayOfWeek. Constructors: now, today, date, time, timestamp, interval"
+    tags: [ibis, temporal, timestamp, date, time, interval, reference]
+
+  - id: "ibis:reference/expression-collections.qmd"
+    source: "ibis"
+    title: "Collection Expressions"
+    summary: "ArrayValue (length, contains, unnest, filter, map, zip, sort, unique, flatten, intersection, union, remove, index, join), MapValue (get, keys, values, length, contains), StructValue (names, types, destructure). Constructors: array, map, struct"
+    tags: [ibis, array, map, struct, collections, unnest, reference]
+
+  - id: "ibis:reference/expression-json.qmd"
+    source: "ibis"
+    title: "JSON Expressions"
+    summary: "JSONValue: unwrap_as (cast JSON to typed values), JSON path access"
+    tags: [ibis, json, expressions, reference]
+
+  - id: "ibis:reference/expression-geospatial.qmd"
+    source: "ibis"
+    title: "Geospatial Expressions"
+    summary: "GeoSpatialValue (area, buffer, contains, covers, distance, intersection, transform, union, within, x, y), GeoSpatialColumn, point constructor"
+    tags: [ibis, geospatial, gis, spatial, reference]
+
+  - id: "ibis:reference/expression-misc.qmd"
+    source: "ibis"
+    title: "Misc Expressions"
+    summary: "uuid generator, UUIDValue, INETValue (host, family), MACADDRValue"
+    tags: [ibis, uuid, inet, macaddr, misc, reference]
+
+  # UDFs
+  - id: "ibis:reference/scalar-udfs.qmd"
+    source: "ibis"
+    title: "Scalar UDFs"
+    summary: "Creating scalar user-defined functions"
+    tags: [ibis, udf, scalar, user-defined-functions, reference]
+
+  - id: "ibis:reference/aggregate-udfs.qmd"
+    source: "ibis"
+    title: "Aggregate UDFs"
+    summary: "Creating aggregate user-defined functions (experimental)"
+    tags: [ibis, udf, aggregate, user-defined-functions, experimental, reference]
+
+  # Connection
+  - id: "ibis:reference/connection.qmd"
+    source: "ibis"
+    title: "Connection APIs"
+    summary: "connect, get_backend, set_backend"
+    tags: [ibis, connection, connect, backend, reference]
+
+  # Configuration
+  - id: "ibis:reference/Interactive.qmd"
+    source: "ibis"
+    title: "Interactive Mode"
+    summary: "Interactive mode settings"
+    tags: [ibis, interactive, configuration, reference]
+
+  - id: "ibis:reference/Options.qmd"
+    source: "ibis"
+    title: "Options"
+    summary: "Global options configuration"
+    tags: [ibis, options, configuration, reference]
+
+  - id: "ibis:reference/Repr.qmd"
+    source: "ibis"
+    title: "Repr Settings"
+    summary: "Output representation settings"
+    tags: [ibis, repr, output, display, reference]
+
+  - id: "ibis:reference/SQL.qmd"
+    source: "ibis"
+    title: "SQL Settings"
+    summary: "SQL generation settings"
+    tags: [ibis, sql, settings, configuration, reference]
+
+  # Advanced
+  - id: "ibis:reference/cursed_knowledge.qmd"
+    source: "ibis"
+    title: "Cursed Knowledge"
+    summary: "Edge cases and gotchas in Ibis"
+    tags: [ibis, edge-cases, gotchas, advanced, reference]
+
+  # Contributing
+  - id: "ibis:contribute/01_environment.qmd"
+    source: "ibis"
+    title: "Development Environment"
+    summary: "Setting up dev environment for Ibis contribution"
+    tags: [ibis, contributing, development, environment]
+
+  - id: "ibis:contribute/02_workflow.qmd"
+    source: "ibis"
+    title: "Contribution Workflow"
+    summary: "Contribution workflow for Ibis"
+    tags: [ibis, contributing, workflow]
+
+  - id: "ibis:contribute/03_style.qmd"
+    source: "ibis"
+    title: "Code Style"
+    summary: "Code style guidelines for Ibis"
+    tags: [ibis, contributing, code-style]
+
+  - id: "ibis:contribute/04_maintainers_guide.qmd"
+    source: "ibis"
+    title: "Maintainer's Guide"
+    summary: "Guide for Ibis maintainers"
+    tags: [ibis, contributing, maintainers]
+
+  - id: "ibis:contribute/05_reference.qmd"
+    source: "ibis"
+    title: "Contributing Reference"
+    summary: "Contributing reference documentation"
+    tags: [ibis, contributing, reference]
+
+  - id: "ibis:contribute/06_automated_code_and_ai.qmd"
+    source: "ibis"
+    title: "AI & Automated Code Policy"
+    summary: "AI/LLM contribution policy: AI tools allowed to assist, but all contributions require meaningful human review. Fully automated PR submissions (agents without human review) prohibited"
+    tags: [ibis, contributing, ai, policy, automated-code]
