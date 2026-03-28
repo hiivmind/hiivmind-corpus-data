@@ -1,132 +1,70 @@
-schema_version: 1
+schema_version: 2
 
 concepts:
   dataframe-agnostic:
     label: "Dataframe-Agnostic API"
     description: "Unified API across pandas, Polars, PyArrow, cuDF, Modin — write once, run anywhere"
-    entries:
-      - "narwhals:index.md"
-      - "narwhals:why.md"
-      - "narwhals:basics/dataframe.md"
-      - "narwhals:basics/series.md"
-      - "narwhals:basics/complete_example.md"
-      - "narwhals:basics/dataframe_conversion.md"
     tags: ["agnostic", "portable", "pandas", "polars", "pyarrow", "cudf"]
-    entry_count: 6
 
   expression-model:
     label: "Expression Model"
     description: "How Narwhals expressions work — theory, nodes, metadata, broadcasting, elementwise pushdown"
-    entries:
-      - "narwhals:how_it_works.md"
     tags: ["expressions", "dsl", "internals", "broadcasting"]
-    entry_count: 1
 
   expression-methods:
     label: "Expression Methods"
     description: "Core Expr methods: arithmetic, comparisons, aggregations, over(), trig functions"
-    entries:
-      - "narwhals:api-reference/expr.md"
-      - "narwhals:api-completeness/expr.md"
     tags: ["expr", "methods", "arithmetic", "comparison"]
-    entry_count: 2
 
   string-expressions:
     label: "String Expressions"
     description: "Expr.str namespace: len, lower, upper, contains, replace, split, slice"
-    entries:
-      - "narwhals:api-reference/expr_str.md"
-      - "narwhals:api-completeness/expr_str.md"
     tags: ["string", "text", "str-namespace"]
-    entry_count: 2
 
   temporal-expressions:
     label: "Temporal Expressions"
     description: "Expr.dt namespace: year, month, day, hour, minute, second, weekday extraction"
-    entries:
-      - "narwhals:api-reference/expr_dt.md"
-      - "narwhals:api-completeness/expr_dt.md"
     tags: ["datetime", "temporal", "dt-namespace"]
-    entry_count: 2
 
   null-handling:
     label: "Null Handling"
     description: "Cross-backend null semantics, fill_null, is_null, drop_nulls behavior differences"
-    entries:
-      - "narwhals:concepts/null_handling.md"
     tags: ["null", "missing", "fill", "semantics"]
-    entry_count: 1
 
   name-expressions:
     label: "Name Expressions"
     description: "Expr.name namespace: keep, map, prefix, suffix for column renaming"
-    entries:
-      - "narwhals:api-reference/expr_name.md"
-      - "narwhals:api-completeness/expr_name.md"
     tags: ["name", "rename", "alias", "column-naming"]
-    entry_count: 2
 
   collection-expressions:
     label: "Collection Expressions"
     description: "Expr.list and Expr.struct namespace operations"
-    entries:
-      - "narwhals:api-reference/expr_list.md"
-      - "narwhals:api-reference/expr_struct.md"
-      - "narwhals:api-completeness/expr_list.md"
-      - "narwhals:api-completeness/expr_struct.md"
     tags: ["list", "struct", "nested"]
-    entry_count: 4
 
   lazy-support:
     label: "Lazy-Only Support"
     description: "Lazy-only backends: Daft, Dask, DuckDB, Ibis, PySpark, SQLFrame"
-    entries:
-      - "narwhals:index.md"
-      - "narwhals:concepts/order_dependence.md"
     tags: ["lazy", "deferred", "dask", "duckdb", "ibis", "pyspark"]
-    entry_count: 2
 
   type-system:
     label: "Type System"
     description: "Data types, schemas, selectors, and cross-backend type handling"
-    entries:
-      - "narwhals:api-reference/dtypes.md"
-      - "narwhals:api-reference/schema.md"
-      - "narwhals:api-reference/selectors.md"
-      - "narwhals:api-reference/typing.md"
     tags: ["types", "schema", "dtypes", "selectors"]
-    entry_count: 4
 
   sql-generation:
     label: "SQL Generation"
     description: "Generating SQL from Narwhals expressions via narwhals.sql module"
-    entries:
-      - "narwhals:generating_sql.md"
-      - "narwhals:api-reference/sql.md"
     tags: ["sql", "generation", "query"]
-    entry_count: 2
 
   backwards-compatibility:
     label: "Backwards Compatibility"
     description: "Stable API versioning (v1, v2), Rust-editions-inspired compatibility policy"
-    entries:
-      - "narwhals:backcompat.md"
-      - "narwhals:overhead.md"
     tags: ["stability", "versioning", "compatibility"]
-    entry_count: 2
 
   behavioral-concepts:
     label: "Behavioral Concepts"
     description: "Order dependence, pandas index handling, null semantics, boolean ops across backends"
-    entries:
-      - "narwhals:concepts/order_dependence.md"
-      - "narwhals:concepts/pandas_index.md"
-      - "narwhals:concepts/column_names.md"
-      - "narwhals:concepts/boolean.md"
-      - "narwhals:concepts/null_handling.md"
-      - "narwhals:concepts/improve_group_by_operation.md"
     tags: ["behavior", "nulls", "ordering", "pandas-index"]
-    entry_count: 6
 
 relationships:
   - from: "expression-model"
@@ -177,10 +115,42 @@ relationships:
     to: "expression-model"
     type: "part-of"
     origin: "manual"
+  - from: "lazy-support"
+    to: "behavioral-concepts"
+    type: "see-also"
+    origin: "manual"
+  - from: "null-handling"
+    to: "behavioral-concepts"
+    type: "see-also"
+    origin: "manual"
+  - from: "sql-generation"
+    to: "type-system"
+    type: "depends-on"
+    origin: "manual"
+  - from: "name-expressions"
+    to: "behavioral-concepts"
+    type: "see-also"
+    origin: "manual"
+  - from: "type-system"
+    to: "expression-model"
+    type: "depends-on"
+    origin: "manual"
+  - from: "sql-generation"
+    to: "lazy-support"
+    type: "depends-on"
+    origin: "manual"
+  - from: "collection-expressions"
+    to: "type-system"
+    type: "depends-on"
+    origin: "manual"
+  - from: "name-expressions"
+    to: "expression-methods"
+    type: "see-also"
+    origin: "manual"
 
 meta:
-  generated_at: "2026-03-26T00:00:00Z"
+  generated_at: "2026-03-28T00:00:00Z"
   entry_count: 36
   concept_count: 13
-  relationship_count: 12
+  relationship_count: 20
   sources_extracted: ["narwhals"]

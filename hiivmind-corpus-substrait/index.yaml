@@ -8,12 +8,14 @@ entries:
     title: "Home"
     summary: "Substrait: format for describing compute operations on structured data. Cross-language specification. Benefits: avoids N-to-N system communication, makes components upgradeable, enables heterogeneous environments. Use cases: SQL parser to execution engine (Calcite to Arrow C++), serialize SQL views (Iceberg), submit to different engines (DataFusion, Postgres), plan visualization"
     tags: ["overview", "substrait", "cross-language", "compute", "specification"]
+    concepts: ["query-plan-spec"]
 
   - id: "substrait:about.md"
     source: "substrait"
     title: "About Substrait"
     summary: "Project vision: well-defined cross-language spec for data compute. Similar to Arrow (memory format) but for compute expressions. Why not SQL: lacks sufficient detail, not machine-processable. Why separate project: avoid coupling to single technology, like Arrow separated from Drill. Related: Apache Calcite (JVM SQL parsing), Apache Arrow (memory format)"
     tags: ["overview", "vision", "arrow", "calcite", "motivation"]
+    concepts: ["query-plan-spec"]
 
   - id: "substrait:faq.md"
     source: "substrait"
@@ -27,24 +29,28 @@ entries:
     title: "Specification Status"
     summary: "Spec status: past initial design, in final stages. Complete components: Simple types, Compound types, Type variations, User-defined types, Field references, Scalar functions, Specialized record expressions, Aggregate functions, Window functions, User-defined functions, Embedded functions, Relation basics, Logical relations, Text serialization, Binary serialization. Designed not implemented: Table functions, User-defined relations, Embedded relations, Physical relations"
     tags: ["specification", "status", "components", "completeness"]
+    concepts: ["query-plan-spec"]
 
   - id: "substrait:spec/technology_principles.md"
     source: "substrait"
     title: "Technology Principles"
     summary: "Design principles guiding Substrait"
     tags: ["specification", "principles", "design"]
+    concepts: ["query-plan-spec"]
 
   - id: "substrait:spec/versioning.md"
     source: "substrait"
     title: "Versioning"
     summary: "Versioning policy for the specification"
     tags: ["specification", "versioning", "policy"]
+    concepts: ["query-plan-spec"]
 
   - id: "substrait:spec/extending.md"
     source: "substrait"
     title: "Extending Substrait"
     summary: "How to propose new read/write definition types and other extensions"
     tags: ["specification", "extensions", "proposals"]
+    concepts: ["extensions"]
 
   # Type System
   - id: "substrait:types/type_system.md"
@@ -52,36 +58,42 @@ entries:
     title: "Type System Overview"
     summary: "Types have 4 components: Class (i8, string, STRUCT, extensions), Nullability (NULLABLE with ? suffix or REQUIRED), Variation (system-preferred or extension for in-memory format), Parameters (compound only, e.g. DECIMAL<10,2>). Strict type system: no coercion, all changes via explicit cast expressions"
     tags: ["types", "type-system", "nullability", "variation", "parameters"]
+    concepts: ["type-system"]
 
   - id: "substrait:types/type_classes.md"
     source: "substrait"
     title: "Type Classes"
     summary: "Complete type catalog: Simple numeric (boolean, i8-i128, fp32, fp64, decimal), Simple string/binary (string, binary, fixedchar, varchar, fixedbinary), Simple temporal (date, time, timestamp, timestamp_tz, interval_year, interval_day), Simple other (uuid), Compound (STRUCT, LIST, MAP, FUNC), User-defined (u! prefix)"
     tags: ["types", "type-classes", "numeric", "string", "temporal", "compound", "struct", "list", "map"]
+    concepts: ["type-system"]
 
   - id: "substrait:types/type_variations.md"
     source: "substrait"
     title: "Type Variations"
     summary: "Physical variations of base types, distinguished by in-memory format"
     tags: ["types", "variations", "physical-format"]
+    concepts: ["type-system"]
 
   - id: "substrait:types/type_aliases.md"
     source: "substrait"
     title: "Type Aliases"
     summary: "Shorthand names for common type configurations"
     tags: ["types", "aliases"]
+    concepts: ["type-system"]
 
   - id: "substrait:types/type_parsing.md"
     source: "substrait"
     title: "Type Parsing"
     summary: "Syntax for describing types in text form. Function types: func<any1 -> any2> (single param), func<(any1, any2) -> any3> (multiple params). User-defined types use u!typename syntax"
     tags: ["types", "parsing", "syntax", "text-format"]
+    concepts: ["type-system"]
 
   - id: "substrait:types/named_structs.md"
     source: "substrait"
     title: "Named Structs"
     summary: "Structs with named fields for schemas. NamedStruct = struct type + column names. Names in depth-first order for nested types"
     tags: ["types", "named-structs", "schema", "columns"]
+    concepts: ["type-system"]
 
   # Expressions
   - id: "substrait:expressions/field_references.md"
@@ -89,66 +101,77 @@ entries:
     title: "Field References"
     summary: "Identify portions of a record to operate on. Always numeric (not by name). structField.field: 1 = second field. Root types: RootReference (incoming record), OuterReference (correlated subqueries), Expression (expression result), LambdaParameterReference (lambda params). References only make sense relative to a schema context"
     tags: ["expressions", "field-references", "numeric-references", "schema-context"]
+    concepts: ["expressions", "field-references"]
 
   - id: "substrait:expressions/scalar_functions.md"
     source: "substrait"
     title: "Scalar Functions"
     summary: "Function specification: functionReference (ID into extension list), outputType, arguments (positional). Functions defined in extension YAML files. Optional description field. Examples: is_null, index_in, equal, multiply. Arguments wrapped in value objects"
     tags: ["expressions", "scalar-functions", "function-reference", "extension-yaml"]
+    concepts: ["expressions", "scalar-functions"]
 
   - id: "substrait:expressions/lambda_expressions.md"
     source: "substrait"
     title: "Lambda Expressions"
     summary: "Inline anonymous functions for higher-order operations. Components: parameters (struct type), body (expression). Type is func<params -> return>. Parameter access via LambdaParameterReference with steps_out for nested scopes. LambdaInvocation for direct calls. Used with functions like transform and filter on collections. Supports closures"
     tags: ["expressions", "lambda", "higher-order", "closures", "anonymous-functions"]
+    concepts: ["expressions"]
 
   - id: "substrait:expressions/aggregate_functions.md"
     source: "substrait"
     title: "Aggregate Functions"
     summary: "Functions that collapse many records into one value. Examples: SUM, COUNT, AVG. Used in measures of Aggregate relations. May have optional filter"
     tags: ["expressions", "aggregate", "sum", "count", "avg", "measures"]
+    concepts: ["expressions", "aggregate-functions"]
 
   - id: "substrait:expressions/window_functions.md"
     source: "substrait"
     title: "Window Functions"
     summary: "Relate a record to encompassing records. SQL examples: RANK, NTILE, ROW_NUMBER. Frame specification, partitioning, ordering"
     tags: ["expressions", "window-functions", "rank", "row-number", "frame"]
+    concepts: ["expressions", "window-functions"]
 
   - id: "substrait:expressions/specialized_record_expressions.md"
     source: "substrait"
     title: "Specialized Record Expressions"
     summary: "Expressions outside function paradigm: if/then/else, switch/case, cast. Cast is an expression type, not a function"
     tags: ["expressions", "if-then-else", "switch-case", "cast"]
+    concepts: ["expressions", "specialized-expressions"]
 
   - id: "substrait:expressions/user_defined_functions.md"
     source: "substrait"
     title: "User Defined Functions"
     summary: "Reusable named functions beyond core spec. Registered externally (drop file, special command)"
     tags: ["expressions", "user-defined-functions", "extensibility"]
+    concepts: ["expressions"]
 
   - id: "substrait:expressions/embedded_functions.md"
     source: "substrait"
     title: "Embedded Functions"
     summary: "Function implementations embedded in plan. Common in data science workflows with business logic interspersed"
     tags: ["expressions", "embedded-functions", "data-science"]
+    concepts: ["expressions"]
 
   - id: "substrait:expressions/table_functions.md"
     source: "substrait"
     title: "Table Functions"
     summary: "Convert values to 0..N output records. Examples: explode, pos-explode. Designed, not implemented"
     tags: ["expressions", "table-functions", "explode", "unnest"]
+    concepts: ["expressions"]
 
   - id: "substrait:expressions/dynamic_parameters.md"
     source: "substrait"
     title: "Dynamic Parameters"
     summary: "Parameterized query plans"
     tags: ["expressions", "parameters", "parameterized-queries"]
+    concepts: ["expressions"]
 
   - id: "substrait:expressions/subqueries.md"
     source: "substrait"
     title: "Subqueries"
     summary: "Nested query expressions"
     tags: ["expressions", "subqueries", "nested-queries"]
+    concepts: ["expressions"]
 
   - id: "substrait:expressions/extended_expression.md"
     source: "substrait"
@@ -162,36 +185,42 @@ entries:
     title: "Relation Basics"
     summary: "Relational algebra concepts. Relations = plan nodes (filter, project, join, etc.). Each relation has signature: inputs, outputs, property maintenance, direct output order. Emit property for column reordering/subsetting (default: direct). Relations contain or refer to child relations"
     tags: ["relations", "relational-algebra", "plan-nodes", "emit", "output-order"]
+    concepts: ["relational-algebra"]
 
   - id: "substrait:relations/common_fields.md"
     source: "substrait"
     title: "Common Fields"
     summary: "Fields common to all relations"
     tags: ["relations", "common-fields"]
+    concepts: ["relational-algebra"]
 
   - id: "substrait:relations/logical_relations.md"
     source: "substrait"
     title: "Logical Relations"
     summary: "Core relational operations: Read (Virtual Table, Named Table, Local Files, Iceberg Table), Filter (boolean condition), Sort (sortFields with direction), Project (adds columns via expressions), Cross Product, Join (INNER, OUTER, LEFT, RIGHT, SEMI, ANTI, SINGLE, MARK), Set (MINUS, INTERSECTION, UNION), Fetch (offset/limit), Aggregate (groupings, measures), Reference (DAG), Write (INSERT/DELETE/UPDATE/CTAS), Update, DDL (CREATE/DROP/ALTER)"
     tags: ["relations", "logical", "read", "filter", "sort", "project", "join", "aggregate", "set", "write", "ddl"]
+    concepts: ["relational-algebra"]
 
   - id: "substrait:relations/physical_relations.md"
     source: "substrait"
     title: "Physical Relations"
     summary: "Physical variants: hash join vs merge join vs nested loop. Designed, not implemented"
     tags: ["relations", "physical", "hash-join", "merge-join", "nested-loop"]
+    concepts: ["relational-algebra"]
 
   - id: "substrait:relations/user_defined_relations.md"
     source: "substrait"
     title: "User Defined Relations"
     summary: "Custom relational operations for specific platforms. Designed, not implemented"
     tags: ["relations", "user-defined", "extensibility"]
+    concepts: ["relational-algebra"]
 
   - id: "substrait:relations/embedded_relations.md"
     source: "substrait"
     title: "Embedded Relations"
     summary: "Relations with embedded machine code. Designed, not implemented"
     tags: ["relations", "embedded", "machine-code"]
+    concepts: ["relational-algebra"]
 
   # Serialization
   - id: "substrait:serialization/basics.md"
@@ -199,18 +228,21 @@ entries:
     title: "Serialization Basics"
     summary: "Overview of serialization formats"
     tags: ["serialization", "formats"]
+    concepts: ["serialization"]
 
   - id: "substrait:serialization/binary_serialization.md"
     source: "substrait"
     title: "Binary Serialization"
     summary: "High performance, compact protobuf representation. Source of truth for spec. Well-commented proto files"
     tags: ["serialization", "binary", "protobuf", "performance"]
+    concepts: ["serialization"]
 
   - id: "substrait:serialization/text_serialization.md"
     source: "substrait"
     title: "Text Serialization"
     summary: "Human-readable representation. Currently uses Protobuf JSON output (not official Substrait text format yet). Useful for debugging, unit tests"
     tags: ["serialization", "text", "json", "debugging", "human-readable"]
+    concepts: ["serialization"]
 
   # Extensions
   - id: "substrait:extensions/index.md"
@@ -218,6 +250,7 @@ entries:
     title: "Extensions Overview"
     summary: "Extension mechanism for types and functions. Simple extensions in YAML files. URN identifiers reference extension files. Extension anchors link plan references to definitions. Optional metadata field. Deprecation support with since version, reason, metadata. Core extensions in extensions/ directory"
     tags: ["extensions", "yaml", "urn", "anchors", "deprecation"]
+    concepts: ["extensions"]
 
   - id: "substrait:functions_arithmetic.yaml"
     source: "substrait"
@@ -340,18 +373,21 @@ entries:
     title: "Producer Tools"
     summary: "Tools for generating Substrait plans"
     tags: ["tools", "producer", "plan-generation"]
+    concepts: ["ecosystem"]
 
   - id: "substrait:tools/substrait_validator.md"
     source: "substrait"
     title: "Substrait Validator"
     summary: "Validation tool: substrait-validator final_plan.json --out-file output.html. Shows schema and column indices at each point in plan. HTML report generation"
     tags: ["tools", "validator", "validation", "debugging"]
+    concepts: ["ecosystem"]
 
   - id: "substrait:tools/third_party_tools.md"
     source: "substrait"
     title: "Third Party Tools"
     summary: "Ecosystem tools for Substrait"
     tags: ["tools", "ecosystem", "third-party"]
+    concepts: ["ecosystem"]
 
   # Community
   - id: "substrait:community/index.md"
@@ -365,6 +401,7 @@ entries:
     title: "Powered By"
     summary: "Projects using Substrait: Arrow (C++ and Rust compute kernels), Calcite, DataFusion, DuckDB, Ibis, Velox, Spark, Trino, Iceberg"
     tags: ["community", "ecosystem", "arrow", "calcite", "datafusion", "duckdb", "ibis", "spark", "trino", "iceberg"]
+    concepts: ["ecosystem"]
 
   - id: "substrait:governance.md"
     source: "substrait"

@@ -5,12 +5,14 @@ entries:
     title: "Introduction"
     summary: "Ibis: the portable Python dataframe library. Same API for 20+ backends, fast local dataframes with DuckDB (default), Polars, DataFusion. Iterate locally, deploy remotely by changing one line. Bridges SQL and Python"
     tags: [ibis, introduction, getting-started, duckdb, portable, dataframe]
+    concepts: [backend-portability]
 
   - id: "ibis:why.qmd"
     source: "ibis"
     title: "Why Ibis?"
     summary: "Comprehensive overview: portable API across 20+ backends, Python + SQL integration, scaling up/out, stream-batch unification, ecosystem integrations (pandas, Polars, visualization, ML libraries)"
     tags: [ibis, overview, portable, sql, python, ecosystem]
+    concepts: [deferred-execution, backend-portability]
 
   - id: "ibis:tutorials/basics.qmd"
     source: "ibis"
@@ -30,24 +32,28 @@ entries:
     title: "Datatypes and Datashapes"
     summary: "Every value has two properties: type (Integer, Float, String, Array, etc.) and shape (Scalar or Column). Type flavors define precision (e.g., int8 vs int64) without changing capabilities. Shape determines available methods: Columns have .mean(), .max(); Scalars don't. Broadcasting: Scalar+Scalar=Scalar, Column+Scalar=Column, Column+Column=Column (must be from same Table, no positional alignment like NumPy, requires explicit join)"
     tags: [ibis, datatypes, datashapes, scalar, column, broadcasting, type-system]
+    concepts: [type-system]
 
   - id: "ibis:concepts/casting.qmd"
     source: "ibis"
     title: "Type Casting"
     summary: "Converting between data types with cast()"
     tags: [ibis, casting, type-conversion]
+    concepts: [type-system]
 
   - id: "ibis:reference/datatypes.qmd"
     source: "ibis"
     title: "Data Types Reference"
     summary: "Complete type system: dtype(), DataType base class. Numeric: Int8-Int64, UInt8-UInt64, Float16-Float64, Decimal. String/Binary: String, Binary. Boolean: Boolean. Temporal: Date, Time, Timestamp, Interval. Collections: Array, Map, Struct. Special: JSON, UUID, INET, MACADDR, geospatial types. GeoSpatial, Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygon"
     tags: [ibis, datatypes, reference, numeric, string, temporal, geospatial, collections]
+    concepts: [type-system]
 
   - id: "ibis:reference/schemas.qmd"
     source: "ibis"
     title: "Schemas"
     summary: "schema(), Schema class for defining and inspecting table column types"
     tags: [ibis, schema, table-structure]
+    concepts: [type-system]
 
   # Core Concepts - Data Structures
   - id: "ibis:concepts/backend-table-hierarchy.qmd"
@@ -61,12 +67,14 @@ entries:
     title: "Table Expressions"
     summary: "Table, GroupedTable, read_csv, read_parquet, read_json, read_delta, memtable, table, join, union, intersect, difference, window functions (row_number, rank, dense_rank, ntile)"
     tags: [ibis, table, expressions, join, union, window-functions, read-csv, read-parquet]
+    concepts: [expression-api, table-expressions]
 
   - id: "ibis:reference/selectors.qmd"
     source: "ibis"
     title: "Column Selectors"
     summary: "ibis.selectors module: s.numeric(), s.matches(), s.all(), ~s.matches() for column selection patterns"
     tags: [ibis, selectors, column-selection, patterns]
+    concepts: [expression-api]
 
   # Core Concepts - Expression Architecture
   - id: "ibis:concepts/internals.qmd"
@@ -74,12 +82,14 @@ entries:
     title: "Internals"
     summary: "Under the hood: expression trees, compilation to SQL"
     tags: [ibis, internals, expression-trees, sql-compilation]
+    concepts: [deferred-execution]
 
   - id: "ibis:reference/expression-generic.qmd"
     source: "ibis"
     title: "Generic Expressions"
     summary: "Value, Column, Scalar, Deferred, literal, param, null, range, coalesce, least, greatest, ifelse, cases, asc, desc, to_sql"
     tags: [ibis, expressions, value, column, scalar, deferred, coalesce, ifelse]
+    concepts: [expression-api, generic-expressions]
 
   - id: "ibis:concepts/versioning.qmd"
     source: "ibis"
@@ -112,12 +122,14 @@ entries:
     title: "DuckDB Backend"
     summary: "Default backend. ibis.connect('duckdb://'). Supports CSV, Parquet, Delta Lake, JSON, PyArrow. MotherDuck cloud support. Geospatial operations. Secret management for S3/cloud storage"
     tags: [ibis, duckdb, backend, parquet, csv, delta-lake, geospatial, motherduck]
+    concepts: [backend-portability]
 
   - id: "ibis:backends/polars.qmd"
     source: "ibis"
     title: "Polars Backend"
     summary: "Fast local dataframes with Polars backend"
     tags: [ibis, polars, backend, local]
+    concepts: [backend-portability]
 
   - id: "ibis:backends/datafusion.qmd"
     source: "ibis"
@@ -143,12 +155,14 @@ entries:
     title: "BigQuery Backend"
     summary: "Google BigQuery backend"
     tags: [ibis, bigquery, backend, google, cloud]
+    concepts: [backend-portability]
 
   - id: "ibis:backends/snowflake.qmd"
     source: "ibis"
     title: "Snowflake Backend"
     summary: "Snowflake backend"
     tags: [ibis, snowflake, backend, cloud]
+    concepts: [backend-portability]
 
   - id: "ibis:backends/databricks.qmd"
     source: "ibis"
@@ -228,18 +242,21 @@ entries:
     title: "RisingWave Backend"
     summary: "RisingWave streaming database"
     tags: [ibis, risingwave, backend, streaming, database]
+    concepts: [streaming]
 
   - id: "ibis:backends/materialize.qmd"
     source: "ibis"
     title: "Materialize Backend"
     summary: "Materialize streaming database backend. Install via ibis-framework[materialize], connects on port 6875. Supports streaming via SUBSCRIBE. Added in Ibis 12.0.0"
     tags: [ibis, materialize, backend, streaming, database]
+    concepts: [backend-portability, streaming]
 
   - id: "ibis:backends/singlestoredb.qmd"
     source: "ibis"
     title: "SingleStoreDB Backend"
     summary: "SingleStoreDB backend. Install via ibis-framework[singlestoredb], connects on port 3306. Added in Ibis 12.0.0"
     tags: [ibis, singlestoredb, backend, database]
+    concepts: [backend-portability]
 
   # Backends - Streaming & Big Data
   - id: "ibis:backends/pyspark.qmd"
@@ -247,12 +264,14 @@ entries:
     title: "PySpark Backend"
     summary: "Apache Spark via PySpark"
     tags: [ibis, pyspark, spark, backend, big-data]
+    concepts: [backend-portability]
 
   - id: "ibis:backends/flink.qmd"
     source: "ibis"
     title: "Flink Backend"
     summary: "Apache Flink streaming backend"
     tags: [ibis, flink, backend, streaming, apache]
+    concepts: [backend-portability, streaming]
 
   # Backend Support
   - id: "ibis:backends/support/matrix.qmd"
@@ -260,6 +279,7 @@ entries:
     title: "Support Matrix"
     summary: "Operations supported per backend"
     tags: [ibis, support-matrix, backends, operations, compatibility]
+    concepts: [backend-portability]
 
   - id: "ibis:backends/support/cloud_support_policy.qmd"
     source: "ibis"
@@ -273,18 +293,21 @@ entries:
     title: "Coming from pandas"
     summary: "Comprehensive migration guide: immutable tables, lazy evaluation, no row index, filter vs loc, mutate vs column assignment, order_by vs sort_values, aggregate vs agg, join vs merge, union vs concat, NULL handling, type casting"
     tags: [ibis, pandas, migration, tutorial, filter, mutate, join, lazy-evaluation]
+    concepts: [migration]
 
   - id: "ibis:tutorials/coming-from/sql.qmd"
     source: "ibis"
     title: "Coming from SQL"
     summary: "SQL to Ibis translation guide"
     tags: [ibis, sql, migration, tutorial, translation]
+    concepts: [sql-integration, migration]
 
   - id: "ibis:tutorials/coming-from/dplyr.qmd"
     source: "ibis"
     title: "Coming from dplyr"
     summary: "R dplyr to Ibis translation guide"
     tags: [ibis, dplyr, r, migration, tutorial]
+    concepts: [migration]
 
   # How-To Guides - Analytics
   - id: "ibis:how-to/analytics/basics.qmd"
@@ -411,12 +434,14 @@ entries:
     title: "SQL Integration"
     summary: "Mixing SQL with Ibis expressions via .sql() method"
     tags: [ibis, sql, integration, extending, how-to]
+    concepts: [sql-integration]
 
   - id: "ibis:how-to/extending/streaming.qmd"
     source: "ibis"
     title: "Streaming"
     summary: "Stream processing patterns with Ibis"
     tags: [ibis, streaming, extending, how-to]
+    concepts: [streaming]
 
   - id: "ibis:how-to/extending/unbound_expression.qmd"
     source: "ibis"
@@ -468,24 +493,28 @@ entries:
     title: "Numeric Expressions"
     summary: "NumericValue (arithmetic, abs, ceil, floor, round, log, exp, trig), NumericColumn (sum, mean, std, var, median, quantile, corr, cov), IntegerValue, FloatingValue (isnan, isinf), DecimalValue, BooleanValue (any, all, ifelse), and_, or_, random, constants e, pi"
     tags: [ibis, numeric, expressions, arithmetic, aggregation, boolean, reference]
+    concepts: [expression-api, numeric-expressions]
 
   - id: "ibis:reference/expression-strings.qmd"
     source: "ibis"
     title: "String Expressions"
     summary: "StringValue: length, lower, upper, strip, lstrip, rstrip, reverse, capitalize, contains, find, like, re_search, re_extract, re_replace, replace, split, concat, join, repeat, left, right, substr, lpad, rpad, translate, startswith, endswith, ascii_str, byte_length"
     tags: [ibis, string, expressions, regex, contains, replace, reference]
+    concepts: [expression-api, string-expressions]
 
   - id: "ibis:reference/expression-temporal.qmd"
     source: "ibis"
     title: "Temporal Expressions"
     summary: "TimestampValue (year, month, day, hour, minute, second, epoch_seconds, truncate, between), DateValue (day_of_week, day_of_year), TimeValue, IntervalValue, DayOfWeek. Constructors: now, today, date, time, timestamp, interval"
     tags: [ibis, temporal, timestamp, date, time, interval, reference]
+    concepts: [expression-api, temporal-expressions]
 
   - id: "ibis:reference/expression-collections.qmd"
     source: "ibis"
     title: "Collection Expressions"
     summary: "ArrayValue (length, contains, unnest, filter, map, zip, sort, unique, flatten, intersection, union, remove, index, join), MapValue (get, keys, values, length, contains), StructValue (names, types, destructure). Constructors: array, map, struct"
     tags: [ibis, array, map, struct, collections, unnest, reference]
+    concepts: [expression-api, collection-expressions]
 
   - id: "ibis:reference/expression-json.qmd"
     source: "ibis"
@@ -498,6 +527,7 @@ entries:
     title: "Geospatial Expressions"
     summary: "GeoSpatialValue (area, buffer, contains, covers, distance, intersection, transform, union, within, x, y), GeoSpatialColumn, point constructor"
     tags: [ibis, geospatial, gis, spatial, reference]
+    concepts: [expression-api]
 
   - id: "ibis:reference/expression-misc.qmd"
     source: "ibis"
@@ -511,12 +541,14 @@ entries:
     title: "Scalar UDFs"
     summary: "Creating scalar user-defined functions"
     tags: [ibis, udf, scalar, user-defined-functions, reference]
+    concepts: [udfs]
 
   - id: "ibis:reference/aggregate-udfs.qmd"
     source: "ibis"
     title: "Aggregate UDFs"
     summary: "Creating aggregate user-defined functions (experimental)"
     tags: [ibis, udf, aggregate, user-defined-functions, experimental, reference]
+    concepts: [udfs]
 
   # Connection
   - id: "ibis:reference/connection.qmd"

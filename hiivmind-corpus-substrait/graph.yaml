@@ -1,131 +1,65 @@
-schema_version: 1
+schema_version: 2
 
 concepts:
   query-plan-spec:
     label: "Query Plan Specification"
     description: "Cross-language format for describing compute operations on structured data"
-    entries:
-      - "substrait:index.md"
-      - "substrait:about.md"
-      - "substrait:spec/specification.md"
-      - "substrait:spec/technology_principles.md"
-      - "substrait:spec/versioning.md"
     tags: ["specification", "query-plan", "cross-language", "interop"]
-    entry_count: 5
 
   type-system:
     label: "Type System"
     description: "Strict type system with classes, nullability, variations, parameters, and user-defined types"
-    entries:
-      - "substrait:types/type_system.md"
-      - "substrait:types/type_classes.md"
-      - "substrait:types/type_variations.md"
-      - "substrait:types/type_aliases.md"
-      - "substrait:types/type_parsing.md"
-      - "substrait:types/named_structs.md"
     tags: ["types", "schema", "nullability", "strict", "casting"]
-    entry_count: 6
 
   expressions:
     label: "Expressions"
     description: "Scalar, aggregate, window, lambda, table functions and field references"
-    entries:
-      - "substrait:expressions/field_references.md"
-      - "substrait:expressions/scalar_functions.md"
-      - "substrait:expressions/lambda_expressions.md"
-      - "substrait:expressions/aggregate_functions.md"
-      - "substrait:expressions/window_functions.md"
-      - "substrait:expressions/specialized_record_expressions.md"
-      - "substrait:expressions/user_defined_functions.md"
-      - "substrait:expressions/embedded_functions.md"
-      - "substrait:expressions/table_functions.md"
-      - "substrait:expressions/dynamic_parameters.md"
-      - "substrait:expressions/subqueries.md"
     tags: ["expressions", "functions", "scalar", "aggregate", "window", "lambda"]
-    entry_count: 11
 
   scalar-functions:
     label: "Scalar Functions"
     description: "Scalar function definitions: arithmetic, comparison, string, boolean, datetime via extension YAMLs"
-    entries:
-      - "substrait:expressions/scalar_functions.md"
     tags: ["scalar", "arithmetic", "comparison", "string", "boolean", "datetime"]
-    entry_count: 1
 
   aggregate-functions:
     label: "Aggregate Functions"
     description: "Aggregate function definitions: SUM, COUNT, AVG, measures, optional filter"
-    entries:
-      - "substrait:expressions/aggregate_functions.md"
     tags: ["aggregate", "sum", "count", "group-by"]
-    entry_count: 1
 
   window-functions:
     label: "Window Functions"
     description: "Window function definitions: RANK, NTILE, ROW_NUMBER, frame spec, partitioning"
-    entries:
-      - "substrait:expressions/window_functions.md"
     tags: ["window", "ranking", "partition", "frame"]
-    entry_count: 1
 
   field-references:
     label: "Field References"
     description: "Column references: RootReference, OuterReference, LambdaParameterReference"
-    entries:
-      - "substrait:expressions/field_references.md"
     tags: ["field", "column", "reference"]
-    entry_count: 1
 
   specialized-expressions:
     label: "Specialized Expressions"
     description: "If/then/else, switch/case, cast expressions"
-    entries:
-      - "substrait:expressions/specialized_record_expressions.md"
     tags: ["conditional", "cast", "if-then", "switch"]
-    entry_count: 1
 
   relational-algebra:
     label: "Relational Algebra"
     description: "Logical and physical relations — read, filter, join, aggregate, sort, project, set ops"
-    entries:
-      - "substrait:relations/basics.md"
-      - "substrait:relations/common_fields.md"
-      - "substrait:relations/logical_relations.md"
-      - "substrait:relations/physical_relations.md"
-      - "substrait:relations/user_defined_relations.md"
-      - "substrait:relations/embedded_relations.md"
     tags: ["relations", "join", "filter", "aggregate", "sort", "relational-algebra"]
-    entry_count: 6
 
   serialization:
     label: "Serialization"
     description: "Binary (protobuf) and text serialization formats for Substrait plans"
-    entries:
-      - "substrait:serialization/basics.md"
-      - "substrait:serialization/binary_serialization.md"
-      - "substrait:serialization/text_serialization.md"
     tags: ["serialization", "protobuf", "binary", "text"]
-    entry_count: 3
 
   extensions:
     label: "Extensions"
     description: "Extension mechanism for types and functions via YAML files, deprecation support"
-    entries:
-      - "substrait:extensions/index.md"
-      - "substrait:spec/extending.md"
     tags: ["extensions", "yaml", "functions", "deprecation", "metadata"]
-    entry_count: 2
 
   ecosystem:
     label: "Ecosystem"
     description: "Projects using Substrait: Arrow, Calcite, DataFusion, DuckDB, Ibis, Spark, Trino"
-    entries:
-      - "substrait:community/powered_by.md"
-      - "substrait:tools/producer_tools.md"
-      - "substrait:tools/substrait_validator.md"
-      - "substrait:tools/third_party_tools.md"
     tags: ["ecosystem", "arrow", "calcite", "datafusion", "duckdb", "ibis"]
-    entry_count: 4
 
 relationships:
   - from: "expressions"
@@ -172,10 +106,42 @@ relationships:
     to: "expressions"
     type: "part-of"
     origin: "manual"
+  - from: "query-plan-spec"
+    to: "relational-algebra"
+    type: "includes"
+    origin: "manual"
+  - from: "query-plan-spec"
+    to: "serialization"
+    type: "includes"
+    origin: "manual"
+  - from: "field-references"
+    to: "relational-algebra"
+    type: "depends-on"
+    origin: "manual"
+  - from: "specialized-expressions"
+    to: "type-system"
+    type: "depends-on"
+    origin: "manual"
+  - from: "extensions"
+    to: "ecosystem"
+    type: "see-also"
+    origin: "manual"
+  - from: "field-references"
+    to: "type-system"
+    type: "depends-on"
+    origin: "manual"
+  - from: "serialization"
+    to: "query-plan-spec"
+    type: "depends-on"
+    origin: "manual"
+  - from: "type-system"
+    to: "relational-algebra"
+    type: "see-also"
+    origin: "manual"
 
 meta:
-  generated_at: "2026-03-26T00:00:00Z"
+  generated_at: "2026-03-28T00:00:00Z"
   entry_count: 42
   concept_count: 12
-  relationship_count: 11
+  relationship_count: 19
   sources_extracted: ["substrait"]

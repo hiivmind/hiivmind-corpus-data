@@ -33,6 +33,7 @@ entries:
     title: "Data Types and Structures"
     summary: "Series (1D homogeneous), DataFrame (2D heterogeneous, uniquely named series), Schema (column-to-type mapping). Inspection methods: head, tail, glimpse, sample, describe. Schema override via schema dict or schema_overrides parameter. Arrow Columnar Format internally. Full type table including numeric (Int8-Int128, UInt8-UInt128, Float16/32/64, Decimal), temporal (Date, Time, Datetime, Duration), nested (List, Array, Struct), string/binary, categorical/enum, boolean, null, object. IEEE 754 floating point with NaN equality semantics"
     tags: [data-types, series, dataframe, schema, numeric, temporal, nested, categorical, enum, floating-point, nan]
+    concepts: ["data-types"]
 
   # Core Concepts - Expression Model
   - id: "polars:user-guide/concepts/expressions-and-contexts.md"
@@ -40,6 +41,7 @@ entries:
     title: "Expressions and Contexts"
     summary: "Core DSL concepts. Expressions are lazy transformations. Four contexts: select (column operations), with_columns (add columns), filter (row filtering), group_by (aggregations). Expression expansion for multi-column operations"
     tags: [expressions, contexts, select, with_columns, filter, group_by, dsl]
+    concepts: ["expressions"]
 
   - id: "polars:user-guide/expressions/index.md"
     source: "polars"
@@ -59,48 +61,56 @@ entries:
     title: "Lazy API Overview"
     summary: "LazyFrame vs DataFrame, query optimization benefits"
     tags: [lazy, lazyframe, optimization, query-planning]
+    concepts: ["lazy-evaluation"]
 
   - id: "polars:user-guide/lazy/using.md"
     source: "polars"
     title: "Using the Lazy API"
     summary: "Converting between eager/lazy, when to use each"
     tags: [lazy, eager, conversion, lazyframe]
+    concepts: ["lazy-evaluation"]
 
   - id: "polars:user-guide/lazy/optimizations.md"
     source: "polars"
     title: "Query Optimizations"
     summary: "Predicate pushdown, projection pushdown, slice pushdown"
     tags: [optimization, predicate-pushdown, projection-pushdown, slice-pushdown, lazy]
+    concepts: ["lazy-evaluation"]
 
   - id: "polars:user-guide/lazy/schemas.md"
     source: "polars"
     title: "Schemas in Lazy"
     summary: "Schema inference and validation in lazy mode"
     tags: [schema, lazy, inference, validation]
+    concepts: ["lazy-evaluation"]
 
   - id: "polars:user-guide/lazy/query-plan.md"
     source: "polars"
     title: "Query Plans"
     summary: "Understanding and visualizing query plans with explain()"
     tags: [query-plan, explain, visualization, lazy, debugging]
+    concepts: ["lazy-evaluation"]
 
   - id: "polars:user-guide/lazy/execution.md"
     source: "polars"
     title: "Execution"
     summary: "Collecting results, streaming execution"
     tags: [execution, collect, streaming, lazy]
+    concepts: ["lazy-evaluation"]
 
   - id: "polars:user-guide/lazy/sources_sinks.md"
     source: "polars"
     title: "Sources and Sinks"
     summary: "Lazy reading/writing from various formats. Multiplexing sinks for writing to multiple outputs simultaneously. PartitionBy for splitting output across files with max_rows_per_file"
     tags: [sources, sinks, lazy, io, multiplexing, partitioning]
+    concepts: ["lazy-evaluation"]
 
   - id: "polars:user-guide/concepts/streaming.md"
     source: "polars"
     title: "Streaming"
     summary: "Out-of-core processing for datasets larger than RAM"
     tags: [streaming, out-of-core, memory, large-datasets]
+    concepts: ["lazy-evaluation"]
 
   # Expressions - Basic Operations
   - id: "polars:user-guide/expressions/basic-operations.md"
@@ -108,18 +118,21 @@ entries:
     title: "Basic Operations"
     summary: "Arithmetic (+, -, *, /), comparisons (>, <, ==), Boolean operations (&, |, ~), counting unique values (n_unique, approx_n_unique, value_counts), conditionals with when().then().otherwise()"
     tags: [arithmetic, comparisons, boolean, when-then-otherwise, unique, value-counts]
+    concepts: ["expressions"]
 
   - id: "polars:user-guide/expressions/expression-expansion.md"
     source: "polars"
     title: "Expression Expansion"
     summary: "Apply same transformation to multiple columns: pl.col('a', 'b'), pl.col(pl.Float64), pl.all(), pl.exclude()"
     tags: [expression-expansion, multi-column, pl-col, pl-all, pl-exclude]
+    concepts: ["expressions"]
 
   - id: "polars:user-guide/expressions/casting.md"
     source: "polars"
     title: "Casting"
     summary: "Type conversion with cast(), strict vs lenient casting"
     tags: [casting, type-conversion, strict, lenient]
+    concepts: ["expressions", "casting-expressions"]
 
   # Expressions - Data Type Namespaces
   - id: "polars:user-guide/expressions/strings.md"
@@ -127,30 +140,35 @@ entries:
     title: "Strings"
     summary: "String namespace (str): splitting, slicing, regex matching, replacement, case conversion. Access via col('name').str.to_uppercase()"
     tags: [strings, str-namespace, regex, splitting, case-conversion]
+    concepts: ["string-expressions", "data-types"]
 
   - id: "polars:user-guide/expressions/lists-and-arrays.md"
     source: "polars"
     title: "Lists and Arrays"
     summary: "List (variable length) vs Array (fixed shape). List namespace (list): slicing (head, tail), explode(), element-wise ops with eval() and element, row-wise aggregation with concat_list(). Array namespace (arr): fixed-shape operations"
     tags: [lists, arrays, list-namespace, arr-namespace, explode, concat-list, eval]
+    concepts: ["collection-expressions", "data-types"]
 
   - id: "polars:user-guide/expressions/categorical-data-and-enums.md"
     source: "polars"
     title: "Categorical Data and Enums"
     summary: "Efficient string encoding. Categorical (runtime inference) vs Enum (predetermined categories). Cat namespace (cat). v1.32.0+ categoricals always use lexical ordering"
     tags: [categorical, enum, cat-namespace, encoding, lexical-ordering]
+    concepts: ["data-types"]
 
   - id: "polars:user-guide/expressions/structs.md"
     source: "polars"
     title: "Structs"
     summary: "Composite type for multiple fields. Struct namespace (struct): unnest() to expand, field() to extract, rename_fields(). Created by value_counts(), dict inference. Use for multi-column deduplication and ranking"
     tags: [structs, struct-namespace, unnest, field, composite-type, deduplication]
+    concepts: ["collection-expressions", "data-types"]
 
   - id: "polars:user-guide/expressions/missing-data.md"
     source: "polars"
     title: "Missing Data"
     summary: "Handling null values: is_null(), fill_null(), drop_nulls(), forward/backward fill. null is distinct from NaN (floating point only)"
     tags: [missing-data, "null", nan, fill-null, drop-nulls, forward-fill]
+    concepts: ["null-handling", "data-types"]
 
   # Expressions - Aggregation & Window Functions
   - id: "polars:user-guide/expressions/aggregation.md"
@@ -158,18 +176,21 @@ entries:
     title: "Aggregation"
     summary: "group_by().agg() context. Multiple aggregations, conditional aggregations, filtering within groups, nested grouping, sorting within groups. Avoid Python lambdas to preserve parallelization"
     tags: [aggregation, group-by, agg, conditional, nested-grouping, performance]
+    concepts: ["expressions", "aggregation-expressions"]
 
   - id: "polars:user-guide/expressions/window-functions.md"
     source: "polars"
     title: "Window Functions"
     summary: "over() for group operations in select context. Ranking within groups, mapping strategies: group_to_rows (default), explode (faster), join. Windowed aggregations broadcast scalars"
     tags: [window-functions, over, ranking, mapping-strategies, broadcast]
+    concepts: ["expressions", "window-expressions"]
 
   - id: "polars:user-guide/expressions/folds.md"
     source: "polars"
     title: "Folds"
     summary: "Horizontal operations with fold(). Custom row-wise computations across columns, similar to functools.reduce. Use concat_str() for string concatenation"
     tags: [folds, horizontal, row-wise, reduce, concat-str]
+    concepts: ["expressions"]
 
   # Expressions - Advanced
   - id: "polars:user-guide/expressions/user-defined-python-functions.md"
@@ -177,12 +198,14 @@ entries:
     title: "User-Defined Python Functions"
     summary: "map_elements(), map_batches() for custom Python logic. Performance implications with GIL. Recommends Polars plugins (expression/IO) as higher-performance alternative"
     tags: [udf, map-elements, map-batches, python, gil, plugins]
+    concepts: ["expressions"]
 
   - id: "polars:user-guide/expressions/numpy-functions.md"
     source: "polars"
     title: "NumPy Functions"
     summary: "Using NumPy ufuncs with Polars data"
     tags: [numpy, ufuncs, interop]
+    concepts: ["expressions"]
 
   # Transformations - Joins
   - id: "polars:user-guide/transformations/joins.md"
@@ -190,6 +213,7 @@ entries:
     title: "Joins"
     summary: "Comprehensive join operations: equi joins (inner, left, right, full, semi, anti), non-equi joins (join_where with arbitrary predicates), asof joins (join_asof with nearest key, tolerance, strategy), cross join. Key expressions for dynamic matching, coalesce parameter"
     tags: [joins, inner, left, right, full, semi, anti, asof, cross, join-where, non-equi]
+    concepts: ["transformations"]
 
   # Transformations - Reshaping
   - id: "polars:user-guide/transformations/concatenation.md"
@@ -197,18 +221,21 @@ entries:
     title: "Concatenation"
     summary: "concat() modes: vertical (stack rows), horizontal (add columns), diagonal (combine both). Rechunking considerations"
     tags: [concatenation, vertical, horizontal, diagonal, rechunking]
+    concepts: ["transformations"]
 
   - id: "polars:user-guide/transformations/pivot.md"
     source: "polars"
     title: "Pivot"
     summary: "Reshape data: group by columns become y-axis, pivot column becomes x-axis. Aggregations: first, last, sum, min, max, mean, median, len. Lazy workarounds: collect first or specify on_columns for static schema declaration"
     tags: [pivot, reshape, aggregation, wide-format]
+    concepts: ["transformations"]
 
   - id: "polars:user-guide/transformations/unpivot.md"
     source: "polars"
     title: "Unpivot"
     summary: "Reverse of pivot, wide to long format"
     tags: [unpivot, melt, long-format, reshape]
+    concepts: ["transformations"]
 
   # Transformations - Time Series
   - id: "polars:user-guide/transformations/time-series/parsing.md"
@@ -216,30 +243,35 @@ entries:
     title: "Parsing Dates and Times"
     summary: "String to datetime conversion"
     tags: [time-series, parsing, datetime, conversion]
+    concepts: ["temporal-expressions", "transformations"]
 
   - id: "polars:user-guide/transformations/time-series/filter.md"
     source: "polars"
     title: "Filtering Time Series"
     summary: "Date range filtering"
     tags: [time-series, filtering, date-range]
+    concepts: ["temporal-expressions", "transformations"]
 
   - id: "polars:user-guide/transformations/time-series/rolling.md"
     source: "polars"
     title: "Rolling Operations"
     summary: "Rolling windows for time series"
     tags: [time-series, rolling, windows, moving-average]
+    concepts: ["temporal-expressions", "transformations"]
 
   - id: "polars:user-guide/transformations/time-series/resampling.md"
     source: "polars"
     title: "Resampling"
     summary: "Downsampling/upsampling temporal data"
     tags: [time-series, resampling, downsampling, upsampling]
+    concepts: ["temporal-expressions", "transformations"]
 
   - id: "polars:user-guide/transformations/time-series/timezones.md"
     source: "polars"
     title: "Timezones"
     summary: "Timezone handling and conversion"
     tags: [time-series, timezones, conversion]
+    concepts: ["temporal-expressions", "transformations"]
 
   # Arrow Interoperability
   - id: "polars:user-guide/misc/arrow.md"
@@ -247,6 +279,7 @@ entries:
     title: "Arrow Producer/Consumer"
     summary: "Zero-copy data exchange: PyArrow to_arrow()/pl.from_arrow() for DataFrame/Table conversion, zero-copy export with compat_level, PyCapsule Interface (v1.3+) standard protocol, C Data Interface for direct struct exchange without PyArrow"
     tags: [arrow, pyarrow, zero-copy, pycapsule, c-data-interface, interop]
+    concepts: ["arrow-interop"]
 
   # IO Operations
   - id: "polars:user-guide/io/index.md"
@@ -254,66 +287,77 @@ entries:
     title: "IO Overview"
     summary: "Supported formats and common patterns for reading and writing data"
     tags: [io, formats, reading, writing, overview]
+    concepts: ["io-operations"]
 
   - id: "polars:user-guide/io/csv.md"
     source: "polars"
     title: "CSV"
     summary: "read_csv(), scan_csv(), write_csv()"
     tags: [io, csv, read, scan, write]
+    concepts: ["io-operations"]
 
   - id: "polars:user-guide/io/parquet.md"
     source: "polars"
     title: "Parquet"
     summary: "Columnar format, predicate pushdown"
     tags: [io, parquet, columnar, predicate-pushdown]
+    concepts: ["io-operations"]
 
   - id: "polars:user-guide/io/json.md"
     source: "polars"
     title: "JSON"
     summary: "JSON and NDJSON support. Lazy scanning with scan_ndjson() for LazyFrame-based NDJSON reading"
     tags: [io, json, ndjson, scan, lazy]
+    concepts: ["io-operations"]
 
   - id: "polars:user-guide/io/excel.md"
     source: "polars"
     title: "Excel"
     summary: "Reading Excel files"
     tags: [io, excel, spreadsheet]
+    concepts: ["io-operations"]
 
   - id: "polars:user-guide/io/database.md"
     source: "polars"
     title: "Database"
     summary: "SQL database connections"
     tags: [io, database, sql, connectors]
+    concepts: ["io-operations"]
 
   - id: "polars:user-guide/io/cloud-storage.md"
     source: "polars"
     title: "Cloud Storage"
     summary: "S3, GCS, Azure Blob. Cloud retry configuration via storage_options, global credential providers, writing to file objects for unsupported formats"
     tags: [io, cloud, s3, gcs, azure, storage-options, credentials]
+    concepts: ["io-operations"]
 
   - id: "polars:user-guide/io/multiple.md"
     source: "polars"
     title: "Multiple Files"
     summary: "Glob patterns, lazy scanning multiple files"
     tags: [io, glob, multiple-files, lazy-scanning]
+    concepts: ["io-operations"]
 
   - id: "polars:user-guide/io/hive.md"
     source: "polars"
     title: "Hive Partitioning"
     summary: "Partitioned datasets"
     tags: [io, hive, partitioning, datasets]
+    concepts: ["io-operations"]
 
   - id: "polars:user-guide/io/bigquery.md"
     source: "polars"
     title: "BigQuery"
     summary: "Google BigQuery integration"
     tags: [io, bigquery, google, cloud]
+    concepts: ["io-operations"]
 
   - id: "polars:user-guide/io/hugging-face.md"
     source: "polars"
     title: "Hugging Face"
     summary: "Loading datasets from Hugging Face Hub"
     tags: [io, hugging-face, datasets, hub]
+    concepts: ["io-operations"]
 
   # SQL Interface
   - id: "polars:user-guide/sql/intro.md"
@@ -321,30 +365,35 @@ entries:
     title: "SQL Introduction"
     summary: "SQL context for Polars DataFrames"
     tags: [sql, context, interface]
+    concepts: ["sql-interface"]
 
   - id: "polars:user-guide/sql/select.md"
     source: "polars"
     title: "SQL SELECT"
     summary: "Query syntax for SQL interface"
     tags: [sql, select, query]
+    concepts: ["sql-interface"]
 
   - id: "polars:user-guide/sql/create.md"
     source: "polars"
     title: "SQL CREATE"
     summary: "Creating tables in SQL context"
     tags: [sql, create, tables]
+    concepts: ["sql-interface"]
 
   - id: "polars:user-guide/sql/cte.md"
     source: "polars"
     title: "SQL CTEs"
     summary: "Common Table Expressions in SQL context"
     tags: [sql, cte, common-table-expressions]
+    concepts: ["sql-interface"]
 
   - id: "polars:user-guide/sql/show.md"
     source: "polars"
     title: "SQL SHOW"
     summary: "Metadata queries in SQL context"
     tags: [sql, show, metadata]
+    concepts: ["sql-interface"]
 
   # Migration Guides
   - id: "polars:user-guide/migration/pandas.md"
@@ -365,12 +414,14 @@ entries:
     title: "GPU Support"
     summary: "NVIDIA GPU acceleration for in-memory workloads"
     tags: [gpu, nvidia, acceleration, performance]
+    concepts: ["gpu-acceleration"]
 
   - id: "polars:user-guide/lazy/gpu.md"
     source: "polars"
     title: "GPU in Lazy API"
     summary: "GPU-accelerated query execution in lazy mode"
     tags: [gpu, lazy, acceleration, performance]
+    concepts: ["gpu-acceleration"]
 
   - id: "polars:user-guide/misc/multiprocessing.md"
     source: "polars"
@@ -383,6 +434,7 @@ entries:
     title: "Multiplexing"
     summary: "Efficient query reuse in lazy mode"
     tags: [multiplexing, query-reuse, lazy, performance]
+    concepts: ["lazy-evaluation"]
 
   # Advanced Topics - Extensibility
   - id: "polars:user-guide/plugins/index.md"
@@ -390,18 +442,21 @@ entries:
     title: "Plugins Overview"
     summary: "Extending Polars functionality with plugins"
     tags: [plugins, extensibility, overview]
+    concepts: ["plugins-extensibility"]
 
   - id: "polars:user-guide/plugins/expr_plugins.md"
     source: "polars"
     title: "Expression Plugins"
     summary: "Custom expression functions in Rust for extending Polars"
     tags: [plugins, expressions, rust, custom-functions]
+    concepts: ["plugins-extensibility"]
 
   - id: "polars:user-guide/plugins/io_plugins.md"
     source: "polars"
     title: "IO Plugins"
     summary: "Custom data source/sink implementations"
     tags: [plugins, io, custom-sources, custom-sinks]
+    concepts: ["plugins-extensibility"]
 
   # Advanced Topics - Misc
   - id: "polars:user-guide/misc/visualization.md"
@@ -440,30 +495,35 @@ entries:
     title: "Compute Context"
     summary: "Create and configure compute contexts for distributed execution. Save as named manifests via register(), set global defaults with pc.set_compute_context(). Ephemeral contexts create new clusters; reuse clusters via manifests"
     tags: [cloud, compute-context, distributed, manifests, clusters]
+    concepts: ["distributed-execution"]
 
   - id: "polars:polars-cloud/run/distributed-engine.md"
     source: "polars"
     title: "Distributed Engine"
     summary: "Running queries on Polars Cloud distributed engine"
     tags: [cloud, distributed, engine, execution]
+    concepts: ["distributed-execution"]
 
   - id: "polars:polars-cloud/run/query-profile.md"
     source: "polars"
     title: "Query Profiler"
     summary: "Visual query profiling with bottleneck indicators (CPU time, I/O time, memory-intensive, single-node, in-memory fallback). Distributed query walkthrough with stage graph analysis and cross-region I/O diagnosis"
     tags: [cloud, profiling, bottleneck, performance, diagnostics]
+    concepts: ["distributed-execution"]
 
   - id: "polars:polars-cloud/run/glossary.md"
     source: "polars"
     title: "Distributed Glossary"
     summary: "Key distributed execution terms: DSL, query, logical/physical plans, scheduler, worker, stage graph, stage, partition, shuffle"
     tags: [cloud, glossary, distributed, terminology]
+    concepts: ["distributed-execution"]
 
   - id: "polars:polars-cloud/integrations/airflow.md"
     source: "polars"
     title: "Airflow Integration"
     summary: "Comprehensive Airflow patterns: auth decorators, await_result(), cluster lifecycle management (context managers, named manifests, manual shutdown), parallel single-node execution, multi-stage pipelines"
     tags: [cloud, airflow, orchestration, pipelines, integration]
+    concepts: ["distributed-execution"]
 
   # Polars On-Premises
   - id: "polars:polars-on-premises/index.md"
@@ -471,12 +531,14 @@ entries:
     title: "On-Premises Overview"
     summary: "Deploying Polars as a self-hosted distributed engine"
     tags: [on-premises, self-hosted, distributed, deployment]
+    concepts: ["distributed-execution"]
 
   - id: "polars:polars-on-premises/bare-metal/getting-started.md"
     source: "polars"
     title: "On-Premises Getting Started"
     summary: "Initial bare-metal deployment setup"
     tags: [on-premises, bare-metal, setup, getting-started]
+    concepts: ["distributed-execution"]
 
   - id: "polars:polars-on-premises/bare-metal/python-environment.md"
     source: "polars"
@@ -495,6 +557,7 @@ entries:
     title: "Configuration Reference"
     summary: "Complete TOML config reference: cluster_id, instance_id, license, memory_limit, scheduler, worker, observatory, monitoring, static_leader. Env var overrides via PC_CUBLET__section__key"
     tags: [on-premises, configuration, toml, reference]
+    concepts: ["distributed-execution"]
 
   - id: "polars:polars-on-premises/bare-metal/configuration/example-configurations.md"
     source: "polars"
