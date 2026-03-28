@@ -48,12 +48,14 @@ entries:
     title: "Expressions Overview"
     summary: "Expression categories: essentials (basic ops, expansion, casting), type-specific namespaces (str, list, arr, cat, struct, dt), operation types (aggregation, window, folds), user-defined functions"
     tags: [expressions, namespaces, str, list, arr, cat, struct, dt, overview]
+    concepts: ["expressions"]
 
   - id: "polars:user-guide/lazy/datatype_exprs.md"
     source: "polars"
     title: "DataType Expressions"
     summary: "Runtime type inspection and manipulation with pl.dtype_of(). Express relations between expression datatypes, inspect type info at runtime, cast columns to match another column's type. Useful for utility functions, heterogeneous data sources"
     tags: [datatype, expressions, runtime, type-inspection, casting]
+    concepts: ["expressions", "data-types"]
 
   # Core Concepts - Lazy API
   - id: "polars:user-guide/concepts/lazy-api.md"
@@ -401,12 +403,14 @@ entries:
     title: "Migration from pandas"
     summary: "Key differences, API mapping, performance tips for migrating from pandas to Polars"
     tags: [migration, pandas, api-mapping, performance]
+    concepts: ["migration"]
 
   - id: "polars:user-guide/migration/spark.md"
     source: "polars"
     title: "Migration from Spark"
     summary: "Translating Spark patterns to Polars"
     tags: [migration, spark, translation, patterns]
+    concepts: ["migration"]
 
   # Advanced Topics - Performance
   - id: "polars:user-guide/gpu-support.md"
@@ -545,12 +549,14 @@ entries:
     title: "Python Environment"
     summary: "Python environment configuration for on-premises deployment"
     tags: [on-premises, python, environment, configuration]
+    concepts: ["on-premises-deployment"]
 
   - id: "polars:polars-on-premises/bare-metal/environment-variables.md"
     source: "polars"
     title: "Environment Variables"
     summary: "Environment variable reference for on-premises deployment"
     tags: [on-premises, environment-variables, reference, configuration]
+    concepts: ["on-premises-deployment"]
 
   - id: "polars:polars-on-premises/bare-metal/configuration/reference.md"
     source: "polars"
@@ -564,48 +570,56 @@ entries:
     title: "Example Configurations"
     summary: "Complete TOML examples for single-node and multi-node clusters with all network ports customized"
     tags: [on-premises, configuration, examples, single-node, multi-node]
+    concepts: ["on-premises-deployment"]
 
   - id: "polars:polars-on-premises/bare-metal/configuration/network-addresses.md"
     source: "polars"
     title: "Network Addresses"
     summary: "All configurable network services: scheduler client/worker, observatory/REST API, worker task/shuffle. Default bind addresses and public address config for NAT/multi-node"
     tags: [on-premises, network, addresses, ports, nat]
+    concepts: ["on-premises-deployment"]
 
   - id: "polars:polars-on-premises/bare-metal/configuration/resource-limits.md"
     source: "polars"
     title: "Resource Limits"
     summary: "CPU and memory management: two-process architecture (main + executor), OOM behavior, delegated cgroup setup via memory_limit, manual systemd cgroup config"
     tags: [on-premises, resources, cpu, memory, cgroups, oom]
+    concepts: ["on-premises-deployment"]
 
   - id: "polars:polars-on-premises/bare-metal/configuration/license.md"
     source: "polars"
     title: "License"
     summary: "License key requirements (JSON format), file path config, EULA acceptance via POLARS_EULA_ACCEPTED"
     tags: [on-premises, license, eula, configuration]
+    concepts: ["on-premises-deployment"]
 
   - id: "polars:polars-on-premises/bare-metal/configuration/monitoring.md"
     source: "polars"
     title: "Monitoring"
     summary: "Observatory and monitoring: SQLite profiling storage, in-memory host metrics buffer, cgroup-based metrics collection"
     tags: [on-premises, monitoring, observatory, metrics, sqlite]
+    concepts: ["on-premises-deployment"]
 
   - id: "polars:polars-on-premises/bare-metal/configuration/anonymous-results.md"
     source: "polars"
     title: "Anonymous Results"
     summary: "Configure anonymous results sink for remote queries without explicit output: shared filesystem (NFS/CephFS) and S3-compatible storage backends"
     tags: [on-premises, anonymous-results, nfs, s3, storage]
+    concepts: ["on-premises-deployment"]
 
   - id: "polars:polars-on-premises/bare-metal/configuration/shuffle-data.md"
     source: "polars"
     title: "Shuffle Data"
     summary: "Three shuffle storage options: worker-local SSD, shared filesystem (NFS/CephFS), S3-compatible. Performance trade-offs per option"
     tags: [on-premises, shuffle, storage, ssd, nfs, s3, performance]
+    concepts: ["on-premises-deployment"]
 
   - id: "polars:polars-on-premises/bare-metal/configuration/static-leader.md"
     source: "polars"
     title: "Static Leader"
     summary: "static_leader section identifying cluster leader node and public addresses, enabling shared config files with per-node instance_id overrides"
     tags: [on-premises, static-leader, cluster, configuration]
+    concepts: ["on-premises-deployment"]
 
   # API Reference
   - id: "polars:api/reference.md"

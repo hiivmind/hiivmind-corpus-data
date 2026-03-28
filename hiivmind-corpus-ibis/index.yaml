@@ -136,18 +136,21 @@ entries:
     title: "DataFusion Backend"
     summary: "Apache DataFusion backend"
     tags: [ibis, datafusion, backend, apache]
+    concepts: ["backend-portability"]
 
   - id: "ibis:backends/pandas.qmd"
     source: "ibis"
     title: "pandas Backend"
     summary: "pandas backend for compatibility"
     tags: [ibis, pandas, backend, compatibility]
+    concepts: ["backend-portability"]
 
   - id: "ibis:backends/dask.qmd"
     source: "ibis"
     title: "Dask Backend"
     summary: "Distributed computing with Dask backend"
     tags: [ibis, dask, backend, distributed]
+    concepts: ["backend-portability"]
 
   # Backends - Cloud Data Warehouses
   - id: "ibis:backends/bigquery.qmd"
@@ -169,12 +172,14 @@ entries:
     title: "Databricks Backend"
     summary: "Databricks backend"
     tags: [ibis, databricks, backend, cloud]
+    concepts: ["backend-portability"]
 
   - id: "ibis:backends/athena.qmd"
     source: "ibis"
     title: "Athena Backend"
     summary: "AWS Athena backend"
     tags: [ibis, athena, backend, aws, cloud]
+    concepts: ["backend-portability"]
 
   # Backends - Databases
   - id: "ibis:backends/postgresql.qmd"
@@ -182,67 +187,77 @@ entries:
     title: "PostgreSQL Backend"
     summary: "PostgreSQL backend"
     tags: [ibis, postgresql, postgres, backend, database]
+    concepts: ["backend-portability"]
 
   - id: "ibis:backends/mysql.qmd"
     source: "ibis"
     title: "MySQL Backend"
     summary: "MySQL backend"
     tags: [ibis, mysql, backend, database]
+    concepts: ["backend-portability"]
 
   - id: "ibis:backends/sqlite.qmd"
     source: "ibis"
     title: "SQLite Backend"
     summary: "SQLite backend"
     tags: [ibis, sqlite, backend, database]
+    concepts: ["backend-portability"]
 
   - id: "ibis:backends/clickhouse.qmd"
     source: "ibis"
     title: "ClickHouse Backend"
     summary: "ClickHouse backend"
     tags: [ibis, clickhouse, backend, database, analytics]
+    concepts: ["backend-portability"]
 
   - id: "ibis:backends/mssql.qmd"
     source: "ibis"
     title: "MS SQL Backend"
     summary: "Microsoft SQL Server backend"
     tags: [ibis, mssql, backend, database, microsoft]
+    concepts: ["backend-portability"]
 
   - id: "ibis:backends/oracle.qmd"
     source: "ibis"
     title: "Oracle Backend"
     summary: "Oracle database backend"
     tags: [ibis, oracle, backend, database]
+    concepts: ["backend-portability"]
 
   - id: "ibis:backends/trino.qmd"
     source: "ibis"
     title: "Trino Backend"
     summary: "Trino distributed SQL backend"
     tags: [ibis, trino, backend, database, distributed]
+    concepts: ["backend-portability"]
 
   - id: "ibis:backends/exasol.qmd"
     source: "ibis"
     title: "Exasol Backend"
     summary: "Exasol backend"
     tags: [ibis, exasol, backend, database]
+    concepts: ["backend-portability"]
 
   - id: "ibis:backends/druid.qmd"
     source: "ibis"
     title: "Druid Backend"
     summary: "Apache Druid backend"
     tags: [ibis, druid, backend, database, apache]
+    concepts: ["backend-portability"]
 
   - id: "ibis:backends/impala.qmd"
     source: "ibis"
     title: "Impala Backend"
     summary: "Apache Impala backend"
     tags: [ibis, impala, backend, database, apache]
+    concepts: ["backend-portability"]
 
   - id: "ibis:backends/risingwave.qmd"
     source: "ibis"
     title: "RisingWave Backend"
     summary: "RisingWave streaming database"
     tags: [ibis, risingwave, backend, streaming, database]
-    concepts: [streaming]
+    concepts: [streaming, backend-portability]
 
   - id: "ibis:backends/materialize.qmd"
     source: "ibis"
@@ -379,48 +394,56 @@ entries:
     title: "Altair Visualization"
     summary: "Vega-Altair integration for visualization"
     tags: [ibis, altair, visualization, how-to]
+    concepts: ["visualization"]
 
   - id: "ibis:how-to/visualization/matplotlib.qmd"
     source: "ibis"
     title: "Matplotlib Visualization"
     summary: "Matplotlib plotting integration"
     tags: [ibis, matplotlib, visualization, how-to]
+    concepts: ["visualization"]
 
   - id: "ibis:how-to/visualization/plotly.qmd"
     source: "ibis"
     title: "Plotly Visualization"
     summary: "Plotly interactive charts"
     tags: [ibis, plotly, visualization, interactive, how-to]
+    concepts: ["visualization"]
 
   - id: "ibis:how-to/visualization/plotnine.qmd"
     source: "ibis"
     title: "plotnine Visualization"
     summary: "ggplot2-style plotting with plotnine"
     tags: [ibis, plotnine, ggplot, visualization, how-to]
+    concepts: ["visualization"]
 
   - id: "ibis:how-to/visualization/seaborn.qmd"
     source: "ibis"
     title: "Seaborn Visualization"
     summary: "Seaborn statistical visualization"
     tags: [ibis, seaborn, visualization, statistics, how-to]
+    concepts: ["visualization"]
 
   - id: "ibis:how-to/visualization/streamlit.qmd"
     source: "ibis"
     title: "Streamlit Dashboards"
     summary: "Streamlit dashboard integration"
     tags: [ibis, streamlit, dashboard, visualization, how-to]
+    concepts: ["visualization"]
 
   - id: "ibis:how-to/visualization/marimo.qmd"
     source: "ibis"
     title: "Marimo Notebooks"
     summary: "Marimo notebook integration"
     tags: [ibis, marimo, notebooks, visualization, how-to]
+    concepts: ["visualization"]
 
   - id: "ibis:how-to/visualization/graphs.qmd"
     source: "ibis"
     title: "Graph Visualization"
     summary: "Graph/network visualization"
     tags: [ibis, graphs, network, visualization, how-to]
+    concepts: ["visualization"]
 
   # How-To Guides - Extending Ibis
   - id: "ibis:how-to/extending/builtin.qmd"
@@ -428,6 +451,7 @@ entries:
     title: "Built-in Functions"
     summary: "Using built-in functions"
     tags: [ibis, builtin, functions, extending, how-to]
+    concepts: ["expression-api"]
 
   - id: "ibis:how-to/extending/sql.qmd"
     source: "ibis"
@@ -521,6 +545,7 @@ entries:
     title: "JSON Expressions"
     summary: "JSONValue: unwrap_as (cast JSON to typed values), JSON path access"
     tags: [ibis, json, expressions, reference]
+    concepts: ["collection-expressions"]
 
   - id: "ibis:reference/expression-geospatial.qmd"
     source: "ibis"

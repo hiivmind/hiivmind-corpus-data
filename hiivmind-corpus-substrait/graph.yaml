@@ -61,6 +61,11 @@ concepts:
     description: "Projects using Substrait: Arrow, Calcite, DataFusion, DuckDB, Ibis, Spark, Trino"
     tags: ["ecosystem", "arrow", "calcite", "datafusion", "duckdb", "ibis"]
 
+  function-library:
+    label: "Function Library"
+    description: "Standard function extension YAMLs: arithmetic, string, datetime, comparison, boolean, aggregate, rounding, geometry"
+    tags: ["functions", "library", "arithmetic", "string", "datetime", "comparison", "aggregate"]
+
 relationships:
   - from: "expressions"
     to: "type-system"
@@ -138,10 +143,22 @@ relationships:
     to: "relational-algebra"
     type: "see-also"
     origin: "manual"
+  - from: "function-library"
+    to: "extensions"
+    type: "part-of"
+    origin: "manual"
+  - from: "function-library"
+    to: "scalar-functions"
+    type: "see-also"
+    origin: "manual"
+  - from: "function-library"
+    to: "aggregate-functions"
+    type: "see-also"
+    origin: "manual"
 
 meta:
   generated_at: "2026-03-28T00:00:00Z"
   entry_count: 42
-  concept_count: 12
-  relationship_count: 19
+  concept_count: 13
+  relationship_count: 22
   sources_extracted: ["substrait"]

@@ -86,6 +86,16 @@ concepts:
     description: "Polars Cloud and on-premises distributed query engine deployment"
     tags: ["distributed", "cloud", "on-premises", "cluster", "scheduler"]
 
+  migration:
+    label: "Migration"
+    description: "Migration guides from pandas, Spark, and other frameworks to Polars"
+    tags: ["migration", "pandas", "spark", "translation"]
+
+  on-premises-deployment:
+    label: "On-Premises Deployment"
+    description: "On-premises bare-metal configuration: Python environment, network, resources, monitoring, storage"
+    tags: ["on-premises", "configuration", "deployment", "cluster"]
+
 relationships:
   - from: "lazy-evaluation"
     to: "expressions"
@@ -180,10 +190,18 @@ relationships:
     to: "lazy-evaluation"
     type: "see-also"
     origin: "manual"
+  - from: "migration"
+    to: "expressions"
+    type: "see-also"
+    origin: "manual"
+  - from: "on-premises-deployment"
+    to: "distributed-execution"
+    type: "part-of"
+    origin: "manual"
 
 meta:
   generated_at: "2026-03-28T00:00:00Z"
   entry_count: 75
-  concept_count: 17
-  relationship_count: 23
+  concept_count: 19
+  relationship_count: 25
   sources_extracted: ["polars"]

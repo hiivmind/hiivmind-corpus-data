@@ -71,6 +71,11 @@ concepts:
     description: "Coming from pandas, SQL, or dplyr — translation guides"
     tags: ["migration", "pandas", "sql", "dplyr"]
 
+  visualization:
+    label: "Visualization"
+    description: "Plotting and visualization integrations: Altair, Matplotlib, Plotly, plotnine, Seaborn, Streamlit, Marimo"
+    tags: ["visualization", "plotting", "charts", "dashboards"]
+
 relationships:
   - from: "deferred-execution"
     to: "expression-api"
@@ -149,10 +154,14 @@ relationships:
     to: "backend-portability"
     type: "see-also"
     origin: "manual"
+  - from: "visualization"
+    to: "table-expressions"
+    type: "see-also"
+    origin: "manual"
 
 meta:
   generated_at: "2026-03-28T00:00:00Z"
   entry_count: 42
-  concept_count: 14
-  relationship_count: 19
+  concept_count: 15
+  relationship_count: 20
   sources_extracted: ["ibis"]

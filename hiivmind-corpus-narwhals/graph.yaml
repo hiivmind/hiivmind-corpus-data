@@ -66,6 +66,11 @@ concepts:
     description: "Order dependence, pandas index handling, null semantics, boolean ops across backends"
     tags: ["behavior", "nulls", "ordering", "pandas-index"]
 
+  api-completeness:
+    label: "API Completeness"
+    description: "Backend support matrices showing which methods are implemented for each backend"
+    tags: ["api-completeness", "backends", "support-matrix", "coverage"]
+
 relationships:
   - from: "expression-model"
     to: "dataframe-agnostic"
@@ -147,10 +152,18 @@ relationships:
     to: "expression-methods"
     type: "see-also"
     origin: "manual"
+  - from: "api-completeness"
+    to: "dataframe-agnostic"
+    type: "see-also"
+    origin: "manual"
+  - from: "api-completeness"
+    to: "backwards-compatibility"
+    type: "see-also"
+    origin: "manual"
 
 meta:
   generated_at: "2026-03-28T00:00:00Z"
   entry_count: 36
-  concept_count: 13
-  relationship_count: 20
+  concept_count: 14
+  relationship_count: 22
   sources_extracted: ["narwhals"]

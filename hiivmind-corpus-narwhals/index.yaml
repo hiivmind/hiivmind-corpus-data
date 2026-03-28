@@ -156,102 +156,112 @@ entries:
     title: "API Completeness Overview"
     summary: "API completeness summary showing which methods are supported across backends (pandas, Polars, PyArrow, cuDF, Modin)"
     tags: ["narwhals", "api-completeness", "backends", "support-matrix"]
+    concepts: ["api-completeness"]
 
   - id: "narwhals:api-completeness/dataframe.md"
     source: "narwhals"
     title: "DataFrame Methods Completeness"
     summary: "Supported DataFrame operations per backend"
     tags: ["narwhals", "api-completeness", "dataframe", "backends"]
+    concepts: ["api-completeness"]
 
   - id: "narwhals:api-completeness/lazyframe.md"
     source: "narwhals"
     title: "LazyFrame Methods Completeness"
     summary: "Supported LazyFrame operations per backend"
     tags: ["narwhals", "api-completeness", "lazyframe", "backends"]
+    concepts: ["api-completeness"]
 
   - id: "narwhals:api-completeness/expr.md"
     source: "narwhals"
     title: "Expr Methods Completeness"
     summary: "Supported expression methods per backend"
     tags: ["narwhals", "api-completeness", "expr", "backends"]
-    concepts: ["expression-methods"]
+    concepts: ["expression-methods", "api-completeness"]
 
   - id: "narwhals:api-completeness/expr_cat.md"
     source: "narwhals"
     title: "Expr.cat Methods Completeness"
     summary: "Categorical expression methods per backend"
     tags: ["narwhals", "api-completeness", "expr", "categorical"]
+    concepts: ["api-completeness", "type-system"]
 
   - id: "narwhals:api-completeness/expr_dt.md"
     source: "narwhals"
     title: "Expr.dt Methods Completeness"
     summary: "Datetime expression methods per backend"
     tags: ["narwhals", "api-completeness", "expr", "datetime"]
-    concepts: ["temporal-expressions"]
+    concepts: ["temporal-expressions", "api-completeness"]
 
   - id: "narwhals:api-completeness/expr_list.md"
     source: "narwhals"
     title: "Expr.list Methods Completeness"
     summary: "List expression methods per backend"
     tags: ["narwhals", "api-completeness", "expr", "list"]
-    concepts: ["collection-expressions"]
+    concepts: ["collection-expressions", "api-completeness"]
 
   - id: "narwhals:api-completeness/expr_name.md"
     source: "narwhals"
     title: "Expr.name Methods Completeness"
     summary: "Name manipulation methods per backend"
     tags: ["narwhals", "api-completeness", "expr", "name"]
-    concepts: ["name-expressions"]
+    concepts: ["name-expressions", "api-completeness"]
 
   - id: "narwhals:api-completeness/expr_str.md"
     source: "narwhals"
     title: "Expr.str Methods Completeness"
     summary: "String expression methods per backend"
     tags: ["narwhals", "api-completeness", "expr", "string"]
-    concepts: ["string-expressions"]
+    concepts: ["string-expressions", "api-completeness"]
 
   - id: "narwhals:api-completeness/expr_struct.md"
     source: "narwhals"
     title: "Expr.struct Methods Completeness"
     summary: "Struct expression methods per backend"
     tags: ["narwhals", "api-completeness", "expr", "struct"]
-    concepts: ["collection-expressions"]
+    concepts: ["collection-expressions", "api-completeness"]
 
   - id: "narwhals:api-completeness/series.md"
     source: "narwhals"
     title: "Series Methods Completeness"
     summary: "Supported Series operations per backend"
     tags: ["narwhals", "api-completeness", "series", "backends"]
+    concepts: ["api-completeness"]
 
   - id: "narwhals:api-completeness/series_cat.md"
     source: "narwhals"
     title: "Series.cat Methods Completeness"
     summary: "Series categorical methods per backend"
     tags: ["narwhals", "api-completeness", "series", "categorical"]
+    concepts: ["api-completeness", "type-system"]
 
   - id: "narwhals:api-completeness/series_dt.md"
     source: "narwhals"
     title: "Series.dt Methods Completeness"
     summary: "Series datetime methods per backend"
     tags: ["narwhals", "api-completeness", "series", "datetime"]
+    concepts: ["api-completeness", "temporal-expressions"]
 
   - id: "narwhals:api-completeness/series_list.md"
     source: "narwhals"
     title: "Series.list Methods Completeness"
     summary: "Series list methods per backend"
     tags: ["narwhals", "api-completeness", "series", "list"]
+    concepts: ["api-completeness", "collection-expressions"]
 
   - id: "narwhals:api-completeness/series_str.md"
     source: "narwhals"
     title: "Series.str Methods Completeness"
     summary: "Series string methods per backend"
     tags: ["narwhals", "api-completeness", "series", "string"]
+    concepts: ["api-completeness", "string-expressions"]
 
   - id: "narwhals:api-completeness/series_struct.md"
     source: "narwhals"
     title: "Series.struct Methods Completeness"
     summary: "Series struct methods per backend"
     tags: ["narwhals", "api-completeness", "series", "struct"]
+    concepts: ["api-completeness", "collection-expressions"]
 
   # API Reference - Core API
   - id: "narwhals:api-reference/index.md"
@@ -265,24 +275,28 @@ entries:
     title: "Narwhals Module"
     summary: "Top-level functions: from_native, to_native, narwhalify, col, lit, all, sum_horizontal, mean_horizontal, concat, when/then/otherwise"
     tags: ["narwhals", "api-reference", "module", "from_native", "narwhalify", "col", "lit"]
+    concepts: ["dataframe-agnostic"]
 
   - id: "narwhals:api-reference/dataframe.md"
     source: "narwhals"
     title: "DataFrame API Reference"
     summary: "DataFrame class: select, with_columns, filter, group_by, join, sort, head, tail, unique, drop, rename, cast, to_native, schema, columns, shape"
     tags: ["narwhals", "api-reference", "dataframe", "select", "filter", "join", "group_by"]
+    concepts: ["dataframe-agnostic"]
 
   - id: "narwhals:api-reference/lazyframe.md"
     source: "narwhals"
     title: "LazyFrame API Reference"
     summary: "LazyFrame class: lazy equivalents of DataFrame methods plus collect, explain"
     tags: ["narwhals", "api-reference", "lazyframe", "lazy", "collect"]
+    concepts: ["lazy-support"]
 
   - id: "narwhals:api-reference/series.md"
     source: "narwhals"
     title: "Series API Reference"
     summary: "Series class: element-wise operations, aggregations, type conversions, any_value for arbitrary value selection, trigonometric functions (cos, sin)"
     tags: ["narwhals", "api-reference", "series", "aggregations", "any_value"]
+    concepts: ["dataframe-agnostic"]
 
   # API Reference - Expression API
   - id: "narwhals:api-reference/expr.md"
@@ -339,30 +353,35 @@ entries:
     title: "Series.cat API Reference"
     summary: "Series categorical methods"
     tags: ["narwhals", "api-reference", "series", "categorical"]
+    concepts: ["type-system"]
 
   - id: "narwhals:api-reference/series_dt.md"
     source: "narwhals"
     title: "Series.dt API Reference"
     summary: "Series datetime methods"
     tags: ["narwhals", "api-reference", "series", "datetime"]
+    concepts: ["temporal-expressions"]
 
   - id: "narwhals:api-reference/series_list.md"
     source: "narwhals"
     title: "Series.list API Reference"
     summary: "Series list methods: len, get, contains, mean, median, min, max, sort, sum, unique"
     tags: ["narwhals", "api-reference", "series", "list"]
+    concepts: ["collection-expressions"]
 
   - id: "narwhals:api-reference/series_str.md"
     source: "narwhals"
     title: "Series.str API Reference"
     summary: "Series string methods"
     tags: ["narwhals", "api-reference", "series", "string"]
+    concepts: ["string-expressions"]
 
   - id: "narwhals:api-reference/series_struct.md"
     source: "narwhals"
     title: "Series.struct API Reference"
     summary: "Series struct methods"
     tags: ["narwhals", "api-reference", "series", "struct"]
+    concepts: ["collection-expressions"]
 
   # API Reference - GroupBy
   - id: "narwhals:api-reference/group_by.md"
@@ -370,12 +389,14 @@ entries:
     title: "GroupBy API Reference"
     summary: "GroupBy class: agg, iter"
     tags: ["narwhals", "api-reference", "group-by", "agg"]
+    concepts: ["expression-methods"]
 
   - id: "narwhals:api-reference/lazy_group_by.md"
     source: "narwhals"
     title: "LazyGroupBy API Reference"
     summary: "LazyGroupBy class for lazy operations"
     tags: ["narwhals", "api-reference", "group-by", "lazy"]
+    concepts: ["expression-methods", "lazy-support"]
 
   # API Reference - SQL
   - id: "narwhals:api-reference/sql.md"

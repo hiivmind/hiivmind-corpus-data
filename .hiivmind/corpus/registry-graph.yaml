@@ -259,6 +259,16 @@ bridges:
     note: "Both address cross-backend behavioral differences — Narwhals documents them, Ibis migration guides help users navigate them"
 
   # === Migration (3-way) ===
+  - concept_a: "polars:migration"
+    concept_b: "ibis:migration"
+    type: "see-also"
+    note: "Both provide migration guides from pandas/SQL — Polars for its native API, Ibis for its portable API"
+
+  - concept_a: "polars:migration"
+    concept_b: "narwhals:dataframe-agnostic"
+    type: "see-also"
+    note: "Polars migration guides complement Narwhals' dataframe-agnostic approach for users switching frameworks"
+
   - concept_a: "ibis:migration"
     concept_b: "narwhals:dataframe-agnostic"
     type: "see-also"
@@ -324,6 +334,28 @@ bridges:
     concept_b: "ibis:expression-api"
     type: "see-also"
     note: "Ibis selectors and column references are the high-level API for what Substrait formalizes as field references"
+
+  # === Function Library (3-way) ===
+  - concept_a: "substrait:function-library"
+    concept_b: "ibis:numeric-expressions"
+    type: "see-also"
+    note: "Substrait function library YAMLs define the arithmetic/rounding operations that Ibis numeric expressions implement"
+
+  - concept_a: "substrait:function-library"
+    concept_b: "polars:expressions"
+    type: "see-also"
+    note: "Substrait function library defines standard scalar/aggregate operations that Polars expressions implement natively"
+
+  - concept_a: "substrait:function-library"
+    concept_b: "narwhals:expression-methods"
+    type: "see-also"
+    note: "Substrait function library defines the cross-engine operations that Narwhals expression methods abstract over"
+
+  # === API Completeness / Backend Support ===
+  - concept_a: "narwhals:api-completeness"
+    concept_b: "ibis:backend-portability"
+    type: "see-also"
+    note: "Both track backend support — Narwhals via API completeness matrices, Ibis via backend operation support"
 
 aliases:
   "lazy evaluation":
@@ -455,6 +487,8 @@ aliases:
       concept: "collection-expressions"
 
   "migration":
+    - corpus: "polars"
+      concept: "migration"
     - corpus: "ibis"
       concept: "migration"
     - corpus: "narwhals"
@@ -484,7 +518,23 @@ aliases:
     - corpus: "substrait"
       concept: "field-references"
 
+  "function library":
+    - corpus: "substrait"
+      concept: "function-library"
+    - corpus: "ibis"
+      concept: "numeric-expressions"
+    - corpus: "polars"
+      concept: "expressions"
+    - corpus: "narwhals"
+      concept: "expression-methods"
+
+  "backend support":
+    - corpus: "narwhals"
+      concept: "api-completeness"
+    - corpus: "ibis"
+      concept: "backend-portability"
+
 meta:
   updated_at: "2026-03-28T00:00:00Z"
-  bridge_count: 60
+  bridge_count: 66
   corpora_linked: ["polars", "ibis", "narwhals", "substrait"]

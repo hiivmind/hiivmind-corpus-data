@@ -22,6 +22,7 @@ entries:
     title: "FAQ"
     summary: "Frequently asked questions about Substrait"
     tags: ["overview", "faq"]
+    concepts: ["query-plan-spec"]
 
   # Specification
   - id: "substrait:spec/specification.md"
@@ -178,6 +179,7 @@ entries:
     title: "Extended Expression"
     summary: "Extended expression capabilities"
     tags: ["expressions", "extended"]
+    concepts: ["expressions"]
 
   # Relations
   - id: "substrait:relations/basics.md"
@@ -257,102 +259,119 @@ entries:
     title: "Arithmetic Functions"
     summary: "Scalar functions: add, subtract, multiply, divide, negate, modulus, power, sqrt, exp, cos, sin, tan, cosh, sinh, tanh, acos, asin, atan, acosh, asinh, atanh, atan2, sign, abs, factorial, bitwise_not, bitwise_and, bitwise_or, bitwise_xor. Each with typed implementations (i8-i64, fp32, fp64) and overflow/rounding options"
     tags: ["extensions", "functions", "arithmetic", "math", "scalar"]
+    concepts: ["function-library"]
 
   - id: "substrait:functions_arithmetic_decimal.yaml"
     source: "substrait"
     title: "Decimal Arithmetic"
     summary: "Decimal-specific: add, subtract, multiply, divide, modulus, abs, power with precision/scale tracking"
     tags: ["extensions", "functions", "decimal", "arithmetic", "precision"]
+    concepts: ["function-library"]
 
   - id: "substrait:functions_logarithmic.yaml"
     source: "substrait"
     title: "Logarithmic Functions"
     summary: "ln, log10, log2, logb (arbitrary base), log1p. Typed for fp32/fp64"
     tags: ["extensions", "functions", "logarithmic", "math"]
+    concepts: ["function-library"]
 
   - id: "substrait:functions_rounding.yaml"
     source: "substrait"
     title: "Rounding Functions"
     summary: "ceil, floor, round with rounding mode options (TIE_TO_EVEN, TIE_AWAY_FROM_ZERO, TRUNCATE, CEILING, FLOOR)"
     tags: ["extensions", "functions", "rounding", "ceil", "floor"]
+    concepts: ["function-library"]
 
   - id: "substrait:functions_rounding_decimal.yaml"
     source: "substrait"
     title: "Decimal Rounding"
     summary: "ceil, floor, round for decimal types"
     tags: ["extensions", "functions", "rounding", "decimal"]
+    concepts: ["function-library"]
 
   - id: "substrait:functions_comparison.yaml"
     source: "substrait"
     title: "Comparison Functions"
     summary: "not_equal, equal, is_not_distinct_from, is_distinct_from, lt, gt, lte, gte, between, is_null, is_not_null, is_nan, is_finite, is_infinite, nullif, coalesce, least, greatest"
     tags: ["extensions", "functions", "comparison", "equality", "null-handling"]
+    concepts: ["function-library"]
 
   - id: "substrait:functions_boolean.yaml"
     source: "substrait"
     title: "Boolean Functions"
     summary: "or, and, and_not, xor, not using Kleene logic (null = unknown). Aggregate: bool_and, bool_or"
     tags: ["extensions", "functions", "boolean", "kleene-logic"]
+    concepts: ["function-library"]
 
   - id: "substrait:functions_string.yaml"
     source: "substrait"
     title: "String Functions"
     summary: "concat, like, substring, regexp_match_substring, regexp_replace, regexp_count_substring, replace, reverse, lower, upper, char_length, bit_length, octet_length, trim, ltrim, rtrim, left, right, repeat, starts_with, ends_with, cap, lpad, rpad, string_agg, center, count_substring. Null handling and case sensitivity options"
     tags: ["extensions", "functions", "string", "regex", "text-manipulation"]
+    concepts: ["function-library"]
 
   - id: "substrait:functions_datetime.yaml"
     source: "substrait"
     title: "DateTime Functions"
     summary: "extract (YEAR, MONTH, DAY, HOUR, MINUTE, SECOND, ISO_WEEK, etc.), add, subtract, multiply for temporal arithmetic, assume_timezone, local_timestamp, strptime_time, strptime_date, strptime_timestamp, strftime, round_temporal, round_calendar"
     tags: ["extensions", "functions", "datetime", "temporal", "extract", "timezone"]
+    concepts: ["function-library"]
 
   - id: "substrait:functions_list.yaml"
     source: "substrait"
     title: "List Functions"
     summary: "Higher-order: transform (map), filter, any_match, all_match. Utility: cardinality, sort (with direction/null placement options). Uses func<T -> R> lambda types"
     tags: ["extensions", "functions", "list", "higher-order", "transform", "filter"]
+    concepts: ["function-library"]
 
   - id: "substrait:functions_set.yaml"
     source: "substrait"
     title: "Set Functions"
     summary: "index_in for membership testing"
     tags: ["extensions", "functions", "set", "membership", "index-in"]
+    concepts: ["function-library"]
 
   - id: "substrait:functions_aggregate_generic.yaml"
     source: "substrait"
     title: "Generic Aggregates"
     summary: "count (values or records, with overflow options), any_value (arbitrary value from group, with ignore_nulls option). Both decomposable for distributed execution"
     tags: ["extensions", "functions", "aggregate", "count", "distributed"]
+    concepts: ["function-library"]
 
   - id: "substrait:functions_aggregate_decimal_output.yaml"
     source: "substrait"
     title: "Decimal Aggregates"
     summary: "Aggregates with decimal output types"
     tags: ["extensions", "functions", "aggregate", "decimal"]
+    concepts: ["function-library"]
 
   - id: "substrait:functions_aggregate_approx.yaml"
     source: "substrait"
     title: "Approximate Aggregates"
     summary: "Approximate aggregate functions"
     tags: ["extensions", "functions", "aggregate", "approximate"]
+    concepts: ["function-library"]
 
   - id: "substrait:functions_geometry.yaml"
     source: "substrait"
     title: "Geometry Functions"
     summary: "point, make_line, x_coordinate, y_coordinate, num_points, is_empty, is_closed, is_simple, is_ring, geometry_type, envelope, dimension, is_valid, collection_extract, flip_coordinates, remove_repeated_points, buffer, centroid, minimum_bounding_circle"
     tags: ["extensions", "functions", "geometry", "spatial", "gis"]
+    concepts: ["function-library"]
 
   - id: "substrait:extension_types.yaml"
     source: "substrait"
     title: "Extension Types"
     summary: "User-defined type examples: point (latitude/longitude as i32), line (start/end as u!point). Demonstrates u! prefix for user-defined types"
     tags: ["extensions", "types", "user-defined", "point", "line"]
+    concepts: ["extensions"]
 
   - id: "substrait:type_variations.yaml"
     source: "substrait"
     title: "Type Variations"
     summary: "Physical format variations: dict4 (4-byte dictionary encoded string, INHERITS), bigoffset (Arrow large string, SEPARATE), avro (Avro encoded struct), cstruct (C struct representation), dict2 (2-byte dictionary string)"
     tags: ["extensions", "type-variations", "dictionary-encoding", "arrow", "avro"]
+    concepts: ["extensions"]
 
   # Tutorial
   - id: "substrait:tutorial/sql_to_substrait.md"
@@ -360,12 +379,14 @@ entries:
     title: "SQL to Substrait Tutorial"
     summary: "Comprehensive walkthrough building a plan from SQL. Covers types (nullability, decimal parameters, nested types, NamedStruct), expressions (field references, literals, scalar functions), relations (Read, Filter, Join, Aggregate), field indices, emit (column reordering via outputMapping), and plans (extensionUrns, extensions, relations with Root)"
     tags: ["tutorial", "sql", "walkthrough", "plan-building", "examples"]
+    concepts: ["query-plan-spec"]
 
   - id: "substrait:tutorial/examples.md"
     source: "substrait"
     title: "Examples"
     summary: "Additional example plans"
     tags: ["tutorial", "examples"]
+    concepts: ["query-plan-spec"]
 
   # Tools
   - id: "substrait:tools/producer_tools.md"
