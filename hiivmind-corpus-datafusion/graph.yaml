@@ -1,0 +1,96 @@
+schema_version: 2
+
+concepts:
+  python-bindings:
+    label: "Python Bindings"
+    description: "DataFusion Python package — installation, quickstart, and usage with Python and SQL APIs."
+    tags: ["python", "getting-started", "tutorial", "python-api"]
+
+  getting-started:
+    label: "Getting Started"
+    description: "Introduction, installation, quickstart, and example usage for DataFusion."
+    tags: ["getting-started", "installation", "introduction", "overview"]
+
+  sql-reference:
+    label: "SQL Reference"
+    description: "SQL syntax, functions, operators, data types, and query semantics."
+    tags: ["sql", "reference", "functions", "operators", "data-types"]
+
+  query-engine:
+    label: "Query Engine"
+    description: "Query planning, optimization, execution plans, expressions, and DataFrame API."
+    tags: ["query-plans", "optimization", "expressions", "dataframe", "query-optimizer"]
+
+  data-management:
+    label: "Data Management"
+    description: "Data sources, table creation, catalogs, schemas, and format options."
+    tags: ["data-sources", "table-management", "catalogs", "csv", "parquet"]
+
+  library-api:
+    label: "Library API"
+    description: "Using DataFusion as a Rust library — extending SQL, custom operators, UDFs, and table providers."
+    tags: ["library-api", "extensions", "udf", "extending"]
+
+  cli:
+    label: "CLI"
+    description: "DataFusion CLI tool — installation, usage, data sources, and built-in functions."
+    tags: ["cli", "datafusion-cli"]
+
+  contributing:
+    label: "Contributing"
+    description: "Architecture, development environment, testing, HOWTOs, and project governance."
+    tags: ["contributing", "architecture", "testing", "development"]
+
+relationships:
+  - from: "python-bindings"
+    to: "getting-started"
+    type: "extends"
+    origin: "tag"
+    evidence: null
+
+  - from: "getting-started"
+    to: "sql-reference"
+    type: "see-also"
+    origin: "tag"
+    evidence: null
+
+  - from: "getting-started"
+    to: "query-engine"
+    type: "depends-on"
+    origin: "tag"
+    evidence: null
+
+  - from: "sql-reference"
+    to: "query-engine"
+    type: "see-also"
+    origin: "tag"
+    evidence: null
+
+  - from: "data-management"
+    to: "sql-reference"
+    type: "depends-on"
+    origin: "tag"
+    evidence: null
+
+  - from: "library-api"
+    to: "query-engine"
+    type: "extends"
+    origin: "tag"
+    evidence: null
+
+  - from: "cli"
+    to: "sql-reference"
+    type: "depends-on"
+    origin: "tag"
+    evidence: null
+
+  - from: "contributing"
+    to: "library-api"
+    type: "see-also"
+    origin: "tag"
+    evidence: null
+
+meta:
+  generated_at: "2026-04-13T00:30:00Z"
+  concept_count: 8
+  relationship_count: 8
