@@ -1,0 +1,250 @@
+schema_version: 2
+concepts:
+  dlt-ecosystem:
+    label: dlt Ecosystem
+    description: Destinations, verified sources, table formats, staging, LLM tools, and transformations
+    tags:
+    - ecosystem
+  destinations:
+    label: Destinations
+    description: Supported data warehouses, lakes, and storage targets for dlt pipelines
+    tags:
+    - destination
+  verified-sources:
+    label: Verified Sources
+    description: Pre-built source connectors for APIs, databases, and SaaS platforms
+    tags:
+    - verified-source
+  table-formats:
+    label: Table Formats
+    description: Iceberg, Delta, and other open table formats
+    tags:
+    - table-format
+  staging:
+    label: Staging Layer
+    description: Staging destinations and intermediate data storage patterns
+    tags:
+    - staging
+  llm-tools:
+    label: LLM Tools
+    description: LLM-based code generation, MCP servers, and AI tooling for dlt
+    tags:
+    - llm
+  transformations:
+    label: Transformations
+    description: dbt, SQL transformation layers integrated with dlt pipelines
+    tags:
+    - transformation
+  general-usage:
+    label: General Usage
+    description: 'Core dlt concepts: credentials, schemas, state, customization, dataset access'
+    tags:
+    - core-concepts
+  credentials:
+    label: Credentials & Configuration
+    description: 'Configuring dlt: secrets, vaults, providers, and config sources'
+    tags:
+    - credentials
+    - configuration
+  dataset-access:
+    label: Dataset Access
+    description: Querying and retrieving loaded data via SQL clients, Ibis, and DataFrames
+    tags:
+    - dataset
+    - access
+  incremental:
+    label: Incremental Loading
+    description: Incremental extraction strategies, state management, and cursor handling
+    tags:
+    - incremental
+  schema:
+    label: Schema Management
+    description: Schema inference, evolution, contracts, and normalization
+    tags:
+    - schema
+  hub:
+    label: dltHub Platform
+    description: dltHub CLI, dashboard, projects, and platform features
+    tags:
+    - platform
+    - cli
+  walkthroughs:
+    label: Walkthroughs
+    description: Step-by-step guides for common dlt tasks and deployments
+    tags:
+    - walkthrough
+  deployment:
+    label: Deployment
+    description: Deploying dlt pipelines to Airflow, Dagster, GitHub Actions, Cloud Functions, and more
+    tags:
+    - deployment
+  tutorial:
+    label: Tutorials
+    description: 'Getting started tutorials: REST API, SQL databases, filesystem, LLM, dashboards'
+    tags:
+    - tutorial
+  reference:
+    label: API Reference
+    description: API reference, CLI reference, and technical specifications
+    tags:
+    - reference
+  release-notes:
+    label: Release Notes
+    description: Version release highlights and changelogs
+    tags:
+    - changelog
+  running-in-production:
+    label: Production Operations
+    description: Monitoring, tracing, alerting, and running dlt in production environments
+    tags:
+    - production
+  examples:
+    label: Code Examples
+    description: Runnable code examples illustrating dlt patterns
+    tags:
+    - example
+relationships:
+- from: dlt-ecosystem
+  to: destinations
+  type: includes
+  origin: manual
+  evidence: null
+- from: dlt-ecosystem
+  to: verified-sources
+  type: includes
+  origin: manual
+  evidence: null
+- from: dlt-ecosystem
+  to: table-formats
+  type: includes
+  origin: manual
+  evidence: null
+- from: dlt-ecosystem
+  to: staging
+  type: includes
+  origin: manual
+  evidence: null
+- from: dlt-ecosystem
+  to: llm-tools
+  type: includes
+  origin: manual
+  evidence: null
+- from: dlt-ecosystem
+  to: transformations
+  type: includes
+  origin: manual
+  evidence: null
+- from: general-usage
+  to: credentials
+  type: includes
+  origin: manual
+  evidence: null
+- from: general-usage
+  to: dataset-access
+  type: includes
+  origin: manual
+  evidence: null
+- from: general-usage
+  to: incremental
+  type: includes
+  origin: manual
+  evidence: null
+- from: general-usage
+  to: schema
+  type: includes
+  origin: manual
+  evidence: null
+- from: walkthroughs
+  to: deployment
+  type: includes
+  origin: manual
+  evidence: null
+- from: tutorial
+  to: walkthroughs
+  type: see-also
+  origin: manual
+  evidence: null
+- from: tutorial
+  to: general-usage
+  type: depends-on
+  origin: manual
+  evidence: null
+- from: walkthroughs
+  to: destinations
+  type: see-also
+  origin: manual
+  evidence: null
+- from: walkthroughs
+  to: verified-sources
+  type: see-also
+  origin: manual
+  evidence: null
+- from: incremental
+  to: schema
+  type: see-also
+  origin: manual
+  evidence: null
+- from: credentials
+  to: destinations
+  type: depends-on
+  origin: manual
+  evidence: null
+- from: verified-sources
+  to: destinations
+  type: see-also
+  origin: manual
+  evidence: null
+- from: dataset-access
+  to: destinations
+  type: depends-on
+  origin: manual
+  evidence: null
+- from: running-in-production
+  to: deployment
+  type: see-also
+  origin: manual
+  evidence: null
+- from: running-in-production
+  to: hub
+  type: see-also
+  origin: manual
+  evidence: null
+- from: examples
+  to: tutorial
+  type: see-also
+  origin: manual
+  evidence: null
+- from: reference
+  to: general-usage
+  type: see-also
+  origin: manual
+  evidence: null
+- from: release-notes
+  to: reference
+  type: see-also
+  origin: manual
+  evidence: null
+- from: table-formats
+  to: destinations
+  type: see-also
+  origin: manual
+  evidence: null
+- from: staging
+  to: destinations
+  type: depends-on
+  origin: manual
+  evidence: null
+- from: llm-tools
+  to: hub
+  type: see-also
+  origin: manual
+  evidence: null
+- from: transformations
+  to: destinations
+  type: depends-on
+  origin: manual
+  evidence: null
+meta:
+  generated_at: '2026-04-18T14:39:34Z'
+  concept_count: 20
+  relationship_count: 28
