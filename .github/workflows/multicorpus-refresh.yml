@@ -132,13 +132,13 @@ jobs:
           CHANGED_CORPORA=$(echo "$CHANGED_CORPORA" | xargs)
           echo "updated_dirs=${CHANGED_CORPORA}" >> "$GITHUB_OUTPUT"
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_PAT || secrets.GITHUB_TOKEN }}
 
       - name: Create Pull Request
         if: steps.loop.outputs.updated_dirs != ''
         uses: peter-evans/create-pull-request@v6
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GH_PAT || secrets.GITHUB_TOKEN }}
           commit-message: "feat: refresh index for changed corpora"
           branch: "feature/refresh-corpora"
           title: "feat: refresh index for changed corpora"
