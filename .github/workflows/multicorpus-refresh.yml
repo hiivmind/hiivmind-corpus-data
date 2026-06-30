@@ -1,0 +1,148 @@
+# .github/workflows/multicorpus-refresh.yml
+name: Multi-Corpus Refresh
+
+on:
+  schedule:
+    # Runs at 06:00 UTC every Monday. Customize the cron per repository if needed.
+    - cron: '0 6 * * 1'
+  workflow_dispatch:            # Allows manual execution from the Actions tab
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install yq
+        run: |
+          wget -qO /usr/local/bin/yq https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64
+          chmod +x /usr/local/bin/yq
+
+      - name: Run refresh loop
+        id: loop
+        run: |
+          CHANGED_CORPORA=""
+          
+          # Find all nested config.yaml files
+          for CONFIG in $(find . -maxdepth 2 -name "config.yaml"); do
+            DIR=$(dirname "$CONFIG")
+            echo "========================================="
+            echo "Checking freshness for: ${DIR}"
+            echo "========================================="
+            
+            SOURCE_REPO=$(yq '.sources[0].repo_owner + "/" + .sources[0].repo_name' "$CONFIG")
+            SOURCE_BRANCH=$(yq '.sources[0].branch' "$CONFIG")
+            INDEXED_SHA=$(yq '.sources[0].last_commit_sha' "$CONFIG")
+            CURRENT_SHA=$(gh api "repos/${SOURCE_REPO}/commits/${SOURCE_BRANCH}" --jq '.sha')
+            
+            if [ "$INDEXED_SHA" = "$CURRENT_SHA" ]; then
+              echo "No changes in upstream repository ${SOURCE_REPO}."
+            else
+              echo "Changes detected! Upstream: ${CURRENT_SHA} | Indexed: ${INDEXED_SHA}"
+              CHANGED_CORPORA="${CHANGED_CORPORA} ${DIR}"
+              
+              (
+                cd "$DIR"
+                
+                # Fetch docs_root if defined
+                DOCS_ROOT=$(yq '.sources[0].docs_root // ""' config.yaml)
+                DOCS_ROOT_NORM="${DOCS_ROOT%/}"
+                
+                # Retrieve files matching the change from GitHub API
+                # Filters to markdown files starting with the docs_root prefix
+                FILES_JSON=$(DOCS_ROOT_NORM="$DOCS_ROOT_NORM" gh api "repos/${SOURCE_REPO}/compare/${INDEXED_SHA}...${CURRENT_SHA}" \
+                  --jq '[.files[] | select((.filename | startswith(env.DOCS_ROOT_NORM)) and (.filename | test("\\.md$|\\.mdx$")))]')
+                
+                ADDED=$(echo "$FILES_JSON" | jq -r '.[] | select(.status == "added") | .filename')
+                DELETED=$(echo "$FILES_JSON" | jq -r '.[] | select(.status == "removed") | .filename')
+                MODIFIED=$(echo "$FILES_JSON" | jq -r '.[] | select(.status == "modified") | .filename')
+                
+                SOURCE_ID=$(yq '.sources[0].id' config.yaml)
+                NOW=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+                
+                # Helper function to strip docs_root prefix to match index path schema
+                get_relative_path() {
+                  local file="$1"
+                  if [ -n "$DOCS_ROOT_NORM" ]; then
+                    echo "${file#"$DOCS_ROOT_NORM/"}"
+                  else
+                    echo "$file"
+                  fi
+                }
+                
+                # 1. Flag modified entries as stale
+                for FILE in $MODIFIED; do
+                  REL_PATH=$(get_relative_path "$FILE")
+                  ID="${SOURCE_ID}:${REL_PATH}"
+                  yq -i "(.entries[] | select(.id == \"${ID}\")) .stale = true |
+                         (.entries[] | select(.id == \"${ID}\")) .stale_since = \"${NOW}\"" index.yaml
+                done
+                
+                # 2. Add placeholder entries for new files
+                for FILE in $ADDED; do
+                  REL_PATH=$(get_relative_path "$FILE")
+                  ID="${SOURCE_ID}:${REL_PATH}"
+                  TITLE=$(basename "$FILE" .md | sed 's/-/ /g; s/_/ /g')
+                  
+                  yq -i ".entries += [{
+                    \"id\": \"${ID}\",
+                    \"source\": \"${SOURCE_ID}\",
+                    \"path\": \"${REL_PATH}\",
+                    \"title\": \"${TITLE}\",
+                    \"summary\": \"Pending re-scan\",
+                    \"tags\": [],
+                    \"keywords\": [],
+                    \"category\": \"unknown\",
+                    \"content_type\": \"markdown\",
+                    \"size\": \"standard\",
+                    \"stale\": true,
+                    \"stale_since\": \"${NOW}\",
+                    \"last_indexed\": \"${NOW}\"
+                  }]" index.yaml
+                done
+                
+                # 3. Remove deleted entries
+                for FILE in $DELETED; do
+                  REL_PATH=$(get_relative_path "$FILE")
+                  ID="${SOURCE_ID}:${REL_PATH}"
+                  yq -i "del(.entries[] | select(.id == \"${ID}\"))" index.yaml
+                done
+                
+                # Update config.yaml source tracking
+                yq -i ".sources[0].last_commit_sha = \"${CURRENT_SHA}\" |
+                       .sources[0].last_indexed_at = \"${NOW}\"" config.yaml
+                
+                # Update index.yaml meta
+                yq -i ".meta.generated_at = \"${NOW}\" |
+                       .meta.entry_count = (.entries | length)" index.yaml
+                
+                # Re-render index.md if render-index.sh is present
+                if [ -f "render-index.sh" ]; then
+                  bash render-index.sh index.yaml
+                fi
+              )
+            fi
+          done
+          
+          # Trim leading/trailing spaces
+          CHANGED_CORPORA=$(echo "$CHANGED_CORPORA" | xargs)
+          echo "updated_dirs=${CHANGED_CORPORA}" >> "$GITHUB_OUTPUT"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Create Pull Request
+        if: steps.loop.outputs.updated_dirs != ''
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "feat: refresh index for changed corpora"
+          branch: "feature/refresh-corpora"
+          title: "feat: refresh index for changed corpora"
+          body: |
+            This PR automatically refreshes the corpus indexes for the following directories:
+            `${{ steps.loop.outputs.updated_dirs }}`
+          reviewers: "discreteds"
