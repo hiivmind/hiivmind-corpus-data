@@ -8,8 +8,8 @@ on:
   workflow_dispatch:            # Allows manual execution from the Actions tab
 
 permissions:
-  contents: write
   pull-requests: write
+  contents: write
 
 jobs:
   refresh:
@@ -133,6 +133,13 @@ jobs:
           echo "updated_dirs=${CHANGED_CORPORA}" >> "$GITHUB_OUTPUT"
         env:
           GH_TOKEN: ${{ secrets.GH_PAT || secrets.GITHUB_TOKEN }}
+
+      - name: Run LLM Rescan (Optional)
+        if: steps.loop.outputs.updated_dirs != ''
+        run: |
+          python3 .github/scripts/llm_rescan.py
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
 
       - name: Create Pull Request
         if: steps.loop.outputs.updated_dirs != ''
