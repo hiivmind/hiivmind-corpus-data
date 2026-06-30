@@ -1,5 +1,4 @@
 schema_version: 2
-
 corpus:
   name: "datafusion"
   display_name: "DataFusion"
@@ -9,7 +8,6 @@ corpus:
     - "apache datafusion"
     - "dataframe sql"
   created_at: "2026-04-13T00:00:00Z"
-
 sources:
   - id: "datafusion-python"
     type: "git"
@@ -18,14 +16,13 @@ sources:
     repo_name: "datafusion-python"
     branch: "main"
     docs_root: "docs/"
-    last_commit_sha: "3585c11eed778810e3317c56c2c25a8cdc29be5b"
-    last_indexed_at: "2026-04-13T00:30:00Z"
+    last_commit_sha: "21b52998cb5606f7700b0ba672314c5350ead2ca"
+    last_indexed_at: "2026-06-30T07:58:36Z"
     extraction:
       wikilinks: false
       frontmatter: true
       tags: true
       dataview: false
-
   - id: "datafusion"
     type: "git"
     repo_url: "https://github.com/apache/datafusion"
@@ -40,11 +37,9 @@ sources:
       frontmatter: true
       tags: true
       dataview: false
-
 index:
   format: "markdown"
   last_updated_at: "2026-04-13T00:30:00Z"
-
 settings:
   include_patterns:
     - "**/*.md"

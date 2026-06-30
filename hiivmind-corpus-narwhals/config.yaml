@@ -1,6 +1,5 @@
 # Narwhals Corpus Configuration
 schema_version: 2
-
 corpus:
   name: "narwhals"
   display_name: "Narwhals"
@@ -12,7 +11,6 @@ corpus:
     - polars
     - pyarrow
     - dataframe
-
 # Multiple sources - each with its own type and tracking
 sources:
   - id: "narwhals"
@@ -22,13 +20,11 @@ sources:
     repo_name: "narwhals"
     branch: "main"
     docs_root: "docs"
-    last_commit_sha: "32adfbb1c2bc485629742250d0e83d4f359a035a"
-    last_indexed_at: "2026-03-25T12:00:00Z"
-
+    last_commit_sha: "35e16811ec683542c9468cd1f34d311829f7fb17"
+    last_indexed_at: "2026-06-30T07:58:33Z"
 index:
   format: "markdown"
   last_updated_at: "2026-03-25T12:00:00Z"
-
 settings:
   include_patterns:
     - "**/*.md"

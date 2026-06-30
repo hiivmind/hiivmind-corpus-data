@@ -17,8 +17,8 @@ sources:
     repo_name: "dlt"
     branch: "devel"
     docs_root: "docs/website/docs"
-    last_commit_sha: "d68ab5f5f014c75f1f4e8680feaaa0be029374cc"
-    last_indexed_at: "2026-04-18T14:39:58Z"
+    last_commit_sha: "a6c01de7d106f1616ea0aa063a4e2f2b3292d942"
+    last_indexed_at: "2026-06-30T07:58:30Z"
     extraction:
       wikilinks: false
       frontmatter: true

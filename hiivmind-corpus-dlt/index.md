@@ -1,6 +1,6 @@
 # dlt Documentation Index
 
-> Sources: 1 | Entries: 215 | Generated: 2026-04-18T14:38:30Z
+> Sources: 1 | Entries: 215 | Generated: 2026-06-30T07:58:30Z
 > Generated from `index.yaml` — do not edit directly
 
 ---
@@ -242,4 +242,4 @@
 
 ---
 
-*Rendered from index.yaml at 2026-04-18T14:38:30Z*
+*Rendered from index.yaml at 2026-06-30T07:58:30Z*

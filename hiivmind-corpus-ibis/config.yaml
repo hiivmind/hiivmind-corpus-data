@@ -1,6 +1,5 @@
 # Ibis Corpus Configuration
 schema_version: 2
-
 corpus:
   name: "ibis"
   display_name: "Ibis"
@@ -13,7 +12,6 @@ corpus:
     - postgres
     - portable
     - expression
-
 # Multiple sources - each with its own type and tracking
 sources:
   - id: "ibis"
@@ -23,13 +21,11 @@ sources:
     repo_name: "ibis"
     branch: "main"
     docs_root: "docs"
-    last_commit_sha: "1de88cbbbc18a969addabee34b377b2633b7e9be"
-    last_indexed_at: "2026-03-25T12:00:00Z"
-
+    last_commit_sha: "4556dad2c2a9f04468b12237ade271c2e708db4a"
+    last_indexed_at: "2026-06-30T07:58:34Z"
 index:
   format: "markdown"
   last_updated_at: "2026-03-25T12:00:00Z"
-
 settings:
   include_patterns:
     - "**/*.qmd"

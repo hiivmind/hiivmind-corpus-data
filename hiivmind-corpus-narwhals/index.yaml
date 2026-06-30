@@ -9,20 +9,23 @@ entries:
     summary: "Extremely lightweight compatibility layer between dataframe libraries. Full API support: cuDF, Modin, pandas, Polars, PyArrow. Lazy-only support: Daft, Dask, DuckDB, Ibis, PySpark, SQLFrame. Zero dependencies, uses subset of Polars API, 100% branch coverage, negligible overhead"
     tags: ["narwhals", "introduction", "compatibility", "dataframe", "agnostic"]
     concepts: ["dataframe-agnostic", "lazy-support"]
-
+    stale: true
+    stale_since: "2026-06-30T07:58:33Z"
   - id: "narwhals:why.md"
     source: "narwhals"
     title: "Why Narwhals?"
     summary: "Subtle differences between pandas and Polars (e.g., 3 in series checks index vs values). Writing dataframe-agnostic code is hard without a unified API. Narwhals handles backwards compatibility internally"
     tags: ["narwhals", "motivation", "pandas", "polars", "agnostic"]
     concepts: ["dataframe-agnostic"]
-
+    stale: true
+    stale_since: "2026-06-30T07:58:33Z"
   - id: "narwhals:installation.md"
     source: "narwhals"
     title: "Installation"
     summary: "Installing Narwhals, quick start guide"
     tags: ["narwhals", "installation", "setup"]
-
+    stale: true
+    stale_since: "2026-06-30T07:58:33Z"
   # Intro Tutorial - DataFrame Operations
   - id: "narwhals:basics/dataframe.md"
     source: "narwhals"
@@ -30,28 +33,32 @@ entries:
     summary: "Core workflow: nw.from_native(df) then express logic with Polars API then nw.to_native(). The @nw.narwhalify decorator simplifies this. Examples: descriptive stats with select, group-by with agg, horizontal operations with nw.sum_horizontal. Supports multiple inputs with eager_only=True"
     tags: ["narwhals", "dataframe", "from_native", "to_native", "narwhalify", "tutorial"]
     concepts: ["dataframe-agnostic"]
-
+    stale: true
+    stale_since: "2026-06-30T07:58:33Z"
   - id: "narwhals:basics/series.md"
     source: "narwhals"
     title: "Series Operations"
     summary: "Working with Series in Narwhals, series_only=True parameter"
     tags: ["narwhals", "series", "tutorial"]
     concepts: ["dataframe-agnostic"]
-
+    stale: true
+    stale_since: "2026-06-30T07:58:33Z"
   - id: "narwhals:basics/complete_example.md"
     source: "narwhals"
     title: "Complete Example"
     summary: "Building a dataframe-agnostic StandardScaler (scikit-learn style). fit method with eager_only=True (needs concrete values), transform stays lazy. Shows pandas, Polars eager, and Polars lazy working with same code"
     tags: ["narwhals", "example", "standardscaler", "scikit-learn", "eager", "lazy"]
     concepts: ["dataframe-agnostic"]
-
+    stale: true
+    stale_since: "2026-06-30T07:58:33Z"
   - id: "narwhals:basics/dataframe_conversion.md"
     source: "narwhals"
     title: "DataFrame Conversion"
     summary: "Converting between native types with to_native(), from_native()"
     tags: ["narwhals", "conversion", "to_native", "from_native"]
     concepts: ["dataframe-agnostic"]
-
+    stale: true
+    stale_since: "2026-06-30T07:58:33Z"
   # Core Concepts - Expression Model
   - id: "narwhals:how_it_works.md"
     source: "narwhals"
@@ -59,21 +66,24 @@ entries:
     summary: "Deep dive into Narwhals internals. Expression theory: an expression is a function from DataFrame to sequence of Series. nw.col translates to lambda for pandas. Expression nodes compose expressions, inspectable via _nodes. Expression metadata: expansion_kind, has_windows, n_orderable_ops, is_elementwise, preserves_length, is_scalar_like, is_literal. Broadcasting, elementwise pushdown, group-by internals"
     tags: ["narwhals", "internals", "expressions", "theory", "broadcasting", "group-by"]
     concepts: ["expression-model"]
-
+    stale: true
+    stale_since: "2026-06-30T07:58:33Z"
   - id: "narwhals:concepts/boolean.md"
     source: "narwhals"
     title: "Boolean Operations"
     summary: "Boolean logic across backends, how &, |, ~ work consistently"
     tags: ["narwhals", "boolean", "operators", "backends"]
     concepts: ["behavioral-concepts"]
-
+    stale: true
+    stale_since: "2026-06-30T07:58:33Z"
   - id: "narwhals:concepts/null_handling.md"
     source: "narwhals"
     title: "Null Handling"
     summary: "NULL/NaN semantics across backends. Narwhals normalizes null behavior for consistent results regardless of backend"
     tags: ["narwhals", "null", "nan", "missing", "backends"]
     concepts: ["null-handling", "behavioral-concepts"]
-
+    stale: true
+    stale_since: "2026-06-30T07:58:33Z"
   # Core Concepts - Behavioral Concepts
   - id: "narwhals:concepts/order_dependence.md"
     source: "narwhals"
@@ -81,28 +91,32 @@ entries:
     summary: "LazyFrames have undefined row order. Order-dependent operations (diff, shift, rolling) require explicit order_by in over(). first/last now accept optional order_by parameter. n_orderable_ops metadata tracks this"
     tags: ["narwhals", "order", "lazy", "over", "window"]
     concepts: ["lazy-support", "behavioral-concepts"]
-
+    stale: true
+    stale_since: "2026-06-30T07:58:33Z"
   - id: "narwhals:concepts/pandas_index.md"
     source: "narwhals"
     title: "pandas Index Handling"
     summary: "Narwhals ignores pandas index. Use reset_index() before from_native() if you need index as column"
     tags: ["narwhals", "pandas", "index", "reset_index"]
     concepts: ["behavioral-concepts"]
-
+    stale: true
+    stale_since: "2026-06-30T07:58:33Z"
   - id: "narwhals:concepts/improve_group_by_operation.md"
     source: "narwhals"
     title: "Improving Group-By"
     summary: "Optimizing group-by performance, avoiding apply overhead"
     tags: ["narwhals", "group-by", "performance", "optimization"]
     concepts: ["behavioral-concepts"]
-
+    stale: true
+    stale_since: "2026-06-30T07:58:33Z"
   - id: "narwhals:concepts/column_names.md"
     source: "narwhals"
     title: "Column Names"
     summary: "Column naming conventions and handling duplicates"
     tags: ["narwhals", "columns", "naming", "duplicates"]
     concepts: ["behavioral-concepts"]
-
+    stale: true
+    stale_since: "2026-06-30T07:58:33Z"
   # Stability & Compatibility
   - id: "narwhals:backcompat.md"
     source: "narwhals"
@@ -110,46 +124,47 @@ entries:
     summary: "Perfect backwards compatibility policy (Rust editions-inspired). narwhals.stable.v1 and narwhals.stable.v2: promises never to change/remove public functions. Breaking changes go to main namespace (eventually stable.v3). Recommendation: import narwhals as nw for prototyping, import narwhals.stable.v2 as nw for production"
     tags: ["narwhals", "backwards-compatibility", "stable", "versioning", "production"]
     concepts: ["backwards-compatibility"]
-
+    stale: true
+    stale_since: "2026-06-30T07:58:33Z"
   - id: "narwhals:overhead.md"
     source: "narwhals"
     title: "Overhead"
     summary: "Negligible overhead, just Python function unwinding. Running pandas via Narwhals often more efficient than direct pandas (guards against API misuse)"
     tags: ["narwhals", "overhead", "performance", "benchmarks"]
     concepts: ["backwards-compatibility"]
-
   # Advanced Topics
   - id: "narwhals:extending.md"
     source: "narwhals"
     title: "Extensions & Plugins"
     summary: "Extending Narwhals with custom functionality"
     tags: ["narwhals", "extensions", "plugins", "custom"]
-
   - id: "narwhals:generating_sql.md"
     source: "narwhals"
     title: "Generating SQL"
     summary: "SQL generation from Narwhals expressions. New narwhals.sql module with nw.sql.table() for creating SQLTable objects and to_sql() for converting expressions to SQL strings"
     tags: ["narwhals", "sql", "generation", "SQLTable", "to_sql"]
     concepts: ["sql-generation"]
-
+    stale: true
+    stale_since: "2026-06-30T07:58:33Z"
   - id: "narwhals:ecosystem.md"
     source: "narwhals"
     title: "Ecosystem"
     summary: "Libraries and tools using Narwhals"
     tags: ["narwhals", "ecosystem", "integrations"]
-
+    stale: true
+    stale_since: "2026-06-30T07:58:33Z"
   - id: "narwhals:security.md"
     source: "narwhals"
     title: "Security"
     summary: "Security considerations"
     tags: ["narwhals", "security"]
-
+    stale: true
+    stale_since: "2026-06-30T07:58:33Z"
   - id: "narwhals:resources.md"
     source: "narwhals"
     title: "Resources"
     summary: "Additional learning resources"
     tags: ["narwhals", "resources", "learning"]
-
   # API Completeness
   - id: "narwhals:api-completeness/index.md"
     source: "narwhals"
@@ -157,147 +172,128 @@ entries:
     summary: "API completeness summary showing which methods are supported across backends (pandas, Polars, PyArrow, cuDF, Modin)"
     tags: ["narwhals", "api-completeness", "backends", "support-matrix"]
     concepts: ["api-completeness"]
-
   - id: "narwhals:api-completeness/dataframe.md"
     source: "narwhals"
     title: "DataFrame Methods Completeness"
     summary: "Supported DataFrame operations per backend"
     tags: ["narwhals", "api-completeness", "dataframe", "backends"]
     concepts: ["api-completeness"]
-
   - id: "narwhals:api-completeness/lazyframe.md"
     source: "narwhals"
     title: "LazyFrame Methods Completeness"
     summary: "Supported LazyFrame operations per backend"
     tags: ["narwhals", "api-completeness", "lazyframe", "backends"]
     concepts: ["api-completeness"]
-
   - id: "narwhals:api-completeness/expr.md"
     source: "narwhals"
     title: "Expr Methods Completeness"
     summary: "Supported expression methods per backend"
     tags: ["narwhals", "api-completeness", "expr", "backends"]
     concepts: ["expression-methods", "api-completeness"]
-
   - id: "narwhals:api-completeness/expr_cat.md"
     source: "narwhals"
     title: "Expr.cat Methods Completeness"
     summary: "Categorical expression methods per backend"
     tags: ["narwhals", "api-completeness", "expr", "categorical"]
     concepts: ["api-completeness", "type-system"]
-
   - id: "narwhals:api-completeness/expr_dt.md"
     source: "narwhals"
     title: "Expr.dt Methods Completeness"
     summary: "Datetime expression methods per backend"
     tags: ["narwhals", "api-completeness", "expr", "datetime"]
     concepts: ["temporal-expressions", "api-completeness"]
-
   - id: "narwhals:api-completeness/expr_list.md"
     source: "narwhals"
     title: "Expr.list Methods Completeness"
     summary: "List expression methods per backend"
     tags: ["narwhals", "api-completeness", "expr", "list"]
     concepts: ["collection-expressions", "api-completeness"]
-
   - id: "narwhals:api-completeness/expr_name.md"
     source: "narwhals"
     title: "Expr.name Methods Completeness"
     summary: "Name manipulation methods per backend"
     tags: ["narwhals", "api-completeness", "expr", "name"]
     concepts: ["name-expressions", "api-completeness"]
-
   - id: "narwhals:api-completeness/expr_str.md"
     source: "narwhals"
     title: "Expr.str Methods Completeness"
     summary: "String expression methods per backend"
     tags: ["narwhals", "api-completeness", "expr", "string"]
     concepts: ["string-expressions", "api-completeness"]
-
   - id: "narwhals:api-completeness/expr_struct.md"
     source: "narwhals"
     title: "Expr.struct Methods Completeness"
     summary: "Struct expression methods per backend"
     tags: ["narwhals", "api-completeness", "expr", "struct"]
     concepts: ["collection-expressions", "api-completeness"]
-
   - id: "narwhals:api-completeness/series.md"
     source: "narwhals"
     title: "Series Methods Completeness"
     summary: "Supported Series operations per backend"
     tags: ["narwhals", "api-completeness", "series", "backends"]
     concepts: ["api-completeness"]
-
   - id: "narwhals:api-completeness/series_cat.md"
     source: "narwhals"
     title: "Series.cat Methods Completeness"
     summary: "Series categorical methods per backend"
     tags: ["narwhals", "api-completeness", "series", "categorical"]
     concepts: ["api-completeness", "type-system"]
-
   - id: "narwhals:api-completeness/series_dt.md"
     source: "narwhals"
     title: "Series.dt Methods Completeness"
     summary: "Series datetime methods per backend"
     tags: ["narwhals", "api-completeness", "series", "datetime"]
     concepts: ["api-completeness", "temporal-expressions"]
-
   - id: "narwhals:api-completeness/series_list.md"
     source: "narwhals"
     title: "Series.list Methods Completeness"
     summary: "Series list methods per backend"
     tags: ["narwhals", "api-completeness", "series", "list"]
     concepts: ["api-completeness", "collection-expressions"]
-
   - id: "narwhals:api-completeness/series_str.md"
     source: "narwhals"
     title: "Series.str Methods Completeness"
     summary: "Series string methods per backend"
     tags: ["narwhals", "api-completeness", "series", "string"]
     concepts: ["api-completeness", "string-expressions"]
-
   - id: "narwhals:api-completeness/series_struct.md"
     source: "narwhals"
     title: "Series.struct Methods Completeness"
     summary: "Series struct methods per backend"
     tags: ["narwhals", "api-completeness", "series", "struct"]
     concepts: ["api-completeness", "collection-expressions"]
-
   # API Reference - Core API
   - id: "narwhals:api-reference/index.md"
     source: "narwhals"
     title: "API Reference Overview"
     summary: "API reference overview for Narwhals"
     tags: ["narwhals", "api-reference", "overview"]
-
   - id: "narwhals:api-reference/narwhals.md"
     source: "narwhals"
     title: "Narwhals Module"
     summary: "Top-level functions: from_native, to_native, narwhalify, col, lit, all, sum_horizontal, mean_horizontal, concat, when/then/otherwise"
     tags: ["narwhals", "api-reference", "module", "from_native", "narwhalify", "col", "lit"]
     concepts: ["dataframe-agnostic"]
-
+    stale: true
+    stale_since: "2026-06-30T07:58:33Z"
   - id: "narwhals:api-reference/dataframe.md"
     source: "narwhals"
     title: "DataFrame API Reference"
     summary: "DataFrame class: select, with_columns, filter, group_by, join, sort, head, tail, unique, drop, rename, cast, to_native, schema, columns, shape"
     tags: ["narwhals", "api-reference", "dataframe", "select", "filter", "join", "group_by"]
     concepts: ["dataframe-agnostic"]
-
   - id: "narwhals:api-reference/lazyframe.md"
     source: "narwhals"
     title: "LazyFrame API Reference"
     summary: "LazyFrame class: lazy equivalents of DataFrame methods plus collect, explain"
     tags: ["narwhals", "api-reference", "lazyframe", "lazy", "collect"]
     concepts: ["lazy-support"]
-
   - id: "narwhals:api-reference/series.md"
     source: "narwhals"
     title: "Series API Reference"
     summary: "Series class: element-wise operations, aggregations, type conversions, any_value for arbitrary value selection, trigonometric functions (cos, sin)"
     tags: ["narwhals", "api-reference", "series", "aggregations", "any_value"]
     concepts: ["dataframe-agnostic"]
-
   # API Reference - Expression API
   - id: "narwhals:api-reference/expr.md"
     source: "narwhals"
@@ -305,48 +301,43 @@ entries:
     summary: "Expr class: column expressions, arithmetic, comparisons, aggregations, window functions via over(), any_value for arbitrary group value selection, trigonometric functions (cos, sin)"
     tags: ["narwhals", "api-reference", "expr", "expressions", "over", "window"]
     concepts: ["expression-methods"]
-
   - id: "narwhals:api-reference/expr_cat.md"
     source: "narwhals"
     title: "Expr.cat API Reference"
     summary: "Categorical namespace: get_categories"
     tags: ["narwhals", "api-reference", "expr", "categorical", "get_categories"]
-
   - id: "narwhals:api-reference/expr_dt.md"
     source: "narwhals"
     title: "Expr.dt API Reference"
     summary: "Datetime namespace: year, month, day, hour, minute, second, millisecond, microsecond, nanosecond, ordinal_day, weekday, total_minutes, total_seconds"
     tags: ["narwhals", "api-reference", "expr", "datetime", "temporal"]
     concepts: ["temporal-expressions"]
-
   - id: "narwhals:api-reference/expr_list.md"
     source: "narwhals"
     title: "Expr.list API Reference"
     summary: "List namespace: len, get, contains, mean, median, min, max, sort, sum, unique"
     tags: ["narwhals", "api-reference", "expr", "list"]
     concepts: ["collection-expressions"]
-
   - id: "narwhals:api-reference/expr_name.md"
     source: "narwhals"
     title: "Expr.name API Reference"
     summary: "Name manipulation: keep, map, prefix, suffix, to_lowercase, to_uppercase"
     tags: ["narwhals", "api-reference", "expr", "name", "rename"]
     concepts: ["name-expressions"]
-
   - id: "narwhals:api-reference/expr_str.md"
     source: "narwhals"
     title: "Expr.str API Reference"
     summary: "String namespace: len, to_lowercase, to_uppercase, starts_with, ends_with, contains, slice, head, tail, strip, replace, split, pad_start, pad_end"
     tags: ["narwhals", "api-reference", "expr", "string"]
     concepts: ["string-expressions"]
-
+    stale: true
+    stale_since: "2026-06-30T07:58:33Z"
   - id: "narwhals:api-reference/expr_struct.md"
     source: "narwhals"
     title: "Expr.struct API Reference"
     summary: "Struct namespace: field"
     tags: ["narwhals", "api-reference", "expr", "struct"]
     concepts: ["collection-expressions"]
-
   # API Reference - Series Namespaces
   - id: "narwhals:api-reference/series_cat.md"
     source: "narwhals"
@@ -354,35 +345,32 @@ entries:
     summary: "Series categorical methods"
     tags: ["narwhals", "api-reference", "series", "categorical"]
     concepts: ["type-system"]
-
   - id: "narwhals:api-reference/series_dt.md"
     source: "narwhals"
     title: "Series.dt API Reference"
     summary: "Series datetime methods"
     tags: ["narwhals", "api-reference", "series", "datetime"]
     concepts: ["temporal-expressions"]
-
   - id: "narwhals:api-reference/series_list.md"
     source: "narwhals"
     title: "Series.list API Reference"
     summary: "Series list methods: len, get, contains, mean, median, min, max, sort, sum, unique"
     tags: ["narwhals", "api-reference", "series", "list"]
     concepts: ["collection-expressions"]
-
   - id: "narwhals:api-reference/series_str.md"
     source: "narwhals"
     title: "Series.str API Reference"
     summary: "Series string methods"
     tags: ["narwhals", "api-reference", "series", "string"]
     concepts: ["string-expressions"]
-
+    stale: true
+    stale_since: "2026-06-30T07:58:33Z"
   - id: "narwhals:api-reference/series_struct.md"
     source: "narwhals"
     title: "Series.struct API Reference"
     summary: "Series struct methods"
     tags: ["narwhals", "api-reference", "series", "struct"]
     concepts: ["collection-expressions"]
-
   # API Reference - GroupBy
   - id: "narwhals:api-reference/group_by.md"
     source: "narwhals"
@@ -390,14 +378,12 @@ entries:
     summary: "GroupBy class: agg, iter"
     tags: ["narwhals", "api-reference", "group-by", "agg"]
     concepts: ["expression-methods"]
-
   - id: "narwhals:api-reference/lazy_group_by.md"
     source: "narwhals"
     title: "LazyGroupBy API Reference"
     summary: "LazyGroupBy class for lazy operations"
     tags: ["narwhals", "api-reference", "group-by", "lazy"]
     concepts: ["expression-methods", "lazy-support"]
-
   # API Reference - SQL
   - id: "narwhals:api-reference/sql.md"
     source: "narwhals"
@@ -405,7 +391,6 @@ entries:
     summary: "narwhals.sql module: nw.sql.table() to create SQLTable objects, SQLTable.to_sql() to generate SQL from Narwhals expressions"
     tags: ["narwhals", "api-reference", "sql", "SQLTable", "to_sql"]
     concepts: ["sql-generation"]
-
   # API Reference - Types & Utilities
   - id: "narwhals:api-reference/schema.md"
     source: "narwhals"
@@ -413,54 +398,55 @@ entries:
     summary: "Schema class for column type definitions"
     tags: ["narwhals", "api-reference", "schema", "types"]
     concepts: ["type-system"]
-
   - id: "narwhals:api-reference/dtypes.md"
     source: "narwhals"
     title: "Data Types"
     summary: "Full type hierarchy with abstract base classes. DType base to NumericType to FloatType (Float32, Float64), IntegerType to SignedIntegerType (Int8-Int128), UnsignedIntegerType (UInt8-UInt128), Decimal. TemporalType to Date, Datetime, Duration, Time. NestedType to Array, List, Struct. String, Boolean, Categorical, Enum, Binary, Object, Unknown"
     tags: ["narwhals", "api-reference", "dtypes", "types", "hierarchy"]
     concepts: ["type-system"]
-
+    stale: true
+    stale_since: "2026-06-30T07:58:33Z"
   - id: "narwhals:api-reference/selectors.md"
     source: "narwhals"
     title: "Selectors API Reference"
     summary: "Column selectors: by_dtype, numeric, boolean, string, categorical, all. Use type hierarchy for selection (e.g., by_dtype(nw.NumericType) selects all numeric columns)"
     tags: ["narwhals", "api-reference", "selectors", "by_dtype", "column-selection"]
     concepts: ["type-system"]
-
   - id: "narwhals:api-reference/typing.md"
     source: "narwhals"
     title: "Typing API Reference"
     summary: "Type hints: FrameT, DataFrameT, IntoFrameT, IntoDataFrameT, IntoFrame, IntoDataFrame, IntoExpr, IntoSeries"
     tags: ["narwhals", "api-reference", "typing", "type-hints", "generics"]
     concepts: ["type-system"]
-
+    stale: true
+    stale_since: "2026-06-30T07:58:33Z"
   - id: "narwhals:api-reference/dependencies.md"
     source: "narwhals"
     title: "Dependencies API Reference"
     summary: "Backend detection utilities: is_pandas_dataframe, is_polars_dataframe, get_polars, get_pandas"
     tags: ["narwhals", "api-reference", "dependencies", "backend-detection"]
-
   - id: "narwhals:api-reference/implementation.md"
     source: "narwhals"
     title: "Implementation API Reference"
     summary: "Backend implementation details"
     tags: ["narwhals", "api-reference", "implementation", "backends"]
-
   - id: "narwhals:api-reference/exceptions.md"
     source: "narwhals"
     title: "Exceptions API Reference"
     summary: "Exception classes"
     tags: ["narwhals", "api-reference", "exceptions", "errors"]
-
+    stale: true
+    stale_since: "2026-06-30T07:58:33Z"
   - id: "narwhals:api-reference/testing.md"
     source: "narwhals"
     title: "Testing API Reference"
     summary: "Testing utilities: assert_frame_equal, assert_series_equal"
     tags: ["narwhals", "api-reference", "testing", "assert_frame_equal"]
-
   - id: "narwhals:api-reference/utils.md"
     source: "narwhals"
     title: "Utils API Reference"
     summary: "Utility functions"
     tags: ["narwhals", "api-reference", "utils", "utilities"]
+meta:
+  generated_at: "2026-06-30T07:58:33Z"
+  entry_count: 66

@@ -1,6 +1,6 @@
 # DataFusion Documentation Index
 
-> Sources: 2 | Entries: 67 | Generated: 2026-04-13T00:30:00Z
+> Sources: 2 | Entries: 102 | Generated: 2026-06-30T07:58:36Z
 > Generated from `index.yaml` — do not edit directly
 
 ---
@@ -15,6 +15,41 @@
 - **Query Table (Python)** `datafusion-python:mdbook/src/usage/query-table.md` - Querying tables using SQL and Python APIs with filtering and aggregation examples.
 - **Summary** `datafusion-python:mdbook/src/SUMMARY.md` - Table of contents for DataFusion Python documentation.
 - **Usage (Python)** `datafusion-python:mdbook/src/usage/index.md` - Overview of creating DataFrames from various data sources and querying with SQL or Python.
+- **aggregations** `datafusion-python:source/user-guide/common-operations/aggregations.md` - Pending re-scan
+- **ai coding assistants** `datafusion-python:source/user-guide/ai-coding-assistants.md` - Pending re-scan
+- **arrow** `datafusion-python:source/user-guide/io/arrow.md` - Pending re-scan
+- **avro** `datafusion-python:source/user-guide/io/avro.md` - Pending re-scan
+- **basic info** `datafusion-python:source/user-guide/common-operations/basic-info.md` - Pending re-scan
+- **basics** `datafusion-python:source/user-guide/basics.md` - Pending re-scan
+- **configuration** `datafusion-python:source/user-guide/configuration.md` - Pending re-scan
+- **csv** `datafusion-python:source/user-guide/io/csv.md` - Pending re-scan
+- **data sources** `datafusion-python:source/user-guide/data-sources.md` - Pending re-scan
+- **distributing work** `datafusion-python:source/user-guide/distributing-work.md` - Pending re-scan
+- **execution metrics** `datafusion-python:source/user-guide/dataframe/execution-metrics.md` - Pending re-scan
+- **expressions** `datafusion-python:source/user-guide/common-operations/expressions.md` - Pending re-scan
+- **ffi** `datafusion-python:source/contributor-guide/ffi.md` - Pending re-scan
+- **functions** `datafusion-python:source/user-guide/common-operations/functions.md` - Pending re-scan
+- **index** `datafusion-python:source/contributor-guide/index.md` - Pending re-scan
+- **index** `datafusion-python:source/index.md` - Pending re-scan
+- **index** `datafusion-python:source/user-guide/common-operations/index.md` - Pending re-scan
+- **index** `datafusion-python:source/user-guide/dataframe/index.md` - Pending re-scan
+- **index** `datafusion-python:source/user-guide/index.md` - Pending re-scan
+- **index** `datafusion-python:source/user-guide/io/index.md` - Pending re-scan
+- **introduction** `datafusion-python:source/contributor-guide/introduction.md` - Pending re-scan
+- **introduction** `datafusion-python:source/user-guide/introduction.md` - Pending re-scan
+- **joins** `datafusion-python:source/user-guide/common-operations/joins.md` - Pending re-scan
+- **json** `datafusion-python:source/user-guide/io/json.md` - Pending re-scan
+- **links** `datafusion-python:source/links.md` - Pending re-scan
+- **parquet** `datafusion-python:source/user-guide/io/parquet.md` - Pending re-scan
+- **rendering** `datafusion-python:source/user-guide/dataframe/rendering.md` - Pending re-scan
+- **select and filter** `datafusion-python:source/user-guide/common-operations/select-and-filter.md` - Pending re-scan
+- **spark functions** `datafusion-python:source/user-guide/common-operations/spark-functions.md` - Pending re-scan
+- **sql** `datafusion-python:source/user-guide/sql.md` - Pending re-scan
+- **table provider** `datafusion-python:source/user-guide/io/table_provider.md` - Pending re-scan
+- **udf and udfa** `datafusion-python:source/user-guide/common-operations/udf-and-udfa.md` - Pending re-scan
+- **upgrade guides** `datafusion-python:source/user-guide/upgrade-guides.md` - Pending re-scan
+- **views** `datafusion-python:source/user-guide/common-operations/views.md` - Pending re-scan
+- **windows** `datafusion-python:source/user-guide/common-operations/windows.md` - Pending re-scan
 
 ## Guide
 
@@ -86,4 +121,4 @@
 
 ---
 
-*Rendered from index.yaml at 2026-04-13T00:30:00Z*
+*Rendered from index.yaml at 2026-06-30T07:58:36Z*
