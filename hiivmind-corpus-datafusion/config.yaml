@@ -17,7 +17,7 @@ sources:
   branch: main
   docs_root: docs/
   last_commit_sha: 21b52998cb5606f7700b0ba672314c5350ead2ca
-  last_indexed_at: '2026-07-01T15:08:57Z'
+  last_indexed_at: '2026-07-01T16:14:56Z'
   extraction:
     wikilinks: false
     frontmatter: true
@@ -31,7 +31,7 @@ sources:
   branch: main
   docs_root: docs/
   last_commit_sha: 9e8dd76d6deb6736c51962d9c97e04be4e3f1fc9
-  last_indexed_at: '2026-07-01T15:08:57Z'
+  last_indexed_at: '2026-07-01T16:14:56Z'
   extraction:
     wikilinks: false
     frontmatter: true
@@ -39,7 +39,7 @@ sources:
     dataview: false
 index:
   format: markdown
-  last_updated_at: '2026-07-01T15:08:57Z'
+  last_updated_at: '2026-07-01T16:14:56Z'
 settings:
   include_patterns:
   - '**/*.md'

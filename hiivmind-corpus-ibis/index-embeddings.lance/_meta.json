@@ -1,7 +1,0 @@
-{
-  "model": "BAAI/bge-small-en-v1.5",
-  "dimensions": 384,
-  "generated_at": "2026-03-28T07:16:37.676352+00:00",
-  "entry_count": 95,
-  "mode": "entries"
-}

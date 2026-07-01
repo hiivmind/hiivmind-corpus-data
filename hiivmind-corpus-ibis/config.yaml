@@ -20,10 +20,10 @@ sources:
   branch: main
   docs_root: docs
   last_commit_sha: 4556dad2c2a9f04468b12237ade271c2e708db4a
-  last_indexed_at: '2026-07-01T15:08:57Z'
+  last_indexed_at: '2026-07-01T16:14:56Z'
 index:
   format: markdown
-  last_updated_at: '2026-07-01T15:08:57Z'
+  last_updated_at: '2026-07-01T16:14:56Z'
 settings:
   include_patterns:
   - '**/*.qmd'
