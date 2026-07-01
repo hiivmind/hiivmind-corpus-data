@@ -1,3 +1,8 @@
+meta:
+  corpus: substrait
+  source: substrait
+  generated_at: '2026-07-02T00:00:00Z'
+  entry_count: 62
 entries:
 - id: substrait:index.md
   source: substrait
@@ -34,14 +39,23 @@ entries:
 - id: substrait:faq.md
   source: substrait
   title: FAQ
-  summary: Frequently asked questions about Substrait
+  summary: FAQ covering post-join filter handling, project relation column output,
+    and field naming representation in Substrait plans.
   tags:
-  - overview
   - faq
+  - relations
+  - fields
+  - filters
   concepts:
   - query-plan-spec
-  stale: true
-  stale_since: '2026-07-01T15:08:57Z'
+  stale: false
+  keywords:
+  - post-join
+  - project-relation
+  - field-naming
+  - filters
+  category: guide
+  last_indexed: '2026-07-02T00:00:00Z'
 - id: substrait:spec/specification.md
   source: substrait
   title: Specification Status
@@ -106,24 +120,28 @@ entries:
 - id: substrait:types/type_classes.md
   source: substrait
   title: Type Classes
-  summary: 'Complete type catalog: Simple numeric (boolean, i8-i128, fp32, fp64, decimal),
-    Simple string/binary (string, binary, fixedchar, varchar, fixedbinary), Simple
-    temporal (date, time, timestamp, timestamp_tz, interval_year, interval_day), Simple
-    other (uuid), Compound (STRUCT, LIST, MAP, FUNC), User-defined (u! prefix)'
+  summary: 'Substrait type system: simple types, compound types (List, Map, Struct),
+    and user-defined extension types; covers nullability, type parameters, and the
+    u! prefix for extension types.'
   tags:
   - types
-  - type-classes
-  - numeric
-  - string
-  - temporal
-  - compound
+  - type-system
+  - compound-types
+  - extension
+  concepts:
+  - type-system
+  stale: false
+  keywords:
+  - simple-types
+  - compound-types
   - struct
   - list
   - map
-  concepts:
-  - type-system
-  stale: true
-  stale_since: '2026-07-01T15:08:57Z'
+  - nullability
+  - user-defined
+  - u!
+  category: reference
+  last_indexed: '2026-07-02T00:00:00Z'
 - id: substrait:types/type_variations.md
   source: substrait
   title: Type Variations
@@ -146,84 +164,114 @@ entries:
 - id: substrait:types/type_parsing.md
   source: substrait
   title: Type Parsing
-  summary: 'Syntax for describing types in text form. Function types: func<any1 ->
-    any2> (single param), func<(any1, any2) -> any3> (multiple params). User-defined
-    types use u!typename syntax'
+  summary: 'Type syntax and grammar for Substrait: notation for simple types, struct/nstruct
+    forms, and the u! prefix for user-defined types; includes parsing rules and examples.'
   tags:
   - types
-  - parsing
   - syntax
-  - text-format
+  - grammar
+  - parsing
   concepts:
   - type-system
-  stale: true
-  stale_since: '2026-07-01T15:08:57Z'
+  stale: false
+  keywords:
+  - type-syntax
+  - struct
+  - nstruct
+  - u!
+  - grammar
+  - parsing
+  category: reference
+  last_indexed: '2026-07-02T00:00:00Z'
 - id: substrait:types/named_structs.md
   source: substrait
   title: Named Structs
-  summary: Structs with named fields for schemas. NamedStruct = struct type + column
-    names. Names in depth-first order for nested types
+  summary: 'Named structs in Substrait: depth-first field naming convention and their
+    use in Read relation output schemas.'
   tags:
   - types
-  - named-structs
+  - struct
   - schema
-  - columns
+  - read-relation
   concepts:
   - type-system
-  stale: true
-  stale_since: '2026-07-01T15:08:57Z'
+  stale: false
+  keywords:
+  - named-struct
+  - depth-first
+  - field-names
+  - read-relation
+  - schema
+  category: reference
+  last_indexed: '2026-07-02T00:00:00Z'
 - id: substrait:expressions/field_references.md
   source: substrait
   title: Field References
-  summary: 'Identify portions of a record to operate on. Always numeric (not by name).
-    structField.field: 1 = second field. Root types: RootReference (incoming record),
-    OuterReference (correlated subqueries), Expression (expression result), LambdaParameterReference
-    (lambda params). References only make sense relative to a schema context'
+  summary: 'Field reference types in Substrait expressions: RootReference, OuterReference,
+    Expression, and LambdaParameterReference; covers masking and struct field access
+    patterns.'
   tags:
   - expressions
   - field-references
-  - numeric-references
-  - schema-context
+  - references
   concepts:
   - expressions
   - field-references
-  stale: true
-  stale_since: '2026-07-01T15:08:57Z'
+  stale: false
+  keywords:
+  - RootReference
+  - OuterReference
+  - LambdaParameterReference
+  - masking
+  - struct-field
+  category: reference
+  last_indexed: '2026-07-02T00:00:00Z'
 - id: substrait:expressions/scalar_functions.md
   source: substrait
   title: Scalar Functions
-  summary: 'Function specification: functionReference (ID into extension list), outputType,
-    arguments (positional). Functions defined in extension YAML files. Optional description
-    field. Examples: is_null, index_in, equal, multiply. Arguments wrapped in value
-    objects'
+  summary: 'Scalar function definition in Substrait: function names, argument types,
+    determinism, nullability handling, and return type specification; covers built-in
+    and extension functions.'
   tags:
   - expressions
   - scalar-functions
-  - function-reference
-  - extension-yaml
+  - functions
+  - extension
   concepts:
   - expressions
   - scalar-functions
-  stale: true
-  stale_since: '2026-07-01T15:08:57Z'
+  stale: false
+  keywords:
+  - function-name
+  - arguments
+  - determinism
+  - nullability
+  - return-type
+  - extension-uri
+  category: reference
+  last_indexed: '2026-07-02T00:00:00Z'
 - id: substrait:expressions/lambda_expressions.md
   source: substrait
   title: Lambda Expressions
-  summary: 'Inline anonymous functions for higher-order operations. Components: parameters
-    (struct type), body (expression). Type is func<params -> return>. Parameter access
-    via LambdaParameterReference with steps_out for nested scopes. LambdaInvocation
-    for direct calls. Used with functions like transform and filter on collections.
-    Supports closures'
+  summary: 'Lambda expressions in Substrait: inline anonymous functions for higher-order
+    operations, parameter binding, and closure semantics for use in map/filter-style
+    relations.'
   tags:
   - expressions
   - lambda
   - higher-order
-  - closures
-  - anonymous-functions
+  - functions
   concepts:
   - expressions
-  stale: true
-  stale_since: '2026-07-01T15:08:57Z'
+  stale: false
+  keywords:
+  - lambda
+  - anonymous-function
+  - closure
+  - parameter-binding
+  - higher-order
+  category: reference
+  last_indexed: '2026-07-02T00:00:00Z'
 - id: substrait:expressions/aggregate_functions.md
   source: substrait
   title: Aggregate Functions
@@ -256,18 +304,26 @@ entries:
 - id: substrait:expressions/specialized_record_expressions.md
   source: substrait
   title: Specialized Record Expressions
-  summary: 'Expressions outside function paradigm: if/then/else, switch/case, cast.
-    Cast is an expression type, not a function'
+  summary: 'Specialized record expressions beyond scalar functions: cast expressions,
+    if-then-else, switch expressions, and singular-or-list; non-function expression
+    types in Substrait.'
   tags:
   - expressions
-  - if-then-else
-  - switch-case
   - cast
+  - conditional
+  - specialized
   concepts:
   - expressions
   - specialized-expressions
-  stale: true
-  stale_since: '2026-07-01T15:08:57Z'
+  stale: false
+  keywords:
+  - cast
+  - if-then-else
+  - switch
+  - singular-or-list
+  - record-expression
+  category: reference
+  last_indexed: '2026-07-02T00:00:00Z'
 - id: substrait:expressions/user_defined_functions.md
   source: substrait
   title: User Defined Functions
@@ -315,15 +371,25 @@ entries:
 - id: substrait:expressions/subqueries.md
   source: substrait
   title: Subqueries
-  summary: Nested query expressions
+  summary: 'Subquery expressions in Substrait: scalar subqueries, IN predicates, and
+    set predicates (EXISTS, UNIQUE); covers correlated and uncorrelated subquery forms.'
   tags:
   - expressions
   - subqueries
-  - nested-queries
+  - predicates
+  - sql
   concepts:
   - expressions
-  stale: true
-  stale_since: '2026-07-01T15:08:57Z'
+  stale: false
+  keywords:
+  - scalar-subquery
+  - IN-predicate
+  - EXISTS
+  - UNIQUE
+  - correlated
+  - set-predicate
+  category: reference
+  last_indexed: '2026-07-02T00:00:00Z'
 - id: substrait:expressions/extended_expression.md
   source: substrait
   title: Extended Expression
@@ -351,54 +417,79 @@ entries:
 - id: substrait:relations/common_fields.md
   source: substrait
   title: Common Fields
-  summary: Fields common to all relations
+  summary: 'Common fields shared by all Substrait relations: emit (output column projection),
+    rel_anchor (for referencing relations), and hints (statistics, saved computations).'
   tags:
   - relations
+  - emit
+  - hints
   - common-fields
   concepts:
   - relational-algebra
-  stale: true
-  stale_since: '2026-07-01T15:08:57Z'
+  stale: false
+  keywords:
+  - emit
+  - rel_anchor
+  - hints
+  - statistics
+  - saved-computations
+  - output-mapping
+  category: reference
+  last_indexed: '2026-07-02T00:00:00Z'
 - id: substrait:relations/logical_relations.md
   source: substrait
   title: Logical Relations
-  summary: 'Core relational operations: Read (Virtual Table, Named Table, Local Files,
-    Iceberg Table), Filter (boolean condition), Sort (sortFields with direction),
-    Project (adds columns via expressions), Cross Product, Join (INNER, OUTER, LEFT,
-    RIGHT, SEMI, ANTI, SINGLE, MARK), Set (MINUS, INTERSECTION, UNION), Fetch (offset/limit),
-    Aggregate (groupings, measures), Reference (DAG), Write (INSERT/DELETE/UPDATE/CTAS),
-    Update, DDL (CREATE/DROP/ALTER)'
+  summary: 'All logical relation types in Substrait: Read, Filter, Sort, Project,
+    Join, Set, Fetch, Aggregate, Write, and DDL; each with their specific fields and
+    semantics.'
   tags:
   - relations
   - logical
   - read
-  - filter
-  - sort
-  - project
   - join
   - aggregate
-  - set
-  - write
-  - ddl
+  - filter
   concepts:
   - relational-algebra
-  stale: true
-  stale_since: '2026-07-01T15:08:57Z'
+  stale: false
+  keywords:
+  - Read
+  - Filter
+  - Sort
+  - Project
+  - Join
+  - Set
+  - Fetch
+  - Aggregate
+  - Write
+  - DDL
+  category: reference
+  last_indexed: '2026-07-02T00:00:00Z'
 - id: substrait:relations/physical_relations.md
   source: substrait
   title: Physical Relations
-  summary: 'Physical variants: hash join vs merge join vs nested loop. Designed, not
-    implemented'
+  summary: 'Physical relation variants in Substrait: hash join, nested-loop join,
+    merge join, exchange, top-N sort, physical aggregate, and window operations for
+    execution-layer plans.'
   tags:
   - relations
   - physical
-  - hash-join
-  - merge-join
-  - nested-loop
+  - join
+  - exchange
+  - window
   concepts:
   - relational-algebra
-  stale: true
-  stale_since: '2026-07-01T15:08:57Z'
+  stale: false
+  keywords:
+  - hash-join
+  - nested-loop-join
+  - merge-join
+  - exchange
+  - top-N
+  - window
+  - physical-aggregate
+  category: reference
+  last_indexed: '2026-07-02T00:00:00Z'
 - id: substrait:relations/user_defined_relations.md
   source: substrait
   title: User Defined Relations
@@ -456,20 +547,27 @@ entries:
 - id: substrait:extensions/index.md
   source: substrait
   title: Extensions Overview
-  summary: Extension mechanism for types and functions. Simple extensions in YAML
-    files. URN identifiers reference extension files. Extension anchors link plan
-    references to definitions. Optional metadata field. Deprecation support with since
-    version, reason, metadata. Core extensions in extensions/ directory
+  summary: 'Substrait extension mechanism: how to define custom types, functions,
+    and type variations using URIs/URNs and the u! prefix notation for portable cross-engine
+    extensions.'
   tags:
   - extensions
-  - yaml
+  - custom-types
+  - custom-functions
+  - uri
   - urn
-  - anchors
-  - deprecation
   concepts:
   - extensions
-  stale: true
-  stale_since: '2026-07-01T15:08:57Z'
+  stale: false
+  keywords:
+  - extension-uri
+  - URN
+  - u!
+  - custom-type
+  - custom-function
+  - type-variation
+  category: reference
+  last_indexed: '2026-07-02T00:00:00Z'
 - id: substrait:functions_arithmetic.yaml
   source: substrait
   title: Arithmetic Functions
@@ -696,21 +794,26 @@ entries:
 - id: substrait:tutorial/sql_to_substrait.md
   source: substrait
   title: SQL to Substrait Tutorial
-  summary: Comprehensive walkthrough building a plan from SQL. Covers types (nullability,
-    decimal parameters, nested types, NamedStruct), expressions (field references,
-    literals, scalar functions), relations (Read, Filter, Join, Aggregate), field
-    indices, emit (column reordering via outputMapping), and plans (extensionUrns,
-    extensions, relations with Root)
+  summary: 'Step-by-step tutorial converting SQL queries to Substrait plans: covers
+    Read relations, Filter, Project, Aggregate, and Join with annotated plan examples.'
   tags:
   - tutorial
   - sql
-  - walkthrough
-  - plan-building
-  - examples
+  - conversion
+  - plans
   concepts:
   - query-plan-spec
-  stale: true
-  stale_since: '2026-07-01T15:08:57Z'
+  stale: false
+  keywords:
+  - SQL-to-Substrait
+  - read-relation
+  - filter
+  - project
+  - aggregate
+  - join
+  - plan
+  category: tutorial
+  last_indexed: '2026-07-02T00:00:00Z'
 - id: substrait:tutorial/examples.md
   source: substrait
   title: Examples
@@ -783,23 +886,42 @@ entries:
 - id: substrait:governance.md
   source: substrait
   title: Governance
-  summary: 'Project governance model. Bar for inclusion: at least two of top four
-    OSS data technologies (Arrow, Spark, Iceberg, Trino) must support feature'
+  summary: 'Substrait governance structure: users, contributors, committers, and PMC;
+    describes voting rules and decision-making processes for the project.'
   tags:
-  - community
   - governance
-  - inclusion-criteria
-  stale: true
-  stale_since: '2026-07-01T15:08:57Z'
+  - community
+  - contributing
+  stale: false
+  keywords:
+  - PMC
+  - committers
+  - voting
+  - contributors
+  - decision-making
+  category: guide
+  last_indexed: '2026-07-02T00:00:00Z'
 - id: substrait:community/active_libraries.md
   source: substrait
   path: community/active_libraries.md
   title: Active Libraries
-  summary: Pending re-scan
-  tags: []
-  keywords: []
+  summary: 'List of active Substrait library implementations: Go, Java, Python, Rust;
+    and inactive implementations (C++, C#, JavaScript, Ruby) with links to each repository.'
+  tags:
+  - community
+  - libraries
+  - implementations
+  - ecosystem
+  keywords:
+  - Go
+  - Java
+  - Python
+  - Rust
+  - C++
+  - implementations
+  - active-libraries
   concepts: []
-  category: unknown
+  category: reference
   content_type: markdown
   size: standard
   grep_hint: null
@@ -807,18 +929,29 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-01T15:08:57Z'
-  last_indexed: '2026-07-01T15:08:57Z'
+  stale: false
+  last_indexed: '2026-07-02T00:00:00Z'
 - id: substrait:spec/breaking_change_policy.md
   source: substrait
   path: spec/breaking_change_policy.md
   title: Breaking Change Policy
-  summary: Pending re-scan
-  tags: []
-  keywords: []
+  summary: 'Policy for handling breaking changes in the Substrait specification: use
+    dual-write migration strategy, URI-to-URN transition example, and process for
+    deprecating old extension URIs.'
+  tags:
+  - spec
+  - breaking-changes
+  - migration
+  - policy
+  keywords:
+  - breaking-change
+  - URN
+  - URI
+  - dual-write
+  - migration
+  - backwards-compatibility
   concepts: []
-  category: unknown
+  category: reference
   content_type: markdown
   size: standard
   grep_hint: null
@@ -826,6 +959,5 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-01T15:08:57Z'
-  last_indexed: '2026-07-01T15:08:57Z'
+  stale: false
+  last_indexed: '2026-07-02T00:00:00Z'

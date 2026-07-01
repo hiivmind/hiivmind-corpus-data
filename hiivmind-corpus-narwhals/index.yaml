@@ -1,11 +1,15 @@
+meta:
+  corpus: narwhals
+  source: narwhals
+  generated_at: '2026-07-02T00:00:00Z'
+  entry_count: 66
 entries:
 - id: narwhals:index.md
   source: narwhals
   title: Introduction
-  summary: 'Extremely lightweight compatibility layer between dataframe libraries.
-    Full API support: cuDF, Modin, pandas, Polars, PyArrow. Lazy-only support: Daft,
-    Dask, DuckDB, Ibis, PySpark, SQLFrame. Zero dependencies, uses subset of Polars
-    API, 100% branch coverage, negligible overhead'
+  summary: 'Extremely lightweight compatibility layer for dataframe libraries. Full
+    API support: cuDF, Modin, pandas, Polars, PyArrow. Lazy-only support: Daft, Dask,
+    DuckDB, Ibis, PySpark, SQLFrame. Zero dependencies; uses only the Polars API subset.'
   tags:
   - narwhals
   - introduction
@@ -15,8 +19,18 @@ entries:
   concepts:
   - dataframe-agnostic
   - lazy-support
-  stale: true
-  stale_since: '2026-07-01T15:08:57Z'
+  stale: false
+  keywords:
+  - from_native
+  - narwhalify
+  - lazy
+  - eager
+  - DuckDB
+  - PySpark
+  - SQLFrame
+  - Dask
+  - Ibis
+  last_indexed: '2026-07-02T00:00:00Z'
 - id: narwhals:why.md
   source: narwhals
   title: Why Narwhals?
@@ -31,8 +45,8 @@ entries:
   - agnostic
   concepts:
   - dataframe-agnostic
-  stale: true
-  stale_since: '2026-07-01T15:08:57Z'
+  stale: false
+  last_indexed: '2026-07-02T00:00:00Z'
 - id: narwhals:installation.md
   source: narwhals
   title: Installation
@@ -41,8 +55,8 @@ entries:
   - narwhals
   - installation
   - setup
-  stale: true
-  stale_since: '2026-07-01T15:08:57Z'
+  stale: false
+  last_indexed: '2026-07-02T00:00:00Z'
 - id: narwhals:basics/dataframe.md
   source: narwhals
   title: DataFrame Basics
@@ -59,8 +73,8 @@ entries:
   - tutorial
   concepts:
   - dataframe-agnostic
-  stale: true
-  stale_since: '2026-07-01T15:08:57Z'
+  stale: false
+  last_indexed: '2026-07-02T00:00:00Z'
 - id: narwhals:basics/series.md
   source: narwhals
   title: Series Operations
@@ -71,8 +85,8 @@ entries:
   - tutorial
   concepts:
   - dataframe-agnostic
-  stale: true
-  stale_since: '2026-07-01T15:08:57Z'
+  stale: false
+  last_indexed: '2026-07-02T00:00:00Z'
 - id: narwhals:basics/complete_example.md
   source: narwhals
   title: Complete Example
@@ -88,8 +102,8 @@ entries:
   - lazy
   concepts:
   - dataframe-agnostic
-  stale: true
-  stale_since: '2026-07-01T15:08:57Z'
+  stale: false
+  last_indexed: '2026-07-02T00:00:00Z'
 - id: narwhals:basics/dataframe_conversion.md
   source: narwhals
   title: DataFrame Conversion
@@ -101,8 +115,8 @@ entries:
   - from_native
   concepts:
   - dataframe-agnostic
-  stale: true
-  stale_since: '2026-07-01T15:08:57Z'
+  stale: false
+  last_indexed: '2026-07-02T00:00:00Z'
 - id: narwhals:how_it_works.md
   source: narwhals
   title: How It Works
@@ -120,8 +134,8 @@ entries:
   - group-by
   concepts:
   - expression-model
-  stale: true
-  stale_since: '2026-07-01T15:08:57Z'
+  stale: false
+  last_indexed: '2026-07-02T00:00:00Z'
 - id: narwhals:concepts/boolean.md
   source: narwhals
   title: Boolean Operations
@@ -133,8 +147,8 @@ entries:
   - backends
   concepts:
   - behavioral-concepts
-  stale: true
-  stale_since: '2026-07-01T15:08:57Z'
+  stale: false
+  last_indexed: '2026-07-02T00:00:00Z'
 - id: narwhals:concepts/null_handling.md
   source: narwhals
   title: Null Handling
@@ -149,8 +163,8 @@ entries:
   concepts:
   - null-handling
   - behavioral-concepts
-  stale: true
-  stale_since: '2026-07-01T15:08:57Z'
+  stale: false
+  last_indexed: '2026-07-02T00:00:00Z'
 - id: narwhals:concepts/order_dependence.md
   source: narwhals
   title: Order Dependence
@@ -166,8 +180,8 @@ entries:
   concepts:
   - lazy-support
   - behavioral-concepts
-  stale: true
-  stale_since: '2026-07-01T15:08:57Z'
+  stale: false
+  last_indexed: '2026-07-02T00:00:00Z'
 - id: narwhals:concepts/pandas_index.md
   source: narwhals
   title: pandas Index Handling
@@ -180,8 +194,8 @@ entries:
   - reset_index
   concepts:
   - behavioral-concepts
-  stale: true
-  stale_since: '2026-07-01T15:08:57Z'
+  stale: false
+  last_indexed: '2026-07-02T00:00:00Z'
 - id: narwhals:concepts/improve_group_by_operation.md
   source: narwhals
   title: Improving Group-By
@@ -193,8 +207,8 @@ entries:
   - optimization
   concepts:
   - behavioral-concepts
-  stale: true
-  stale_since: '2026-07-01T15:08:57Z'
+  stale: false
+  last_indexed: '2026-07-02T00:00:00Z'
 - id: narwhals:concepts/column_names.md
   source: narwhals
   title: Column Names
@@ -206,15 +220,14 @@ entries:
   - duplicates
   concepts:
   - behavioral-concepts
-  stale: true
-  stale_since: '2026-07-01T15:08:57Z'
+  stale: false
+  last_indexed: '2026-07-02T00:00:00Z'
 - id: narwhals:backcompat.md
   source: narwhals
   title: Backwards Compatibility
-  summary: 'Perfect backwards compatibility policy (Rust editions-inspired). narwhals.stable.v1
-    and narwhals.stable.v2: promises never to change/remove public functions. Breaking
-    changes go to main namespace (eventually stable.v3). Recommendation: import narwhals
-    as nw for prototyping, import narwhals.stable.v2 as nw for production'
+  summary: 'Perfect backwards compatibility policy for library authors: `narwhals.stable.v1`
+    and `narwhals.stable.v2` are frozen forever; breaking changes go into the main
+    namespace then a new stable version, so libraries can pin independently.'
   tags:
   - narwhals
   - backwards-compatibility
@@ -223,8 +236,14 @@ entries:
   - production
   concepts:
   - backwards-compatibility
-  stale: true
-  stale_since: '2026-07-01T15:08:57Z'
+  stale: false
+  keywords:
+  - stable.v1
+  - stable.v2
+  - backwards-compatible
+  - library-authors
+  - API-stability
+  last_indexed: '2026-07-02T00:00:00Z'
 - id: narwhals:overhead.md
   source: narwhals
   title: Overhead
@@ -260,18 +279,30 @@ entries:
   - to_sql
   concepts:
   - sql-generation
-  stale: true
-  stale_since: '2026-07-01T15:08:57Z'
+  stale: false
+  last_indexed: '2026-07-02T00:00:00Z'
 - id: narwhals:ecosystem.md
   source: narwhals
   title: Ecosystem
-  summary: Libraries and tools using Narwhals
+  summary: Non-exhaustive list of 30+ libraries using Narwhals for dataframe interoperability,
+    including altair, bokeh, lightgbm, marimo, pandera, plotly, scikit-learn, scikit-lego,
+    and others. Open PRs accepted to add missing projects.
   tags:
   - narwhals
   - ecosystem
   - integrations
-  stale: true
-  stale_since: '2026-07-01T15:08:57Z'
+  stale: false
+  keywords:
+  - altair
+  - bokeh
+  - lightgbm
+  - scikit-learn
+  - plotly
+  - pandera
+  - marimo
+  - ecosystem
+  - integrations
+  last_indexed: '2026-07-02T00:00:00Z'
 - id: narwhals:security.md
   source: narwhals
   title: Security
@@ -279,8 +310,8 @@ entries:
   tags:
   - narwhals
   - security
-  stale: true
-  stale_since: '2026-07-01T15:08:57Z'
+  stale: false
+  last_indexed: '2026-07-02T00:00:00Z'
 - id: narwhals:resources.md
   source: narwhals
   title: Resources
@@ -489,8 +520,9 @@ entries:
 - id: narwhals:api-reference/narwhals.md
   source: narwhals
   title: Narwhals Module
-  summary: 'Top-level functions: from_native, to_native, narwhalify, col, lit, all,
-    sum_horizontal, mean_horizontal, concat, when/then/otherwise'
+  summary: 'Top-level Narwhals functions: col, lit, all, concat, from_native, to_native,
+    narwhalify, from_dict, from_arrow, from_numpy, schema, and 50+ additional utility
+    and expression functions for dataframe-agnostic code.'
   tags:
   - narwhals
   - api-reference
@@ -501,8 +533,18 @@ entries:
   - lit
   concepts:
   - dataframe-agnostic
-  stale: true
-  stale_since: '2026-07-01T15:08:57Z'
+  stale: false
+  keywords:
+  - col
+  - lit
+  - narwhalify
+  - from_native
+  - to_native
+  - concat
+  - from_dict
+  - schema
+  - coalesce
+  last_indexed: '2026-07-02T00:00:00Z'
 - id: narwhals:api-reference/dataframe.md
   source: narwhals
   title: DataFrame API Reference
@@ -617,8 +659,8 @@ entries:
   - string
   concepts:
   - string-expressions
-  stale: true
-  stale_since: '2026-07-01T15:08:57Z'
+  stale: false
+  last_indexed: '2026-07-02T00:00:00Z'
 - id: narwhals:api-reference/expr_struct.md
   source: narwhals
   title: Expr.struct API Reference
@@ -675,8 +717,8 @@ entries:
   - string
   concepts:
   - string-expressions
-  stale: true
-  stale_since: '2026-07-01T15:08:57Z'
+  stale: false
+  last_indexed: '2026-07-02T00:00:00Z'
 - id: narwhals:api-reference/series_struct.md
   source: narwhals
   title: Series.struct API Reference
@@ -738,11 +780,10 @@ entries:
 - id: narwhals:api-reference/dtypes.md
   source: narwhals
   title: Data Types
-  summary: Full type hierarchy with abstract base classes. DType base to NumericType
-    to FloatType (Float32, Float64), IntegerType to SignedIntegerType (Int8-Int128),
-    UnsignedIntegerType (UInt8-UInt128), Decimal. TemporalType to Date, Datetime,
-    Duration, Time. NestedType to Array, List, Struct. String, Boolean, Categorical,
-    Enum, Binary, Object, Unknown
+  summary: 'Full dtype hierarchy: DType base, NumericType (Int8–Int128, UInt8–UInt128,
+    Float16/32/64, Decimal), TemporalType (Date, Datetime, Duration, Time), Categorical,
+    Enum, String, Boolean, List, Array, Struct, Object, Unknown, and new Int128/UInt128
+    types.'
   tags:
   - narwhals
   - api-reference
@@ -751,8 +792,19 @@ entries:
   - hierarchy
   concepts:
   - type-system
-  stale: true
-  stale_since: '2026-07-01T15:08:57Z'
+  stale: false
+  keywords:
+  - Int128
+  - UInt128
+  - Float16
+  - Decimal
+  - Datetime
+  - Duration
+  - Categorical
+  - Enum
+  - Struct
+  - List
+  last_indexed: '2026-07-02T00:00:00Z'
 - id: narwhals:api-reference/selectors.md
   source: narwhals
   title: Selectors API Reference
@@ -767,8 +819,8 @@ entries:
   - column-selection
   concepts:
   - type-system
-  stale: true
-  stale_since: '2026-07-01T15:08:57Z'
+  stale: false
+  last_indexed: '2026-07-02T00:00:00Z'
 - id: narwhals:api-reference/typing.md
   source: narwhals
   title: Typing API Reference
@@ -782,8 +834,8 @@ entries:
   - generics
   concepts:
   - type-system
-  stale: true
-  stale_since: '2026-07-01T15:08:57Z'
+  stale: false
+  last_indexed: '2026-07-02T00:00:00Z'
 - id: narwhals:api-reference/dependencies.md
   source: narwhals
   title: Dependencies API Reference
@@ -812,8 +864,8 @@ entries:
   - api-reference
   - exceptions
   - errors
-  stale: true
-  stale_since: '2026-07-01T15:08:57Z'
+  stale: false
+  last_indexed: '2026-07-02T00:00:00Z'
 - id: narwhals:api-reference/testing.md
   source: narwhals
   title: Testing API Reference

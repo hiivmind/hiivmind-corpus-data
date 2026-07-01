@@ -1,6 +1,6 @@
 # Polars Documentation Index
 
-> Sources: 1 | Entries: 111 | Generated: 2026-07-01T15:08:57Z
+> Sources: 1 | Entries: 111 | Generated: 2026-07-02T00:00:00Z
 > Generated from `index.yaml` — do not edit directly
 
 ---
@@ -40,18 +40,20 @@
 - **Environment Variables** `polars:polars-on-premises/bare-metal/environment-variables.md` - Environment variable reference for on-premises deployment
 - **GKE Deployment** `polars:polars-on-premises/kubernetes/cloud-providers/google-kubernetes-engine.md` - Pending re-scan
 - **IDE Setup** `polars:development/contributing/ide.md` - Development environment setup
-- **Kubernetes Deployment Overview** `polars:polars-on-premises/kubernetes/index.md` - Pending re-scan
+- **Kubernetes Deployment Overview** `polars:polars-on-premises/kubernetes/index.md` - Full Kubernetes deployment reference for Polars On-Prem: Helm chart parameters, deployed resources (scheduler/workers/storage pods), production config for anonymous results (S3/SeaweedFS), shuffle storage options, resource limits, OOM behavior on cgroup v2, and air-gapped Enterprise mode.
 - **On-Premises Getting Started** `polars:polars-on-premises/bare-metal/getting-started.md` - Initial bare-metal deployment setup
-- **On-Premises Getting Started** `polars:polars-on-premises/getting-started.md` - Pending re-scan
 - **On-Premises Overview** `polars:polars-on-premises/index.md` - Deploying Polars as a self-hosted distributed engine
-- **On-Premises Releases** `polars:polars-on-premises/releases.md` - Pending re-scan
 - **OpenLineage Integration** `polars:polars-on-premises/integrations/openlineage.md` - Pending re-scan
 - **Python Environment** `polars:polars-on-premises/bare-metal/python-environment.md` - Python environment configuration for on-premises deployment
 - **Query Profiler** `polars:polars-cloud/run/query-profile.md` - Visual query profiling with bottleneck indicators (CPU time, I/O time, memory-intensive, single-node, in-memory fallback). Distributed query walkthrough with stage graph analysis and cross-region I/O diagnosis
 - **Remote Query Execution** `polars:polars-on-premises/run/remote-query.md` - Pending re-scan
-- **Slurm Quickstart** `polars:polars-on-premises/bare-metal/misc/slurm.md` - Pending re-scan
+- **Slurm Quickstart** `polars:polars-on-premises/bare-metal/misc/slurm.md` - Guide to running Polars On-Prem on Slurm clusters: static leader election, scheduler/worker TOML config generation, sbatch job scripts using polars-cloud ClusterContext, and parallel query submission via `srun`.
 - **Testing** `polars:development/contributing/test.md` - Running tests
 - **Versioning** `polars:development/versioning.md` - Version policy
+
+## journal
+
+- **On-Premises Releases** `polars:polars-on-premises/releases.md` - Release history for Polars On-Prem; latest 0.6.3 (1 Jul 2026) bundles polars 1.42.1 and polars-cloud 0.9.0 with distributed Expression lowering, improved ClusterContext API, distributed Iceberg sink, manual cluster scaling, and new disk I/O metrics.
 
 ## reference
 
@@ -130,7 +132,8 @@
 - **Getting Started** `polars:user-guide/getting-started.md` - First steps with Polars, basic DataFrame operations
 - **Installation** `polars:user-guide/installation.md` - Installing Polars and optional feature flags
 - **Introduction** `polars:index.md` - Overview of Polars: blazingly fast DataFrame library written in Rust, available for Python/R/NodeJS. Key features: parallel execution, lazy API, Arrow support, GPU acceleration
+- **On-Premises Getting Started** `polars:polars-on-premises/getting-started.md` - Kubernetes quickstart for Polars On-Prem: create workspace and service account via CLI or portal, deploy 2-worker cluster with Helm chart, port-forward scheduler/observatory/storage, then run a remote LazyFrame query.
 
 ---
 
-*Rendered from index.yaml at 2026-07-01T15:08:57Z*
+*Rendered from index.yaml at 2026-07-02T00:00:00Z*

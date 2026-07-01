@@ -1,3 +1,8 @@
+meta:
+  corpus: ibis
+  source: ibis
+  generated_at: '2026-07-02T00:00:00Z'
+  entry_count: 95
 entries:
 - id: ibis:index.qmd
   source: ibis
@@ -310,17 +315,27 @@ entries:
 - id: ibis:backends/athena.qmd
   source: ibis
   title: Athena Backend
-  summary: AWS Athena backend
+  summary: 'Amazon Athena backend for Ibis: install with `ibis-framework[athena]`,
+    connect via `ibis.athena.connect(s3_staging_dir=...)` — the S3 staging directory
+    is required by pyathena for dumping query results.'
   tags:
-  - ibis
   - athena
-  - backend
   - aws
-  - cloud
+  - backend
+  - s3
+  - connection
   concepts:
   - backend-portability
-  stale: true
-  stale_since: '2026-07-01T15:08:57Z'
+  stale: false
+  keywords:
+  - s3_staging_dir
+  - pyathena
+  - ibis.athena.connect
+  - pip
+  - conda
+  - mamba
+  category: reference
+  last_indexed: '2026-07-02T00:00:00Z'
 - id: ibis:backends/postgresql.qmd
   source: ibis
   title: PostgreSQL Backend
@@ -336,16 +351,27 @@ entries:
 - id: ibis:backends/mysql.qmd
   source: ibis
   title: MySQL Backend
-  summary: MySQL backend
+  summary: 'MySQL/MariaDB backend for Ibis: supports CSV, Parquet, and PyArrow outputs
+    with memtable fallback; connect via `ibis.mysql.connect()` with host/port/database
+    params or a `mysql://` URL; also works with MariaDB.'
   tags:
-  - ibis
   - mysql
+  - mariadb
   - backend
-  - database
+  - connection
+  - sql
   concepts:
   - backend-portability
-  stale: true
-  stale_since: '2026-07-01T15:08:57Z'
+  stale: false
+  keywords:
+  - ibis.mysql.connect
+  - mariadb
+  - memtable
+  - parquet
+  - pyarrow
+  - connection-url
+  category: reference
+  last_indexed: '2026-07-02T00:00:00Z'
 - id: ibis:backends/sqlite.qmd
   source: ibis
   title: SQLite Backend

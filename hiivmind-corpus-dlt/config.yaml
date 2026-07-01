@@ -18,7 +18,7 @@ sources:
   branch: devel
   docs_root: docs/website/docs
   last_commit_sha: 807396211fc7166ff336d184079275fa83a53e9e
-  last_indexed_at: '2026-07-01T15:08:57Z'
+  last_indexed_at: '2026-07-01T16:14:56Z'
   extraction:
     wikilinks: false
     frontmatter: true
@@ -26,7 +26,7 @@ sources:
     dataview: false
 index:
   format: markdown
-  last_updated_at: '2026-07-01T15:08:57Z'
+  last_updated_at: '2026-07-01T16:14:56Z'
 settings:
   include_patterns:
   - '**/*.md'
