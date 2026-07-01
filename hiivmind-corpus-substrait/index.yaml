@@ -1,3 +1,8 @@
+meta:
+  corpus: substrait
+  source: substrait
+  generated_at: '2026-07-02T00:00:00Z'
+  entry_count: 62
 entries:
 - id: substrait:index.md
   source: substrait
@@ -123,7 +128,7 @@ entries:
   concepts:
   - type-system
   stale: true
-  stale_since: '2026-07-01T15:08:57Z'
+  stale_since: '2026-07-02T00:00:00Z'
 - id: substrait:types/type_variations.md
   source: substrait
   title: Type Variations
@@ -157,7 +162,7 @@ entries:
   concepts:
   - type-system
   stale: true
-  stale_since: '2026-07-01T15:08:57Z'
+  stale_since: '2026-07-02T00:00:00Z'
 - id: substrait:types/named_structs.md
   source: substrait
   title: Named Structs
@@ -171,7 +176,7 @@ entries:
   concepts:
   - type-system
   stale: true
-  stale_since: '2026-07-01T15:08:57Z'
+  stale_since: '2026-07-02T00:00:00Z'
 - id: substrait:expressions/field_references.md
   source: substrait
   title: Field References
@@ -188,7 +193,7 @@ entries:
   - expressions
   - field-references
   stale: true
-  stale_since: '2026-07-01T15:08:57Z'
+  stale_since: '2026-07-02T00:00:00Z'
 - id: substrait:expressions/scalar_functions.md
   source: substrait
   title: Scalar Functions
@@ -205,7 +210,7 @@ entries:
   - expressions
   - scalar-functions
   stale: true
-  stale_since: '2026-07-01T15:08:57Z'
+  stale_since: '2026-07-02T00:00:00Z'
 - id: substrait:expressions/lambda_expressions.md
   source: substrait
   title: Lambda Expressions
@@ -223,7 +228,7 @@ entries:
   concepts:
   - expressions
   stale: true
-  stale_since: '2026-07-01T15:08:57Z'
+  stale_since: '2026-07-02T00:00:00Z'
 - id: substrait:expressions/aggregate_functions.md
   source: substrait
   title: Aggregate Functions
@@ -267,7 +272,7 @@ entries:
   - expressions
   - specialized-expressions
   stale: true
-  stale_since: '2026-07-01T15:08:57Z'
+  stale_since: '2026-07-02T00:00:00Z'
 - id: substrait:expressions/user_defined_functions.md
   source: substrait
   title: User Defined Functions
@@ -323,7 +328,7 @@ entries:
   concepts:
   - expressions
   stale: true
-  stale_since: '2026-07-01T15:08:57Z'
+  stale_since: '2026-07-02T00:00:00Z'
 - id: substrait:expressions/extended_expression.md
   source: substrait
   title: Extended Expression
@@ -358,7 +363,7 @@ entries:
   concepts:
   - relational-algebra
   stale: true
-  stale_since: '2026-07-01T15:08:57Z'
+  stale_since: '2026-07-02T00:00:00Z'
 - id: substrait:relations/logical_relations.md
   source: substrait
   title: Logical Relations
@@ -383,7 +388,7 @@ entries:
   concepts:
   - relational-algebra
   stale: true
-  stale_since: '2026-07-01T15:08:57Z'
+  stale_since: '2026-07-02T00:00:00Z'
 - id: substrait:relations/physical_relations.md
   source: substrait
   title: Physical Relations
@@ -398,7 +403,7 @@ entries:
   concepts:
   - relational-algebra
   stale: true
-  stale_since: '2026-07-01T15:08:57Z'
+  stale_since: '2026-07-02T00:00:00Z'
 - id: substrait:relations/user_defined_relations.md
   source: substrait
   title: User Defined Relations
@@ -469,7 +474,7 @@ entries:
   concepts:
   - extensions
   stale: true
-  stale_since: '2026-07-01T15:08:57Z'
+  stale_since: '2026-07-02T00:00:00Z'
 - id: substrait:functions_arithmetic.yaml
   source: substrait
   title: Arithmetic Functions
@@ -710,7 +715,7 @@ entries:
   concepts:
   - query-plan-spec
   stale: true
-  stale_since: '2026-07-01T15:08:57Z'
+  stale_since: '2026-07-02T00:00:00Z'
 - id: substrait:tutorial/examples.md
   source: substrait
   title: Examples
@@ -808,7 +813,7 @@ entries:
   links_from: []
   frontmatter: {}
   stale: true
-  stale_since: '2026-07-01T15:08:57Z'
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-07-01T15:08:57Z'
 - id: substrait:spec/breaking_change_policy.md
   source: substrait
@@ -827,5 +832,5 @@ entries:
   links_from: []
   frontmatter: {}
   stale: true
-  stale_since: '2026-07-01T15:08:57Z'
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-07-01T15:08:57Z'

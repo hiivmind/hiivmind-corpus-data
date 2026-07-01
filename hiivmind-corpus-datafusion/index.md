@@ -1,55 +1,53 @@
 # DataFusion Documentation Index
 
-> Sources: 2 | Entries: 102 | Generated: 2026-07-01T15:08:57Z
+> Sources: 2 | Entries: 108 | Generated: 2026-07-02T00:00:00Z
 > Generated from `index.yaml` — do not edit directly
 
 ---
 
 ## Python Bindings
 
-- **Aggregations** `datafusion-python:source/user-guide/common-operations/aggregations.md` - Pending re-scan
-- **Ai Coding Assistants** `datafusion-python:source/user-guide/ai-coding-assistants.md` - Pending re-scan
-- **Arrow** `datafusion-python:source/user-guide/io/arrow.md` - Pending re-scan
-- **Avro** `datafusion-python:source/user-guide/io/avro.md` - Pending re-scan
-- **Basic Info** `datafusion-python:source/user-guide/common-operations/basic-info.md` - Pending re-scan
-- **Basics** `datafusion-python:source/user-guide/basics.md` - Pending re-scan
-- **Configuration** `datafusion-python:source/user-guide/configuration.md` - Pending re-scan
+- **null** `datafusion-python:contributor-guide/ffi.md` - Pending re-scan
+- **null** `datafusion-python:contributor-guide/index.md` - Pending re-scan
+- **null** `datafusion-python:contributor-guide/introduction.md` - Pending re-scan
+- **null** `datafusion-python:user-guide/ai-coding-assistants.md` - Pending re-scan
+- **null** `datafusion-python:user-guide/basics.md` - Pending re-scan
+- **null** `datafusion-python:user-guide/common-operations/aggregations.md` - Pending re-scan
+- **null** `datafusion-python:user-guide/common-operations/basic-info.md` - Pending re-scan
+- **null** `datafusion-python:user-guide/common-operations/expressions.md` - Pending re-scan
+- **null** `datafusion-python:user-guide/common-operations/functions.md` - Pending re-scan
+- **null** `datafusion-python:user-guide/common-operations/index.md` - Pending re-scan
+- **null** `datafusion-python:user-guide/common-operations/joins.md` - Pending re-scan
+- **null** `datafusion-python:user-guide/common-operations/select-and-filter.md` - Pending re-scan
+- **null** `datafusion-python:user-guide/common-operations/spark-functions.md` - Pending re-scan
+- **null** `datafusion-python:user-guide/common-operations/udf-and-udfa.md` - Pending re-scan
+- **null** `datafusion-python:user-guide/common-operations/views.md` - Pending re-scan
+- **null** `datafusion-python:user-guide/common-operations/windows.md` - Pending re-scan
+- **null** `datafusion-python:user-guide/configuration.md` - Pending re-scan
+- **null** `datafusion-python:user-guide/data-sources.md` - Pending re-scan
+- **null** `datafusion-python:user-guide/dataframe/execution-metrics.md` - Pending re-scan
+- **null** `datafusion-python:user-guide/dataframe/index.md` - Pending re-scan
+- **null** `datafusion-python:user-guide/dataframe/rendering.md` - Pending re-scan
+- **null** `datafusion-python:user-guide/distributing-work.md` - Pending re-scan
+- **null** `datafusion-python:user-guide/index.md` - Pending re-scan
+- **null** `datafusion-python:user-guide/introduction.md` - Pending re-scan
+- **null** `datafusion-python:user-guide/io/arrow.md` - Pending re-scan
+- **null** `datafusion-python:user-guide/io/avro.md` - Pending re-scan
+- **null** `datafusion-python:user-guide/io/csv.md` - Pending re-scan
+- **null** `datafusion-python:user-guide/io/index.md` - Pending re-scan
+- **null** `datafusion-python:user-guide/io/json.md` - Pending re-scan
+- **null** `datafusion-python:user-guide/io/parquet.md` - Pending re-scan
+- **null** `datafusion-python:user-guide/io/table_provider.md` - Pending re-scan
+- **null** `datafusion-python:user-guide/sql.md` - Pending re-scan
+- **null** `datafusion-python:user-guide/upgrade-guides.md` - Pending re-scan
 - **Create Table (Python)** `datafusion-python:mdbook/src/usage/create-table.md` - Guide for creating tables from Python dicts, CSV, and Parquet files.
-- **Csv** `datafusion-python:source/user-guide/io/csv.md` - Pending re-scan
-- **Data Sources** `datafusion-python:source/user-guide/data-sources.md` - Pending re-scan
 - **DataFusion Book** `datafusion-python:mdbook/src/index.md` - Introduction to DataFusion as a high-performance query engine with Python and SQL bindings.
 - **DataFusion Quickstart (Python)** `datafusion-python:mdbook/src/quickstart.md` - Quick intro demonstrating DataFrame creation and queries using SQL and Python APIs.
-- **Distributing Work** `datafusion-python:source/user-guide/distributing-work.md` - Pending re-scan
-- **Execution Metrics** `datafusion-python:source/user-guide/dataframe/execution-metrics.md` - Pending re-scan
-- **Expressions** `datafusion-python:source/user-guide/common-operations/expressions.md` - Pending re-scan
-- **Ffi** `datafusion-python:source/contributor-guide/ffi.md` - Pending re-scan
-- **Functions** `datafusion-python:source/user-guide/common-operations/functions.md` - Pending re-scan
-- **Index** `datafusion-python:source/contributor-guide/index.md` - Pending re-scan
-- **Index** `datafusion-python:source/index.md` - Pending re-scan
-- **Index** `datafusion-python:source/user-guide/common-operations/index.md` - Pending re-scan
-- **Index** `datafusion-python:source/user-guide/dataframe/index.md` - Pending re-scan
-- **Index** `datafusion-python:source/user-guide/index.md` - Pending re-scan
-- **Index** `datafusion-python:source/user-guide/io/index.md` - Pending re-scan
 - **Installation (Python)** `datafusion-python:mdbook/src/installation.md` - Installation guide for DataFusion Python using uv and pip, plus JupyterLab setup.
-- **Introduction** `datafusion-python:source/contributor-guide/introduction.md` - Pending re-scan
-- **Introduction** `datafusion-python:source/user-guide/introduction.md` - Pending re-scan
-- **Joins** `datafusion-python:source/user-guide/common-operations/joins.md` - Pending re-scan
-- **Json** `datafusion-python:source/user-guide/io/json.md` - Pending re-scan
-- **Links** `datafusion-python:source/links.md` - Pending re-scan
-- **Parquet** `datafusion-python:source/user-guide/io/parquet.md` - Pending re-scan
 - **Query Plans (Python)** `datafusion-python:mdbook/src/usage/query-plans.md` - Understanding logical, optimized, and physical query plans with GraphViz visualization.
 - **Query Table (Python)** `datafusion-python:mdbook/src/usage/query-table.md` - Querying tables using SQL and Python APIs with filtering and aggregation examples.
-- **Rendering** `datafusion-python:source/user-guide/dataframe/rendering.md` - Pending re-scan
-- **Select And Filter** `datafusion-python:source/user-guide/common-operations/select-and-filter.md` - Pending re-scan
-- **Spark Functions** `datafusion-python:source/user-guide/common-operations/spark-functions.md` - Pending re-scan
-- **Sql** `datafusion-python:source/user-guide/sql.md` - Pending re-scan
 - **Summary** `datafusion-python:mdbook/src/SUMMARY.md` - Table of contents for DataFusion Python documentation.
-- **Table Provider** `datafusion-python:source/user-guide/io/table_provider.md` - Pending re-scan
-- **Udf And Udfa** `datafusion-python:source/user-guide/common-operations/udf-and-udfa.md` - Pending re-scan
-- **Upgrade Guides** `datafusion-python:source/user-guide/upgrade-guides.md` - Pending re-scan
 - **Usage (Python)** `datafusion-python:mdbook/src/usage/index.md` - Overview of creating DataFrames from various data sources and querying with SQL or Python.
-- **Views** `datafusion-python:source/user-guide/common-operations/views.md` - Pending re-scan
-- **Windows** `datafusion-python:source/user-guide/common-operations/windows.md` - Pending re-scan
 
 ## guide
 
@@ -107,7 +105,7 @@
 - **Query Optimizer** `datafusion:library-user-guide/query-optimizer.md` - [DataFusion][df] is an extensible query execution framework, written in Rust, that uses Apache Arrow as its in-memory format.
 - **Reading Explain Plans** `datafusion:user-guide/explain-usage.md` - This section describes of how to read a DataFusion query plan. While fully comprehending all details of these plans requires significant expertise in the
 - **Roadmap and Improvement Proposals** `datafusion:contributor-guide/roadmap.md` - The [project introduction](../user-guide/introduction) explains the overview and goals of DataFusion, and our development efforts largely
-- **Scalar Functions** `datafusion:user-guide/sql/scalar_functions.md` - - [abs](#abs) - [acos](#acos) ⚡ GREP - `grep -n '^## ' FILE -A 20`
+- **Scalar Functions** `datafusion:user-guide/sql/scalar_functions.md` - - [abs](#abs) - [acos](#acos) ⚡ GREP - `grep -n '^## ' FILE -A 20` ⏳ STALE
 - **Special Functions** `datafusion:user-guide/sql/special_functions.md` - - [unnest](#unnest) - [unnest(struct)](#unnest-struct)
 - **Testing** `datafusion:contributor-guide/testing.md` - Tests are critical to ensure that DataFusion is working properly and is not accidentally broken during refactorings. All new features
 - **Upgrading Guides** `datafusion:library-user-guide/upgrading/[all-versions]` - Version migration guides covering all DataFusion releases from 46.0.0 through 54.0.0 with breaking changes, deprecations, and upgrade instructions for each version. ⚡ GREP - `grep -n '^## DataFusion' FILE -A 10`
@@ -119,6 +117,17 @@
 
 - **Installation** `datafusion:user-guide/cli/installation.md` - To build and install the latest release of `datafusion-cli` from source, do: `datafusion-cli` can also be installed via [Homebrew] (on MacOS) like this:
 
+## unknown
+
+- **null** `datafusion:contributor-guide/communication.md` - Pending re-scan
+- **null** `datafusion:contributor-guide/governance.md` - Pending re-scan
+- **null** `datafusion:contributor-guide/inviting.md` - Pending re-scan
+- **null** `datafusion:contributor-guide/release_management.md` - Pending re-scan
+- **null** `datafusion:library-user-guide/upgrading/49.0.0.md` - Pending re-scan
+- **null** `datafusion:library-user-guide/upgrading/53.0.0.md` - Pending re-scan
+- **null** `datafusion:library-user-guide/upgrading/54.0.0.md` - Pending re-scan
+- **null** `datafusion:library-user-guide/upgrading/55.0.0.md` - Pending re-scan
+
 ---
 
-*Rendered from index.yaml at 2026-07-01T15:08:57Z*
+*Rendered from index.yaml at 2026-07-02T00:00:00Z*

@@ -1,3 +1,8 @@
+meta:
+  corpus: ibis
+  source: ibis
+  generated_at: '2026-07-02T00:00:00Z'
+  entry_count: 95
 entries:
 - id: ibis:index.qmd
   source: ibis
@@ -320,7 +325,7 @@ entries:
   concepts:
   - backend-portability
   stale: true
-  stale_since: '2026-07-01T15:08:57Z'
+  stale_since: '2026-07-02T00:00:00Z'
 - id: ibis:backends/postgresql.qmd
   source: ibis
   title: PostgreSQL Backend
@@ -345,7 +350,7 @@ entries:
   concepts:
   - backend-portability
   stale: true
-  stale_since: '2026-07-01T15:08:57Z'
+  stale_since: '2026-07-02T00:00:00Z'
 - id: ibis:backends/sqlite.qmd
   source: ibis
   title: SQLite Backend

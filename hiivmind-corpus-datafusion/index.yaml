@@ -36,8 +36,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-13T00:30:00Z'
 - id: datafusion:contributor-guide/architecture.md
   source: datafusion
@@ -146,8 +146,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-13T00:30:00Z'
 - id: datafusion:contributor-guide/howtos.md
   source: datafusion
@@ -230,8 +230,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-13T00:30:00Z'
 - id: datafusion:contributor-guide/roadmap.md
   source: datafusion
@@ -273,8 +273,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-13T00:30:00Z'
 - id: datafusion:contributor-guide/specification/invariants.md
   source: datafusion
@@ -363,8 +363,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-13T00:30:00Z'
 - id: datafusion:contributor-guide/testing.md
   source: datafusion
@@ -406,8 +406,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-13T00:30:00Z'
 - id: datafusion:download.md
   source: datafusion
@@ -573,8 +573,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-13T00:30:00Z'
 - id: datafusion:library-user-guide/extending-operators.md
   source: datafusion
@@ -878,8 +878,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-13T00:30:00Z'
 - id: datafusion:library-user-guide/table-constraints.md
   source: datafusion
@@ -1065,8 +1065,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-13T00:30:00Z'
 - id: datafusion:user-guide/arrow-introduction.md
   source: datafusion
@@ -1157,8 +1157,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-13T00:30:00Z'
 - id: datafusion:user-guide/cli/functions.md
   source: datafusion
@@ -1265,8 +1265,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-13T00:30:00Z'
 - id: datafusion:user-guide/cli/usage.md
   source: datafusion
@@ -1307,8 +1307,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-13T00:30:00Z'
 - id: datafusion:user-guide/concepts-readings-events.md
   source: datafusion
@@ -1345,8 +1345,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-13T00:30:00Z'
 - id: datafusion:user-guide/configs.md
   source: datafusion
@@ -1394,8 +1394,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-13T00:30:00Z'
 - id: datafusion:user-guide/crate-configuration.md
   source: datafusion
@@ -1440,8 +1440,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-13T00:30:00Z'
 - id: datafusion:user-guide/dataframe.md
   source: datafusion
@@ -1477,8 +1477,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-13T00:30:00Z'
 - id: datafusion:user-guide/example-usage.md
   source: datafusion
@@ -1521,8 +1521,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-13T00:30:00Z'
 - id: datafusion:user-guide/explain-usage.md
   source: datafusion
@@ -1566,8 +1566,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-13T00:30:00Z'
 - id: datafusion:user-guide/expressions.md
   source: datafusion
@@ -1611,8 +1611,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-13T00:30:00Z'
 - id: datafusion:user-guide/faq.md
   source: datafusion
@@ -1727,8 +1727,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-13T00:30:00Z'
 - id: datafusion:user-guide/metrics.md
   source: datafusion
@@ -1984,8 +1984,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-13T00:30:00Z'
 - id: datafusion:user-guide/sql/format_options.md
   source: datafusion
@@ -2024,8 +2024,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-13T00:30:00Z'
 - id: datafusion:user-guide/sql/information_schema.md
   source: datafusion
@@ -2199,8 +2199,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-13T00:30:00Z'
 - id: datafusion:user-guide/sql/select.md
   source: datafusion
@@ -2245,8 +2245,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-13T00:30:00Z'
 - id: datafusion:user-guide/sql/special_functions.md
   source: datafusion
@@ -2290,8 +2290,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-13T00:30:00Z'
 - id: datafusion:user-guide/sql/struct_coercion.md
   source: datafusion
@@ -2456,8 +2456,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-13T00:30:00Z'
 - id: datafusion-python:mdbook/src/index.md
   source: datafusion-python
@@ -2483,8 +2483,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-13T00:30:00Z'
 - id: datafusion-python:mdbook/src/installation.md
   source: datafusion-python
@@ -2511,8 +2511,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-13T00:30:00Z'
 - id: datafusion-python:mdbook/src/quickstart.md
   source: datafusion-python
@@ -2539,8 +2539,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-13T00:30:00Z'
 - id: datafusion-python:mdbook/src/usage/index.md
   source: datafusion-python
@@ -2567,8 +2567,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-13T00:30:00Z'
 - id: datafusion-python:mdbook/src/usage/create-table.md
   source: datafusion-python
@@ -2595,8 +2595,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-13T00:30:00Z'
 - id: datafusion-python:mdbook/src/usage/query-table.md
   source: datafusion-python
@@ -2625,8 +2625,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-13T00:30:00Z'
 - id: datafusion-python:mdbook/src/usage/query-plans.md
   source: datafusion-python
@@ -2654,674 +2654,296 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-13T00:30:00Z'
-- id: datafusion-python:source/contributor-guide/ffi.md
+- id: datafusion-python:contributor-guide/ffi.md
   source: datafusion-python
-  path: source/contributor-guide/ffi.md
-  title: Ffi
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
+  category: unknown
   summary: Pending re-scan
   tags: []
-  keywords: []
-  concepts: []
-  category: unknown
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings: []
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: true
-  stale_since: '2026-07-01T15:08:57Z'
-  last_indexed: '2026-07-01T15:08:57Z'
-- id: datafusion-python:source/contributor-guide/index.md
+- id: datafusion-python:contributor-guide/index.md
   source: datafusion-python
-  path: source/contributor-guide/index.md
-  title: Index
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
+  category: unknown
   summary: Pending re-scan
   tags: []
-  keywords: []
-  concepts: []
-  category: unknown
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings: []
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: true
-  stale_since: '2026-07-01T15:08:57Z'
-  last_indexed: '2026-07-01T15:08:57Z'
-- id: datafusion-python:source/contributor-guide/introduction.md
+- id: datafusion-python:contributor-guide/introduction.md
   source: datafusion-python
-  path: source/contributor-guide/introduction.md
-  title: Introduction
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
+  category: unknown
   summary: Pending re-scan
   tags: []
-  keywords: []
-  concepts: []
-  category: unknown
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings: []
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: true
-  stale_since: '2026-07-01T15:08:57Z'
-  last_indexed: '2026-07-01T15:08:57Z'
-- id: datafusion-python:source/index.md
+- id: datafusion-python:user-guide/ai-coding-assistants.md
   source: datafusion-python
-  path: source/index.md
-  title: Index
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
+  category: unknown
   summary: Pending re-scan
   tags: []
-  keywords: []
-  concepts: []
-  category: unknown
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings: []
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: true
-  stale_since: '2026-07-01T15:08:57Z'
-  last_indexed: '2026-07-01T15:08:57Z'
-- id: datafusion-python:source/links.md
+- id: datafusion-python:user-guide/basics.md
   source: datafusion-python
-  path: source/links.md
-  title: Links
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
+  category: unknown
   summary: Pending re-scan
   tags: []
-  keywords: []
-  concepts: []
-  category: unknown
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings: []
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: true
-  stale_since: '2026-07-01T15:08:57Z'
-  last_indexed: '2026-07-01T15:08:57Z'
-- id: datafusion-python:source/user-guide/ai-coding-assistants.md
+- id: datafusion-python:user-guide/common-operations/aggregations.md
   source: datafusion-python
-  path: source/user-guide/ai-coding-assistants.md
-  title: Ai Coding Assistants
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
+  category: unknown
   summary: Pending re-scan
   tags: []
-  keywords: []
-  concepts: []
-  category: unknown
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings: []
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: true
-  stale_since: '2026-07-01T15:08:57Z'
-  last_indexed: '2026-07-01T15:08:57Z'
-- id: datafusion-python:source/user-guide/basics.md
+- id: datafusion-python:user-guide/common-operations/basic-info.md
   source: datafusion-python
-  path: source/user-guide/basics.md
-  title: Basics
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
+  category: unknown
   summary: Pending re-scan
   tags: []
-  keywords: []
-  concepts: []
-  category: unknown
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings: []
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: true
-  stale_since: '2026-07-01T15:08:57Z'
-  last_indexed: '2026-07-01T15:08:57Z'
-- id: datafusion-python:source/user-guide/common-operations/aggregations.md
+- id: datafusion-python:user-guide/common-operations/expressions.md
   source: datafusion-python
-  path: source/user-guide/common-operations/aggregations.md
-  title: Aggregations
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
+  category: unknown
   summary: Pending re-scan
   tags: []
-  keywords: []
-  concepts: []
-  category: unknown
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings: []
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: true
-  stale_since: '2026-07-01T15:08:57Z'
-  last_indexed: '2026-07-01T15:08:57Z'
-- id: datafusion-python:source/user-guide/common-operations/basic-info.md
+- id: datafusion-python:user-guide/common-operations/functions.md
   source: datafusion-python
-  path: source/user-guide/common-operations/basic-info.md
-  title: Basic Info
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
+  category: unknown
   summary: Pending re-scan
   tags: []
-  keywords: []
-  concepts: []
-  category: unknown
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings: []
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: true
-  stale_since: '2026-07-01T15:08:57Z'
-  last_indexed: '2026-07-01T15:08:57Z'
-- id: datafusion-python:source/user-guide/common-operations/expressions.md
+- id: datafusion-python:user-guide/common-operations/index.md
   source: datafusion-python
-  path: source/user-guide/common-operations/expressions.md
-  title: Expressions
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
+  category: unknown
   summary: Pending re-scan
   tags: []
-  keywords: []
-  concepts: []
-  category: unknown
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings: []
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: true
-  stale_since: '2026-07-01T15:08:57Z'
-  last_indexed: '2026-07-01T15:08:57Z'
-- id: datafusion-python:source/user-guide/common-operations/functions.md
+- id: datafusion-python:user-guide/common-operations/joins.md
   source: datafusion-python
-  path: source/user-guide/common-operations/functions.md
-  title: Functions
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
+  category: unknown
   summary: Pending re-scan
   tags: []
-  keywords: []
-  concepts: []
-  category: unknown
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings: []
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: true
-  stale_since: '2026-07-01T15:08:57Z'
-  last_indexed: '2026-07-01T15:08:57Z'
-- id: datafusion-python:source/user-guide/common-operations/index.md
+- id: datafusion-python:user-guide/common-operations/select-and-filter.md
   source: datafusion-python
-  path: source/user-guide/common-operations/index.md
-  title: Index
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
+  category: unknown
   summary: Pending re-scan
   tags: []
-  keywords: []
-  concepts: []
-  category: unknown
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings: []
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: true
-  stale_since: '2026-07-01T15:08:57Z'
-  last_indexed: '2026-07-01T15:08:57Z'
-- id: datafusion-python:source/user-guide/common-operations/joins.md
+- id: datafusion-python:user-guide/common-operations/spark-functions.md
   source: datafusion-python
-  path: source/user-guide/common-operations/joins.md
-  title: Joins
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
+  category: unknown
   summary: Pending re-scan
   tags: []
-  keywords: []
-  concepts: []
-  category: unknown
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings: []
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: true
-  stale_since: '2026-07-01T15:08:57Z'
-  last_indexed: '2026-07-01T15:08:57Z'
-- id: datafusion-python:source/user-guide/common-operations/select-and-filter.md
+- id: datafusion-python:user-guide/common-operations/udf-and-udfa.md
   source: datafusion-python
-  path: source/user-guide/common-operations/select-and-filter.md
-  title: Select And Filter
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
+  category: unknown
   summary: Pending re-scan
   tags: []
-  keywords: []
-  concepts: []
-  category: unknown
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings: []
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: true
-  stale_since: '2026-07-01T15:08:57Z'
-  last_indexed: '2026-07-01T15:08:57Z'
-- id: datafusion-python:source/user-guide/common-operations/spark-functions.md
+- id: datafusion-python:user-guide/common-operations/views.md
   source: datafusion-python
-  path: source/user-guide/common-operations/spark-functions.md
-  title: Spark Functions
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
+  category: unknown
   summary: Pending re-scan
   tags: []
-  keywords: []
-  concepts: []
-  category: unknown
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings: []
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: true
-  stale_since: '2026-07-01T15:08:57Z'
-  last_indexed: '2026-07-01T15:08:57Z'
-- id: datafusion-python:source/user-guide/common-operations/udf-and-udfa.md
+- id: datafusion-python:user-guide/common-operations/windows.md
   source: datafusion-python
-  path: source/user-guide/common-operations/udf-and-udfa.md
-  title: Udf And Udfa
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
+  category: unknown
   summary: Pending re-scan
   tags: []
-  keywords: []
-  concepts: []
-  category: unknown
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings: []
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: true
-  stale_since: '2026-07-01T15:08:57Z'
-  last_indexed: '2026-07-01T15:08:57Z'
-- id: datafusion-python:source/user-guide/common-operations/views.md
+- id: datafusion-python:user-guide/configuration.md
   source: datafusion-python
-  path: source/user-guide/common-operations/views.md
-  title: Views
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
+  category: unknown
   summary: Pending re-scan
   tags: []
-  keywords: []
-  concepts: []
-  category: unknown
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings: []
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: true
-  stale_since: '2026-07-01T15:08:57Z'
-  last_indexed: '2026-07-01T15:08:57Z'
-- id: datafusion-python:source/user-guide/common-operations/windows.md
+- id: datafusion-python:user-guide/data-sources.md
   source: datafusion-python
-  path: source/user-guide/common-operations/windows.md
-  title: Windows
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
+  category: unknown
   summary: Pending re-scan
   tags: []
-  keywords: []
-  concepts: []
-  category: unknown
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings: []
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: true
-  stale_since: '2026-07-01T15:08:57Z'
-  last_indexed: '2026-07-01T15:08:57Z'
-- id: datafusion-python:source/user-guide/configuration.md
+- id: datafusion-python:user-guide/dataframe/execution-metrics.md
   source: datafusion-python
-  path: source/user-guide/configuration.md
-  title: Configuration
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
+  category: unknown
   summary: Pending re-scan
   tags: []
-  keywords: []
-  concepts: []
-  category: unknown
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings: []
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: true
-  stale_since: '2026-07-01T15:08:57Z'
-  last_indexed: '2026-07-01T15:08:57Z'
-- id: datafusion-python:source/user-guide/data-sources.md
+- id: datafusion-python:user-guide/dataframe/index.md
   source: datafusion-python
-  path: source/user-guide/data-sources.md
-  title: Data Sources
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
+  category: unknown
   summary: Pending re-scan
   tags: []
-  keywords: []
-  concepts: []
-  category: unknown
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings: []
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: true
-  stale_since: '2026-07-01T15:08:57Z'
-  last_indexed: '2026-07-01T15:08:57Z'
-- id: datafusion-python:source/user-guide/dataframe/execution-metrics.md
+- id: datafusion-python:user-guide/dataframe/rendering.md
   source: datafusion-python
-  path: source/user-guide/dataframe/execution-metrics.md
-  title: Execution Metrics
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
+  category: unknown
   summary: Pending re-scan
   tags: []
-  keywords: []
-  concepts: []
-  category: unknown
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings: []
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: true
-  stale_since: '2026-07-01T15:08:57Z'
-  last_indexed: '2026-07-01T15:08:57Z'
-- id: datafusion-python:source/user-guide/dataframe/index.md
+- id: datafusion-python:user-guide/distributing-work.md
   source: datafusion-python
-  path: source/user-guide/dataframe/index.md
-  title: Index
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
+  category: unknown
   summary: Pending re-scan
   tags: []
-  keywords: []
-  concepts: []
-  category: unknown
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings: []
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: true
-  stale_since: '2026-07-01T15:08:57Z'
-  last_indexed: '2026-07-01T15:08:57Z'
-- id: datafusion-python:source/user-guide/dataframe/rendering.md
+- id: datafusion-python:user-guide/index.md
   source: datafusion-python
-  path: source/user-guide/dataframe/rendering.md
-  title: Rendering
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
+  category: unknown
   summary: Pending re-scan
   tags: []
-  keywords: []
-  concepts: []
-  category: unknown
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings: []
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: true
-  stale_since: '2026-07-01T15:08:57Z'
-  last_indexed: '2026-07-01T15:08:57Z'
-- id: datafusion-python:source/user-guide/distributing-work.md
+- id: datafusion-python:user-guide/introduction.md
   source: datafusion-python
-  path: source/user-guide/distributing-work.md
-  title: Distributing Work
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
+  category: unknown
   summary: Pending re-scan
   tags: []
-  keywords: []
-  concepts: []
-  category: unknown
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings: []
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: true
-  stale_since: '2026-07-01T15:08:57Z'
-  last_indexed: '2026-07-01T15:08:57Z'
-- id: datafusion-python:source/user-guide/index.md
+- id: datafusion-python:user-guide/io/arrow.md
   source: datafusion-python
-  path: source/user-guide/index.md
-  title: Index
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
+  category: unknown
   summary: Pending re-scan
   tags: []
-  keywords: []
-  concepts: []
-  category: unknown
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings: []
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: true
-  stale_since: '2026-07-01T15:08:57Z'
-  last_indexed: '2026-07-01T15:08:57Z'
-- id: datafusion-python:source/user-guide/introduction.md
+- id: datafusion-python:user-guide/io/avro.md
   source: datafusion-python
-  path: source/user-guide/introduction.md
-  title: Introduction
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
+  category: unknown
   summary: Pending re-scan
   tags: []
-  keywords: []
-  concepts: []
-  category: unknown
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings: []
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: true
-  stale_since: '2026-07-01T15:08:57Z'
-  last_indexed: '2026-07-01T15:08:57Z'
-- id: datafusion-python:source/user-guide/io/arrow.md
+- id: datafusion-python:user-guide/io/csv.md
   source: datafusion-python
-  path: source/user-guide/io/arrow.md
-  title: Arrow
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
+  category: unknown
   summary: Pending re-scan
   tags: []
-  keywords: []
-  concepts: []
-  category: unknown
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings: []
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: true
-  stale_since: '2026-07-01T15:08:57Z'
-  last_indexed: '2026-07-01T15:08:57Z'
-- id: datafusion-python:source/user-guide/io/avro.md
+- id: datafusion-python:user-guide/io/index.md
   source: datafusion-python
-  path: source/user-guide/io/avro.md
-  title: Avro
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
+  category: unknown
   summary: Pending re-scan
   tags: []
-  keywords: []
-  concepts: []
-  category: unknown
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings: []
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: true
-  stale_since: '2026-07-01T15:08:57Z'
-  last_indexed: '2026-07-01T15:08:57Z'
-- id: datafusion-python:source/user-guide/io/csv.md
+- id: datafusion-python:user-guide/io/json.md
   source: datafusion-python
-  path: source/user-guide/io/csv.md
-  title: Csv
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
+  category: unknown
   summary: Pending re-scan
   tags: []
-  keywords: []
-  concepts: []
-  category: unknown
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings: []
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: true
-  stale_since: '2026-07-01T15:08:57Z'
-  last_indexed: '2026-07-01T15:08:57Z'
-- id: datafusion-python:source/user-guide/io/index.md
+- id: datafusion-python:user-guide/io/parquet.md
   source: datafusion-python
-  path: source/user-guide/io/index.md
-  title: Index
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
+  category: unknown
   summary: Pending re-scan
   tags: []
-  keywords: []
-  concepts: []
-  category: unknown
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings: []
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: true
-  stale_since: '2026-07-01T15:08:57Z'
-  last_indexed: '2026-07-01T15:08:57Z'
-- id: datafusion-python:source/user-guide/io/json.md
+- id: datafusion-python:user-guide/io/table_provider.md
   source: datafusion-python
-  path: source/user-guide/io/json.md
-  title: Json
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
+  category: unknown
   summary: Pending re-scan
   tags: []
-  keywords: []
-  concepts: []
-  category: unknown
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings: []
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: true
-  stale_since: '2026-07-01T15:08:57Z'
-  last_indexed: '2026-07-01T15:08:57Z'
-- id: datafusion-python:source/user-guide/io/parquet.md
+- id: datafusion-python:user-guide/sql.md
   source: datafusion-python
-  path: source/user-guide/io/parquet.md
-  title: Parquet
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
+  category: unknown
   summary: Pending re-scan
   tags: []
-  keywords: []
-  concepts: []
-  category: unknown
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings: []
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: true
-  stale_since: '2026-07-01T15:08:57Z'
-  last_indexed: '2026-07-01T15:08:57Z'
-- id: datafusion-python:source/user-guide/io/table_provider.md
+- id: datafusion-python:user-guide/upgrade-guides.md
   source: datafusion-python
-  path: source/user-guide/io/table_provider.md
-  title: Table Provider
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
+  category: unknown
   summary: Pending re-scan
   tags: []
-  keywords: []
-  concepts: []
-  category: unknown
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings: []
-  links_to: []
-  links_from: []
-  frontmatter: {}
+- id: datafusion:contributor-guide/communication.md
+  source: datafusion
   stale: true
-  stale_since: '2026-07-01T15:08:57Z'
-  last_indexed: '2026-07-01T15:08:57Z'
-- id: datafusion-python:source/user-guide/sql.md
-  source: datafusion-python
-  path: source/user-guide/sql.md
-  title: Sql
+  stale_since: '2026-07-02T00:00:00Z'
+  category: unknown
   summary: Pending re-scan
   tags: []
-  keywords: []
-  concepts: []
-  category: unknown
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings: []
-  links_to: []
-  links_from: []
-  frontmatter: {}
+- id: datafusion:contributor-guide/governance.md
+  source: datafusion
   stale: true
-  stale_since: '2026-07-01T15:08:57Z'
-  last_indexed: '2026-07-01T15:08:57Z'
-- id: datafusion-python:source/user-guide/upgrade-guides.md
-  source: datafusion-python
-  path: source/user-guide/upgrade-guides.md
-  title: Upgrade Guides
+  stale_since: '2026-07-02T00:00:00Z'
+  category: unknown
   summary: Pending re-scan
   tags: []
-  keywords: []
-  concepts: []
-  category: unknown
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings: []
-  links_to: []
-  links_from: []
-  frontmatter: {}
+- id: datafusion:contributor-guide/inviting.md
+  source: datafusion
   stale: true
-  stale_since: '2026-07-01T15:08:57Z'
-  last_indexed: '2026-07-01T15:08:57Z'
+  stale_since: '2026-07-02T00:00:00Z'
+  category: unknown
+  summary: Pending re-scan
+  tags: []
+- id: datafusion:contributor-guide/release_management.md
+  source: datafusion
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
+  category: unknown
+  summary: Pending re-scan
+  tags: []
+- id: datafusion:library-user-guide/upgrading/49.0.0.md
+  source: datafusion
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
+  category: unknown
+  summary: Pending re-scan
+  tags: []
+- id: datafusion:library-user-guide/upgrading/53.0.0.md
+  source: datafusion
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
+  category: unknown
+  summary: Pending re-scan
+  tags: []
+- id: datafusion:library-user-guide/upgrading/54.0.0.md
+  source: datafusion
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
+  category: unknown
+  summary: Pending re-scan
+  tags: []
+- id: datafusion:library-user-guide/upgrading/55.0.0.md
+  source: datafusion
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
+  category: unknown
+  summary: Pending re-scan
+  tags: []
 meta:
-  generated_at: '2026-07-01T15:08:57Z'
-  entry_count: 102
+  generated_at: '2026-07-02T00:00:00Z'
+  entry_count: 108

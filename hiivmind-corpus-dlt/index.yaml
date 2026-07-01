@@ -162,8 +162,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/destinations/bigquery.md
   source: dlt
@@ -246,8 +246,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/destinations/clickhouse.md
   source: dlt
@@ -341,8 +341,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/destinations/community-destinations.md
   source: dlt
@@ -527,7 +527,8 @@ entries:
   - anchor: can-be-used-as-dlt-dbricks-in-the-notebook-instead
     title: can be used as `dlt_dbricks` in the notebook instead
   - anchor: replace-mentions-of-dlt-with-dlt-dbricks-in-deltalivetableshook-py-to
-    title: Replace mentions of `dlt` with `dlt_dbricks` in DeltaLiveTablesHook.py to
+    title: Replace mentions of `dlt` with `dlt_dbricks` in DeltaLiveTablesHook.py
+      to
   - anchor: avoid-import-errors
     title: avoid import errors
   - anchor: install-dlthub-dlt
@@ -535,12 +536,12 @@ entries:
   - anchor: 1-drop-databricks-post-import-hook
     title: 1 Drop Databricks' post-import hook
   - anchor: 2-purge-half-initialized-delta-live-tables-modules
-    title: "2\uFE0F Purge half-initialized Delta-Live-Tables modules"
+    title: 2️ Purge half-initialized Delta-Live-Tables modules
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/destinations/delta-iceberg.md
   source: dlt
@@ -601,8 +602,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/destinations/destination.md
   source: dlt
@@ -663,13 +664,13 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/destinations/dremio.md
   source: dlt
   path: dlt-ecosystem/destinations/dremio.md
-  title: "\U0001F9EA Dremio"
+  title: 🧪 Dremio
   summary: Dremio `dlt` destination
   tags:
   - destination
@@ -717,8 +718,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/destinations/duckdb.md
   source: dlt
@@ -781,32 +782,28 @@ entries:
   - anchor: example-output
     title: Example output
   - anchor: ''
-    title: "\u250C\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252C\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252C\u2500\u2500\u2500\u2500\
-      \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252C\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\
-      \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252C\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252C\u2500\
-      \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510"
+    title: ┌──────────┬───────────────┬─────────────────────┬──────────────────────┬───────────────────────┬───────────┐
   - anchor: database-schema-name-column-names-column-types-temporary
-    title: "\u2502 database \u2502    schema     \u2502        name         \u2502     column_names     \u2502     column_types      \u2502 temporary \u2502"
+    title: │ database │    schema     │        name         │     column_names     │     column_types      │
+      temporary │
   - anchor: varchar-varchar-varchar-varchar-varchar-boolean
-    title: "\u2502 varchar  \u2502    varchar    \u2502       varchar       \u2502      varchar[]       \u2502       varchar[]       \u2502  boolean  \u2502"
+    title: │ varchar  │    varchar    │       varchar       │      varchar[]       │       varchar[]       │  boolean  │
   - anchor: ''
-    title: "\u251C\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253C\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253C\u2500\u2500\u2500\u2500\
-      \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253C\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\
-      \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253C\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253C\u2500\
-      \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2524"
+    title: ├──────────┼───────────────┼─────────────────────┼──────────────────────┼───────────────────────┼───────────┤
   - anchor: memory-chess-data-dlt-loads-load-id-schema-n-varchar-varchar-false
-    title: "\u2502 memory   \u2502 chess_data    \u2502 _dlt_loads          \u2502 [load_id, schema_n\u2026  \u2502 [VARCHAR, VARCHAR, \u2026  \u2502 false     \u2502"
+    title: │ memory   │ chess_data    │ _dlt_loads          │ [load_id, schema_n…  │
+      [VARCHAR, VARCHAR, …  │ false     │
   - anchor: memory-chess-data-dlt-pipeline-state-version-engine-v-bigint-bigint-va-false
-    title: "\u2502 memory   \u2502 chess_data    \u2502 _dlt_pipeline_state \u2502 [version, engine_v\u2026  \u2502 [BIGINT, BIGINT, VA\u2026  \u2502 false     \u2502"
+    title: │ memory   │ chess_data    │ _dlt_pipeline_state │ [version, engine_v…  │
+      [BIGINT, BIGINT, VA…  │ false     │
   - anchor: memory-chess-data-dlt-version-version-engine-v-bigint-bigint-ti-false
-    title: "\u2502 memory   \u2502 chess_data    \u2502 _dlt_version        \u2502 [version, engine_v\u2026  \u2502 [BIGINT, BIGINT, TI\u2026  \u2502 false     \u2502"
+    title: │ memory   │ chess_data    │ _dlt_version        │ [version, engine_v…  │
+      [BIGINT, BIGINT, TI…  │ false     │
   - anchor: memory-chess-data-my-table-a-dlt-load-id-bigint-varchar-v-false
-    title: "\u2502 memory   \u2502 chess_data    \u2502 my_table            \u2502 [a, _dlt_load_id, \u2026  \u2502 [BIGINT, VARCHAR, V\u2026  \u2502 false     \u2502"
+    title: │ memory   │ chess_data    │ my_table            │ [a, _dlt_load_id, …  │
+      [BIGINT, VARCHAR, V…  │ false     │
   - anchor: ''
-    title: "\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\
-      \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\
-      \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\
-      \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518"
+    title: └──────────┴───────────────┴─────────────────────┴──────────────────────┴───────────────────────┴───────────┘
   - anchor: additional-configuration
     title: Additional configuration
   - anchor: install-spatial
@@ -822,8 +819,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/destinations/ducklake.md
   source: dlt
@@ -872,7 +869,8 @@ entries:
   - anchor: force-parallel-loads-on-sqlite
     title: force parallel loads on sqlite
   - anchor: set-ducklake-credentials-using-shorthands-s3-bucket-requires-secrets-in-config
-    title: set ducklake credentials using shorthands, s3 bucket requires secrets in config
+    title: set ducklake credentials using shorthands, s3 bucket requires secrets in
+      config
   - anchor: set-catalog-name-using-connection-string-credentials
     title: set catalog name using connection string credentials
   - anchor: use-duckdb-with-the-default-name
@@ -904,8 +902,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/destinations/fabric.md
   source: dlt
@@ -998,14 +996,15 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/destinations/filesystem.md
   source: dlt
   path: dlt-ecosystem/destinations/filesystem.md
   title: Cloud storage and filesystem
-  summary: Store data in remote file systems and cloud storage services like AWS S3, Google Cloud Storage, or Azure Blob Storage
+  summary: Store data in remote file systems and cloud storage services like AWS S3,
+    Google Cloud Storage, or Azure Blob Storage
   tags:
   - destination
   keywords:
@@ -1078,7 +1077,8 @@ entries:
   - anchor: layout-table-name-load-package-timestamp-load-id-file-id-ext
     title: layout = "{table_name}/{load_package_timestamp}/{load_id}.{file_id}.{ext}"
   - anchor: parquet-like-layout-note-it-is-not-compatible-with-the-internal-datetime-of-the-parquet-file
-    title: 'Parquet-like layout (note: it is not compatible with the internal datetime of the parquet file)'
+    title: 'Parquet-like layout (note: it is not compatible with the internal datetime
+      of the parquet file)'
   - anchor: layout-table-name-year-yyyy-month-mm-day-dd-load-id-file-id-ext
     title: layout = "{table_name}/year={YYYY}/month={MM}/day={DD}/{load_id}.{file_id}.{ext}"
   - anchor: custom-placeholders
@@ -1108,8 +1108,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/destinations/huggingface.md
   source: dlt
@@ -1200,8 +1200,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/destinations/iceberg.md
   source: dlt
@@ -1278,8 +1278,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/destinations/index.md
   source: dlt
@@ -1304,14 +1304,15 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/destinations/lance.md
   source: dlt
   path: dlt-ecosystem/destinations/lance.md
   title: Lance
-  summary: Lance is an open-source columnar format for AI/ML that can be used as a destination in dlt.
+  summary: Lance is an open-source columnar format for AI/ML that can be used as a
+    destination in dlt.
   tags:
   - destination
   keywords:
@@ -1382,14 +1383,15 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/destinations/lancedb.md
   source: dlt
   path: dlt-ecosystem/destinations/lancedb.md
   title: LanceDB
-  summary: LanceDB is a multimodal lakehouse for AI that can be used as a destination in dlt.
+  summary: LanceDB is a multimodal lakehouse for AI that can be used as a destination
+    in dlt.
   tags:
   - destination
   keywords:
@@ -1514,8 +1516,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/destinations/mssql.md
   source: dlt
@@ -1590,8 +1592,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/destinations/postgres.md
   source: dlt
@@ -1662,14 +1664,15 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/destinations/qdrant.md
   source: dlt
   path: dlt-ecosystem/destinations/qdrant.md
   title: Qdrant
-  summary: Qdrant is a high-performance vector search engine/database that can be used as a destination in dlt.
+  summary: Qdrant is a high-performance vector search engine/database that can be
+    used as a destination in dlt.
   tags:
   - destination
   keywords:
@@ -1796,8 +1799,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/destinations/snowflake.md
   source: dlt
@@ -1854,7 +1857,7 @@ entries:
   - anchor: decfloat-type
     title: DECFLOAT type
   - anchor: set-precision-before-fetching-the-connector-uses-the-active-context
-    title: "Set precision BEFORE fetching \u2014 the connector uses the active context"
+    title: Set precision BEFORE fetching — the connector uses the active context
   - anchor: supported-file-formats
     title: Supported file formats
   - anchor: custom-csv-formats
@@ -1892,7 +1895,8 @@ entries:
   - anchor: additional-destination-options
     title: Additional destination options
   - anchor: use-an-existing-named-stage-instead-of-the-default-default-uses-the-implicit-table-stage-per-table
-    title: Use an existing named stage instead of the default. Default uses the implicit table stage per table
+    title: Use an existing named stage instead of the default. Default uses the implicit
+      table stage per table
   - anchor: whether-to-keep-or-delete-the-staged-files-after-copy-into-succeeds
     title: Whether to keep or delete the staged files after COPY INTO succeeds
   - anchor: add-unique-and-primary-key-hints-to-tables
@@ -1912,8 +1916,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/destinations/sqlalchemy.md
   source: dlt
@@ -1988,8 +1992,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/destinations/synapse.md
   source: dlt
@@ -2060,14 +2064,15 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/destinations/weaviate.md
   source: dlt
   path: dlt-ecosystem/destinations/weaviate.md
   title: Weaviate
-  summary: Weaviate is an open source vector database that can be used as a destination in dlt.
+  summary: Weaviate is an open source vector database that can be used as a destination
+    in dlt.
   tags:
   - destination
   keywords:
@@ -2133,162 +2138,12 @@ entries:
   stale: false
   stale_since: null
   last_indexed: '2026-04-18T14:38:30Z'
-- id: dlt:dlt-ecosystem/file-formats/csv.md
-  source: dlt
-  path: dlt-ecosystem/file-formats/csv.md
-  title: CSV
-  summary: The CSV file format
-  tags:
-  - reference
-  keywords:
-  - dlt
-  - csv
-  - destination
-  - source
-  - file formats
-  concepts:
-  - dlt-ecosystem
-  category: reference
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings:
-  - anchor: csv-file-format
-    title: CSV file format
-  - anchor: supported-destinations
-    title: Supported destinations
-  - anchor: how-to-configure
-    title: How to configure
-  - anchor: default-settings
-    title: Default settings
-  - anchor: change-settings
-    title: Change settings
-  - anchor: destination-settings
-    title: Destination settings
-  - anchor: limitations
-    title: Limitations
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: false
-  stale_since: null
-  last_indexed: '2026-04-18T14:38:30Z'
-- id: dlt:dlt-ecosystem/file-formats/insert-format.md
-  source: dlt
-  path: dlt-ecosystem/file-formats/insert-format.md
-  title: INSERT
-  summary: The INSERT file format
-  tags:
-  - reference
-  keywords:
-  - insert values
-  - load
-  - state
-  - destination
-  - file formats
-  concepts:
-  - dlt-ecosystem
-  category: reference
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings:
-  - anchor: sql-insert-file-format
-    title: SQL INSERT file format
-  - anchor: supported-destinations
-    title: Supported destinations
-  - anchor: how-to-configure
-    title: How to configure
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: false
-  stale_since: null
-  last_indexed: '2026-04-18T14:38:30Z'
-- id: dlt:dlt-ecosystem/file-formats/jsonl.md
-  source: dlt
-  path: dlt-ecosystem/file-formats/jsonl.md
-  title: JSONL
-  summary: The JSONL file format or JSON Delimited stores several JSON documents in one file. The JSON documents are separated by a new line.
-  tags:
-  - reference
-  keywords:
-  - jsonl file format
-  - json delimited
-  - destination
-  - jsonl
-  - file formats
-  concepts:
-  - dlt-ecosystem
-  category: reference
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings:
-  - anchor: jsonl-json-lines-json-delimited
-    title: JSONL - JSON Lines - JSON Delimited
-  - anchor: supported-destinations
-    title: Supported destinations
-  - anchor: how-to-configure
-    title: How to configure
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: false
-  stale_since: null
-  last_indexed: '2026-04-18T14:38:30Z'
-- id: dlt:dlt-ecosystem/file-formats/parquet.md
-  source: dlt
-  path: dlt-ecosystem/file-formats/parquet.md
-  title: Parquet
-  summary: The parquet file format
-  tags:
-  - reference
-  keywords:
-  - load
-  - extract
-  - dlt
-  - destination
-  - source
-  - schema
-  - parquet
-  - file formats
-  concepts:
-  - dlt-ecosystem
-  category: reference
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings:
-  - anchor: parquet-file-format
-    title: Parquet file format
-  - anchor: supported-destinations
-    title: Supported destinations
-  - anchor: how-to-configure
-    title: How to configure
-  - anchor: destination-autoconfig
-    title: Destination autoconfig
-  - anchor: writer-settings
-    title: Writer settings
-  - anchor: the-default-values
-    title: the default values
-  - anchor: timestamps-and-timezones
-    title: Timestamps and timezones
-  - anchor: disable-timezones-utc-adjustment-flags
-    title: Disable timezones / UTC adjustment flags
-  - anchor: row-group-size
-    title: Row group size
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: false
-  stale_since: null
-  last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/llm-tooling/explore-and-transform.md
   source: dlt
   path: dlt-ecosystem/llm-tooling/explore-and-transform.md
   title: Explore and Transform your data with dltHub AI Workbench
-  summary: Explore loaded pipeline data, build interactive dashboards, and transform data into a Canonical Data Model using dltHub AI Workbench toolkits
+  summary: Explore loaded pipeline data, build interactive dashboards, and transform
+    data into a Canonical Data Model using dltHub AI Workbench toolkits
   tags:
   - reference
   keywords:
@@ -2320,21 +2175,21 @@ entries:
   - anchor: explore-your-data
     title: Explore your data
   - anchor: explore-data-connect-and-plan-charts
-    title: "`/explore-data` \u2014 connect and plan charts"
+    title: '`/explore-data` — connect and plan charts'
   - anchor: build-notebook-assemble-and-launch-the-dashboard
-    title: "`/build-notebook` \u2014 assemble and launch the dashboard"
+    title: '`/build-notebook` — assemble and launch the dashboard'
   - anchor: anatomy-of-the-data-exploration-toolkit
     title: Anatomy of the data-exploration toolkit
   - anchor: transform-your-data
     title: Transform your data
   - anchor: annotate-sources-map-tables-to-business-concepts
-    title: "`/annotate-sources` \u2014 map tables to business concepts"
+    title: '`/annotate-sources` — map tables to business concepts'
   - anchor: create-ontology-build-the-entity-graph
-    title: "`/create-ontology` \u2014 build the entity graph"
+    title: '`/create-ontology` — build the entity graph'
   - anchor: generate-cdm-design-the-dimensional-model
-    title: "`/generate-cdm` \u2014 design the dimensional model"
+    title: '`/generate-cdm` — design the dimensional model'
   - anchor: create-transformation-write-the-transformation-code
-    title: "`/create-transformation` \u2014 write the transformation code"
+    title: '`/create-transformation` — write the transformation code'
   - anchor: anatomy-of-the-transformations-toolkit
     title: Anatomy of the transformations toolkit
   - anchor: results
@@ -2349,7 +2204,8 @@ entries:
   source: dlt
   path: dlt-ecosystem/llm-tooling/llm-native-workflow.md
   title: REST API Source with dlthub AI Workbench
-  summary: Build any REST API source with dltHub AI Workbench toolkits - workflows, skills, rules, and MCP tools
+  summary: Build any REST API source with dltHub AI Workbench toolkits - workflows,
+    skills, rules, and MCP tools
   tags:
   - verified-source
   keywords:
@@ -2387,23 +2243,23 @@ entries:
   - anchor: build-your-first-pipeline
     title: Build your first pipeline
   - anchor: find-source-discover-your-data-source
-    title: "`/find-source` \u2014 discover your data source"
+    title: '`/find-source` — discover your data source'
   - anchor: create-rest-api-pipeline-scaffold-the-pipeline
-    title: "`/create-rest-api-pipeline` \u2014 scaffold the pipeline"
+    title: '`/create-rest-api-pipeline` — scaffold the pipeline'
   - anchor: setup-secrets-configure-credentials
-    title: "`setup-secrets` \u2014 configure credentials"
+    title: '`setup-secrets` — configure credentials'
   - anchor: debug-pipeline-run-and-fix
-    title: "`/debug-pipeline` \u2014 run and fix"
+    title: '`/debug-pipeline` — run and fix'
   - anchor: validate-data-check-your-data
-    title: "`/validate-data` \u2014 check your data"
+    title: '`/validate-data` — check your data'
   - anchor: extend-and-harden
     title: Extend and harden
   - anchor: adjust-endpoint-remove-dev-limits-and-configure-loading
-    title: "`/adjust-endpoint` \u2014 remove dev limits and configure loading"
+    title: '`/adjust-endpoint` — remove dev limits and configure loading'
   - anchor: new-endpoint-add-more-resources
-    title: "`/new-endpoint` \u2014 add more resources"
+    title: '`/new-endpoint` — add more resources'
   - anchor: view-data-explore-your-dataset
-    title: "`/view-data` \u2014 explore your dataset"
+    title: '`/view-data` — explore your dataset'
   - anchor: anatomy-of-the-rest-api-pipeline-toolkit
     title: Anatomy of the REST API pipeline toolkit
   - anchor: how-the-components-interact
@@ -2456,70 +2312,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
-  last_indexed: '2026-04-18T14:38:30Z'
-- id: dlt:dlt-ecosystem/table-formats/delta.md
-  source: dlt
-  path: dlt-ecosystem/table-formats/delta.md
-  title: Delta
-  summary: The Delta table format
-  tags:
-  - reference
-  keywords:
-  - dlt
-  - destination
-  - delta
-  - table formats
-  - source
-  concepts:
-  - dlt-ecosystem
-  - table-formats
-  category: reference
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings:
-  - anchor: delta-table-format
-    title: Delta table format
-  - anchor: supported-destinations
-    title: Supported destinations
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: false
-  stale_since: null
-  last_indexed: '2026-04-18T14:38:30Z'
-- id: dlt:dlt-ecosystem/table-formats/iceberg.md
-  source: dlt
-  path: dlt-ecosystem/table-formats/iceberg.md
-  title: Iceberg
-  summary: The Iceberg table format
-  tags:
-  - reference
-  keywords:
-  - dlt
-  - destination
-  - table formats
-  - source
-  - iceberg
-  concepts:
-  - dlt-ecosystem
-  - table-formats
-  category: reference
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings:
-  - anchor: iceberg-table-format
-    title: Iceberg table format
-  - anchor: supported-destinations
-    title: Supported destinations
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/transformations/add-map.md
   source: dlt
@@ -2630,7 +2424,8 @@ entries:
   - anchor: make-or-restore-venv-for-dbt-using-the-latest-dbt-version
     title: Make or restore venv for dbt, using the latest dbt version
   - anchor: note-if-you-have-dbt-installed-in-your-current-environment-just-skip-this-line
-    title: 'NOTE: If you have dbt installed in your current environment, just skip this line'
+    title: 'NOTE: If you have dbt installed in your current environment, just skip
+      this line'
   - anchor: and-the-venv-argument-to-dlt-dbt-package
     title: and the `venv` argument to dlt.dbt.package()
   - anchor: get-runner-optionally-pass-the-venv
@@ -2648,71 +2443,15 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
-  last_indexed: '2026-04-18T14:38:30Z'
-- id: dlt:dlt-ecosystem/transformations/dbt/dbt_cloud.md
-  source: dlt
-  path: dlt-ecosystem/transformations/dbt/dbt_cloud.md
-  title: Transform data with dbt Cloud
-  summary: Transforming the data loaded by a dlt pipeline with dbt Cloud
-  tags:
-  - reference
-  keywords:
-  - sql
-  - transform
-  - credentials
-  - load
-  - dlt
-  - schema
-  - pipeline
-  concepts:
-  - dlt-ecosystem
-  - transformations
-  category: reference
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings:
-  - anchor: dbt-cloud-client-and-helper-functions
-    title: dbt Cloud client and helper functions
-  - anchor: api-client
-    title: API client
-  - anchor: initialize-the-client
-    title: Initialize the client
-  - anchor: example-trigger-a-job-run
-    title: 'Example: Trigger a job run'
-  - anchor: example-get-run-status
-    title: 'Example: Get run status'
-  - anchor: helper-functions
-    title: Helper functions
-  - anchor: run-dbt-cloud-job
-    title: '`run_dbt_cloud_job()`'
-  - anchor: trigger-a-job-run-with-default-configuration
-    title: Trigger a job run with default configuration
-  - anchor: trigger-a-job-run-with-additional-data
-    title: Trigger a job run with additional data
-  - anchor: get-dbt-cloud-run-status
-    title: '`get_dbt_cloud_run_status()`'
-  - anchor: retrieve-status-for-a-specific-run
-    title: Retrieve status for a specific run
-  - anchor: set-credentials
-    title: Set credentials
-  - anchor: secrets-toml
-    title: secrets.toml
-  - anchor: environment-variables
-    title: Environment variables
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/transformations/encryption.md
   source: dlt
   path: dlt-ecosystem/transformations/encryption.md
   title: Data security and encryption
-  summary: Transforming the data for encryption in transit, client-side encryption, and encryption at rest.
+  summary: Transforming the data for encryption in transit, client-side encryption,
+    and encryption at rest.
   tags:
   - reference
   keywords:
@@ -2747,7 +2486,7 @@ entries:
   - anchor: encryption-in-transit-and-server-side-encryption
     title: Encryption in transit and server-side encryption
   - anchor: encrypted-partitions-for-dlt-s-working-directory
-    title: "Encrypted partitions for dlt\u2019s working directory"
+    title: Encrypted partitions for dlt’s working directory
   - anchor: encryption-in-transit
     title: Encryption in transit
   - anchor: server-side-encryption
@@ -2771,8 +2510,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/transformations/index.md
   source: dlt
@@ -2807,14 +2546,15 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/transformations/python.md
   source: dlt
   path: dlt-ecosystem/transformations/python.md
   title: Transform data in Python with Arrow tables or DataFrames
-  summary: Transforming data loaded by a dlt pipeline with pandas dataframes or arrow tables
+  summary: Transforming data loaded by a dlt pipeline with pandas dataframes or arrow
+    tables
   tags:
   - reference
   keywords:
@@ -2851,22 +2591,25 @@ entries:
   - anchor: a-simple-example
     title: A simple example
   - anchor: get-user-relation-with-only-a-few-columns-selected-but-omitting-email-and-name
-    title: get user relation with only a few columns selected, but omitting email and name
+    title: get user relation with only a few columns selected, but omitting email
+      and name
   - anchor: load-the-data-into-a-new-table-called-users-clean-in-the-same-dataset
     title: load the data into a new table called users_clean in the same dataset
   - anchor: a-more-complex-example
     title: A more complex example
   - anchor: note-this-resource-will-work-like-a-regular-resource-and-support-write-disposition-primary-key-etc
-    title: 'NOTE: this resource will work like a regular resource and support write_disposition, primary_key, etc.'
+    title: 'NOTE: this resource will work like a regular resource and support write_disposition,
+      primary_key, etc.'
   - anchor: note-for-selecting-only-users-above-18-we-could-also-use-the-filter-method-on-the-relation-with-ibis-expressions
-    title: 'NOTE: For selecting only users above 18, we could also use the filter method on the relation with ibis expressions'
+    title: 'NOTE: For selecting only users above 18, we could also use the filter
+      method on the relation with ibis expressions'
   - anchor: other-transforming-tools
     title: Other transforming tools
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/transformations/sql.md
   source: dlt
@@ -2896,14 +2639,15 @@ entries:
   - anchor: transform-data-using-the-dlt-sql-client
     title: Transform data using the `dlt` SQL client
   - anchor: note-this-is-the-duckdb-sql-dialect-other-destinations-may-use-different-expressions
-    title: 'NOTE: this is the duckdb sql dialect, other destinations may use different expressions'
+    title: 'NOTE: this is the duckdb sql dialect, other destinations may use different
+      expressions'
   - anchor: other-transforming-tools
     title: Other transforming tools
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/verified-sources/airtable.md
   source: dlt
@@ -2958,8 +2702,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/verified-sources/amazon_kinesis.md
   source: dlt
@@ -3014,8 +2758,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/verified-sources/arrow-pandas.md
   source: dlt
@@ -3060,7 +2804,8 @@ entries:
   - anchor: incremental-loading-with-arrow-tables
     title: Incremental loading with Arrow tables
   - anchor: create-a-resource-that-yields-a-dataframe-using-the-ordered-at-field-as-an-incremental-cursor
-    title: Create a resource that yields a dataframe, using the `ordered_at` field as an incremental cursor
+    title: Create a resource that yields a dataframe, using the `ordered_at` field
+      as an incremental cursor
   - anchor: run-again-to-load-only-new-data
     title: Run again to load only new data
   - anchor: loading-json-documents
@@ -3076,8 +2821,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/verified-sources/asana.md
   source: dlt
@@ -3136,8 +2881,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/verified-sources/chess.md
   source: dlt
@@ -3196,8 +2941,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/verified-sources/facebook_ads.md
   source: dlt
@@ -3258,230 +3003,15 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
-  last_indexed: '2026-04-18T14:38:30Z'
-- id: dlt:dlt-ecosystem/verified-sources/filesystem/advanced.md
-  source: dlt
-  path: dlt-ecosystem/verified-sources/filesystem/advanced.md
-  title: Advanced filesystem usage
-  summary: Use filesystem source as a building block
-  tags:
-  - verified-source
-  keywords:
-  - load
-  - transform
-  - extract
-  - readers source
-  - dlt
-  - destination
-  - source
-  - readers source and filesystem
-  - files
-  - pipeline
-  concepts:
-  - dlt-ecosystem
-  - verified-sources
-  category: reference
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings:
-  - anchor: standalone-filesystem-resource
-    title: Standalone filesystem resource
-  - anchor: fileitem-representation
-    title: '`FileItem` representation'
-  - anchor: file-manipulation
-    title: File manipulation
-  - anchor: create-your-own-readers
-    title: Create your own readers
-  - anchor: example-read-data-from-excel-files
-    title: 'Example: read data from Excel files'
-  - anchor: define-a-standalone-transformer-to-read-data-from-an-excel-file
-    title: Define a standalone transformer to read data from an Excel file.
-  - anchor: set-up-the-pipeline-to-fetch-a-specific-excel-file-from-a-filesystem-bucket
-    title: Set up the pipeline to fetch a specific Excel file from a filesystem (bucket).
-  - anchor: execute-the-pipeline-and-load-the-extracted-data-into-the-duckdb-destination
-    title: Execute the pipeline and load the extracted data into the "duckdb" destination.
-  - anchor: print-the-loading-information
-    title: Print the loading information.
-  - anchor: example-read-data-from-xml-files
-    title: 'Example: read data from XML files'
-  - anchor: define-a-standalone-transformer-to-read-data-from-an-xml-file
-    title: Define a standalone transformer to read data from an XML file.
-  - anchor: set-up-the-pipeline-to-fetch-a-specific-xml-file-from-a-filesystem-bucket
-    title: Set up the pipeline to fetch a specific XML file from a filesystem (bucket).
-  - anchor: execute-the-pipeline-and-load-the-extracted-data-into-the-duckdb-destination
-    title: Execute the pipeline and load the extracted data into the "duckdb" destination.
-  - anchor: print-the-loading-information
-    title: Print the loading information.
-  - anchor: clean-files-after-loading
-    title: Clean files after loading
-  - anchor: get-filesystem-source
-    title: Get filesystem source.
-  - anchor: extract-files
-    title: Extract files.
-  - anchor: get-fs-client
-    title: Get fs client.
-  - anchor: do-any-operation
-    title: Do any operation.
-  - anchor: copy-files-locally
-    title: Copy files locally
-  - anchor: use-recursive-glob-pattern-and-add-file-copy-step
-    title: Use recursive glob pattern and add file copy step
-  - anchor: note-you-do-not-need-to-load-any-data-to-execute-extract-below-we-obtain
-    title: 'NOTE: You do not need to load any data to execute extract; below, we obtain'
-  - anchor: a-list-of-files-in-a-bucket-and-also-copy-them-locally
-    title: a list of files in a bucket and also copy them locally
-  - anchor: download-to-table-listing
-    title: Download to table "listing"
-  - anchor: pretty-print-the-information-on-data-that-was-loaded
-    title: Pretty print the information on data that was loaded
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: false
-  stale_since: null
-  last_indexed: '2026-04-18T14:38:30Z'
-- id: dlt:dlt-ecosystem/verified-sources/filesystem/basic.md
-  source: dlt
-  path: dlt-ecosystem/verified-sources/filesystem/basic.md
-  title: Filesystem source
-  summary: Learn how to set up and configure
-  tags:
-  - verified-source
-  keywords:
-  - load
-  - credentials
-  - transform
-  - object storage
-  - readers source
-  - state
-  - dlt
-  - local file system
-  - destination
-  - extract
-  concepts:
-  - dlt-ecosystem
-  - verified-sources
-  category: reference
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings:
-  - anchor: how-filesystem-source-works
-    title: How filesystem source works
-  - anchor: quick-example
-    title: Quick example
-  - anchor: we-load-the-data-into-the-table-name-table
-    title: We load the data into the table_name table
-  - anchor: we-load-the-data-into-the-table-name-table
-    title: We load the data into the table_name table
-  - anchor: we-load-the-data-into-the-table-name-table
-    title: We load the data into the table_name table
-  - anchor: setup
-    title: Setup
-  - anchor: prerequisites
-    title: Prerequisites
-  - anchor: initialize-the-filesystem-source
-    title: Initialize the filesystem source
-  - anchor: configuration
-    title: Configuration
-  - anchor: get-credentials
-    title: Get credentials
-  - anchor: add-credentials-to-dlt-pipeline
-    title: Add credentials to dlt pipeline
-  - anchor: secrets-toml
-    title: secrets.toml
-  - anchor: config-toml
-    title: config.toml
-  - anchor: secrets-toml
-    title: secrets.toml
-  - anchor: config-toml
-    title: config.toml
-  - anchor: secrets-toml
-    title: secrets.toml
-  - anchor: config-toml
-    title: config.toml
-  - anchor: gdrive
-    title: gdrive
-  - anchor: config-toml
-    title: config.toml
-  - anchor: google-storage
-    title: Google storage
-  - anchor: secrets-toml
-    title: secrets.toml
-  - anchor: config-toml
-    title: config.toml
-  - anchor: config-toml
-    title: config.toml
-  - anchor: usage
-    title: Usage
-  - anchor: 1-initialize-a-filesystem-resource
-    title: 1. Initialize a `filesystem` resource
-  - anchor: 2-choose-the-right-reader
-    title: 2. Choose the right reader
-  - anchor: 3-create-and-run-a-pipeline
-    title: 3. Create and run a pipeline
-  - anchor: 4-apply-hints
-    title: 4. Apply hints
-  - anchor: tell-dlt-to-merge-on-date
-    title: Tell dlt to merge on date
-  - anchor: we-load-the-data-into-the-table-name-table
-    title: We load the data into the table_name table
-  - anchor: 5-incremental-loading
-    title: 5. Incremental loading
-  - anchor: this-configuration-will-only-consider-new-csv-files
-    title: This configuration will only consider new CSV files
-  - anchor: we-consider-all-csv-files
-    title: We consider all CSV files
-  - anchor: but-filter-out-only-updated-records
-    title: But filter out only updated records
-  - anchor: this-configuration-will-only-consider-modified-csv-files
-    title: This configuration will only consider modified CSV files
-  - anchor: and-in-each-modified-file-we-filter-out-only-updated-records
-    title: And in each modified file, we filter out only updated records
-  - anchor: 6-split-large-incremental-loads
-    title: 6. Split large incremental loads
-  - anchor: list-and-sort-all-csv-files-for-deterministic-partitioning
-    title: list and sort all csv files for deterministic partitioning
-  - anchor: we-assume-that-file-paths-are-named-so-files-added-later-in-time-come-at-the-end-when-sorted
-    title: we assume that file paths are named so files added later in time come at the end when sorted
-  - anchor: load-each-partition-using-initial-value-and-end-value
-    title: load each partition using initial_value and end_value
-  - anchor: note-we-could-also-extract-max-modification-time-and-use-it-for-subsequent-incremental-loading
-    title: note we could also extract max modification_time and use it for subsequent incremental loading
-  - anchor: will-write-initial-incremental-state
-    title: will write initial incremental state
-  - anchor: return-files-in-order-of-modification-date
-    title: return files in order of modification_date
-  - anchor: each-page-contains-only-one-file
-    title: each page contains only one file
-  - anchor: process-one-file-in-each-run-you-could-also-use-max-time-to-process-files-i-e-for-an-hour
-    title: process one file in each run, you could also use max_time to process files i.e. for an hour
-  - anchor: 7-filter-files
-    title: 7. Filter files
-  - anchor: filter-files-accessing-file-name-field
-    title: Filter files accessing file_name field
-  - anchor: filter-files-accessing-size-in-bytes-field
-    title: Filter files accessing size_in_bytes field
-  - anchor: troubleshooting
-    title: Troubleshooting
-  - anchor: access-extremely-long-file-paths
-    title: Access extremely long file paths
-  - anchor: if-you-get-an-empty-list-of-files
-    title: If you get an empty list of files
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/verified-sources/filesystem/index.md
   source: dlt
   path: dlt-ecosystem/verified-sources/filesystem/index.md
   title: Cloud storage and filesystem
-  summary: dlt-verified source for reading files from cloud storage and local file system
+  summary: dlt-verified source for reading files from cloud storage and local file
+    system
   tags:
   - verified-source
   keywords:
@@ -3506,8 +3036,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/verified-sources/freshdesk.md
   source: dlt
@@ -3560,8 +3090,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/verified-sources/github.md
   source: dlt
@@ -3618,8 +3148,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/verified-sources/google_ads.md
   source: dlt
@@ -3678,8 +3208,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/verified-sources/google_analytics.md
   source: dlt
@@ -3740,8 +3270,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/verified-sources/google_sheets.md
   source: dlt
@@ -3802,8 +3332,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/verified-sources/hubspot.md
   source: dlt
@@ -3862,8 +3392,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/verified-sources/inbox.md
   source: dlt
@@ -3930,8 +3460,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/verified-sources/index.md
   source: dlt
@@ -3963,8 +3493,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/verified-sources/jira.md
   source: dlt
@@ -4021,8 +3551,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/verified-sources/kafka.md
   source: dlt
@@ -4073,8 +3603,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/verified-sources/matomo.md
   source: dlt
@@ -4131,8 +3661,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/verified-sources/mongodb.md
   source: dlt
@@ -4187,8 +3717,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/verified-sources/mux.md
   source: dlt
@@ -4243,8 +3773,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/verified-sources/notion.md
   source: dlt
@@ -4296,8 +3826,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/verified-sources/openapi-generator.md
   source: dlt
@@ -4352,8 +3882,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/verified-sources/personio.md
   source: dlt
@@ -4410,8 +3940,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/verified-sources/pg_replication.md
   source: dlt
@@ -4466,8 +3996,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/verified-sources/pipedrive.md
   source: dlt
@@ -4528,8 +4058,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/verified-sources/rest_api/advanced.md
   source: dlt
@@ -4566,8 +4096,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/verified-sources/rest_api/basic.md
   source: dlt
@@ -4656,8 +4186,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/verified-sources/rest_api/index.md
   source: dlt
@@ -4686,8 +4216,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/verified-sources/salesforce.md
   source: dlt
@@ -4742,8 +4272,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/verified-sources/scrapy.md
   source: dlt
@@ -4787,8 +4317,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/verified-sources/shopify.md
   source: dlt
@@ -4843,8 +4373,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/verified-sources/slack.md
   source: dlt
@@ -4905,8 +4435,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/verified-sources/sql_database/advanced.md
   source: dlt
@@ -4945,13 +4475,16 @@ entries:
   - anchor: create-date-ranges-in-a-loop
     title: create date ranges in a loop
   - anchor: run-dlt-pipeline-4-times-with-incremental-set-to-particular-days-via-initial-value-and-end-value
-    title: run dlt pipeline 4 times with incremental set to particular days (via initial_value and end_value)
+    title: run dlt pipeline 4 times with incremental set to particular days (via initial_value
+      and end_value)
   - anchor: load-each-date-range-separately-you-could-also-execute-each-load-in-a-separate-process
-    title: load each date range separately, you could also execute each load in a separate process
+    title: load each date range separately, you could also execute each load in a
+      separate process
   - anchor: run-pipeline-incrementally-with-the-max-day-as-initial-value-and-open-range
     title: run pipeline incrementally with the max day as initial_value and open range
   - anchor: create-the-incremental-table-resource-with-row-order-to-ensure-we-don-t-miss-rows
-    title: create the incremental table resource with row_order to ensure we don't miss rows
+    title: create the incremental table resource with row_order to ensure we don't
+      miss rows
   - anchor: we-ll-load-2-pages-1000-rows-max-on-each-run
     title: we'll load 2 pages, 1000 rows max on each run
   - anchor: inclusive-and-exclusive-filtering
@@ -4996,7 +4529,8 @@ entries:
   source: dlt
   path: dlt-ecosystem/verified-sources/sql_database/configuration.md
   title: Configuration
-  summary: configuring the pipeline script, connection, and backend settings in the sql_database source
+  summary: configuring the pipeline script, connection, and backend settings in the
+    sql_database source
   tags:
   - verified-source
   - configuration
@@ -5100,8 +4634,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/verified-sources/sql_database/setup.md
   source: dlt
@@ -5167,13 +4701,15 @@ entries:
   - anchor: timezone-aware-and-non-aware-data-types
     title: Timezone-aware and Non-aware Data Types
   - anchor: i-see-a-utc-datetime-column-in-my-destination-but-my-data-source-has-a-naive-datetime-column
-    title: I see a UTC datetime column in my destination, but my data source has a naive datetime column
+    title: I see a UTC datetime column in my destination, but my data source has a
+      naive datetime column
   - anchor: i-have-an-incremental-cursor-on-a-datetime-column-and-i-see-query-errors
     title: I have an incremental cursor on a datetime column and I see query errors
   - anchor: troubleshooting-connection
     title: Troubleshooting connection
   - anchor: pipeline-state-grows-extremely-large-or-i-get-deduplication-state-warnings-when-using-incremental
-    title: Pipeline state grows extremely large or I get deduplication state warnings when using incremental
+    title: Pipeline state grows extremely large or I get deduplication state warnings
+      when using incremental
   - anchor: connecting-to-mysql-with-ssl
     title: Connecting to MySQL with SSL
   - anchor: sql-server-connection-options
@@ -5189,8 +4725,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/verified-sources/sql_database/usage.md
   source: dlt
@@ -5235,8 +4771,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/verified-sources/strapi.md
   source: dlt
@@ -5286,8 +4822,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/verified-sources/stripe.md
   source: dlt
@@ -5336,7 +4872,8 @@ entries:
   - anchor: possible-incremental-endpoints
     title: Possible incremental endpoints
   - anchor: the-incremental-endpoints-default-to-stripe-api-endpoints-with-uneditable-data
-    title: The incremental endpoints default to Stripe API endpoints with uneditable data.
+    title: The incremental endpoints default to Stripe API endpoints with uneditable
+      data.
   - anchor: source-stripe-source
     title: Source `stripe_source`
   - anchor: source-incremental-stripe-source
@@ -5348,8 +4885,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/verified-sources/workable.md
   source: dlt
@@ -5406,8 +4943,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/verified-sources/zendesk.md
   source: dlt
@@ -5466,14 +5003,15 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:examples/index.md
   source: dlt
   path: examples/index.md
   title: Code Examples
-  summary: A list of comprehensive code examples that teach you how to solve real world problems.
+  summary: A list of comprehensive code examples that teach you how to solve real
+    world problems.
   tags:
   - reference
   keywords:
@@ -5529,9 +5067,9 @@ entries:
   - anchor: compact-sources-layout
     title: Compact sources layout
   - anchor: compact-layout-just-the-source-name
-    title: "compact layout \u2014 just the source name"
+    title: compact layout — just the source name
   - anchor: full-layout-section-name-takes-precedence
-    title: "full layout \u2014 section + name (takes precedence)"
+    title: full layout — section + name (takes precedence)
   - anchor: access-configs-and-secrets-in-code
     title: Access configs and secrets in code
   - anchor: use-dlt-secrets-and-dlt-config-to-explicitly-retrieve-values-from-providers
@@ -5637,7 +5175,8 @@ entries:
   - anchor: set-the-necessary-attributes
     title: Set the necessary attributes
   - anchor: imports-an-external-botocore-session-and-sets-the-credentials-properties-accordingly
-    title: Imports an external botocore session and sets the credentials properties accordingly.
+    title: Imports an external botocore session and sets the credentials properties
+      accordingly.
   - anchor: azurecredentials
     title: AzureCredentials
   - anchor: set-the-necessary-attributes
@@ -5653,8 +5192,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:general-usage/credentials/index.md
   source: dlt
@@ -5687,8 +5226,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:general-usage/credentials/setup.md
   source: dlt
@@ -5825,8 +5364,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:general-usage/credentials/vaults.md
   source: dlt
@@ -5883,8 +5422,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:general-usage/customising-pipelines/pseudonymizing_columns.md
   source: dlt
@@ -5916,7 +5455,8 @@ entries:
   - anchor: run-it-as-is
     title: run it as is
   - anchor: or-create-an-instance-of-the-data-source-modify-the-resource-and-run-the-source
-    title: Or create an instance of the data source, modify the resource and run the source.
+    title: Or create an instance of the data source, modify the resource and run the
+      source.
   - anchor: 1-create-an-instance-of-the-source-so-you-can-edit-it
     title: 1. Create an instance of the source so you can edit it.
   - anchor: 2-modify-this-source-instance-s-resource
@@ -6009,90 +5549,12 @@ entries:
   stale: false
   stale_since: null
   last_indexed: '2026-04-18T14:38:30Z'
-- id: dlt:general-usage/dashboard.md
-  source: dlt
-  path: general-usage/dashboard.md
-  title: Inspect your pipeline with the workspace dashboard
-  summary: Open a comprehensive dashboard with information about your pipeline
-  tags:
-  - reference
-  keywords:
-  - load
-  - credentials
-  - transform
-  - state
-  - extract
-  - inspect
-  - dlt
-  - destination
-  - data
-  - schema
-  concepts:
-  - general-usage
-  category: reference
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings:
-  - anchor: inspect-your-pipeline-with-the-workspace-dashboard
-    title: Inspect your pipeline with the workspace dashboard
-  - anchor: features
-    title: Features
-  - anchor: prerequisites
-    title: Prerequisites
-  - anchor: launching-the-dashboard
-    title: Launching the dashboard
-  - anchor: credentials
-    title: Credentials
-  - anchor: using-the-dashboard
-    title: Using the dashboard
-  - anchor: 1-am-i-grabbing-data-correctly
-    title: 1) Am I grabbing data correctly?
-  - anchor: 2-am-i-loading-data-correctly
-    title: 2) Am I loading data correctly?
-  - anchor: 3-is-my-normalized-schema-the-one-i-actually-want
-    title: 3) Is my normalized schema the one I actually want?
-  - anchor: 4-do-i-have-the-right-business-data
-    title: 4) Do I have the right business data?
-  - anchor: 5-are-my-data-types-correct
-    title: 5) Are my data types correct?
-  - anchor: understanding-the-dashboard
-    title: Understanding the dashboard
-  - anchor: pipeline-info
-    title: Pipeline Info
-  - anchor: schema-explorer
-    title: Schema explorer
-  - anchor: dataset-browser
-    title: Dataset Browser
-  - anchor: querying-your-dataset
-    title: Querying your Dataset
-  - anchor: pipeline-state
-    title: Pipeline state
-  - anchor: last-run-trace
-    title: Last run trace
-  - anchor: pipeline-loads
-    title: Pipeline loads
-  - anchor: creating-your-own-workspace-dashboard
-    title: Creating your own workspace dashboard
-  - anchor: or-for-the-overview
-    title: or for the overview
-  - anchor: this-will-run-a-local-dashboard
-    title: this will run a local dashboard
-  - anchor: this-will-run-the-marimo-edit-mode
-    title: this will run the marimo edit mode
-  - anchor: further-reading
-    title: Further reading
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: false
-  stale_since: null
-  last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:general-usage/data-enrichments/currency_conversion_data_enrichment.md
   source: dlt
   path: general-usage/data-enrichments/currency_conversion_data_enrichment.md
   title: Currency-conversion data enrichment
-  summary: Converting the monetary value in one currency to another using the latest market rates.
+  summary: Converting the monetary value in one currency to another using the latest
+    market rates.
   tags:
   - reference
   keywords:
@@ -6134,8 +5596,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:general-usage/data-enrichments/url-parser-data-enrichment.md
   source: dlt
@@ -6183,8 +5645,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:general-usage/data-enrichments/user_agent_device_data_enrichment.md
   source: dlt
@@ -6232,8 +5694,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:general-usage/data-quality-lifecycle.md
   source: dlt
@@ -6263,7 +5725,8 @@ entries:
   - anchor: data-quality-lifecycle
     title: Data quality lifecycle
   - anchor: one-library-end-to-end-ingestion-transformation-with-data-quality-and-lineage
-    title: One library, end-to-end ingestion, transformation, with data quality and lineage
+    title: One library, end-to-end ingestion, transformation, with data quality and
+      lineage
   - anchor: the-five-pillars-of-data-quality
     title: The five pillars of data quality
   - anchor: 1-structural-integrity
@@ -6283,8 +5746,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:general-usage/dataset-access/data-quality-dashboard.md
   source: dlt
@@ -6324,8 +5787,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:general-usage/dataset-access/dataset.md
   source: dlt
@@ -6450,89 +5913,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
-  last_indexed: '2026-04-18T14:38:30Z'
-- id: dlt:general-usage/dataset-access/ibis-backend.md
-  source: dlt
-  path: general-usage/dataset-access/ibis-backend.md
-  title: Access datasets with Ibis
-  summary: Access your data with native Ibis backends
-  tags:
-  - reference
-  keywords:
-  - load
-  - transform
-  - dlt
-  - destination
-  - data
-  - schema
-  - ibis
-  - dataset
-  - pipeline
-  concepts:
-  - general-usage
-  - dataset-access
-  category: reference
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings:
-  - anchor: ibis
-    title: Ibis
-  - anchor: prerequisites
-    title: Prerequisites
-  - anchor: get-an-ibis-connection-from-your-dataset
-    title: Get an Ibis connection from your dataset
-  - anchor: get-the-dataset-from-the-pipeline
-    title: get the dataset from the pipeline
-  - anchor: get-the-native-ibis-connection-from-the-dataset
-    title: get the native ibis connection from the dataset
-  - anchor: list-all-tables-in-the-dataset
-    title: list all tables in the dataset
-  - anchor: note-you-need-to-provide-the-dataset-name-to-ibis-in-ibis-datasets-are-named-databases
-    title: 'NOTE: You need to provide the dataset name to ibis, in ibis datasets are named databases'
-  - anchor: get-the-items-table
-    title: get the items table
-  - anchor: print-the-first-10-rows
-    title: print the first 10 rows
-  - anchor: visit-the-ibis-docs-to-learn-more-about-the-available-methods
-    title: Visit the ibis docs to learn more about the available methods
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: false
-  stale_since: null
-  last_indexed: '2026-04-18T14:38:30Z'
-- id: dlt:general-usage/dataset-access/index.md
-  source: dlt
-  path: general-usage/dataset-access/index.md
-  title: Access loaded data
-  summary: How to access your loaded data
-  tags:
-  - reference
-  keywords:
-  - datasets
-  - load
-  - dlt
-  - data
-  - pipeline
-  - access
-  concepts:
-  - general-usage
-  - dataset-access
-  category: reference
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings:
-  - anchor: access-loaded-data
-    title: Access loaded data
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:general-usage/dataset-access/marimo.md
   source: dlt
@@ -6583,52 +5965,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
-  last_indexed: '2026-04-18T14:38:30Z'
-- id: dlt:general-usage/dataset-access/sql-client.md
-  source: dlt
-  path: general-usage/dataset-access/sql-client.md
-  title: Access data with dlt sql client
-  summary: Technical details about the destination sql client
-  tags:
-  - cli
-  keywords:
-  - sql
-  - credentials
-  - load
-  - state
-  - dlt
-  - destination
-  - data
-  - schema
-  - dataset
-  - pipeline
-  concepts:
-  - general-usage
-  - dataset-access
-  category: reference
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings:
-  - anchor: the-sql-client
-    title: The SQL client
-  - anchor: executing-a-query-on-the-sql-client
-    title: Executing a query on the SQL client
-  - anchor: retrieving-the-data-in-different-formats
-    title: Retrieving the data in different formats
-  - anchor: supported-methods-on-the-cursor
-    title: Supported methods on the cursor
-  - anchor: the-filesystem-sql-client
-    title: The filesystem SQL client
-  - anchor: control-data-freshness
-    title: Control data freshness
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:general-usage/dataset-access/view-dlt-schema.md
   source: dlt
@@ -6736,7 +6074,7 @@ entries:
   - anchor: dev-mode-versioned-datasets
     title: Dev mode (versioned) datasets
   - anchor: dlt-s-internal-tables
-    title: "dlt\u2019s internal tables"
+    title: dlt’s internal tables
   - anchor: dlt-loads-load-history-tracking
     title: '`_dlt_loads`: Load history tracking'
   - anchor: dlt-pipeline-state-pipeline-state-and-checkpoints
@@ -6748,8 +6086,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:general-usage/destination.md
   source: dlt
@@ -6811,8 +6149,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:general-usage/full-loading.md
   source: dlt
@@ -6855,8 +6193,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:general-usage/glossary.md
   source: dlt
@@ -6904,169 +6242,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
-  last_indexed: '2026-04-18T14:38:30Z'
-- id: dlt:general-usage/http/overview.md
-  source: dlt
-  path: general-usage/http/overview.md
-  title: REST API helpers
-  summary: Use the dlt RESTClient to interact with RESTful APIs and paginate the results
-  tags:
-  - reference
-  keywords:
-  - api
-  - restclient
-  - load
-  - extract
-  - restful
-  - dlt
-  - resource
-  - pagination
-  - paginate
-  - destination
-  concepts:
-  - general-usage
-  category: reference
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings:
-  - anchor: quick-example
-    title: Quick example
-  - anchor: explicitly-specifying-pagination-parameters
-    title: Explicitly specifying pagination parameters
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: false
-  stale_since: null
-  last_indexed: '2026-04-18T14:38:30Z'
-- id: dlt:general-usage/http/requests.md
-  source: dlt
-  path: general-usage/http/requests.md
-  title: Requests wrapper
-  summary: Use the dlt requests wrapper to make HTTP requests with automatic retries and timeouts
-  tags:
-  - reference
-  keywords:
-  - load
-  - dlt
-  - timeout
-  - source
-  - retry
-  - requests
-  - http
-  - pipeline
-  concepts:
-  - general-usage
-  category: reference
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings:
-  - anchor: retry-rules
-    title: Retry rules
-  - anchor: customizing-retry-settings
-    title: Customizing retry settings
-  - anchor: handling-api-rate-limits
-    title: Handling API Rate Limits
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: false
-  stale_since: null
-  last_indexed: '2026-04-18T14:38:30Z'
-- id: dlt:general-usage/http/rest-client.md
-  source: dlt
-  path: general-usage/http/rest-client.md
-  title: RESTClient
-  summary: Learn how to use the RESTClient class to interact with RESTful APIs
-  tags:
-  - cli
-  keywords:
-  - restclient
-  - credentials
-  - auth
-  - dlt
-  - headercursorpaginator
-  - pagination
-  - request
-  - headerlinkpaginator
-  - extract
-  - state
-  concepts:
-  - general-usage
-  category: reference
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings:
-  - anchor: creating-a-restclient-instance
-    title: Creating a RESTClient instance
-  - anchor: making-basic-requests
-    title: Making basic requests
-  - anchor: post-requests-with-data
-    title: POST requests with data
-  - anchor: json-payload-sets-content-type-application-json
-    title: 'JSON payload (sets Content-Type: application/json)'
-  - anchor: form-encoded-data-sets-content-type-application-x-www-form-urlencoded
-    title: 'Form-encoded data (sets Content-Type: application/x-www-form-urlencoded)'
-  - anchor: raw-string-or-bytes-data
-    title: Raw string or bytes data
-  - anchor: paginating-api-responses
-    title: Paginating API responses
-  - anchor: paginating-with-json-payload
-    title: Paginating with JSON payload
-  - anchor: paginating-with-form-encoded-data
-    title: Paginating with form-encoded data
-  - anchor: selecting-data-from-the-response
-    title: Selecting data from the response
-  - anchor: pagedata
-    title: PageData
-  - anchor: paginators
-    title: Paginators
-  - anchor: for-nested-placement-in-json-body
-    title: For nested placement in JSON body
-  - anchor: implementing-a-custom-paginator
-    title: Implementing a custom paginator
-  - anchor: authentication
-    title: Authentication
-  - anchor: bearer-token-authentication
-    title: Bearer token authentication
-  - anchor: api-key-authentication
-    title: API key authentication
-  - anchor: create-a-restclient-instance-with-api-key-authentication
-    title: Create a RESTClient instance with API Key Authentication
-  - anchor: http-basic-authentication
-    title: HTTP basic authentication
-  - anchor: oauth-2-0-authorization
-    title: OAuth 2.0 authorization
-  - anchor: implementing-custom-authentication
-    title: Implementing custom authentication
-  - anchor: advanced-usage
-    title: Advanced usage
-  - anchor: shortcut-for-paginating-api-responses
-    title: Shortcut for paginating API responses
-  - anchor: retry
-    title: Retry
-  - anchor: use-custom-session
-    title: Use custom session
-  - anchor: url-sanitization-and-secret-protection
-    title: URL sanitization and secret protection
-  - anchor: troubleshooting
-    title: Troubleshooting
-  - anchor: debugging-http-error-responses
-    title: Debugging HTTP error responses
-  - anchor: restclient-get-and-restclient-post-methods
-    title: '`RESTClient.get()` and `RESTClient.post()` methods'
-  - anchor: restclient-paginate
-    title: '`RESTClient.paginate()`'
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:general-usage/incremental/advanced-state.md
   source: dlt
@@ -7103,7 +6280,8 @@ entries:
   - anchor: advanced-state-usage-storing-a-list-of-processed-entities
     title: 'Advanced state usage: storing a list of processed entities'
   - anchor: advanced-state-usage-tracking-the-last-value-for-all-search-terms-in-twitter-api
-    title: 'Advanced state usage: tracking the last value for all search terms in Twitter API'
+    title: 'Advanced state usage: tracking the last value for all search terms in
+      Twitter API'
   links_to: []
   links_from: []
   frontmatter: {}
@@ -7139,7 +6317,8 @@ entries:
   - anchor: cursor-based-incremental-loading
     title: Cursor-based incremental loading
   - anchor: use-naming-function-in-table-name-to-generate-separate-tables-for-each-event
-    title: Use naming function in table name to generate separate tables for each event
+    title: Use naming function in table name to generate separate tables for each
+      event
   - anchor: max-min-or-custom-last-value-func
     title: Max, min, or custom `last_value_func`
   - anchor: using-end-value-for-backfill
@@ -7173,8 +6352,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:general-usage/incremental/lag.md
   source: dlt
@@ -7300,8 +6479,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:general-usage/merge-loading.md
   source: dlt
@@ -7363,7 +6542,7 @@ entries:
   - anchor: example-use-your-own-row-hash
     title: 'Example: Use your own row hash'
   - anchor: use-scd2-with-arrow-tables-and-pandas-dataframes
-    title: "\U0001F9EA Use scd2 with Arrow tables and pandas DataFrames"
+    title: 🧪 Use scd2 with Arrow tables and pandas DataFrames
   - anchor: nested-tables
     title: Nested tables
   - anchor: limitations
@@ -7383,8 +6562,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:general-usage/naming-convention.md
   source: dlt
@@ -7428,7 +6607,7 @@ entries:
   - anchor: compound-flattened-identifiers
     title: Compound (flattened) identifiers
   - anchor: wip-name-convention-changes-are-lossy
-    title: "\U0001F6A7 [WIP] Name convention changes are lossy"
+    title: 🚧 [WIP] Name convention changes are lossy
   - anchor: pick-your-own-naming-convention
     title: Pick your own naming convention
   - anchor: configure-naming-convention
@@ -7503,8 +6682,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:general-usage/resource.md
   source: dlt
@@ -7550,7 +6729,8 @@ entries:
   - anchor: send-item-to-a-table-with-name-item-type
     title: send item to a table with name item["type"]
   - anchor: the-table-schema-method-gets-the-table-schema-generated-by-a-resource-and-takes-an-optional
-    title: the `table_schema` method gets the table schema generated by a resource and takes an optional
+    title: the `table_schema` method gets the table schema generated by a resource
+      and takes an optional
   - anchor: data-item-to-evaluate-dynamic-hints
     title: data item to evaluate dynamic hints
   - anchor: parametrize-a-resource
@@ -7576,11 +6756,13 @@ entries:
   - anchor: below-we-want-to-load-only-100-users-from-the-users-endpoint
     title: below we want to load only 100 users from the `users` endpoint.
   - anchor: get-bulbasaur-and-ivysaur-you-need-dlt-0-4-6-for-the-pipe-operator-working-with-lists
-    title: Get Bulbasaur and Ivysaur (you need dlt 0.4.6 for the pipe operator working with lists).
+    title: Get Bulbasaur and Ivysaur (you need dlt 0.4.6 for the pipe operator working
+      with lists).
   - anchor: declare-a-standalone-resource
     title: Declare a standalone resource
   - anchor: filesystem-must-be-called-before-it-is-extracted-or-used-in-any-other-way
-    title: '`filesystem` must be called before it is extracted or used in any other way.'
+    title: '`filesystem` must be called before it is extracted or used in any other
+      way.'
   - anchor: declare-parallel-and-async-resources
     title: Declare parallel and async resources
   - anchor: users-and-orders-will-be-iterated-in-parallel-in-two-separate-threads
@@ -7608,7 +6790,8 @@ entries:
   - anchor: duplicate-and-rename-resources
     title: Duplicate and rename resources
   - anchor: create-two-extract-pipes-that-list-files-from-the-bucket-and-send-them-to-the-reader
-    title: create two extract pipes that list files from the bucket and send them to the reader.
+    title: create two extract pipes that list files from the bucket and send them
+      to the reader.
   - anchor: by-default-both-pipes-will-load-data-to-the-same-table-csv-reader
     title: by default, both pipes will load data to the same table (csv_reader)
   - anchor: so-we-rename-resources-to-load-to-reports-and-transactions-tables
@@ -7636,8 +6819,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:general-usage/schema-contracts.md
   source: dlt
@@ -7680,7 +6863,8 @@ entries:
   - anchor: contracts-on-new-tables
     title: Contracts on new tables
   - anchor: working-with-datasets-that-have-manually-added-tables-and-columns-on-the-first-load
-    title: Working with datasets that have manually added tables and columns on the first load
+    title: Working with datasets that have manually added tables and columns on the
+      first load
   - anchor: code-examples
     title: Code examples
   - anchor: this-will-use-the-settings-defined-by-the-decorators
@@ -7690,8 +6874,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:general-usage/schema-evolution.md
   source: dlt
@@ -7848,8 +7032,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:general-usage/source.md
   source: dlt
@@ -7891,11 +7075,13 @@ entries:
   - anchor: access-and-select-resources-to-load
     title: Access and select resources to load
   - anchor: resources-is-a-dictionary-with-all-resources-available-the-key-is-the-resource-name
-    title: '"resources" is a dictionary with all resources available, the key is the resource name'
+    title: '"resources" is a dictionary with all resources available, the key is the
+      resource name'
   - anchor: print-resources-that-are-selected-to-load
     title: print resources that are selected to load
   - anchor: load-only-companies-and-deals-using-the-with-resources-convenience-method
-    title: load only "companies" and "deals" using the "with_resources" convenience method
+    title: load only "companies" and "deals" using the "with_resources" convenience
+      method
   - anchor: resources-are-accessible-as-attributes-of-a-source
     title: resources are accessible as attributes of a source
   - anchor: check-if-deals-are-selected-to-load
@@ -7913,7 +7099,8 @@ entries:
   - anchor: source-contains-deals-resource
     title: source contains `deals` resource
   - anchor: connect-the-data-from-deals-resource-into-deal-scores-and-add-to-the-source
-    title: connect the data from `deals` resource into `deal_scores` and add to the source
+    title: connect the data from `deals` resource into `deal_scores` and add to the
+      source
   - anchor: load-the-data-you-ll-see-the-new-table-deal-scores-in-your-destination
     title: 'load the data: you''ll see the new table `deal_scores` in your destination!'
   - anchor: reduce-the-nesting-level-of-generated-tables
@@ -7931,8 +7118,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:general-usage/state.md
   source: dlt
@@ -7977,88 +7164,6 @@ entries:
     title: Inspect the pipeline state
   - anchor: reset-the-pipeline-state-full-or-partial
     title: 'Reset the pipeline state: full or partial'
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: false
-  stale_since: null
-  last_indexed: '2026-04-18T14:38:30Z'
-- id: dlt:hub/EULA.md
-  source: dlt
-  path: hub/EULA.md
-  title: dltHub Software EULA
-  summary: "IT CONSTITUTES A LEGALLY BINDING AGREEMENT AND GOVERNS YOUR USE OF dltHub\u2019S SOFTWARE (DEFINED BELOW). BY INSTALLING AND/OR USING SUCH SOFTWARE, YOU ARE INDICATING THAT YOU AGREE TO THE\
-    \ TERMS AND CONDI"
-  tags:
-  - reference
-  keywords:
-  - load
-  - credentials
-  - transform
-  - state
-  - extract
-  - dlt
-  - source
-  - pipeline
-  concepts:
-  - hub
-  category: reference
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings:
-  - anchor: dlthub-software-eula
-    title: dltHub Software EULA
-  - anchor: arbitration-notice
-    title: Arbitration Notice
-  - anchor: contact-us
-    title: Contact Us
-  - anchor: definitions
-    title: Definitions
-  - anchor: dlthub-software-license
-    title: dltHub Software License
-  - anchor: specific-terms
-    title: Specific Terms
-  - anchor: specific-terms-for-the-self-issued-trial-license-self-issued-trial-terms
-    title: "Specific Terms for the Self-Issued Trial License (\u201CSelf-Issued Trial Terms\u201D)"
-  - anchor: no-production-use
-    title: No Production Use
-  - anchor: self-issuance-acceptance-runtime-notices
-    title: Self-Issuance; Acceptance; Runtime Notices
-  - anchor: environment-binding-anonymous-issuance
-    title: Environment Binding; Anonymous Issuance
-  - anchor: specific-terms-for-the-trial-license-trial-terms
-    title: "Specific Terms for the Trial License (\u201CTrial Terms\u201D)"
-  - anchor: specific-terms-for-the-commercial-license-commercial-terms
-    title: "Specific Terms for the Commercial License (\u201CCommercial Terms\u201D)"
-  - anchor: our-marks
-    title: Our Marks
-  - anchor: intellectual-property-ip
-    title: Intellectual Property (IP)
-  - anchor: maintenance-of-the-dlthub-software
-    title: Maintenance of the dltHub Software
-  - anchor: disclaimers
-    title: Disclaimers
-  - anchor: remedies
-    title: Remedies
-  - anchor: limitation-of-liability
-    title: Limitation of Liability
-  - anchor: suspension-termination
-    title: Suspension; Termination
-  - anchor: governing-laws-and-jurisdictions
-    title: Governing Laws and Jurisdictions
-  - anchor: mandatory-arbitration
-    title: Mandatory Arbitration
-  - anchor: class-action-waiver
-    title: Class Action Waiver
-  - anchor: changes
-    title: Changes
-  - anchor: export-control
-    title: Export Control
-  - anchor: interpretation
-    title: Interpretation
-  - anchor: eula-for-dlthub-ai-workbench
-    title: EULA for dltHub AI Workbench
   links_to: []
   links_from: []
   frontmatter: {}
@@ -8201,71 +7306,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
-  last_indexed: '2026-04-18T14:38:30Z'
-- id: dlt:hub/core-concepts/cache.md
-  source: dlt
-  path: hub/core-concepts/cache.md
-  title: "Cache \U0001F9EA"
-  summary: Execute data transformations in your local cache
-  tags:
-  - reference
-  keywords:
-  - load
-  - transform
-  - transformations
-  - dltHub
-  - dlt
-  - destination
-  - source
-  - schema
-  - cache
-  concepts:
-  - hub
-  category: reference
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings:
-  - anchor: how-it-works
-    title: How it works
-  - anchor: define-the-cache
-    title: Define the cache
-  - anchor: why-you-should-use-it
-    title: Why you should use it
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: false
-  stale_since: null
-  last_indexed: '2026-04-18T14:38:30Z'
-- id: dlt:hub/core-concepts/datasets.md
-  source: dlt
-  path: hub/core-concepts/datasets.md
-  title: Datasets
-  summary: One destination can have multiple datasets; for now, datasets are bound to a physical destination, but this may change in future iterations. By treating datasets as individual entities, dltHub
-    enables
-  tags:
-  - reference
-  keywords:
-  - dlt
-  - schema
-  - destination
-  concepts:
-  - hub
-  category: reference
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings:
-  - anchor: datasets
-    title: Datasets
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:hub/core-concepts/profiles-dlthub.md
   source: dlt
@@ -8314,75 +7356,6 @@ entries:
     title: Best practices
   - anchor: next-steps
     title: Next steps
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: false
-  stale_since: null
-  last_indexed: '2026-04-18T14:38:30Z'
-- id: dlt:hub/core-concepts/profiles.md
-  source: dlt
-  path: hub/core-concepts/profiles.md
-  title: Profiles
-  summary: A profile is a set of configurations and secrets defined for a specific use case. Profiles provide a way to manage different configurations for different environments.
-  tags:
-  - reference
-  keywords:
-  - load
-  - credentials
-  - dltHub
-  - dlt
-  - destination
-  - source
-  - profiles
-  - pipeline
-  concepts:
-  - hub
-  category: reference
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings:
-  - anchor: using-config-files-with-profiles
-    title: Using config files with profiles
-  - anchor: pinning-profiles
-    title: Pinning profiles
-  - anchor: switching-profile-with-an-environment-variable
-    title: Switching profile with an environment variable
-  - anchor: run-tests-against-the-prod-profile-then-go-back-to-normal
-    title: run tests against the prod profile, then go back to normal
-  - anchor: settings-in-the-dlt-yml-file-vs-toml-files
-    title: Settings in the `dlt.yml` file vs TOML files
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: false
-  stale_since: null
-  last_indexed: '2026-04-18T14:38:30Z'
-- id: dlt:hub/core-concepts/project.md
-  source: dlt
-  path: hub/core-concepts/project.md
-  title: Project
-  summary: It follows an opinionated structure centered around a Python manifest file `dlt.yml`, where all dlt entities are defined and configured in an organized way. The manifest file acts like a single
-    source
-  tags:
-  - reference
-  keywords:
-  - transform
-  - credentials
-  - dlt
-  - destination
-  - source
-  - pipeline
-  concepts:
-  - hub
-  category: reference
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings:
-  - anchor: project
-    title: Project
   links_to: []
   links_from: []
   frontmatter: {}
@@ -8490,11 +7463,14 @@ entries:
   - anchor: sql-catalog
     title: SQL catalog
   - anchor: credentials-section-below-is-only-needed-if-you-re-using-the-cloud-storage-not-local-disk
-    title: credentials section below is only needed if you're using the cloud storage (not local disk)
+    title: credentials section below is only needed if you're using the cloud storage
+      (not local disk)
   - anchor: will-register-tables-if-found-in-storage-but-not-found-in-the-catalog-backward-compatibility
-    title: will register tables if found in storage but not found in the catalog (backward compatibility)
+    title: will register tables if found in storage but not found in the catalog (backward
+      compatibility)
   - anchor: credentials-section-below-is-only-needed-if-you-re-using-the-cloud-storage-not-local-disk
-    title: credentials section below is only needed if you're using the cloud storage (not local disk)
+    title: credentials section below is only needed if you're using the cloud storage
+      (not local disk)
   - anchor: lakekeeper-catalog
     title: Lakekeeper catalog
   - anchor: polaris-catalog
@@ -8679,359 +7655,6 @@ entries:
   stale: false
   stale_since: null
   last_indexed: '2026-04-18T14:38:30Z'
-- id: dlt:hub/features/ai.md
-  source: dlt
-  path: hub/features/ai.md
-  title: AI workflows
-  summary: Explore data in your dltHub project with Claude Desktop using the Model Context Protocol
-  tags:
-  - reference
-  keywords:
-  - MCP
-  - load
-  - credentials
-  - transform
-  - dltHub
-  - dlt
-  - destination
-  - Model Context Protocol
-  - source
-  - Claude Desktop
-  concepts:
-  - hub
-  category: reference
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings:
-  - anchor: ai-workflows
-    title: AI workflows
-  - anchor: prerequisites
-    title: Prerequisites
-  - anchor: install-dlthub-with-mcp-support
-    title: Install dltHub with MCP support
-  - anchor: set-up-or-use-a-dlthub-project
-    title: Set up or use a dltHub project
-  - anchor: using-an-existing-project
-    title: Using an existing project
-  - anchor: creating-a-test-project
-    title: Creating a test project
-  - anchor: configure-claude-desktop
-    title: Configure Claude Desktop
-  - anchor: update-claude-desktop-config
-    title: Update Claude desktop config
-  - anchor: restart-claude-desktop
-    title: Restart Claude desktop
-  - anchor: check-the-connection
-    title: Check the connection
-  - anchor: start-chatting
-    title: Start chatting
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: false
-  stale_since: null
-  last_indexed: '2026-04-18T14:38:30Z'
-- id: dlt:hub/features/data-access.md
-  source: dlt
-  path: hub/features/data-access.md
-  title: Secure data access and sharing
-  summary: Provide secure data access to your organization
-  tags:
-  - reference
-  keywords:
-  - load
-  - contracts
-  - credentials
-  - extract
-  - dlt
-  - destination
-  - data access
-  - source
-  - data sharing
-  - schema
-  concepts:
-  - hub
-  category: reference
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings:
-  - anchor: secure-data-access-and-sharing
-    title: Secure data access and sharing
-  - anchor: project-packaging
-    title: Project packaging
-  - anchor: data-access-and-sharing
-    title: Data access and sharing
-  - anchor: security-and-contracts
-    title: Security and contracts
-  - anchor: access-the-aggregated-issues-table-from-the-reports-dataset-in-the-catalog
-    title: Access the aggregated_issues table from the reports_dataset in the catalog
-  - anchor: create-a-new-column-id
-    title: Create a new column "id"
-  - anchor: push-back-the-modified-table
-    title: Push back the modified table
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: false
-  stale_since: null
-  last_indexed: '2026-04-18T14:38:30Z'
-- id: dlt:hub/features/mcp-server.md
-  source: dlt
-  path: hub/features/mcp-server.md
-  title: MCP server
-  summary: Install the dlt MCP with your preferred LLM-enabled IDE.
-  tags:
-  - reference
-  keywords:
-  - transform
-  - dlt
-  - ai
-  - destination
-  - source
-  - pipeline
-  - schema
-  - agents
-  - llm
-  - mcp
-  concepts:
-  - hub
-  category: reference
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings:
-  - anchor: overview
-    title: Overview
-  - anchor: launch-mcp-server
-    title: Launch MCP server
-  - anchor: configure-mcp-server
-    title: Configure MCP server
-  - anchor: continue-local
-    title: Continue (local)
-  - anchor: continue-hub
-    title: Continue Hub
-  - anchor: configure-mcp-server
-    title: Configure MCP server
-  - anchor: model-context-protocol
-    title: Model Context Protocol
-  - anchor: core-constructs
-    title: Core constructs
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: false
-  stale_since: null
-  last_indexed: '2026-04-18T14:38:30Z'
-- id: dlt:hub/features/project/index.md
-  source: dlt
-  path: hub/features/project/index.md
-  title: Project
-  summary: Create dlt projects using yaml files
-  tags:
-  - reference
-  keywords:
-  - dbt
-  - load
-  - transform
-  - dltHub
-  - dlt
-  - source
-  - project
-  concepts:
-  - hub
-  category: reference
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings: []
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: false
-  stale_since: null
-  last_indexed: '2026-04-18T14:38:30Z'
-- id: dlt:hub/features/project/overview.md
-  source: dlt
-  path: hub/features/project/overview.md
-  title: Project overview
-  summary: Define dltHub Projects in YAML
-  tags:
-  - reference
-  keywords:
-  - load
-  - credentials
-  - transform
-  - state
-  - dlt
-  - destination
-  - source
-  - schema
-  - pipeline
-  concepts:
-  - hub
-  category: reference
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings:
-  - anchor: project
-    title: Project
-  - anchor: project-structure
-    title: Project structure
-  - anchor: the-dlt-manifest-file-dlt-yml
-    title: The dlt manifest file (dlt.yml)
-  - anchor: sources
-    title: Sources
-  - anchor: destinations
-    title: Destinations
-  - anchor: pipelines
-    title: Pipelines
-  - anchor: datasets
-    title: Datasets
-  - anchor: cache
-    title: "Cache \U0001F9EA"
-  - anchor: transformations
-    title: "Transformations \U0001F9EA"
-  - anchor: profiles
-    title: Profiles
-  - anchor: project-settings-and-variable-substitution
-    title: Project settings and variable substitution
-  - anchor: implicit-entities
-    title: Implicit entities
-  - anchor: managing-datasets-and-destinations
-    title: Managing datasets and destinations
-  - anchor: other-settings
-    title: Other settings
-  - anchor: local-and-temporary-files-data-dir
-    title: Local and temporary files (`data_dir`)
-  - anchor: config-and-secrets
-    title: Config and secrets
-  - anchor: project-context
-    title: Project context
-  - anchor: packaging-and-distributing-the-projects
-    title: Packaging and distributing the projects
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: false
-  stale_since: null
-  last_indexed: '2026-04-18T14:38:30Z'
-- id: dlt:hub/features/project/python-api.md
-  source: dlt
-  path: hub/features/project/python-api.md
-  title: Python API
-  summary: Python interface of dltHub Project
-  tags:
-  - reference
-  keywords:
-  - load
-  - transform
-  - state
-  - dlt
-  - destination
-  - source
-  - pipeline
-  concepts:
-  - hub
-  category: reference
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings:
-  - anchor: python-api-to-interact-with-dlthub-project
-    title: Python API to interact with dltHub Project
-  - anchor: accessing-project-settings
-    title: Accessing project settings
-  - anchor: show-the-currently-active-profile
-    title: show the currently active profile
-  - anchor: todo-remove-ignore-when-dlthub-plugin-releases
-    title: 'TODO: remove ignore when dlthub plugin releases'
-  - anchor: show-the-main-project-dir
-    title: show the main project dir
-  - anchor: show-the-project-config-dict
-    title: show the project config dict
-  - anchor: list-explicitly-defined-datasets-also-works-with-destinations-sources-pipelines-etc
-    title: list explicitly defined datasets (also works with destinations, sources, pipelines, etc.)
-  - anchor: accessing-entities
-    title: Accessing entities
-  - anchor: running-pipelines-with-the-runner
-    title: Running pipelines with the runner
-  - anchor: get-the-runner
-    title: get the runner
-  - anchor: run-the-my-pipeline-pipeline-from-the-currently-active-project
-    title: run the "my_pipeline" pipeline from the currently active project
-  - anchor: accessing-the-catalog
-    title: Accessing the catalog
-  - anchor: get-a-dataset-instance-pointing-to-the-default-destination-first-in-dataset-destinations-list-and-access-data-inside-of-it
-    title: Get a dataset instance pointing to the default destination (first in dataset destinations list) and access data inside of it
-  - anchor: note-the-dataset-must-already-exist-physically-for-this-to-work
-    title: 'Note: The dataset must already exist physically for this to work'
-  - anchor: get-the-row-counts-of-all-tables-in-the-dataset-as-a-dataframe
-    title: Get the row counts of all tables in the dataset as a dataframe
-  - anchor: writing-data-back-to-the-catalog
-    title: Writing data back to the catalog
-  - anchor: get-a-dataset-from-the-catalog-it-must-already-exist-and-be-defined-in-dlt-yml
-    title: Get a dataset from the catalog (it must already exist and be defined in dlt.yml)
-  - anchor: write-a-dataframe-to-the-my-table-table-in-the-dataset
-    title: Write a DataFrame to the "my_table" table in the dataset
-  - anchor: get-dataset-from-the-catalog
-    title: Get dataset from the catalog
-  - anchor: this-function-reads-data-in-chunks-from-an-existing-table-and-yields-each-chunk
-    title: This function reads data in chunks from an existing table and yields each chunk
-  - anchor: write-the-data-to-a-new-table-called-my-new-table
-    title: Write the data to a new table called "my_new_table"
-  - anchor: switching-profiles-in-code
-    title: Switching profiles in code
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: false
-  stale_since: null
-  last_indexed: '2026-04-18T14:38:30Z'
-- id: dlt:hub/features/project/source-configuration.md
-  source: dlt
-  path: hub/features/project/source-configuration.md
-  title: Source configuration
-  summary: How to setup sources in YAML file
-  tags:
-  - verified-source
-  - configuration
-  keywords:
-  - load
-  - credentials
-  - extract
-  - dlt
-  - destination
-  - source
-  - incremental
-  - pipeline
-  concepts:
-  - hub
-  category: config
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings:
-  - anchor: source-configuration
-    title: Source configuration
-  - anchor: rest-api
-    title: REST API
-  - anchor: sql-database
-    title: SQL database
-  - anchor: general-sql-database-source
-    title: General SQL database source
-  - anchor: table-specific-configuration
-    title: Table-specific configuration
-  - anchor: filesystem
-    title: Filesystem
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: false
-  stale_since: null
-  last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:hub/features/quality/advanced.md
   source: dlt
   path: hub/features/quality/advanced.md
@@ -9074,7 +7697,7 @@ entries:
 - id: dlt:hub/features/quality/data-quality.md
   source: dlt
   path: hub/features/quality/data-quality.md
-  title: "Data quality \U0001F9EA"
+  title: Data quality 🧪
   summary: Validate your data and control its quality
   tags:
   - reference
@@ -9156,55 +7779,6 @@ entries:
   stale: false
   stale_since: null
   last_indexed: '2026-04-18T14:38:30Z'
-- id: dlt:hub/features/quality/tests.md
-  source: dlt
-  path: hub/features/quality/tests.md
-  title: Test utils
-  summary: dlt+ Test utils
-  tags:
-  - reference
-  keywords:
-  - load
-  - transform
-  - state
-  - data tests
-  - test
-  - dlt
-  - destination
-  - source
-  - schema
-  - dlt+
-  concepts:
-  - hub
-  category: reference
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings:
-  - anchor: introduction
-    title: Introduction
-  - anchor: installation
-    title: Installation
-  - anchor: predefined-fixtures-and-utils
-    title: Predefined fixtures and utils
-  - anchor: fixtures
-    title: Fixtures
-  - anchor: tests-execution
-    title: Tests execution
-  - anchor: utils
-    title: Utils
-  - anchor: pytest-ini-options
-    title: pytest.ini options
-  - anchor: pytest-config-setup
-    title: Pytest config setup
-  - anchor: writing-tests
-    title: Writing tests
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: false
-  stale_since: null
-  last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:hub/features/transformations/dbt-transformations.md
   source: dlt
   path: hub/features/transformations/dbt-transformations.md
@@ -9264,7 +7838,8 @@ entries:
   source: dlt
   path: hub/features/transformations/index.md
   title: Transformations
-  summary: Define Python-based or mixed SQL + Python transformations on data that is **already** in your destination.
+  summary: Define Python-based or mixed SQL + Python transformations on data that
+    is **already** in your destination.
   tags:
   - reference
   keywords:
@@ -9345,88 +7920,6 @@ entries:
   stale: false
   stale_since: null
   last_indexed: '2026-04-18T14:38:30Z'
-- id: dlt:hub/features/transformations/setup.md
-  source: dlt
-  path: hub/features/transformations/setup.md
-  title: Setup
-  summary: Define and execute local transformations
-  tags:
-  - reference
-  keywords:
-  - load
-  - transform
-  - state
-  - dlt
-  - destination
-  - schema
-  - incremental
-  - pipeline
-  concepts:
-  - hub
-  category: reference
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings:
-  - anchor: configure-dlt-yml-file
-    title: Configure `dlt.yml` file
-  - anchor: defining-the-cache
-    title: Defining the cache
-  - anchor: defining-transformations
-    title: Defining transformations
-  - anchor: generate-scaffolding
-    title: Generate scaffolding
-  - anchor: modify-transformations
-    title: Modify transformations
-  - anchor: run-transformations
-    title: Run transformations
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: false
-  stale_since: null
-  last_indexed: '2026-04-18T14:38:30Z'
-- id: dlt:hub/getting-started/advanced_tutorial.md
-  source: dlt
-  path: hub/getting-started/advanced_tutorial.md
-  title: Packaging a dltHub Project tutorial
-  summary: Using the dltHub cli commands to package a dltHub Project and enable secure access to data
-  tags:
-  - reference
-  keywords:
-  - cli
-  - load
-  - dltHub
-  - dlt
-  - destination
-  - command line interface
-  - source
-  - project
-  - pipeline
-  - dlt init
-  concepts:
-  - hub
-  category: reference
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings:
-  - anchor: prerequisites
-    title: Prerequisites
-  - anchor: packaging-a-project
-    title: Packaging a project
-  - anchor: using-the-packaged-project
-    title: Using the packaged project
-  - anchor: import-the-packaged-project
-    title: import the packaged project
-  - anchor: next-steps
-    title: Next steps
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: false
-  stale_since: null
-  last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:hub/getting-started/installation.md
   source: dlt
   path: hub/getting-started/installation.md
@@ -9468,8 +7961,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:hub/getting-started/runtime-tutorial.md
   source: dlt
@@ -9546,508 +8039,6 @@ entries:
   stale: false
   stale_since: null
   last_indexed: '2026-04-18T14:38:30Z'
-- id: dlt:hub/getting-started/tutorial.md
-  source: dlt
-  path: hub/getting-started/tutorial.md
-  title: Project tutorial
-  summary: Using the dltHub cli commands to create and manage dltHub Project
-  tags:
-  - reference
-  keywords:
-  - cli
-  - credentials
-  - load
-  - state
-  - dltHub
-  - dlt
-  - destination
-  - command line interface
-  - source
-  - project
-  concepts:
-  - hub
-  category: reference
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings:
-  - anchor: prerequisites
-    title: Prerequisites
-  - anchor: creating-a-new-dlthub-project
-    title: Creating a new dltHub Project
-  - anchor: initialize-a-dlthub-project-named-tutorial-the-name-is-derived-from-the-folder-name
-    title: Initialize a dltHub Project named "tutorial", the name is derived from the folder name
-  - anchor: the-generated-folder-structure
-    title: The generated folder structure
-  - anchor: understanding-dlt-yml
-    title: Understanding `dlt.yml`
-  - anchor: your-sources-are-the-data-sources-you-want-to-load-from
-    title: your sources are the data sources you want to load from
-  - anchor: your-destinations-are-the-databases-where-your-data-will-be-saved
-    title: your destinations are the databases where your data will be saved
-  - anchor: your-datasets-are-the-datasets-on-your-destinations-where-your-data-will-go
-    title: your datasets are the datasets on your destinations where your data will go
-  - anchor: your-pipelines-orchestrate-data-loading-actions
-    title: your pipelines orchestrate data loading actions
-  - anchor: running-the-pipeline
-    title: Running the pipeline
-  - anchor: inspecting-the-results
-    title: Inspecting the results
-  - anchor: counting-the-loaded-rows
-    title: Counting the loaded rows
-  - anchor: view-data
-    title: View data
-  - anchor: adding-sources-destinations-and-pipelines-to-your-project
-    title: Adding sources, destinations, and pipelines to your project
-  - anchor: create-an-empty-project
-    title: Create an empty project
-  - anchor: add-all-entities
-    title: Add all entities
-  - anchor: add-a-new-arrow-source-called-my-arrow-source
-    title: add a new arrow source called "my_arrow_source"
-  - anchor: add-a-new-duckdb-destination-called-my-duckdb-destination
-    title: add a new duckdb destination called "my_duckdb_destination"
-  - anchor: this-will-also-create-a-new-dataset-called-my-duckdb-destination-dataset
-    title: this will also create a new dataset called "my_duckdb_destination_dataset"
-  - anchor: add-a-new-pipeline-called-my-pipeline-which-loads-from-my-arrow-source-and-saves-to-my-duckdb-destination
-    title: add a new pipeline called "my_pipeline" which loads from my_arrow_source and saves to my_duckdb_destination
-  - anchor: we-select-the-my-duckdb-destination-dataset-with-the-optional-flag
-    title: we select the my_duckdb_destination_dataset with the optional flag
-  - anchor: adding-the-core-source
-    title: Adding the core source
-  - anchor: add-a-new-sql-database-source-called-sql-db-1
-    title: add a new sql_database source called "sql_db_1"
-  - anchor: configuration-and-profiles
-    title: Configuration and profiles
-  - anchor: adding-a-new-profile
-    title: Adding a new profile
-  - anchor: run-a-pipeline-with-the-new-profile-and-inspect-the-results
-    title: Run a pipeline with the new profile and inspect the results
-  - anchor: using-config-files-with-profiles
-    title: Using config files with profiles
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: false
-  stale_since: null
-  last_indexed: '2026-04-18T14:38:30Z'
-- id: dlt:hub/intro.md
-  source: dlt
-  path: hub/intro.md
-  title: Introduction
-  summary: Introduction to dltHub
-  tags:
-  - reference
-  keywords:
-  - load
-  - transform
-  - extract
-  - dlt
-  - destination
-  - source
-  - schema
-  - pipeline
-  concepts:
-  - hub
-  category: reference
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings:
-  - anchor: what-is-dlthub
-    title: What is dltHub?
-  - anchor: overview
-    title: Overview
-  - anchor: key-capabilities
-    title: Key capabilities
-  - anchor: how-dlthub-fits-with-dlt-oss
-    title: How dltHub fits with dlt (OSS)
-  - anchor: dlthub-products
-    title: dltHub products
-  - anchor: workspace
-    title: Workspace
-  - anchor: runtime
-    title: Runtime
-  - anchor: storage
-    title: Storage
-  - anchor: tiers-licensing
-    title: Tiers & licensing
-  - anchor: who-is-dlthub-for
-    title: Who is dltHub for?
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: false
-  stale_since: null
-  last_indexed: '2026-04-18T14:38:30Z'
-- id: dlt:hub/production/observability.md
-  source: dlt
-  path: hub/production/observability.md
-  title: Observability
-  summary: Observability tooling
-  tags:
-  - reference
-  keywords:
-  - alerting
-  - load
-  - observability
-  - extract
-  - dlt
-  - destination
-  - source
-  - schema
-  - callbacks
-  - monitoring
-  concepts:
-  - hub
-  category: reference
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings:
-  - anchor: observability
-    title: Observability
-  - anchor: custom-callbacks
-    title: Custom callbacks
-  - anchor: attach-your-collector-to-the-pipeline
-    title: attach your collector to the pipeline
-  - anchor: planned-features
-    title: Planned features
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: false
-  stale_since: null
-  last_indexed: '2026-04-18T14:38:30Z'
-- id: dlt:hub/production/pipeline-runner.md
-  source: dlt
-  path: hub/production/pipeline-runner.md
-  title: Pipeline runner
-  summary: Run pipelines with the dltHub runner
-  tags:
-  - reference
-  keywords:
-  - load
-  - runner
-  - credentials
-  - state
-  - extract
-  - dlt
-  - resource
-  - destination
-  - source
-  - retry
-  concepts:
-  - hub
-  category: reference
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings:
-  - anchor: runner
-    title: Runner
-  - anchor: usage
-    title: Usage
-  - anchor: configuration
-    title: Configuration
-  - anchor: complete-configuration-example
-    title: Complete configuration example
-  - anchor: trace-storage
-    title: Trace storage
-  - anchor: your-main-pipeline
-    title: your main pipeline
-  - anchor: your-trace-pipeline
-    title: your trace pipeline
-  - anchor: os-environ-destination-filesystem-bucket-url-s3-my-bucket-logs-dlt-traces
-    title: os.environ["DESTINATION__FILESYSTEM__BUCKET_URL"] = "s3://my-bucket/logs/dlt_traces"
-  - anchor: trace-table-naming
-    title: Trace table naming
-  - anchor: run-from-clean-folder
-    title: Run from clean folder
-  - anchor: retry-policies
-    title: Retry policies
-  - anchor: retry-pipeline-steps
-    title: Retry pipeline steps
-  - anchor: callbacks
-    title: Callbacks
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: false
-  stale_since: null
-  last_indexed: '2026-04-18T14:38:30Z'
-- id: dlt:hub/production/prefect-integration.md
-  source: dlt
-  path: hub/production/prefect-integration.md
-  title: Prefect Integration
-  summary: Run pipelines with Prefect
-  tags:
-  - reference
-  keywords:
-  - source decomposition
-  - load
-  - progress
-  - extract
-  - dlt
-  - prefect
-  - artifacts
-  - logs
-  - destination
-  - source
-  concepts:
-  - hub
-  category: reference
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings:
-  - anchor: prefect-integration
-    title: Prefect Integration
-  - anchor: key-features
-    title: Key features
-  - anchor: prefect-collector
-    title: Prefect Collector
-  - anchor: progress-and-summary-reports-by-pipeline-stage
-    title: Progress and Summary Reports by pipeline stage
-  - anchor: schema-change-reports
-    title: Schema Change Reports
-  - anchor: logging
-    title: Logging
-  - anchor: runner-integration
-    title: Runner integration
-  - anchor: pipeline-retries
-    title: Pipeline Retries
-  - anchor: custom-callbacks
-    title: Custom Callbacks
-  - anchor: source-decomposition
-    title: Source decomposition
-  - anchor: on-parallelization
-    title: On parallelization
-  - anchor: for-all-pipelines
-    title: for all pipelines
-  - anchor: pipeline-specific
-    title: pipeline specific
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: false
-  stale_since: null
-  last_indexed: '2026-04-18T14:38:30Z'
-- id: dlt:hub/runtime/overview.md
-  source: dlt
-  path: hub/runtime/overview.md
-  title: Overview
-  summary: Deploy and run dlt pipelines and notebooks in the cloud
-  tags:
-  - reference
-  keywords:
-  - deployment
-  - credentials
-  - load
-  - state
-  - dashboard
-  - notebooks
-  - dlt
-  - destination
-  - runtime
-  - schema
-  concepts:
-  - hub
-  category: reference
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings:
-  - anchor: dlthub-runtime
-    title: dltHub Runtime
-  - anchor: credentials-and-configs
-    title: Credentials and configs
-  - anchor: understanding-workspace-profiles
-    title: Understanding workspace profiles
-  - anchor: setting-up-configuration-files
-    title: Setting up configuration files
-  - anchor: runtime-connection-settings-set-after-login
-    title: Runtime connection settings (set after login)
-  - anchor: web-ui
-    title: Web UI
-  - anchor: overview
-    title: Overview
-  - anchor: jobs
-    title: Jobs
-  - anchor: runs
-    title: Runs
-  - anchor: run-details
-    title: Run details
-  - anchor: deployment-config
-    title: Deployment & config
-  - anchor: dashboard
-    title: Dashboard
-  - anchor: settings
-    title: Settings
-  - anchor: cli-reference
-    title: CLI reference
-  - anchor: common-commands
-    title: Common commands
-  - anchor: deployment-commands
-    title: Deployment Commands
-  - anchor: sync-only-code-deployment
-    title: Sync only code (deployment)
-  - anchor: sync-only-configuration-secrets-and-config
-    title: Sync only configuration (secrets and config)
-  - anchor: list-all-deployments
-    title: List all deployments
-  - anchor: get-deployment-details
-    title: Get deployment details
-  - anchor: job-commands
-    title: Job commands
-  - anchor: list-all-jobs
-    title: List all jobs
-  - anchor: get-job-details
-    title: Get job details
-  - anchor: create-a-job-without-running-it
-    title: Create a job without running it
-  - anchor: job-run-commands
-    title: Job run commands
-  - anchor: list-all-runs
-    title: List all runs
-  - anchor: get-run-details
-    title: Get run details
-  - anchor: create-a-new-run
-    title: Create a new run
-  - anchor: view-run-logs
-    title: View run logs
-  - anchor: cancel-a-run
-    title: Cancel a run
-  - anchor: configuration-commands
-    title: Configuration commands
-  - anchor: list-configuration-versions
-    title: List configuration versions
-  - anchor: get-configuration-details
-    title: Get configuration details
-  - anchor: sync-local-configuration-to-runtime
-    title: Sync local configuration to Runtime
-  - anchor: development-workflow
-    title: Development workflow
-  - anchor: key-concepts
-    title: Key concepts
-  - anchor: jobs-vs-runs
-    title: Jobs vs runs
-  - anchor: batch-vs-interactive
-    title: Batch vs interactive
-  - anchor: interactive-application-types
-    title: Interactive application types
-  - anchor: serving-streamlit-and-mcp-applications
-    title: Serving Streamlit and MCP applications
-  - anchor: profiles
-    title: Profiles
-  - anchor: deployments-and-configurations
-    title: Deployments and configurations
-  - anchor: current-limitations
-    title: Current limitations
-  - anchor: troubleshooting
-    title: Troubleshooting
-  - anchor: no-access-profile-detected
-    title: No 'access' profile detected
-  - anchor: no-prod-profile-detected
-    title: No 'prod' profile detected
-  - anchor: job-not-using-latest-code
-    title: Job not using latest code
-  - anchor: logs-not-appearing
-    title: Logs not appearing
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: false
-  stale_since: null
-  last_indexed: '2026-04-18T14:38:30Z'
-- id: dlt:hub/workspace/init.md
-  source: dlt
-  path: hub/workspace/init.md
-  title: Initialize a pipeline
-  summary: How to initialize and develop a dlt pipeline using CLI, workspace, or verified sources
-  tags:
-  - reference
-  keywords:
-  - load
-  - credentials
-  - how to
-  - workspace
-  - extract
-  - dlt
-  - resource
-  - verified source
-  - destination
-  - create a pipeline
-  concepts:
-  - hub
-  category: reference
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings:
-  - anchor: initialize-a-pipeline
-    title: Initialize a pipeline
-  - anchor: overview
-    title: Overview
-  - anchor: step-0-install-dlt-with-workspace-support
-    title: 'Step 0: Install dlt with workspace support'
-  - anchor: step-1-initialize-a-custom-pipeline
-    title: 'Step 1: Initialize a custom pipeline'
-  - anchor: manual-setup-standard-workflow
-    title: Manual setup (standard workflow)
-  - anchor: llm-native-setup
-    title: LLM-native setup
-  - anchor: verified-source-setup-community-connectors
-    title: Verified source setup (community connectors)
-  - anchor: step-2-add-credentials
-    title: 'Step 2: Add credentials'
-  - anchor: step-3-run-a-pipeline
-    title: 'Step 3: Run a pipeline'
-  - anchor: next-steps-deploy-and-scale
-    title: 'Next steps: Deploy and scale'
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: false
-  stale_since: null
-  last_indexed: '2026-04-18T14:38:30Z'
-- id: dlt:hub/workspace/overview.md
-  source: dlt
-  path: hub/workspace/overview.md
-  title: Overview
-  summary: "It provides the tools and support you need to move from\nrunning your first dlt pipeline to large-scale, production-ready data workflows. It provides:\n* \n*  (dev, prod, tests, access) through\
-    \ profiles "
-  tags:
-  - reference
-  keywords:
-  - load
-  - transform
-  - dlt
-  - source
-  - pipeline
-  concepts:
-  - hub
-  category: reference
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings:
-  - anchor: workspace
-    title: Workspace
-  - anchor: get-started-with-the-workspace
-    title: Get started with the Workspace
-  - anchor: availability-and-licensing
-    title: Availability and licensing
-  - anchor: cli-support
-    title: CLI support
-  - anchor: next-steps
-    title: Next steps
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: false
-  stale_since: null
-  last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:intro.md
   source: dlt
   path: intro.md
@@ -10077,7 +8068,7 @@ entries:
   - anchor: what-is-dlt
     title: What is dlt?
   - anchor: load-data-with-dlt-from
-    title: "Load data with dlt from \u2026"
+    title: Load data with dlt from …
   - anchor: print-load-info-and-posts-table-as-data-frame
     title: print load info and posts table as data frame
   - anchor: print-load-info-and-the-family-table-as-data-frame
@@ -10190,43 +8181,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
-  last_indexed: '2026-04-18T14:38:30Z'
-- id: dlt:reference/explainers/airflow-gcp-cloud-composer.md
-  source: dlt
-  path: reference/explainers/airflow-gcp-cloud-composer.md
-  title: Cloud Composer setup
-  summary: Deploy Airflow project from GitHub to Google Cloud Composer
-  tags:
-  - reference
-  keywords:
-  - dlt
-  - airflow
-  - google cloud composer
-  - source
-  - github
-  - pipeline
-  concepts:
-  - reference
-  category: reference
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings:
-  - anchor: google-cloud-composer-setup
-    title: Google Cloud Composer setup
-  - anchor: ci-cd-setup
-    title: CI/CD setup
-  - anchor: airflow-setup
-    title: Airflow setup
-  - anchor: adding-the-libraries-needed
-    title: Adding the libraries needed
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:reference/explainers/how-dlt-works.md
   source: dlt
@@ -10270,8 +8226,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:reference/frequently-asked-questions.md
   source: dlt
@@ -10301,7 +8257,9 @@ entries:
   - anchor: can-i-configure-different-nesting-levels-for-each-resource
     title: Can I configure different nesting levels for each resource?
   - anchor: can-i-configure-dlt-to-load-data-in-chunks-of-10-000-records-for-more-efficient-processing-and-how-does-this-affect-data-resumption-and-retries-in-case-of-failures
-    title: Can I configure dlt to load data in chunks of 10,000 records for more efficient processing, and how does this affect data resumption and retries in case of failures?
+    title: Can I configure dlt to load data in chunks of 10,000 records for more efficient
+      processing, and how does this affect data resumption and retries in case of
+      failures?
   - anchor: how-to-contribute-a-verified-source
     title: How to contribute a verified source?
   - anchor: if-you-don-t-have-the-source-required-listed-in-verified-sources
@@ -10323,8 +8281,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:reference/installation.md
   source: dlt
@@ -10365,8 +8323,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:reference/performance.md
   source: dlt
@@ -10452,8 +8410,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:reference/telemetry.md
   source: dlt
@@ -10498,37 +8456,13 @@ entries:
   stale: false
   stale_since: null
   last_indexed: '2026-04-18T14:38:30Z'
-- id: dlt:reference/tracing.md
-  source: dlt
-  path: reference/tracing.md
-  title: Tracing
-  summary: '1. Identifiers
-
-
-    2.'
-  tags:
-  - reference
-  keywords:
-  - schema
-  concepts:
-  - reference
-  category: reference
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings: []
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: false
-  stale_since: null
-  last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:release-notes/1.12.1.md
   source: dlt
   path: release-notes/1.12.1.md
   title: 'Release highlights: 1.12.1'
-  summary: Release highlights provide a concise overview of the most important new features, improvements, and fixes in a software update, helping users quickly understand what's changed and how it impacts
-    their
+  summary: Release highlights provide a concise overview of the most important new
+    features, improvements, and fixes in a software update, helping users quickly
+    understand what's changed and how it impacts their
   tags:
   - reference
   keywords:
@@ -10562,7 +8496,7 @@ entries:
   - anchor: performance-and-stability-fixes
     title: Performance and stability fixes
   - anchor: 1-snowflake-extremely-slow-merge-query-due-to-or-condition-n-complexity
-    title: "1. Snowflake: extremely slow merge query due to `OR` condition (n\xB2 complexity)"
+    title: '1. Snowflake: extremely slow merge query due to `OR` condition (n² complexity)'
   - anchor: 2-skip-deduplication-option
     title: 2. Skip deduplication option
   - anchor: iceberg-upsert-merge-strategy-added
@@ -10581,8 +8515,9 @@ entries:
   source: dlt
   path: release-notes/1.13-1.14.md
   title: 'Release highlights: 1.12.3 - 1.14.1'
-  summary: Release highlights provide a concise overview of the most important new features, improvements, and fixes in a software update, helping users quickly understand what's changed and how it impacts
-    their
+  summary: Release highlights provide a concise overview of the most important new
+    features, improvements, and fixes in a software update, helping users quickly
+    understand what's changed and how it impacts their
   tags:
   - reference
   keywords:
@@ -10606,7 +8541,8 @@ entries:
   - anchor: release-highlights-1-12-3-1-13-0-1-14-1
     title: 'Release highlights: 1.12.3 & 1.13.0 & 1.14.1'
   - anchor: breaking-change-ibis-dataset-relation-functionality-new-non-ibis-relation-features
-    title: 'Breaking change: Ibis dataset/relation functionality + new non-Ibis relation features'
+    title: 'Breaking change: Ibis dataset/relation functionality + new non-Ibis relation
+      features'
   - anchor: previously-dataset-customers-now-returns-a-regular-relation
     title: 'Previously: dataset["customers"]  # now returns a regular relation'
   - anchor: sort
@@ -10632,21 +8568,22 @@ entries:
   - anchor: add-post-create-sql-statements
     title: Add post-create SQL statements
   - anchor: cli-friendly-drop-command
-    title: "CLI: Friendly `drop` command \U0001F415\u200D\U0001F9BA"
+    title: 'CLI: Friendly `drop` command 🐕‍🦺'
   - anchor: shout-out-to-new-contributors
     title: Shout-out to new contributors
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:release-notes/1.15.md
   source: dlt
   path: release-notes/1.15.md
   title: 'Release highlights: 1.15'
-  summary: Release highlights provide a concise overview of the most important new features, improvements, and fixes in a software update, helping users quickly understand what's changed and how it impacts
-    their
+  summary: Release highlights provide a concise overview of the most important new
+    features, improvements, and fixes in a software update, helping users quickly
+    understand what's changed and how it impacts their
   tags:
   - reference
   keywords:
@@ -10670,7 +8607,7 @@ entries:
   - anchor: release-highlights-1-15
     title: 'Release highlights: 1.15'
   - anchor: breaking-changes-gz-extensions-now-added-to-compressed-files
-    title: "\u26A0\uFE0F Breaking changes: `.gz` extensions now added to compressed files"
+    title: '⚠️ Breaking changes: `.gz` extensions now added to compressed files'
   - anchor: export-schemas-in-dbml-format
     title: Export schemas in DBML format
   - anchor: generate-a-string-that-can-be-rendered-in-a-dbml-frontend
@@ -10704,21 +8641,23 @@ entries:
   - anchor: switched-connectorx-backend-from-arrow2-to-arrow
     title: Switched ConnectorX backend from `arrow2` to `arrow`
   - anchor: ai-command-ide-integration-now-works-with-all-major-ides-cursor-copilot-windsurf-etc
-    title: 'AI Command IDE integration: now works with all major IDEs (Cursor, Copilot, Windsurf, etc.)'
+    title: 'AI Command IDE integration: now works with all major IDEs (Cursor, Copilot,
+      Windsurf, etc.)'
   - anchor: shout-out-to-new-contributors
     title: Shout-out to new contributors
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:release-notes/1.16.md
   source: dlt
   path: release-notes/1.16.md
   title: 'Release highlights: 1.16'
-  summary: Release highlights provide a concise overview of the most important new features, improvements, and fixes in a software update, helping users quickly understand what's changed and how it impacts
-    their
+  summary: Release highlights provide a concise overview of the most important new
+    features, improvements, and fixes in a software update, helping users quickly
+    understand what's changed and how it impacts their
   tags:
   - reference
   keywords:
@@ -10748,13 +8687,13 @@ entries:
   - anchor: output
     title: 'Output:'
   - anchor: naive-timestamp-utc-tz-aware
-    title: "naive timestamp \u2192 UTC tz-aware"
+    title: naive timestamp → UTC tz-aware
   - anchor: 2024-05-01-12-00-00-2024-05-01-12-00-00-00-00
-    title: "\"2024-05-01 12:00:00\" \u2192 \"2024-05-01 12:00:00+00:00\""
+    title: '"2024-05-01 12:00:00" → "2024-05-01 12:00:00+00:00"'
   - anchor: tz-aware-timestamp-with-timezone-false-utc-converted-then-naive
-    title: "tz-aware timestamp with timezone=False \u2192 UTC converted, then naive"
+    title: tz-aware timestamp with timezone=False → UTC converted, then naive
   - anchor: 2024-05-01-12-00-00-02-00-2024-05-01-10-00-00
-    title: "\"2024-05-01 12:00:00+02:00\" \u2192 \"2024-05-01 10:00:00\""
+    title: '"2024-05-01 12:00:00+02:00" → "2024-05-01 10:00:00"'
   - anchor: visualization-updates
     title: Visualization updates
   - anchor: shout-out-to-new-contributors
@@ -10762,15 +8701,16 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:release-notes/1.17.md
   source: dlt
   path: release-notes/1.17.md
   title: 'Release highlights: 1.17'
-  summary: Release highlights provide a concise overview of the most important new features, improvements, and fixes in a software update, helping users quickly understand what's changed and how it impacts
-    their
+  summary: Release highlights provide a concise overview of the most important new
+    features, improvements, and fixes in a software update, helping users quickly
+    understand what's changed and how it impacts their
   tags:
   - reference
   keywords:
@@ -10812,15 +8752,16 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:release-notes/1.18.md
   source: dlt
   path: release-notes/1.18.md
   title: 'Release highlights: 1.18'
-  summary: Release highlights provide a concise overview of the most important new features, improvements, and fixes in a software update, helping users quickly understand what's changed and how it impacts
-    their
+  summary: Release highlights provide a concise overview of the most important new
+    features, improvements, and fixes in a software update, helping users quickly
+    understand what's changed and how it impacts their
   tags:
   - reference
   keywords:
@@ -10864,15 +8805,16 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:release-notes/1.19.md
   source: dlt
   path: release-notes/1.19.md
   title: 'Release highlights: 1.19'
-  summary: Release highlights provide a concise overview of the most important new features, improvements, and fixes in a software update, helping users quickly understand what's changed and how it impacts
-    their
+  summary: Release highlights provide a concise overview of the most important new
+    features, improvements, and fixes in a software update, helping users quickly
+    understand what's changed and how it impacts their
   tags:
   - reference
   keywords:
@@ -10910,15 +8852,16 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:release-notes/1.21.2.md
   source: dlt
   path: release-notes/1.21.2.md
   title: 'Release highlights: v1.21.2'
-  summary: Release highlights provide a concise overview of the most important new features, improvements, and fixes in a software update, helping users quickly understand what's changed and how it impacts
-    their
+  summary: Release highlights provide a concise overview of the most important new
+    features, improvements, and fixes in a software update, helping users quickly
+    understand what's changed and how it impacts their
   tags:
   - reference
   keywords:
@@ -10939,54 +8882,12 @@ entries:
   grep_hint: null
   headings:
   - anchor: breaking-changes-compound-hints-precedence-and-replacement-behavior
-    title: "\u26A0\uFE0F Breaking changes: Compound hints precedence and replacement behavior"
+    title: '⚠️ Breaking changes: Compound hints precedence and replacement behavior'
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
-  last_indexed: '2026-04-18T14:38:30Z'
-- id: dlt:running-in-production/alerting.md
-  source: dlt
-  path: running-in-production/alerting.md
-  title: Alerting
-  summary: How to set up alerting for dlt pipelines
-  tags:
-  - reference
-  keywords:
-  - alerting
-  - load
-  - slack
-  - dlt
-  - schema
-  - pipeline
-  - alerts
-  concepts:
-  - running-in-production
-  category: reference
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings:
-  - anchor: alerting
-    title: Alerting
-  - anchor: alerts
-    title: Alerts
-  - anchor: sentry
-    title: Sentry
-  - anchor: slack
-    title: Slack
-  - anchor: import-the-send-slack-message-function-from-the-dlt-library
-    title: Import the send_slack_message function from the dlt library
-  - anchor: define-the-url-for-your-slack-webhook
-    title: Define the URL for your Slack webhook
-  - anchor: iterate-over-each-package-in-the-load-info-object
-    title: Iterate over each package in the load_info object
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:running-in-production/monitoring.md
   source: dlt
@@ -11113,51 +9014,15 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
-  last_indexed: '2026-04-18T14:38:30Z'
-- id: dlt:running-in-production/tracing.md
-  source: dlt
-  path: running-in-production/tracing.md
-  title: Tracing
-  summary: Rich information on executed dlt pipelines
-  tags:
-  - reference
-  keywords:
-  - opt in
-  - load
-  - extract
-  - tracing
-  - dlt
-  - destination
-  - pipeline
-  - sentry
-  concepts:
-  - running-in-production
-  category: reference
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings:
-  - anchor: tracing
-    title: Tracing
-  - anchor: when-and-what-we-send
-    title: When and what we send
-  - anchor: enable-pipeline-tracing
-    title: Enable pipeline tracing
-  - anchor: disable-all-tracing
-    title: Disable all tracing
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:tutorial/advanced-course.md
   source: dlt
   path: tutorial/advanced-course.md
   title: dlt Advanced Course
-  summary: Master advanced dlt concepts with this comprehensive course covering custom sources, destinations, transformations, data contracts and performance optimization.
+  summary: Master advanced dlt concepts with this comprehensive course covering custom
+    sources, destinations, transformations, data contracts and performance optimization.
   tags:
   - tutorial
   keywords:
@@ -11183,27 +9048,29 @@ entries:
   - anchor: lessons
     title: Lessons
   - anchor: lesson-1-custom-sources-rest-apis-restclient-open-in-molab-https-marimo-io-molab-shield-svg-https-molab-marimo-io-github-dlt-hub-dlt-blob-master-docs-education-dlt-advanced-course-lesson-1-custom-sources-restapi-source-and-restclient-py-open-in-colab-https-colab-research-google-com-assets-colab-badge-svg-https-colab-research-google-com-github-dlt-hub-dlt-blob-master-docs-education-dlt-advanced-course-lesson-1-custom-sources-restapi-source-and-restclient-ipynb-github-badge-https-img-shields-io-badge-github-view-source-2b3137-logo-github-https-github-com-dlt-hub-dlt-blob-master-docs-education-dlt-advanced-course-lesson-1-custom-sources-restapi-source-and-restclient-ipynb
-    title: "**Lesson 1: Custom Sources \u2013 REST APIs & RESTClient** [![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/dlt-hub/dlt/blob/master/docs/education/dlt-advanced-course/lesson_1_custom_sources_restapi_source_and_restclient.py)\
-      \ [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dlt-hub/dlt/blob/master/docs/education/dlt-advanced-course/lesson_1_custom_sources_restapi_source_and_restclient.ipynb)\
-      \ [![GitHub badge](https://img.shields.io/badge/github-view_source-2b3137?logo=github)](https://github.com/dlt-hub/dlt/blob/master/docs/education/dlt-advanced-course/lesson_1_custom_sources_restapi_source_and_restclient.ipynb)"
+    title: '**Lesson 1: Custom Sources – REST APIs & RESTClient** [![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/dlt-hub/dlt/blob/master/docs/education/dlt-advanced-course/lesson_1_custom_sources_restapi_source_and_restclient.py)
+      [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dlt-hub/dlt/blob/master/docs/education/dlt-advanced-course/lesson_1_custom_sources_restapi_source_and_restclient.ipynb)
+      [![GitHub badge](https://img.shields.io/badge/github-view_source-2b3137?logo=github)](https://github.com/dlt-hub/dlt/blob/master/docs/education/dlt-advanced-course/lesson_1_custom_sources_restapi_source_and_restclient.ipynb)'
   - anchor: lesson-2-custom-sources-sql-databases-open-in-molab-https-marimo-io-molab-shield-svg-https-molab-marimo-io-github-dlt-hub-dlt-blob-master-docs-education-dlt-advanced-course-lesson-2-custom-sources-sql-databases-py-open-in-colab-https-colab-research-google-com-assets-colab-badge-svg-https-colab-research-google-com-github-dlt-hub-dlt-blob-master-docs-education-dlt-advanced-course-lesson-2-custom-sources-sql-databases-ipynb-github-badge-https-img-shields-io-badge-github-view-source-2b3137-logo-github-https-github-com-dlt-hub-dlt-blob-master-docs-education-dlt-advanced-course-lesson-2-custom-sources-sql-databases-ipynb
-    title: "**Lesson 2: Custom Sources \u2013 SQL Databases** [![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/dlt-hub/dlt/blob/master/docs/education/dlt-advanced-course/lesson_2_custom_sources_sql_databases_.py)\
-      \ [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dlt-hub/dlt/blob/master/docs/education/dlt-advanced-course/lesson_2_custom_sources_sql_databases_.ipynb)\
-      \ [![GitHub badge](https://img.shields.io/badge/github-view_source-2b3137?logo=github)](https://github.com/dlt-hub/dlt/blob/master/docs/education/dlt-advanced-course/lesson_2_custom_sources_sql_databases_.ipynb)"
+    title: '**Lesson 2: Custom Sources – SQL Databases** [![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/dlt-hub/dlt/blob/master/docs/education/dlt-advanced-course/lesson_2_custom_sources_sql_databases_.py)
+      [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dlt-hub/dlt/blob/master/docs/education/dlt-advanced-course/lesson_2_custom_sources_sql_databases_.ipynb)
+      [![GitHub badge](https://img.shields.io/badge/github-view_source-2b3137?logo=github)](https://github.com/dlt-hub/dlt/blob/master/docs/education/dlt-advanced-course/lesson_2_custom_sources_sql_databases_.ipynb)'
   - anchor: lesson-3-custom-sources-filesystems-cloud-storage-open-in-molab-https-marimo-io-molab-shield-svg-https-molab-marimo-io-github-dlt-hub-dlt-blob-master-docs-education-dlt-advanced-course-lesson-3-custom-sources-filesystem-and-cloud-storage-py-open-in-colab-https-colab-research-google-com-assets-colab-badge-svg-https-colab-research-google-com-github-dlt-hub-dlt-blob-master-docs-education-dlt-advanced-course-lesson-3-custom-sources-filesystem-and-cloud-storage-ipynb-github-badge-https-img-shields-io-badge-github-view-source-2b3137-logo-github-https-github-com-dlt-hub-dlt-blob-master-docs-education-dlt-advanced-course-lesson-3-custom-sources-filesystem-and-cloud-storage-ipynb
-    title: "**Lesson 3: Custom Sources \u2013 Filesystems & Cloud Storage** [![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/dlt-hub/dlt/blob/master/docs/education/dlt-advanced-course/lesson_3_custom_sources_filesystem_and_cloud_storage.py)\
-      \ [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dlt-hub/dlt/blob/master/docs/education/dlt-advanced-course/lesson_3_custom_sources_filesystem_and_cloud_storage.ipynb)\
-      \ [![GitHub badge](https://img.shields.io/badge/github-view_source-2b3137?logo=github)](https://github.com/dlt-hub/dlt/blob/master/docs/education/dlt-advanced-course/lesson_3_custom_sources_filesystem_and_cloud_storage.ipynb)"
+    title: '**Lesson 3: Custom Sources – Filesystems & Cloud Storage** [![Open in
+      molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/dlt-hub/dlt/blob/master/docs/education/dlt-advanced-course/lesson_3_custom_sources_filesystem_and_cloud_storage.py)
+      [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dlt-hub/dlt/blob/master/docs/education/dlt-advanced-course/lesson_3_custom_sources_filesystem_and_cloud_storage.ipynb)
+      [![GitHub badge](https://img.shields.io/badge/github-view_source-2b3137?logo=github)](https://github.com/dlt-hub/dlt/blob/master/docs/education/dlt-advanced-course/lesson_3_custom_sources_filesystem_and_cloud_storage.ipynb)'
   - anchor: lesson-4-custom-destinations-reverse-etl-open-in-molab-https-marimo-io-molab-shield-svg-https-molab-marimo-io-github-dlt-hub-dlt-blob-master-docs-education-dlt-advanced-course-lesson-4-destinations-reverse-etl-py-open-in-colab-https-colab-research-google-com-assets-colab-badge-svg-https-colab-research-google-com-github-dlt-hub-dlt-blob-master-docs-education-dlt-advanced-course-lesson-4-destinations-reverse-etl-ipynb-github-badge-https-img-shields-io-badge-github-view-source-2b3137-logo-github-https-github-com-dlt-hub-dlt-blob-master-docs-education-dlt-advanced-course-lesson-4-destinations-reverse-etl-ipynb
-    title: "**Lesson 4: Custom Destinations \u2013 Reverse ETL** [![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/dlt-hub/dlt/blob/master/docs/education/dlt-advanced-course/lesson_4_destinations_reverse_etl.py)\
-      \ [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dlt-hub/dlt/blob/master/docs/education/dlt-advanced-course/lesson_4_destinations_reverse_etl.ipynb)\
-      \ [![GitHub badge](https://img.shields.io/badge/github-view_source-2b3137?logo=github)](https://github.com/dlt-hub/dlt/blob/master/docs/education/dlt-advanced-course/lesson_4_destinations_reverse_etl.ipynb)"
+    title: '**Lesson 4: Custom Destinations – Reverse ETL** [![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/dlt-hub/dlt/blob/master/docs/education/dlt-advanced-course/lesson_4_destinations_reverse_etl.py)
+      [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dlt-hub/dlt/blob/master/docs/education/dlt-advanced-course/lesson_4_destinations_reverse_etl.ipynb)
+      [![GitHub badge](https://img.shields.io/badge/github-view_source-2b3137?logo=github)](https://github.com/dlt-hub/dlt/blob/master/docs/education/dlt-advanced-course/lesson_4_destinations_reverse_etl.ipynb)'
   - anchor: lesson-5-transforming-data-before-after-load-open-in-molab-https-marimo-io-molab-shield-svg-https-molab-marimo-io-github-dlt-hub-dlt-blob-master-docs-education-dlt-advanced-course-lesson-5-transform-data-before-and-after-loading-py-open-in-colab-https-colab-research-google-com-assets-colab-badge-svg-https-colab-research-google-com-github-dlt-hub-dlt-blob-master-docs-education-dlt-advanced-course-lesson-5-transform-data-before-and-after-loading-ipynb-github-badge-https-img-shields-io-badge-github-view-source-2b3137-logo-github-https-github-com-dlt-hub-dlt-blob-master-docs-education-dlt-advanced-course-lesson-5-transform-data-before-and-after-loading-ipynb
     title: '**Lesson 5: Transforming Data Before & After Load** [![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/dlt-hub/dlt/blob/master/docs/education/dlt-advanced-course/lesson_5_transform_data_before_and_after_loading.py)
       [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dlt-hub/dlt/blob/master/docs/education/dlt-advanced-course/lesson_5_transform_data_before_and_after_loading.ipynb)
       [![GitHub badge](https://img.shields.io/badge/github-view_source-2b3137?logo=github)](https://github.com/dlt-hub/dlt/blob/master/docs/education/dlt-advanced-course/lesson_5_transform_data_before_and_after_loading.ipynb)'
   - anchor: lesson-6-write-disposition-strategies-advanced-tricks-open-in-molab-https-marimo-io-molab-shield-svg-https-molab-marimo-io-github-dlt-hub-dlt-blob-master-docs-education-dlt-advanced-course-lesson-6-write-disposition-strategies-and-advanced-tricks-py-open-in-colab-https-colab-research-google-com-assets-colab-badge-svg-https-colab-research-google-com-github-dlt-hub-dlt-blob-master-docs-education-dlt-advanced-course-lesson-6-write-disposition-strategies-and-advanced-tricks-ipynb-github-badge-https-img-shields-io-badge-github-view-source-2b3137-logo-github-https-github-com-dlt-hub-dlt-blob-master-docs-education-dlt-advanced-course-lesson-6-write-disposition-strategies-and-advanced-tricks-ipynb
-    title: '**Lesson 6: Write Disposition Strategies & Advanced Tricks** [![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/dlt-hub/dlt/blob/master/docs/education/dlt-advanced-course/lesson_6_write_disposition_strategies_and_advanced_tricks.py)
+    title: '**Lesson 6: Write Disposition Strategies & Advanced Tricks** [![Open in
+      molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/dlt-hub/dlt/blob/master/docs/education/dlt-advanced-course/lesson_6_write_disposition_strategies_and_advanced_tricks.py)
       [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dlt-hub/dlt/blob/master/docs/education/dlt-advanced-course/lesson_6_write_disposition_strategies_and_advanced_tricks.ipynb)
       [![GitHub badge](https://img.shields.io/badge/github-view_source-2b3137?logo=github)](https://github.com/dlt-hub/dlt/blob/master/docs/education/dlt-advanced-course/lesson_6_write_disposition_strategies_and_advanced_tricks.ipynb)'
   - anchor: lesson-7-data-contracts-open-in-molab-https-marimo-io-molab-shield-svg-https-molab-marimo-io-github-dlt-hub-dlt-blob-master-docs-education-dlt-advanced-course-lesson-7-data-contracts-py-open-in-colab-https-colab-research-google-com-assets-colab-badge-svg-https-colab-research-google-com-github-dlt-hub-dlt-blob-master-docs-education-dlt-advanced-course-lesson-7-data-contracts-ipynb-github-badge-https-img-shields-io-badge-github-view-source-2b3137-logo-github-https-github-com-dlt-hub-dlt-blob-master-docs-education-dlt-advanced-course-lesson-7-data-contracts-ipynb
@@ -11230,8 +9097,9 @@ entries:
   source: dlt
   path: tutorial/education.md
   title: Education
-  summary: Learn the fundamentals and advanced concepts of dlt with self-paced courses. Start with pipelines, resources, sources, pagination, schema, and state, then move on to custom sources, complex APIs,
-    dest
+  summary: Learn the fundamentals and advanced concepts of dlt with self-paced courses.
+    Start with pipelines, resources, sources, pagination, schema, and state, then
+    move on to custom sources, complex APIs, dest
   tags:
   - tutorial
   keywords:
@@ -11263,14 +9131,16 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:tutorial/filesystem.md
   source: dlt
   path: tutorial/filesystem.md
   title: Load data from a cloud storage or a file system
-  summary: Learn how to load data files like JSON, JSONL, CSV, and Parquet from a cloud storage (AWS S3, Google Cloud Storage, Google Drive, Azure Blob Storage) or a local file system using dlt.
+  summary: Learn how to load data files like JSON, JSONL, CSV, and Parquet from a
+    cloud storage (AWS S3, Google Cloud Storage, Google Drive, Azure Blob Storage)
+    or a local file system using dlt.
   tags:
   - tutorial
   keywords:
@@ -11324,14 +9194,15 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:tutorial/fundamentals-course.md
   source: dlt
   path: tutorial/fundamentals-course.md
   title: dlt Fundamentals Course
-  summary: Master the basics of dlt with this comprehensive course covering pipelines, resources, sources, configuration, schema, state, and incremental loading.
+  summary: Master the basics of dlt with this comprehensive course covering pipelines,
+    resources, sources, configuration, schema, state, and incremental loading.
   tags:
   - tutorial
   keywords:
@@ -11470,12 +9341,12 @@ entries:
   - anchor: configurable-sources
     title: Configurable sources
   - anchor: what-s-next
-    title: "What\u2019s next"
+    title: What’s next
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:tutorial/playground.mdx
   source: dlt
@@ -11565,8 +9436,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:tutorial/sql-database.md
   source: dlt
@@ -11622,53 +9493,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
-  last_indexed: '2026-04-18T14:38:30Z'
-- id: dlt:walkthroughs/add-a-verified-source.md
-  source: dlt
-  path: walkthroughs/add-a-verified-source.md
-  title: Add a verified source
-  summary: How to create a pipeline from a verified source
-  tags:
-  - verified-source
-  keywords:
-  - load
-  - add a verified source
-  - how to
-  - credentials
-  - dlt
-  - destination
-  - source
-  - pipeline
-  concepts:
-  - walkthroughs
-  category: guide
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings:
-  - anchor: add-a-verified-source
-    title: Add a verified source
-  - anchor: 1-initialize-project
-    title: 1. Initialize project
-  - anchor: 2-adding-credentials
-    title: 2. Adding credentials
-  - anchor: 3-customize-or-write-a-pipeline-script
-    title: 3. Customize or write a pipeline script
-  - anchor: 4-hack-a-verified-source
-    title: 4. Hack a verified source
-  - anchor: 5-add-more-sources-to-your-project
-    title: 5. Add more sources to your project
-  - anchor: 6-update-the-verified-source-with-the-newest-version
-    title: 6. Update the verified source with the newest version
-  - anchor: 7-advanced-using-dlt-init-with-branches-local-folders-or-git-repos
-    title: '7. Advanced: Using dlt init with branches, local folders, or git repos'
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:walkthroughs/add-incremental-configuration.md
   source: dlt
@@ -11704,12 +9530,13 @@ entries:
   - anchor: append-new-records-based-on-timestamp-created-at
     title: Append new records based on timestamp ("created_at")
   - anchor: 4-merge-update-insert-records-based-on-timestamp-last-modified-at-and-id
-    title: 4. Merge (update/insert) records based on timestamp ("last_modified_at") and ID
+    title: 4. Merge (update/insert) records based on timestamp ("last_modified_at")
+      and ID
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:walkthroughs/add_credentials.md
   source: dlt
@@ -11800,7 +9627,8 @@ entries:
   - anchor: run-the-pipeline
     title: Run the pipeline
   - anchor: load-data-as-json-instead-of-generating-nested-tables-or-columns-from-flattened-dicts
-    title: Load data as JSON instead of generating nested tables or columns from flattened dicts
+    title: Load data as JSON instead of generating nested tables or columns from flattened
+      dicts
   - anchor: add-performance-hints
     title: Add performance hints
   - anchor: 4-keep-your-import-schema
@@ -11808,53 +9636,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
-  last_indexed: '2026-04-18T14:38:30Z'
-- id: dlt:walkthroughs/create-a-pipeline.md
-  source: dlt
-  path: walkthroughs/create-a-pipeline.md
-  title: Create a pipeline
-  summary: How to create a pipeline
-  tags:
-  - reference
-  keywords:
-  - load
-  - credentials
-  - how to
-  - state
-  - transform
-  - dlt
-  - resource
-  - destination
-  - create a pipeline
-  - source
-  concepts:
-  - walkthroughs
-  category: guide
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings:
-  - anchor: create-a-pipeline
-    title: Create a pipeline
-  - anchor: task-overview
-    title: Task overview
-  - anchor: 1-initialize-project
-    title: 1. Initialize project
-  - anchor: 2-obtain-and-add-api-credentials-from-github
-    title: 2. Obtain and add API credentials from GitHub
-  - anchor: 3-request-project-issues-from-the-github-api
-    title: 3. Request project issues from the GitHub API
-  - anchor: 4-load-the-data
-    title: 4. Load the data
-  - anchor: 5-next-steps
-    title: 5. Next steps
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:walkthroughs/create-new-destination.md
   source: dlt
@@ -11930,14 +9713,15 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:walkthroughs/deploy-a-pipeline/deploy-gcp-cloud-function-as-webhook.md
   source: dlt
   path: walkthroughs/deploy-a-pipeline/deploy-gcp-cloud-function-as-webhook.md
   title: Deploy GCP Cloud Function as a webhook
-  summary: Deploy a dlt pipeline as a Google Cloud Function webhook for real-time event ingestion
+  summary: Deploy a dlt pipeline as a Google Cloud Function webhook for real-time
+    event ingestion
   tags:
   - reference
   keywords:
@@ -12020,13 +9804,14 @@ entries:
   - anchor: 4-add-credentials
     title: 4. Add credentials
   - anchor: 5-configure-build-cloudbuild-yaml-to-run-it-with-google-cloud-platform-cloud-composer-https-console-cloud-google-com-composer-environments
-    title: 5. Configure `build/cloudbuild.yaml` to run it with Google Cloud Platform \[[Cloud Composer](https://console.cloud.google.com/composer/environments)\]
+    title: 5. Configure `build/cloudbuild.yaml` to run it with Google Cloud Platform
+      \[[Cloud Composer](https://console.cloud.google.com/composer/environments)\]
   - anchor: 6-finish-the-airflow-deployment
     title: 6. Finish the Airflow deployment
   - anchor: troubleshooting
     title: Troubleshooting
   - anchor: 1-modulenotfounderror-no-module-named-source-name
-    title: "1. ModuleNotFoundError: No module named \u2018\\{source_name\\}\u2019"
+    title: '1. ModuleNotFoundError: No module named ‘\{source_name\}’'
   - anchor: the-folder-where-your-airflow-pipelines-live-most-likely-a
     title: The folder where your airflow pipelines live, most likely a
   - anchor: subfolder-in-a-code-repository-this-path-must-be-absolute
@@ -12036,18 +9821,20 @@ entries:
   - anchor: 2-valueerror-can-only-decompose-dlt-sources
     title: '2. ValueError: Can only decompose dlt sources'
   - anchor: 3-duplicatetaskidfound-task-id-your-task-id-has-already-been-added-to-the-dag
-    title: "3. DuplicateTaskIdFound: Task id \u2018\\{your_task_id\\}\u2019 has already been added to the DAG"
+    title: '3. DuplicateTaskIdFound: Task id ‘\{your_task_id\}’ has already been added
+      to the DAG'
   - anchor: first-source-configured-to-load-everything-except-activities-from-the-beginning
     title: First source configured to load everything except activities from the beginning
   - anchor: another-source-configured-to-load-activities-starting-at-the-given-date
     title: Another source configured to load activities starting at the given date
   - anchor: custom-fields-mapping-is-included-to-translate-custom-field-hashes-to-names
-    title: (custom_fields_mapping is included to translate custom field hashes to names)
+    title: (custom_fields_mapping is included to translate custom field hashes to
+      names)
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:walkthroughs/deploy-a-pipeline/deploy-with-dagster.md
   source: dlt
@@ -12143,8 +9930,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:walkthroughs/deploy-a-pipeline/deploy-with-google-cloud-functions.md
   source: dlt
@@ -12184,8 +9971,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:walkthroughs/deploy-a-pipeline/deploy-with-google-cloud-run.md
   source: dlt
@@ -12413,14 +10200,15 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:walkthroughs/dispatch-to-multiple-tables.md
   source: dlt
   path: walkthroughs/dispatch-to-multiple-tables.md
   title: Dispatch stream of events to multiple tables in DuckDB
-  summary: Learn how to efficiently dispatch a stream of GitHub events, categorized by event type, to different tables in DuckDB
+  summary: Learn how to efficiently dispatch a stream of GitHub events, categorized
+    by event type, to different tables in DuckDB
   tags:
   - reference
   keywords:
@@ -12501,8 +10289,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:walkthroughs/run-in-snowflake/database-connector-app.md
   source: dlt
@@ -12568,8 +10356,8 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:walkthroughs/run-in-snowflake/run-in-snowflake.md
   source: dlt
@@ -12709,9 +10497,268 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: false
-  stale_since: null
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
   last_indexed: '2026-04-18T14:38:30Z'
+- id: dlt:dlt-ecosystem/file-formats.md
+  source: dlt
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
+  category: unknown
+  summary: Pending re-scan
+  tags: []
+- id: dlt:dlt-ecosystem/transformations/dlthub.md
+  source: dlt
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
+  category: unknown
+  summary: Pending re-scan
+  tags: []
+- id: dlt:hub/cookbook/build-streamlit-dashboard.md
+  source: dlt
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
+  category: unknown
+  summary: Pending re-scan
+  tags: []
+- id: dlt:hub/data-discovery/datasets.md
+  source: dlt
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
+  category: unknown
+  summary: Pending re-scan
+  tags: []
+- id: dlt:hub/data-quality/advanced.md
+  source: dlt
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
+  category: unknown
+  summary: Pending re-scan
+  tags: []
+- id: dlt:hub/data-quality/index.md
+  source: dlt
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
+  category: unknown
+  summary: Pending re-scan
+  tags: []
+- id: dlt:hub/getting-started/introduction.md
+  source: dlt
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
+  category: unknown
+  summary: Pending re-scan
+  tags: []
+- id: dlt:hub/getting-started/oss-and-dlthub.md
+  source: dlt
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
+  category: unknown
+  summary: Pending re-scan
+  tags: []
+- id: dlt:hub/getting-started/platform-tutorial.md
+  source: dlt
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
+  category: unknown
+  summary: Pending re-scan
+  tags: []
+- id: dlt:hub/ingestion/dashboard.md
+  source: dlt
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
+  category: unknown
+  summary: Pending re-scan
+  tags: []
+- id: dlt:hub/ingestion/delta.md
+  source: dlt
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
+  category: unknown
+  summary: Pending re-scan
+  tags: []
+- id: dlt:hub/ingestion/iceberg.md
+  source: dlt
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
+  category: unknown
+  summary: Pending re-scan
+  tags: []
+- id: dlt:hub/ingestion/init.md
+  source: dlt
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
+  category: unknown
+  summary: Pending re-scan
+  tags: []
+- id: dlt:hub/ingestion/ms-sql.md
+  source: dlt
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
+  category: unknown
+  summary: Pending re-scan
+  tags: []
+- id: dlt:hub/ingestion/playground.md
+  source: dlt
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
+  category: unknown
+  summary: Pending re-scan
+  tags: []
+- id: dlt:hub/ingestion/rest-api-source.md
+  source: dlt
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
+  category: unknown
+  summary: Pending re-scan
+  tags: []
+- id: dlt:hub/ingestion/snowflake-plus.md
+  source: dlt
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
+  category: unknown
+  summary: Pending re-scan
+  tags: []
+- id: dlt:hub/license.md
+  source: dlt
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
+  category: unknown
+  summary: Pending re-scan
+  tags: []
+- id: dlt:hub/notifications/email.md
+  source: dlt
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
+  category: unknown
+  summary: Pending re-scan
+  tags: []
+- id: dlt:hub/notifications/slack.md
+  source: dlt
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
+  category: unknown
+  summary: Pending re-scan
+  tags: []
+- id: dlt:hub/pipeline-operations/deployments.md
+  source: dlt
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
+  category: unknown
+  summary: Pending re-scan
+  tags: []
+- id: dlt:hub/pipeline-operations/job-configuration.md
+  source: dlt
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
+  category: unknown
+  summary: Pending re-scan
+  tags: []
+- id: dlt:hub/pipeline-operations/monitoring.md
+  source: dlt
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
+  category: unknown
+  summary: Pending re-scan
+  tags: []
+- id: dlt:hub/pipeline-operations/overview.md
+  source: dlt
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
+  category: unknown
+  summary: Pending re-scan
+  tags: []
+- id: dlt:hub/pipeline-operations/profiles.md
+  source: dlt
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
+  category: unknown
+  summary: Pending re-scan
+  tags: []
+- id: dlt:hub/pipeline-operations/secrets-management.md
+  source: dlt
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
+  category: unknown
+  summary: Pending re-scan
+  tags: []
+- id: dlt:hub/pipeline-operations/triggers.md
+  source: dlt
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
+  category: unknown
+  summary: Pending re-scan
+  tags: []
+- id: dlt:hub/pipeline-operations/workspace-setup.md
+  source: dlt
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
+  category: unknown
+  summary: Pending re-scan
+  tags: []
+- id: dlt:hub/platform-capabilities/regions.md
+  source: dlt
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
+  category: unknown
+  summary: Pending re-scan
+  tags: []
+- id: dlt:hub/platform-capabilities/settings.md
+  source: dlt
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
+  category: unknown
+  summary: Pending re-scan
+  tags: []
+- id: dlt:hub/platform-capabilities/users-and-roles.md
+  source: dlt
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
+  category: unknown
+  summary: Pending re-scan
+  tags: []
+- id: dlt:hub/transformations/dbt-transformations.md
+  source: dlt
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
+  category: unknown
+  summary: Pending re-scan
+  tags: []
+- id: dlt:hub/transformations/explore-and-transform.md
+  source: dlt
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
+  category: unknown
+  summary: Pending re-scan
+  tags: []
+- id: dlt:hub/transformations/index.md
+  source: dlt
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
+  category: unknown
+  summary: Pending re-scan
+  tags: []
+- id: dlt:walkthroughs/deploy-a-pipeline/deploy-with-dlthub.md
+  source: dlt
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
+  category: unknown
+  summary: Pending re-scan
+  tags: []
+- id: dlt:walkthroughs/deploy-a-pipeline/index.md
+  source: dlt
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
+  category: unknown
+  summary: Pending re-scan
+  tags: []
+- id: dlt:walkthroughs/deploy-a-pipeline/orchestrate-with-dlthub.md
+  source: dlt
+  stale: true
+  stale_since: '2026-07-02T00:00:00Z'
+  category: unknown
+  summary: Pending re-scan
+  tags: []
 meta:
-  generated_at: '2026-04-18T14:38:30Z'
-  entry_count: 215
+  generated_at: '2026-07-02T00:00:00Z'
+  entry_count: 207
