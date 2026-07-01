@@ -19,11 +19,11 @@ sources:
   repo_name: polars
   branch: main
   docs_root: docs/source
-  last_commit_sha: 0df0c25d4db895ec8cad773bedc4e98400e3135e
-  last_indexed_at: '2026-06-30T06:25:20Z'
+  last_commit_sha: 2f9135dcfd76fc23322e02829f21bbd4b3636648
+  last_indexed_at: '2026-07-01T15:08:57Z'
 index:
   format: markdown
-  last_updated_at: '2026-06-30T06:25:20Z'
+  last_updated_at: '2026-07-01T15:08:57Z'
 settings:
   include_patterns:
   - '**/*.md'

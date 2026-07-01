@@ -1,7 +1,7 @@
 meta:
   corpus: polars
   source: polars
-  generated_at: '2026-06-30T06:25:20Z'
+  generated_at: '2026-07-01T15:08:57Z'
   entry_count: 111
 entries:
 - id: polars:index.md
@@ -1371,7 +1371,7 @@ entries:
   content_type: markdown
   size: standard
   stale: true
-  stale_since: '2026-06-30T06:25:20Z'
+  stale_since: '2026-07-01T15:08:57Z'
   last_indexed: '2026-06-30T06:25:20Z'
 - id: polars:polars-on-premises/billing/index.md
   source: polars
@@ -1399,7 +1399,7 @@ entries:
   content_type: markdown
   size: standard
   stale: true
-  stale_since: '2026-06-30T06:25:20Z'
+  stale_since: '2026-07-01T15:08:57Z'
   last_indexed: '2026-06-30T06:25:20Z'
 - id: polars:polars-on-premises/integrations/openlineage.md
   source: polars
@@ -1469,7 +1469,7 @@ entries:
   content_type: markdown
   size: standard
   stale: true
-  stale_since: '2026-06-30T06:25:20Z'
+  stale_since: '2026-07-01T15:08:57Z'
   last_indexed: '2026-06-30T06:25:20Z'
 - id: polars:polars-on-premises/releases.md
   source: polars
@@ -1483,7 +1483,7 @@ entries:
   content_type: markdown
   size: standard
   stale: true
-  stale_since: '2026-06-30T06:25:20Z'
+  stale_since: '2026-07-01T15:08:57Z'
   last_indexed: '2026-06-30T06:25:20Z'
 - id: polars:polars-on-premises/run/distributed-engine.md
   source: polars

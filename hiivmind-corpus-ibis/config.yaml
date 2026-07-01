@@ -1,40 +1,34 @@
-# Ibis Corpus Configuration
 schema_version: 2
-
 corpus:
-  name: "ibis"
-  display_name: "Ibis"
-  created_at: "2025-12-10T15:34:00Z"
+  name: ibis
+  display_name: Ibis
+  created_at: '2025-12-10T15:34:00Z'
   keywords:
-    - ibis
-    - sql
-    - duckdb
-    - bigquery
-    - postgres
-    - portable
-    - expression
-
-# Multiple sources - each with its own type and tracking
+  - ibis
+  - sql
+  - duckdb
+  - bigquery
+  - postgres
+  - portable
+  - expression
 sources:
-  - id: "ibis"
-    type: "git"
-    repo_url: "https://github.com/ibis-project/ibis"
-    repo_owner: "ibis-project"
-    repo_name: "ibis"
-    branch: "main"
-    docs_root: "docs"
-    last_commit_sha: "1de88cbbbc18a969addabee34b377b2633b7e9be"
-    last_indexed_at: "2026-03-25T12:00:00Z"
-
+- id: ibis
+  type: git
+  repo_url: https://github.com/ibis-project/ibis
+  repo_owner: ibis-project
+  repo_name: ibis
+  branch: main
+  docs_root: docs
+  last_commit_sha: 4556dad2c2a9f04468b12237ade271c2e708db4a
+  last_indexed_at: '2026-07-01T15:08:57Z'
 index:
-  format: "markdown"
-  last_updated_at: "2026-03-25T12:00:00Z"
-
+  format: markdown
+  last_updated_at: '2026-07-01T15:08:57Z'
 settings:
   include_patterns:
-    - "**/*.qmd"
-    - "**/*.md"
+  - '**/*.qmd'
+  - '**/*.md'
   exclude_patterns:
-    - "**/_freeze/**"
-    - "**/posts/**"
-    - "**/presentations/**"
+  - '**/_freeze/**'
+  - '**/posts/**'
+  - '**/presentations/**'

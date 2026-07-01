@@ -1,38 +1,32 @@
-# Narwhals Corpus Configuration
 schema_version: 2
-
 corpus:
-  name: "narwhals"
-  display_name: "Narwhals"
-  created_at: "2025-12-10T15:40:00Z"
+  name: narwhals
+  display_name: Narwhals
+  created_at: '2025-12-10T15:40:00Z'
   keywords:
-    - narwhals
-    - agnostic
-    - pandas
-    - polars
-    - pyarrow
-    - dataframe
-
-# Multiple sources - each with its own type and tracking
+  - narwhals
+  - agnostic
+  - pandas
+  - polars
+  - pyarrow
+  - dataframe
 sources:
-  - id: "narwhals"
-    type: "git"
-    repo_url: "https://github.com/narwhals-dev/narwhals"
-    repo_owner: "narwhals-dev"
-    repo_name: "narwhals"
-    branch: "main"
-    docs_root: "docs"
-    last_commit_sha: "32adfbb1c2bc485629742250d0e83d4f359a035a"
-    last_indexed_at: "2026-03-25T12:00:00Z"
-
+- id: narwhals
+  type: git
+  repo_url: https://github.com/narwhals-dev/narwhals
+  repo_owner: narwhals-dev
+  repo_name: narwhals
+  branch: main
+  docs_root: docs
+  last_commit_sha: 76bfcd2a3cd187da382aaa30d8acab6dc0b60bc5
+  last_indexed_at: '2026-07-01T15:08:57Z'
 index:
-  format: "markdown"
-  last_updated_at: "2026-03-25T12:00:00Z"
-
+  format: markdown
+  last_updated_at: '2026-07-01T15:08:57Z'
 settings:
   include_patterns:
-    - "**/*.md"
+  - '**/*.md'
   exclude_patterns:
-    - "**/assets/**"
-    - "**/css/**"
-    - "**/javascripts/**"
+  - '**/assets/**'
+  - '**/css/**'
+  - '**/javascripts/**'

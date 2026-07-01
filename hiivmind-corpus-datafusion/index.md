@@ -1,22 +1,57 @@
 # DataFusion Documentation Index
 
-> Sources: 2 | Entries: 67 | Generated: 2026-04-13T00:30:00Z
+> Sources: 2 | Entries: 102 | Generated: 2026-07-01T15:08:57Z
 > Generated from `index.yaml` — do not edit directly
 
 ---
 
 ## Python Bindings
 
+- **Aggregations** `datafusion-python:source/user-guide/common-operations/aggregations.md` - Pending re-scan
+- **Ai Coding Assistants** `datafusion-python:source/user-guide/ai-coding-assistants.md` - Pending re-scan
+- **Arrow** `datafusion-python:source/user-guide/io/arrow.md` - Pending re-scan
+- **Avro** `datafusion-python:source/user-guide/io/avro.md` - Pending re-scan
+- **Basic Info** `datafusion-python:source/user-guide/common-operations/basic-info.md` - Pending re-scan
+- **Basics** `datafusion-python:source/user-guide/basics.md` - Pending re-scan
+- **Configuration** `datafusion-python:source/user-guide/configuration.md` - Pending re-scan
 - **Create Table (Python)** `datafusion-python:mdbook/src/usage/create-table.md` - Guide for creating tables from Python dicts, CSV, and Parquet files.
+- **Csv** `datafusion-python:source/user-guide/io/csv.md` - Pending re-scan
+- **Data Sources** `datafusion-python:source/user-guide/data-sources.md` - Pending re-scan
 - **DataFusion Book** `datafusion-python:mdbook/src/index.md` - Introduction to DataFusion as a high-performance query engine with Python and SQL bindings.
 - **DataFusion Quickstart (Python)** `datafusion-python:mdbook/src/quickstart.md` - Quick intro demonstrating DataFrame creation and queries using SQL and Python APIs.
+- **Distributing Work** `datafusion-python:source/user-guide/distributing-work.md` - Pending re-scan
+- **Execution Metrics** `datafusion-python:source/user-guide/dataframe/execution-metrics.md` - Pending re-scan
+- **Expressions** `datafusion-python:source/user-guide/common-operations/expressions.md` - Pending re-scan
+- **Ffi** `datafusion-python:source/contributor-guide/ffi.md` - Pending re-scan
+- **Functions** `datafusion-python:source/user-guide/common-operations/functions.md` - Pending re-scan
+- **Index** `datafusion-python:source/contributor-guide/index.md` - Pending re-scan
+- **Index** `datafusion-python:source/index.md` - Pending re-scan
+- **Index** `datafusion-python:source/user-guide/common-operations/index.md` - Pending re-scan
+- **Index** `datafusion-python:source/user-guide/dataframe/index.md` - Pending re-scan
+- **Index** `datafusion-python:source/user-guide/index.md` - Pending re-scan
+- **Index** `datafusion-python:source/user-guide/io/index.md` - Pending re-scan
 - **Installation (Python)** `datafusion-python:mdbook/src/installation.md` - Installation guide for DataFusion Python using uv and pip, plus JupyterLab setup.
+- **Introduction** `datafusion-python:source/contributor-guide/introduction.md` - Pending re-scan
+- **Introduction** `datafusion-python:source/user-guide/introduction.md` - Pending re-scan
+- **Joins** `datafusion-python:source/user-guide/common-operations/joins.md` - Pending re-scan
+- **Json** `datafusion-python:source/user-guide/io/json.md` - Pending re-scan
+- **Links** `datafusion-python:source/links.md` - Pending re-scan
+- **Parquet** `datafusion-python:source/user-guide/io/parquet.md` - Pending re-scan
 - **Query Plans (Python)** `datafusion-python:mdbook/src/usage/query-plans.md` - Understanding logical, optimized, and physical query plans with GraphViz visualization.
 - **Query Table (Python)** `datafusion-python:mdbook/src/usage/query-table.md` - Querying tables using SQL and Python APIs with filtering and aggregation examples.
+- **Rendering** `datafusion-python:source/user-guide/dataframe/rendering.md` - Pending re-scan
+- **Select And Filter** `datafusion-python:source/user-guide/common-operations/select-and-filter.md` - Pending re-scan
+- **Spark Functions** `datafusion-python:source/user-guide/common-operations/spark-functions.md` - Pending re-scan
+- **Sql** `datafusion-python:source/user-guide/sql.md` - Pending re-scan
 - **Summary** `datafusion-python:mdbook/src/SUMMARY.md` - Table of contents for DataFusion Python documentation.
+- **Table Provider** `datafusion-python:source/user-guide/io/table_provider.md` - Pending re-scan
+- **Udf And Udfa** `datafusion-python:source/user-guide/common-operations/udf-and-udfa.md` - Pending re-scan
+- **Upgrade Guides** `datafusion-python:source/user-guide/upgrade-guides.md` - Pending re-scan
 - **Usage (Python)** `datafusion-python:mdbook/src/usage/index.md` - Overview of creating DataFrames from various data sources and querying with SQL or Python.
+- **Views** `datafusion-python:source/user-guide/common-operations/views.md` - Pending re-scan
+- **Windows** `datafusion-python:source/user-guide/common-operations/windows.md` - Pending re-scan
 
-## Guide
+## guide
 
 - **Adding User Defined Functions: Scalar/Window/Aggregate/Table Functions** `datafusion:library-user-guide/functions/adding-udfs.md` - User Defined Functions (UDFs) are functions that can be used in the context of DataFusion execution. This page covers how to add UDFs to DataFusion. In particular, it covers how to add Scalar, Window, ⚡ GREP - `grep -n '^## ' FILE -A 20`
 - **Building Logical Plans** `datafusion:library-user-guide/building-logical-plans.md` - A logical plan is a structured representation of a database query that describes the high-level operations and transformations needed to retrieve data from a database or data source. It abstracts away
@@ -48,7 +83,7 @@
 - **Using the SQL API** `datafusion:library-user-guide/using-the-sql-api.md` - DataFusion has a full SQL API that allows you to interact with DataFusion using SQL query strings. The simplest way to use the SQL API is to use the
 - **Working with `Expr`s** `datafusion:library-user-guide/working-with-exprs.md` - "`Expr` is short for ""expression"". It is a core abstraction in DataFusion for representing a computation, and follows the standard ""expression tree"" abstraction found in most compilers and databases. F"
 
-## Reference
+## reference
 
 - **API health policy** `datafusion:contributor-guide/api-health.md` - DataFusion is used extensively as a library in other applications and has a large public API. We try to keep the API well maintained and minimize breaking
 - **Aggregate Functions** `datafusion:user-guide/sql/aggregate_functions.md` - Aggregate functions operate on a set of values to compute a single result. Aggregate functions support the SQL `FILTER (WHERE ...)` clause to restrict which input rows contribute to the aggregate resu ⚡ GREP - `grep -n '^## ' FILE -A 20`
@@ -80,10 +115,10 @@
 - **Window Functions** `datafusion:user-guide/sql/window_functions.md` - A _window function_ performs a calculation across a set of table rows that are somehow related to the current row. This is comparable to the type of calculation that can be done with an aggregate func
 - **Workspace Dependency Graph** `datafusion:contributor-guide/architecture/dependency-graph.md` - This page shows the dependency relationships between DataFusion's workspace crates. This only includes internal dependencies, external crates like `Arrow` are not included
 
-## Tutorial
+## tutorial
 
 - **Installation** `datafusion:user-guide/cli/installation.md` - To build and install the latest release of `datafusion-cli` from source, do: `datafusion-cli` can also be installed via [Homebrew] (on MacOS) like this:
 
 ---
 
-*Rendered from index.yaml at 2026-04-13T00:30:00Z*
+*Rendered from index.yaml at 2026-07-01T15:08:57Z*

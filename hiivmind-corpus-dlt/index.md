@@ -5,7 +5,7 @@
 
 ---
 
-## Config
+## config
 
 - **Access to configuration in code** `dlt:general-usage/credentials/advanced.md` - Access configuration via dlt function arguments or explicitly
 - **Built-in credentials** `dlt:general-usage/credentials/complex_types.md` - Configure access to AWS, Azure, Google Cloud and other systems
@@ -14,7 +14,7 @@
 - **Source configuration** `dlt:hub/features/project/source-configuration.md` - How to setup sources in YAML file
 - **Vault providers** `dlt:general-usage/credentials/vaults.md` - Learn how to configure Google Secrets and Airflow providers
 
-## Guide
+## guide
 
 - **Add a verified source** `dlt:walkthroughs/add-a-verified-source.md` - How to create a pipeline from a verified source
 - **Adjust a schema** `dlt:walkthroughs/adjust-a-schema.md` - How to adjust a schema
@@ -40,7 +40,7 @@
 - **Run dlt in Snowflake** `dlt:walkthroughs/run-in-snowflake/run-in-snowflake.md` - Run dlt in Snowflake Native App
 - **dlt Connector App** `dlt:walkthroughs/run-in-snowflake/database-connector-app.md` - How to use the dlt Connector App
 
-## Journal
+## journal
 
 - **Release highlights: 1.12.1** `dlt:release-notes/1.12.1.md` - Release highlights provide a concise overview of the most important new features, improvements, and fixes in a software update, helping users quickly understand what's changed and how it impacts their
 - **Release highlights: 1.12.3 - 1.14.1** `dlt:release-notes/1.13-1.14.md` - Release highlights provide a concise overview of the most important new features, improvements, and fixes in a software update, helping users quickly understand what's changed and how it impacts their
@@ -51,7 +51,7 @@
 - **Release highlights: 1.19** `dlt:release-notes/1.19.md` - Release highlights provide a concise overview of the most important new features, improvements, and fixes in a software update, helping users quickly understand what's changed and how it impacts their
 - **Release highlights: v1.21.2** `dlt:release-notes/1.21.2.md` - Release highlights provide a concise overview of the most important new features, improvements, and fixes in a software update, helping users quickly understand what's changed and how it impacts their
 
-## Reference
+## reference
 
 - **30+ SQL databases** `dlt:dlt-ecosystem/verified-sources/sql_database/index.md` - PostgreSQL, MySQL, MS SQL, BigQuery, Redshift, and more
 - **30+ SQL databases (powered by SQLAlchemy)** `dlt:dlt-ecosystem/destinations/sqlalchemy.md` - SQLAlchemy destination
@@ -228,7 +228,7 @@
 - **dltHub Software EULA** `dlt:hub/EULA.md` - IT CONSTITUTES A LEGALLY BINDING AGREEMENT AND GOVERNS YOUR USE OF dltHub’S SOFTWARE (DEFINED BELOW). BY INSTALLING AND/OR USING SUCH SOFTWARE, YOU ARE INDICATING THAT YOU AGREE TO THE TERMS AND CONDI
 - **🧪 Dremio** `dlt:dlt-ecosystem/destinations/dremio.md` - Dremio `dlt` destination
 
-## Tutorial
+## tutorial
 
 - **Build advanced dlt pipeline from scratch** `dlt:tutorial/load-data-from-an-api.md` - Build custom, production grade pipeline just by writing code
 - **Education** `dlt:tutorial/education.md` - Learn the fundamentals and advanced concepts of dlt with self-paced courses. Start with pipelines, resources, sources, pagination, schema, and state, then move on to custom sources, complex APIs, dest

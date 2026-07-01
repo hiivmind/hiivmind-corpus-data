@@ -1,36 +1,36 @@
 schema_version: 2
 corpus:
-  name: "dlt"
-  display_name: "dlt"
+  name: dlt
+  display_name: dlt
   keywords:
-    - "dlt"
-    - "dlthub"
-    - "dlt-hub"
-    - "data load tool"
-    - "pipeline"
-  created_at: "2026-04-18T14:39:58Z"
+  - dlt
+  - dlthub
+  - dlt-hub
+  - data load tool
+  - pipeline
+  created_at: '2026-04-18T14:39:58Z'
 sources:
-  - id: "dlt"
-    type: "git"
-    repo_url: "https://github.com/dlt-hub/dlt"
-    repo_owner: "dlt-hub"
-    repo_name: "dlt"
-    branch: "devel"
-    docs_root: "docs/website/docs"
-    last_commit_sha: "d68ab5f5f014c75f1f4e8680feaaa0be029374cc"
-    last_indexed_at: "2026-04-18T14:39:58Z"
-    extraction:
-      wikilinks: false
-      frontmatter: true
-      tags: true
-      dataview: false
+- id: dlt
+  type: git
+  repo_url: https://github.com/dlt-hub/dlt
+  repo_owner: dlt-hub
+  repo_name: dlt
+  branch: devel
+  docs_root: docs/website/docs
+  last_commit_sha: 807396211fc7166ff336d184079275fa83a53e9e
+  last_indexed_at: '2026-07-01T15:08:57Z'
+  extraction:
+    wikilinks: false
+    frontmatter: true
+    tags: true
+    dataview: false
 index:
-  format: "markdown"
-  last_updated_at: "2026-04-18T14:39:58Z"
+  format: markdown
+  last_updated_at: '2026-07-01T15:08:57Z'
 settings:
   include_patterns:
-    - "**/*.md"
-    - "**/*.mdx"
+  - '**/*.md'
+  - '**/*.mdx'
   exclude_patterns:
-    - "**/_*.md"
-    - "**/_snippets/**"
+  - '**/_*.md'
+  - '**/_snippets/**'
