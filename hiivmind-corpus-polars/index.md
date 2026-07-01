@@ -1,15 +1,15 @@
 # Polars Documentation Index
 
-> Sources: 1 | Entries: 111 | Generated: 2026-06-30T06:25:20Z
+> Sources: 1 | Entries: 111 | Generated: 2026-07-01T15:08:57Z
 > Generated from `index.yaml` — do not edit directly
 
 ---
 
-## Api
+## api
 
 - **Python/Rust API** `polars:api/reference.md` - Links to full API documentation for Python and Rust
 
-## Config
+## config
 
 - **Anonymous Results** `polars:polars-on-premises/bare-metal/configuration/anonymous-results.md` - Configure anonymous results sink for remote queries without explicit output: shared filesystem (NFS/CephFS) and S3-compatible storage backends
 - **Anonymous Users** `polars:polars-on-premises/bare-metal/configuration/anonymous-users.md` - Pending re-scan
@@ -24,7 +24,7 @@
 - **Shuffle Data** `polars:polars-on-premises/bare-metal/configuration/shuffle-data.md` - Three shuffle storage options: worker-local SSD, shared filesystem (NFS/CephFS), S3-compatible. Performance trade-offs per option
 - **Static Leader** `polars:polars-on-premises/bare-metal/configuration/static-leader.md` - static_leader section identifying cluster leader node and public addresses, enabling shared config files with per-node instance_id overrides
 
-## Guide
+## guide
 
 - **AKS Deployment** `polars:polars-on-premises/kubernetes/cloud-providers/azure-kubernetes-service.md` - Pending re-scan
 - **Airflow Integration** `polars:polars-cloud/integrations/airflow.md` - Comprehensive Airflow patterns: auth decorators, await_result(), cluster lifecycle management (context managers, named manifests, manual shutdown), parallel single-node execution, multi-stage pipelines
@@ -53,7 +53,7 @@
 - **Testing** `polars:development/contributing/test.md` - Running tests
 - **Versioning** `polars:development/versioning.md` - Version policy
 
-## Reference
+## reference
 
 - **Aggregation** `polars:user-guide/expressions/aggregation.md` - group_by().agg() context. Multiple aggregations, conditional aggregations, filtering within groups, nested grouping, sorting within groups. Avoid Python lambdas to preserve parallelization
 - **Arrow Producer/Consumer** `polars:user-guide/misc/arrow.md` - Zero-copy data exchange: PyArrow to_arrow()/pl.from_arrow() for DataFrame/Table conversion, zero-copy export with compat_level, PyCapsule Interface (v1.3+) standard protocol, C Data Interface for direct struct exchange without PyArrow
@@ -125,7 +125,7 @@
 - **Visualization** `polars:user-guide/misc/visualization.md` - Plotting with hvPlot, Altair, Plotly
 - **Window Functions** `polars:user-guide/expressions/window-functions.md` - over() for group operations in select context. Ranking within groups, mapping strategies: group_to_rows (default), explode (faster), join. Windowed aggregations broadcast scalars
 
-## Tutorial
+## tutorial
 
 - **Getting Started** `polars:user-guide/getting-started.md` - First steps with Polars, basic DataFrame operations
 - **Installation** `polars:user-guide/installation.md` - Installing Polars and optional feature flags
@@ -133,4 +133,4 @@
 
 ---
 
-*Rendered from index.yaml at 2026-06-30T06:25:20Z*
+*Rendered from index.yaml at 2026-07-01T15:08:57Z*
