@@ -97,20 +97,20 @@ entries:
   source: dlt
   path: dlt-ecosystem/destinations/athena.md
   title: AWS Athena / Glue Catalog
-  summary: AWS Athena `dlt` destination
+  summary: Setup and configuration guide for the AWS Athena dlt destination. Uses S3 as staging, requires pyathena/s3fs/pyarrow.
+    Covers credential setup, bucket configuration, and pipeline initialization.
   tags:
   - destination
-  keywords:
-  - load
-  - credentials
-  - transform
-  - state
-  - glue catalog
-  - dlt
   - aws
-  - resource
-  - destination
-  - source
+  - athena
+  - s3
+  keywords:
+  - Athena
+  - AWS
+  - S3
+  - pyathena
+  - staging
+  - dlt init
   concepts:
   - dlt-ecosystem
   - destinations
@@ -162,27 +162,25 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/destinations/bigquery.md
   source: dlt
   path: dlt-ecosystem/destinations/bigquery.md
   title: Google BigQuery
-  summary: Google BigQuery `dlt` destination
+  summary: Setup guide for the Google BigQuery dlt destination. Covers GCP project creation, service account creation with
+    BigQuery permissions, and credentials configuration in secrets.toml.
   tags:
   - destination
+  - bigquery
+  - gcp
+  - google
   keywords:
-  - data warehouse
-  - load
+  - BigQuery
+  - GCP
+  - service account
   - credentials
-  - transform
-  - state
-  - dlt
-  - destination
-  - resource
-  - source
-  - schema
+  - dlt init
   concepts:
   - dlt-ecosystem
   - destinations
@@ -246,28 +244,23 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/destinations/clickhouse.md
   source: dlt
   path: dlt-ecosystem/destinations/clickhouse.md
   title: ClickHouse
-  summary: ClickHouse `dlt` destination
+  summary: Setup and configuration for the ClickHouse dlt destination. Covers initializing a dlt project, installing dlt[clickhouse],
+    creating ClickHouse credentials, and write dispositions supported.
   tags:
   - destination
-  - cli
+  - clickhouse
+  - olap
   keywords:
-  - data warehouse
-  - load
+  - ClickHouse
+  - dlt[clickhouse]
   - credentials
-  - transform
-  - state
-  - extract
-  - dlt
-  - destination
-  - resource
-  - source
+  - write disposition
   concepts:
   - dlt-ecosystem
   - destinations
@@ -341,8 +334,7 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/destinations/community-destinations.md
   source: dlt
@@ -384,20 +376,20 @@ entries:
   source: dlt
   path: dlt-ecosystem/destinations/databricks.md
   title: Databricks
-  summary: Databricks `dlt` destination
+  summary: Setup guide for Databricks as a dlt destination supporting Delta and Apache Iceberg table formats. Covers Unity
+    Catalog requirements, Azure Gen 2 storage, Databricks managed volumes for direct notebook loading.
   tags:
   - destination
+  - databricks
+  - delta
+  - iceberg
   keywords:
   - Databricks
-  - data warehouse
-  - load
-  - credentials
-  - transform
-  - state
-  - dlt
-  - destination
-  - resource
-  - source
+  - Unity Catalog
+  - Delta
+  - Iceberg
+  - Azure
+  - notebooks
   concepts:
   - dlt-ecosystem
   - destinations
@@ -527,8 +519,7 @@ entries:
   - anchor: can-be-used-as-dlt-dbricks-in-the-notebook-instead
     title: can be used as `dlt_dbricks` in the notebook instead
   - anchor: replace-mentions-of-dlt-with-dlt-dbricks-in-deltalivetableshook-py-to
-    title: Replace mentions of `dlt` with `dlt_dbricks` in DeltaLiveTablesHook.py
-      to
+    title: Replace mentions of `dlt` with `dlt_dbricks` in DeltaLiveTablesHook.py to
   - anchor: avoid-import-errors
     title: avoid import errors
   - anchor: install-dlthub-dlt
@@ -540,27 +531,26 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/destinations/delta-iceberg.md
   source: dlt
   path: dlt-ecosystem/destinations/delta-iceberg.md
   title: Delta
-  summary: Delta dlt destination
+  summary: Guide to using Delta Lake and Apache Iceberg table formats with dlt filesystem/staging destinations. Covers installation
+    (deltalake, pyarrow), setting table_format='delta' or 'iceberg' at resource or pipeline run level.
   tags:
   - destination
-  keywords:
-  - data warehouse
-  - load
-  - credentials
-  - extract
-  - dlt
-  - destination
-  - resource
   - delta
-  - source
-  - incremental
+  - iceberg
+  - filesystem
+  keywords:
+  - Delta Lake
+  - Iceberg
+  - table_format
+  - deltalake
+  - pyarrow
+  - filesystem
   concepts:
   - dlt-ecosystem
   - destinations
@@ -602,27 +592,25 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/destinations/destination.md
   source: dlt
   path: dlt-ecosystem/destinations/destination.md
   title: Custom destination
-  summary: Custom `dlt` destination function for reverse ETL
+  summary: Guide to implementing custom dlt destinations using the @dlt.destination decorator. Shows how to convert any Python
+    function that accepts data items and table schema into a fully functional dlt destination with configurable batch size.
   tags:
   - destination
-  keywords:
+  - custom
   - decorator
-  - credentials
-  - load
-  - state
+  - extensibility
+  keywords:
+  - '@dlt.destination'
   - custom destination
-  - extract
-  - dlt
-  - destination
-  - function
-  - source
+  - batch_size
+  - TDataItems
+  - TTableSchema
   concepts:
   - dlt-ecosystem
   - destinations
@@ -664,27 +652,25 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/destinations/dremio.md
   source: dlt
   path: dlt-ecosystem/destinations/dremio.md
   title: 🧪 Dremio
-  summary: Dremio `dlt` destination
+  summary: Setup guide for Dremio as a dlt destination using S3 filesystem staging. Covers project initialization, credential
+    configuration for both Dremio and S3, and required dependencies (s3fs, pyarrow, botocore).
   tags:
   - destination
+  - dremio
+  - s3
   keywords:
-  - load
+  - Dremio
+  - S3
+  - staging
+  - s3fs
+  - botocore
   - credentials
-  - state
-  - glue catalog
-  - dlt
-  - aws
-  - resource
-  - destination
-  - source
-  - schema
   concepts:
   - dlt-ecosystem
   - destinations
@@ -718,27 +704,24 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/destinations/duckdb.md
   source: dlt
   path: dlt-ecosystem/destinations/duckdb.md
   title: DuckDB
-  summary: DuckDB `dlt` destination
+  summary: Setup guide for DuckDB as a dlt destination. Covers quick start, supported DuckDB versions (0.9+), known stable
+    versions, write dispositions, and notes on version-specific bugs (iceberg_scan, segfaults).
   tags:
   - destination
-  keywords:
-  - data warehouse
-  - load
-  - credentials
-  - transform
-  - state
-  - dlt
-  - destination
-  - resource
   - duckdb
-  - source
+  - in-memory
+  keywords:
+  - DuckDB
+  - write disposition
+  - version
+  - iceberg_scan
+  - local database
   concepts:
   - dlt-ecosystem
   - destinations
@@ -784,24 +767,19 @@ entries:
   - anchor: ''
     title: ┌──────────┬───────────────┬─────────────────────┬──────────────────────┬───────────────────────┬───────────┐
   - anchor: database-schema-name-column-names-column-types-temporary
-    title: │ database │    schema     │        name         │     column_names     │     column_types      │
-      temporary │
+    title: │ database │    schema     │        name         │     column_names     │     column_types      │ temporary │
   - anchor: varchar-varchar-varchar-varchar-varchar-boolean
     title: │ varchar  │    varchar    │       varchar       │      varchar[]       │       varchar[]       │  boolean  │
   - anchor: ''
     title: ├──────────┼───────────────┼─────────────────────┼──────────────────────┼───────────────────────┼───────────┤
   - anchor: memory-chess-data-dlt-loads-load-id-schema-n-varchar-varchar-false
-    title: │ memory   │ chess_data    │ _dlt_loads          │ [load_id, schema_n…  │
-      [VARCHAR, VARCHAR, …  │ false     │
+    title: │ memory   │ chess_data    │ _dlt_loads          │ [load_id, schema_n…  │ [VARCHAR, VARCHAR, …  │ false     │
   - anchor: memory-chess-data-dlt-pipeline-state-version-engine-v-bigint-bigint-va-false
-    title: │ memory   │ chess_data    │ _dlt_pipeline_state │ [version, engine_v…  │
-      [BIGINT, BIGINT, VA…  │ false     │
+    title: │ memory   │ chess_data    │ _dlt_pipeline_state │ [version, engine_v…  │ [BIGINT, BIGINT, VA…  │ false     │
   - anchor: memory-chess-data-dlt-version-version-engine-v-bigint-bigint-ti-false
-    title: │ memory   │ chess_data    │ _dlt_version        │ [version, engine_v…  │
-      [BIGINT, BIGINT, TI…  │ false     │
+    title: │ memory   │ chess_data    │ _dlt_version        │ [version, engine_v…  │ [BIGINT, BIGINT, TI…  │ false     │
   - anchor: memory-chess-data-my-table-a-dlt-load-id-bigint-varchar-v-false
-    title: │ memory   │ chess_data    │ my_table            │ [a, _dlt_load_id, …  │
-      [BIGINT, VARCHAR, V…  │ false     │
+    title: │ memory   │ chess_data    │ my_table            │ [a, _dlt_load_id, …  │ [BIGINT, VARCHAR, V…  │ false     │
   - anchor: ''
     title: └──────────┴───────────────┴─────────────────────┴──────────────────────┴───────────────────────┴───────────┘
   - anchor: additional-configuration
@@ -819,27 +797,25 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/destinations/ducklake.md
   source: dlt
   path: dlt-ecosystem/destinations/ducklake.md
   title: DuckLake
-  summary: DuckLake destination (DuckDB + ducklake extension)
+  summary: Guide to DuckLake as a dlt destination — a DuckDB-native lakehouse format with catalog and storage separation.
+    Covers quick start, local setup without catalog credentials, and pipeline initialization.
   tags:
   - destination
-  keywords:
-  - load
-  - credentials
-  - transform
-  - lakehouse
-  - state
   - ducklake
-  - dlt
-  - destination
   - duckdb
-  - pipeline
+  - lakehouse
+  keywords:
+  - DuckLake
+  - DuckDB
+  - catalog
+  - lakehouse
+  - dlt[ducklake]
   concepts:
   - dlt-ecosystem
   - destinations
@@ -869,8 +845,7 @@ entries:
   - anchor: force-parallel-loads-on-sqlite
     title: force parallel loads on sqlite
   - anchor: set-ducklake-credentials-using-shorthands-s3-bucket-requires-secrets-in-config
-    title: set ducklake credentials using shorthands, s3 bucket requires secrets in
-      config
+    title: set ducklake credentials using shorthands, s3 bucket requires secrets in config
   - anchor: set-catalog-name-using-connection-string-credentials
     title: set catalog name using connection string credentials
   - anchor: use-duckdb-with-the-default-name
@@ -902,27 +877,26 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/destinations/fabric.md
   source: dlt
   path: dlt-ecosystem/destinations/fabric.md
   title: Microsoft Fabric Warehouse
-  summary: Microsoft Fabric Warehouse `dlt` destination
+  summary: Setup guide for Microsoft Fabric Warehouse as a dlt destination. Requires ODBC Driver 18 for SQL Server and Azure
+    Active Directory Service Principal authentication (Tenant ID, Client ID, Client Secret).
   tags:
   - destination
+  - microsoft
+  - fabric
+  - azure
   keywords:
-  - data warehouse
-  - warehouse
-  - credentials
-  - load
-  - state
-  - transform
-  - dlt
-  - destination
-  - microsoft fabric
-  - source
+  - Fabric
+  - Microsoft
+  - ODBC Driver
+  - Azure AD
+  - Service Principal
+  - SQL Server
   concepts:
   - dlt-ecosystem
   - destinations
@@ -996,28 +970,28 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/destinations/filesystem.md
   source: dlt
   path: dlt-ecosystem/destinations/filesystem.md
   title: Cloud storage and filesystem
-  summary: Store data in remote file systems and cloud storage services like AWS S3,
-    Google Cloud Storage, or Azure Blob Storage
+  summary: Guide to the filesystem dlt destination for writing data to S3, GCS, Azure Blob Storage, and local paths. Covers
+    S3 credential setup, staging dataset configuration, file format selection, and initialization.
   tags:
   - destination
-  keywords:
-  - load
-  - credentials
-  - state
-  - dlt
+  - filesystem
   - s3
-  - destination
+  - gcs
   - azure
-  - source
+  keywords:
+  - filesystem
+  - S3
+  - Azure Blob
+  - GCS
+  - bucket_url
   - staging
-  - pipeline
+  - local
   concepts:
   - dlt-ecosystem
   - destinations
@@ -1077,8 +1051,7 @@ entries:
   - anchor: layout-table-name-load-package-timestamp-load-id-file-id-ext
     title: layout = "{table_name}/{load_package_timestamp}/{load_id}.{file_id}.{ext}"
   - anchor: parquet-like-layout-note-it-is-not-compatible-with-the-internal-datetime-of-the-parquet-file
-    title: 'Parquet-like layout (note: it is not compatible with the internal datetime
-      of the parquet file)'
+    title: 'Parquet-like layout (note: it is not compatible with the internal datetime of the parquet file)'
   - anchor: layout-table-name-year-yyyy-month-mm-day-dd-load-id-file-id-ext
     title: layout = "{table_name}/year={YYYY}/month={MM}/day={DD}/{load_id}.{file_id}.{ext}"
   - anchor: custom-placeholders
@@ -1108,27 +1081,24 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/destinations/huggingface.md
   source: dlt
   path: dlt-ecosystem/destinations/huggingface.md
   title: Hugging Face Datasets
-  summary: Load data into Hugging Face Datasets repositories using dlt
+  summary: Guide to using Hugging Face datasets as a dlt destination via the filesystem destination with hf:// bucket URLs.
+    Each dlt dataset becomes a separate Hugging Face dataset repository.
   tags:
   - destination
+  - huggingface
+  - filesystem
   keywords:
-  - datasets
-  - load
-  - credentials
-  - state
-  - hub
-  - dlt
-  - resource
-  - destination
-  - hugging face
-  - hf
+  - Hugging Face
+  - hf://
+  - dataset repository
+  - namespace
+  - filesystem
   concepts:
   - dlt-ecosystem
   - destinations
@@ -1200,27 +1170,27 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/destinations/iceberg.md
   source: dlt
   path: dlt-ecosystem/destinations/iceberg.md
   title: Iceberg
-  summary: Iceberg dlt destination
+  summary: Guide to the Iceberg dlt destination using pyiceberg. Supports SQL and REST catalogs (Lakekeeper, Polaris), ACID
+    transactions, schema evolution, local and cloud storage. Covers IAM permissions for S3 multipart uploads.
   tags:
   - destination
+  - iceberg
+  - pyiceberg
+  - open-table-format
   keywords:
-  - data warehouse
-  - load
-  - credentials
-  - transform
-  - extract
-  - dlt
-  - destination
-  - resource
-  - source
-  - schema
+  - Iceberg
+  - pyiceberg
+  - REST catalog
+  - Lakekeeper
+  - Polaris
+  - S3
+  - schema evolution
   concepts:
   - dlt-ecosystem
   - destinations
@@ -1278,21 +1248,22 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/destinations/index.md
   source: dlt
   path: dlt-ecosystem/destinations/index.md
   title: Destinations
-  summary: List of destinations
+  summary: Index listing all dlt destinations with links to individual destination docs. Encourages community requests for
+    missing destinations or features via Slack.
   tags:
-  - destination
-  keywords:
-  - dlt
-  - destination
   - destinations
-  - load
+  - index
+  - overview
+  keywords:
+  - destinations
+  - overview
+  - index
   concepts:
   - dlt-ecosystem
   - destinations
@@ -1304,28 +1275,27 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/destinations/lance.md
   source: dlt
   path: dlt-ecosystem/destinations/lance.md
   title: Lance
-  summary: Lance is an open-source columnar format for AI/ML that can be used as a
-    destination in dlt.
+  summary: Guide to the lance dlt destination for storing data in Lance format on local disk or cloud storage (S3, GCS, Azure).
+    Distinguishes lance (filesystem-based) from lancedb (cloud) destination, covers setup and embedding generation.
   tags:
   - destination
-  keywords:
-  - load
-  - credentials
-  - transform
-  - lakehouse
-  - state
-  - dlt
-  - destination
-  - embeddings
   - lance
-  - vector database
+  - vector
+  - object-storage
+  keywords:
+  - Lance
+  - LanceDB
+  - pylance
+  - embedding
+  - S3
+  - GCS
+  - Azure
   concepts:
   - dlt-ecosystem
   - destinations
@@ -1383,15 +1353,13 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/destinations/lancedb.md
   source: dlt
   path: dlt-ecosystem/destinations/lancedb.md
   title: LanceDB
-  summary: LanceDB is a multimodal lakehouse for AI that can be used as a destination
-    in dlt.
+  summary: LanceDB is a multimodal lakehouse for AI that can be used as a destination in dlt.
   tags:
   - destination
   keywords:
@@ -1465,20 +1433,19 @@ entries:
   source: dlt
   path: dlt-ecosystem/destinations/motherduck.md
   title: MotherDuck / DuckLake
-  summary: MotherDuck and DuckLake `dlt` destination
+  summary: Setup guide for MotherDuck as a dlt destination (cloud DuckDB). Covers initialization, write disposition support,
+    load worker tuning for internet connections, and version compatibility notes.
   tags:
   - destination
-  keywords:
-  - data warehouse
-  - load
-  - credentials
-  - transform
-  - state
-  - MotherDuck
-  - dlt
-  - destination
+  - motherduck
   - duckdb
-  - DuckLake
+  - cloud
+  keywords:
+  - MotherDuck
+  - DuckDB
+  - cloud
+  - load workers
+  - config.toml
   concepts:
   - dlt-ecosystem
   - destinations
@@ -1516,27 +1483,25 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/destinations/mssql.md
   source: dlt
   path: dlt-ecosystem/destinations/mssql.md
   title: Microsoft SQL Server
-  summary: Microsoft SQL Server `dlt` destination
+  summary: Setup guide for Microsoft SQL Server as a dlt destination. Requires ODBC Driver 17 or 18, covers database and user
+    creation, psycopg2-equivalent setup, and credentials configuration.
   tags:
   - destination
-  keywords:
-  - data warehouse
-  - load
-  - sqlserver
-  - credentials
-  - state
-  - transform
-  - dlt
-  - destination
   - mssql
-  - source
+  - microsoft
+  - sql-server
+  keywords:
+  - MSSQL
+  - SQL Server
+  - ODBC Driver
+  - pyodbc
+  - credentials
   concepts:
   - dlt-ecosystem
   - destinations
@@ -1592,27 +1557,25 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/destinations/postgres.md
   source: dlt
   path: dlt-ecosystem/destinations/postgres.md
   title: Postgres
-  summary: Postgres `dlt` destination
+  summary: Setup guide for PostgreSQL as a dlt destination. Covers database and user creation with SQL, psycopg2 client installation,
+    and credentials configuration in secrets.toml.
   tags:
   - destination
-  keywords:
-  - data warehouse
-  - load
-  - credentials
-  - transform
-  - state
-  - dlt
-  - destination
-  - resource
   - postgres
-  - source
+  - sql
+  keywords:
+  - PostgreSQL
+  - psycopg2
+  - database
+  - user
+  - credentials
+  - dlt init
   concepts:
   - dlt-ecosystem
   - destinations
@@ -1664,15 +1627,13 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/destinations/qdrant.md
   source: dlt
   path: dlt-ecosystem/destinations/qdrant.md
   title: Qdrant
-  summary: Qdrant is a high-performance vector search engine/database that can be
-    used as a destination in dlt.
+  summary: Qdrant is a high-performance vector search engine/database that can be used as a destination in dlt.
   tags:
   - destination
   keywords:
@@ -1730,20 +1691,20 @@ entries:
   source: dlt
   path: dlt-ecosystem/destinations/redshift.md
   title: Amazon Redshift
-  summary: Amazon Redshift `dlt` destination
+  summary: Setup guide for Amazon Redshift as a dlt destination with S3 staging. Covers cluster creation, VPC inbound rule
+    configuration, dlt[redshift] installation, and credentials setup.
   tags:
   - destination
-  keywords:
-  - data warehouse
-  - load
-  - credentials
-  - transform
-  - state
-  - dlt
-  - destination
-  - source
-  - schema
   - redshift
+  - aws
+  - sql
+  keywords:
+  - Redshift
+  - AWS
+  - S3
+  - VPC
+  - cluster
+  - credentials
   concepts:
   - dlt-ecosystem
   - destinations
@@ -1799,27 +1760,25 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/destinations/snowflake.md
   source: dlt
   path: dlt-ecosystem/destinations/snowflake.md
   title: Snowflake
-  summary: Snowflake `dlt` destination
+  summary: Setup guide for Snowflake as a dlt destination. Covers database, user, and role creation, warehouse configuration,
+    and credentials in secrets.toml including host, database, username, password, warehouse, and role.
   tags:
   - destination
+  - snowflake
+  - sql
+  - cloud-warehouse
   keywords:
-  - data warehouse
   - Snowflake
-  - load
+  - warehouse
+  - role
   - credentials
-  - transform
-  - state
-  - extract
-  - dlt
-  - destination
-  - resource
+  - secrets.toml
   concepts:
   - dlt-ecosystem
   - destinations
@@ -1895,8 +1854,7 @@ entries:
   - anchor: additional-destination-options
     title: Additional destination options
   - anchor: use-an-existing-named-stage-instead-of-the-default-default-uses-the-implicit-table-stage-per-table
-    title: Use an existing named stage instead of the default. Default uses the implicit
-      table stage per table
+    title: Use an existing named stage instead of the default. Default uses the implicit table stage per table
   - anchor: whether-to-keep-or-delete-the-staged-files-after-copy-into-succeeds
     title: Whether to keep or delete the staged files after COPY INTO succeeds
   - anchor: add-unique-and-primary-key-hints-to-tables
@@ -1916,27 +1874,25 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/destinations/sqlalchemy.md
   source: dlt
   path: dlt-ecosystem/destinations/sqlalchemy.md
   title: 30+ SQL databases (powered by SQLAlchemy)
-  summary: SQLAlchemy destination
+  summary: Guide to the SQLAlchemy dlt destination for loading data into any SQLAlchemy-supported database. Requires separate
+    database driver installation (e.g., mysqlclient). Covers initialization and write dispositions.
   tags:
   - destination
-  keywords:
+  - sqlalchemy
+  - generic
   - sql
-  - credentials
-  - database
-  - state
-  - extract
-  - load
-  - dlt
-  - destination
-  - source
-  - schema
+  keywords:
+  - SQLAlchemy
+  - database dialect
+  - mysqlclient
+  - generic SQL
+  - dlt init
   concepts:
   - dlt-ecosystem
   - destinations
@@ -1992,27 +1948,25 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/destinations/synapse.md
   source: dlt
   path: dlt-ecosystem/destinations/synapse.md
   title: Azure Synapse
-  summary: Azure Synapse `dlt` destination
+  summary: Setup guide for Azure Synapse Analytics dedicated SQL pool as a dlt destination. Requires ODBC Driver 18 (LongAsMax
+    keyword required), Azure Synapse Workspace, and Unity Catalog-compatible setup.
   tags:
   - destination
-  keywords:
-  - data warehouse
-  - load
-  - credentials
-  - transform
-  - state
-  - dlt
-  - destination
-  - source
-  - schema
   - synapse
+  - azure
+  - sql
+  keywords:
+  - Synapse
+  - Azure
+  - ODBC Driver 18
+  - LongAsMax
+  - dedicated SQL pool
   concepts:
   - dlt-ecosystem
   - destinations
@@ -2064,15 +2018,13 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/destinations/weaviate.md
   source: dlt
   path: dlt-ecosystem/destinations/weaviate.md
   title: Weaviate
-  summary: Weaviate is an open source vector database that can be used as a destination
-    in dlt.
+  summary: Weaviate is an open source vector database that can be used as a destination in dlt.
   tags:
   - destination
   keywords:
@@ -2142,8 +2094,8 @@ entries:
   source: dlt
   path: dlt-ecosystem/llm-tooling/explore-and-transform.md
   title: Explore and Transform your data with dltHub AI Workbench
-  summary: Explore loaded pipeline data, build interactive dashboards, and transform
-    data into a Canonical Data Model using dltHub AI Workbench toolkits
+  summary: Explore loaded pipeline data, build interactive dashboards, and transform data into a Canonical Data Model using
+    dltHub AI Workbench toolkits
   tags:
   - reference
   keywords:
@@ -2204,8 +2156,7 @@ entries:
   source: dlt
   path: dlt-ecosystem/llm-tooling/llm-native-workflow.md
   title: REST API Source with dlthub AI Workbench
-  summary: Build any REST API source with dltHub AI Workbench toolkits - workflows,
-    skills, rules, and MCP tools
+  summary: Build any REST API source with dltHub AI Workbench toolkits - workflows, skills, rules, and MCP tools
   tags:
   - verified-source
   keywords:
@@ -2278,18 +2229,17 @@ entries:
   source: dlt
   path: dlt-ecosystem/staging.md
   title: Staging
-  summary: Configure an S3 or GCS bucket for staging before copying into the destination
+  summary: 'Guide to configuring staging datasets in dlt: naming layout patterns (e.g., %s_staging), static staging dataset
+    names, automatic cleanup via config.toml, and safety rules preventing staging/final dataset name collisions.'
   tags:
-  - reference
-  keywords:
-  - load
-  - credentials
-  - extract
-  - dlt
-  - destination
-  - source
-  - pipeline
   - staging
+  - configuration
+  - filesystem
+  keywords:
+  - staging dataset
+  - dataset_name_layout
+  - truncate_staging_dataset
+  - naming pattern
   concepts:
   - dlt-ecosystem
   category: reference
@@ -2312,8 +2262,7 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/transformations/add-map.md
   source: dlt
@@ -2383,20 +2332,18 @@ entries:
   source: dlt
   path: dlt-ecosystem/transformations/dbt/dbt.md
   title: Transform data with dbt
-  summary: Transforming the data loaded by a dlt pipeline with dbt
+  summary: Guide to using dbt with dlt via the dbt runner. The runner creates virtual environments on-the-fly, runs dbt packages
+    from GitHub or local files, and passes dlt credentials to dbt automatically. Shows integration pattern with dlt pipelines.
   tags:
-  - reference
-  keywords:
+  - transformations
   - dbt
-  - transform
-  - runner
-  - credentials
-  - load
-  - dlt
-  - destination
-  - source
-  - schema
-  - pipeline
+  - elt
+  keywords:
+  - dbt runner
+  - virtual environment
+  - dbt package
+  - jaffle shop
+  - ELT
   concepts:
   - dlt-ecosystem
   - transformations
@@ -2424,8 +2371,7 @@ entries:
   - anchor: make-or-restore-venv-for-dbt-using-the-latest-dbt-version
     title: Make or restore venv for dbt, using the latest dbt version
   - anchor: note-if-you-have-dbt-installed-in-your-current-environment-just-skip-this-line
-    title: 'NOTE: If you have dbt installed in your current environment, just skip
-      this line'
+    title: 'NOTE: If you have dbt installed in your current environment, just skip this line'
   - anchor: and-the-venv-argument-to-dlt-dbt-package
     title: and the `venv` argument to dlt.dbt.package()
   - anchor: get-runner-optionally-pass-the-venv
@@ -2443,28 +2389,26 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/transformations/encryption.md
   source: dlt
   path: dlt-ecosystem/transformations/encryption.md
   title: Data security and encryption
-  summary: Transforming the data for encryption in transit, client-side encryption,
-    and encryption at rest.
+  summary: 'Guide to data encryption strategies in dlt pipelines: in-transit encryption via SSL/TLS, client-side encryption
+    before transmission using AWS Encryption SDK/Google Tink/Azure Key Vault, and server-side/at-rest encryption. Explains
+    why each layer matters.'
   tags:
-  - reference
-  keywords:
-  - transform
-  - credentials
-  - load
-  - extract
-  - data security
-  - dlt
-  - resource
+  - transformations
+  - security
   - encryption
-  - destination
-  - source
+  keywords:
+  - encryption
+  - SSL/TLS
+  - client-side encryption
+  - KMS
+  - AWS Encryption SDK
+  - at-rest
   concepts:
   - dlt-ecosystem
   - transformations
@@ -2510,27 +2454,28 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/transformations/index.md
   source: dlt
   path: dlt-ecosystem/transformations/index.md
   title: Transforming your data
-  summary: How to transform your data
+  summary: 'Overview of dlt transformation patterns: ETL (transform before load via add_map() or @dlt.transformer) vs ELT
+    (transform at destination via SQL, dbt, or Python). Introduces @dlt.hub.transformation for Python-defined transformations
+    running eagerly or lazily.'
   tags:
-  - reference
-  keywords:
-  - datasets
-  - load
-  - transform
   - transformations
-  - dlt
-  - destination
-  - data
-  - source
-  - pipeline
-  - access
+  - etl
+  - elt
+  - overview
+  keywords:
+  - ETL
+  - ELT
+  - transformer
+  - add_map
+  - dbt
+  - SQL
+  - '@dlt.hub.transformation'
   concepts:
   - dlt-ecosystem
   - transformations
@@ -2546,26 +2491,26 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/transformations/python.md
   source: dlt
   path: dlt-ecosystem/transformations/python.md
   title: Transform data in Python with Arrow tables or DataFrames
-  summary: Transforming data loaded by a dlt pipeline with pandas dataframes or arrow
-    tables
+  summary: Guide to Python-based ELT transformations in dlt using pipeline.dataset() to access loaded data as pandas DataFrames
+    or Arrow tables. Shows post-load data manipulation with select(), df(), and arrow() methods.
   tags:
-  - reference
-  keywords:
-  - transform
-  - load
+  - transformations
+  - python
+  - elt
   - pandas
-  - dlt
-  - resource
-  - destination
-  - source
-  - pipeline
+  keywords:
+  - dataset()
+  - df()
+  - arrow()
+  - pandas
+  - ELT
+  - post-load transformation
   concepts:
   - dlt-ecosystem
   - transformations
@@ -2591,43 +2536,40 @@ entries:
   - anchor: a-simple-example
     title: A simple example
   - anchor: get-user-relation-with-only-a-few-columns-selected-but-omitting-email-and-name
-    title: get user relation with only a few columns selected, but omitting email
-      and name
+    title: get user relation with only a few columns selected, but omitting email and name
   - anchor: load-the-data-into-a-new-table-called-users-clean-in-the-same-dataset
     title: load the data into a new table called users_clean in the same dataset
   - anchor: a-more-complex-example
     title: A more complex example
   - anchor: note-this-resource-will-work-like-a-regular-resource-and-support-write-disposition-primary-key-etc
-    title: 'NOTE: this resource will work like a regular resource and support write_disposition,
-      primary_key, etc.'
+    title: 'NOTE: this resource will work like a regular resource and support write_disposition, primary_key, etc.'
   - anchor: note-for-selecting-only-users-above-18-we-could-also-use-the-filter-method-on-the-relation-with-ibis-expressions
-    title: 'NOTE: For selecting only users above 18, we could also use the filter
-      method on the relation with ibis expressions'
+    title: 'NOTE: For selecting only users above 18, we could also use the filter method on the relation with ibis expressions'
   - anchor: other-transforming-tools
     title: Other transforming tools
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/transformations/sql.md
   source: dlt
   path: dlt-ecosystem/transformations/sql.md
   title: Transform data with SQL
-  summary: Transforming the data loaded by a dlt pipeline with the dlt SQL client
+  summary: Guide to SQL-based ELT transformations in dlt via pipeline.sql_client(). Shows how to execute queries, retrieve
+    data as Python tuples, pandas DataFrames, or Arrow tables using the sql_client context manager.
   tags:
-  - reference
-  keywords:
+  - transformations
   - sql
-  - transform
-  - load
-  - state
-  - extract
-  - dlt
-  - destination
-  - schema
-  - pipeline
+  - elt
+  keywords:
+  - sql_client
+  - execute_query
+  - cursor
+  - fetchall
+  - DataFrame
+  - Arrow
+  - ELT
   concepts:
   - dlt-ecosystem
   - transformations
@@ -2639,34 +2581,28 @@ entries:
   - anchor: transform-data-using-the-dlt-sql-client
     title: Transform data using the `dlt` SQL client
   - anchor: note-this-is-the-duckdb-sql-dialect-other-destinations-may-use-different-expressions
-    title: 'NOTE: this is the duckdb sql dialect, other destinations may use different
-      expressions'
+    title: 'NOTE: this is the duckdb sql dialect, other destinations may use different expressions'
   - anchor: other-transforming-tools
     title: Other transforming tools
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/verified-sources/airtable.md
   source: dlt
   path: dlt-ecosystem/verified-sources/airtable.md
   title: Airtable
-  summary: dlt verified source for Airtable
+  summary: dlt verified source for loading Airtable bases and tables. Covers setup, API key configuration, and loading specific
+    tables or entire bases into dlt destinations.
   tags:
-  - verified-source
-  keywords:
-  - airtable api
-  - load
-  - credentials
-  - dlt
+  - verified-sources
   - airtable
-  - destination
-  - source
-  - schema
-  - airtable verified source
-  - pipeline
+  keywords:
+  - Airtable
+  - bases
+  - tables
+  - API key
   concepts:
   - dlt-ecosystem
   - verified-sources
@@ -2702,27 +2638,25 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/verified-sources/amazon_kinesis.md
   source: dlt
   path: dlt-ecosystem/verified-sources/amazon_kinesis.md
   title: Amazon Kinesis
-  summary: dlt verified source for Amazon Kinesis
+  summary: dlt verified source for consuming Amazon Kinesis data streams. Covers AWS credential setup, shard iteration, and
+    incremental loading of streaming data.
   tags:
-  - verified-source
+  - verified-sources
+  - kinesis
+  - aws
+  - streaming
   keywords:
-  - load
-  - credentials
-  - amazon kinesis
-  - state
-  - dlt
-  - resource
-  - verified source
-  - destination
-  - source
-  - incremental
+  - Amazon Kinesis
+  - data streams
+  - AWS
+  - shards
+  - streaming
   concepts:
   - dlt-ecosystem
   - verified-sources
@@ -2758,27 +2692,24 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/verified-sources/arrow-pandas.md
   source: dlt
   path: dlt-ecosystem/verified-sources/arrow-pandas.md
   title: Arrow Table / Pandas
-  summary: dlt source for Arrow tables and Pandas dataframes
+  summary: Guide to using PyArrow tables and pandas DataFrames directly as dlt sources. Enables zero-copy loading of in-memory
+    data with schema inference from Arrow/pandas dtypes.
   tags:
-  - verified-source
-  keywords:
-  - load
-  - extract
-  - pandas
-  - dlt
-  - resource
-  - destination
-  - schema mismatch
-  - source
-  - schema
+  - verified-sources
   - arrow
+  - pandas
+  keywords:
+  - PyArrow
+  - pandas
+  - DataFrame
+  - in-memory
+  - zero-copy
   concepts:
   - dlt-ecosystem
   - verified-sources
@@ -2804,8 +2735,7 @@ entries:
   - anchor: incremental-loading-with-arrow-tables
     title: Incremental loading with Arrow tables
   - anchor: create-a-resource-that-yields-a-dataframe-using-the-ordered-at-field-as-an-incremental-cursor
-    title: Create a resource that yields a dataframe, using the `ordered_at` field
-      as an incremental cursor
+    title: Create a resource that yields a dataframe, using the `ordered_at` field as an incremental cursor
   - anchor: run-again-to-load-only-new-data
     title: Run again to load only new data
   - anchor: loading-json-documents
@@ -2821,27 +2751,23 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/verified-sources/asana.md
   source: dlt
   path: dlt-ecosystem/verified-sources/asana.md
   title: Asana
-  summary: dlt verified source for Asana API
+  summary: dlt verified source for loading Asana project management data (tasks, projects, workspaces). Covers personal access
+    token setup and available resources.
   tags:
-  - verified-source
-  keywords:
-  - load
-  - credentials
-  - transform
-  - state
-  - dlt
-  - resource
-  - verified source
-  - destination
-  - asana api
+  - verified-sources
   - asana
+  keywords:
+  - Asana
+  - tasks
+  - projects
+  - workspaces
+  - personal access token
   concepts:
   - dlt-ecosystem
   - verified-sources
@@ -2881,27 +2807,24 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/verified-sources/chess.md
   source: dlt
   path: dlt-ecosystem/verified-sources/chess.md
   title: Chess.com
-  summary: dlt verified source for Chess.com API
+  summary: dlt verified source for loading Chess.com game and player data. A popular example source used in dlt tutorials.
+    Loads game archives, player profiles, and club data.
   tags:
-  - verified-source
+  - verified-sources
+  - chess
+  - example
   keywords:
-  - chess.com verified source
-  - credentials
-  - chess.com api
-  - chess.com
-  - state
-  - load
-  - dlt
-  - resource
-  - verified source
-  - destination
+  - Chess.com
+  - games
+  - player
+  - example source
+  - tutorial
   concepts:
   - dlt-ecosystem
   - verified-sources
@@ -2941,27 +2864,26 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/verified-sources/facebook_ads.md
   source: dlt
   path: dlt-ecosystem/verified-sources/facebook_ads.md
   title: Facebook Ads
-  summary: dlt verified source for Facebook Ads
+  summary: dlt verified source for loading Facebook Ads campaign data (campaigns, ad sets, ads, insights). Covers Meta API
+    authentication and available data resources.
   tags:
-  - verified-source
+  - verified-sources
+  - facebook
+  - ads
+  - marketing
   keywords:
-  - facebook ads api
-  - facebook ads
-  - credentials
-  - load
-  - state
-  - transform
-  - dlt
-  - resource
-  - verified source
-  - destination
+  - Facebook Ads
+  - Meta
+  - campaigns
+  - ad sets
+  - insights
+  - API
   concepts:
   - dlt-ecosystem
   - verified-sources
@@ -3003,28 +2925,30 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/verified-sources/filesystem/index.md
   source: dlt
   path: dlt-ecosystem/verified-sources/filesystem/index.md
   title: Cloud storage and filesystem
-  summary: dlt-verified source for reading files from cloud storage and local file
-    system
+  summary: 'Guide to the dlt filesystem verified source for loading structured files (CSV, Parquet, JSONL) from S3, GCS, Azure
+    Blob, Google Drive, SFTP, and local paths. Two-step loading: first access file metadata, then read content. Supports incremental
+    loading.'
   tags:
-  - verified-source
-  keywords:
-  - load
-  - object storage
-  - readers source
-  - dlt
-  - local file system
-  - file system
-  - source
-  - files
-  - cloud storage
+  - verified-sources
   - filesystem
+  - s3
+  - gcs
+  - azure
+  keywords:
+  - filesystem source
+  - CSV
+  - Parquet
+  - JSONL
+  - S3
+  - GCS
+  - Azure Blob
+  - incremental
   concepts:
   - dlt-ecosystem
   - verified-sources
@@ -3036,27 +2960,24 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/verified-sources/freshdesk.md
   source: dlt
   path: dlt-ecosystem/verified-sources/freshdesk.md
   title: Freshdesk
-  summary: dlt verified source for Freshdesk API
+  summary: dlt verified source for loading Freshdesk customer support data (tickets, contacts, agents, groups). Covers API
+    key setup and available resources.
   tags:
-  - verified-source
-  keywords:
-  - load
-  - credentials
-  - dlt
-  - resource
-  - destination
-  - freshdesk verified source
-  - source
-  - incremental
-  - pipeline
+  - verified-sources
   - freshdesk
+  - support
+  keywords:
+  - Freshdesk
+  - tickets
+  - contacts
+  - API key
+  - support
   concepts:
   - dlt-ecosystem
   - verified-sources
@@ -3090,27 +3011,24 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/verified-sources/github.md
   source: dlt
   path: dlt-ecosystem/verified-sources/github.md
   title: GitHub
-  summary: dlt verified source for GitHub API
+  summary: dlt verified source for loading GitHub repository data (issues, pull requests, reactions, stargazers). Covers GitHub
+    token authentication and incremental loading patterns.
   tags:
-  - verified-source
-  keywords:
-  - github api
-  - github verified source
-  - credentials
-  - load
-  - dlt
-  - resource
-  - destination
-  - source
+  - verified-sources
   - github
-  - incremental
+  keywords:
+  - GitHub
+  - issues
+  - pull requests
+  - reactions
+  - stargazers
+  - token
   concepts:
   - dlt-ecosystem
   - verified-sources
@@ -3148,27 +3066,25 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/verified-sources/google_ads.md
   source: dlt
   path: dlt-ecosystem/verified-sources/google_ads.md
   title: Google Ads
-  summary: dlt verified source for Google Ads API
+  summary: dlt verified source for loading Google Ads campaign performance data via Google Ads API. Covers OAuth credentials,
+    available resources (campaigns, ad groups, keywords, reports).
   tags:
-  - verified-source
+  - verified-sources
+  - google-ads
+  - marketing
   keywords:
-  - load
-  - credentials
-  - dlt
-  - resource
-  - destination
-  - source
-  - pipeline
-  - google ads api
-  - google ads verified source
-  - google ads
+  - Google Ads
+  - campaigns
+  - ad groups
+  - keywords
+  - OAuth
+  - reports
   concepts:
   - dlt-ecosystem
   - verified-sources
@@ -3208,27 +3124,24 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/verified-sources/google_analytics.md
   source: dlt
   path: dlt-ecosystem/verified-sources/google_analytics.md
   title: Google Analytics
-  summary: dlt verified source for Google Analytics API
+  summary: dlt verified source for loading Google Analytics 4 data (dimensions, metrics, reports). Covers service account
+    authentication and GA4 property configuration.
   tags:
-  - verified-source
+  - verified-sources
+  - google-analytics
   keywords:
-  - google analytics
-  - credentials
-  - load
-  - extract
-  - transform
-  - dlt
-  - resource
-  - destination
-  - source
-  - google analytics api
+  - Google Analytics
+  - GA4
+  - dimensions
+  - metrics
+  - service account
+  - reports
   concepts:
   - dlt-ecosystem
   - verified-sources
@@ -3270,27 +3183,23 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/verified-sources/google_sheets.md
   source: dlt
   path: dlt-ecosystem/verified-sources/google_sheets.md
   title: Google Sheets
-  summary: dlt verified source for Google Sheets API
+  summary: dlt verified source for loading Google Sheets data. Covers service account authentication, spreadsheet ID configuration,
+    and loading specific sheets or ranges.
   tags:
-  - verified-source
+  - verified-sources
+  - google-sheets
   keywords:
-  - load
-  - credentials
-  - transform
-  - extract
-  - dlt
-  - resource
-  - destination
-  - google sheets api
-  - google sheets verified source
-  - source
+  - Google Sheets
+  - spreadsheet
+  - service account
+  - range
+  - sheets
   concepts:
   - dlt-ecosystem
   - verified-sources
@@ -3332,27 +3241,25 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/verified-sources/hubspot.md
   source: dlt
   path: dlt-ecosystem/verified-sources/hubspot.md
   title: Hubspot
-  summary: dlt verified source for Hubspot API
+  summary: dlt verified source for loading HubSpot CRM data (contacts, companies, deals, tickets, products, quotes). Covers
+    private app token authentication and available resources.
   tags:
-  - verified-source
-  keywords:
-  - load
+  - verified-sources
   - hubspot
-  - credentials
-  - extract
-  - dlt
-  - resource
-  - destination
-  - source
-  - hubspot api
-  - incremental
+  - crm
+  keywords:
+  - HubSpot
+  - CRM
+  - contacts
+  - deals
+  - companies
+  - private app token
   concepts:
   - dlt-ecosystem
   - verified-sources
@@ -3392,27 +3299,25 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/verified-sources/inbox.md
   source: dlt
   path: dlt-ecosystem/verified-sources/inbox.md
   title: Inbox
-  summary: dlt verified source for Mail Inbox
+  summary: dlt verified source for loading email inbox data from Gmail and other IMAP-compatible providers. Enables email-to-data
+    pipeline workflows.
   tags:
-  - verified-source
-  keywords:
-  - load
-  - credentials
+  - verified-sources
   - email
-  - extract
-  - transform
-  - dlt
-  - resource
-  - destination
-  - inbox mail
-  - source
+  - inbox
+  - gmail
+  keywords:
+  - Gmail
+  - IMAP
+  - inbox
+  - email
+  - pipeline
   concepts:
   - dlt-ecosystem
   - verified-sources
@@ -3460,20 +3365,25 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/verified-sources/index.md
   source: dlt
   path: dlt-ecosystem/verified-sources/index.md
   title: Sources
-  summary: Available sources
+  summary: 'Index of all dlt verified sources: community-maintained connectors tested against real APIs. Lists sources for
+    Airtable, Asana, Chess, Facebook Ads, GitHub, Google products, HubSpot, Jira, Kafka, MongoDB, Notion, Salesforce, Slack,
+    Stripe, Zendesk, and more.'
   tags:
-  - verified-source
+  - verified-sources
+  - index
+  - connectors
   keywords:
-  - source
-  - dlt
-  - load
+  - verified sources
+  - connector
+  - API
+  - community
+  - core sources
   concepts:
   - dlt-ecosystem
   - verified-sources
@@ -3493,27 +3403,24 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/verified-sources/jira.md
   source: dlt
   path: dlt-ecosystem/verified-sources/jira.md
   title: Jira
-  summary: dlt verified source for Atlassian Jira
+  summary: dlt verified source for loading Jira project management data (issues, projects, users, boards, sprints). Covers
+    API token authentication and available resources.
   tags:
-  - verified-source
-  keywords:
-  - load
-  - credentials
-  - jira verified source
-  - jira api
-  - dlt
-  - resource
-  - destination
-  - source
-  - pipeline
+  - verified-sources
   - jira
+  keywords:
+  - Jira
+  - issues
+  - projects
+  - sprints
+  - API token
+  - boards
   concepts:
   - dlt-ecosystem
   - verified-sources
@@ -3551,27 +3458,25 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/verified-sources/kafka.md
   source: dlt
   path: dlt-ecosystem/verified-sources/kafka.md
   title: Kafka
-  summary: dlt verified source for Confluent Kafka
+  summary: dlt verified source for consuming Kafka topics. Covers broker configuration, consumer group setup, and incremental
+    offset-based loading.
   tags:
-  - verified-source
-  keywords:
-  - load
-  - credentials
-  - extract
-  - dlt
-  - resource
-  - kafka api
-  - destination
-  - source
-  - kafka verified source
+  - verified-sources
   - kafka
+  - streaming
+  keywords:
+  - Kafka
+  - topics
+  - consumer group
+  - broker
+  - offset
+  - streaming
   concepts:
   - dlt-ecosystem
   - verified-sources
@@ -3603,27 +3508,25 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/verified-sources/matomo.md
   source: dlt
   path: dlt-ecosystem/verified-sources/matomo.md
   title: Matomo
-  summary: dlt verified source for Matomo
+  summary: dlt verified source for loading Matomo web analytics data (visits, events, goals). Covers API token setup and available
+    report endpoints.
   tags:
-  - verified-source
+  - verified-sources
+  - matomo
+  - analytics
   keywords:
-  - load
-  - credentials
-  - incremental
-  - state
-  - matomo verified source
-  - transform
-  - dlt
-  - resource
-  - destination
-  - source
+  - Matomo
+  - analytics
+  - visits
+  - events
+  - goals
+  - API token
   concepts:
   - dlt-ecosystem
   - verified-sources
@@ -3661,27 +3564,24 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/verified-sources/mongodb.md
   source: dlt
   path: dlt-ecosystem/verified-sources/mongodb.md
   title: MongoDB
-  summary: dlt verified source for MongoDB
+  summary: dlt verified source for loading MongoDB collections. Supports incremental loading via timestamp fields and covers
+    connection string setup.
   tags:
-  - verified-source
-  keywords:
-  - load
-  - credentials
-  - dlt
-  - destination
-  - verified source
+  - verified-sources
   - mongodb
-  - source
-  - schema
-  - mongo database
+  - nosql
+  keywords:
+  - MongoDB
+  - collections
+  - connection string
   - incremental
+  - documents
   concepts:
   - dlt-ecosystem
   - verified-sources
@@ -3717,27 +3617,25 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/verified-sources/mux.md
   source: dlt
   path: dlt-ecosystem/verified-sources/mux.md
   title: Mux
-  summary: dlt verified source for Mux
+  summary: dlt verified source for loading Mux video platform data (assets, views, metrics). Covers API key/secret authentication
+    and available resources.
   tags:
-  - verified-source
-  keywords:
-  - load
-  - credentials
-  - mux api
-  - dlt
-  - resource
-  - destination
-  - source
+  - verified-sources
   - mux
-  - mux verified source
-  - pipeline
+  - video
+  keywords:
+  - Mux
+  - video
+  - assets
+  - views
+  - metrics
+  - API key
   concepts:
   - dlt-ecosystem
   - verified-sources
@@ -3773,26 +3671,23 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/verified-sources/notion.md
   source: dlt
   path: dlt-ecosystem/verified-sources/notion.md
   title: Notion
-  summary: dlt pipeline for Notion API
+  summary: dlt verified source for loading Notion workspace data (pages, databases, blocks). Covers Notion integration token
+    setup and available resources.
   tags:
-  - verified-source
-  keywords:
-  - load
-  - credentials
-  - dlt
-  - notion pipeline
-  - destination
+  - verified-sources
   - notion
-  - source
-  - pipeline
-  - notion api
+  keywords:
+  - Notion
+  - pages
+  - databases
+  - blocks
+  - integration token
   concepts:
   - dlt-ecosystem
   - verified-sources
@@ -3826,27 +3721,25 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/verified-sources/openapi-generator.md
   source: dlt
   path: dlt-ecosystem/verified-sources/openapi-generator.md
   title: OpenAPI source generator
-  summary: OpenAPI dlt source generator
+  summary: Guide to generating dlt REST API sources from OpenAPI specifications. The generator parses OpenAPI 3.x spec files
+    and produces a configured rest_api_source with endpoints, authentication, and pagination pre-configured.
   tags:
-  - verified-source
+  - verified-sources
+  - openapi
+  - generator
   keywords:
-  - source generator
-  - cli
-  - credentials
-  - load
-  - extract
-  - transform
-  - dlt
-  - destination
-  - source
-  - pipeline
+  - OpenAPI
+  - generator
+  - swagger
+  - REST API
+  - auto-generate
+  - spec
   concepts:
   - dlt-ecosystem
   - verified-sources
@@ -3882,27 +3775,25 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/verified-sources/personio.md
   source: dlt
   path: dlt-ecosystem/verified-sources/personio.md
   title: Personio
-  summary: dlt verified source for Personio API
+  summary: dlt verified source for loading Personio HR management data (employees, absences, attendances). Covers API credentials
+    and available data endpoints.
   tags:
-  - verified-source
-  keywords:
+  - verified-sources
   - personio
-  - load
+  - hr
+  keywords:
+  - Personio
+  - HR
+  - employees
+  - absences
+  - attendance
   - credentials
-  - personio verified source
-  - state
-  - transform
-  - dlt
-  - resource
-  - destination
-  - personio api
   concepts:
   - dlt-ecosystem
   - verified-sources
@@ -3940,27 +3831,26 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/verified-sources/pg_replication.md
   source: dlt
   path: dlt-ecosystem/verified-sources/pg_replication.md
   title: Postgres replication
-  summary: dlt verified source for Postgres replication
+  summary: dlt verified source for PostgreSQL logical replication (CDC). Enables change data capture from Postgres tables
+    using logical replication slots. Covers slot creation, WAL configuration, and incremental change loading.
   tags:
-  - verified-source
-  keywords:
-  - postgres replication
-  - load
-  - credentials
-  - incremental
-  - extract
-  - dlt
-  - resource
-  - destination
+  - verified-sources
   - postgres
-  - source
+  - cdc
+  - replication
+  keywords:
+  - PostgreSQL
+  - logical replication
+  - CDC
+  - replication slot
+  - WAL
+  - change data capture
   concepts:
   - dlt-ecosystem
   - verified-sources
@@ -3996,27 +3886,25 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/verified-sources/pipedrive.md
   source: dlt
   path: dlt-ecosystem/verified-sources/pipedrive.md
   title: Pipedrive
-  summary: dlt verified source for Pipedrive API
+  summary: dlt verified source for loading Pipedrive CRM data (deals, contacts, organizations, activities). Covers API token
+    setup and available resources.
   tags:
-  - verified-source
+  - verified-sources
+  - pipedrive
+  - crm
   keywords:
-  - load
-  - credentials
-  - pipedrive verified source
-  - state
-  - transform
-  - dlt
-  - resource
-  - destination
-  - pipedrive api
-  - source
+  - Pipedrive
+  - CRM
+  - deals
+  - contacts
+  - organizations
+  - API token
   concepts:
   - dlt-ecosystem
   - verified-sources
@@ -4058,27 +3946,24 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/verified-sources/rest_api/advanced.md
   source: dlt
   path: dlt-ecosystem/verified-sources/rest_api/advanced.md
   title: Advanced configuration
-  summary: Learn custom response processing, headers configuration and more
+  summary: 'Advanced REST API source usage via RESTClient for lower-level control: direct paginate() calls, session management,
+    custom request hooks, and building @dlt.resource functions around the REST client.'
   tags:
-  - verified-source
+  - verified-sources
+  - rest-api
+  - advanced
   keywords:
-  - restful api
-  - load
-  - transform
-  - extract
-  - headers
-  - response actions
-  - dlt
-  - advanced configuration
-  - source
-  - schema
+  - RESTClient
+  - paginate()
+  - custom pagination
+  - request hooks
+  - advanced
   concepts:
   - dlt-ecosystem
   - verified-sources
@@ -4096,27 +3981,25 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/verified-sources/rest_api/basic.md
   source: dlt
   path: dlt-ecosystem/verified-sources/rest_api/basic.md
   title: REST API source
-  summary: Learn how to set up and configure
+  summary: 'Basic configuration guide for the dlt REST API source: rest_api_source() configuration dict with client (base_url,
+    auth, paginator), resources list, and resource relationships. Covers common auth methods and pagination types.'
   tags:
-  - verified-source
+  - verified-sources
+  - rest-api
+  - configuration
   keywords:
-  - restful api
-  - load
-  - credentials
-  - transform
-  - state
-  - extract
-  - dlt
-  - resource
-  - destination
-  - source
+  - rest_api_source
+  - base_url
+  - paginator
+  - auth
+  - json_link
+  - resources
   concepts:
   - dlt-ecosystem
   - verified-sources
@@ -4186,25 +4069,25 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/verified-sources/rest_api/index.md
   source: dlt
   path: dlt-ecosystem/verified-sources/rest_api/index.md
   title: REST APIs
-  summary: Loads data from REST APIs using a declarative configuration
+  summary: Overview of the dlt REST API source for loading data from any REST API using declarative configuration. Covers
+    endpoint definition, resource relationships, pagination, and authentication. Links to basic and advanced configuration
+    guides.
   tags:
-  - verified-source
+  - verified-sources
+  - rest-api
+  - declarative
   keywords:
-  - restful api
-  - load
-  - extract
-  - dlt
-  - destination
-  - source
-  - schema
-  - rest api
+  - REST API
+  - declarative config
+  - pagination
+  - authentication
+  - resources
   concepts:
   - dlt-ecosystem
   - verified-sources
@@ -4216,27 +4099,25 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/verified-sources/salesforce.md
   source: dlt
   path: dlt-ecosystem/verified-sources/salesforce.md
   title: Salesforce
-  summary: dlt pipeline for Salesforce API
+  summary: dlt verified source for loading Salesforce CRM data via SOQL queries. Covers OAuth/username-password authentication
+    and loading standard/custom Salesforce objects.
   tags:
-  - verified-source
+  - verified-sources
+  - salesforce
+  - crm
   keywords:
-  - load
-  - credentials
-  - state
-  - salesforce api
-  - dlt
-  - resource
-  - destination
-  - salesforce pipeline
-  - source
-  - schema
+  - Salesforce
+  - SOQL
+  - CRM
+  - objects
+  - OAuth
+  - custom objects
   concepts:
   - dlt-ecosystem
   - verified-sources
@@ -4272,26 +4153,24 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/verified-sources/scrapy.md
   source: dlt
   path: dlt-ecosystem/verified-sources/scrapy.md
   title: Scrapy
-  summary: dlt verified source for Scraping using scrapy
+  summary: dlt verified source integrating Scrapy for web scraping pipelines. Enables yielding scraped data from Scrapy spiders
+    directly into dlt resources.
   tags:
-  - verified-source
-  keywords:
-  - credentials
-  - extract
-  - dlt
-  - destination
-  - scraping
+  - verified-sources
   - scrapy
-  - source
-  - scraping verified source
-  - pipeline
+  - web-scraping
+  keywords:
+  - Scrapy
+  - web scraping
+  - spiders
+  - crawler
+  - HTML
   concepts:
   - dlt-ecosystem
   - verified-sources
@@ -4317,27 +4196,25 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/verified-sources/shopify.md
   source: dlt
   path: dlt-ecosystem/verified-sources/shopify.md
   title: Shopify
-  summary: dlt pipeline for Shopify API
+  summary: dlt verified source for loading Shopify e-commerce data (orders, products, customers, inventory). Covers Admin
+    API access token setup and available resources.
   tags:
-  - verified-source
-  keywords:
-  - load
-  - credentials
-  - state
-  - extract
-  - dlt
-  - shopify pipeline
+  - verified-sources
   - shopify
-  - resource
-  - destination
-  - source
+  - ecommerce
+  keywords:
+  - Shopify
+  - orders
+  - products
+  - customers
+  - Admin API
+  - inventory
   concepts:
   - dlt-ecosystem
   - verified-sources
@@ -4373,27 +4250,25 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/verified-sources/slack.md
   source: dlt
   path: dlt-ecosystem/verified-sources/slack.md
   title: Slack
-  summary: dlt verified source for Slack API
+  summary: dlt verified source for loading Slack workspace data (messages, channels, users, threads). Covers bot token authentication
+    and channel selection.
   tags:
-  - verified-source
-  keywords:
-  - load
-  - credentials
-  - dlt
-  - resource
-  - destination
-  - slack verified source
-  - source
-  - pipeline
-  - incremental
+  - verified-sources
   - slack
+  - messaging
+  keywords:
+  - Slack
+  - messages
+  - channels
+  - users
+  - bot token
+  - threads
   concepts:
   - dlt-ecosystem
   - verified-sources
@@ -4435,8 +4310,7 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/verified-sources/sql_database/advanced.md
   source: dlt
@@ -4475,16 +4349,13 @@ entries:
   - anchor: create-date-ranges-in-a-loop
     title: create date ranges in a loop
   - anchor: run-dlt-pipeline-4-times-with-incremental-set-to-particular-days-via-initial-value-and-end-value
-    title: run dlt pipeline 4 times with incremental set to particular days (via initial_value
-      and end_value)
+    title: run dlt pipeline 4 times with incremental set to particular days (via initial_value and end_value)
   - anchor: load-each-date-range-separately-you-could-also-execute-each-load-in-a-separate-process
-    title: load each date range separately, you could also execute each load in a
-      separate process
+    title: load each date range separately, you could also execute each load in a separate process
   - anchor: run-pipeline-incrementally-with-the-max-day-as-initial-value-and-open-range
     title: run pipeline incrementally with the max day as initial_value and open range
   - anchor: create-the-incremental-table-resource-with-row-order-to-ensure-we-don-t-miss-rows
-    title: create the incremental table resource with row_order to ensure we don't
-      miss rows
+    title: create the incremental table resource with row_order to ensure we don't miss rows
   - anchor: we-ll-load-2-pages-1000-rows-max-on-each-run
     title: we'll load 2 pages, 1000 rows max on each run
   - anchor: inclusive-and-exclusive-filtering
@@ -4529,8 +4400,7 @@ entries:
   source: dlt
   path: dlt-ecosystem/verified-sources/sql_database/configuration.md
   title: Configuration
-  summary: configuring the pipeline script, connection, and backend settings in the
-    sql_database source
+  summary: configuring the pipeline script, connection, and backend settings in the sql_database source
   tags:
   - verified-source
   - configuration
@@ -4607,18 +4477,19 @@ entries:
   source: dlt
   path: dlt-ecosystem/verified-sources/sql_database/index.md
   title: 30+ SQL databases
-  summary: PostgreSQL, MySQL, MS SQL, BigQuery, Redshift, and more
+  summary: Overview of the dlt SQL Database source (sql_database and sql_table resources). Supports all SQLAlchemy dialects
+    including PostgreSQL, MySQL, SQLite, BigQuery, Snowflake, Redshift. Covers MS SQL change tracking via dltHub.
   tags:
-  - verified-source
+  - verified-sources
+  - sql
+  - database
+  - sqlalchemy
   keywords:
-  - load
-  - sql database pipeline
-  - dlt
-  - destination
-  - source
-  - pipeline
-  - sql connector
-  - sql database
+  - sql_database
+  - sql_table
+  - SQLAlchemy
+  - dialect
+  - change tracking
   concepts:
   - dlt-ecosystem
   - verified-sources
@@ -4634,8 +4505,7 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/verified-sources/sql_database/setup.md
   source: dlt
@@ -4674,20 +4544,18 @@ entries:
   source: dlt
   path: dlt-ecosystem/verified-sources/sql_database/troubleshooting.md
   title: Troubleshooting
-  summary: common troubleshooting use-cases for the sql_database source
+  summary: 'Troubleshooting guide for the dlt SQL Database source: common connection errors, SQLAlchemy driver issues, type
+    mapping problems, and incremental loading gotchas.'
   tags:
-  - verified-source
+  - verified-sources
+  - sql
+  - troubleshooting
   keywords:
-  - load
-  - credentials
-  - state
-  - sql database pipeline
-  - dlt
-  - destination
-  - source
-  - pipeline
-  - schema
-  - incremental
+  - troubleshooting
+  - connection error
+  - SQLAlchemy
+  - driver
+  - type mapping
   concepts:
   - dlt-ecosystem
   - verified-sources
@@ -4701,15 +4569,13 @@ entries:
   - anchor: timezone-aware-and-non-aware-data-types
     title: Timezone-aware and Non-aware Data Types
   - anchor: i-see-a-utc-datetime-column-in-my-destination-but-my-data-source-has-a-naive-datetime-column
-    title: I see a UTC datetime column in my destination, but my data source has a
-      naive datetime column
+    title: I see a UTC datetime column in my destination, but my data source has a naive datetime column
   - anchor: i-have-an-incremental-cursor-on-a-datetime-column-and-i-see-query-errors
     title: I have an incremental cursor on a datetime column and I see query errors
   - anchor: troubleshooting-connection
     title: Troubleshooting connection
   - anchor: pipeline-state-grows-extremely-large-or-i-get-deduplication-state-warnings-when-using-incremental
-    title: Pipeline state grows extremely large or I get deduplication state warnings
-      when using incremental
+    title: Pipeline state grows extremely large or I get deduplication state warnings when using incremental
   - anchor: connecting-to-mysql-with-ssl
     title: Connecting to MySQL with SSL
   - anchor: sql-server-connection-options
@@ -4725,27 +4591,24 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/verified-sources/sql_database/usage.md
   source: dlt
   path: dlt-ecosystem/verified-sources/sql_database/usage.md
   title: Usage
-  summary: basic usage of the sql_database source
+  summary: 'Advanced usage patterns for the dlt SQL Database source: query_adapter_callback for custom WHERE filters, writing
+    custom SQL queries, column type overrides, and handling large table loads efficiently.'
   tags:
-  - verified-source
+  - verified-sources
+  - sql
+  - advanced
   keywords:
-  - load
-  - transform
-  - state
-  - sql database pipeline
-  - extract
-  - dlt
-  - destination
-  - source
-  - pipeline
-  - incremental
+  - query_adapter_callback
+  - custom SQL
+  - column types
+  - filter
+  - large tables
   concepts:
   - dlt-ecosystem
   - verified-sources
@@ -4771,26 +4634,25 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/verified-sources/strapi.md
   source: dlt
   path: dlt-ecosystem/verified-sources/strapi.md
   title: Strapi
-  summary: dlt verified source for Strapi API
+  summary: dlt verified source for loading Strapi headless CMS content (entries, components, media). Covers API token setup
+    and loading collections.
   tags:
-  - verified-source
-  keywords:
-  - load
-  - credentials
-  - dlt
-  - destination
-  - strapi api
+  - verified-sources
   - strapi
-  - source
-  - strapi verified source
-  - pipeline
+  - cms
+  keywords:
+  - Strapi
+  - CMS
+  - entries
+  - collections
+  - API token
+  - media
   concepts:
   - dlt-ecosystem
   - verified-sources
@@ -4822,27 +4684,25 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/verified-sources/stripe.md
   source: dlt
   path: dlt-ecosystem/verified-sources/stripe.md
   title: Stripe
-  summary: dlt verified source for Stripe API
+  summary: dlt verified source for loading Stripe payment platform data (charges, customers, invoices, subscriptions, events).
+    Covers API key setup and available resources.
   tags:
-  - verified-source
-  keywords:
-  - load
-  - credentials
-  - incremental
-  - state
-  - stripe verified source
-  - dlt
+  - verified-sources
   - stripe
-  - destination
-  - source
-  - stripe api
+  - payments
+  keywords:
+  - Stripe
+  - charges
+  - customers
+  - invoices
+  - subscriptions
+  - API key
   concepts:
   - dlt-ecosystem
   - verified-sources
@@ -4872,8 +4732,7 @@ entries:
   - anchor: possible-incremental-endpoints
     title: Possible incremental endpoints
   - anchor: the-incremental-endpoints-default-to-stripe-api-endpoints-with-uneditable-data
-    title: The incremental endpoints default to Stripe API endpoints with uneditable
-      data.
+    title: The incremental endpoints default to Stripe API endpoints with uneditable data.
   - anchor: source-stripe-source
     title: Source `stripe_source`
   - anchor: source-incremental-stripe-source
@@ -4885,27 +4744,26 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/verified-sources/workable.md
   source: dlt
   path: dlt-ecosystem/verified-sources/workable.md
   title: Workable
-  summary: dlt pipeline for Workable API
+  summary: dlt verified source for loading Workable HR/recruiting data (jobs, candidates, applications). Covers API bearer
+    token setup and available resources.
   tags:
-  - verified-source
-  keywords:
-  - load
-  - credentials
-  - state
+  - verified-sources
   - workable
-  - dlt
-  - resource
-  - destination
-  - workable api
-  - source
-  - incremental
+  - hr
+  - recruiting
+  keywords:
+  - Workable
+  - jobs
+  - candidates
+  - applications
+  - bearer token
+  - recruiting
   concepts:
   - dlt-ecosystem
   - verified-sources
@@ -4943,27 +4801,25 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/verified-sources/zendesk.md
   source: dlt
   path: dlt-ecosystem/verified-sources/zendesk.md
   title: Zendesk
-  summary: dlt pipeline for Zendesk API
+  summary: dlt verified source for loading Zendesk customer support data (tickets, users, organizations, ticket events). Covers
+    OAuth/API token authentication and incremental loading.
   tags:
-  - verified-source
-  keywords:
-  - load
-  - credentials
-  - state
-  - dlt
+  - verified-sources
   - zendesk
-  - destination
-  - source
-  - zendesk pipeline
+  - support
+  keywords:
+  - Zendesk
+  - tickets
+  - users
+  - organizations
+  - OAuth
   - incremental
-  - pipeline
   concepts:
   - dlt-ecosystem
   - verified-sources
@@ -5003,15 +4859,13 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:examples/index.md
   source: dlt
   path: examples/index.md
   title: Code Examples
-  summary: A list of comprehensive code examples that teach you how to solve real
-    world problems.
+  summary: A list of comprehensive code examples that teach you how to solve real world problems.
   tags:
   - reference
   keywords:
@@ -5102,20 +4956,18 @@ entries:
   source: dlt
   path: general-usage/credentials/complex_types.md
   title: Built-in credentials
-  summary: Configure access to AWS, Azure, Google Cloud and other systems
+  summary: 'Guide to complex credential types in dlt: ConnectionStringCredentials for database connections (dict form, connection
+    string form, native form), GCP credentials, AWS credentials, and how to define custom credential classes.'
   tags:
   - credentials
+  - complex-types
+  - connection-string
   keywords:
-  - config
-  - credentials
-  - load
-  - secrets.toml
-  - specs
-  - dlt
-  - resource
-  - environment variables
-  - configuration
-  - source
+  - ConnectionStringCredentials
+  - GCP
+  - AWS
+  - custom credentials
+  - dict form
   concepts:
   - general-usage
   - credentials
@@ -5175,8 +5027,7 @@ entries:
   - anchor: set-the-necessary-attributes
     title: Set the necessary attributes
   - anchor: imports-an-external-botocore-session-and-sets-the-credentials-properties-accordingly
-    title: Imports an external botocore session and sets the credentials properties
-      accordingly.
+    title: Imports an external botocore session and sets the credentials properties accordingly.
   - anchor: azurecredentials
     title: AzureCredentials
   - anchor: set-the-necessary-attributes
@@ -5192,27 +5043,25 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:general-usage/credentials/index.md
   source: dlt
   path: general-usage/credentials/index.md
   title: Configure credentials and pipelines
-  summary: How to configure dlt pipelines and set up credentials
+  summary: 'Overview of dlt''s configuration and secrets system: separation of secrets from code, built-in credentials for
+    common systems, auto-generated config specs for @dlt.source/@dlt.resource, and comprehensive configurability for all pipeline
+    aspects.'
   tags:
   - credentials
-  keywords:
-  - config
-  - credentials
-  - load
-  - secrets.toml
-  - dlt
-  - resource
-  - destination
-  - environment variables
   - configuration
-  - source
+  - secrets
+  keywords:
+  - secrets.toml
+  - config.toml
+  - credentials
+  - injection
+  - configuration
   concepts:
   - general-usage
   - credentials
@@ -5226,27 +5075,27 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:general-usage/credentials/setup.md
   source: dlt
   path: general-usage/credentials/setup.md
   title: Overview and examples
-  summary: Learn where configs are stored and how to write them
+  summary: 'Practical guide to configuring dlt credentials: config providers in priority order (env vars → TOML files → vaults
+    → custom → defaults), layout of secrets.toml/config.toml, environment variable naming conventions, and auto-injection
+    for decorated functions.'
   tags:
   - credentials
+  - configuration
+  - secrets
+  - setup
   keywords:
-  - config
-  - credentials
-  - load
-  - extract
   - secrets.toml
-  - dlt
-  - resource
-  - destination
-  - provider
+  - config.toml
   - environment variables
+  - provider
+  - injection
+  - TOML
   concepts:
   - general-usage
   - credentials
@@ -5364,23 +5213,26 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:general-usage/credentials/vaults.md
   source: dlt
   path: general-usage/credentials/vaults.md
   title: Vault providers
-  summary: Learn how to configure Google Secrets and Airflow providers
+  summary: 'Guide to using secure vaults as dlt configuration providers: Google Secret Manager (via GCP), Airflow Variables,
+    AWS Secrets Manager, and Azure Key Vault. Documents lookup/merge strategy, caching, and TOML fragment merging.'
   tags:
   - credentials
+  - vaults
+  - secrets-manager
+  - security
   keywords:
-  - load
-  - credentials
-  - dlt
-  - destination
-  - source
-  - pipeline
+  - vault
+  - Google Secret Manager
+  - Airflow Variables
+  - AWS Secrets Manager
+  - Azure Key Vault
+  - caching
   concepts:
   - general-usage
   - credentials
@@ -5422,8 +5274,7 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:general-usage/customising-pipelines/pseudonymizing_columns.md
   source: dlt
@@ -5455,8 +5306,7 @@ entries:
   - anchor: run-it-as-is
     title: run it as is
   - anchor: or-create-an-instance-of-the-data-source-modify-the-resource-and-run-the-source
-    title: Or create an instance of the data source, modify the resource and run the
-      source.
+    title: Or create an instance of the data source, modify the resource and run the source.
   - anchor: 1-create-an-instance-of-the-source-so-you-can-edit-it
     title: 1. Create an instance of the source so you can edit it.
   - anchor: 2-modify-this-source-instance-s-resource
@@ -5553,21 +5403,18 @@ entries:
   source: dlt
   path: general-usage/data-enrichments/currency_conversion_data_enrichment.md
   title: Currency-conversion data enrichment
-  summary: Converting the monetary value in one currency to another using the latest
-    market rates.
+  summary: Guide to building a currency conversion data enrichment pipeline using ExchangeRate-API. Shows the pattern of fetching
+    exchange rates and enriching monetary column values with conversion metadata (rate, date, target currency).
   tags:
-  - reference
+  - general-usage
+  - data-enrichment
+  - currency
   keywords:
-  - load
-  - credentials
-  - transform
-  - state
-  - dlt
-  - latest market rates
-  - data enrichment
-  - resource
-  - destination
   - currency conversion
+  - ExchangeRate-API
+  - enrichment
+  - exchange rate
+  - monetary
   concepts:
   - general-usage
   category: reference
@@ -5596,27 +5443,25 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:general-usage/data-enrichments/url-parser-data-enrichment.md
   source: dlt
   path: general-usage/data-enrichments/url-parser-data-enrichment.md
   title: URL-parser data enrichment
-  summary: Enriching the url with various parameters.
+  summary: Guide to URL parser data enrichment using the URL Parse API. Shows how to enrich raw URL strings with parsed components
+    (domain, path, query params) as an add_map() transformation step.
   tags:
-  - reference
+  - general-usage
+  - data-enrichment
+  - url
   keywords:
-  - load
-  - credentials
-  - transform
-  - extract
-  - dlt
-  - data enrichment
-  - resource
-  - destination
-  - referer data enrichment
-  - source
+  - URL parser
+  - URL Parse API
+  - enrichment
+  - domain
+  - path
+  - query params
   concepts:
   - general-usage
   category: reference
@@ -5645,27 +5490,24 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:general-usage/data-enrichments/user_agent_device_data_enrichment.md
   source: dlt
   path: general-usage/data-enrichments/user_agent_device_data_enrichment.md
   title: User-agent device data enrichment
-  summary: Enriching the user-agent device data with average device price.
+  summary: Guide to user-agent device data enrichment using SerpAPI for device pricing lookup. Shows pattern for enriching
+    user-agent strings with device type and price metadata via Google Shopping API.
   tags:
-  - reference
+  - general-usage
+  - data-enrichment
+  - user-agent
   keywords:
-  - load
-  - user-agent data
-  - credentials
-  - state
-  - extract
-  - transform
-  - dlt
-  - data enrichment
-  - resource
-  - destination
+  - user agent
+  - SerpAPI
+  - device
+  - enrichment
+  - Google Shopping
   concepts:
   - general-usage
   category: reference
@@ -5694,27 +5536,26 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:general-usage/data-quality-lifecycle.md
   source: dlt
   path: general-usage/data-quality-lifecycle.md
   title: Data quality lifecycle
-  summary: End-to-end data quality checks across the dlt pipeline lifecycle
+  summary: 'Describes dlt+dltHub''s approach to data quality across the full pipeline lifecycle: three checkpoints (in-flight,
+    staging, destination) and five quality pillars (structural integrity, semantic validity, uniqueness, privacy, operational
+    health).'
   tags:
-  - reference
+  - data-quality
+  - lifecycle
+  - governance
   keywords:
-  - load
-  - contracts
-  - credentials
-  - validation
   - data quality
-  - state
-  - dlt
-  - extract
+  - in-flight
+  - staging
   - destination
-  - transform
+  - structural integrity
+  - semantic validity
   concepts:
   - general-usage
   category: reference
@@ -5725,8 +5566,7 @@ entries:
   - anchor: data-quality-lifecycle
     title: Data quality lifecycle
   - anchor: one-library-end-to-end-ingestion-transformation-with-data-quality-and-lineage
-    title: One library, end-to-end ingestion, transformation, with data quality and
-      lineage
+    title: One library, end-to-end ingestion, transformation, with data quality and lineage
   - anchor: the-five-pillars-of-data-quality
     title: The five pillars of data quality
   - anchor: 1-structural-integrity
@@ -5746,26 +5586,24 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:general-usage/dataset-access/data-quality-dashboard.md
   source: dlt
   path: general-usage/dataset-access/data-quality-dashboard.md
   title: Ensuring data quality
-  summary: Monitoring and testing data quality
+  summary: Guide to monitoring data quality using the dlt pipeline dashboard and trace output. Covers row count monitoring,
+    tracking loaded_at/created_at trends, and using 'dlt pipeline trace' to inspect per-table row counts.
   tags:
-  - reference
-  keywords:
-  - load
-  - testing
-  - dlt
-  - destination
-  - data
-  - schema
+  - data-quality
   - monitoring
-  - pipeline
-  - quality
+  - dashboard
+  keywords:
+  - pipeline trace
+  - row count
+  - loaded_at
+  - monitoring
+  - data quality dashboard
   concepts:
   - general-usage
   - dataset-access
@@ -5787,27 +5625,27 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:general-usage/dataset-access/dataset.md
   source: dlt
   path: general-usage/dataset-access/dataset.md
   title: Access datasets in Python
-  summary: Conveniently access the data loaded to any destination in Python
+  summary: 'Reference for dlt''s Dataset and Relation API for accessing loaded data: pipeline.dataset(), table access, lazy-loading
+    model, SQL query strings, Ibis expressions, and data retrieval as DataFrame, Arrow, or Python dicts.'
   tags:
-  - reference
+  - dataset
+  - access
+  - relation
+  - ibis
   keywords:
-  - load
-  - credentials
-  - transform
-  - state
-  - retrieval
-  - dlt
-  - destination
-  - data
-  - schema
-  - source
+  - pipeline.dataset()
+  - Relation
+  - lazy-loading
+  - df()
+  - arrow()
+  - Ibis
+  - sql()
   concepts:
   - general-usage
   - dataset-access
@@ -5913,27 +5751,26 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:general-usage/dataset-access/marimo.md
   source: dlt
   path: general-usage/dataset-access/marimo.md
   title: Explore data with marimo
-  summary: Explore your data with marimo
+  summary: Guide to using marimo notebooks with dlt and Ibis for interactive data exploration. Launch marimo to explore loaded
+    pipeline data, build Altair visualizations, and write transformations against the dataset API.
   tags:
-  - reference
-  keywords:
-  - sql
-  - load
-  - transform
-  - dlt
-  - data
-  - source
-  - schema
-  - ibis
   - dataset
-  - pipeline
+  - marimo
+  - ibis
+  - notebook
+  keywords:
+  - marimo
+  - Ibis
+  - notebook
+  - interactive
+  - visualization
+  - Altair
   concepts:
   - general-usage
   - dataset-access
@@ -5965,8 +5802,7 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:general-usage/dataset-access/view-dlt-schema.md
   source: dlt
@@ -6032,20 +5868,20 @@ entries:
   source: dlt
   path: general-usage/destination-tables.md
   title: Destination tables & lineage
-  summary: Understanding the tables created in the destination database
+  summary: 'Explains how dlt creates destination tables from loaded data: database schema creation, table naming conventions,
+    nested table unnesting into child tables, and dlt metadata tables (_dlt_loads, _dlt_pipeline_state, _dlt_versions).'
   tags:
-  - destination
-  keywords:
-  - transform
-  - lineage
-  - dlt
-  - destination tables
+  - general-usage
+  - tables
   - schema
-  - nested table
-  - versioned dataset
-  - state
-  - staging dataset
-  - resource
+  - nested
+  keywords:
+  - destination tables
+  - nested tables
+  - child tables
+  - schema
+  - _dlt_loads
+  - unnesting
   concepts:
   - general-usage
   category: reference
@@ -6086,27 +5922,25 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:general-usage/destination.md
   source: dlt
   path: general-usage/destination.md
   title: Destination
-  summary: Declare and configure destinations to which to load data
+  summary: 'Reference for specifying dlt destinations in multiple ways: shorthand string, named destination, factory type,
+    factory class import. Covers passing explicit parameters to destination factories and named destinations for environment
+    switching.'
   tags:
+  - general-usage
   - destination
+  - configuration
   keywords:
-  - load
-  - configure destination
-  - credentials
-  - state
-  - extract
-  - transform
-  - dlt
-  - destination
-  - source
-  - schema
+  - destination factory
+  - named destination
+  - shorthand
+  - filesystem
+  - environment switch
   concepts:
   - general-usage
   category: reference
@@ -6149,26 +5983,27 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:general-usage/full-loading.md
   source: dlt
   path: general-usage/full-loading.md
   title: Full loading
-  summary: Full loading with dlt
+  summary: 'Guide to full table reloading with write_disposition=''replace''. Explains three replace strategies: truncate-and-insert
+    (default), insert-from-staging, and staging-optimized. Notes that ALL tables in the resource are truncated including nested
+    and dispatched tables.'
   tags:
-  - reference
-  keywords:
-  - load
-  - state
-  - dlt
+  - general-usage
+  - loading
   - replace
-  - destination
-  - loading methods
-  - source
-  - full loading
-  - pipeline
+  - write-disposition
+  keywords:
+  - replace
+  - write_disposition
+  - truncate-and-insert
+  - full load
+  - staging
+  - nested tables
   concepts:
   - general-usage
   category: reference
@@ -6193,27 +6028,25 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:general-usage/glossary.md
   source: dlt
   path: general-usage/glossary.md
   title: Glossary
-  summary: Glossary of common dlt terms
+  summary: 'Glossary of core dlt terms: source (data system), resource (logical data grouping and Python function), destination
+    (data store), and pipeline (extraction/normalization/loading orchestrator).'
   tags:
-  - reference
+  - general-usage
+  - glossary
+  - concepts
   keywords:
-  - load
-  - credentials
-  - extract
-  - dlt
+  - source
   - resource
   - destination
-  - glossary
-  - source
-  - schema
   - pipeline
+  - glossary
+  - terms
   concepts:
   - general-usage
   category: reference
@@ -6242,8 +6075,7 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:general-usage/incremental/advanced-state.md
   source: dlt
@@ -6280,8 +6112,7 @@ entries:
   - anchor: advanced-state-usage-storing-a-list-of-processed-entities
     title: 'Advanced state usage: storing a list of processed entities'
   - anchor: advanced-state-usage-tracking-the-last-value-for-all-search-terms-in-twitter-api
-    title: 'Advanced state usage: tracking the last value for all search terms in
-      Twitter API'
+    title: 'Advanced state usage: tracking the last value for all search terms in Twitter API'
   links_to: []
   links_from: []
   frontmatter: {}
@@ -6292,20 +6123,20 @@ entries:
   source: dlt
   path: general-usage/incremental/cursor.md
   title: Cursor-based incremental loading
-  summary: Track changes using cursor fields with dlt
+  summary: 'Deep dive into dlt.sources.incremental cursor-based incremental loading: initial_value, start_value (for querying),
+    last_value (real-time tracking), end_value (backfill), and how state is persisted across pipeline runs.'
   tags:
-  - reference
-  keywords:
+  - general-usage
+  - incremental
   - cursor
-  - credentials
-  - load
+  keywords:
+  - incremental
+  - cursor
+  - start_value
+  - last_value
+  - initial_value
   - state
-  - extract
-  - transform
-  - dlt
-  - resource
-  - destination
-  - incremental loading
+  - backfill
   concepts:
   - general-usage
   - incremental
@@ -6317,8 +6148,7 @@ entries:
   - anchor: cursor-based-incremental-loading
     title: Cursor-based incremental loading
   - anchor: use-naming-function-in-table-name-to-generate-separate-tables-for-each-event
-    title: Use naming function in table name to generate separate tables for each
-      event
+    title: Use naming function in table name to generate separate tables for each event
   - anchor: max-min-or-custom-last-value-func
     title: Max, min, or custom `last_value_func`
   - anchor: using-end-value-for-backfill
@@ -6352,8 +6182,7 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:general-usage/incremental/lag.md
   source: dlt
@@ -6435,20 +6264,20 @@ entries:
   source: dlt
   path: general-usage/incremental-loading.md
   title: Incremental loading
-  summary: Introduction to incremental loading with dlt
+  summary: 'Guide to incremental loading strategies in dlt: append (stateless data), merge (stateful data), and full replace.
+    Includes decision flowchart for choosing write dispositions and explains slowly changing dimensions (SCD Type 2).'
   tags:
-  - reference
-  keywords:
-  - load
-  - state
-  - extract
-  - dlt
-  - destination
-  - incremental loading
-  - loading methods
-  - source
+  - general-usage
   - incremental
-  - pipeline
+  - write-disposition
+  keywords:
+  - incremental loading
+  - append
+  - merge
+  - replace
+  - SCD2
+  - write_disposition
+  - flowchart
   concepts:
   - general-usage
   category: reference
@@ -6479,27 +6308,27 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:general-usage/merge-loading.md
   source: dlt
   path: general-usage/merge-loading.md
   title: Merge loading
-  summary: Merge loading with dlt
+  summary: 'Comprehensive guide to merge loading strategies in dlt: delete-insert (deduplication + upsert), SCD2 (slowly changing
+    dimensions with history), merge_disposition_strategy, and insert-only. Covers primary_key and merge_key configuration.'
   tags:
-  - reference
+  - general-usage
+  - merge
+  - scd2
+  - write-disposition
   keywords:
-  - load
-  - transform
-  - state
-  - extract
-  - dlt
-  - resource
+  - merge
+  - delete-insert
+  - SCD2
+  - primary_key
+  - merge_key
+  - deduplication
   - upsert
-  - incremental loading
-  - destination
-  - insert-only
   concepts:
   - general-usage
   category: reference
@@ -6562,8 +6391,7 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:general-usage/naming-convention.md
   source: dlt
@@ -6630,20 +6458,19 @@ entries:
   source: dlt
   path: general-usage/pipeline.md
   title: Pipeline
-  summary: Explanation of what a dlt pipeline is
+  summary: 'Core reference for the dlt.pipeline() object: constructor arguments (pipeline_name, destination, dataset_name),
+    run() method, load_info result object, state management, and pipeline configuration.'
   tags:
-  - reference
+  - general-usage
+  - pipeline
+  - core
   keywords:
-  - full refresh
-  - dev mode
-  - load
-  - state
-  - extract
-  - dlt
-  - destination
-  - source
-  - schema
-  - incremental
+  - pipeline
+  - dlt.pipeline()
+  - run()
+  - load_info
+  - dataset_name
+  - pipeline_name
   concepts:
   - general-usage
   category: reference
@@ -6682,27 +6509,26 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:general-usage/resource.md
   source: dlt
   path: general-usage/resource.md
   title: Resource
-  summary: Explanation of what a dlt resource is
+  summary: Reference for dlt resources — the @dlt.resource decorator, write_disposition, table_name, primary_key, merge_key,
+    and incremental hints. Covers dynamic resource creation, apply_hints(), transformer resources, and dispatching data to
+    multiple tables.
   tags:
-  - verified-source
-  keywords:
-  - load
-  - credentials
-  - incremental
-  - state
-  - extract
-  - transform
-  - dlt
+  - general-usage
   - resource
-  - destination
-  - source
+  - decorator
+  keywords:
+  - '@dlt.resource'
+  - write_disposition
+  - primary_key
+  - transformer
+  - dispatch
+  - apply_hints
   concepts:
   - general-usage
   category: reference
@@ -6729,8 +6555,7 @@ entries:
   - anchor: send-item-to-a-table-with-name-item-type
     title: send item to a table with name item["type"]
   - anchor: the-table-schema-method-gets-the-table-schema-generated-by-a-resource-and-takes-an-optional
-    title: the `table_schema` method gets the table schema generated by a resource
-      and takes an optional
+    title: the `table_schema` method gets the table schema generated by a resource and takes an optional
   - anchor: data-item-to-evaluate-dynamic-hints
     title: data item to evaluate dynamic hints
   - anchor: parametrize-a-resource
@@ -6756,13 +6581,11 @@ entries:
   - anchor: below-we-want-to-load-only-100-users-from-the-users-endpoint
     title: below we want to load only 100 users from the `users` endpoint.
   - anchor: get-bulbasaur-and-ivysaur-you-need-dlt-0-4-6-for-the-pipe-operator-working-with-lists
-    title: Get Bulbasaur and Ivysaur (you need dlt 0.4.6 for the pipe operator working
-      with lists).
+    title: Get Bulbasaur and Ivysaur (you need dlt 0.4.6 for the pipe operator working with lists).
   - anchor: declare-a-standalone-resource
     title: Declare a standalone resource
   - anchor: filesystem-must-be-called-before-it-is-extracted-or-used-in-any-other-way
-    title: '`filesystem` must be called before it is extracted or used in any other
-      way.'
+    title: '`filesystem` must be called before it is extracted or used in any other way.'
   - anchor: declare-parallel-and-async-resources
     title: Declare parallel and async resources
   - anchor: users-and-orders-will-be-iterated-in-parallel-in-two-separate-threads
@@ -6790,8 +6613,7 @@ entries:
   - anchor: duplicate-and-rename-resources
     title: Duplicate and rename resources
   - anchor: create-two-extract-pipes-that-list-files-from-the-bucket-and-send-them-to-the-reader
-    title: create two extract pipes that list files from the bucket and send them
-      to the reader.
+    title: create two extract pipes that list files from the bucket and send them to the reader.
   - anchor: by-default-both-pipes-will-load-data-to-the-same-table-csv-reader
     title: by default, both pipes will load data to the same table (csv_reader)
   - anchor: so-we-rename-resources-to-load-to-reports-and-transactions-tables
@@ -6819,27 +6641,26 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:general-usage/schema-contracts.md
   source: dlt
   path: general-usage/schema-contracts.md
   title: Schema and data contracts
-  summary: Controlling schema evolution and validating data
+  summary: 'Guide to dlt schema contracts for controlling schema evolution. Schema entities: tables, columns, data_type. Contract
+    modes: evolve (default), freeze (exception on deviation), discard_row, discard_value. Shows how to apply contracts to
+    sources and resources.'
   tags:
-  - reference
-  keywords:
-  - load
-  - transform
-  - extract
-  - dlt
-  - resource
-  - data contracts
-  - destination
+  - general-usage
   - schema
-  - source
-  - pydantic
+  - contracts
+  keywords:
+  - schema contract
+  - evolve
+  - freeze
+  - discard_row
+  - discard_value
+  - schema entity
   concepts:
   - general-usage
   - schema
@@ -6863,8 +6684,7 @@ entries:
   - anchor: contracts-on-new-tables
     title: Contracts on new tables
   - anchor: working-with-datasets-that-have-manually-added-tables-and-columns-on-the-first-load
-    title: Working with datasets that have manually added tables and columns on the
-      first load
+    title: Working with datasets that have manually added tables and columns on the first load
   - anchor: code-examples
     title: Code examples
   - anchor: this-will-use-the-settings-defined-by-the-decorators
@@ -6874,8 +6694,7 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:general-usage/schema-evolution.md
   source: dlt
@@ -6945,20 +6764,20 @@ entries:
   source: dlt
   path: general-usage/schema.md
   title: Schema
-  summary: Schema
+  summary: 'Comprehensive reference for dlt schemas: content-based version hash, numeric versioning, naming conventions for
+    tables/columns, data types, variant columns, nested data unnesting, compound hints (primary_key, merge_key, partition),
+    and schema import/export.'
   tags:
-  - reference
-  keywords:
-  - load
-  - credentials
-  - state
-  - extract
-  - yaml
-  - dlt
-  - resource
-  - destination
+  - general-usage
   - schema
-  - source
+  - data-types
+  keywords:
+  - schema
+  - version_hash
+  - naming convention
+  - variant column
+  - nested
+  - compound hints
   concepts:
   - general-usage
   - schema
@@ -7032,27 +6851,25 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:general-usage/source.md
   source: dlt
   path: general-usage/source.md
   title: Source
-  summary: Explanation of what a dlt source is
+  summary: Reference for dlt sources — the @dlt.source decorator, dynamic resource creation, source configuration, combining
+    and filtering sources, and async sources. Shows how to create reusable source libraries.
   tags:
-  - verified-source
-  keywords:
-  - api
-  - load
-  - credentials
-  - transform
-  - extract
-  - dlt
-  - dlt.source
-  - resource
-  - destination
+  - general-usage
   - source
+  - decorator
+  keywords:
+  - '@dlt.source'
+  - dynamic resources
+  - source configuration
+  - async
+  - filter
+  - combine
   concepts:
   - general-usage
   category: reference
@@ -7075,13 +6892,11 @@ entries:
   - anchor: access-and-select-resources-to-load
     title: Access and select resources to load
   - anchor: resources-is-a-dictionary-with-all-resources-available-the-key-is-the-resource-name
-    title: '"resources" is a dictionary with all resources available, the key is the
-      resource name'
+    title: '"resources" is a dictionary with all resources available, the key is the resource name'
   - anchor: print-resources-that-are-selected-to-load
     title: print resources that are selected to load
   - anchor: load-only-companies-and-deals-using-the-with-resources-convenience-method
-    title: load only "companies" and "deals" using the "with_resources" convenience
-      method
+    title: load only "companies" and "deals" using the "with_resources" convenience method
   - anchor: resources-are-accessible-as-attributes-of-a-source
     title: resources are accessible as attributes of a source
   - anchor: check-if-deals-are-selected-to-load
@@ -7099,8 +6914,7 @@ entries:
   - anchor: source-contains-deals-resource
     title: source contains `deals` resource
   - anchor: connect-the-data-from-deals-resource-into-deal-scores-and-add-to-the-source
-    title: connect the data from `deals` resource into `deal_scores` and add to the
-      source
+    title: connect the data from `deals` resource into `deal_scores` and add to the source
   - anchor: load-the-data-you-ll-see-the-new-table-deal-scores-in-your-destination
     title: 'load the data: you''ll see the new table `deal_scores` in your destination!'
   - anchor: reduce-the-nesting-level-of-generated-tables
@@ -7118,8 +6932,7 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:general-usage/state.md
   source: dlt
@@ -7174,20 +6987,20 @@ entries:
   source: dlt
   path: hub/command-line-interface.md
   title: Command Line Interface
-  summary: Command line interface (CLI) full reference of dlt
+  summary: 'Reference for the dlthub CLI commands: dlthub workspace info, dlthub pipeline init, dlthub run, dlthub serve,
+    dlthub deploy, dlthub login. Covers workspace management, pipeline deployment, and job scheduling on the dltHub platform.'
   tags:
+  - hub
   - cli
+  - reference
   keywords:
-  - cli
-  - load
-  - transform
-  - state
-  - dlt
-  - destination
-  - command line interface
-  - source
-  - schema
-  - pipeline
+  - dlthub
+  - CLI
+  - workspace info
+  - pipeline init
+  - deploy
+  - run
+  - serve
   concepts:
   - hub
   category: reference
@@ -7306,8 +7119,7 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:hub/core-concepts/profiles-dlthub.md
   source: dlt
@@ -7463,14 +7275,11 @@ entries:
   - anchor: sql-catalog
     title: SQL catalog
   - anchor: credentials-section-below-is-only-needed-if-you-re-using-the-cloud-storage-not-local-disk
-    title: credentials section below is only needed if you're using the cloud storage
-      (not local disk)
+    title: credentials section below is only needed if you're using the cloud storage (not local disk)
   - anchor: will-register-tables-if-found-in-storage-but-not-found-in-the-catalog-backward-compatibility
-    title: will register tables if found in storage but not found in the catalog (backward
-      compatibility)
+    title: will register tables if found in storage but not found in the catalog (backward compatibility)
   - anchor: credentials-section-below-is-only-needed-if-you-re-using-the-cloud-storage-not-local-disk
-    title: credentials section below is only needed if you're using the cloud storage
-      (not local disk)
+    title: credentials section below is only needed if you're using the cloud storage (not local disk)
   - anchor: lakekeeper-catalog
     title: Lakekeeper catalog
   - anchor: polaris-catalog
@@ -7838,8 +7647,7 @@ entries:
   source: dlt
   path: hub/features/transformations/index.md
   title: Transformations
-  summary: Define Python-based or mixed SQL + Python transformations on data that
-    is **already** in your destination.
+  summary: Define Python-based or mixed SQL + Python transformations on data that is **already** in your destination.
   tags:
   - reference
   keywords:
@@ -7924,17 +7732,19 @@ entries:
   source: dlt
   path: hub/getting-started/installation.md
   title: Installation
-  summary: Installation information for the dlthub package
+  summary: 'Installation guide for the dltHub platform tooling: prerequisites, uvx dlthub-start@latest for guided first experience,
+    dltHub workspace scaffolding, and alternative install paths. Defines what a dltHub workspace is.'
   tags:
-  - reference
+  - hub
+  - installation
+  - getting-started
   keywords:
-  - load
-  - credentials
-  - transform
-  - dlt
-  - source
-  - schema
-  - pipeline
+  - dlthub-start
+  - workspace
+  - installation
+  - uv
+  - scaffold
+  - playground
   concepts:
   - hub
   category: reference
@@ -7961,8 +7771,7 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:hub/getting-started/runtime-tutorial.md
   source: dlt
@@ -8089,20 +7898,19 @@ entries:
   source: dlt
   path: reference/command-line-interface.md
   title: Command Line Interface
-  summary: Command line interface (CLI) full reference of dlt
+  summary: 'Full reference for the dlt CLI: commands (dlt pipeline, dlt init, dlt deploy, dlt schema, dlt dashboard), subcommand
+    options, and flag ordering rules (global flags must precede subcommands).'
   tags:
+  - reference
   - cli
   keywords:
-  - cli
-  - credentials
-  - load
-  - state
-  - extract
-  - dlt
-  - destination
-  - command line interface
-  - source
+  - dlt CLI
+  - pipeline
+  - init
+  - deploy
   - schema
+  - dashboard
+  - flags
   concepts:
   - reference
   category: reference
@@ -8181,27 +7989,26 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:reference/explainers/how-dlt-works.md
   source: dlt
   path: reference/explainers/how-dlt-works.md
   title: How dlt works
-  summary: How data load tool (dlt) works
+  summary: 'Technical explainer of dlt''s three-step pipeline execution: Extract (pulls data from sources to disk), Normalize
+    (infers schema, unnests JSON, creates child tables), Load (migrates schema and writes data to destination). With code
+    example.'
   tags:
   - reference
+  - explainer
+  - architecture
   keywords:
-  - load
-  - transform
   - extract
-  - state
-  - dlt
-  - destination
-  - source
-  - pipeline
-  - schema
-  - incremental
+  - normalize
+  - load
+  - schema inference
+  - unnesting
+  - pipeline execution
   concepts:
   - reference
   category: reference
@@ -8226,27 +8033,24 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:reference/frequently-asked-questions.md
   source: dlt
   path: reference/frequently-asked-questions.md
   title: Frequently asked questions
-  summary: Questions asked frequently by users in technical help or github issues
+  summary: 'FAQ covering common dlt questions: preventing column type inference (data_type=''json''), handling JSON columns,
+    apply_hints vs resource definition, and other configuration patterns.'
   tags:
   - reference
-  keywords:
-  - load
-  - state
-  - technical help
-  - extract
-  - dlt
-  - resource
-  - destination
   - faq
-  - source
-  - usage information
+  keywords:
+  - FAQ
+  - data_type
+  - json column
+  - apply_hints
+  - configuration
+  - questions
   concepts:
   - reference
   category: reference
@@ -8257,9 +8061,8 @@ entries:
   - anchor: can-i-configure-different-nesting-levels-for-each-resource
     title: Can I configure different nesting levels for each resource?
   - anchor: can-i-configure-dlt-to-load-data-in-chunks-of-10-000-records-for-more-efficient-processing-and-how-does-this-affect-data-resumption-and-retries-in-case-of-failures
-    title: Can I configure dlt to load data in chunks of 10,000 records for more efficient
-      processing, and how does this affect data resumption and retries in case of
-      failures?
+    title: Can I configure dlt to load data in chunks of 10,000 records for more efficient processing, and how does this affect
+      data resumption and retries in case of failures?
   - anchor: how-to-contribute-a-verified-source
     title: How to contribute a verified source?
   - anchor: if-you-don-t-have-the-source-required-listed-in-verified-sources
@@ -8281,24 +8084,26 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:reference/installation.md
   source: dlt
   path: reference/installation.md
   title: Installation
-  summary: How to install dlt
+  summary: dlt installation reference with platform-specific instructions for Ubuntu (apt), macOS (Homebrew), and Windows.
+    Covers Python 3.10+ requirement, pip/uv installation, and virtual environment setup.
   tags:
   - reference
-  keywords:
-  - load
-  - dlt
-  - environment
-  - source
-  - pipeline
-  - pip install
   - installation
+  keywords:
+  - installation
+  - Python 3.10
+  - pip
+  - uv
+  - Ubuntu
+  - macOS
+  - Windows
+  - virtual environment
   concepts:
   - reference
   category: reference
@@ -8323,27 +8128,26 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:reference/performance.md
   source: dlt
   path: reference/performance.md
   title: Optimizing dlt
-  summary: Scale-up, parallelize and finetune dlt pipelines
+  summary: 'Performance optimization guide for dlt: yield pages instead of individual items, choose between round_robin (parallel)
+    and fifo (sequential) resource extraction, tune workers, memory limits, and file chunk sizes.'
   tags:
   - reference
+  - performance
+  - optimization
   keywords:
-  - parallelism
-  - load
-  - transform
-  - state
-  - extract
-  - dlt
-  - resource
-  - destination
-  - source
-  - pipeline
+  - performance
+  - pages
+  - round_robin
+  - fifo
+  - workers
+  - memory
+  - chunk size
   concepts:
   - reference
   category: reference
@@ -8410,8 +8214,7 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:reference/telemetry.md
   source: dlt
@@ -8460,9 +8263,8 @@ entries:
   source: dlt
   path: release-notes/1.12.1.md
   title: 'Release highlights: 1.12.1'
-  summary: Release highlights provide a concise overview of the most important new
-    features, improvements, and fixes in a software update, helping users quickly
-    understand what's changed and how it impacts their
+  summary: Release highlights provide a concise overview of the most important new features, improvements, and fixes in a
+    software update, helping users quickly understand what's changed and how it impacts their
   tags:
   - reference
   keywords:
@@ -8515,22 +8317,18 @@ entries:
   source: dlt
   path: release-notes/1.13-1.14.md
   title: 'Release highlights: 1.12.3 - 1.14.1'
-  summary: Release highlights provide a concise overview of the most important new
-    features, improvements, and fixes in a software update, helping users quickly
-    understand what's changed and how it impacts their
+  summary: 'Release notes for dlt 1.13-1.14. Key changes: Ibis table relation API breaking change (now requires explicit table_type=''ibis''
+    parameter and dataset(expression) conversion); new non-Ibis relation enhancements.'
   tags:
-  - reference
-  keywords:
-  - load
   - release-notes
-  - credentials
-  - state
-  - data-engineering
-  - extract
-  - dlt
-  - destination
-  - schema
-  - pipeline
+  keywords:
+  - '1.13'
+  - '1.14'
+  - Ibis
+  - table_type
+  - relation
+  - breaking change
+  - migration
   concepts:
   - release-notes
   category: journal
@@ -8541,8 +8339,7 @@ entries:
   - anchor: release-highlights-1-12-3-1-13-0-1-14-1
     title: 'Release highlights: 1.12.3 & 1.13.0 & 1.14.1'
   - anchor: breaking-change-ibis-dataset-relation-functionality-new-non-ibis-relation-features
-    title: 'Breaking change: Ibis dataset/relation functionality + new non-Ibis relation
-      features'
+    title: 'Breaking change: Ibis dataset/relation functionality + new non-Ibis relation features'
   - anchor: previously-dataset-customers-now-returns-a-regular-relation
     title: 'Previously: dataset["customers"]  # now returns a regular relation'
   - anchor: sort
@@ -8574,29 +8371,23 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:release-notes/1.15.md
   source: dlt
   path: release-notes/1.15.md
   title: 'Release highlights: 1.15'
-  summary: Release highlights provide a concise overview of the most important new
-    features, improvements, and fixes in a software update, helping users quickly
-    understand what's changed and how it impacts their
+  summary: 'Release notes for dlt 1.15. Key features: gzip compression for filesystem destinations (JSONL, CSV, Arrow), adds
+    .gz extension to compressed files. Also adds DBML schema export for visualization in DBML frontends.'
   tags:
-  - reference
-  keywords:
-  - load
   - release-notes
-  - data-engineering
-  - dlt
-  - destination
-  - source
-  - pipeline
-  - schema
-  - etl
-  - data-pipelines
+  keywords:
+  - '1.15'
+  - gzip
+  - compression
+  - filesystem
+  - DBML
+  - schema export
   concepts:
   - release-notes
   category: journal
@@ -8641,36 +8432,30 @@ entries:
   - anchor: switched-connectorx-backend-from-arrow2-to-arrow
     title: Switched ConnectorX backend from `arrow2` to `arrow`
   - anchor: ai-command-ide-integration-now-works-with-all-major-ides-cursor-copilot-windsurf-etc
-    title: 'AI Command IDE integration: now works with all major IDEs (Cursor, Copilot,
-      Windsurf, etc.)'
+    title: 'AI Command IDE integration: now works with all major IDEs (Cursor, Copilot, Windsurf, etc.)'
   - anchor: shout-out-to-new-contributors
     title: Shout-out to new contributors
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:release-notes/1.16.md
   source: dlt
   path: release-notes/1.16.md
   title: 'Release highlights: 1.16'
-  summary: Release highlights provide a concise overview of the most important new
-    features, improvements, and fixes in a software update, helping users quickly
-    understand what's changed and how it impacts their
+  summary: 'Release notes for dlt 1.16. Key changes: unified timestamp/timezone handling across normalizers and destinations,
+    preserved exact timestamp types in incremental cursors, nanosecond precision MSSQL fix.'
   tags:
-  - reference
-  keywords:
-  - load
   - release-notes
-  - transform
-  - data-engineering
-  - dlt
-  - resource
-  - destination
-  - source
-  - pipeline
-  - schema
+  keywords:
+  - '1.16'
+  - timestamp
+  - timezone
+  - tz-aware
+  - nanosecond
+  - MSSQL
+  - incremental cursor
   concepts:
   - release-notes
   category: journal
@@ -8701,29 +8486,22 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:release-notes/1.17.md
   source: dlt
   path: release-notes/1.17.md
   title: 'Release highlights: 1.17'
-  summary: Release highlights provide a concise overview of the most important new
-    features, improvements, and fixes in a software update, helping users quickly
-    understand what's changed and how it impacts their
+  summary: 'Release notes for dlt 1.17. Key feature: custom metrics in pipelines via dlt.current.resource_metrics(). Metrics
+    merge into pipeline trace and run summary.'
   tags:
-  - reference
-  keywords:
-  - load
   - release-notes
-  - transform
-  - extract
-  - data-engineering
-  - dlt
-  - resource
-  - destination
-  - source
-  - pipeline
+  keywords:
+  - '1.17'
+  - custom metrics
+  - resource_metrics
+  - pipeline trace
+  - monitoring
   concepts:
   - release-notes
   category: journal
@@ -8752,29 +8530,22 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:release-notes/1.18.md
   source: dlt
   path: release-notes/1.18.md
   title: 'Release highlights: 1.18'
-  summary: Release highlights provide a concise overview of the most important new
-    features, improvements, and fixes in a software update, helping users quickly
-    understand what's changed and how it impacts their
+  summary: 'Release notes for dlt 1.18. Key feature: named destinations configured via config.toml with destination_type,
+    enabling pipeline code to reference a custom destination name instead of hardcoding the type.'
   tags:
-  - reference
-  keywords:
-  - load
   - release-notes
-  - transform
-  - extract
-  - data-engineering
-  - dlt
-  - databricks
-  - resource
-  - destination
-  - source
+  keywords:
+  - '1.18'
+  - named destination
+  - destination_type
+  - config.toml
+  - custom name
   concepts:
   - release-notes
   category: journal
@@ -8805,29 +8576,23 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:release-notes/1.19.md
   source: dlt
   path: release-notes/1.19.md
   title: 'Release highlights: 1.19'
-  summary: Release highlights provide a concise overview of the most important new
-    features, improvements, and fixes in a software update, helping users quickly
-    understand what's changed and how it impacts their
+  summary: 'Release notes for dlt 1.19. Key features: ConnectorX backend Arrow streaming (return_type=''arrow_stream''), and
+    visual pipeline run history in the dltHub dashboard.'
   tags:
-  - reference
-  keywords:
-  - load
   - release-notes
-  - cluster
-  - data-engineering
-  - dlt
-  - resource
-  - destination
-  - source
-  - pipeline
-  - schema
+  keywords:
+  - '1.19'
+  - ConnectorX
+  - arrow_stream
+  - pipeline history
+  - dashboard
+  - visual history
   concepts:
   - release-notes
   category: journal
@@ -8852,28 +8617,23 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:release-notes/1.21.2.md
   source: dlt
   path: release-notes/1.21.2.md
   title: 'Release highlights: v1.21.2'
-  summary: Release highlights provide a concise overview of the most important new
-    features, improvements, and fixes in a software update, helping users quickly
-    understand what's changed and how it impacts their
+  summary: 'Release notes for dlt 1.21.2. Key change: compound hint precedence fix — direct primary_key/merge_key arguments
+    now take precedence over column-level hints and completely replace (not merge) previous compound hint configuration.'
   tags:
-  - reference
-  keywords:
   - release-notes
-  - extract
-  - data-engineering
-  - dlt
-  - source
-  - pipeline
-  - schema
-  - etl
-  - data-pipelines
+  keywords:
+  - 1.21.2
+  - compound hints
+  - primary_key
+  - merge_key
+  - precedence
+  - apply_hints
   concepts:
   - release-notes
   category: journal
@@ -8886,8 +8646,7 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:running-in-production/monitoring.md
   source: dlt
@@ -8950,20 +8709,20 @@ entries:
   source: dlt
   path: running-in-production/running.md
   title: Running
-  summary: Running a dlt pipeline in production
+  summary: 'Guide to running dlt pipelines in production: inspecting and saving load_info (started_at, packages, jobs, error
+    messages), loading trace info into the destination, monitoring patterns, and retry strategies.'
   tags:
-  - reference
-  keywords:
-  - load
-  - credentials
-  - state
-  - running
-  - extract
-  - dlt
-  - destination
   - production
-  - source
-  - schema
+  - monitoring
+  - load-info
+  keywords:
+  - load_info
+  - trace
+  - production
+  - monitoring
+  - packages
+  - failed jobs
+  - retry
   concepts:
   - running-in-production
   category: reference
@@ -9014,15 +8773,14 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:tutorial/advanced-course.md
   source: dlt
   path: tutorial/advanced-course.md
   title: dlt Advanced Course
-  summary: Master advanced dlt concepts with this comprehensive course covering custom
-    sources, destinations, transformations, data contracts and performance optimization.
+  summary: Master advanced dlt concepts with this comprehensive course covering custom sources, destinations, transformations,
+    data contracts and performance optimization.
   tags:
   - tutorial
   keywords:
@@ -9056,8 +8814,7 @@ entries:
       [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dlt-hub/dlt/blob/master/docs/education/dlt-advanced-course/lesson_2_custom_sources_sql_databases_.ipynb)
       [![GitHub badge](https://img.shields.io/badge/github-view_source-2b3137?logo=github)](https://github.com/dlt-hub/dlt/blob/master/docs/education/dlt-advanced-course/lesson_2_custom_sources_sql_databases_.ipynb)'
   - anchor: lesson-3-custom-sources-filesystems-cloud-storage-open-in-molab-https-marimo-io-molab-shield-svg-https-molab-marimo-io-github-dlt-hub-dlt-blob-master-docs-education-dlt-advanced-course-lesson-3-custom-sources-filesystem-and-cloud-storage-py-open-in-colab-https-colab-research-google-com-assets-colab-badge-svg-https-colab-research-google-com-github-dlt-hub-dlt-blob-master-docs-education-dlt-advanced-course-lesson-3-custom-sources-filesystem-and-cloud-storage-ipynb-github-badge-https-img-shields-io-badge-github-view-source-2b3137-logo-github-https-github-com-dlt-hub-dlt-blob-master-docs-education-dlt-advanced-course-lesson-3-custom-sources-filesystem-and-cloud-storage-ipynb
-    title: '**Lesson 3: Custom Sources – Filesystems & Cloud Storage** [![Open in
-      molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/dlt-hub/dlt/blob/master/docs/education/dlt-advanced-course/lesson_3_custom_sources_filesystem_and_cloud_storage.py)
+    title: '**Lesson 3: Custom Sources – Filesystems & Cloud Storage** [![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/dlt-hub/dlt/blob/master/docs/education/dlt-advanced-course/lesson_3_custom_sources_filesystem_and_cloud_storage.py)
       [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dlt-hub/dlt/blob/master/docs/education/dlt-advanced-course/lesson_3_custom_sources_filesystem_and_cloud_storage.ipynb)
       [![GitHub badge](https://img.shields.io/badge/github-view_source-2b3137?logo=github)](https://github.com/dlt-hub/dlt/blob/master/docs/education/dlt-advanced-course/lesson_3_custom_sources_filesystem_and_cloud_storage.ipynb)'
   - anchor: lesson-4-custom-destinations-reverse-etl-open-in-molab-https-marimo-io-molab-shield-svg-https-molab-marimo-io-github-dlt-hub-dlt-blob-master-docs-education-dlt-advanced-course-lesson-4-destinations-reverse-etl-py-open-in-colab-https-colab-research-google-com-assets-colab-badge-svg-https-colab-research-google-com-github-dlt-hub-dlt-blob-master-docs-education-dlt-advanced-course-lesson-4-destinations-reverse-etl-ipynb-github-badge-https-img-shields-io-badge-github-view-source-2b3137-logo-github-https-github-com-dlt-hub-dlt-blob-master-docs-education-dlt-advanced-course-lesson-4-destinations-reverse-etl-ipynb
@@ -9069,8 +8826,7 @@ entries:
       [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dlt-hub/dlt/blob/master/docs/education/dlt-advanced-course/lesson_5_transform_data_before_and_after_loading.ipynb)
       [![GitHub badge](https://img.shields.io/badge/github-view_source-2b3137?logo=github)](https://github.com/dlt-hub/dlt/blob/master/docs/education/dlt-advanced-course/lesson_5_transform_data_before_and_after_loading.ipynb)'
   - anchor: lesson-6-write-disposition-strategies-advanced-tricks-open-in-molab-https-marimo-io-molab-shield-svg-https-molab-marimo-io-github-dlt-hub-dlt-blob-master-docs-education-dlt-advanced-course-lesson-6-write-disposition-strategies-and-advanced-tricks-py-open-in-colab-https-colab-research-google-com-assets-colab-badge-svg-https-colab-research-google-com-github-dlt-hub-dlt-blob-master-docs-education-dlt-advanced-course-lesson-6-write-disposition-strategies-and-advanced-tricks-ipynb-github-badge-https-img-shields-io-badge-github-view-source-2b3137-logo-github-https-github-com-dlt-hub-dlt-blob-master-docs-education-dlt-advanced-course-lesson-6-write-disposition-strategies-and-advanced-tricks-ipynb
-    title: '**Lesson 6: Write Disposition Strategies & Advanced Tricks** [![Open in
-      molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/dlt-hub/dlt/blob/master/docs/education/dlt-advanced-course/lesson_6_write_disposition_strategies_and_advanced_tricks.py)
+    title: '**Lesson 6: Write Disposition Strategies & Advanced Tricks** [![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/dlt-hub/dlt/blob/master/docs/education/dlt-advanced-course/lesson_6_write_disposition_strategies_and_advanced_tricks.py)
       [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dlt-hub/dlt/blob/master/docs/education/dlt-advanced-course/lesson_6_write_disposition_strategies_and_advanced_tricks.ipynb)
       [![GitHub badge](https://img.shields.io/badge/github-view_source-2b3137?logo=github)](https://github.com/dlt-hub/dlt/blob/master/docs/education/dlt-advanced-course/lesson_6_write_disposition_strategies_and_advanced_tricks.ipynb)'
   - anchor: lesson-7-data-contracts-open-in-molab-https-marimo-io-molab-shield-svg-https-molab-marimo-io-github-dlt-hub-dlt-blob-master-docs-education-dlt-advanced-course-lesson-7-data-contracts-py-open-in-colab-https-colab-research-google-com-assets-colab-badge-svg-https-colab-research-google-com-github-dlt-hub-dlt-blob-master-docs-education-dlt-advanced-course-lesson-7-data-contracts-ipynb-github-badge-https-img-shields-io-badge-github-view-source-2b3137-logo-github-https-github-com-dlt-hub-dlt-blob-master-docs-education-dlt-advanced-course-lesson-7-data-contracts-ipynb
@@ -9097,22 +8853,20 @@ entries:
   source: dlt
   path: tutorial/education.md
   title: Education
-  summary: Learn the fundamentals and advanced concepts of dlt with self-paced courses.
-    Start with pipelines, resources, sources, pagination, schema, and state, then
-    move on to custom sources, complex APIs, dest
+  summary: 'Overview of dlt educational resources: Fundamentals Course (pipelines, resources, sources, configuration, schema,
+    incremental loading, REST APIs) and Advanced Course (custom sources, destinations, REST APIs, SQL databases, filesystems,
+    production).'
   tags:
   - tutorial
+  - education
+  - courses
   keywords:
-  - transform
-  - dlt
-  - pagination
-  - incremental loading
-  - airflow
-  - schema
-  - lambda
-  - tutorial
-  - deployment
-  - state
+  - fundamentals course
+  - advanced course
+  - education
+  - pipeline
+  - incremental
+  - REST API
   concepts:
   - tutorial
   category: tutorial
@@ -9131,29 +8885,24 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:tutorial/filesystem.md
   source: dlt
   path: tutorial/filesystem.md
   title: Load data from a cloud storage or a file system
-  summary: Learn how to load data files like JSON, JSONL, CSV, and Parquet from a
-    cloud storage (AWS S3, Google Cloud Storage, Google Drive, Azure Blob Storage)
-    or a local file system using dlt.
+  summary: Tutorial for loading files from a filesystem to DuckDB using dlt. Covers project setup via 'dlt init filesystem
+    duckdb', file source configuration, and running the pipeline.
   tags:
   - tutorial
-  keywords:
-  - data pipeline
-  - transform
-  - credentials
-  - dlt
-  - incremental loading
-  - schema
-  - parquet
-  - jsonl
-  - tutorial
   - filesystem
+  - duckdb
+  keywords:
+  - filesystem tutorial
+  - dlt init
+  - duckdb
+  - file loading
+  - project setup
   concepts:
   - tutorial
   category: tutorial
@@ -9194,15 +8943,14 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:tutorial/fundamentals-course.md
   source: dlt
   path: tutorial/fundamentals-course.md
   title: dlt Fundamentals Course
-  summary: Master the basics of dlt with this comprehensive course covering pipelines,
-    resources, sources, configuration, schema, state, and incremental loading.
+  summary: Master the basics of dlt with this comprehensive course covering pipelines, resources, sources, configuration,
+    schema, state, and incremental loading.
   tags:
   - tutorial
   keywords:
@@ -9271,20 +9019,19 @@ entries:
   source: dlt
   path: tutorial/load-data-from-an-api.md
   title: Build advanced dlt pipeline from scratch
-  summary: Build custom, production grade pipeline just by writing code
+  summary: Tutorial for building a custom dlt source from a REST API. Covers @dlt.resource creation, grouping into @dlt.source,
+    secret handling, and creating reusable data sources. GitHub API used as example.
   tags:
   - tutorial
+  - api
+  - source
   keywords:
-  - load
-  - credentials
-  - transform
-  - state
-  - extract
-  - dlt
-  - resource
-  - destination
-  - quick start
-  - getting started
+  - API tutorial
+  - '@dlt.resource'
+  - '@dlt.source'
+  - secrets
+  - GitHub API
+  - reusable
   concepts:
   - tutorial
   category: tutorial
@@ -9345,8 +9092,7 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:tutorial/playground.mdx
   source: dlt
@@ -9384,20 +9130,19 @@ entries:
   source: dlt
   path: tutorial/rest-api.md
   title: Load data from a REST API
-  summary: How to extract data from a REST API using dlt's REST API source
+  summary: Tutorial for using the dlt REST API source. Covers resource relationships, write dispositions (append/replace/merge),
+    and incremental loading patterns using the declarative rest_api_source configuration.
   tags:
   - tutorial
+  - rest-api
+  - incremental
   keywords:
-  - api
-  - load
-  - credentials
-  - authentication
-  - state
-  - extract
-  - dlt
-  - destination
-  - pagination
-  - duckdb
+  - REST API tutorial
+  - resource relationships
+  - write disposition
+  - incremental
+  - merge
+  - append
   concepts:
   - tutorial
   category: tutorial
@@ -9436,27 +9181,24 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:tutorial/sql-database.md
   source: dlt
   path: tutorial/sql-database.md
   title: Load data from a SQL database
-  summary: How to extract data from a SQL Database using dlt's SQL Database core source
+  summary: Tutorial for loading SQL database data to DuckDB using dlt. Covers 'dlt init sql_database duckdb', configuring
+    database connections, and running the sql_database source.
   tags:
   - tutorial
+  - sql
+  - database
   keywords:
-  - load
-  - credentials
-  - extract
-  - sql database pipeline
-  - dlt
-  - destination
-  - source
-  - pipeline
-  - schema
-  - incremental
+  - SQL tutorial
+  - sql_database
+  - dlt init
+  - duckdb
+  - database connection
   concepts:
   - tutorial
   category: tutorial
@@ -9493,25 +9235,26 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:walkthroughs/add-incremental-configuration.md
   source: dlt
   path: walkthroughs/add-incremental-configuration.md
   title: Incremental loading guide
-  summary: Incremental SQL data loading strategies
+  summary: 'Walkthrough covering four incremental loading strategies in dlt: full load/replace, append by incremental ID,
+    append by date (created_at), and merge by timestamp+ID. Includes code examples for each strategy.'
   tags:
-  - configuration
-  keywords:
-  - load
-  - load data incrementally from SQL
-  - how to
-  - dlt
-  - destination
-  - source
+  - walkthroughs
   - incremental
-  - pipeline
+  - loading
+  keywords:
+  - incremental
+  - full load
+  - append
+  - merge
+  - cursor
+  - strategy
+  - walkthrough
   concepts:
   - walkthroughs
   category: guide
@@ -9530,13 +9273,11 @@ entries:
   - anchor: append-new-records-based-on-timestamp-created-at
     title: Append new records based on timestamp ("created_at")
   - anchor: 4-merge-update-insert-records-based-on-timestamp-last-modified-at-and-id
-    title: 4. Merge (update/insert) records based on timestamp ("last_modified_at")
-      and ID
+    title: 4. Merge (update/insert) records based on timestamp ("last_modified_at") and ID
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:walkthroughs/add_credentials.md
   source: dlt
@@ -9589,19 +9330,17 @@ entries:
   source: dlt
   path: walkthroughs/adjust-a-schema.md
   title: Adjust a schema
-  summary: How to adjust a schema
+  summary: Walkthrough for adjusting dlt schemas via import/export folders. Shows how to set import_schema_path and export_schema_path
+    on the pipeline to manage manual schema edits that persist across runs.
   tags:
-  - reference
-  keywords:
-  - load
-  - how to
-  - state
-  - extract
-  - dlt
-  - destination
-  - adjust a schema
-  - source
+  - walkthroughs
   - schema
+  keywords:
+  - schema
+  - import_schema_path
+  - export_schema_path
+  - schema edits
+  - manual
   - pipeline
   concepts:
   - walkthroughs
@@ -9627,8 +9366,7 @@ entries:
   - anchor: run-the-pipeline
     title: Run the pipeline
   - anchor: load-data-as-json-instead-of-generating-nested-tables-or-columns-from-flattened-dicts
-    title: Load data as JSON instead of generating nested tables or columns from flattened
-      dicts
+    title: Load data as JSON instead of generating nested tables or columns from flattened dicts
   - anchor: add-performance-hints
     title: Add performance hints
   - anchor: 4-keep-your-import-schema
@@ -9636,27 +9374,24 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:walkthroughs/create-new-destination.md
   source: dlt
   path: walkthroughs/create-new-destination.md
   title: Create new destination
-  summary: How to create a new dlt destination
+  summary: Guide to implementing a new dlt destination. Covers the required module structure (factory.py, configuration.py,
+    sql_client.py, job client), starting from an existing destination, and the destination capabilities interface.
   tags:
+  - walkthroughs
   - destination
+  - extensibility
   keywords:
-  - load
-  - new destination
-  - credentials
-  - state
   - custom destination
-  - transform
-  - dlt
-  - destination
-  - source
-  - schema
+  - factory.py
+  - sql_client.py
+  - destination capabilities
+  - implement
   concepts:
   - walkthroughs
   category: guide
@@ -9713,15 +9448,13 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:walkthroughs/deploy-a-pipeline/deploy-gcp-cloud-function-as-webhook.md
   source: dlt
   path: walkthroughs/deploy-a-pipeline/deploy-gcp-cloud-function-as-webhook.md
   title: Deploy GCP Cloud Function as a webhook
-  summary: Deploy a dlt pipeline as a Google Cloud Function webhook for real-time
-    event ingestion
+  summary: Deploy a dlt pipeline as a Google Cloud Function webhook for real-time event ingestion
   tags:
   - reference
   keywords:
@@ -9759,20 +9492,19 @@ entries:
   source: dlt
   path: walkthroughs/deploy-a-pipeline/deploy-with-airflow-composer.md
   title: Deploy with Airflow and Google Composer
-  summary: How to deploy a pipeline with Airflow and Google Composer
+  summary: Guide to deploying dlt pipelines with Apache Airflow on Google Cloud Composer. Covers Git repository setup, verifying
+    the pipeline works locally, and deployment options (BashOperator, PythonOperator, KubernetesPodOperator, Cloud Run).
   tags:
-  - reference
-  keywords:
-  - load
-  - credentials
-  - how to
-  - state
-  - dlt
-  - destination
+  - walkthroughs
+  - deployment
   - airflow
-  - source
-  - schema
-  - gcp
+  keywords:
+  - Airflow
+  - Google Cloud Composer
+  - deployment
+  - BashOperator
+  - Cloud Run
+  - orchestrator
   concepts:
   - walkthroughs
   - deployment
@@ -9804,8 +9536,7 @@ entries:
   - anchor: 4-add-credentials
     title: 4. Add credentials
   - anchor: 5-configure-build-cloudbuild-yaml-to-run-it-with-google-cloud-platform-cloud-composer-https-console-cloud-google-com-composer-environments
-    title: 5. Configure `build/cloudbuild.yaml` to run it with Google Cloud Platform
-      \[[Cloud Composer](https://console.cloud.google.com/composer/environments)\]
+    title: 5. Configure `build/cloudbuild.yaml` to run it with Google Cloud Platform \[[Cloud Composer](https://console.cloud.google.com/composer/environments)\]
   - anchor: 6-finish-the-airflow-deployment
     title: 6. Finish the Airflow deployment
   - anchor: troubleshooting
@@ -9821,20 +9552,17 @@ entries:
   - anchor: 2-valueerror-can-only-decompose-dlt-sources
     title: '2. ValueError: Can only decompose dlt sources'
   - anchor: 3-duplicatetaskidfound-task-id-your-task-id-has-already-been-added-to-the-dag
-    title: '3. DuplicateTaskIdFound: Task id ‘\{your_task_id\}’ has already been added
-      to the DAG'
+    title: '3. DuplicateTaskIdFound: Task id ‘\{your_task_id\}’ has already been added to the DAG'
   - anchor: first-source-configured-to-load-everything-except-activities-from-the-beginning
     title: First source configured to load everything except activities from the beginning
   - anchor: another-source-configured-to-load-activities-starting-at-the-given-date
     title: Another source configured to load activities starting at the given date
   - anchor: custom-fields-mapping-is-included-to-translate-custom-field-hashes-to-names
-    title: (custom_fields_mapping is included to translate custom field hashes to
-      names)
+    title: (custom_fields_mapping is included to translate custom field hashes to names)
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:walkthroughs/deploy-a-pipeline/deploy-with-dagster.md
   source: dlt
@@ -9890,19 +9618,19 @@ entries:
   source: dlt
   path: walkthroughs/deploy-a-pipeline/deploy-with-github-actions.md
   title: Deploy with GitHub Actions
-  summary: How to deploy a pipeline with GitHub Actions
+  summary: Guide to deploying dlt pipelines using GitHub Actions. Covers Git repository setup, running the pipeline locally
+    first, adding CLI dependencies, and using 'dlt deploy ... github-action' to generate the workflow file.
   tags:
-  - reference
+  - walkthroughs
+  - deployment
+  - github-actions
   keywords:
-  - load
-  - credentials
-  - how to
-  - dlt
-  - destination
-  - source
-  - deploy a pipeline
-  - pipeline
-  - github actions
+  - GitHub Actions
+  - deployment
+  - dlt deploy
+  - CI/CD
+  - workflow
+  - free tier
   concepts:
   - walkthroughs
   - deployment
@@ -9930,26 +9658,26 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:walkthroughs/deploy-a-pipeline/deploy-with-google-cloud-functions.md
   source: dlt
   path: walkthroughs/deploy-a-pipeline/deploy-with-google-cloud-functions.md
   title: Deploy with Google Cloud Functions
-  summary: How to deploy a pipeline with Google Cloud Functions
+  summary: Guide to deploying dlt pipelines as Google Cloud Functions. Uses Notion verified source and BigQuery destination
+    as example. Covers main.py structure, local testing, and Cloud Functions deployment.
   tags:
-  - reference
+  - walkthroughs
+  - deployment
+  - gcp
+  - cloud-functions
   keywords:
-  - Cloud Function
-  - credentials
-  - how to
-  - load
-  - dlt
-  - destination
-  - source
-  - deploy a pipeline
-  - pipeline
+  - Google Cloud Functions
+  - serverless
+  - BigQuery
+  - Notion
+  - main.py
+  - deployment
   concepts:
   - walkthroughs
   - deployment
@@ -9971,8 +9699,7 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:walkthroughs/deploy-a-pipeline/deploy-with-google-cloud-run.md
   source: dlt
@@ -10163,20 +9890,21 @@ entries:
   source: dlt
   path: walkthroughs/deploy-a-pipeline/deploy-with-prefect.md
   title: Deploy with Prefect
-  summary: How to deploy a pipeline with Prefect
+  summary: Guide to orchestrating dlt pipelines with Prefect. Covers Prefect concepts (flows, tasks, deployments, automations),
+    integrating dlt resources as Prefect tasks, and scheduling with Slack-to-BigQuery example.
   tags:
-  - reference
+  - walkthroughs
+  - deployment
+  - prefect
+  - orchestration
   keywords:
-  - load
-  - transform
-  - how to
-  - state
-  - extract
-  - dlt
   - Prefect
-  - source
-  - schema
-  - deploy a pipeline
+  - flows
+  - tasks
+  - deployments
+  - automations
+  - scheduling
+  - BigQuery
   concepts:
   - walkthroughs
   - deployment
@@ -10200,15 +9928,14 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:walkthroughs/dispatch-to-multiple-tables.md
   source: dlt
   path: walkthroughs/dispatch-to-multiple-tables.md
   title: Dispatch stream of events to multiple tables in DuckDB
-  summary: Learn how to efficiently dispatch a stream of GitHub events, categorized
-    by event type, to different tables in DuckDB
+  summary: Learn how to efficiently dispatch a stream of GitHub events, categorized by event type, to different tables in
+    DuckDB
   tags:
   - reference
   keywords:
@@ -10241,20 +9968,19 @@ entries:
   source: dlt
   path: walkthroughs/run-a-pipeline.md
   title: Run a pipeline
-  summary: How to run a pipeline
+  summary: 'Walkthrough for running a dlt pipeline: creating the pipeline, calling run() with a data source, interpreting
+    load_info (package states, job statuses, row counts), and loading trace information back to the destination.'
   tags:
-  - reference
+  - walkthroughs
+  - pipeline
+  - run
   keywords:
-  - load
-  - credentials
-  - how to
-  - state
-  - extract
-  - dlt
-  - run a pipeline
-  - destination
-  - source
-  - schema
+  - run pipeline
+  - load_info
+  - chess_pipeline
+  - trace
+  - package
+  - completed_jobs
   concepts:
   - walkthroughs
   category: guide
@@ -10289,27 +10015,24 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:walkthroughs/run-in-snowflake/database-connector-app.md
   source: dlt
   path: walkthroughs/run-in-snowflake/database-connector-app.md
   title: dlt Connector App
-  summary: How to use the dlt Connector App
+  summary: Guide to the Snowflake Native App for running dlt database connector pipelines within Snowflake. Uses Snowflake-managed
+    compute; covers prerequisite setup (destination database, ACCOUNTADMIN role, source credentials) and pipeline management.
   tags:
-  - reference
+  - walkthroughs
+  - snowflake
+  - native-app
   keywords:
-  - load
-  - credentials
-  - extract
-  - dlt
-  - destination
-  - source
-  - schema
-  - incremental
+  - Snowflake Native App
+  - database connector
+  - ACCOUNTADMIN
+  - managed compute
   - pipeline
-  - native app
   concepts:
   - walkthroughs
   category: guide
@@ -10356,8 +10079,7 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:walkthroughs/run-in-snowflake/run-in-snowflake.md
   source: dlt
@@ -10447,20 +10169,20 @@ entries:
   source: dlt
   path: walkthroughs/zendesk-weaviate.md
   title: Import ticket data from Zendesk API to Weaviate
-  summary: How to Import Ticket Data from Zendesk API to Weaviate
+  summary: End-to-end walkthrough for loading Zendesk tickets into Weaviate for vector search using dlt. Uses the Zendesk
+    verified source and Weaviate destination. Covers setup, credentials, and pipeline execution.
   tags:
-  - reference
-  keywords:
-  - load
-  - credentials
-  - how to
-  - extract
-  - vector search
-  - dlt
+  - walkthroughs
   - zendesk
-  - destination
-  - vector database
-  - source
+  - weaviate
+  - vector-search
+  keywords:
+  - Zendesk
+  - Weaviate
+  - vector search
+  - embedding
+  - dlt[weaviate]
+  - tickets
   concepts:
   - walkthroughs
   category: guide
@@ -10497,268 +10219,686 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-18T14:38:30Z'
 - id: dlt:dlt-ecosystem/file-formats.md
   source: dlt
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   category: unknown
-  summary: Pending re-scan
-  tags: []
+  summary: 'Guide to dlt loader file formats: how to configure format at resource level (@dlt.resource(file_format=...)) or
+    pipeline level (pipeline.run(..., loader_file_format=...)). Covers Parquet (requires pyarrow), JSONL, CSV, and insert-values
+    formats.'
+  tags:
+  - file-formats
+  - parquet
+  - jsonl
+  - csv
+  keywords:
+  - loader_file_format
+  - Parquet
+  - JSONL
+  - CSV
+  - insert-values
+  - pyarrow
+  - file_format
 - id: dlt:dlt-ecosystem/transformations/dlthub.md
   source: dlt
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   category: unknown
-  summary: Pending re-scan
-  tags: []
+  summary: 'Guide to dltHub @dlt.hub.transformation decorator for Python-defined transformations running eagerly (local compute:
+    DuckDB, Pandas, Polars, Arrow) or lazily (warehouse SQL). Same code, executed where it makes sense. Supports incremental
+    processing and all write dispositions.'
+  tags:
+  - transformations
+  - dlthub
+  - ibis
+  - incremental
+  keywords:
+  - '@dlt.hub.transformation'
+  - eager
+  - lazy
+  - Ibis
+  - incremental
+  - write_disposition
+  - warehouse
 - id: dlt:hub/cookbook/build-streamlit-dashboard.md
   source: dlt
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   category: unknown
-  summary: Pending re-scan
-  tags: []
+  summary: 'Guide to building and deploying a Streamlit app on dltHub. Shows how to create a Streamlit dashboard against a
+    dlt dataset and deploy it to app.dlthub.com. Prerequisites: uv add streamlit.'
+  tags:
+  - hub
+  - streamlit
+  - dashboard
+  - cookbook
+  keywords:
+  - Streamlit
+  - dashboard
+  - deploy
+  - app.dlthub.com
+  - dataset
+  - interactive
 - id: dlt:hub/data-discovery/datasets.md
   source: dlt
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   category: unknown
-  summary: Pending re-scan
-  tags: []
+  summary: 'dltHub datasets as the serving layer for loaded data: physical data + dlt metadata at a destination. One destination
+    can host multiple datasets. Covers dataset isolation, schema propagation, and the Python access surface (pipeline.dataset(),
+    ReadableRelation).'
+  tags:
+  - hub
+  - datasets
+  - serving-layer
+  keywords:
+  - dataset
+  - serving layer
+  - destination
+  - schema
+  - pipeline.dataset()
+  - ReadableRelation
 - id: dlt:hub/data-quality/advanced.md
   source: dlt
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   category: unknown
-  summary: Pending re-scan
-  tags: []
+  summary: 'Advanced dltHub data quality configuration: metrics/checks as DltSource objects enabling separate destination
+    for results, disjoint execution from primary pipeline.run(), dynamic modification, and centralized data quality pipelines.'
+  tags:
+  - hub
+  - data-quality
+  - advanced
+  keywords:
+  - data quality
+  - DltSource
+  - separate destination
+  - disjoint execution
+  - dynamic
+  - centralized
 - id: dlt:hub/data-quality/index.md
   source: dlt
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   category: unknown
-  summary: Pending re-scan
-  tags: []
+  summary: 'Introduction to dltHub data quality features (public preview): metrics (scalar properties of data via @with_metrics)
+    and checks (expectations to validate against). Covers defining static metrics on resources and the symmetry between metrics
+    and checks.'
+  tags:
+  - hub
+  - data-quality
+  - metrics
+  - checks
+  keywords:
+  - data quality
+  - metrics
+  - checks
+  - with_metrics
+  - with_checks
+  - dq.metrics
+  - preview
 - id: dlt:hub/getting-started/introduction.md
   source: dlt
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   category: unknown
-  summary: Pending re-scan
-  tags: []
+  summary: Introduction to dltHub as a managed agentic platform for dlt. Quickstart via 'uvx dlthub-start@latest', which scaffolds
+    a workspace, installs dependencies, logs in, runs a sample pipeline in Playground, and launches an AI coding agent.
+  tags:
+  - hub
+  - introduction
+  - getting-started
+  keywords:
+  - dltHub
+  - dlthub-start
+  - workspace
+  - playground
+  - AI workbench
+  - introduction
 - id: dlt:hub/getting-started/oss-and-dlthub.md
   source: dlt
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   category: unknown
-  summary: Pending re-scan
-  tags: []
+  summary: 'Explains the two dltHub products: dlt (open source, Apache 2.0) and dltHub (commercial). Feature comparison table
+    showing what''s included in each: OSS ingestion, AI Workbench, data quality, transformations, managed runtime, premium
+    sources/destinations.'
+  tags:
+  - hub
+  - oss
+  - comparison
+  - licensing
+  keywords:
+  - dlt
+  - dltHub
+  - open source
+  - Apache 2.0
+  - commercial
+  - comparison
+  - features
 - id: dlt:hub/getting-started/platform-tutorial.md
   source: dlt
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   category: unknown
-  summary: Pending re-scan
-  tags: []
+  summary: 'Tutorial for deploying a dlt pipeline to the managed dltHub platform: deploying a pipeline, deploying an always-fresh
+    dashboard, and adding Python transformations to ELT jobs. Covers the managed infrastructure benefits.'
+  tags:
+  - hub
+  - tutorial
+  - deployment
+  keywords:
+  - deploy
+  - platform
+  - tutorial
+  - dashboard
+  - transformations
+  - managed infrastructure
 - id: dlt:hub/ingestion/dashboard.md
   source: dlt
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   category: unknown
-  summary: Pending re-scan
-  tags: []
+  summary: Guide to the dltHub pipeline and dataset troubleshooting dashboard (marimo-based web app). Available locally and
+    on the dltHub platform under Notebooks. Provides pipeline health, schema inspection, run traces, and data quality review.
+  tags:
+  - hub
+  - dashboard
+  - troubleshooting
+  - marimo
+  keywords:
+  - dashboard
+  - marimo
+  - pipeline health
+  - schema
+  - run traces
+  - troubleshoot
 - id: dlt:hub/ingestion/delta.md
   source: dlt
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   category: unknown
-  summary: Pending re-scan
-  tags: []
+  summary: dltHub commercial Delta Lake destination. Based on the dlt filesystem destination; requires deltalake pip package
+    and a dltHub workspace. Covers setup via uvx dlthub-init and pipeline initialization with dlthub pipeline init.
+  tags:
+  - hub
+  - destination
+  - delta
+  keywords:
+  - Delta
+  - Delta Lake
+  - deltalake
+  - dltHub
+  - workspace
+  - commercial
 - id: dlt:hub/ingestion/iceberg.md
   source: dlt
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   category: unknown
-  summary: Pending re-scan
-  tags: []
+  summary: dltHub commercial Apache Iceberg destination using pyiceberg. Supports SQL and REST catalogs, ACID transactions,
+    schema evolution, all write dispositions. Works with S3, Azure, GCS, and local storage.
+  tags:
+  - hub
+  - destination
+  - iceberg
+  keywords:
+  - Iceberg
+  - pyiceberg
+  - REST catalog
+  - Lakekeeper
+  - Polaris
+  - ACID
+  - commercial
 - id: dlt:hub/ingestion/init.md
   source: dlt
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   category: unknown
-  summary: Pending re-scan
-  tags: []
+  summary: 'Guide to initializing dlt pipelines in dltHub Workspace via ''dlthub pipeline init''. Two methods: manual scaffold
+    or from verified sources. Compares dlthub vs OSS dlt init commands and workspace vs standalone usage.'
+  tags:
+  - hub
+  - ingestion
+  - initialization
+  - pipeline
+  keywords:
+  - dlthub pipeline init
+  - dlt init
+  - workspace
+  - verified source
+  - scaffold
 - id: dlt:hub/ingestion/ms-sql.md
   source: dlt
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   category: unknown
-  summary: Pending re-scan
-  tags: []
+  summary: dltHub commercial MS SQL Server Change Tracking source for CDC-like incremental replication. Uses SQL Server native
+    Change Tracking (not CDC log). Covers enabling Change Tracking on database and tables.
+  tags:
+  - hub
+  - source
+  - mssql
+  - cdc
+  - change-tracking
+  keywords:
+  - MS SQL
+  - Change Tracking
+  - CDC
+  - incremental
+  - replication
+  - commercial
 - id: dlt:hub/ingestion/playground.md
   source: dlt
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   category: unknown
-  summary: Pending re-scan
-  tags: []
+  summary: 'dltHub Playground destination: zero-config managed destination for testing on the platform. Writes to Delta tables
+    in a managed S3 bucket per workspace. Intended for demos and quick starts, not production.'
+  tags:
+  - hub
+  - destination
+  - playground
+  - testing
+  keywords:
+  - Playground
+  - zero-config
+  - Delta
+  - S3
+  - testing
+  - demos
+  - workspace
 - id: dlt:hub/ingestion/rest-api-source.md
   source: dlt
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   category: unknown
-  summary: Pending re-scan
-  tags: []
+  summary: Guide to building REST API sources with the dltHub AI Workbench rest-api-pipeline toolkit. Provides structured
+    guided workflow (skills, rules, MCP server) for building production-grade connectors in Claude Code, Cursor, and Codex.
+  tags:
+  - hub
+  - rest-api
+  - ai-workbench
+  - ingestion
+  keywords:
+  - rest-api-pipeline
+  - AI Workbench
+  - Claude Code
+  - Cursor
+  - Codex
+  - guided workflow
+  - MCP
 - id: dlt:hub/ingestion/snowflake-plus.md
   source: dlt
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   category: unknown
-  summary: Pending re-scan
-  tags: []
+  summary: dltHub commercial Snowflake+ destination with Apache Iceberg tables and Open Catalog (Polaris) support. Drop-in
+    replacement for OSS Snowflake destination with Iceberg table creation, compaction, and automatic CATALOG SYNC.
+  tags:
+  - hub
+  - destination
+  - snowflake
+  - iceberg
+  keywords:
+  - Snowflake+
+  - Iceberg
+  - Open Catalog
+  - Polaris
+  - CATALOG SYNC
+  - commercial
 - id: dlt:hub/license.md
   source: dlt
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   category: unknown
-  summary: Pending re-scan
-  tags: []
+  summary: dltHub commercial license (Copyright 2026 ScaleVector GmbH). Defines terms for dltHub Services including Platform
+    and toolkits. Covers definitions of Agreement, Services, and Derivative Works.
+  tags:
+  - hub
+  - license
+  - legal
+  keywords:
+  - dltHub license
+  - ScaleVector
+  - commercial
+  - EULA
+  - terms
+  - Derivative Works
 - id: dlt:hub/notifications/email.md
   source: dlt
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   category: unknown
-  summary: Pending re-scan
-  tags: []
+  summary: Guide to sending email notifications from dltHub pipelines on job success/failure using Python's smtplib with Gmail
+    SMTP. Covers Gmail App Password setup (2-Step Verification required) and pattern for other SMTP providers.
+  tags:
+  - hub
+  - notifications
+  - email
+  - alerting
+  keywords:
+  - email notifications
+  - Gmail SMTP
+  - App Password
+  - smtplib
+  - alerting
+  - success/failure
 - id: dlt:hub/notifications/slack.md
   source: dlt
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   category: unknown
-  summary: Pending re-scan
-  tags: []
+  summary: Guide to sending Slack notifications from dltHub pipelines using send_slack_message() and pipeline.runtime_config.slack_incoming_hook.
+    Covers Slack incoming webhook setup and pattern for job completion alerts.
+  tags:
+  - hub
+  - notifications
+  - slack
+  - alerting
+  keywords:
+  - Slack
+  - webhook
+  - send_slack_message
+  - slack_incoming_hook
+  - notifications
+  - alerts
 - id: dlt:hub/pipeline-operations/deployments.md
   source: dlt
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   category: unknown
-  summary: Pending re-scan
-  tags: []
+  summary: 'Guide to deploying code to the dltHub platform: ad-hoc launch via ''dlthub run/serve'', and manifest-based deployment
+    via __deployment__.py with ''dlthub deploy''. Manifest enables scheduling, follow-up triggers, freshness checks, and multi-job
+    workspaces.'
+  tags:
+  - hub
+  - deployment
+  - platform
+  keywords:
+  - dlthub deploy
+  - dlthub run
+  - __deployment__.py
+  - manifest
+  - scheduling
+  - ad-hoc
 - id: dlt:hub/pipeline-operations/job-configuration.md
   source: dlt
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   category: unknown
-  summary: Pending re-scan
-  tags: []
+  summary: 'Reference for per-job dltHub configuration: execution timeout (execute={''timeout'': ''6h''}), grace period, dependency
+    groups (require=), exposing ports for interactive apps (expose=), and TOML section targeting.'
+  tags:
+  - hub
+  - configuration
+  - jobs
+  - platform
+  keywords:
+  - timeout
+  - grace_period
+  - dependency groups
+  - expose
+  - require
+  - job configuration
 - id: dlt:hub/pipeline-operations/monitoring.md
   source: dlt
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   category: unknown
-  summary: Pending re-scan
-  tags: []
+  summary: Guide to monitoring dltHub pipelines via CLI and Web UI. Covers 'dlthub workspace info' for status summaries, inspecting
+    logs, diagnosing failures, and using the app.dlthub.com dashboard.
+  tags:
+  - hub
+  - monitoring
+  - observability
+  - platform
+  keywords:
+  - dlthub workspace info
+  - monitoring
+  - logs
+  - run status
+  - app.dlthub.com
+  - debug
 - id: dlt:hub/pipeline-operations/overview.md
   source: dlt
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   category: unknown
-  summary: Pending re-scan
-  tags: []
+  summary: Overview of the dltHub managed cloud platform for running dlt pipelines, transformations, and notebooks. Mirrors
+    local workspace to cloud. Links to workspace setup, deployments, triggers, and job configuration guides.
+  tags:
+  - hub
+  - platform
+  - overview
+  keywords:
+  - dltHub platform
+  - managed cloud
+  - workspace deployment
+  - pipelines
+  - notebooks
+  - overview
 - id: dlt:hub/pipeline-operations/profiles.md
   source: dlt
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   category: unknown
-  summary: Pending re-scan
-  tags: []
+  summary: 'Guide to dltHub workspace profiles for environment-specific configurations: dev, prod, and access profiles backed
+    by TOML files in .dlt/. Profiles provide isolated credentials, working directories, and configurations for different environments.'
+  tags:
+  - hub
+  - profiles
+  - configuration
+  - environments
+  keywords:
+  - profiles
+  - dev
+  - prod
+  - access
+  - TOML
+  - secrets.toml
+  - environments
+  - isolation
 - id: dlt:hub/pipeline-operations/secrets-management.md
   source: dlt
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   category: unknown
-  summary: Pending re-scan
-  tags: []
+  summary: 'Guide to secrets management in dltHub: platform-managed encryption (at-rest in private VPC, short-lived access
+    tokens at runtime), bring-your-own-vault option (Google Secret Manager), and profile-based separation (prod/dev).'
+  tags:
+  - hub
+  - secrets
+  - security
+  - vault
+  keywords:
+  - secrets management
+  - encryption
+  - VPC
+  - Google Secret Manager
+  - vault
+  - prod secrets
 - id: dlt:hub/pipeline-operations/triggers.md
   source: dlt
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   category: unknown
-  summary: Pending re-scan
-  tags: []
+  summary: 'Reference for dltHub triggers and scheduling: trigger.every() for intervals, cron expressions, follow-up chains,
+    freshness gates, refresh cascades, and tag-based bulk operations. Triggers are defined in Python decorators and deployed
+    with the workspace.'
+  tags:
+  - hub
+  - triggers
+  - scheduling
+  - cron
+  keywords:
+  - trigger
+  - cron
+  - interval
+  - follow-up
+  - freshness
+  - backfill
+  - schedule
 - id: dlt:hub/pipeline-operations/workspace-setup.md
   source: dlt
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   category: unknown
-  summary: Pending re-scan
-  tags: []
+  summary: Guide to converting a Python project into a dltHub platform workspace via uvx dlthub-init@latest. Creates .dlt/.workspace
+    marker, config/secrets files, managed pyproject.toml, and dltHub AI skills. Then configures dev/prod/access profiles.
+  tags:
+  - hub
+  - workspace
+  - setup
+  - platform
+  keywords:
+  - dlthub-init
+  - workspace
+  - .dlt/.workspace
+  - profiles
+  - AI skills
+  - pyproject.toml
 - id: dlt:hub/platform-capabilities/regions.md
   source: dlt
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   category: unknown
-  summary: Pending re-scan
-  tags: []
+  summary: 'dltHub platform architecture: control plane (US) paired with regional data planes (US or Europe). Explains where
+    code, config, secrets, and workload data are processed/stored. Includes architecture diagram.'
+  tags:
+  - hub
+  - regions
+  - data-residency
+  - platform
+  keywords:
+  - regions
+  - data residency
+  - control plane
+  - data plane
+  - EU
+  - US
+  - architecture
 - id: dlt:hub/platform-capabilities/settings.md
   source: dlt
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   category: unknown
-  summary: Pending re-scan
-  tags: []
+  summary: 'dltHub Settings page reference: workspace settings (name, connection info, usage chart, members), organization
+    settings (billing, organization members, API keys), and user settings. Describes role-based edit permissions.'
+  tags:
+  - hub
+  - settings
+  - platform
+  - administration
+  keywords:
+  - settings
+  - workspace settings
+  - organization
+  - API keys
+  - members
+  - usage
 - id: dlt:hub/platform-capabilities/users-and-roles.md
   source: dlt
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   category: unknown
-  summary: Pending re-scan
-  tags: []
+  summary: 'dltHub access control model: two-level system with organization roles and workspace roles. Authentication methods:
+    GitHub OAuth, Google OAuth, email signup, API keys (prefixed dlt_). Describes organization Admin/Member and workspace
+    Owner/Editor/Viewer roles.'
+  tags:
+  - hub
+  - users
+  - roles
+  - access-control
+  - platform
+  keywords:
+  - users
+  - roles
+  - organization
+  - workspace
+  - OAuth
+  - API keys
+  - RBAC
+  - permissions
 - id: dlt:hub/transformations/dbt-transformations.md
   source: dlt
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   category: unknown
-  summary: Pending re-scan
-  tags: []
+  summary: 'Guide to dltHub''s dbt model generator: auto-generates staging and fact dbt models from dlt pipeline schemas.
+    Supports incremental loading, relationship hints for fact tables, and works as standalone or integrated with local transformations.'
+  tags:
+  - hub
+  - transformations
+  - dbt
+  keywords:
+  - dbt generator
+  - staging models
+  - fact models
+  - schema
+  - incremental
+  - relationships
 - id: dlt:hub/transformations/explore-and-transform.md
   source: dlt
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   category: unknown
-  summary: Pending re-scan
-  tags: []
+  summary: 'dltHub AI Workbench toolkits for post-load exploration and transformation: data-exploration (profiles data, creates
+    marimo dashboard with Altair charts) and transformations (maps to Kimball CDM, generates @dlt.hub.transformation functions).'
+  tags:
+  - hub
+  - transformations
+  - ai-workbench
+  - exploration
+  keywords:
+  - data-exploration
+  - transformations
+  - AI Workbench
+  - marimo
+  - CDM
+  - Kimball
+  - Altair
 - id: dlt:hub/transformations/index.md
   source: dlt
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   category: unknown
-  summary: Pending re-scan
-  tags: []
+  summary: 'Overview of dltHub transformations via @dlt.hub.transformation decorator: reshapes already-loaded data by yielding
+    SQL queries or Ibis expressions compiled to destination dialect. Supports all write dispositions and SQL destinations
+    including filesystems.'
+  tags:
+  - hub
+  - transformations
+  - overview
+  keywords:
+  - '@dlt.hub.transformation'
+  - transformation
+  - SQL
+  - Ibis
+  - write_disposition
+  - warehouse
+  - filesystem
 - id: dlt:walkthroughs/deploy-a-pipeline/deploy-with-dlthub.md
   source: dlt
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   category: unknown
-  summary: Pending re-scan
-  tags: []
+  summary: 'Guide to deploying dlt pipelines to the managed dltHub platform. Explains what dltHub provides: one-command deploys,
+    cron/event-driven triggers, isolated profiles, and workspace dashboard.'
+  tags:
+  - walkthroughs
+  - deployment
+  - dlthub
+  keywords:
+  - dltHub
+  - managed platform
+  - deploy
+  - triggers
+  - profiles
+  - workspace dashboard
 - id: dlt:walkthroughs/deploy-a-pipeline/index.md
   source: dlt
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   category: unknown
-  summary: Pending re-scan
-  tags: []
+  summary: 'Overview of dlt deployment options: runs anywhere Python runs. Lists deployment guides for GitHub Actions, Airflow/Composer,
+    Google Cloud Functions, Prefect, and dltHub managed platform. Highlights dlthub deploy as simplest path.'
+  tags:
+  - walkthroughs
+  - deployment
+  - overview
+  keywords:
+  - deployment options
+  - GitHub Actions
+  - Airflow
+  - Prefect
+  - dltHub
+  - orchestrator
 - id: dlt:walkthroughs/deploy-a-pipeline/orchestrate-with-dlthub.md
   source: dlt
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   category: unknown
-  summary: Pending re-scan
-  tags: []
+  summary: Walkthrough for deploying and scheduling dlt pipelines with dltHub's managed orchestrator using @dlt.hub.run decorators.
+    Covers workspace scaffolding, ad-hoc runs, __deployment__.py manifest, and trigger configuration.
+  tags:
+  - walkthroughs
+  - deployment
+  - dlthub
+  - orchestration
+  keywords:
+  - '@dlt.hub.run'
+  - managed orchestrator
+  - dlthub-init
+  - __deployment__.py
+  - triggers
+  - scheduling
 meta:
-  generated_at: '2026-07-02T00:00:00Z'
+  generated_at: '2026-07-01T16:10:48Z'
   entry_count: 207

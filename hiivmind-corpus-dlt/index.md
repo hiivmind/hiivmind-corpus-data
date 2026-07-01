@@ -1,6 +1,6 @@
 # dlt Documentation Index
 
-> Sources: 1 | Entries: 207 | Generated: 2026-07-02T00:00:00Z
+> Sources: 1 | Entries: 207 | Generated: 2026-07-01T16:10:48Z
 > Generated from `index.yaml` — do not edit directly
 
 ---
@@ -8,183 +8,183 @@
 ## config
 
 - **Access to configuration in code** `dlt:general-usage/credentials/advanced.md` - Access configuration via dlt function arguments or explicitly
-- **Built-in credentials** `dlt:general-usage/credentials/complex_types.md` - Configure access to AWS, Azure, Google Cloud and other systems
-- **Configure credentials and pipelines** `dlt:general-usage/credentials/index.md` - How to configure dlt pipelines and set up credentials
-- **Overview and examples** `dlt:general-usage/credentials/setup.md` - Learn where configs are stored and how to write them
-- **Vault providers** `dlt:general-usage/credentials/vaults.md` - Learn how to configure Google Secrets and Airflow providers
+- **Built-in credentials** `dlt:general-usage/credentials/complex_types.md` - Guide to complex credential types in dlt: ConnectionStringCredentials for database connections (dict form, connection string form, native form), GCP credentials, AWS credentials, and how to define custom credential classes.
+- **Configure credentials and pipelines** `dlt:general-usage/credentials/index.md` - Overview of dlt's configuration and secrets system: separation of secrets from code, built-in credentials for common systems, auto-generated config specs for @dlt.source/@dlt.resource, and comprehensive configurability for all pipeline aspects.
+- **Overview and examples** `dlt:general-usage/credentials/setup.md` - Practical guide to configuring dlt credentials: config providers in priority order (env vars → TOML files → vaults → custom → defaults), layout of secrets.toml/config.toml, environment variable naming conventions, and auto-injection for decorated functions.
+- **Vault providers** `dlt:general-usage/credentials/vaults.md` - Guide to using secure vaults as dlt configuration providers: Google Secret Manager (via GCP), Airflow Variables, AWS Secrets Manager, and Azure Key Vault. Documents lookup/merge strategy, caching, and TOML fragment merging.
 
 ## guide
 
-- **Adjust a schema** `dlt:walkthroughs/adjust-a-schema.md` - How to adjust a schema
+- **Adjust a schema** `dlt:walkthroughs/adjust-a-schema.md` - Walkthrough for adjusting dlt schemas via import/export folders. Shows how to set import_schema_path and export_schema_path on the pipeline to manage manual schema edits that persist across runs.
 - **Code Examples** `dlt:examples/index.md` - A list of comprehensive code examples that teach you how to solve real world problems.
-- **Create new destination** `dlt:walkthroughs/create-new-destination.md` - How to create a new dlt destination
+- **Create new destination** `dlt:walkthroughs/create-new-destination.md` - Guide to implementing a new dlt destination. Covers the required module structure (factory.py, configuration.py, sql_client.py, job client), starting from an existing destination, and the destination capabilities interface.
 - **Deploy GCP Cloud Function as a webhook** `dlt:walkthroughs/deploy-a-pipeline/deploy-gcp-cloud-function-as-webhook.md` - Deploy a dlt pipeline as a Google Cloud Function webhook for real-time event ingestion
-- **Deploy with Airflow and Google Composer** `dlt:walkthroughs/deploy-a-pipeline/deploy-with-airflow-composer.md` - How to deploy a pipeline with Airflow and Google Composer
+- **Deploy with Airflow and Google Composer** `dlt:walkthroughs/deploy-a-pipeline/deploy-with-airflow-composer.md` - Guide to deploying dlt pipelines with Apache Airflow on Google Cloud Composer. Covers Git repository setup, verifying the pipeline works locally, and deployment options (BashOperator, PythonOperator, KubernetesPodOperator, Cloud Run).
 - **Deploy with Dagster** `dlt:walkthroughs/deploy-a-pipeline/deploy-with-dagster.md` - How to deploy a pipeline with Dagster
-- **Deploy with GitHub Actions** `dlt:walkthroughs/deploy-a-pipeline/deploy-with-github-actions.md` - How to deploy a pipeline with GitHub Actions
-- **Deploy with Google Cloud Functions** `dlt:walkthroughs/deploy-a-pipeline/deploy-with-google-cloud-functions.md` - How to deploy a pipeline with Google Cloud Functions
+- **Deploy with GitHub Actions** `dlt:walkthroughs/deploy-a-pipeline/deploy-with-github-actions.md` - Guide to deploying dlt pipelines using GitHub Actions. Covers Git repository setup, running the pipeline locally first, adding CLI dependencies, and using 'dlt deploy ... github-action' to generate the workflow file.
+- **Deploy with Google Cloud Functions** `dlt:walkthroughs/deploy-a-pipeline/deploy-with-google-cloud-functions.md` - Guide to deploying dlt pipelines as Google Cloud Functions. Uses Notion verified source and BigQuery destination as example. Covers main.py structure, local testing, and Cloud Functions deployment.
 - **Deploy with Google Cloud Run** `dlt:walkthroughs/deploy-a-pipeline/deploy-with-google-cloud-run.md` - Step-by-step guide on deploying a pipeline with Google Cloud Run.
 - **Deploy with Kestra** `dlt:walkthroughs/deploy-a-pipeline/deploy-with-kestra.md` - How to deploy a pipeline with Kestra
 - **Deploy with Modal** `dlt:walkthroughs/deploy-a-pipeline/deploy-with-modal.md` - How to deploy a pipeline with Modal
 - **Deploy with Orchestra** `dlt:walkthroughs/deploy-a-pipeline/deploy-with-orchestra.md` - How to deploy a dlt pipeline on Orchestra
-- **Deploy with Prefect** `dlt:walkthroughs/deploy-a-pipeline/deploy-with-prefect.md` - How to deploy a pipeline with Prefect
+- **Deploy with Prefect** `dlt:walkthroughs/deploy-a-pipeline/deploy-with-prefect.md` - Guide to orchestrating dlt pipelines with Prefect. Covers Prefect concepts (flows, tasks, deployments, automations), integrating dlt resources as Prefect tasks, and scheduling with Slack-to-BigQuery example.
 - **Dispatch stream of events to multiple tables in DuckDB** `dlt:walkthroughs/dispatch-to-multiple-tables.md` - Learn how to efficiently dispatch a stream of GitHub events, categorized by event type, to different tables in DuckDB
 - **How to add credentials** `dlt:walkthroughs/add_credentials.md` - How to add credentials locally and in production
-- **Import ticket data from Zendesk API to Weaviate** `dlt:walkthroughs/zendesk-weaviate.md` - How to Import Ticket Data from Zendesk API to Weaviate
-- **Incremental loading guide** `dlt:walkthroughs/add-incremental-configuration.md` - Incremental SQL data loading strategies
+- **Import ticket data from Zendesk API to Weaviate** `dlt:walkthroughs/zendesk-weaviate.md` - End-to-end walkthrough for loading Zendesk tickets into Weaviate for vector search using dlt. Uses the Zendesk verified source and Weaviate destination. Covers setup, credentials, and pipeline execution.
+- **Incremental loading guide** `dlt:walkthroughs/add-incremental-configuration.md` - Walkthrough covering four incremental loading strategies in dlt: full load/replace, append by incremental ID, append by date (created_at), and merge by timestamp+ID. Includes code examples for each strategy.
 - **Moving from local to production** `dlt:walkthroughs/share-a-dataset.md` - Share a local dataset by moving it to BigQuery
-- **Run a pipeline** `dlt:walkthroughs/run-a-pipeline.md` - How to run a pipeline
+- **Run a pipeline** `dlt:walkthroughs/run-a-pipeline.md` - Walkthrough for running a dlt pipeline: creating the pipeline, calling run() with a data source, interpreting load_info (package states, job statuses, row counts), and loading trace information back to the destination.
 - **Run dlt in Snowflake** `dlt:walkthroughs/run-in-snowflake/run-in-snowflake.md` - Run dlt in Snowflake Native App
-- **dlt Connector App** `dlt:walkthroughs/run-in-snowflake/database-connector-app.md` - How to use the dlt Connector App
+- **dlt Connector App** `dlt:walkthroughs/run-in-snowflake/database-connector-app.md` - Guide to the Snowflake Native App for running dlt database connector pipelines within Snowflake. Uses Snowflake-managed compute; covers prerequisite setup (destination database, ACCOUNTADMIN role, source credentials) and pipeline management.
 
 ## journal
 
 - **Release highlights: 1.12.1** `dlt:release-notes/1.12.1.md` - Release highlights provide a concise overview of the most important new features, improvements, and fixes in a software update, helping users quickly understand what's changed and how it impacts their
-- **Release highlights: 1.12.3 - 1.14.1** `dlt:release-notes/1.13-1.14.md` - Release highlights provide a concise overview of the most important new features, improvements, and fixes in a software update, helping users quickly understand what's changed and how it impacts their
-- **Release highlights: 1.15** `dlt:release-notes/1.15.md` - Release highlights provide a concise overview of the most important new features, improvements, and fixes in a software update, helping users quickly understand what's changed and how it impacts their
-- **Release highlights: 1.16** `dlt:release-notes/1.16.md` - Release highlights provide a concise overview of the most important new features, improvements, and fixes in a software update, helping users quickly understand what's changed and how it impacts their
-- **Release highlights: 1.17** `dlt:release-notes/1.17.md` - Release highlights provide a concise overview of the most important new features, improvements, and fixes in a software update, helping users quickly understand what's changed and how it impacts their
-- **Release highlights: 1.18** `dlt:release-notes/1.18.md` - Release highlights provide a concise overview of the most important new features, improvements, and fixes in a software update, helping users quickly understand what's changed and how it impacts their
-- **Release highlights: 1.19** `dlt:release-notes/1.19.md` - Release highlights provide a concise overview of the most important new features, improvements, and fixes in a software update, helping users quickly understand what's changed and how it impacts their
-- **Release highlights: v1.21.2** `dlt:release-notes/1.21.2.md` - Release highlights provide a concise overview of the most important new features, improvements, and fixes in a software update, helping users quickly understand what's changed and how it impacts their
+- **Release highlights: 1.12.3 - 1.14.1** `dlt:release-notes/1.13-1.14.md` - Release notes for dlt 1.13-1.14. Key changes: Ibis table relation API breaking change (now requires explicit table_type='ibis' parameter and dataset(expression) conversion); new non-Ibis relation enhancements.
+- **Release highlights: 1.15** `dlt:release-notes/1.15.md` - Release notes for dlt 1.15. Key features: gzip compression for filesystem destinations (JSONL, CSV, Arrow), adds .gz extension to compressed files. Also adds DBML schema export for visualization in DBML frontends.
+- **Release highlights: 1.16** `dlt:release-notes/1.16.md` - Release notes for dlt 1.16. Key changes: unified timestamp/timezone handling across normalizers and destinations, preserved exact timestamp types in incremental cursors, nanosecond precision MSSQL fix.
+- **Release highlights: 1.17** `dlt:release-notes/1.17.md` - Release notes for dlt 1.17. Key feature: custom metrics in pipelines via dlt.current.resource_metrics(). Metrics merge into pipeline trace and run summary.
+- **Release highlights: 1.18** `dlt:release-notes/1.18.md` - Release notes for dlt 1.18. Key feature: named destinations configured via config.toml with destination_type, enabling pipeline code to reference a custom destination name instead of hardcoding the type.
+- **Release highlights: 1.19** `dlt:release-notes/1.19.md` - Release notes for dlt 1.19. Key features: ConnectorX backend Arrow streaming (return_type='arrow_stream'), and visual pipeline run history in the dltHub dashboard.
+- **Release highlights: v1.21.2** `dlt:release-notes/1.21.2.md` - Release notes for dlt 1.21.2. Key change: compound hint precedence fix — direct primary_key/merge_key arguments now take precedence over column-level hints and completely replace (not merge) previous compound hint configuration.
 
 ## reference
 
-- **30+ SQL databases** `dlt:dlt-ecosystem/verified-sources/sql_database/index.md` - PostgreSQL, MySQL, MS SQL, BigQuery, Redshift, and more
-- **30+ SQL databases (powered by SQLAlchemy)** `dlt:dlt-ecosystem/destinations/sqlalchemy.md` - SQLAlchemy destination
-- **AWS Athena / Glue Catalog** `dlt:dlt-ecosystem/destinations/athena.md` - AWS Athena `dlt` destination
-- **Access datasets in Python** `dlt:general-usage/dataset-access/dataset.md` - Conveniently access the data loaded to any destination in Python
-- **Advanced configuration** `dlt:dlt-ecosystem/verified-sources/rest_api/advanced.md` - Learn custom response processing, headers configuration and more
+- **30+ SQL databases** `dlt:dlt-ecosystem/verified-sources/sql_database/index.md` - Overview of the dlt SQL Database source (sql_database and sql_table resources). Supports all SQLAlchemy dialects including PostgreSQL, MySQL, SQLite, BigQuery, Snowflake, Redshift. Covers MS SQL change tracking via dltHub.
+- **30+ SQL databases (powered by SQLAlchemy)** `dlt:dlt-ecosystem/destinations/sqlalchemy.md` - Guide to the SQLAlchemy dlt destination for loading data into any SQLAlchemy-supported database. Requires separate database driver installation (e.g., mysqlclient). Covers initialization and write dispositions.
+- **AWS Athena / Glue Catalog** `dlt:dlt-ecosystem/destinations/athena.md` - Setup and configuration guide for the AWS Athena dlt destination. Uses S3 as staging, requires pyathena/s3fs/pyarrow. Covers credential setup, bucket configuration, and pipeline initialization.
+- **Access datasets in Python** `dlt:general-usage/dataset-access/dataset.md` - Reference for dlt's Dataset and Relation API for accessing loaded data: pipeline.dataset(), table access, lazy-loading model, SQL query strings, Ibis expressions, and data retrieval as DataFrame, Arrow, or Python dicts.
+- **Advanced configuration** `dlt:dlt-ecosystem/verified-sources/rest_api/advanced.md` - Advanced REST API source usage via RESTClient for lower-level control: direct paginate() calls, session management, custom request hooks, and building @dlt.resource functions around the REST client.
 - **Advanced state management for incremental loading** `dlt:general-usage/incremental/advanced-state.md` - Custom state tracking and lag/attribution windows
 - **Advanced usage** `dlt:dlt-ecosystem/verified-sources/sql_database/advanced.md` - advance configuration and usage of the sql_database source
-- **Airtable** `dlt:dlt-ecosystem/verified-sources/airtable.md` - dlt verified source for Airtable
-- **Amazon Kinesis** `dlt:dlt-ecosystem/verified-sources/amazon_kinesis.md` - dlt verified source for Amazon Kinesis
-- **Amazon Redshift** `dlt:dlt-ecosystem/destinations/redshift.md` - Amazon Redshift `dlt` destination
-- **Arrow Table / Pandas** `dlt:dlt-ecosystem/verified-sources/arrow-pandas.md` - dlt source for Arrow tables and Pandas dataframes
-- **Asana** `dlt:dlt-ecosystem/verified-sources/asana.md` - dlt verified source for Asana API
-- **Azure Synapse** `dlt:dlt-ecosystem/destinations/synapse.md` - Azure Synapse `dlt` destination
-- **Chess.com** `dlt:dlt-ecosystem/verified-sources/chess.md` - dlt verified source for Chess.com API
-- **ClickHouse** `dlt:dlt-ecosystem/destinations/clickhouse.md` - ClickHouse `dlt` destination
-- **Cloud storage and filesystem** `dlt:dlt-ecosystem/destinations/filesystem.md` - Store data in remote file systems and cloud storage services like AWS S3, Google Cloud Storage, or Azure Blob Storage
-- **Cloud storage and filesystem** `dlt:dlt-ecosystem/verified-sources/filesystem/index.md` - dlt-verified source for reading files from cloud storage and local file system
-- **Command Line Interface** `dlt:hub/command-line-interface.md` - Command line interface (CLI) full reference of dlt ⚡ GREP - `grep -n '^## ' command-line-interface.md -A 20` ⏳ STALE
-- **Command Line Interface** `dlt:reference/command-line-interface.md` - Command line interface (CLI) full reference of dlt ⚡ GREP - `grep -n '^## ' command-line-interface.md -A 20` ⏳ STALE
+- **Airtable** `dlt:dlt-ecosystem/verified-sources/airtable.md` - dlt verified source for loading Airtable bases and tables. Covers setup, API key configuration, and loading specific tables or entire bases into dlt destinations.
+- **Amazon Kinesis** `dlt:dlt-ecosystem/verified-sources/amazon_kinesis.md` - dlt verified source for consuming Amazon Kinesis data streams. Covers AWS credential setup, shard iteration, and incremental loading of streaming data.
+- **Amazon Redshift** `dlt:dlt-ecosystem/destinations/redshift.md` - Setup guide for Amazon Redshift as a dlt destination with S3 staging. Covers cluster creation, VPC inbound rule configuration, dlt[redshift] installation, and credentials setup.
+- **Arrow Table / Pandas** `dlt:dlt-ecosystem/verified-sources/arrow-pandas.md` - Guide to using PyArrow tables and pandas DataFrames directly as dlt sources. Enables zero-copy loading of in-memory data with schema inference from Arrow/pandas dtypes.
+- **Asana** `dlt:dlt-ecosystem/verified-sources/asana.md` - dlt verified source for loading Asana project management data (tasks, projects, workspaces). Covers personal access token setup and available resources.
+- **Azure Synapse** `dlt:dlt-ecosystem/destinations/synapse.md` - Setup guide for Azure Synapse Analytics dedicated SQL pool as a dlt destination. Requires ODBC Driver 18 (LongAsMax keyword required), Azure Synapse Workspace, and Unity Catalog-compatible setup.
+- **Chess.com** `dlt:dlt-ecosystem/verified-sources/chess.md` - dlt verified source for loading Chess.com game and player data. A popular example source used in dlt tutorials. Loads game archives, player profiles, and club data.
+- **ClickHouse** `dlt:dlt-ecosystem/destinations/clickhouse.md` - Setup and configuration for the ClickHouse dlt destination. Covers initializing a dlt project, installing dlt[clickhouse], creating ClickHouse credentials, and write dispositions supported.
+- **Cloud storage and filesystem** `dlt:dlt-ecosystem/destinations/filesystem.md` - Guide to the filesystem dlt destination for writing data to S3, GCS, Azure Blob Storage, and local paths. Covers S3 credential setup, staging dataset configuration, file format selection, and initialization.
+- **Cloud storage and filesystem** `dlt:dlt-ecosystem/verified-sources/filesystem/index.md` - Guide to the dlt filesystem verified source for loading structured files (CSV, Parquet, JSONL) from S3, GCS, Azure Blob, Google Drive, SFTP, and local paths. Two-step loading: first access file metadata, then read content. Supports incremental loading.
+- **Command Line Interface** `dlt:hub/command-line-interface.md` - Reference for the dlthub CLI commands: dlthub workspace info, dlthub pipeline init, dlthub run, dlthub serve, dlthub deploy, dlthub login. Covers workspace management, pipeline deployment, and job scheduling on the dltHub platform. ⚡ GREP - `grep -n '^## ' command-line-interface.md -A 20`
+- **Command Line Interface** `dlt:reference/command-line-interface.md` - Full reference for the dlt CLI: commands (dlt pipeline, dlt init, dlt deploy, dlt schema, dlt dashboard), subcommand options, and flag ordering rules (global flags must precede subcommands). ⚡ GREP - `grep -n '^## ' command-line-interface.md -A 20`
 - **Community Destinations** `dlt:dlt-ecosystem/destinations/community-destinations.md` - Community-contributed destinations for dlt
 - **Configuration** `dlt:dlt-ecosystem/verified-sources/sql_database/configuration.md` - configuring the pipeline script, connection, and backend settings in the sql_database source
-- **Currency-conversion data enrichment** `dlt:general-usage/data-enrichments/currency_conversion_data_enrichment.md` - Converting the monetary value in one currency to another using the latest market rates.
-- **Cursor-based incremental loading** `dlt:general-usage/incremental/cursor.md` - Track changes using cursor fields with dlt
-- **Custom destination** `dlt:dlt-ecosystem/destinations/destination.md` - Custom `dlt` destination function for reverse ETL
+- **Currency-conversion data enrichment** `dlt:general-usage/data-enrichments/currency_conversion_data_enrichment.md` - Guide to building a currency conversion data enrichment pipeline using ExchangeRate-API. Shows the pattern of fetching exchange rates and enriching monetary column values with conversion metadata (rate, date, target currency).
+- **Cursor-based incremental loading** `dlt:general-usage/incremental/cursor.md` - Deep dive into dlt.sources.incremental cursor-based incremental loading: initial_value, start_value (for querying), last_value (real-time tracking), end_value (backfill), and how state is persisted across pipeline runs.
+- **Custom destination** `dlt:dlt-ecosystem/destinations/destination.md` - Guide to implementing custom dlt destinations using the @dlt.destination decorator. Shows how to convert any Python function that accepts data items and table schema into a fully functional dlt destination with configurable batch size.
 - **Data quality (advanced)** `dlt:hub/features/quality/advanced.md` - Validate your data and control its quality
-- **Data quality lifecycle** `dlt:general-usage/data-quality-lifecycle.md` - End-to-end data quality checks across the dlt pipeline lifecycle
+- **Data quality lifecycle** `dlt:general-usage/data-quality-lifecycle.md` - Describes dlt+dltHub's approach to data quality across the full pipeline lifecycle: three checkpoints (in-flight, staging, destination) and five quality pillars (structural integrity, semantic validity, uniqueness, privacy, operational health).
 - **Data quality 🧪** `dlt:hub/features/quality/data-quality.md` - Validate your data and control its quality
-- **Data security and encryption** `dlt:dlt-ecosystem/transformations/encryption.md` - Transforming the data for encryption in transit, client-side encryption, and encryption at rest.
-- **Databricks** `dlt:dlt-ecosystem/destinations/databricks.md` - Databricks `dlt` destination
-- **Delta** `dlt:dlt-ecosystem/destinations/delta-iceberg.md` - Delta dlt destination
+- **Data security and encryption** `dlt:dlt-ecosystem/transformations/encryption.md` - Guide to data encryption strategies in dlt pipelines: in-transit encryption via SSL/TLS, client-side encryption before transmission using AWS Encryption SDK/Google Tink/Azure Key Vault, and server-side/at-rest encryption. Explains why each layer matters.
+- **Databricks** `dlt:dlt-ecosystem/destinations/databricks.md` - Setup guide for Databricks as a dlt destination supporting Delta and Apache Iceberg table formats. Covers Unity Catalog requirements, Azure Gen 2 storage, Databricks managed volumes for direct notebook loading.
+- **Delta** `dlt:dlt-ecosystem/destinations/delta-iceberg.md` - Guide to using Delta Lake and Apache Iceberg table formats with dlt filesystem/staging destinations. Covers installation (deltalake, pyarrow), setting table_format='delta' or 'iceberg' at resource or pipeline run level.
 - **Deploy trusted dlt pipelines and dashboards** `dlt:hub/getting-started/runtime-tutorial.md` - Tutorial walking through deployment on dltHub Runtime
-- **Destination** `dlt:general-usage/destination.md` - Declare and configure destinations to which to load data
-- **Destination tables & lineage** `dlt:general-usage/destination-tables.md` - Understanding the tables created in the destination database
+- **Destination** `dlt:general-usage/destination.md` - Reference for specifying dlt destinations in multiple ways: shorthand string, named destination, factory type, factory class import. Covers passing explicit parameters to destination factories and named destinations for environment switching.
+- **Destination tables & lineage** `dlt:general-usage/destination-tables.md` - Explains how dlt creates destination tables from loaded data: database schema creation, table naming conventions, nested table unnesting into child tables, and dlt metadata tables (_dlt_loads, _dlt_pipeline_state, _dlt_versions).
 - **Destination: Delta** `dlt:hub/ecosystem/delta.md` - Delta destination
 - **Destination: Iceberg** `dlt:hub/ecosystem/iceberg.md` - Iceberg destination
 - **Destination: Snowflake+ Iceberg / Open Catalog** `dlt:hub/ecosystem/snowflake_plus.md` - Snowflake destination with Iceberg and Open Catalog
-- **Destinations** `dlt:dlt-ecosystem/destinations/index.md` - List of destinations
-- **DuckDB** `dlt:dlt-ecosystem/destinations/duckdb.md` - DuckDB `dlt` destination
-- **DuckLake** `dlt:dlt-ecosystem/destinations/ducklake.md` - DuckLake destination (DuckDB + ducklake extension)
-- **Ensuring data quality** `dlt:general-usage/dataset-access/data-quality-dashboard.md` - Monitoring and testing data quality
+- **Destinations** `dlt:dlt-ecosystem/destinations/index.md` - Index listing all dlt destinations with links to individual destination docs. Encourages community requests for missing destinations or features via Slack.
+- **DuckDB** `dlt:dlt-ecosystem/destinations/duckdb.md` - Setup guide for DuckDB as a dlt destination. Covers quick start, supported DuckDB versions (0.9+), known stable versions, write dispositions, and notes on version-specific bugs (iceberg_scan, segfaults).
+- **DuckLake** `dlt:dlt-ecosystem/destinations/ducklake.md` - Guide to DuckLake as a dlt destination — a DuckDB-native lakehouse format with catalog and storage separation. Covers quick start, local setup without catalog credentials, and pipeline initialization.
+- **Ensuring data quality** `dlt:general-usage/dataset-access/data-quality-dashboard.md` - Guide to monitoring data quality using the dlt pipeline dashboard and trace output. Covers row count monitoring, tracking loaded_at/created_at trends, and using 'dlt pipeline trace' to inspect per-table row counts.
 - **Explore and Transform your data with dltHub AI Workbench** `dlt:dlt-ecosystem/llm-tooling/explore-and-transform.md` - Explore loaded pipeline data, build interactive dashboards, and transform data into a Canonical Data Model using dltHub AI Workbench toolkits
-- **Explore data with marimo** `dlt:general-usage/dataset-access/marimo.md` - Explore your data with marimo
-- **Facebook Ads** `dlt:dlt-ecosystem/verified-sources/facebook_ads.md` - dlt verified source for Facebook Ads
-- **Frequently asked questions** `dlt:reference/frequently-asked-questions.md` - Questions asked frequently by users in technical help or github issues
-- **Freshdesk** `dlt:dlt-ecosystem/verified-sources/freshdesk.md` - dlt verified source for Freshdesk API
-- **Full loading** `dlt:general-usage/full-loading.md` - Full loading with dlt
-- **GitHub** `dlt:dlt-ecosystem/verified-sources/github.md` - dlt verified source for GitHub API
-- **Glossary** `dlt:general-usage/glossary.md` - Glossary of common dlt terms
-- **Google Ads** `dlt:dlt-ecosystem/verified-sources/google_ads.md` - dlt verified source for Google Ads API
-- **Google Analytics** `dlt:dlt-ecosystem/verified-sources/google_analytics.md` - dlt verified source for Google Analytics API
-- **Google BigQuery** `dlt:dlt-ecosystem/destinations/bigquery.md` - Google BigQuery `dlt` destination
-- **Google Sheets** `dlt:dlt-ecosystem/verified-sources/google_sheets.md` - dlt verified source for Google Sheets API
-- **How dlt works** `dlt:reference/explainers/how-dlt-works.md` - How data load tool (dlt) works
-- **Hubspot** `dlt:dlt-ecosystem/verified-sources/hubspot.md` - dlt verified source for Hubspot API
-- **Hugging Face Datasets** `dlt:dlt-ecosystem/destinations/huggingface.md` - Load data into Hugging Face Datasets repositories using dlt
-- **Iceberg** `dlt:dlt-ecosystem/destinations/iceberg.md` - Iceberg dlt destination
-- **Inbox** `dlt:dlt-ecosystem/verified-sources/inbox.md` - dlt verified source for Mail Inbox
-- **Incremental loading** `dlt:general-usage/incremental-loading.md` - Introduction to incremental loading with dlt
-- **Installation** `dlt:hub/getting-started/installation.md` - Installation information for the dlthub package
-- **Installation** `dlt:reference/installation.md` - How to install dlt
+- **Explore data with marimo** `dlt:general-usage/dataset-access/marimo.md` - Guide to using marimo notebooks with dlt and Ibis for interactive data exploration. Launch marimo to explore loaded pipeline data, build Altair visualizations, and write transformations against the dataset API.
+- **Facebook Ads** `dlt:dlt-ecosystem/verified-sources/facebook_ads.md` - dlt verified source for loading Facebook Ads campaign data (campaigns, ad sets, ads, insights). Covers Meta API authentication and available data resources.
+- **Frequently asked questions** `dlt:reference/frequently-asked-questions.md` - FAQ covering common dlt questions: preventing column type inference (data_type='json'), handling JSON columns, apply_hints vs resource definition, and other configuration patterns.
+- **Freshdesk** `dlt:dlt-ecosystem/verified-sources/freshdesk.md` - dlt verified source for loading Freshdesk customer support data (tickets, contacts, agents, groups). Covers API key setup and available resources.
+- **Full loading** `dlt:general-usage/full-loading.md` - Guide to full table reloading with write_disposition='replace'. Explains three replace strategies: truncate-and-insert (default), insert-from-staging, and staging-optimized. Notes that ALL tables in the resource are truncated including nested and dispatched tables.
+- **GitHub** `dlt:dlt-ecosystem/verified-sources/github.md` - dlt verified source for loading GitHub repository data (issues, pull requests, reactions, stargazers). Covers GitHub token authentication and incremental loading patterns.
+- **Glossary** `dlt:general-usage/glossary.md` - Glossary of core dlt terms: source (data system), resource (logical data grouping and Python function), destination (data store), and pipeline (extraction/normalization/loading orchestrator).
+- **Google Ads** `dlt:dlt-ecosystem/verified-sources/google_ads.md` - dlt verified source for loading Google Ads campaign performance data via Google Ads API. Covers OAuth credentials, available resources (campaigns, ad groups, keywords, reports).
+- **Google Analytics** `dlt:dlt-ecosystem/verified-sources/google_analytics.md` - dlt verified source for loading Google Analytics 4 data (dimensions, metrics, reports). Covers service account authentication and GA4 property configuration.
+- **Google BigQuery** `dlt:dlt-ecosystem/destinations/bigquery.md` - Setup guide for the Google BigQuery dlt destination. Covers GCP project creation, service account creation with BigQuery permissions, and credentials configuration in secrets.toml.
+- **Google Sheets** `dlt:dlt-ecosystem/verified-sources/google_sheets.md` - dlt verified source for loading Google Sheets data. Covers service account authentication, spreadsheet ID configuration, and loading specific sheets or ranges.
+- **How dlt works** `dlt:reference/explainers/how-dlt-works.md` - Technical explainer of dlt's three-step pipeline execution: Extract (pulls data from sources to disk), Normalize (infers schema, unnests JSON, creates child tables), Load (migrates schema and writes data to destination). With code example.
+- **Hubspot** `dlt:dlt-ecosystem/verified-sources/hubspot.md` - dlt verified source for loading HubSpot CRM data (contacts, companies, deals, tickets, products, quotes). Covers private app token authentication and available resources.
+- **Hugging Face Datasets** `dlt:dlt-ecosystem/destinations/huggingface.md` - Guide to using Hugging Face datasets as a dlt destination via the filesystem destination with hf:// bucket URLs. Each dlt dataset becomes a separate Hugging Face dataset repository.
+- **Iceberg** `dlt:dlt-ecosystem/destinations/iceberg.md` - Guide to the Iceberg dlt destination using pyiceberg. Supports SQL and REST catalogs (Lakekeeper, Polaris), ACID transactions, schema evolution, local and cloud storage. Covers IAM permissions for S3 multipart uploads.
+- **Inbox** `dlt:dlt-ecosystem/verified-sources/inbox.md` - dlt verified source for loading email inbox data from Gmail and other IMAP-compatible providers. Enables email-to-data pipeline workflows.
+- **Incremental loading** `dlt:general-usage/incremental-loading.md` - Guide to incremental loading strategies in dlt: append (stateless data), merge (stateful data), and full replace. Includes decision flowchart for choosing write dispositions and explains slowly changing dimensions (SCD Type 2).
+- **Installation** `dlt:hub/getting-started/installation.md` - Installation guide for the dltHub platform tooling: prerequisites, uvx dlthub-start@latest for guided first experience, dltHub workspace scaffolding, and alternative install paths. Defines what a dltHub workspace is.
+- **Installation** `dlt:reference/installation.md` - dlt installation reference with platform-specific instructions for Ubuntu (apt), macOS (Homebrew), and Windows. Covers Python 3.10+ requirement, pip/uv installation, and virtual environment setup.
 - **Introduction** `dlt:intro.md` - Introduction to dlt
-- **Jira** `dlt:dlt-ecosystem/verified-sources/jira.md` - dlt verified source for Atlassian Jira
-- **Kafka** `dlt:dlt-ecosystem/verified-sources/kafka.md` - dlt verified source for Confluent Kafka
+- **Jira** `dlt:dlt-ecosystem/verified-sources/jira.md` - dlt verified source for loading Jira project management data (issues, projects, users, boards, sprints). Covers API token authentication and available resources.
+- **Kafka** `dlt:dlt-ecosystem/verified-sources/kafka.md` - dlt verified source for consuming Kafka topics. Covers broker configuration, consumer group setup, and incremental offset-based loading.
 - **Lag / Attribution window** `dlt:general-usage/incremental/lag.md` - Use lag to refresh data within a specific time window
-- **Lance** `dlt:dlt-ecosystem/destinations/lance.md` - Lance is an open-source columnar format for AI/ML that can be used as a destination in dlt.
+- **Lance** `dlt:dlt-ecosystem/destinations/lance.md` - Guide to the lance dlt destination for storing data in Lance format on local disk or cloud storage (S3, GCS, Azure). Distinguishes lance (filesystem-based) from lancedb (cloud) destination, covers setup and embedding generation.
 - **LanceDB** `dlt:dlt-ecosystem/destinations/lancedb.md` - LanceDB is a multimodal lakehouse for AI that can be used as a destination in dlt.
-- **Matomo** `dlt:dlt-ecosystem/verified-sources/matomo.md` - dlt verified source for Matomo
-- **Merge loading** `dlt:general-usage/merge-loading.md` - Merge loading with dlt
-- **Microsoft Fabric Warehouse** `dlt:dlt-ecosystem/destinations/fabric.md` - Microsoft Fabric Warehouse `dlt` destination
-- **Microsoft SQL Server** `dlt:dlt-ecosystem/destinations/mssql.md` - Microsoft SQL Server `dlt` destination
-- **MongoDB** `dlt:dlt-ecosystem/verified-sources/mongodb.md` - dlt verified source for MongoDB
+- **Matomo** `dlt:dlt-ecosystem/verified-sources/matomo.md` - dlt verified source for loading Matomo web analytics data (visits, events, goals). Covers API token setup and available report endpoints.
+- **Merge loading** `dlt:general-usage/merge-loading.md` - Comprehensive guide to merge loading strategies in dlt: delete-insert (deduplication + upsert), SCD2 (slowly changing dimensions with history), merge_disposition_strategy, and insert-only. Covers primary_key and merge_key configuration.
+- **Microsoft Fabric Warehouse** `dlt:dlt-ecosystem/destinations/fabric.md` - Setup guide for Microsoft Fabric Warehouse as a dlt destination. Requires ODBC Driver 18 for SQL Server and Azure Active Directory Service Principal authentication (Tenant ID, Client ID, Client Secret).
+- **Microsoft SQL Server** `dlt:dlt-ecosystem/destinations/mssql.md` - Setup guide for Microsoft SQL Server as a dlt destination. Requires ODBC Driver 17 or 18, covers database and user creation, psycopg2-equivalent setup, and credentials configuration.
+- **MongoDB** `dlt:dlt-ecosystem/verified-sources/mongodb.md` - dlt verified source for loading MongoDB collections. Supports incremental loading via timestamp fields and covers connection string setup.
 - **Monitoring** `dlt:running-in-production/monitoring.md` - How to monitor a dlt pipeline
-- **MotherDuck / DuckLake** `dlt:dlt-ecosystem/destinations/motherduck.md` - MotherDuck and DuckLake `dlt` destination
-- **Mux** `dlt:dlt-ecosystem/verified-sources/mux.md` - dlt verified source for Mux
+- **MotherDuck / DuckLake** `dlt:dlt-ecosystem/destinations/motherduck.md` - Setup guide for MotherDuck as a dlt destination (cloud DuckDB). Covers initialization, write disposition support, load worker tuning for internet connections, and version compatibility notes.
+- **Mux** `dlt:dlt-ecosystem/verified-sources/mux.md` - dlt verified source for loading Mux video platform data (assets, views, metrics). Covers API key/secret authentication and available resources.
 - **Naming convention** `dlt:general-usage/naming-convention.md` - Control how dlt creates table, column and other identifiers
-- **Notion** `dlt:dlt-ecosystem/verified-sources/notion.md` - dlt pipeline for Notion API
-- **OpenAPI source generator** `dlt:dlt-ecosystem/verified-sources/openapi-generator.md` - OpenAPI dlt source generator
-- **Optimizing dlt** `dlt:reference/performance.md` - Scale-up, parallelize and finetune dlt pipelines
-- **Personio** `dlt:dlt-ecosystem/verified-sources/personio.md` - dlt verified source for Personio API
-- **Pipedrive** `dlt:dlt-ecosystem/verified-sources/pipedrive.md` - dlt verified source for Pipedrive API
-- **Pipeline** `dlt:general-usage/pipeline.md` - Explanation of what a dlt pipeline is
-- **Postgres** `dlt:dlt-ecosystem/destinations/postgres.md` - Postgres `dlt` destination
-- **Postgres replication** `dlt:dlt-ecosystem/verified-sources/pg_replication.md` - dlt verified source for Postgres replication
+- **Notion** `dlt:dlt-ecosystem/verified-sources/notion.md` - dlt verified source for loading Notion workspace data (pages, databases, blocks). Covers Notion integration token setup and available resources.
+- **OpenAPI source generator** `dlt:dlt-ecosystem/verified-sources/openapi-generator.md` - Guide to generating dlt REST API sources from OpenAPI specifications. The generator parses OpenAPI 3.x spec files and produces a configured rest_api_source with endpoints, authentication, and pagination pre-configured.
+- **Optimizing dlt** `dlt:reference/performance.md` - Performance optimization guide for dlt: yield pages instead of individual items, choose between round_robin (parallel) and fifo (sequential) resource extraction, tune workers, memory limits, and file chunk sizes.
+- **Personio** `dlt:dlt-ecosystem/verified-sources/personio.md` - dlt verified source for loading Personio HR management data (employees, absences, attendances). Covers API credentials and available data endpoints.
+- **Pipedrive** `dlt:dlt-ecosystem/verified-sources/pipedrive.md` - dlt verified source for loading Pipedrive CRM data (deals, contacts, organizations, activities). Covers API token setup and available resources.
+- **Pipeline** `dlt:general-usage/pipeline.md` - Core reference for the dlt.pipeline() object: constructor arguments (pipeline_name, destination, dataset_name), run() method, load_info result object, state management, and pipeline configuration.
+- **Postgres** `dlt:dlt-ecosystem/destinations/postgres.md` - Setup guide for PostgreSQL as a dlt destination. Covers database and user creation with SQL, psycopg2 client installation, and credentials configuration in secrets.toml.
+- **Postgres replication** `dlt:dlt-ecosystem/verified-sources/pg_replication.md` - dlt verified source for PostgreSQL logical replication (CDC). Enables change data capture from Postgres tables using logical replication slots. Covers slot creation, WAL configuration, and incremental change loading.
 - **Profiles** `dlt:hub/core-concepts/profiles-dlthub.md` - Manage environment-specific configurations and secrets in dltHub Workspace
 - **Pseudonymizing columns** `dlt:general-usage/customising-pipelines/pseudonymizing_columns.md` - Pseudonymizing (or anonymizing) columns by replacing the special characters
 - **Qdrant** `dlt:dlt-ecosystem/destinations/qdrant.md` - Qdrant is a high-performance vector search engine/database that can be used as a destination in dlt.
 - **REST API Source with dlthub AI Workbench** `dlt:dlt-ecosystem/llm-tooling/llm-native-workflow.md` - Build any REST API source with dltHub AI Workbench toolkits - workflows, skills, rules, and MCP tools
-- **REST API source** `dlt:dlt-ecosystem/verified-sources/rest_api/basic.md` - Learn how to set up and configure ⚡ GREP - `grep -n '^## ' basic.md -A 20` ⏳ STALE
-- **REST APIs** `dlt:dlt-ecosystem/verified-sources/rest_api/index.md` - Loads data from REST APIs using a declarative configuration
+- **REST API source** `dlt:dlt-ecosystem/verified-sources/rest_api/basic.md` - Basic configuration guide for the dlt REST API source: rest_api_source() configuration dict with client (base_url, auth, paginator), resources list, and resource relationships. Covers common auth methods and pagination types. ⚡ GREP - `grep -n '^## ' basic.md -A 20`
+- **REST APIs** `dlt:dlt-ecosystem/verified-sources/rest_api/index.md` - Overview of the dlt REST API source for loading data from any REST API using declarative configuration. Covers endpoint definition, resource relationships, pagination, and authentication. Links to basic and advanced configuration guides.
 - **Removing columns** `dlt:general-usage/customising-pipelines/removing_columns.md` - Removing columns by passing a list of column names
 - **Renaming columns** `dlt:general-usage/customising-pipelines/renaming_columns.md` - Renaming columns by replacing the special characters
-- **Resource** `dlt:general-usage/resource.md` - Explanation of what a dlt resource is
+- **Resource** `dlt:general-usage/resource.md` - Reference for dlt resources — the @dlt.resource decorator, write_disposition, table_name, primary_key, merge_key, and incremental hints. Covers dynamic resource creation, apply_hints(), transformer resources, and dispatching data to multiple tables.
 - **Review dlt schema** `dlt:general-usage/dataset-access/view-dlt-schema.md` - View your dlt schema via files, CLI, static and interactive diagram ⚡ GREP - `grep -n '^## ' view-dlt-schema.md -A 20`
-- **Running** `dlt:running-in-production/running.md` - Running a dlt pipeline in production
-- **Salesforce** `dlt:dlt-ecosystem/verified-sources/salesforce.md` - dlt pipeline for Salesforce API
-- **Schema** `dlt:general-usage/schema.md` - Schema
-- **Schema and data contracts** `dlt:general-usage/schema-contracts.md` - Controlling schema evolution and validating data
+- **Running** `dlt:running-in-production/running.md` - Guide to running dlt pipelines in production: inspecting and saving load_info (started_at, packages, jobs, error messages), loading trace info into the destination, monitoring patterns, and retry strategies.
+- **Salesforce** `dlt:dlt-ecosystem/verified-sources/salesforce.md` - dlt verified source for loading Salesforce CRM data via SOQL queries. Covers OAuth/username-password authentication and loading standard/custom Salesforce objects.
+- **Schema** `dlt:general-usage/schema.md` - Comprehensive reference for dlt schemas: content-based version hash, numeric versioning, naming conventions for tables/columns, data types, variant columns, nested data unnesting, compound hints (primary_key, merge_key, partition), and schema import/export.
+- **Schema and data contracts** `dlt:general-usage/schema-contracts.md` - Guide to dlt schema contracts for controlling schema evolution. Schema entities: tables, columns, data_type. Contract modes: evolve (default), freeze (exception on deviation), discard_row, discard_value. Shows how to apply contracts to sources and resources.
 - **Schema evolution** `dlt:general-usage/schema-evolution.md` - A small guide to elaborate on how schema evolution works
-- **Scrapy** `dlt:dlt-ecosystem/verified-sources/scrapy.md` - dlt verified source for Scraping using scrapy
+- **Scrapy** `dlt:dlt-ecosystem/verified-sources/scrapy.md` - dlt verified source integrating Scrapy for web scraping pipelines. Enables yielding scraped data from Scrapy spiders directly into dlt resources.
 - **Setup** `dlt:dlt-ecosystem/verified-sources/sql_database/setup.md` - basic steps for setting up a dlt pipeline for SQL Database
-- **Shopify** `dlt:dlt-ecosystem/verified-sources/shopify.md` - dlt pipeline for Shopify API
-- **Slack** `dlt:dlt-ecosystem/verified-sources/slack.md` - dlt verified source for Slack API
-- **Snowflake** `dlt:dlt-ecosystem/destinations/snowflake.md` - Snowflake `dlt` destination
-- **Source** `dlt:general-usage/source.md` - Explanation of what a dlt source is
+- **Shopify** `dlt:dlt-ecosystem/verified-sources/shopify.md` - dlt verified source for loading Shopify e-commerce data (orders, products, customers, inventory). Covers Admin API access token setup and available resources.
+- **Slack** `dlt:dlt-ecosystem/verified-sources/slack.md` - dlt verified source for loading Slack workspace data (messages, channels, users, threads). Covers bot token authentication and channel selection.
+- **Snowflake** `dlt:dlt-ecosystem/destinations/snowflake.md` - Setup guide for Snowflake as a dlt destination. Covers database, user, and role creation, warehouse configuration, and credentials in secrets.toml including host, database, username, password, warehouse, and role.
+- **Source** `dlt:general-usage/source.md` - Reference for dlt sources — the @dlt.source decorator, dynamic resource creation, source configuration, combining and filtering sources, and async sources. Shows how to create reusable source libraries.
 - **Source: MS SQL replication** `dlt:hub/ecosystem/ms-sql.md` - MS SQL replication
-- **Sources** `dlt:dlt-ecosystem/verified-sources/index.md` - Available sources
-- **Staging** `dlt:dlt-ecosystem/staging.md` - Configure an S3 or GCS bucket for staging before copying into the destination
+- **Sources** `dlt:dlt-ecosystem/verified-sources/index.md` - Index of all dlt verified sources: community-maintained connectors tested against real APIs. Lists sources for Airtable, Asana, Chess, Facebook Ads, GitHub, Google products, HubSpot, Jira, Kafka, MongoDB, Notion, Salesforce, Slack, Stripe, Zendesk, and more.
+- **Staging** `dlt:dlt-ecosystem/staging.md` - Guide to configuring staging datasets in dlt: naming layout patterns (e.g., %s_staging), static staging dataset names, automatic cleanup via config.toml, and safety rules preventing staging/final dataset name collisions.
 - **State** `dlt:general-usage/state.md` - Explanation of what a dlt state is
-- **Strapi** `dlt:dlt-ecosystem/verified-sources/strapi.md` - dlt verified source for Strapi API
-- **Stripe** `dlt:dlt-ecosystem/verified-sources/stripe.md` - dlt verified source for Stripe API
+- **Strapi** `dlt:dlt-ecosystem/verified-sources/strapi.md` - dlt verified source for loading Strapi headless CMS content (entries, components, media). Covers API token setup and loading collections.
+- **Stripe** `dlt:dlt-ecosystem/verified-sources/stripe.md` - dlt verified source for loading Stripe payment platform data (charges, customers, invoices, subscriptions, events). Covers API key setup and available resources.
 - **Telemetry** `dlt:reference/telemetry.md` - Anonymous usage information with dlt telemetry
-- **Transform data in Python with Arrow tables or DataFrames** `dlt:dlt-ecosystem/transformations/python.md` - Transforming data loaded by a dlt pipeline with pandas dataframes or arrow tables
-- **Transform data with SQL** `dlt:dlt-ecosystem/transformations/sql.md` - Transforming the data loaded by a dlt pipeline with the dlt SQL client
+- **Transform data in Python with Arrow tables or DataFrames** `dlt:dlt-ecosystem/transformations/python.md` - Guide to Python-based ELT transformations in dlt using pipeline.dataset() to access loaded data as pandas DataFrames or Arrow tables. Shows post-load data manipulation with select(), df(), and arrow() methods.
+- **Transform data with SQL** `dlt:dlt-ecosystem/transformations/sql.md` - Guide to SQL-based ELT transformations in dlt via pipeline.sql_client(). Shows how to execute queries, retrieve data as Python tuples, pandas DataFrames, or Arrow tables using the sql_client context manager.
 - **Transform data with `add_map`** `dlt:dlt-ecosystem/transformations/add-map.md` - Apply lightweight python transformations to your data inline using `add_map`.
-- **Transform data with dbt** `dlt:dlt-ecosystem/transformations/dbt/dbt.md` - Transforming the data loaded by a dlt pipeline with dbt
+- **Transform data with dbt** `dlt:dlt-ecosystem/transformations/dbt/dbt.md` - Guide to using dbt with dlt via the dbt runner. The runner creates virtual environments on-the-fly, runs dbt packages from GitHub or local files, and passes dlt credentials to dbt automatically. Shows integration pattern with dlt pipelines.
 - **Transformations** `dlt:hub/features/transformations/index.md` - Define Python-based or mixed SQL + Python transformations on data that is **already** in your destination.
-- **Transforming your data** `dlt:dlt-ecosystem/transformations/index.md` - How to transform your data
-- **Troubleshooting** `dlt:dlt-ecosystem/verified-sources/sql_database/troubleshooting.md` - common troubleshooting use-cases for the sql_database source
+- **Transforming your data** `dlt:dlt-ecosystem/transformations/index.md` - Overview of dlt transformation patterns: ETL (transform before load via add_map() or @dlt.transformer) vs ELT (transform at destination via SQL, dbt, or Python). Introduces @dlt.hub.transformation for Python-defined transformations running eagerly or lazily.
+- **Troubleshooting** `dlt:dlt-ecosystem/verified-sources/sql_database/troubleshooting.md` - Troubleshooting guide for the dlt SQL Database source: common connection errors, SQLAlchemy driver issues, type mapping problems, and incremental loading gotchas.
 - **Troubleshooting incremental loading** `dlt:general-usage/incremental/troubleshooting.md` - Common issues and how to fix them
-- **URL-parser data enrichment** `dlt:general-usage/data-enrichments/url-parser-data-enrichment.md` - Enriching the url with various parameters.
-- **Usage** `dlt:dlt-ecosystem/verified-sources/sql_database/usage.md` - basic usage of the sql_database source
-- **User-agent device data enrichment** `dlt:general-usage/data-enrichments/user_agent_device_data_enrichment.md` - Enriching the user-agent device data with average device price.
+- **URL-parser data enrichment** `dlt:general-usage/data-enrichments/url-parser-data-enrichment.md` - Guide to URL parser data enrichment using the URL Parse API. Shows how to enrich raw URL strings with parsed components (domain, path, query params) as an add_map() transformation step.
+- **Usage** `dlt:dlt-ecosystem/verified-sources/sql_database/usage.md` - Advanced usage patterns for the dlt SQL Database source: query_adapter_callback for custom WHERE filters, writing custom SQL queries, column type overrides, and handling large table loads efficiently.
+- **User-agent device data enrichment** `dlt:general-usage/data-enrichments/user_agent_device_data_enrichment.md` - Guide to user-agent device data enrichment using SerpAPI for device pricing lookup. Shows pattern for enriching user-agent strings with device type and price metadata via Google Shopping API.
 - **Weaviate** `dlt:dlt-ecosystem/destinations/weaviate.md` - Weaviate is an open source vector database that can be used as a destination in dlt.
-- **Workable** `dlt:dlt-ecosystem/verified-sources/workable.md` - dlt pipeline for Workable API
-- **Zendesk** `dlt:dlt-ecosystem/verified-sources/zendesk.md` - dlt pipeline for Zendesk API
+- **Workable** `dlt:dlt-ecosystem/verified-sources/workable.md` - dlt verified source for loading Workable HR/recruiting data (jobs, candidates, applications). Covers API bearer token setup and available resources.
+- **Zendesk** `dlt:dlt-ecosystem/verified-sources/zendesk.md` - dlt verified source for loading Zendesk customer support data (tickets, users, organizations, ticket events). Covers OAuth/API token authentication and incremental loading.
 - **dbt model generator** `dlt:hub/features/transformations/dbt-transformations.md` - Generate dbt models automatically
-- **🧪 Dremio** `dlt:dlt-ecosystem/destinations/dremio.md` - Dremio `dlt` destination
+- **🧪 Dremio** `dlt:dlt-ecosystem/destinations/dremio.md` - Setup guide for Dremio as a dlt destination using S3 filesystem staging. Covers project initialization, credential configuration for both Dremio and S3, and required dependencies (s3fs, pyarrow, botocore).
 
 ## tutorial
 
-- **Build advanced dlt pipeline from scratch** `dlt:tutorial/load-data-from-an-api.md` - Build custom, production grade pipeline just by writing code
-- **Education** `dlt:tutorial/education.md` - Learn the fundamentals and advanced concepts of dlt with self-paced courses. Start with pipelines, resources, sources, pagination, schema, and state, then move on to custom sources, complex APIs, dest
-- **Load data from a REST API** `dlt:tutorial/rest-api.md` - How to extract data from a REST API using dlt's REST API source
-- **Load data from a SQL database** `dlt:tutorial/sql-database.md` - How to extract data from a SQL Database using dlt's SQL Database core source
-- **Load data from a cloud storage or a file system** `dlt:tutorial/filesystem.md` - Learn how to load data files like JSON, JSONL, CSV, and Parquet from a cloud storage (AWS S3, Google Cloud Storage, Google Drive, Azure Blob Storage) or a local file system using dlt.
+- **Build advanced dlt pipeline from scratch** `dlt:tutorial/load-data-from-an-api.md` - Tutorial for building a custom dlt source from a REST API. Covers @dlt.resource creation, grouping into @dlt.source, secret handling, and creating reusable data sources. GitHub API used as example.
+- **Education** `dlt:tutorial/education.md` - Overview of dlt educational resources: Fundamentals Course (pipelines, resources, sources, configuration, schema, incremental loading, REST APIs) and Advanced Course (custom sources, destinations, REST APIs, SQL databases, filesystems, production).
+- **Load data from a REST API** `dlt:tutorial/rest-api.md` - Tutorial for using the dlt REST API source. Covers resource relationships, write dispositions (append/replace/merge), and incremental loading patterns using the declarative rest_api_source configuration.
+- **Load data from a SQL database** `dlt:tutorial/sql-database.md` - Tutorial for loading SQL database data to DuckDB using dlt. Covers 'dlt init sql_database duckdb', configuring database connections, and running the sql_database source.
+- **Load data from a cloud storage or a file system** `dlt:tutorial/filesystem.md` - Tutorial for loading files from a filesystem to DuckDB using dlt. Covers project setup via 'dlt init filesystem duckdb', file source configuration, and running the pipeline.
 - **Pipeline tutorial** `dlt:build-a-pipeline-tutorial.md` - Build a data pipeline with dlt from scratch
 - **Playground** `dlt:tutorial/playground.mdx` - dlt playground in Marimo Notebook
 - **dlt Advanced Course** `dlt:tutorial/advanced-course.md` - Master advanced dlt concepts with this comprehensive course covering custom sources, destinations, transformations, data contracts and performance optimization.
@@ -192,44 +192,44 @@
 
 ## unknown
 
-- **null** `dlt:dlt-ecosystem/file-formats.md` - Pending re-scan
-- **null** `dlt:dlt-ecosystem/transformations/dlthub.md` - Pending re-scan
-- **null** `dlt:hub/cookbook/build-streamlit-dashboard.md` - Pending re-scan
-- **null** `dlt:hub/data-discovery/datasets.md` - Pending re-scan
-- **null** `dlt:hub/data-quality/advanced.md` - Pending re-scan
-- **null** `dlt:hub/data-quality/index.md` - Pending re-scan
-- **null** `dlt:hub/getting-started/introduction.md` - Pending re-scan
-- **null** `dlt:hub/getting-started/oss-and-dlthub.md` - Pending re-scan
-- **null** `dlt:hub/getting-started/platform-tutorial.md` - Pending re-scan
-- **null** `dlt:hub/ingestion/dashboard.md` - Pending re-scan
-- **null** `dlt:hub/ingestion/delta.md` - Pending re-scan
-- **null** `dlt:hub/ingestion/iceberg.md` - Pending re-scan
-- **null** `dlt:hub/ingestion/init.md` - Pending re-scan
-- **null** `dlt:hub/ingestion/ms-sql.md` - Pending re-scan
-- **null** `dlt:hub/ingestion/playground.md` - Pending re-scan
-- **null** `dlt:hub/ingestion/rest-api-source.md` - Pending re-scan
-- **null** `dlt:hub/ingestion/snowflake-plus.md` - Pending re-scan
-- **null** `dlt:hub/license.md` - Pending re-scan
-- **null** `dlt:hub/notifications/email.md` - Pending re-scan
-- **null** `dlt:hub/notifications/slack.md` - Pending re-scan
-- **null** `dlt:hub/pipeline-operations/deployments.md` - Pending re-scan
-- **null** `dlt:hub/pipeline-operations/job-configuration.md` - Pending re-scan
-- **null** `dlt:hub/pipeline-operations/monitoring.md` - Pending re-scan
-- **null** `dlt:hub/pipeline-operations/overview.md` - Pending re-scan
-- **null** `dlt:hub/pipeline-operations/profiles.md` - Pending re-scan
-- **null** `dlt:hub/pipeline-operations/secrets-management.md` - Pending re-scan
-- **null** `dlt:hub/pipeline-operations/triggers.md` - Pending re-scan
-- **null** `dlt:hub/pipeline-operations/workspace-setup.md` - Pending re-scan
-- **null** `dlt:hub/platform-capabilities/regions.md` - Pending re-scan
-- **null** `dlt:hub/platform-capabilities/settings.md` - Pending re-scan
-- **null** `dlt:hub/platform-capabilities/users-and-roles.md` - Pending re-scan
-- **null** `dlt:hub/transformations/dbt-transformations.md` - Pending re-scan
-- **null** `dlt:hub/transformations/explore-and-transform.md` - Pending re-scan
-- **null** `dlt:hub/transformations/index.md` - Pending re-scan
-- **null** `dlt:walkthroughs/deploy-a-pipeline/deploy-with-dlthub.md` - Pending re-scan
-- **null** `dlt:walkthroughs/deploy-a-pipeline/index.md` - Pending re-scan
-- **null** `dlt:walkthroughs/deploy-a-pipeline/orchestrate-with-dlthub.md` - Pending re-scan
+- **null** `dlt:dlt-ecosystem/file-formats.md` - Guide to dlt loader file formats: how to configure format at resource level (@dlt.resource(file_format=...)) or pipeline level (pipeline.run(..., loader_file_format=...)). Covers Parquet (requires pyarrow), JSONL, CSV, and insert-values formats.
+- **null** `dlt:dlt-ecosystem/transformations/dlthub.md` - Guide to dltHub @dlt.hub.transformation decorator for Python-defined transformations running eagerly (local compute: DuckDB, Pandas, Polars, Arrow) or lazily (warehouse SQL). Same code, executed where it makes sense. Supports incremental processing and all write dispositions.
+- **null** `dlt:hub/cookbook/build-streamlit-dashboard.md` - Guide to building and deploying a Streamlit app on dltHub. Shows how to create a Streamlit dashboard against a dlt dataset and deploy it to app.dlthub.com. Prerequisites: uv add streamlit.
+- **null** `dlt:hub/data-discovery/datasets.md` - dltHub datasets as the serving layer for loaded data: physical data + dlt metadata at a destination. One destination can host multiple datasets. Covers dataset isolation, schema propagation, and the Python access surface (pipeline.dataset(), ReadableRelation).
+- **null** `dlt:hub/data-quality/advanced.md` - Advanced dltHub data quality configuration: metrics/checks as DltSource objects enabling separate destination for results, disjoint execution from primary pipeline.run(), dynamic modification, and centralized data quality pipelines.
+- **null** `dlt:hub/data-quality/index.md` - Introduction to dltHub data quality features (public preview): metrics (scalar properties of data via @with_metrics) and checks (expectations to validate against). Covers defining static metrics on resources and the symmetry between metrics and checks.
+- **null** `dlt:hub/getting-started/introduction.md` - Introduction to dltHub as a managed agentic platform for dlt. Quickstart via 'uvx dlthub-start@latest', which scaffolds a workspace, installs dependencies, logs in, runs a sample pipeline in Playground, and launches an AI coding agent.
+- **null** `dlt:hub/getting-started/oss-and-dlthub.md` - Explains the two dltHub products: dlt (open source, Apache 2.0) and dltHub (commercial). Feature comparison table showing what's included in each: OSS ingestion, AI Workbench, data quality, transformations, managed runtime, premium sources/destinations.
+- **null** `dlt:hub/getting-started/platform-tutorial.md` - Tutorial for deploying a dlt pipeline to the managed dltHub platform: deploying a pipeline, deploying an always-fresh dashboard, and adding Python transformations to ELT jobs. Covers the managed infrastructure benefits.
+- **null** `dlt:hub/ingestion/dashboard.md` - Guide to the dltHub pipeline and dataset troubleshooting dashboard (marimo-based web app). Available locally and on the dltHub platform under Notebooks. Provides pipeline health, schema inspection, run traces, and data quality review.
+- **null** `dlt:hub/ingestion/delta.md` - dltHub commercial Delta Lake destination. Based on the dlt filesystem destination; requires deltalake pip package and a dltHub workspace. Covers setup via uvx dlthub-init and pipeline initialization with dlthub pipeline init.
+- **null** `dlt:hub/ingestion/iceberg.md` - dltHub commercial Apache Iceberg destination using pyiceberg. Supports SQL and REST catalogs, ACID transactions, schema evolution, all write dispositions. Works with S3, Azure, GCS, and local storage.
+- **null** `dlt:hub/ingestion/init.md` - Guide to initializing dlt pipelines in dltHub Workspace via 'dlthub pipeline init'. Two methods: manual scaffold or from verified sources. Compares dlthub vs OSS dlt init commands and workspace vs standalone usage.
+- **null** `dlt:hub/ingestion/ms-sql.md` - dltHub commercial MS SQL Server Change Tracking source for CDC-like incremental replication. Uses SQL Server native Change Tracking (not CDC log). Covers enabling Change Tracking on database and tables.
+- **null** `dlt:hub/ingestion/playground.md` - dltHub Playground destination: zero-config managed destination for testing on the platform. Writes to Delta tables in a managed S3 bucket per workspace. Intended for demos and quick starts, not production.
+- **null** `dlt:hub/ingestion/rest-api-source.md` - Guide to building REST API sources with the dltHub AI Workbench rest-api-pipeline toolkit. Provides structured guided workflow (skills, rules, MCP server) for building production-grade connectors in Claude Code, Cursor, and Codex.
+- **null** `dlt:hub/ingestion/snowflake-plus.md` - dltHub commercial Snowflake+ destination with Apache Iceberg tables and Open Catalog (Polaris) support. Drop-in replacement for OSS Snowflake destination with Iceberg table creation, compaction, and automatic CATALOG SYNC.
+- **null** `dlt:hub/license.md` - dltHub commercial license (Copyright 2026 ScaleVector GmbH). Defines terms for dltHub Services including Platform and toolkits. Covers definitions of Agreement, Services, and Derivative Works.
+- **null** `dlt:hub/notifications/email.md` - Guide to sending email notifications from dltHub pipelines on job success/failure using Python's smtplib with Gmail SMTP. Covers Gmail App Password setup (2-Step Verification required) and pattern for other SMTP providers.
+- **null** `dlt:hub/notifications/slack.md` - Guide to sending Slack notifications from dltHub pipelines using send_slack_message() and pipeline.runtime_config.slack_incoming_hook. Covers Slack incoming webhook setup and pattern for job completion alerts.
+- **null** `dlt:hub/pipeline-operations/deployments.md` - Guide to deploying code to the dltHub platform: ad-hoc launch via 'dlthub run/serve', and manifest-based deployment via __deployment__.py with 'dlthub deploy'. Manifest enables scheduling, follow-up triggers, freshness checks, and multi-job workspaces.
+- **null** `dlt:hub/pipeline-operations/job-configuration.md` - Reference for per-job dltHub configuration: execution timeout (execute={'timeout': '6h'}), grace period, dependency groups (require=), exposing ports for interactive apps (expose=), and TOML section targeting.
+- **null** `dlt:hub/pipeline-operations/monitoring.md` - Guide to monitoring dltHub pipelines via CLI and Web UI. Covers 'dlthub workspace info' for status summaries, inspecting logs, diagnosing failures, and using the app.dlthub.com dashboard.
+- **null** `dlt:hub/pipeline-operations/overview.md` - Overview of the dltHub managed cloud platform for running dlt pipelines, transformations, and notebooks. Mirrors local workspace to cloud. Links to workspace setup, deployments, triggers, and job configuration guides.
+- **null** `dlt:hub/pipeline-operations/profiles.md` - Guide to dltHub workspace profiles for environment-specific configurations: dev, prod, and access profiles backed by TOML files in .dlt/. Profiles provide isolated credentials, working directories, and configurations for different environments.
+- **null** `dlt:hub/pipeline-operations/secrets-management.md` - Guide to secrets management in dltHub: platform-managed encryption (at-rest in private VPC, short-lived access tokens at runtime), bring-your-own-vault option (Google Secret Manager), and profile-based separation (prod/dev).
+- **null** `dlt:hub/pipeline-operations/triggers.md` - Reference for dltHub triggers and scheduling: trigger.every() for intervals, cron expressions, follow-up chains, freshness gates, refresh cascades, and tag-based bulk operations. Triggers are defined in Python decorators and deployed with the workspace.
+- **null** `dlt:hub/pipeline-operations/workspace-setup.md` - Guide to converting a Python project into a dltHub platform workspace via uvx dlthub-init@latest. Creates .dlt/.workspace marker, config/secrets files, managed pyproject.toml, and dltHub AI skills. Then configures dev/prod/access profiles.
+- **null** `dlt:hub/platform-capabilities/regions.md` - dltHub platform architecture: control plane (US) paired with regional data planes (US or Europe). Explains where code, config, secrets, and workload data are processed/stored. Includes architecture diagram.
+- **null** `dlt:hub/platform-capabilities/settings.md` - dltHub Settings page reference: workspace settings (name, connection info, usage chart, members), organization settings (billing, organization members, API keys), and user settings. Describes role-based edit permissions.
+- **null** `dlt:hub/platform-capabilities/users-and-roles.md` - dltHub access control model: two-level system with organization roles and workspace roles. Authentication methods: GitHub OAuth, Google OAuth, email signup, API keys (prefixed dlt_). Describes organization Admin/Member and workspace Owner/Editor/Viewer roles.
+- **null** `dlt:hub/transformations/dbt-transformations.md` - Guide to dltHub's dbt model generator: auto-generates staging and fact dbt models from dlt pipeline schemas. Supports incremental loading, relationship hints for fact tables, and works as standalone or integrated with local transformations.
+- **null** `dlt:hub/transformations/explore-and-transform.md` - dltHub AI Workbench toolkits for post-load exploration and transformation: data-exploration (profiles data, creates marimo dashboard with Altair charts) and transformations (maps to Kimball CDM, generates @dlt.hub.transformation functions).
+- **null** `dlt:hub/transformations/index.md` - Overview of dltHub transformations via @dlt.hub.transformation decorator: reshapes already-loaded data by yielding SQL queries or Ibis expressions compiled to destination dialect. Supports all write dispositions and SQL destinations including filesystems.
+- **null** `dlt:walkthroughs/deploy-a-pipeline/deploy-with-dlthub.md` - Guide to deploying dlt pipelines to the managed dltHub platform. Explains what dltHub provides: one-command deploys, cron/event-driven triggers, isolated profiles, and workspace dashboard.
+- **null** `dlt:walkthroughs/deploy-a-pipeline/index.md` - Overview of dlt deployment options: runs anywhere Python runs. Lists deployment guides for GitHub Actions, Airflow/Composer, Google Cloud Functions, Prefect, and dltHub managed platform. Highlights dlthub deploy as simplest path.
+- **null** `dlt:walkthroughs/deploy-a-pipeline/orchestrate-with-dlthub.md` - Walkthrough for deploying and scheduling dlt pipelines with dltHub's managed orchestrator using @dlt.hub.run decorators. Covers workspace scaffolding, ad-hoc runs, __deployment__.py manifest, and trigger configuration.
 
 ---
 
-*Rendered from index.yaml at 2026-07-02T00:00:00Z*
+*Rendered from index.yaml at 2026-07-01T16:10:48Z*

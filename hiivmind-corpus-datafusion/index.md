@@ -1,114 +1,117 @@
 # DataFusion Documentation Index
 
-> Sources: 2 | Entries: 108 | Generated: 2026-07-02T00:00:00Z
+> Sources: 2 | Entries: 100 | Generated: 2026-07-01T16:01:58Z
 > Generated from `index.yaml` — do not edit directly
 
 ---
 
 ## Python Bindings
 
-- **null** `datafusion-python:contributor-guide/ffi.md` - Pending re-scan
-- **null** `datafusion-python:contributor-guide/index.md` - Pending re-scan
-- **null** `datafusion-python:contributor-guide/introduction.md` - Pending re-scan
-- **null** `datafusion-python:user-guide/ai-coding-assistants.md` - Pending re-scan
-- **null** `datafusion-python:user-guide/basics.md` - Pending re-scan
-- **null** `datafusion-python:user-guide/common-operations/aggregations.md` - Pending re-scan
-- **null** `datafusion-python:user-guide/common-operations/basic-info.md` - Pending re-scan
-- **null** `datafusion-python:user-guide/common-operations/expressions.md` - Pending re-scan
-- **null** `datafusion-python:user-guide/common-operations/functions.md` - Pending re-scan
-- **null** `datafusion-python:user-guide/common-operations/index.md` - Pending re-scan
-- **null** `datafusion-python:user-guide/common-operations/joins.md` - Pending re-scan
-- **null** `datafusion-python:user-guide/common-operations/select-and-filter.md` - Pending re-scan
-- **null** `datafusion-python:user-guide/common-operations/spark-functions.md` - Pending re-scan
-- **null** `datafusion-python:user-guide/common-operations/udf-and-udfa.md` - Pending re-scan
-- **null** `datafusion-python:user-guide/common-operations/views.md` - Pending re-scan
-- **null** `datafusion-python:user-guide/common-operations/windows.md` - Pending re-scan
-- **null** `datafusion-python:user-guide/configuration.md` - Pending re-scan
-- **null** `datafusion-python:user-guide/data-sources.md` - Pending re-scan
-- **null** `datafusion-python:user-guide/dataframe/execution-metrics.md` - Pending re-scan
-- **null** `datafusion-python:user-guide/dataframe/index.md` - Pending re-scan
-- **null** `datafusion-python:user-guide/dataframe/rendering.md` - Pending re-scan
-- **null** `datafusion-python:user-guide/distributing-work.md` - Pending re-scan
-- **null** `datafusion-python:user-guide/index.md` - Pending re-scan
-- **null** `datafusion-python:user-guide/introduction.md` - Pending re-scan
-- **null** `datafusion-python:user-guide/io/arrow.md` - Pending re-scan
-- **null** `datafusion-python:user-guide/io/avro.md` - Pending re-scan
-- **null** `datafusion-python:user-guide/io/csv.md` - Pending re-scan
-- **null** `datafusion-python:user-guide/io/index.md` - Pending re-scan
-- **null** `datafusion-python:user-guide/io/json.md` - Pending re-scan
-- **null** `datafusion-python:user-guide/io/parquet.md` - Pending re-scan
-- **null** `datafusion-python:user-guide/io/table_provider.md` - Pending re-scan
-- **null** `datafusion-python:user-guide/sql.md` - Pending re-scan
-- **null** `datafusion-python:user-guide/upgrade-guides.md` - Pending re-scan
-- **Create Table (Python)** `datafusion-python:mdbook/src/usage/create-table.md` - Guide for creating tables from Python dicts, CSV, and Parquet files.
-- **DataFusion Book** `datafusion-python:mdbook/src/index.md` - Introduction to DataFusion as a high-performance query engine with Python and SQL bindings.
-- **DataFusion Quickstart (Python)** `datafusion-python:mdbook/src/quickstart.md` - Quick intro demonstrating DataFrame creation and queries using SQL and Python APIs.
-- **Installation (Python)** `datafusion-python:mdbook/src/installation.md` - Installation guide for DataFusion Python using uv and pip, plus JupyterLab setup.
-- **Query Plans (Python)** `datafusion-python:mdbook/src/usage/query-plans.md` - Understanding logical, optimized, and physical query plans with GraphViz visualization.
-- **Query Table (Python)** `datafusion-python:mdbook/src/usage/query-table.md` - Querying tables using SQL and Python APIs with filtering and aggregation examples.
-- **Summary** `datafusion-python:mdbook/src/SUMMARY.md` - Table of contents for DataFusion Python documentation.
-- **Usage (Python)** `datafusion-python:mdbook/src/usage/index.md` - Overview of creating DataFrames from various data sources and querying with SQL or Python.
+- **null** `datafusion-python:contributor-guide/ffi.md` - Explains DataFusion Python's extension model via FFI: how to implement DataFusion Rust traits in Python packages using PyCapsule, PyO3 class mutability requirements (#[pyclass(frozen)]), and the challenges of cross-package Rust trait objects.
+- **null** `datafusion-python:contributor-guide/index.md` - Entry point for DataFusion Python contributors. Lists types of contributions welcome (issues, docs, code review, PRs), links to FFI extension guidelines, and community norms around PR review.
+- **null** `datafusion-python:contributor-guide/introduction.md` - Introduction for new DataFusion Python contributors. Covers how to develop locally, required review of PyO3 mutability guidelines before touching bindings, and the community PR review culture.
+- **null** `datafusion-python:user-guide/ai-coding-assistants.md` - Describes machine-readable guidance published for AI coding assistants (SKILL.md, llms.txt) to help produce idiomatic DataFusion Python code. Explains how to configure tools like Claude, Copilot, and Cursor to use these files.
+- **null** `datafusion-python:user-guide/basics.md` - Introduces key DataFusion Python concepts through a taxi trip data example: creating a SessionContext, loading Parquet data, running SQL queries, and using the DataFrame API for transformations. Explains lazy evaluation and result collection.
+- **null** `datafusion-python:user-guide/common-operations/aggregations.md` - Guide to aggregation operations in DataFusion Python: using groupby(), aggregate(), and built-in aggregate functions (sum, count, mean, min, max). Covers grouped aggregation and aggregate expressions via the DataFrame API.
+- **null** `datafusion-python:user-guide/common-operations/basic-info.md` - Basic DataFrame inspection operations: schema(), dtypes(), count(), show(), describe(), and column access. Demonstrates how to get metadata and preview data from a DataFusion DataFrame.
+- **null** `datafusion-python:user-guide/common-operations/expressions.md` - Guide to building and using DataFusion Python expressions: column references (col), literals (lit), arithmetic and boolean operators, and how to compose expressions for use in filter(), select(), and other DataFrame methods.
+- **null** `datafusion-python:user-guide/common-operations/functions.md` - Overview of built-in DataFusion Python functions available in datafusion.functions: scalar functions for strings, math, dates, and arrays. Shows how to import and use functions in DataFrame expressions.
+- **null** `datafusion-python:user-guide/common-operations/index.md` - Index page for the Common Operations section of the DataFusion Python user guide, linking to chapters on views, basic info, select/filter, expressions, aggregations, joins, windows, functions, UDFs, and Spark-compatible functions.
+- **null** `datafusion-python:user-guide/common-operations/joins.md` - Guide to joining DataFrames in DataFusion Python: inner, left, right, full outer, semi, and anti joins using the join() method. Covers join key specification, join conditions, and the resulting DataFrame schema.
+- **null** `datafusion-python:user-guide/common-operations/select-and-filter.md` - Guide to column selection and row filtering in DataFusion Python: select(), select_columns(), filter(), and drop() methods. Covers expression-based filtering, column renaming with alias(), and combining operations.
+- **null** `datafusion-python:user-guide/common-operations/spark-functions.md` - Documents Spark-compatible functions in DataFusion Python via datafusion.functions.spark and SessionContext.enable_spark_functions(). Covers string, math, datetime, hash, array, and aggregate functions compatible with PySpark semantics.
+- **null** `datafusion-python:user-guide/common-operations/udf-and-udfa.md` - Guide to User-Defined Functions (UDFs) and User-Defined Aggregate Functions (UDAFs) in DataFusion Python. Shows how to register Python functions as UDFs using udf() and udaf() decorators and use them in DataFrame expressions.
+- **null** `datafusion-python:user-guide/common-operations/views.md` - How to register DataFusion DataFrames as named views using register_view(). Allows reusing a DataFrame as a virtual table in subsequent SQL queries or DataFrame operations without materializing results.
+- **null** `datafusion-python:user-guide/common-operations/windows.md` - Guide to window functions in DataFusion Python: using window_frame(), order_by(), and partition_by() in conjunction with window functions like row_number(), rank(), and lead/lag. Demonstrates expression-based window specification.
+- **null** `datafusion-python:user-guide/configuration.md` - How to configure DataFusion Python sessions via SessionConfig and RuntimeEnvBuilder passed to SessionContext. Covers execution settings (parallelism, batch size), memory limits, and common runtime options.
+- **null** `datafusion-python:user-guide/data-sources.md` - Overview of data sources supported in DataFusion Python: reading CSV, Parquet, JSON, Arrow, and Avro files via SessionContext methods; registering custom data sources; and using SQL against registered tables.
+- **null** `datafusion-python:user-guide/dataframe/execution-metrics.md` - Explains DataFusion execution metrics: per-operator runtime statistics (rows processed, elapsed time, bytes read) collected during query execution. Shows how to access metrics from the physical plan after calling collect().
+- **null** `datafusion-python:user-guide/dataframe/index.md` - Overview of the DataFusion Python DataFrame class: lazy evaluation model, available transformation methods (filter, select, aggregate, join, sort, limit), and terminal operations (collect, show, to_pandas, to_arrow).
+- **null** `datafusion-python:user-guide/dataframe/rendering.md` - DataFusion Python DataFrame rendering configuration for Jupyter notebooks (HTML via _repr_html_) and terminals (__repr__). Documents the datafusion.dataframe_formatter module and options for controlling display format.
+- **null** `datafusion-python:user-guide/distributing-work.md` - Guide to distributing DataFusion Python work across processes by serializing Expr objects for worker evaluation. Explains the driver/worker pattern for embarrassingly parallel workloads and references the in-progress datafusion-distributed project for query-level distribution.
+- **null** `datafusion-python:user-guide/index.md` - Index page for the DataFusion Python user guide, linking to installation, basics/concepts, data sources, DataFrame API, common operations, IO formats, configuration, distributing work, SQL, and upgrade guides.
+- **null** `datafusion-python:user-guide/introduction.md` - Introduction to the DataFusion Python user guide. Explains the purpose of the Python bindings for Apache Arrow DataFusion and provides an orientation to the guide structure.
+- **null** `datafusion-python:user-guide/io/arrow.md` - Guide to reading and writing Arrow format data in DataFusion Python: reading Arrow IPC files and in-memory Arrow record batches, integrating with PyArrow datasets, and writing results to Arrow format.
+- **null** `datafusion-python:user-guide/io/avro.md` - Guide to reading Avro files in DataFusion Python using SessionContext.read_avro(). Shows the basic pattern for loading Avro serialized record data into a DataFrame.
+- **null** `datafusion-python:user-guide/io/csv.md` - Guide to reading CSV files in DataFusion Python using SessionContext.read_csv(). Covers schema inference, options for delimiter, header, and null values.
+- **null** `datafusion-python:user-guide/io/index.md` - Index page for DataFusion Python IO documentation, linking to guides for Arrow, Avro, CSV, JSON, Parquet, and custom table provider integration.
+- **null** `datafusion-python:user-guide/io/json.md` - Guide to reading JSON files in DataFusion Python using SessionContext.read_json(). Covers newline-delimited JSON (NDJSON) format and schema inference options.
+- **null** `datafusion-python:user-guide/io/parquet.md` - Guide to reading Parquet files in DataFusion Python using SessionContext.read_parquet(). Covers partition pruning, predicate pushdown, schema projection, and the lazy evaluation model for efficient Parquet reads.
+- **null** `datafusion-python:user-guide/io/table_provider.md` - Guide to integrating custom Rust TableProvider implementations with DataFusion Python via FFI_TableProvider and PyCapsule. Requires DataFusion 43.0.0+. Explains the process and links to complete examples.
+- **null** `datafusion-python:user-guide/sql.md` - Guide to executing SQL in DataFusion Python via SessionContext.sql(). Covers registering tables, running SELECT queries, SQL-to-DataFrame conversion, and mixing SQL with the programmatic DataFrame API.
+- **null** `datafusion-python:user-guide/upgrade-guides.md` - Upgrade guides for DataFusion Python breaking changes. Current entries: 54.0.0 removes the Config class in favor of SessionConfig; provides before/after migration examples.
 
 ## guide
 
+- **null** `datafusion:contributor-guide/inviting.md` - Process for DataFusion PMC members to invite new committers and PMC members. Covers evaluation criteria, the private discussion process, formal nomination via ASF tooling, and links to the private mailing list archive for examples.
+- **null** `datafusion:library-user-guide/upgrading/49.0.0.md` - Upgrade guide for DataFusion 49.0.0. Key breaking changes: MSRV bumped to Rust 1.85.1, DataFusionError variants are now Box-wrapped to reduce size and async state machine overhead.
+- **null** `datafusion:library-user-guide/upgrading/53.0.0.md` - Upgrade guide for DataFusion 53.0.0. Key changes: arrow/parquet upgraded to 58.0.0, object_store to 0.13.0, ExecutionPlan::statistics() removed. Includes migration steps for each breaking change.
+- **null** `datafusion:library-user-guide/upgrading/54.0.0.md` - Upgrade guide for DataFusion 54.0.0 (pre-release). Key breaking changes: AggregateFunctionExpr::human_display() returns Option<&str>. Documents pending changes merged to main awaiting release.
+- **null** `datafusion:library-user-guide/upgrading/55.0.0.md` - Upgrade guide for DataFusion 55.0.0 (pre-release). Key breaking changes: SpillFile trait replaces RefCountedTempFile for pluggable spill backends; DiskManager::create_tmp_file now returns Arc<dyn SpillFile>.
 - **Adding User Defined Functions: Scalar/Window/Aggregate/Table Functions** `datafusion:library-user-guide/functions/adding-udfs.md` - User Defined Functions (UDFs) are functions that can be used in the context of DataFusion execution. This page covers how to add UDFs to DataFusion. In particular, it covers how to add Scalar, Window, ⚡ GREP - `grep -n '^## ' FILE -A 20`
 - **Building Logical Plans** `datafusion:library-user-guide/building-logical-plans.md` - A logical plan is a structured representation of a database query that describes the high-level operations and transformations needed to retrieve data from a database or data source. It abstracts away
 - **CLI Specific Functions** `datafusion:user-guide/cli/functions.md` - `datafusion-cli` comes with build-in functions that are not included in the DataFusion SQL engine by default. These functions are:
 - **Catalogs, Schemas, and Tables** `datafusion:library-user-guide/catalogs.md` - This section describes how to create and manage catalogs, schemas, and tables in DataFusion. For those wanting to dive into the code quickly please see the [example](https://github.com/apache/datafusi
-- **Custom Table Provider** `datafusion:library-user-guide/custom-table-providers.md` - One of DataFusion's greatest strengths is its extensibility. If your data lives in a custom format, behind an API, or in a system that DataFusion does not
+- **Crate Configuration** `datafusion:user-guide/crate-configuration.md` - Guide to configuring DataFusion as a Rust dependency: using nightly builds from GitHub, enabling/disabling Cargo features (mimalloc, pyarrow, etc.), and understanding the relationship between crate features and runtime behavior.
+- **Custom Table Provider** `datafusion:library-user-guide/custom-table-providers.md` - Guide to implementing custom TableProvider in DataFusion for data sources not natively supported. Explains the three abstraction layers (TableProvider, TableFactory, ExecutionPlan) and where planning vs execution logic belongs. Covers table constraint enforcement.
 - **DDL** `datafusion:user-guide/sql/ddl.md` - "DDL stands for ""Data Definition Language"" and relates to creating and modifying catalog objects such as Tables."
 - **DML** `datafusion:user-guide/sql/dml.md` - "DML stands for ""Data Manipulation Language"" and relates to inserting and modifying data in tables."
+- **DataFrame API** `datafusion:user-guide/dataframe.md` - Overview of DataFusion's DataFrame API: creating DataFrames from SessionContext (read_csv, read_parquet, SQL), chaining transformations (filter, select, aggregate, limit), lazy evaluation semantics, and collecting results with collect().
+- **Development Environment** `datafusion:contributor-guide/development_environment.md` - Quick-start guide for setting up a local DataFusion development environment: installing Rust, protoc, fetching test data submodules, building the workspace, and running tests. Includes platform-specific notes for Linux, macOS, and Windows.
 - **Download** `datafusion:download.md` - Most users use DataFusion as a library in their Rust projects by adding it as a dependency in their `Cargo.toml` file and downloading it from the Rust [crates.io] package registry.
-- **EXPLAIN** `datafusion:user-guide/sql/explain.md` - The `EXPLAIN` command shows the logical and physical execution plan for the specified SQL statement. EXPLAIN [ANALYZE] [VERBOSE] [FORMAT format] statement
-- **Example Usage** `datafusion:user-guide/example-usage.md` - In this example some simple processing is performed on the [`example.csv`](https://github.com/apache/datafusion/blob/main/datafusion/core/tests/data/example.csv) file. Even [`more code examples`](http
+- **Example Usage** `datafusion:user-guide/example-usage.md` - End-to-end example of using DataFusion as a Rust library: adding the dependency to Cargo.toml, creating a SessionContext, reading a CSV, running SQL queries, and retrieving results as Arrow RecordBatches.
 - **Extending Operators** `datafusion:library-user-guide/extending-operators.md` - DataFusion supports extending operators by transforming [`LogicalPlan`] and [`ExecutionPlan`] through customized [optimizer rules](https://docs.rs/datafusion/latest/datafusion/optimizer/trait.Optimize
 - **Extending SQL Syntax** `datafusion:library-user-guide/extending-sql.md` - DataFusion provides a flexible extension system that allows you to customize SQL parsing and planning without modifying the core codebase. This is useful when you
 - **Extensions List** `datafusion:library-user-guide/extensions.md` - "DataFusion tries to provide a good set of features ""out of the box"" to quickly start with a working system, but it can't include every useful feature (e.g."
-- **Format Options** `datafusion:user-guide/sql/format_options.md` - DataFusion supports customizing how data is read from or written to disk as a result of a `COPY`, `INSERT INTO`, or `CREATE EXTERNAL TABLE` statements. There are a few special options, file format (e.
 - **Gentle Arrow Introduction** `datafusion:user-guide/arrow-introduction.md` - DataFusion uses [Apache Arrow] as its native in-memory format, so anyone using DataFusion will likely interact with Arrow at some point. This guide introduces the key Arrow concepts you need to know t
 - **Information Schema** `datafusion:user-guide/sql/information_schema.md` - DataFusion supports showing metadata about the tables and views available. This information can be accessed using the views of the ISO SQL `information_schema` schema or the DataFusion specific `SHOW
 - **Introduction** `datafusion:library-user-guide/index.md` - The library user guide explains how to use the DataFusion library as a dependency in your Rust project and customize its behavior using its extension APIs.
-- **Introduction** `datafusion:user-guide/introduction.md` - DataFusion is a very fast, extensible query engine for building high-quality data-centric systems in [Rust](http://rustlang.org),
-- **Local Files / Directories** `datafusion:user-guide/cli/datasources.md` - Files can be queried directly by enclosing the file, directory name or a remote location in single `'` quotes as shown in the examples.
-- **Overview** `datafusion:user-guide/cli/overview.md` - DataFusion CLI (`datafusion-cli`) is an interactive command-line utility for executing SQL queries against any supported data files.
+- **Local Files / Directories** `datafusion:user-guide/cli/datasources.md` - CLI guide for querying local files and directories directly in datafusion-cli by enclosing paths in single quotes. Covers CSV, Parquet, JSON, and Arrow formats; querying directories; and reading from remote locations such as S3.
 - **Prepared Statements** `datafusion:user-guide/sql/prepared_statements.md` - The `PREPARE` statement allows for the creation and storage of a SQL statement with placeholder arguments. The prepared statements can then be executed repeatedly in an efficient manner.
-- **SELECT syntax** `datafusion:user-guide/sql/select.md` - The queries in DataFusion scan data from tables and return 0 or more rows. Please be aware that column names in queries are made lower-case, but not on the inferred schema. Accordingly, if you
+- **Reading Explain Plans** `datafusion:user-guide/explain-usage.md` - Guide to reading DataFusion query plans using EXPLAIN and EXPLAIN ANALYZE. Covers how to interpret logical and physical plan output, understand operator nodes, and use verbose mode for detailed plan inspection.
 - **Spark Compatible Functions** `datafusion:library-user-guide/functions/spark.md` - The [`datafusion-spark`] crate provides Apache Spark-compatible expressions for use with DataFusion.
 - **Struct Type Coercion and Field Mapping** `datafusion:user-guide/sql/struct_coercion.md` - DataFusion uses **name-based field mapping** when coercing struct types across different operations. This document explains how struct coercion works, when it applies, and how to handle NULL fields. W
 - **Subqueries** `datafusion:user-guide/sql/subqueries.md` - Subqueries (also known as inner queries or nested queries) are queries within a query.
 - **Table Constraint Enforcement** `datafusion:library-user-guide/table-constraints.md` - Table providers can describe table constraints using the [`TableConstraint`] and [`Constraints`] APIs. These constraints include
-- **Usage** `datafusion:user-guide/cli/usage.md` - See the current usage using `datafusion-cli --help`: Available commands inside DataFusion CLI are:
+- **Testing** `datafusion:contributor-guide/testing.md` - Testing guide for DataFusion contributors: running unit tests by crate, the sqllogictest suite for broad SQL regression coverage, integration tests, and best practices for test coverage when submitting new features or bug fixes.
 - **Using the SQL API** `datafusion:library-user-guide/using-the-sql-api.md` - DataFusion has a full SQL API that allows you to interact with DataFusion using SQL query strings. The simplest way to use the SQL API is to use the
-- **Working with `Expr`s** `datafusion:library-user-guide/working-with-exprs.md` - "`Expr` is short for ""expression"". It is a core abstraction in DataFusion for representing a computation, and follows the standard ""expression tree"" abstraction found in most compilers and databases. F"
+- **Working with `Expr`s** `datafusion:library-user-guide/working-with-exprs.md` - Explains the Expr abstraction in DataFusion — the expression tree used for computations in SQL and DataFrame APIs. Covers BinaryExpr, column references, literals, function calls, and how to traverse or transform expression trees programmatically.
+
+## overview
+
+- **Introduction** `datafusion:contributor-guide/index.md` - Entry point for DataFusion contributors covering types of contributions welcome (issues, discussions, documentation, code review, PRs), links to dev environment setup, issue tracking, and community communication channels.
+- **Introduction** `datafusion:user-guide/introduction.md` - Introduction to Apache DataFusion: a fast, extensible Rust query engine using Apache Arrow. Describes project goals (embeddable query engine for data-centric systems), key features (SQL+DataFrame APIs, CSV/Parquet/JSON/Avro support, Python bindings, customization), and links to benchmarks.
+- **Overview** `datafusion:user-guide/cli/overview.md` - Overview of datafusion-cli, the interactive SQL command-line tool for DataFusion. Describes its capabilities: SQL execution, CSV/Parquet/JSON/Arrow/Avro read-write support, local and remote (S3) data sources.
 
 ## reference
 
-- **API health policy** `datafusion:contributor-guide/api-health.md` - DataFusion is used extensively as a library in other applications and has a large public API. We try to keep the API well maintained and minimize breaking
+- **null** `datafusion:contributor-guide/communication.md` - Community communication channels for Apache DataFusion: GitHub repository for issues and PRs, Slack/Discord chat, mailing lists, and community calls. Describes the open participation model governed by ASF code of conduct.
+- **null** `datafusion:contributor-guide/governance.md` - Governance structure of Apache DataFusion as an ASF project. Describes decision-making by consensus, the role of committers and PMC members, independence from commercial interests, and links to Apache Way documentation.
+- **null** `datafusion:contributor-guide/release_management.md` - Overview of DataFusion's release cadence (approximately monthly major releases), branch strategy (main + branch-NN release branches), backport policy, and patch release criteria. Links to the full maintainer release process guide.
+- **API health policy** `datafusion:contributor-guide/api-health.md` - Documents DataFusion's API stability policy: what constitutes a breaking change in the public Rust API, how breaking changes are categorized (Major vs Minor under SemVer), the deprecation cycle, and guidance on submitting PRs that include breaking API changes.
 - **Aggregate Functions** `datafusion:user-guide/sql/aggregate_functions.md` - Aggregate functions operate on a set of values to compute a single result. Aggregate functions support the SQL `FILTER (WHERE ...)` clause to restrict which input rows contribute to the aggregate resu ⚡ GREP - `grep -n '^## ' FILE -A 20`
 - **Architecture** `datafusion:contributor-guide/architecture.md` - DataFusion's code structure and organization is described in the [crates.io documentation], to keep it as close to the source as
-- **Concepts, Readings, Events** `datafusion:user-guide/concepts-readings-events.md` - - **2024-06-13**: [2024 ACM SIGMOD International Conference on Management of Data: Apache Arrow DataFusion: A Fast, Embeddable, Modular Analytic Query Engine](https://dl.acm.org/doi/10.1145/3626246.36
-- **Configuration Settings** `datafusion:user-guide/configs.md` - DataFusion configurations control various aspects of DataFusion planning and execution You can set the options programmatically via the [`ConfigOptions`] object. For
-- **Crate Configuration** `datafusion:user-guide/crate-configuration.md` - This section contains information on how to configure builds of DataFusion in your Rust project. The [Configuration Settings] section lists options that
+- **Concepts, Readings, Events** `datafusion:user-guide/concepts-readings-events.md` - Curated list of background reading, conference talks, and recorded videos about DataFusion's architecture and query engine design. Includes SIGMOD 2024 paper, architecture video series, and the 'How Query Engines Work' online book.
+- **Configuration Settings** `datafusion:user-guide/configs.md` - Reference for all DataFusion configuration options (auto-generated from config.rs). Covers execution settings (target_partitions, batch_size), optimizer flags, memory limits, and how to set options programmatically via ConfigOptions or via SQL SET statements.
 - **Data Types** `datafusion:user-guide/sql/data_types.md` - DataFusion uses Arrow, and thus the Arrow type system, for query execution. The SQL types from
-- **DataFrame API** `datafusion:user-guide/dataframe.md` - A DataFrame represents a logical set of rows with the same named columns, similar to a [Pandas DataFrame] or [Spark DataFrame].
-- **Development Environment** `datafusion:contributor-guide/development_environment.md` - This section describes how you can get started at developing DataFusion. For the fastest path to a working local environment, follow these steps
-- **Expression API** `datafusion:user-guide/expressions.md` - DataFrame methods such as `select` and `filter` accept one or more logical expressions and there are many functions available for creating logical expressions. These are documented below.
+- **EXPLAIN** `datafusion:user-guide/sql/explain.md` - SQL reference for the EXPLAIN command in DataFusion. Syntax, EXPLAIN ANALYZE for runtime statistics, EXPLAIN VERBOSE for detailed output, and FORMAT options for choosing output representation (indent vs tree).
+- **Expression API** `datafusion:user-guide/expressions.md` - Reference for DataFusion's Expression API used in DataFrame methods like select() and filter(). Documents expression creation functions (col, lit, binary ops), fluent chaining patterns, and available scalar/aggregate expression builders.
 - **Features** `datafusion:user-guide/features.md` - - [x] SQL Parser - [x] SQL Query Planner
+- **Format Options** `datafusion:user-guide/sql/format_options.md` - Reference for format options in DataFusion's COPY, INSERT INTO, and CREATE EXTERNAL TABLE statements. Covers CSV, JSON, Parquet, and Avro format options; column-specific Parquet options; and precedence rules between table-level, statement-level, and session-level config.
 - **Frequently Asked Questions** `datafusion:user-guide/faq.md` - "Apache Arrow is a library which provides a standardized memory representation for columnar data. It also provides ""kernels"" for performing common operations on this data."
 - **HOWTOs** `datafusion:contributor-guide/howtos.md` - Make a PR to update the [rust-toolchain] file in the root of the repository. [rust-toolchain]: https://github.com/apache/datafusion/blob/main/rust-toolchain.toml
-- **Introduction** `datafusion:contributor-guide/index.md` - We welcome and encourage contributions of all kinds, from all levels, such as: 1. Tickets with issue reports or feature requests
 - **Invariants** `datafusion:contributor-guide/specification/invariants.md` - This document enumerates invariants of DataFusion's logical and physical planes (functions, and nodes). Some of these invariants are currently not enforced.
 - **Metrics** `datafusion:user-guide/metrics.md` - DataFusion operators expose runtime metrics so you can understand where time is spent and how much data flows through the pipeline. See more in [EXPLAIN ANALYZE](sql/explain.md#explain-analyze). `Base
 - **Operators and Literals** `datafusion:user-guide/sql/operators.md` - - [+ (plus)](#op_plus) - [- (minus)](#op_minus)
-- **Output field name semantics** `datafusion:contributor-guide/specification/output-field-name-semantic.md` - This specification documents how field names in output record batches should be generated based on given user queries. The filed name rules apply to
+- **Output field name semantics** `datafusion:contributor-guide/specification/output-field-name-semantic.md` - Specification for how output field names are generated in DataFusion query results from both SQL and DataFrame APIs. Defines rules for bare vs qualified column names, function name casing, literals, operator expressions, and argument separators.
 - **Profiling Cookbook** `datafusion:library-user-guide/profiling.md` - The section contains examples how to perform CPU profiling for Apache DataFusion on different operating systems. [Video: how to CPU profile DataFusion with a Flamegraph](https://youtu.be/2z11xtYw_xs)
-- **Query Optimizer** `datafusion:library-user-guide/query-optimizer.md` - [DataFusion][df] is an extensible query execution framework, written in Rust, that uses Apache Arrow as its in-memory format.
-- **Reading Explain Plans** `datafusion:user-guide/explain-usage.md` - This section describes of how to read a DataFusion query plan. While fully comprehending all details of these plans requires significant expertise in the
-- **Roadmap and Improvement Proposals** `datafusion:contributor-guide/roadmap.md` - The [project introduction](../user-guide/introduction) explains the overview and goals of DataFusion, and our development efforts largely
-- **Scalar Functions** `datafusion:user-guide/sql/scalar_functions.md` - - [abs](#abs) - [acos](#acos) ⚡ GREP - `grep -n '^## ' FILE -A 20` ⏳ STALE
-- **Special Functions** `datafusion:user-guide/sql/special_functions.md` - - [unnest](#unnest) - [unnest(struct)](#unnest-struct)
-- **Testing** `datafusion:contributor-guide/testing.md` - Tests are critical to ensure that DataFusion is working properly and is not accidentally broken during refactorings. All new features
+- **Query Optimizer** `datafusion:library-user-guide/query-optimizer.md` - Overview of DataFusion's query optimizer crate: OptimizerRule and PhysicalOptimizerRule interfaces for rewriting logical and physical plans. Describes how the optimizer fits into DataFusion's modular architecture.
+- **Roadmap and Improvement Proposals** `datafusion:contributor-guide/roadmap.md` - Describes how DataFusion tracks planned work using GitHub EPIC issues and PROPOSAL EPICs. Links to the active EPIC list and explains how epics organize community efforts without restricting development direction.
+- **SELECT syntax** `datafusion:user-guide/sql/select.md` - SQL reference for the SELECT statement in DataFusion. Covers full SELECT syntax including WITH/CTE, SELECT INTO, FROM, JOIN types, WHERE, GROUP BY (including GROUP BY ALL), HAVING, WINDOW, ORDER BY, LIMIT/OFFSET, and UNION/EXCEPT/INTERSECT.
+- **Scalar Functions** `datafusion:user-guide/sql/scalar_functions.md` - Auto-generated comprehensive reference of all DataFusion SQL scalar functions organized by category: math, string, regex, temporal, binary, hash, encoding, and more. Each entry includes arguments, return type, and usage examples. ⚡ GREP - `grep -n '^## ' FILE -A 20`
+- **Special Functions** `datafusion:user-guide/sql/special_functions.md` - Reference for DataFusion's special SQL expansion functions: unnest() for arrays and maps, unnest(struct) for flattening struct columns into separate columns. Includes argument descriptions and usage examples.
 - **Upgrading Guides** `datafusion:library-user-guide/upgrading/[all-versions]` - Version migration guides covering all DataFusion releases from 46.0.0 through 54.0.0 with breaking changes, deprecations, and upgrade instructions for each version. ⚡ GREP - `grep -n '^## DataFusion' FILE -A 10`
+- **Usage** `datafusion:user-guide/cli/usage.md` - Command-line usage reference for datafusion-cli: available flags (--data-path, --file, --format, --quiet, etc.), how to execute SQL files, configure output format, and set runtime options from the command line.
 - **Using the DataFrame API** `datafusion:library-user-guide/using-the-dataframe-api.md` - The [Users Guide] introduces the [`DataFrame`] API and this section describes that API in more depth.
 - **Window Functions** `datafusion:user-guide/sql/window_functions.md` - A _window function_ performs a calculation across a set of table rows that are somehow related to the current row. This is comparable to the type of calculation that can be done with an aggregate func
 - **Workspace Dependency Graph** `datafusion:contributor-guide/architecture/dependency-graph.md` - This page shows the dependency relationships between DataFusion's workspace crates. This only includes internal dependencies, external crates like `Arrow` are not included
@@ -117,17 +120,6 @@
 
 - **Installation** `datafusion:user-guide/cli/installation.md` - To build and install the latest release of `datafusion-cli` from source, do: `datafusion-cli` can also be installed via [Homebrew] (on MacOS) like this:
 
-## unknown
-
-- **null** `datafusion:contributor-guide/communication.md` - Pending re-scan
-- **null** `datafusion:contributor-guide/governance.md` - Pending re-scan
-- **null** `datafusion:contributor-guide/inviting.md` - Pending re-scan
-- **null** `datafusion:contributor-guide/release_management.md` - Pending re-scan
-- **null** `datafusion:library-user-guide/upgrading/49.0.0.md` - Pending re-scan
-- **null** `datafusion:library-user-guide/upgrading/53.0.0.md` - Pending re-scan
-- **null** `datafusion:library-user-guide/upgrading/54.0.0.md` - Pending re-scan
-- **null** `datafusion:library-user-guide/upgrading/55.0.0.md` - Pending re-scan
-
 ---
 
-*Rendered from index.yaml at 2026-07-02T00:00:00Z*
+*Rendered from index.yaml at 2026-07-01T16:01:58Z*

@@ -12,7 +12,6 @@
 - **Aggregate UDFs** `ibis:reference/aggregate-udfs.qmd` - Creating aggregate user-defined functions (experimental)
 - **Altair Visualization** `ibis:how-to/visualization/altair.qmd` - Vega-Altair integration for visualization
 - **Analytics Basics** `ibis:how-to/analytics/basics.qmd` - Core analytics operations
-- **Athena Backend** `ibis:backends/athena.qmd` - AWS Athena backend
 - **Backend & Table Hierarchy** `ibis:concepts/backend-table-hierarchy.qmd` - How backends, connections, and tables relate
 - **BigQuery Backend** `ibis:backends/bigquery.qmd` - Google BigQuery backend
 - **Browser REPL** `ibis:tutorials/browser/repl.qmd` - In-browser Ibis REPL (WebAssembly)
@@ -66,7 +65,6 @@
 - **Matplotlib Visualization** `ibis:how-to/visualization/matplotlib.qmd` - Matplotlib plotting integration
 - **Misc Expressions** `ibis:reference/expression-misc.qmd` - uuid generator, UUIDValue, INETValue (host, family), MACADDRValue
 - **Multiple Backends** `ibis:how-to/input-output/multiple-backends.qmd` - Working with multiple backends simultaneously
-- **MySQL Backend** `ibis:backends/mysql.qmd` - MySQL backend
 - **Numeric Expressions** `ibis:reference/expression-numeric.qmd` - NumericValue (arithmetic, abs, ceil, floor, round, log, exp, trig), NumericColumn (sum, mean, std, var, median, quantile, corr, cov), IntegerValue, FloatingValue (isnan, isinf), DecimalValue, BooleanValue (any, all, ifelse), and_, or_, random, constants e, pi
 - **Options** `ibis:reference/Options.qmd` - Global options configuration
 - **Oracle Backend** `ibis:backends/oracle.qmd` - Oracle database backend
@@ -102,6 +100,11 @@
 - **Why Ibis?** `ibis:why.qmd` - Comprehensive overview: portable API across 20+ backends, Python + SQL integration, scaling up/out, stream-batch unification, ecosystem integrations (pandas, Polars, visualization, ML libraries)
 - **pandas Backend** `ibis:backends/pandas.qmd` - pandas backend for compatibility
 - **plotnine Visualization** `ibis:how-to/visualization/plotnine.qmd` - ggplot2-style plotting with plotnine
+
+## reference
+
+- **Athena Backend** `ibis:backends/athena.qmd` - Amazon Athena backend for Ibis: install with `ibis-framework[athena]`, connect via `ibis.athena.connect(s3_staging_dir=...)` — the S3 staging directory is required by pyathena for dumping query results.
+- **MySQL Backend** `ibis:backends/mysql.qmd` - MySQL/MariaDB backend for Ibis: supports CSV, Parquet, and PyArrow outputs with memtable fallback; connect via `ibis.mysql.connect()` with host/port/database params or a `mysql://` URL; also works with MariaDB.
 
 ---
 

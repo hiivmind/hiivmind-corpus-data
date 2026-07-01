@@ -9,17 +9,17 @@
 
 - **API Completeness Overview** `narwhals:api-completeness/index.md` - API completeness summary showing which methods are supported across backends (pandas, Polars, PyArrow, cuDF, Modin)
 - **API Reference Overview** `narwhals:api-reference/index.md` - API reference overview for Narwhals
-- **Backwards Compatibility** `narwhals:backcompat.md` - Perfect backwards compatibility policy (Rust editions-inspired). narwhals.stable.v1 and narwhals.stable.v2: promises never to change/remove public functions. Breaking changes go to main namespace (eventually stable.v3). Recommendation: import narwhals as nw for prototyping, import narwhals.stable.v2 as nw for production
+- **Backwards Compatibility** `narwhals:backcompat.md` - Perfect backwards compatibility policy for library authors: `narwhals.stable.v1` and `narwhals.stable.v2` are frozen forever; breaking changes go into the main namespace then a new stable version, so libraries can pin independently.
 - **Boolean Operations** `narwhals:concepts/boolean.md` - Boolean logic across backends, how &, |, ~ work consistently
 - **Column Names** `narwhals:concepts/column_names.md` - Column naming conventions and handling duplicates
 - **Complete Example** `narwhals:basics/complete_example.md` - Building a dataframe-agnostic StandardScaler (scikit-learn style). fit method with eager_only=True (needs concrete values), transform stays lazy. Shows pandas, Polars eager, and Polars lazy working with same code
-- **Data Types** `narwhals:api-reference/dtypes.md` - Full type hierarchy with abstract base classes. DType base to NumericType to FloatType (Float32, Float64), IntegerType to SignedIntegerType (Int8-Int128), UnsignedIntegerType (UInt8-UInt128), Decimal. TemporalType to Date, Datetime, Duration, Time. NestedType to Array, List, Struct. String, Boolean, Categorical, Enum, Binary, Object, Unknown
+- **Data Types** `narwhals:api-reference/dtypes.md` - Full dtype hierarchy: DType base, NumericType (Int8–Int128, UInt8–UInt128, Float16/32/64, Decimal), TemporalType (Date, Datetime, Duration, Time), Categorical, Enum, String, Boolean, List, Array, Struct, Object, Unknown, and new Int128/UInt128 types.
 - **DataFrame API Reference** `narwhals:api-reference/dataframe.md` - DataFrame class: select, with_columns, filter, group_by, join, sort, head, tail, unique, drop, rename, cast, to_native, schema, columns, shape
 - **DataFrame Basics** `narwhals:basics/dataframe.md` - Core workflow: nw.from_native(df) then express logic with Polars API then nw.to_native(). The @nw.narwhalify decorator simplifies this. Examples: descriptive stats with select, group-by with agg, horizontal operations with nw.sum_horizontal. Supports multiple inputs with eager_only=True
 - **DataFrame Conversion** `narwhals:basics/dataframe_conversion.md` - Converting between native types with to_native(), from_native()
 - **DataFrame Methods Completeness** `narwhals:api-completeness/dataframe.md` - Supported DataFrame operations per backend
 - **Dependencies API Reference** `narwhals:api-reference/dependencies.md` - Backend detection utilities: is_pandas_dataframe, is_polars_dataframe, get_polars, get_pandas
-- **Ecosystem** `narwhals:ecosystem.md` - Libraries and tools using Narwhals
+- **Ecosystem** `narwhals:ecosystem.md` - Non-exhaustive list of 30+ libraries using Narwhals for dataframe interoperability, including altair, bokeh, lightgbm, marimo, pandera, plotly, scikit-learn, scikit-lego, and others. Open PRs accepted to add missing projects.
 - **Exceptions API Reference** `narwhals:api-reference/exceptions.md` - Exception classes
 - **Expr API Reference** `narwhals:api-reference/expr.md` - Expr class: column expressions, arithmetic, comparisons, aggregations, window functions via over(), any_value for arbitrary group value selection, trigonometric functions (cos, sin)
 - **Expr Methods Completeness** `narwhals:api-completeness/expr.md` - Supported expression methods per backend
@@ -42,11 +42,11 @@
 - **Implementation API Reference** `narwhals:api-reference/implementation.md` - Backend implementation details
 - **Improving Group-By** `narwhals:concepts/improve_group_by_operation.md` - Optimizing group-by performance, avoiding apply overhead
 - **Installation** `narwhals:installation.md` - Installing Narwhals, quick start guide
-- **Introduction** `narwhals:index.md` - Extremely lightweight compatibility layer between dataframe libraries. Full API support: cuDF, Modin, pandas, Polars, PyArrow. Lazy-only support: Daft, Dask, DuckDB, Ibis, PySpark, SQLFrame. Zero dependencies, uses subset of Polars API, 100% branch coverage, negligible overhead
+- **Introduction** `narwhals:index.md` - Extremely lightweight compatibility layer for dataframe libraries. Full API support: cuDF, Modin, pandas, Polars, PyArrow. Lazy-only support: Daft, Dask, DuckDB, Ibis, PySpark, SQLFrame. Zero dependencies; uses only the Polars API subset.
 - **LazyFrame API Reference** `narwhals:api-reference/lazyframe.md` - LazyFrame class: lazy equivalents of DataFrame methods plus collect, explain
 - **LazyFrame Methods Completeness** `narwhals:api-completeness/lazyframe.md` - Supported LazyFrame operations per backend
 - **LazyGroupBy API Reference** `narwhals:api-reference/lazy_group_by.md` - LazyGroupBy class for lazy operations
-- **Narwhals Module** `narwhals:api-reference/narwhals.md` - Top-level functions: from_native, to_native, narwhalify, col, lit, all, sum_horizontal, mean_horizontal, concat, when/then/otherwise
+- **Narwhals Module** `narwhals:api-reference/narwhals.md` - Top-level Narwhals functions: col, lit, all, concat, from_native, to_native, narwhalify, from_dict, from_arrow, from_numpy, schema, and 50+ additional utility and expression functions for dataframe-agnostic code.
 - **Null Handling** `narwhals:concepts/null_handling.md` - NULL/NaN semantics across backends. Narwhals normalizes null behavior for consistent results regardless of backend
 - **Order Dependence** `narwhals:concepts/order_dependence.md` - LazyFrames have undefined row order. Order-dependent operations (diff, shift, rolling) require explicit order_by in over(). first/last now accept optional order_by parameter. n_orderable_ops metadata tracks this
 - **Overhead** `narwhals:overhead.md` - Negligible overhead, just Python function unwinding. Running pandas via Narwhals often more efficient than direct pandas (guards against API misuse)

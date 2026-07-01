@@ -3,15 +3,20 @@ entries:
   source: datafusion
   path: contributor-guide/api-health.md
   title: API health policy
-  summary: DataFusion is used extensively as a library in other applications and has
-    a large public API. We try to keep the API well maintained and minimize breaking
+  summary: 'Documents DataFusion''s API stability policy: what constitutes a breaking change in the public Rust API, how breaking
+    changes are categorized (Major vs Minor under SemVer), the deprecation cycle, and guidance on submitting PRs that include
+    breaking API changes.'
   tags:
-  - contributing
+  - api
+  - compatibility
+  - contribution
+  - rust
   keywords:
-  - health
-  - policy
-  - pub
-  - trait
+  - breaking change
+  - public API
+  - SemVer
+  - deprecation
+  - docs.rs
   concepts:
   - contributing
   category: reference
@@ -36,15 +41,14 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-13T00:30:00Z'
 - id: datafusion:contributor-guide/architecture.md
   source: datafusion
   path: contributor-guide/architecture.md
   title: Architecture
-  summary: DataFusion's code structure and organization is described in the [crates.io
-    documentation], to keep it as close to the source as
+  summary: DataFusion's code structure and organization is described in the [crates.io documentation], to keep it as close
+    to the source as
   tags:
   - architecture
   - contributing
@@ -74,9 +78,8 @@ entries:
   source: datafusion
   path: contributor-guide/architecture/dependency-graph.md
   title: Workspace Dependency Graph
-  summary: This page shows the dependency relationships between DataFusion's workspace
-    crates. This only includes internal dependencies, external crates like `Arrow`
-    are not included
+  summary: This page shows the dependency relationships between DataFusion's workspace crates. This only includes internal
+    dependencies, external crates like `Arrow` are not included
   tags:
   - architecture
   - contributing
@@ -108,20 +111,23 @@ entries:
   source: datafusion
   path: contributor-guide/development_environment.md
   title: Development Environment
-  summary: This section describes how you can get started at developing DataFusion.
-    For the fastest path to a working local environment, follow these steps
+  summary: 'Quick-start guide for setting up a local DataFusion development environment: installing Rust, protoc, fetching
+    test data submodules, building the workspace, and running tests. Includes platform-specific notes for Linux, macOS, and
+    Windows.'
   tags:
-  - contributing
-  keywords:
-  - alter
   - development
-  - environment
+  - setup
+  - contribution
+  - rust
+  keywords:
+  - rust
   - protoc
-  - update
-  - where
+  - cargo build
+  - submodule
+  - test data
   concepts:
   - contributing
-  category: reference
+  category: guide
   content_type: markdown
   size: standard
   grep_hint: null
@@ -131,8 +137,7 @@ entries:
   - anchor: quick-start
     title: Quick Start
   - anchor: 1-install-rust-httpsrust-langorgtoolsinstall-and-verify-the-active-toolchain-with
-    title: 1. Install Rust (https://rust-lang.org/tools/install/) and verify the active
-      toolchain with
+    title: 1. Install Rust (https://rust-lang.org/tools/install/) and verify the active toolchain with
   - anchor: 2-install-protoc-315-see-details-below
     title: 2. Install protoc 3.15+ (see details below)
   - anchor: 3-download-test-data-used-by-examples-and-many-tests
@@ -146,15 +151,13 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-13T00:30:00Z'
 - id: datafusion:contributor-guide/howtos.md
   source: datafusion
   path: contributor-guide/howtos.md
   title: HOWTOs
-  summary: 'Make a PR to update the [rust-toolchain] file in the root of the repository.
-    [rust-toolchain]: https://github.com/apache/datafusion/blob/main/rust-toolchain.toml'
+  summary: 'Make a PR to update the [rust-toolchain] file in the root of the repository. [rust-toolchain]: https://github.com/apache/datafusion/blob/main/rust-toolchain.toml'
   tags:
   - contributing
   keywords:
@@ -196,17 +199,21 @@ entries:
   source: datafusion
   path: contributor-guide/index.md
   title: Introduction
-  summary: 'We welcome and encourage contributions of all kinds, from all levels,
-    such as: 1. Tickets with issue reports or feature requests'
+  summary: Entry point for DataFusion contributors covering types of contributions welcome (issues, discussions, documentation,
+    code review, PRs), links to dev environment setup, issue tracking, and community communication channels.
   tags:
-  - contributing
+  - contribution
+  - community
+  - overview
   keywords:
-  - alter
-  - create
-  - introduction
+  - PR review
+  - issue
+  - discussion
+  - development environment
+  - testing
   concepts:
   - contributing
-  category: reference
+  category: overview
   content_type: markdown
   size: standard
   grep_hint: null
@@ -230,23 +237,23 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-13T00:30:00Z'
 - id: datafusion:contributor-guide/roadmap.md
   source: datafusion
   path: contributor-guide/roadmap.md
   title: Roadmap and Improvement Proposals
-  summary: The [project introduction](../user-guide/introduction) explains the overview
-    and goals of DataFusion, and our development efforts largely
+  summary: Describes how DataFusion tracks planned work using GitHub EPIC issues and PROPOSAL EPICs. Links to the active EPIC
+    list and explains how epics organize community efforts without restricting development direction.
   tags:
-  - contributing
-  keywords:
-  - improvement
-  - join
-  - proposals
   - roadmap
-  - where
+  - planning
+  - community
+  keywords:
+  - EPIC
+  - GitHub issues
+  - roadmap
+  - proposals
   concepts:
   - contributing
   category: reference
@@ -273,15 +280,14 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-13T00:30:00Z'
 - id: datafusion:contributor-guide/specification/invariants.md
   source: datafusion
   path: contributor-guide/specification/invariants.md
   title: Invariants
-  summary: This document enumerates invariants of DataFusion's logical and physical
-    planes (functions, and nodes). Some of these invariants are currently not enforced.
+  summary: This document enumerates invariants of DataFusion's logical and physical planes (functions, and nodes). Some of
+    these invariants are currently not enforced.
   tags:
   - contributing
   keywords:
@@ -323,20 +329,20 @@ entries:
   source: datafusion
   path: contributor-guide/specification/output-field-name-semantic.md
   title: Output field name semantics
-  summary: This specification documents how field names in output record batches should
-    be generated based on given user queries. The filed name rules apply to
+  summary: Specification for how output field names are generated in DataFusion query results from both SQL and DataFrame
+    APIs. Defines rules for bare vs qualified column names, function name casing, literals, operator expressions, and argument
+    separators.
   tags:
-  - contributing
+  - specification
+  - sql
+  - field-names
+  - dataframe
   keywords:
-  - create
-  - field
-  - foo
-  - insert
-  - join
-  - name
-  - output
-  - select
-  - semantics
+  - field name
+  - qualifier
+  - output schema
+  - expression naming
+  - SQL semantics
   concepts:
   - contributing
   category: reference
@@ -363,26 +369,28 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-13T00:30:00Z'
 - id: datafusion:contributor-guide/testing.md
   source: datafusion
   path: contributor-guide/testing.md
   title: Testing
-  summary: Tests are critical to ensure that DataFusion is working properly and is
-    not accidentally broken during refactorings. All new features
+  summary: 'Testing guide for DataFusion contributors: running unit tests by crate, the sqllogictest suite for broad SQL regression
+    coverage, integration tests, and best practices for test coverage when submitting new features or bug fixes.'
   tags:
-  - contributing
-  keywords:
-  - alter
-  - datafusion
-  - sqllogictest
   - testing
-  - update
+  - contribution
+  - sqllogictest
+  - ci
+  keywords:
+  - cargo test
+  - sqllogictest
+  - regression
+  - integration test
+  - CI
   concepts:
   - contributing
-  category: reference
+  category: guide
   content_type: markdown
   size: standard
   grep_hint: null
@@ -406,16 +414,14 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-13T00:30:00Z'
 - id: datafusion:download.md
   source: datafusion
   path: download.md
   title: Download
-  summary: Most users use DataFusion as a library in their Rust projects by adding
-    it as a dependency in their `Cargo.toml` file and downloading it from the Rust
-    [crates.io] package registry.
+  summary: Most users use DataFusion as a library in their Rust projects by adding it as a dependency in their `Cargo.toml`
+    file and downloading it from the Rust [crates.io] package registry.
   tags: []
   keywords:
   - download
@@ -446,9 +452,8 @@ entries:
   source: datafusion
   path: library-user-guide/building-logical-plans.md
   title: Building Logical Plans
-  summary: A logical plan is a structured representation of a database query that
-    describes the high-level operations and transformations needed to retrieve data
-    from a database or data source. It abstracts away
+  summary: A logical plan is a structured representation of a database query that describes the high-level operations and
+    transformations needed to retrieve data from a database or data source. It abstracts away
   tags:
   - library-api
   keywords:
@@ -485,9 +490,8 @@ entries:
   source: datafusion
   path: library-user-guide/catalogs.md
   title: Catalogs, Schemas, and Tables
-  summary: This section describes how to create and manage catalogs, schemas, and
-    tables in DataFusion. For those wanting to dive into the code quickly please see
-    the [example](https://github.com/apache/datafusi
+  summary: This section describes how to create and manage catalogs, schemas, and tables in DataFusion. For those wanting
+    to dive into the code quickly please see the [example](https://github.com/apache/datafusi
   tags:
   - library-api
   - table-management
@@ -532,21 +536,20 @@ entries:
   source: datafusion
   path: library-user-guide/custom-table-providers.md
   title: Custom Table Provider
-  summary: One of DataFusion's greatest strengths is its extensibility. If your data
-    lives in a custom format, behind an API, or in a system that DataFusion does not
+  summary: Guide to implementing custom TableProvider in DataFusion for data sources not natively supported. Explains the
+    three abstraction layers (TableProvider, TableFactory, ExecutionPlan) and where planning vs execution logic belongs. Covers
+    table constraint enforcement.
   tags:
-  - library-api
-  - table-management
-  keywords:
-  - create
+  - extensibility
+  - table-provider
+  - library
   - custom
-  - drop
-  - insert
-  - join
-  - provider
-  - select
-  - table
-  - where
+  keywords:
+  - TableProvider
+  - custom data source
+  - ExecutionPlan
+  - table constraints
+  - extensibility
   concepts:
   - data-management
   category: guide
@@ -573,15 +576,14 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-13T00:30:00Z'
 - id: datafusion:library-user-guide/extending-operators.md
   source: datafusion
   path: library-user-guide/extending-operators.md
   title: Extending Operators
-  summary: DataFusion supports extending operators by transforming [`LogicalPlan`]
-    and [`ExecutionPlan`] through customized [optimizer rules](https://docs.rs/datafusion/latest/datafusion/optimizer/trait.Optimize
+  summary: DataFusion supports extending operators by transforming [`LogicalPlan`] and [`ExecutionPlan`] through customized
+    [optimizer rules](https://docs.rs/datafusion/latest/datafusion/optimizer/trait.Optimize
   tags:
   - library-api
   keywords:
@@ -614,9 +616,8 @@ entries:
   source: datafusion
   path: library-user-guide/extending-sql.md
   title: Extending SQL Syntax
-  summary: DataFusion provides a flexible extension system that allows you to customize
-    SQL parsing and planning without modifying the core codebase. This is useful when
-    you
+  summary: DataFusion provides a flexible extension system that allows you to customize SQL parsing and planning without modifying
+    the core codebase. This is useful when you
   tags:
   - library-api
   - sql
@@ -658,9 +659,8 @@ entries:
   source: datafusion
   path: library-user-guide/extensions.md
   title: Extensions List
-  summary: DataFusion tries to provide a good set of features "out of the box" to
-    quickly start with a working system, but it can't include every useful feature
-    (e.g.
+  summary: DataFusion tries to provide a good set of features "out of the box" to quickly start with a working system, but
+    it can't include every useful feature (e.g.
   tags:
   - library-api
   keywords:
@@ -687,9 +687,8 @@ entries:
   source: datafusion
   path: library-user-guide/functions/adding-udfs.md
   title: 'Adding User Defined Functions: Scalar/Window/Aggregate/Table Functions'
-  summary: User Defined Functions (UDFs) are functions that can be used in the context
-    of DataFusion execution. This page covers how to add UDFs to DataFusion. In particular,
-    it covers how to add Scalar, Window,
+  summary: User Defined Functions (UDFs) are functions that can be used in the context of DataFusion execution. This page
+    covers how to add UDFs to DataFusion. In particular, it covers how to add Scalar, Window,
   tags:
   - functions
   - library-api
@@ -738,8 +737,7 @@ entries:
   source: datafusion
   path: library-user-guide/functions/spark.md
   title: Spark Compatible Functions
-  summary: The [`datafusion-spark`] crate provides Apache Spark-compatible expressions
-    for use with DataFusion.
+  summary: The [`datafusion-spark`] crate provides Apache Spark-compatible expressions for use with DataFusion.
   tags:
   - functions
   - library-api
@@ -766,9 +764,8 @@ entries:
   source: datafusion
   path: library-user-guide/index.md
   title: Introduction
-  summary: The library user guide explains how to use the DataFusion library as a
-    dependency in your Rust project and customize its behavior using its extension
-    APIs.
+  summary: The library user guide explains how to use the DataFusion library as a dependency in your Rust project and customize
+    its behavior using its extension APIs.
   tags:
   - library-api
   keywords:
@@ -792,9 +789,8 @@ entries:
   source: datafusion
   path: library-user-guide/profiling.md
   title: Profiling Cookbook
-  summary: 'The section contains examples how to perform CPU profiling for Apache
-    DataFusion on different operating systems. [Video: how to CPU profile DataFusion
-    with a Flamegraph](https://youtu.be/2z11xtYw_xs)'
+  summary: 'The section contains examples how to perform CPU profiling for Apache DataFusion on different operating systems.
+    [Video: how to CPU profile DataFusion with a Flamegraph](https://youtu.be/2z11xtYw_xs)'
   tags:
   - library-api
   - performance
@@ -837,21 +833,18 @@ entries:
   source: datafusion
   path: library-user-guide/query-optimizer.md
   title: Query Optimizer
-  summary: '[DataFusion][df] is an extensible query execution framework, written in
-    Rust, that uses Apache Arrow as its in-memory format.'
+  summary: 'Overview of DataFusion''s query optimizer crate: OptimizerRule and PhysicalOptimizerRule interfaces for rewriting
+    logical and physical plans. Describes how the optimizer fits into DataFusion''s modular architecture.'
   tags:
-  - library-api
-  - optimization
-  keywords:
-  - create
-  - join
   - optimizer
-  - optimizerrule
-  - physicaloptimizerrule
-  - query
-  - select
-  - update
-  - where
+  - library
+  - physical-plan
+  - logical-plan
+  keywords:
+  - OptimizerRule
+  - PhysicalOptimizerRule
+  - query optimization
+  - plan rewriting
   concepts:
   - query-engine
   category: reference
@@ -878,15 +871,14 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-13T00:30:00Z'
 - id: datafusion:library-user-guide/table-constraints.md
   source: datafusion
   path: library-user-guide/table-constraints.md
   title: Table Constraint Enforcement
-  summary: Table providers can describe table constraints using the [`TableConstraint`]
-    and [`Constraints`] APIs. These constraints include
+  summary: Table providers can describe table constraints using the [`TableConstraint`] and [`Constraints`] APIs. These constraints
+    include
   tags:
   - library-api
   - table-management
@@ -915,9 +907,8 @@ entries:
   source: datafusion
   path: library-user-guide/upgrading/[all-versions]
   title: Upgrading Guides
-  summary: Version migration guides covering all DataFusion releases from 46.0.0 through
-    54.0.0 with breaking changes, deprecations, and upgrade instructions for each
-    version.
+  summary: Version migration guides covering all DataFusion releases from 46.0.0 through 54.0.0 with breaking changes, deprecations,
+    and upgrade instructions for each version.
   tags:
   - migration
   - upgrading
@@ -945,8 +936,7 @@ entries:
   source: datafusion
   path: library-user-guide/using-the-dataframe-api.md
   title: Using the DataFrame API
-  summary: The [Users Guide] introduces the [`DataFrame`] API and this section describes
-    that API in more depth.
+  summary: The [Users Guide] introduces the [`DataFrame`] API and this section describes that API in more depth.
   tags:
   - library-api
   keywords:
@@ -984,8 +974,8 @@ entries:
   source: datafusion
   path: library-user-guide/using-the-sql-api.md
   title: Using the SQL API
-  summary: DataFusion has a full SQL API that allows you to interact with DataFusion
-    using SQL query strings. The simplest way to use the SQL API is to use the
+  summary: DataFusion has a full SQL API that allows you to interact with DataFusion using SQL query strings. The simplest
+    way to use the SQL API is to use the
   tags:
   - library-api
   - sql
@@ -1027,18 +1017,20 @@ entries:
   source: datafusion
   path: library-user-guide/working-with-exprs.md
   title: Working with `Expr`s
-  summary: '`Expr` is short for "expression". It is a core abstraction in DataFusion
-    for representing a computation, and follows the standard "expression tree" abstraction
-    found in most compilers and databases. F'
+  summary: Explains the Expr abstraction in DataFusion — the expression tree used for computations in SQL and DataFrame APIs.
+    Covers BinaryExpr, column references, literals, function calls, and how to traverse or transform expression trees programmatically.
   tags:
-  - library-api
+  - expressions
+  - library
+  - api
+  - rust
   keywords:
-  - create
-  - expr
-  - select
-  - update
-  - with
-  - working
+  - Expr
+  - BinaryExpr
+  - expression tree
+  - col
+  - lit
+  - expression traversal
   concepts:
   - query-engine
   category: guide
@@ -1065,16 +1057,14 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-13T00:30:00Z'
 - id: datafusion:user-guide/arrow-introduction.md
   source: datafusion
   path: user-guide/arrow-introduction.md
   title: Gentle Arrow Introduction
-  summary: DataFusion uses [Apache Arrow] as its native in-memory format, so anyone
-    using DataFusion will likely interact with Arrow at some point. This guide introduces
-    the key Arrow concepts you need to know t
+  summary: DataFusion uses [Apache Arrow] as its native in-memory format, so anyone using DataFusion will likely interact
+    with Arrow at some point. This guide introduces the key Arrow concepts you need to know t
   tags:
   - user-guide
   keywords:
@@ -1119,18 +1109,20 @@ entries:
   source: datafusion
   path: user-guide/cli/datasources.md
   title: Local Files / Directories
-  summary: Files can be queried directly by enclosing the file, directory name or
-    a remote location in single `'` quotes as shown in the examples.
+  summary: CLI guide for querying local files and directories directly in datafusion-cli by enclosing paths in single quotes.
+    Covers CSV, Parquet, JSON, and Arrow formats; querying directories; and reading from remote locations such as S3.
   tags:
   - cli
-  - user-guide
-  keywords:
-  - create
-  - directories
+  - datasources
+  - sql
   - files
-  - local
-  - select
-  - where
+  keywords:
+  - datafusion-cli
+  - CSV
+  - Parquet
+  - local files
+  - S3
+  - directory query
   concepts:
   - cli
   category: guide
@@ -1157,15 +1149,14 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-13T00:30:00Z'
 - id: datafusion:user-guide/cli/functions.md
   source: datafusion
   path: user-guide/cli/functions.md
   title: CLI Specific Functions
-  summary: '`datafusion-cli` comes with build-in functions that are not included in
-    the DataFusion SQL engine by default. These functions are:'
+  summary: '`datafusion-cli` comes with build-in functions that are not included in the DataFusion SQL engine by default.
+    These functions are:'
   tags:
   - cli
   - functions
@@ -1204,8 +1195,8 @@ entries:
   source: datafusion
   path: user-guide/cli/installation.md
   title: Installation
-  summary: 'To build and install the latest release of `datafusion-cli` from source,
-    do: `datafusion-cli` can also be installed via [Homebrew] (on MacOS) like this:'
+  summary: 'To build and install the latest release of `datafusion-cli` from source, do: `datafusion-cli` can also be installed
+    via [Homebrew] (on MacOS) like this:'
   tags:
   - cli
   - user-guide
@@ -1245,17 +1236,21 @@ entries:
   source: datafusion
   path: user-guide/cli/overview.md
   title: Overview
-  summary: DataFusion CLI (`datafusion-cli`) is an interactive command-line utility
-    for executing SQL queries against any supported data files.
+  summary: 'Overview of datafusion-cli, the interactive SQL command-line tool for DataFusion. Describes its capabilities:
+    SQL execution, CSV/Parquet/JSON/Arrow/Avro read-write support, local and remote (S3) data sources.'
   tags:
   - cli
-  - user-guide
-  keywords:
   - overview
-  - select
+  - sql
+  keywords:
+  - datafusion-cli
+  - interactive SQL
+  - command line
+  - Parquet
+  - S3
   concepts:
   - cli
-  category: guide
+  category: overview
   content_type: markdown
   size: standard
   grep_hint: null
@@ -1265,25 +1260,27 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-13T00:30:00Z'
 - id: datafusion:user-guide/cli/usage.md
   source: datafusion
   path: user-guide/cli/usage.md
   title: Usage
-  summary: 'See the current usage using `datafusion-cli --help`: Available commands
-    inside DataFusion CLI are:'
+  summary: 'Command-line usage reference for datafusion-cli: available flags (--data-path, --file, --format, --quiet, etc.),
+    how to execute SQL files, configure output format, and set runtime options from the command line.'
   tags:
   - cli
-  - user-guide
-  keywords:
-  - join
-  - select
   - usage
+  - reference
+  keywords:
+  - datafusion-cli
+  - --data-path
+  - --format
+  - CLI flags
+  - SQL file
   concepts:
   - cli
-  category: guide
+  category: reference
   content_type: markdown
   size: standard
   grep_hint: null
@@ -1307,24 +1304,26 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-13T00:30:00Z'
 - id: datafusion:user-guide/concepts-readings-events.md
   source: datafusion
   path: user-guide/concepts-readings-events.md
   title: Concepts, Readings, Events
-  summary: '- **2024-06-13**: [2024 ACM SIGMOD International Conference on Management
-    of Data: Apache Arrow DataFusion: A Fast, Embeddable, Modular Analytic Query Engine](https://dl.acm.org/doi/10.1145/3626246.36'
+  summary: Curated list of background reading, conference talks, and recorded videos about DataFusion's architecture and query
+    engine design. Includes SIGMOD 2024 paper, architecture video series, and the 'How Query Engines Work' online book.
   tags:
-  - user-guide
-  keywords:
   - concepts
-  - create
-  - events
-  - join
-  - readings
-  - update
+  - learning
+  - resources
+  - architecture
+  keywords:
+  - SIGMOD
+  - query engine
+  - architecture
+  - videos
+  - papers
+  - background reading
   concepts:
   - getting-started
   category: reference
@@ -1345,29 +1344,27 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-13T00:30:00Z'
 - id: datafusion:user-guide/configs.md
   source: datafusion
   path: user-guide/configs.md
   title: Configuration Settings
-  summary: DataFusion configurations control various aspects of DataFusion planning
-    and execution You can set the options programmatically via the [`ConfigOptions`]
-    object. For
+  summary: Reference for all DataFusion configuration options (auto-generated from config.rs). Covers execution settings (target_partitions,
+    batch_size), optimizer flags, memory limits, and how to set options programmatically via ConfigOptions or via SQL SET
+    statements.
   tags:
-  - user-guide
-  keywords:
-  - configoptions
   - configuration
-  - create
-  - delete
-  - insert
-  - join
-  - select
-  - settings
-  - union
-  - update
+  - reference
+  - execution
+  - optimizer
+  keywords:
+  - ConfigOptions
+  - target_partitions
+  - batch_size
+  - memory
+  - SET
+  - config options
   concepts:
   - query-engine
   category: reference
@@ -1394,29 +1391,28 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-13T00:30:00Z'
 - id: datafusion:user-guide/crate-configuration.md
   source: datafusion
   path: user-guide/crate-configuration.md
   title: Crate Configuration
-  summary: This section contains information on how to configure builds of DataFusion
-    in your Rust project. The [Configuration Settings] section lists options that
+  summary: 'Guide to configuring DataFusion as a Rust dependency: using nightly builds from GitHub, enabling/disabling Cargo
+    features (mimalloc, pyarrow, etc.), and understanding the relationship between crate features and runtime behavior.'
   tags:
-  - user-guide
-  keywords:
-  - alter
   - configuration
-  - crate
-  - create
-  - join
-  - select
-  - update
-  - where
+  - cargo
+  - rust
+  - dependency
+  keywords:
+  - Cargo.toml
+  - features
+  - nightly
+  - mimalloc
+  - crate configuration
   concepts:
   - data-management
-  category: reference
+  category: guide
   content_type: markdown
   size: standard
   grep_hint: null
@@ -1440,30 +1436,30 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-13T00:30:00Z'
 - id: datafusion:user-guide/dataframe.md
   source: datafusion
   path: user-guide/dataframe.md
   title: DataFrame API
-  summary: A DataFrame represents a logical set of rows with the same named columns,
-    similar to a [Pandas DataFrame] or [Spark DataFrame].
+  summary: 'Overview of DataFusion''s DataFrame API: creating DataFrames from SessionContext (read_csv, read_parquet, SQL),
+    chaining transformations (filter, select, aggregate, limit), lazy evaluation semantics, and collecting results with collect().'
   tags:
-  - user-guide
+  - dataframe
+  - api
+  - lazy-evaluation
+  - sql
   keywords:
+  - DataFrame
+  - SessionContext
+  - filter
+  - select
   - aggregate
   - collect
-  - create
-  - dataframe
-  - filter
-  - limit
-  - prelude
-  - read_csv
-  - select
+  - lazy evaluation
   concepts:
   - query-engine
-  category: reference
+  category: guide
   content_type: markdown
   size: standard
   grep_hint: null
@@ -1477,24 +1473,26 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-13T00:30:00Z'
 - id: datafusion:user-guide/example-usage.md
   source: datafusion
   path: user-guide/example-usage.md
   title: Example Usage
-  summary: In this example some simple processing is performed on the [`example.csv`](https://github.com/apache/datafusion/blob/main/datafusion/core/tests/data/example.csv)
-    file. Even [`more code examples`](http
+  summary: 'End-to-end example of using DataFusion as a Rust library: adding the dependency to Cargo.toml, creating a SessionContext,
+    reading a CSV, running SQL queries, and retrieving results as Arrow RecordBatches.'
   tags:
-  - user-guide
-  keywords:
-  - alter
-  - create
   - example
-  - select
-  - usage
-  - where
+  - rust
+  - quickstart
+  - csv
+  keywords:
+  - example
+  - SessionContext
+  - read_csv
+  - SQL query
+  - RecordBatch
+  - Cargo.toml
   concepts:
   - getting-started
   category: guide
@@ -1521,28 +1519,29 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-13T00:30:00Z'
 - id: datafusion:user-guide/explain-usage.md
   source: datafusion
   path: user-guide/explain-usage.md
   title: Reading Explain Plans
-  summary: This section describes of how to read a DataFusion query plan. While fully
-    comprehending all details of these plans requires significant expertise in the
+  summary: Guide to reading DataFusion query plans using EXPLAIN and EXPLAIN ANALYZE. Covers how to interpret logical and
+    physical plan output, understand operator nodes, and use verbose mode for detailed plan inspection.
   tags:
-  - user-guide
-  keywords:
   - explain
-  - join
-  - plans
-  - reading
-  - select
-  - update
-  - where
+  - query-plan
+  - debugging
+  - sql
+  keywords:
+  - EXPLAIN
+  - EXPLAIN ANALYZE
+  - query plan
+  - physical plan
+  - logical plan
+  - VERBOSE
   concepts:
   - query-engine
-  category: reference
+  category: guide
   content_type: markdown
   size: standard
   grep_hint: null
@@ -1566,25 +1565,26 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-13T00:30:00Z'
 - id: datafusion:user-guide/expressions.md
   source: datafusion
   path: user-guide/expressions.md
   title: Expression API
-  summary: DataFrame methods such as `select` and `filter` accept one or more logical
-    expressions and there are many functions available for creating logical expressions.
-    These are documented below.
+  summary: Reference for DataFusion's Expression API used in DataFrame methods like select() and filter(). Documents expression
+    creation functions (col, lit, binary ops), fluent chaining patterns, and available scalar/aggregate expression builders.
   tags:
-  - user-guide
+  - expressions
+  - api
+  - dataframe
+  - sql
   keywords:
-  - create
-  - expression
-  - filter
-  - select
-  - union
-  - where
+  - col
+  - lit
+  - Expr
+  - fluent API
+  - expression functions
+  - scalar functions
   concepts:
   - query-engine
   category: reference
@@ -1611,16 +1611,14 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-13T00:30:00Z'
 - id: datafusion:user-guide/faq.md
   source: datafusion
   path: user-guide/faq.md
   title: Frequently Asked Questions
-  summary: Apache Arrow is a library which provides a standardized memory representation
-    for columnar data. It also provides "kernels" for performing common operations
-    on this data.
+  summary: Apache Arrow is a library which provides a standardized memory representation for columnar data. It also provides
+    "kernels" for performing common operations on this data.
   tags:
   - user-guide
   keywords:
@@ -1691,19 +1689,25 @@ entries:
   source: datafusion
   path: user-guide/introduction.md
   title: Introduction
-  summary: DataFusion is a very fast, extensible query engine for building high-quality
-    data-centric systems in [Rust](http://rustlang.org),
+  summary: 'Introduction to Apache DataFusion: a fast, extensible Rust query engine using Apache Arrow. Describes project
+    goals (embeddable query engine for data-centric systems), key features (SQL+DataFrame APIs, CSV/Parquet/JSON/Avro support,
+    Python bindings, customization), and links to benchmarks.'
   tags:
-  - user-guide
-  keywords:
-  - create
   - introduction
-  - join
-  - update
-  - where
+  - overview
+  - rust
+  - arrow
+  keywords:
+  - DataFusion
+  - Apache Arrow
+  - query engine
+  - SQL
+  - DataFrame
+  - Rust
+  - embeddable
   concepts:
   - getting-started
-  category: guide
+  category: overview
   content_type: markdown
   size: standard
   grep_hint: null
@@ -1727,16 +1731,14 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-13T00:30:00Z'
 - id: datafusion:user-guide/metrics.md
   source: datafusion
   path: user-guide/metrics.md
   title: Metrics
-  summary: DataFusion operators expose runtime metrics so you can understand where
-    time is spent and how much data flows through the pipeline. See more in [EXPLAIN
-    ANALYZE](sql/explain.md#explain-analyze). `Base
+  summary: DataFusion operators expose runtime metrics so you can understand where time is spent and how much data flows through
+    the pipeline. See more in [EXPLAIN ANALYZE](sql/explain.md#explain-analyze). `Base
   tags:
   - user-guide
   keywords:
@@ -1772,9 +1774,8 @@ entries:
   source: datafusion
   path: user-guide/sql/aggregate_functions.md
   title: Aggregate Functions
-  summary: Aggregate functions operate on a set of values to compute a single result.
-    Aggregate functions support the SQL `FILTER (WHERE ...)` clause to restrict which
-    input rows contribute to the aggregate resu
+  summary: Aggregate functions operate on a set of values to compute a single result. Aggregate functions support the SQL
+    `FILTER (WHERE ...)` clause to restrict which input rows contribute to the aggregate resu
   tags:
   - functions
   - sql
@@ -1822,8 +1823,7 @@ entries:
   source: datafusion
   path: user-guide/sql/data_types.md
   title: Data Types
-  summary: DataFusion uses Arrow, and thus the Arrow type system, for query execution.
-    The SQL types from
+  summary: DataFusion uses Arrow, and thus the Arrow type system, for query execution. The SQL types from
   tags:
   - sql
   - user-guide
@@ -1865,8 +1865,7 @@ entries:
   source: datafusion
   path: user-guide/sql/ddl.md
   title: DDL
-  summary: DDL stands for "Data Definition Language" and relates to creating and modifying
-    catalog objects such as Tables.
+  summary: DDL stands for "Data Definition Language" and relates to creating and modifying catalog objects such as Tables.
   tags:
   - sql
   - user-guide
@@ -1908,8 +1907,7 @@ entries:
   source: datafusion
   path: user-guide/sql/dml.md
   title: DML
-  summary: DML stands for "Data Manipulation Language" and relates to inserting and
-    modifying data in tables.
+  summary: DML stands for "Data Manipulation Language" and relates to inserting and modifying data in tables.
   tags:
   - sql
   - user-guide
@@ -1947,20 +1945,23 @@ entries:
   source: datafusion
   path: user-guide/sql/explain.md
   title: EXPLAIN
-  summary: The `EXPLAIN` command shows the logical and physical execution plan for
-    the specified SQL statement. EXPLAIN [ANALYZE] [VERBOSE] [FORMAT format] statement
+  summary: SQL reference for the EXPLAIN command in DataFusion. Syntax, EXPLAIN ANALYZE for runtime statistics, EXPLAIN VERBOSE
+    for detailed output, and FORMAT options for choosing output representation (indent vs tree).
   tags:
   - sql
-  - user-guide
-  keywords:
-  - create
   - explain
-  - indent
-  - select
-  - tree
+  - reference
+  - query-plan
+  keywords:
+  - EXPLAIN
+  - ANALYZE
+  - VERBOSE
+  - FORMAT
+  - query plan
+  - execution plan
   concepts:
   - sql-reference
-  category: guide
+  category: reference
   content_type: markdown
   size: standard
   grep_hint: null
@@ -1984,27 +1985,31 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-13T00:30:00Z'
 - id: datafusion:user-guide/sql/format_options.md
   source: datafusion
   path: user-guide/sql/format_options.md
   title: Format Options
-  summary: DataFusion supports customizing how data is read from or written to disk
-    as a result of a `COPY`, `INSERT INTO`, or `CREATE EXTERNAL TABLE` statements.
-    There are a few special options, file format (e.
+  summary: Reference for format options in DataFusion's COPY, INSERT INTO, and CREATE EXTERNAL TABLE statements. Covers CSV,
+    JSON, Parquet, and Avro format options; column-specific Parquet options; and precedence rules between table-level, statement-level,
+    and session-level config.
   tags:
   - sql
-  - user-guide
-  keywords:
-  - create
   - format
-  - insert
-  - options
+  - csv
+  - parquet
+  - reference
+  keywords:
+  - COPY
+  - CREATE EXTERNAL TABLE
+  - format options
+  - Parquet
+  - CSV
+  - compression
   concepts:
   - sql-reference
-  category: guide
+  category: reference
   content_type: markdown
   size: standard
   grep_hint: null
@@ -2024,16 +2029,14 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-13T00:30:00Z'
 - id: datafusion:user-guide/sql/information_schema.md
   source: datafusion
   path: user-guide/sql/information_schema.md
   title: Information Schema
-  summary: DataFusion supports showing metadata about the tables and views available.
-    This information can be accessed using the views of the ISO SQL `information_schema`
-    schema or the DataFusion specific `SHOW
+  summary: DataFusion supports showing metadata about the tables and views available. This information can be accessed using
+    the views of the ISO SQL `information_schema` schema or the DataFusion specific `SHOW
   tags:
   - sql
   - user-guide
@@ -2111,9 +2114,8 @@ entries:
   source: datafusion
   path: user-guide/sql/prepared_statements.md
   title: Prepared Statements
-  summary: The `PREPARE` statement allows for the creation and storage of a SQL statement
-    with placeholder arguments. The prepared statements can then be executed repeatedly
-    in an efficient manner.
+  summary: The `PREPARE` statement allows for the creation and storage of a SQL statement with placeholder arguments. The
+    prepared statements can then be executed repeatedly in an efficient manner.
   tags:
   - sql
   - user-guide
@@ -2157,22 +2159,19 @@ entries:
   source: datafusion
   path: user-guide/sql/scalar_functions.md
   title: Scalar Functions
-  summary: '- [abs](#abs) - [acos](#acos)'
+  summary: 'Auto-generated comprehensive reference of all DataFusion SQL scalar functions organized by category: math, string,
+    regex, temporal, binary, hash, encoding, and more. Each entry includes arguments, return type, and usage examples.'
   tags:
-  - functions
   - sql
-  - user-guide
-  keywords:
-  - abs
-  - alter
-  - create
   - functions
-  - insert
-  - join
   - scalar
-  - select
-  - union
-  - update
+  - reference
+  keywords:
+  - scalar functions
+  - math functions
+  - string functions
+  - date functions
+  - SQL reference
   concepts:
   - sql-reference
   category: reference
@@ -2199,29 +2198,30 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-13T00:30:00Z'
 - id: datafusion:user-guide/sql/select.md
   source: datafusion
   path: user-guide/sql/select.md
   title: SELECT syntax
-  summary: The queries in DataFusion scan data from tables and return 0 or more rows.
-    Please be aware that column names in queries are made lower-case, but not on the
-    inferred schema. Accordingly, if you
+  summary: SQL reference for the SELECT statement in DataFusion. Covers full SELECT syntax including WITH/CTE, SELECT INTO,
+    FROM, JOIN types, WHERE, GROUP BY (including GROUP BY ALL), HAVING, WINDOW, ORDER BY, LIMIT/OFFSET, and UNION/EXCEPT/INTERSECT.
   tags:
   - sql
-  - user-guide
-  keywords:
-  - create
-  - join
   - select
-  - syntax
-  - union
-  - where
+  - reference
+  - query
+  keywords:
+  - SELECT
+  - JOIN
+  - GROUP BY
+  - WINDOW
+  - CTE
+  - LIMIT
+  - ORDER BY
   concepts:
   - sql-reference
-  category: guide
+  category: reference
   content_type: markdown
   size: standard
   grep_hint: null
@@ -2245,25 +2245,25 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-13T00:30:00Z'
 - id: datafusion:user-guide/sql/special_functions.md
   source: datafusion
   path: user-guide/sql/special_functions.md
   title: Special Functions
-  summary: '- [unnest](#unnest) - [unnest(struct)](#unnest-struct)'
+  summary: 'Reference for DataFusion''s special SQL expansion functions: unnest() for arrays and maps, unnest(struct) for
+    flattening struct columns into separate columns. Includes argument descriptions and usage examples.'
   tags:
-  - functions
   - sql
-  - user-guide
-  keywords:
-  - __unnest_placeholder
-  - create
   - functions
-  - select
-  - special
   - unnest
+  - reference
+  keywords:
+  - unnest
+  - array expansion
+  - struct
+  - map
+  - special functions
   concepts:
   - sql-reference
   category: reference
@@ -2290,16 +2290,14 @@ entries:
   links_to: []
   links_from: []
   frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
+  stale: false
   last_indexed: '2026-04-13T00:30:00Z'
 - id: datafusion:user-guide/sql/struct_coercion.md
   source: datafusion
   path: user-guide/sql/struct_coercion.md
   title: Struct Type Coercion and Field Mapping
-  summary: DataFusion uses **name-based field mapping** when coercing struct types
-    across different operations. This document explains how struct coercion works,
-    when it applies, and how to handle NULL fields. W
+  summary: DataFusion uses **name-based field mapping** when coercing struct types across different operations. This document
+    explains how struct coercion works, when it applies, and how to handle NULL fields. W
   tags:
   - sql
   - user-guide
@@ -2347,8 +2345,7 @@ entries:
   source: datafusion
   path: user-guide/sql/subqueries.md
   title: Subqueries
-  summary: Subqueries (also known as inner queries or nested queries) are queries
-    within a query.
+  summary: Subqueries (also known as inner queries or nested queries) are queries within a query.
   tags:
   - sql
   - user-guide
@@ -2391,9 +2388,8 @@ entries:
   source: datafusion
   path: user-guide/sql/window_functions.md
   title: Window Functions
-  summary: A _window function_ performs a calculation across a set of table rows that
-    are somehow related to the current row. This is comparable to the type of calculation
-    that can be done with an aggregate func
+  summary: A _window function_ performs a calculation across a set of table rows that are somehow related to the current row.
+    This is comparable to the type of calculation that can be done with an aggregate func
   tags:
   - functions
   - sql
@@ -2435,515 +2431,704 @@ entries:
   stale: false
   stale_since: null
   last_indexed: '2026-04-13T00:30:00Z'
-- id: datafusion-python:mdbook/src/SUMMARY.md
+- id: datafusion-python:contributor-guide/ffi.md
   source: datafusion-python
-  path: mdbook/src/SUMMARY.md
-  title: Summary
-  summary: Table of contents for DataFusion Python documentation.
+  stale: false
+  category: guide
+  summary: 'Explains DataFusion Python''s extension model via FFI: how to implement DataFusion Rust traits in Python packages
+    using PyCapsule, PyO3 class mutability requirements (#[pyclass(frozen)]), and the challenges of cross-package Rust trait
+    objects.'
   tags:
-  - navigation
-  - toc
+  - ffi
+  - extensibility
+  - contribution
+  - rust
+  - python
   keywords:
-  - summary
-  - table-of-contents
-  concepts:
-  - python-bindings
-  category: navigation
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings: []
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
-  last_indexed: '2026-04-13T00:30:00Z'
-- id: datafusion-python:mdbook/src/index.md
+  - FFI
+  - PyCapsule
+  - PyO3
+  - pyclass(frozen)
+  - Rust trait
+  - extension
+- id: datafusion-python:contributor-guide/index.md
   source: datafusion-python
-  path: mdbook/src/index.md
-  title: DataFusion Book
-  summary: Introduction to DataFusion as a high-performance query engine with Python
-    and SQL bindings.
+  stale: false
+  category: overview
+  summary: Entry point for DataFusion Python contributors. Lists types of contributions welcome (issues, docs, code review,
+    PRs), links to FFI extension guidelines, and community norms around PR review.
+  tags:
+  - contribution
+  - community
+  - overview
+  keywords:
+  - PR
+  - issue
+  - documentation
+  - community
+  - FFI
+- id: datafusion-python:contributor-guide/introduction.md
+  source: datafusion-python
+  stale: false
+  category: guide
+  summary: Introduction for new DataFusion Python contributors. Covers how to develop locally, required review of PyO3 mutability
+    guidelines before touching bindings, and the community PR review culture.
+  tags:
+  - contribution
+  - development
+  - pyo3
+  keywords:
+  - PyO3
+  - development setup
+  - PR review
+  - frozen pyclass
+  - contributor
+- id: datafusion-python:user-guide/ai-coding-assistants.md
+  source: datafusion-python
+  stale: false
+  category: guide
+  summary: Describes machine-readable guidance published for AI coding assistants (SKILL.md, llms.txt) to help produce idiomatic
+    DataFusion Python code. Explains how to configure tools like Claude, Copilot, and Cursor to use these files.
+  tags:
+  - ai
+  - llms
+  - coding-assistants
+  - tooling
+  keywords:
+  - SKILL.md
+  - llms.txt
+  - Claude
+  - Copilot
+  - Cursor
+  - AI assistant
+  - idiomatic
+- id: datafusion-python:user-guide/basics.md
+  source: datafusion-python
+  stale: false
+  category: guide
+  summary: 'Introduces key DataFusion Python concepts through a taxi trip data example: creating a SessionContext, loading
+    Parquet data, running SQL queries, and using the DataFrame API for transformations. Explains lazy evaluation and result
+    collection.'
+  tags:
+  - basics
+  - concepts
+  - quickstart
+  - dataframe
+  keywords:
+  - SessionContext
+  - Parquet
+  - SQL
+  - DataFrame
+  - collect
+  - lazy evaluation
+  - taxi data
+- id: datafusion-python:user-guide/common-operations/aggregations.md
+  source: datafusion-python
+  stale: false
+  category: guide
+  summary: 'Guide to aggregation operations in DataFusion Python: using groupby(), aggregate(), and built-in aggregate functions
+    (sum, count, mean, min, max). Covers grouped aggregation and aggregate expressions via the DataFrame API.'
+  tags:
+  - aggregation
+  - dataframe
+  - groupby
+  - python
+  keywords:
+  - groupby
+  - aggregate
+  - sum
+  - count
+  - mean
+  - group by
+- id: datafusion-python:user-guide/common-operations/basic-info.md
+  source: datafusion-python
+  stale: false
+  category: guide
+  summary: 'Basic DataFrame inspection operations: schema(), dtypes(), count(), show(), describe(), and column access. Demonstrates
+    how to get metadata and preview data from a DataFusion DataFrame.'
+  tags:
+  - dataframe
+  - inspection
+  - schema
+  - python
+  keywords:
+  - schema
+  - dtypes
+  - count
+  - show
+  - describe
+  - DataFrame inspection
+- id: datafusion-python:user-guide/common-operations/expressions.md
+  source: datafusion-python
+  stale: false
+  category: guide
+  summary: 'Guide to building and using DataFusion Python expressions: column references (col), literals (lit), arithmetic
+    and boolean operators, and how to compose expressions for use in filter(), select(), and other DataFrame methods.'
+  tags:
+  - expressions
+  - dataframe
+  - python
+  - col
+  - lit
+  keywords:
+  - col
+  - lit
+  - Expr
+  - boolean operator
+  - arithmetic
+  - expression composition
+- id: datafusion-python:user-guide/common-operations/functions.md
+  source: datafusion-python
+  stale: false
+  category: guide
+  summary: 'Overview of built-in DataFusion Python functions available in datafusion.functions: scalar functions for strings,
+    math, dates, and arrays. Shows how to import and use functions in DataFrame expressions.'
+  tags:
+  - functions
+  - dataframe
+  - scalar
+  - python
+  keywords:
+  - datafusion.functions
+  - scalar functions
+  - string functions
+  - math
+  - datetime
+- id: datafusion-python:user-guide/common-operations/index.md
+  source: datafusion-python
+  stale: false
+  category: overview
+  summary: Index page for the Common Operations section of the DataFusion Python user guide, linking to chapters on views,
+    basic info, select/filter, expressions, aggregations, joins, windows, functions, UDFs, and Spark-compatible functions.
+  tags:
+  - index
+  - common-operations
+  - overview
+  keywords:
+  - common operations
+  - overview
+  - table of contents
+- id: datafusion-python:user-guide/common-operations/joins.md
+  source: datafusion-python
+  stale: false
+  category: guide
+  summary: 'Guide to joining DataFrames in DataFusion Python: inner, left, right, full outer, semi, and anti joins using the
+    join() method. Covers join key specification, join conditions, and the resulting DataFrame schema.'
+  tags:
+  - joins
+  - dataframe
+  - python
+  - sql
+  keywords:
+  - join
+  - inner join
+  - left join
+  - right join
+  - anti join
+  - semi join
+- id: datafusion-python:user-guide/common-operations/select-and-filter.md
+  source: datafusion-python
+  stale: false
+  category: guide
+  summary: 'Guide to column selection and row filtering in DataFusion Python: select(), select_columns(), filter(), and drop()
+    methods. Covers expression-based filtering, column renaming with alias(), and combining operations.'
+  tags:
+  - select
+  - filter
+  - dataframe
+  - python
+  keywords:
+  - select
+  - filter
+  - select_columns
+  - alias
+  - drop
+  - column selection
+- id: datafusion-python:user-guide/common-operations/spark-functions.md
+  source: datafusion-python
+  stale: false
+  category: guide
+  summary: Documents Spark-compatible functions in DataFusion Python via datafusion.functions.spark and SessionContext.enable_spark_functions().
+    Covers string, math, datetime, hash, array, and aggregate functions compatible with PySpark semantics.
+  tags:
+  - spark
+  - functions
+  - compatibility
+  - python
+  keywords:
+  - Spark functions
+  - datafusion-spark
+  - enable_spark_functions
+  - Spark compatibility
+- id: datafusion-python:user-guide/common-operations/udf-and-udfa.md
+  source: datafusion-python
+  stale: false
+  category: guide
+  summary: Guide to User-Defined Functions (UDFs) and User-Defined Aggregate Functions (UDAFs) in DataFusion Python. Shows
+    how to register Python functions as UDFs using udf() and udaf() decorators and use them in DataFrame expressions.
+  tags:
+  - udf
+  - udaf
+  - python
+  - functions
+  - extensibility
+  keywords:
+  - UDF
+  - UDAF
+  - user-defined function
+  - aggregate function
+  - udf decorator
+  - Python callable
+- id: datafusion-python:user-guide/common-operations/views.md
+  source: datafusion-python
+  stale: false
+  category: guide
+  summary: How to register DataFusion DataFrames as named views using register_view(). Allows reusing a DataFrame as a virtual
+    table in subsequent SQL queries or DataFrame operations without materializing results.
+  tags:
+  - views
+  - dataframe
+  - sql
+  - python
+  keywords:
+  - register_view
+  - virtual table
+  - SQL view
+  - DataFrame reuse
+- id: datafusion-python:user-guide/common-operations/windows.md
+  source: datafusion-python
+  stale: false
+  category: guide
+  summary: 'Guide to window functions in DataFusion Python: using window_frame(), order_by(), and partition_by() in conjunction
+    with window functions like row_number(), rank(), and lead/lag. Demonstrates expression-based window specification.'
+  tags:
+  - window-functions
+  - dataframe
+  - python
+  - sql
+  keywords:
+  - window function
+  - row_number
+  - rank
+  - partition_by
+  - order_by
+  - window frame
+- id: datafusion-python:user-guide/configuration.md
+  source: datafusion-python
+  stale: false
+  category: guide
+  summary: How to configure DataFusion Python sessions via SessionConfig and RuntimeEnvBuilder passed to SessionContext. Covers
+    execution settings (parallelism, batch size), memory limits, and common runtime options.
+  tags:
+  - configuration
+  - python
+  - session
+  - runtime
+  keywords:
+  - SessionConfig
+  - RuntimeEnvBuilder
+  - SessionContext
+  - parallelism
+  - memory limit
+- id: datafusion-python:user-guide/data-sources.md
+  source: datafusion-python
+  stale: false
+  category: guide
+  summary: 'Overview of data sources supported in DataFusion Python: reading CSV, Parquet, JSON, Arrow, and Avro files via
+    SessionContext methods; registering custom data sources; and using SQL against registered tables.'
+  tags:
+  - data-sources
+  - io
+  - python
+  - csv
+  - parquet
+  keywords:
+  - read_csv
+  - read_parquet
+  - read_json
+  - data sources
+  - register_csv
+  - SessionContext
+- id: datafusion-python:user-guide/dataframe/execution-metrics.md
+  source: datafusion-python
+  stale: false
+  category: guide
+  summary: 'Explains DataFusion execution metrics: per-operator runtime statistics (rows processed, elapsed time, bytes read)
+    collected during query execution. Shows how to access metrics from the physical plan after calling collect().'
+  tags:
+  - execution
+  - metrics
+  - performance
+  - dataframe
+  keywords:
+  - execution metrics
+  - FilterExec
+  - ProjectionExec
+  - runtime statistics
+  - physical plan
+- id: datafusion-python:user-guide/dataframe/index.md
+  source: datafusion-python
+  stale: false
+  category: overview
+  summary: 'Overview of the DataFusion Python DataFrame class: lazy evaluation model, available transformation methods (filter,
+    select, aggregate, join, sort, limit), and terminal operations (collect, show, to_pandas, to_arrow).'
+  tags:
+  - dataframe
+  - overview
+  - python
+  - lazy-evaluation
+  keywords:
+  - DataFrame
+  - lazy evaluation
+  - collect
+  - show
+  - to_pandas
+  - to_arrow
+- id: datafusion-python:user-guide/dataframe/rendering.md
+  source: datafusion-python
+  stale: false
+  category: guide
+  summary: DataFusion Python DataFrame rendering configuration for Jupyter notebooks (HTML via _repr_html_) and terminals
+    (__repr__). Documents the datafusion.dataframe_formatter module and options for controlling display format.
+  tags:
+  - dataframe
+  - rendering
+  - jupyter
+  - display
+  keywords:
+  - _repr_html_
+  - dataframe_formatter
+  - Jupyter
+  - HTML rendering
+  - terminal display
+- id: datafusion-python:user-guide/distributing-work.md
+  source: datafusion-python
+  stale: false
+  category: guide
+  summary: Guide to distributing DataFusion Python work across processes by serializing Expr objects for worker evaluation.
+    Explains the driver/worker pattern for embarrassingly parallel workloads and references the in-progress datafusion-distributed
+    project for query-level distribution.
+  tags:
+  - distributed
+  - parallel
+  - python
+  - performance
+  keywords:
+  - distributed
+  - serialized Expr
+  - worker
+  - parallel
+  - datafusion-distributed
+- id: datafusion-python:user-guide/index.md
+  source: datafusion-python
+  stale: false
+  category: overview
+  summary: Index page for the DataFusion Python user guide, linking to installation, basics/concepts, data sources, DataFrame
+    API, common operations, IO formats, configuration, distributing work, SQL, and upgrade guides.
+  tags:
+  - index
+  - overview
+  - user-guide
+  keywords:
+  - user guide
+  - table of contents
+  - overview
+- id: datafusion-python:user-guide/introduction.md
+  source: datafusion-python
+  stale: false
+  category: overview
+  summary: Introduction to the DataFusion Python user guide. Explains the purpose of the Python bindings for Apache Arrow
+    DataFusion and provides an orientation to the guide structure.
   tags:
   - introduction
   - overview
-  keywords:
+  - python
   - datafusion
-  - query-engine
-  - python
-  - sql
-  concepts:
-  - python-bindings
-  category: guide
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings: []
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
-  last_indexed: '2026-04-13T00:30:00Z'
-- id: datafusion-python:mdbook/src/installation.md
-  source: datafusion-python
-  path: mdbook/src/installation.md
-  title: Installation (Python)
-  summary: Installation guide for DataFusion Python using uv and pip, plus JupyterLab
-    setup.
-  tags:
-  - getting-started
-  - installation
-  - python
   keywords:
-  - install
-  - uv
-  - pip
-  - jupyter
-  concepts:
-  - python-bindings
-  category: tutorial
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings: []
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
-  last_indexed: '2026-04-13T00:30:00Z'
-- id: datafusion-python:mdbook/src/quickstart.md
-  source: datafusion-python
-  path: mdbook/src/quickstart.md
-  title: DataFusion Quickstart (Python)
-  summary: Quick intro demonstrating DataFrame creation and queries using SQL and
-    Python APIs.
-  tags:
-  - getting-started
-  - tutorial
-  - python
-  keywords:
-  - quickstart
-  - sessioncontext
-  - dataframe
-  - sql
-  concepts:
-  - python-bindings
-  category: tutorial
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings: []
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
-  last_indexed: '2026-04-13T00:30:00Z'
-- id: datafusion-python:mdbook/src/usage/index.md
-  source: datafusion-python
-  path: mdbook/src/usage/index.md
-  title: Usage (Python)
-  summary: Overview of creating DataFrames from various data sources and querying
-    with SQL or Python.
-  tags:
-  - usage
-  - overview
-  - python
-  keywords:
-  - usage
-  - dataframe
-  - csv
-  - parquet
-  concepts:
-  - python-bindings
-  category: guide
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings: []
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
-  last_indexed: '2026-04-13T00:30:00Z'
-- id: datafusion-python:mdbook/src/usage/create-table.md
-  source: datafusion-python
-  path: mdbook/src/usage/create-table.md
-  title: Create Table (Python)
-  summary: Guide for creating tables from Python dicts, CSV, and Parquet files.
-  tags:
-  - usage
-  - tutorial
-  - data-sources
-  - python
-  keywords:
-  - create-table
-  - from-pydict
-  - register-csv
-  - parquet
-  concepts:
-  - python-bindings
-  category: tutorial
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings: []
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
-  last_indexed: '2026-04-13T00:30:00Z'
-- id: datafusion-python:mdbook/src/usage/query-table.md
-  source: datafusion-python
-  path: mdbook/src/usage/query-table.md
-  title: Query Table (Python)
-  summary: Querying tables using SQL and Python APIs with filtering and aggregation
-    examples.
-  tags:
-  - usage
-  - tutorial
-  - query-api
-  - python
-  keywords:
-  - query
-  - filter
-  - select
-  - aggregate
-  - sql
-  concepts:
-  - python-bindings
-  category: tutorial
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings: []
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
-  last_indexed: '2026-04-13T00:30:00Z'
-- id: datafusion-python:mdbook/src/usage/query-plans.md
-  source: datafusion-python
-  path: mdbook/src/usage/query-plans.md
-  title: Query Plans (Python)
-  summary: Understanding logical, optimized, and physical query plans with GraphViz
-    visualization.
-  tags:
-  - usage
-  - advanced
-  - query-plans
-  - python
-  keywords:
-  - query-plan
-  - logical-plan
-  - physical-plan
-  - graphviz
-  concepts:
-  - python-bindings
-  category: reference
-  content_type: markdown
-  size: standard
-  grep_hint: null
-  headings: []
-  links_to: []
-  links_from: []
-  frontmatter: {}
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
-  last_indexed: '2026-04-13T00:30:00Z'
-- id: datafusion-python:contributor-guide/ffi.md
-  source: datafusion-python
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
-  category: unknown
-  summary: Pending re-scan
-  tags: []
-- id: datafusion-python:contributor-guide/index.md
-  source: datafusion-python
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
-  category: unknown
-  summary: Pending re-scan
-  tags: []
-- id: datafusion-python:contributor-guide/introduction.md
-  source: datafusion-python
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
-  category: unknown
-  summary: Pending re-scan
-  tags: []
-- id: datafusion-python:user-guide/ai-coding-assistants.md
-  source: datafusion-python
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
-  category: unknown
-  summary: Pending re-scan
-  tags: []
-- id: datafusion-python:user-guide/basics.md
-  source: datafusion-python
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
-  category: unknown
-  summary: Pending re-scan
-  tags: []
-- id: datafusion-python:user-guide/common-operations/aggregations.md
-  source: datafusion-python
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
-  category: unknown
-  summary: Pending re-scan
-  tags: []
-- id: datafusion-python:user-guide/common-operations/basic-info.md
-  source: datafusion-python
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
-  category: unknown
-  summary: Pending re-scan
-  tags: []
-- id: datafusion-python:user-guide/common-operations/expressions.md
-  source: datafusion-python
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
-  category: unknown
-  summary: Pending re-scan
-  tags: []
-- id: datafusion-python:user-guide/common-operations/functions.md
-  source: datafusion-python
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
-  category: unknown
-  summary: Pending re-scan
-  tags: []
-- id: datafusion-python:user-guide/common-operations/index.md
-  source: datafusion-python
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
-  category: unknown
-  summary: Pending re-scan
-  tags: []
-- id: datafusion-python:user-guide/common-operations/joins.md
-  source: datafusion-python
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
-  category: unknown
-  summary: Pending re-scan
-  tags: []
-- id: datafusion-python:user-guide/common-operations/select-and-filter.md
-  source: datafusion-python
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
-  category: unknown
-  summary: Pending re-scan
-  tags: []
-- id: datafusion-python:user-guide/common-operations/spark-functions.md
-  source: datafusion-python
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
-  category: unknown
-  summary: Pending re-scan
-  tags: []
-- id: datafusion-python:user-guide/common-operations/udf-and-udfa.md
-  source: datafusion-python
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
-  category: unknown
-  summary: Pending re-scan
-  tags: []
-- id: datafusion-python:user-guide/common-operations/views.md
-  source: datafusion-python
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
-  category: unknown
-  summary: Pending re-scan
-  tags: []
-- id: datafusion-python:user-guide/common-operations/windows.md
-  source: datafusion-python
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
-  category: unknown
-  summary: Pending re-scan
-  tags: []
-- id: datafusion-python:user-guide/configuration.md
-  source: datafusion-python
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
-  category: unknown
-  summary: Pending re-scan
-  tags: []
-- id: datafusion-python:user-guide/data-sources.md
-  source: datafusion-python
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
-  category: unknown
-  summary: Pending re-scan
-  tags: []
-- id: datafusion-python:user-guide/dataframe/execution-metrics.md
-  source: datafusion-python
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
-  category: unknown
-  summary: Pending re-scan
-  tags: []
-- id: datafusion-python:user-guide/dataframe/index.md
-  source: datafusion-python
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
-  category: unknown
-  summary: Pending re-scan
-  tags: []
-- id: datafusion-python:user-guide/dataframe/rendering.md
-  source: datafusion-python
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
-  category: unknown
-  summary: Pending re-scan
-  tags: []
-- id: datafusion-python:user-guide/distributing-work.md
-  source: datafusion-python
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
-  category: unknown
-  summary: Pending re-scan
-  tags: []
-- id: datafusion-python:user-guide/index.md
-  source: datafusion-python
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
-  category: unknown
-  summary: Pending re-scan
-  tags: []
-- id: datafusion-python:user-guide/introduction.md
-  source: datafusion-python
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
-  category: unknown
-  summary: Pending re-scan
-  tags: []
+  - introduction
+  - Python bindings
+  - DataFusion
+  - user guide
 - id: datafusion-python:user-guide/io/arrow.md
   source: datafusion-python
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
-  category: unknown
-  summary: Pending re-scan
-  tags: []
+  stale: false
+  category: guide
+  summary: 'Guide to reading and writing Arrow format data in DataFusion Python: reading Arrow IPC files and in-memory Arrow
+    record batches, integrating with PyArrow datasets, and writing results to Arrow format.'
+  tags:
+  - io
+  - arrow
+  - pyarrow
+  - python
+  keywords:
+  - Arrow IPC
+  - PyArrow
+  - read_arrow
+  - RecordBatch
+  - Arrow format
 - id: datafusion-python:user-guide/io/avro.md
   source: datafusion-python
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
-  category: unknown
-  summary: Pending re-scan
-  tags: []
+  stale: false
+  category: guide
+  summary: Guide to reading Avro files in DataFusion Python using SessionContext.read_avro(). Shows the basic pattern for
+    loading Avro serialized record data into a DataFrame.
+  tags:
+  - io
+  - avro
+  - python
+  keywords:
+  - Avro
+  - read_avro
+  - serialization
+  - SessionContext
 - id: datafusion-python:user-guide/io/csv.md
   source: datafusion-python
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
-  category: unknown
-  summary: Pending re-scan
-  tags: []
+  stale: false
+  category: guide
+  summary: Guide to reading CSV files in DataFusion Python using SessionContext.read_csv(). Covers schema inference, options
+    for delimiter, header, and null values.
+  tags:
+  - io
+  - csv
+  - python
+  keywords:
+  - CSV
+  - read_csv
+  - schema inference
+  - delimiter
+  - header
 - id: datafusion-python:user-guide/io/index.md
   source: datafusion-python
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
-  category: unknown
-  summary: Pending re-scan
-  tags: []
+  stale: false
+  category: overview
+  summary: Index page for DataFusion Python IO documentation, linking to guides for Arrow, Avro, CSV, JSON, Parquet, and custom
+    table provider integration.
+  tags:
+  - io
+  - index
+  - overview
+  keywords:
+  - IO
+  - file formats
+  - table of contents
 - id: datafusion-python:user-guide/io/json.md
   source: datafusion-python
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
-  category: unknown
-  summary: Pending re-scan
-  tags: []
+  stale: false
+  category: guide
+  summary: Guide to reading JSON files in DataFusion Python using SessionContext.read_json(). Covers newline-delimited JSON
+    (NDJSON) format and schema inference options.
+  tags:
+  - io
+  - json
+  - python
+  keywords:
+  - JSON
+  - NDJSON
+  - read_json
+  - schema inference
 - id: datafusion-python:user-guide/io/parquet.md
   source: datafusion-python
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
-  category: unknown
-  summary: Pending re-scan
-  tags: []
+  stale: false
+  category: guide
+  summary: Guide to reading Parquet files in DataFusion Python using SessionContext.read_parquet(). Covers partition pruning,
+    predicate pushdown, schema projection, and the lazy evaluation model for efficient Parquet reads.
+  tags:
+  - io
+  - parquet
+  - python
+  - performance
+  keywords:
+  - Parquet
+  - read_parquet
+  - partition pruning
+  - predicate pushdown
+  - projection
 - id: datafusion-python:user-guide/io/table_provider.md
   source: datafusion-python
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
-  category: unknown
-  summary: Pending re-scan
-  tags: []
+  stale: false
+  category: guide
+  summary: Guide to integrating custom Rust TableProvider implementations with DataFusion Python via FFI_TableProvider and
+    PyCapsule. Requires DataFusion 43.0.0+. Explains the process and links to complete examples.
+  tags:
+  - io
+  - custom
+  - ffi
+  - table-provider
+  - rust
+  keywords:
+  - FFI_TableProvider
+  - PyCapsule
+  - custom data source
+  - datafusion-ffi
+  - TableProvider
 - id: datafusion-python:user-guide/sql.md
   source: datafusion-python
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
-  category: unknown
-  summary: Pending re-scan
-  tags: []
+  stale: false
+  category: guide
+  summary: Guide to executing SQL in DataFusion Python via SessionContext.sql(). Covers registering tables, running SELECT
+    queries, SQL-to-DataFrame conversion, and mixing SQL with the programmatic DataFrame API.
+  tags:
+  - sql
+  - python
+  - dataframe
+  - query
+  keywords:
+  - sql()
+  - register_csv
+  - register_table
+  - SELECT
+  - SQL query
+  - DataFrame
 - id: datafusion-python:user-guide/upgrade-guides.md
   source: datafusion-python
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
-  category: unknown
-  summary: Pending re-scan
-  tags: []
+  stale: false
+  category: guide
+  summary: 'Upgrade guides for DataFusion Python breaking changes. Current entries: 54.0.0 removes the Config class in favor
+    of SessionConfig; provides before/after migration examples.'
+  tags:
+  - upgrade
+  - breaking-changes
+  - python
+  keywords:
+  - Config
+  - SessionConfig
+  - upgrade
+  - breaking changes
+  - 54.0.0
 - id: datafusion:contributor-guide/communication.md
   source: datafusion
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
-  category: unknown
-  summary: Pending re-scan
-  tags: []
+  stale: false
+  category: reference
+  summary: 'Community communication channels for Apache DataFusion: GitHub repository for issues and PRs, Slack/Discord chat,
+    mailing lists, and community calls. Describes the open participation model governed by ASF code of conduct.'
+  tags:
+  - community
+  - communication
+  - contribution
+  keywords:
+  - GitHub
+  - Slack
+  - mailing list
+  - community
+  - ASF
+  - chat
 - id: datafusion:contributor-guide/governance.md
   source: datafusion
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
-  category: unknown
-  summary: Pending re-scan
-  tags: []
+  stale: false
+  category: reference
+  summary: Governance structure of Apache DataFusion as an ASF project. Describes decision-making by consensus, the role of
+    committers and PMC members, independence from commercial interests, and links to Apache Way documentation.
+  tags:
+  - governance
+  - community
+  - apache
+  keywords:
+  - ASF
+  - Apache Way
+  - PMC
+  - committer
+  - governance
+  - consensus
 - id: datafusion:contributor-guide/inviting.md
   source: datafusion
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
-  category: unknown
-  summary: Pending re-scan
-  tags: []
+  stale: false
+  category: guide
+  summary: Process for DataFusion PMC members to invite new committers and PMC members. Covers evaluation criteria, the private
+    discussion process, formal nomination via ASF tooling, and links to the private mailing list archive for examples.
+  tags:
+  - governance
+  - committer
+  - PMC
+  - contribution
+  keywords:
+  - committer
+  - PMC member
+  - invitation
+  - nomination
+  - private mailing list
 - id: datafusion:contributor-guide/release_management.md
   source: datafusion
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
-  category: unknown
-  summary: Pending re-scan
-  tags: []
+  stale: false
+  category: reference
+  summary: Overview of DataFusion's release cadence (approximately monthly major releases), branch strategy (main + branch-NN
+    release branches), backport policy, and patch release criteria. Links to the full maintainer release process guide.
+  tags:
+  - release
+  - versioning
+  - contribution
+  keywords:
+  - release branch
+  - backport
+  - patch release
+  - branch-NN
+  - release cadence
 - id: datafusion:library-user-guide/upgrading/49.0.0.md
   source: datafusion
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
-  category: unknown
-  summary: Pending re-scan
-  tags: []
+  stale: false
+  category: guide
+  summary: 'Upgrade guide for DataFusion 49.0.0. Key breaking changes: MSRV bumped to Rust 1.85.1, DataFusionError variants
+    are now Box-wrapped to reduce size and async state machine overhead.'
+  tags:
+  - upgrade
+  - breaking-changes
+  - rust
+  keywords:
+  - MSRV
+  - 1.85.1
+  - DataFusionError
+  - Box
+  - upgrade guide
+  - 49.0.0
 - id: datafusion:library-user-guide/upgrading/53.0.0.md
   source: datafusion
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
-  category: unknown
-  summary: Pending re-scan
-  tags: []
+  stale: false
+  category: guide
+  summary: 'Upgrade guide for DataFusion 53.0.0. Key changes: arrow/parquet upgraded to 58.0.0, object_store to 0.13.0, ExecutionPlan::statistics()
+    removed. Includes migration steps for each breaking change.'
+  tags:
+  - upgrade
+  - breaking-changes
+  - arrow
+  keywords:
+  - arrow 58
+  - object_store 0.13
+  - ExecutionPlan
+  - statistics
+  - upgrade guide
+  - 53.0.0
 - id: datafusion:library-user-guide/upgrading/54.0.0.md
   source: datafusion
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
-  category: unknown
-  summary: Pending re-scan
-  tags: []
+  stale: false
+  category: guide
+  summary: 'Upgrade guide for DataFusion 54.0.0 (pre-release). Key breaking changes: AggregateFunctionExpr::human_display()
+    returns Option<&str>. Documents pending changes merged to main awaiting release.'
+  tags:
+  - upgrade
+  - breaking-changes
+  - aggregate
+  keywords:
+  - human_display
+  - Option
+  - AggregateFunctionExpr
+  - upgrade guide
+  - 54.0.0
 - id: datafusion:library-user-guide/upgrading/55.0.0.md
   source: datafusion
-  stale: true
-  stale_since: '2026-07-02T00:00:00Z'
-  category: unknown
-  summary: Pending re-scan
-  tags: []
+  stale: false
+  category: guide
+  summary: 'Upgrade guide for DataFusion 55.0.0 (pre-release). Key breaking changes: SpillFile trait replaces RefCountedTempFile
+    for pluggable spill backends; DiskManager::create_tmp_file now returns Arc<dyn SpillFile>.'
+  tags:
+  - upgrade
+  - breaking-changes
+  - spill
+  keywords:
+  - SpillFile
+  - RefCountedTempFile
+  - DiskManager
+  - spill
+  - upgrade guide
+  - 55.0.0
 meta:
-  generated_at: '2026-07-02T00:00:00Z'
-  entry_count: 108
+  generated_at: '2026-07-01T16:01:58Z'
+  entry_count: 100
