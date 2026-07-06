@@ -1,11 +1,11 @@
 # Narwhals Documentation Index
 
-> Sources: 1 | Entries: 66 | Generated: 2026-07-02T00:00:00Z
+> Sources: 1 | Entries: 66 | Generated: 2026-07-06T07:45:27Z
 > Generated from `index.yaml` — do not edit directly
 
 ---
 
-## null
+## Null
 
 - **API Completeness Overview** `narwhals:api-completeness/index.md` - API completeness summary showing which methods are supported across backends (pandas, Polars, PyArrow, cuDF, Modin)
 - **API Reference Overview** `narwhals:api-reference/index.md` - API reference overview for Narwhals
@@ -76,4 +76,4 @@
 
 ---
 
-*Rendered from index.yaml at 2026-07-02T00:00:00Z*
+*Rendered from index.yaml at 2026-07-06T07:45:27Z*

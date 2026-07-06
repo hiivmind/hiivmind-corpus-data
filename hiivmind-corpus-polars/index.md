@@ -1,15 +1,15 @@
 # Polars Documentation Index
 
-> Sources: 1 | Entries: 111 | Generated: 2026-07-02T00:00:00Z
+> Sources: 1 | Entries: 112 | Generated: 2026-07-06T07:45:26Z
 > Generated from `index.yaml` — do not edit directly
 
 ---
 
-## api
+## Api
 
 - **Python/Rust API** `polars:api/reference.md` - Links to full API documentation for Python and Rust
 
-## config
+## Config
 
 - **Anonymous Results** `polars:polars-on-premises/bare-metal/configuration/anonymous-results.md` - Configure anonymous results sink for remote queries without explicit output: shared filesystem (NFS/CephFS) and S3-compatible storage backends
 - **Anonymous Users** `polars:polars-on-premises/bare-metal/configuration/anonymous-users.md` - Pending re-scan
@@ -24,7 +24,7 @@
 - **Shuffle Data** `polars:polars-on-premises/bare-metal/configuration/shuffle-data.md` - Three shuffle storage options: worker-local SSD, shared filesystem (NFS/CephFS), S3-compatible. Performance trade-offs per option
 - **Static Leader** `polars:polars-on-premises/bare-metal/configuration/static-leader.md` - static_leader section identifying cluster leader node and public addresses, enabling shared config files with per-node instance_id overrides
 
-## guide
+## Guide
 
 - **AKS Deployment** `polars:polars-on-premises/kubernetes/cloud-providers/azure-kubernetes-service.md` - Pending re-scan
 - **Airflow Integration** `polars:polars-cloud/integrations/airflow.md` - Comprehensive Airflow patterns: auth decorators, await_result(), cluster lifecycle management (context managers, named manifests, manual shutdown), parallel single-node execution, multi-stage pipelines
@@ -51,11 +51,11 @@
 - **Testing** `polars:development/contributing/test.md` - Running tests
 - **Versioning** `polars:development/versioning.md` - Version policy
 
-## journal
+## Journal
 
 - **On-Premises Releases** `polars:polars-on-premises/releases.md` - Release history for Polars On-Prem; latest 0.6.3 (1 Jul 2026) bundles polars 1.42.1 and polars-cloud 0.9.0 with distributed Expression lowering, improved ClusterContext API, distributed Iceberg sink, manual cluster scaling, and new disk I/O metrics.
 
-## reference
+## Reference
 
 - **Aggregation** `polars:user-guide/expressions/aggregation.md` - group_by().agg() context. Multiple aggregations, conditional aggregations, filtering within groups, nested grouping, sorting within groups. Avoid Python lambdas to preserve parallelization
 - **Arrow Producer/Consumer** `polars:user-guide/misc/arrow.md` - Zero-copy data exchange: PyArrow to_arrow()/pl.from_arrow() for DataFrame/Table conversion, zero-copy export with compat_level, PyCapsule Interface (v1.3+) standard protocol, C Data Interface for direct struct exchange without PyArrow
@@ -127,13 +127,17 @@
 - **Visualization** `polars:user-guide/misc/visualization.md` - Plotting with hvPlot, Altair, Plotly
 - **Window Functions** `polars:user-guide/expressions/window-functions.md` - over() for group operations in select context. Ranking within groups, mapping strategies: group_to_rows (default), explode (faster), join. Windowed aggregations broadcast scalars
 
-## tutorial
+## Tutorial
 
 - **Getting Started** `polars:user-guide/getting-started.md` - First steps with Polars, basic DataFrame operations
 - **Installation** `polars:user-guide/installation.md` - Installing Polars and optional feature flags
 - **Introduction** `polars:index.md` - Overview of Polars: blazingly fast DataFrame library written in Rust, available for Python/R/NodeJS. Key features: parallel execution, lazy API, Arrow support, GPU acceleration
 - **On-Premises Getting Started** `polars:polars-on-premises/getting-started.md` - Kubernetes quickstart for Polars On-Prem: create workspace and service account via CLI or portal, deploy 2-worker cluster with Helm chart, port-forward scheduler/observatory/storage, then run a remote LazyFrame query.
 
+## Unknown
+
+- **checkpointing** `polars:polars-on-premises/bare-metal/configuration/checkpointing.md` - Pending re-scan
+
 ---
 
-*Rendered from index.yaml at 2026-07-02T00:00:00Z*
+*Rendered from index.yaml at 2026-07-06T07:45:26Z*
