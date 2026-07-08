@@ -1,6 +1,6 @@
 # DataFusion Documentation Index
 
-> Sources: 2 | Entries: 100 | Generated: 2026-07-01T16:01:58Z
+> Sources: 2 | Entries: 100 | Generated: 2026-07-06T07:45:28Z
 > Generated from `index.yaml` — do not edit directly
 
 ---
@@ -41,7 +41,7 @@
 - **null** `datafusion-python:user-guide/sql.md` - Guide to executing SQL in DataFusion Python via SessionContext.sql(). Covers registering tables, running SELECT queries, SQL-to-DataFrame conversion, and mixing SQL with the programmatic DataFrame API.
 - **null** `datafusion-python:user-guide/upgrade-guides.md` - Upgrade guides for DataFusion Python breaking changes. Current entries: 54.0.0 removes the Config class in favor of SessionConfig; provides before/after migration examples.
 
-## guide
+## Guide
 
 - **null** `datafusion:contributor-guide/inviting.md` - Process for DataFusion PMC members to invite new committers and PMC members. Covers evaluation criteria, the private discussion process, formal nomination via ASF tooling, and links to the private mailing list archive for examples.
 - **null** `datafusion:library-user-guide/upgrading/49.0.0.md` - Upgrade guide for DataFusion 49.0.0. Key breaking changes: MSRV bumped to Rust 1.85.1, DataFusionError variants are now Box-wrapped to reduce size and async state machine overhead.
@@ -77,13 +77,13 @@
 - **Using the SQL API** `datafusion:library-user-guide/using-the-sql-api.md` - DataFusion has a full SQL API that allows you to interact with DataFusion using SQL query strings. The simplest way to use the SQL API is to use the
 - **Working with `Expr`s** `datafusion:library-user-guide/working-with-exprs.md` - Explains the Expr abstraction in DataFusion — the expression tree used for computations in SQL and DataFrame APIs. Covers BinaryExpr, column references, literals, function calls, and how to traverse or transform expression trees programmatically.
 
-## overview
+## Overview
 
 - **Introduction** `datafusion:contributor-guide/index.md` - Entry point for DataFusion contributors covering types of contributions welcome (issues, discussions, documentation, code review, PRs), links to dev environment setup, issue tracking, and community communication channels.
 - **Introduction** `datafusion:user-guide/introduction.md` - Introduction to Apache DataFusion: a fast, extensible Rust query engine using Apache Arrow. Describes project goals (embeddable query engine for data-centric systems), key features (SQL+DataFrame APIs, CSV/Parquet/JSON/Avro support, Python bindings, customization), and links to benchmarks.
 - **Overview** `datafusion:user-guide/cli/overview.md` - Overview of datafusion-cli, the interactive SQL command-line tool for DataFusion. Describes its capabilities: SQL execution, CSV/Parquet/JSON/Arrow/Avro read-write support, local and remote (S3) data sources.
 
-## reference
+## Reference
 
 - **null** `datafusion:contributor-guide/communication.md` - Community communication channels for Apache DataFusion: GitHub repository for issues and PRs, Slack/Discord chat, mailing lists, and community calls. Describes the open participation model governed by ASF code of conduct.
 - **null** `datafusion:contributor-guide/governance.md` - Governance structure of Apache DataFusion as an ASF project. Describes decision-making by consensus, the role of committers and PMC members, independence from commercial interests, and links to Apache Way documentation.
@@ -116,10 +116,10 @@
 - **Window Functions** `datafusion:user-guide/sql/window_functions.md` - A _window function_ performs a calculation across a set of table rows that are somehow related to the current row. This is comparable to the type of calculation that can be done with an aggregate func
 - **Workspace Dependency Graph** `datafusion:contributor-guide/architecture/dependency-graph.md` - This page shows the dependency relationships between DataFusion's workspace crates. This only includes internal dependencies, external crates like `Arrow` are not included
 
-## tutorial
+## Tutorial
 
 - **Installation** `datafusion:user-guide/cli/installation.md` - To build and install the latest release of `datafusion-cli` from source, do: `datafusion-cli` can also be installed via [Homebrew] (on MacOS) like this:
 
 ---
 
-*Rendered from index.yaml at 2026-07-01T16:01:58Z*
+*Rendered from index.yaml at 2026-07-06T07:45:28Z*

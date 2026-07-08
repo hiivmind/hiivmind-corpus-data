@@ -1,16 +1,16 @@
 # Substrait Documentation Index
 
-> Sources: 1 | Entries: 62 | Generated: 2026-07-02T00:00:00Z
+> Sources: 1 | Entries: 62 | Generated: 2026-07-06T07:45:25Z
 > Generated from `index.yaml` — do not edit directly
 
 ---
 
-## guide
+## Guide
 
 - **FAQ** `substrait:faq.md` - FAQ covering post-join filter handling, project relation column output, and field naming representation in Substrait plans.
 - **Governance** `substrait:governance.md` - Substrait governance structure: users, contributors, committers, and PMC; describes voting rules and decision-making processes for the project.
 
-## null
+## Null
 
 - **About Substrait** `substrait:about.md` - Project vision: well-defined cross-language spec for data compute. Similar to Arrow (memory format) but for compute expressions. Why not SQL: lacks sufficient detail, not machine-processable. Why separate project: avoid coupling to single technology, like Arrow separated from Drill. Related: Apache Calcite (JVM SQL parsing), Apache Arrow (memory format)
 - **Aggregate Functions** `substrait:expressions/aggregate_functions.md` - Functions that collapse many records into one value. Examples: SUM, COUNT, AVG. Used in measures of Aggregate relations. May have optional filter
@@ -58,7 +58,7 @@
 - **Versioning** `substrait:spec/versioning.md` - Versioning policy for the specification
 - **Window Functions** `substrait:expressions/window_functions.md` - Relate a record to encompassing records. SQL examples: RANK, NTILE, ROW_NUMBER. Frame specification, partitioning, ordering
 
-## reference
+## Reference
 
 - **Active Libraries** `substrait:community/active_libraries.md` - List of active Substrait library implementations: Go, Java, Python, Rust; and inactive implementations (C++, C#, JavaScript, Ruby) with links to each repository.
 - **Breaking Change Policy** `substrait:spec/breaking_change_policy.md` - Policy for handling breaking changes in the Substrait specification: use dual-write migration strategy, URI-to-URN transition example, and process for deprecating old extension URIs.
@@ -75,10 +75,10 @@
 - **Type Classes** `substrait:types/type_classes.md` - Substrait type system: simple types, compound types (List, Map, Struct), and user-defined extension types; covers nullability, type parameters, and the u! prefix for extension types.
 - **Type Parsing** `substrait:types/type_parsing.md` - Type syntax and grammar for Substrait: notation for simple types, struct/nstruct forms, and the u! prefix for user-defined types; includes parsing rules and examples.
 
-## tutorial
+## Tutorial
 
 - **SQL to Substrait Tutorial** `substrait:tutorial/sql_to_substrait.md` - Step-by-step tutorial converting SQL queries to Substrait plans: covers Read relations, Filter, Project, Aggregate, and Join with annotated plan examples.
 
 ---
 
-*Rendered from index.yaml at 2026-07-02T00:00:00Z*
+*Rendered from index.yaml at 2026-07-06T07:45:25Z*

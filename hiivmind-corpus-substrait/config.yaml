@@ -4,28 +4,28 @@ corpus:
   display_name: Substrait
   created_at: '2025-12-10T15:44:00Z'
   keywords:
-  - substrait
-  - query-plan
-  - sql
-  - arrow
-  - calcite
-  - interop
+    - substrait
+    - query-plan
+    - sql
+    - arrow
+    - calcite
+    - interop
 sources:
-- id: substrait
-  type: git
-  repo_url: https://github.com/substrait-io/substrait
-  repo_owner: substrait-io
-  repo_name: substrait
-  branch: main
-  docs_root: site/docs
-  last_commit_sha: 8675ba395ce966e593ca66575930f59dc359b419
-  last_indexed_at: '2026-07-01T16:14:56Z'
+  - id: substrait
+    type: git
+    repo_url: https://github.com/substrait-io/substrait
+    repo_owner: substrait-io
+    repo_name: substrait
+    branch: main
+    docs_root: site/docs
+    last_commit_sha: e4b7c1b7623ff25b289e3c2cf707cfdb7ac6d9f9
+    last_indexed_at: '2026-07-06T07:45:25Z'
 index:
   format: markdown
   last_updated_at: '2026-07-01T16:14:56Z'
 settings:
   include_patterns:
-  - '**/*.md'
+    - '**/*.md'
   exclude_patterns:
-  - '**/img/**'
-  - '**/stylesheets/**'
+    - '**/img/**'
+    - '**/stylesheets/**'

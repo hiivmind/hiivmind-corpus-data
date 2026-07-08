@@ -4,31 +4,31 @@ corpus:
   display_name: Polars
   created_at: '2025-12-10T15:23:00Z'
   keywords:
-  - polars
-  - dataframe
-  - lazy
-  - expression
-  - rust
-  - arrow
-  - series
+    - polars
+    - dataframe
+    - lazy
+    - expression
+    - rust
+    - arrow
+    - series
 sources:
-- id: polars
-  type: git
-  repo_url: https://github.com/pola-rs/polars
-  repo_owner: pola-rs
-  repo_name: polars
-  branch: main
-  docs_root: docs/source
-  last_commit_sha: 2f9135dcfd76fc23322e02829f21bbd4b3636648
-  last_indexed_at: '2026-07-01T16:14:56Z'
+  - id: polars
+    type: git
+    repo_url: https://github.com/pola-rs/polars
+    repo_owner: pola-rs
+    repo_name: polars
+    branch: main
+    docs_root: docs/source
+    last_commit_sha: a21100ac06d948effad7433a7cbe9612a8738db6
+    last_indexed_at: '2026-07-06T07:45:26Z'
 index:
   format: markdown
   last_updated_at: '2026-07-01T16:14:56Z'
 settings:
   include_patterns:
-  - '**/*.md'
-  - '**/*.mdx'
+    - '**/*.md'
+    - '**/*.mdx'
   exclude_patterns:
-  - '**/_*.md'
-  - '**/_snippets/**'
-  - '**/_build/**'
+    - '**/_*.md'
+    - '**/_snippets/**'
+    - '**/_build/**'
