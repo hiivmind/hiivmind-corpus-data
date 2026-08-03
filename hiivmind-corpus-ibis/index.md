@@ -1,11 +1,11 @@
 # Ibis Documentation Index
 
-> Sources: 1 | Entries: 95 | Generated: 2026-07-02T00:00:00Z
+> Sources: 1 | Entries: 95 | Generated: 2026-08-03T09:54:48Z
 > Generated from `index.yaml` — do not edit directly
 
 ---
 
-## null
+## Null
 
 - **10 Minutes to Ibis** `ibis:tutorials/basics.qmd` - Quick tutorial: filter, select, mutate, order_by, group_by, aggregate. Uses DuckDB + Palmer penguins dataset. Interactive mode with ibis.options.interactive = True
 - **AI & Automated Code Policy** `ibis:contribute/06_automated_code_and_ai.qmd` - AI/LLM contribution policy: AI tools allowed to assist, but all contributions require meaningful human review. Fully automated PR submissions (agents without human review) prohibited
@@ -101,11 +101,11 @@
 - **pandas Backend** `ibis:backends/pandas.qmd` - pandas backend for compatibility
 - **plotnine Visualization** `ibis:how-to/visualization/plotnine.qmd` - ggplot2-style plotting with plotnine
 
-## reference
+## Reference
 
 - **Athena Backend** `ibis:backends/athena.qmd` - Amazon Athena backend for Ibis: install with `ibis-framework[athena]`, connect via `ibis.athena.connect(s3_staging_dir=...)` — the S3 staging directory is required by pyathena for dumping query results.
 - **MySQL Backend** `ibis:backends/mysql.qmd` - MySQL/MariaDB backend for Ibis: supports CSV, Parquet, and PyArrow outputs with memtable fallback; connect via `ibis.mysql.connect()` with host/port/database params or a `mysql://` URL; also works with MariaDB.
 
 ---
 
-*Rendered from index.yaml at 2026-07-02T00:00:00Z*
+*Rendered from index.yaml at 2026-08-03T09:54:48Z*

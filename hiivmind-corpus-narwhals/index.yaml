@@ -1,7 +1,7 @@
 meta:
   corpus: narwhals
   source: narwhals
-  generated_at: '2026-07-06T07:45:27Z'
+  generated_at: '2026-08-03T09:54:58Z'
   entry_count: 66
 entries:
   - id: narwhals:index.md
@@ -121,8 +121,9 @@ entries:
       - group-by
     concepts:
       - expression-model
-    stale: false
+    stale: true
     last_indexed: '2026-07-02T00:00:00Z'
+    stale_since: "2026-08-03T09:54:58Z"
   - id: narwhals:concepts/boolean.md
     source: narwhals
     title: Boolean Operations
@@ -149,8 +150,9 @@ entries:
     concepts:
       - null-handling
       - behavioral-concepts
-    stale: false
+    stale: true
     last_indexed: '2026-07-02T00:00:00Z'
+    stale_since: "2026-08-03T09:54:58Z"
   - id: narwhals:concepts/order_dependence.md
     source: narwhals
     title: Order Dependence
@@ -245,6 +247,8 @@ entries:
       - extensions
       - plugins
       - custom
+    stale: true
+    stale_since: "2026-08-03T09:54:58Z"
   - id: narwhals:generating_sql.md
     source: narwhals
     title: Generating SQL
@@ -296,6 +300,8 @@ entries:
       - narwhals
       - resources
       - learning
+    stale: true
+    stale_since: "2026-08-03T09:54:58Z"
   - id: narwhals:api-completeness/index.md
     source: narwhals
     title: API Completeness Overview
@@ -506,7 +512,7 @@ entries:
       - lit
     concepts:
       - dataframe-agnostic
-    stale: false
+    stale: true
     keywords:
       - col
       - lit
@@ -518,6 +524,7 @@ entries:
       - schema
       - coalesce
     last_indexed: '2026-07-02T00:00:00Z'
+    stale_since: "2026-08-03T09:54:58Z"
   - id: narwhals:api-reference/dataframe.md
     source: narwhals
     title: DataFrame API Reference
@@ -792,8 +799,9 @@ entries:
       - generics
     concepts:
       - type-system
-    stale: false
+    stale: true
     last_indexed: '2026-07-02T00:00:00Z'
+    stale_since: "2026-08-03T09:54:58Z"
   - id: narwhals:api-reference/dependencies.md
     source: narwhals
     title: Dependencies API Reference

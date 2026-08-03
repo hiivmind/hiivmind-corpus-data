@@ -1,7 +1,7 @@
 meta:
   corpus: substrait
   source: substrait
-  generated_at: '2026-07-06T07:45:25Z'
+  generated_at: '2026-08-03T09:54:56Z'
   entry_count: 62
 entries:
   - id: substrait:index.md
@@ -100,6 +100,8 @@ entries:
       - parameters
     concepts:
       - type-system
+    stale: true
+    stale_since: "2026-08-03T09:54:56Z"
   - id: substrait:types/type_classes.md
     source: substrait
     title: Type Classes
@@ -111,7 +113,7 @@ entries:
       - extension
     concepts:
       - type-system
-    stale: false
+    stale: true
     keywords:
       - simple-types
       - compound-types
@@ -123,6 +125,7 @@ entries:
       - u!
     category: reference
     last_indexed: '2026-07-02T00:00:00Z'
+    stale_since: "2026-08-03T09:54:56Z"
   - id: substrait:types/type_variations.md
     source: substrait
     title: Type Variations
@@ -438,7 +441,7 @@ entries:
       - window
     concepts:
       - relational-algebra
-    stale: false
+    stale: true
     keywords:
       - hash-join
       - nested-loop-join
@@ -449,6 +452,7 @@ entries:
       - physical-aggregate
     category: reference
     last_indexed: '2026-07-02T00:00:00Z'
+    stale_since: "2026-08-03T09:54:56Z"
   - id: substrait:relations/user_defined_relations.md
     source: substrait
     title: User Defined Relations

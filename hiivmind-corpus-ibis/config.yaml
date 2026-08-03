@@ -4,31 +4,31 @@ corpus:
   display_name: Ibis
   created_at: '2025-12-10T15:34:00Z'
   keywords:
-  - ibis
-  - sql
-  - duckdb
-  - bigquery
-  - postgres
-  - portable
-  - expression
+    - ibis
+    - sql
+    - duckdb
+    - bigquery
+    - postgres
+    - portable
+    - expression
 sources:
-- id: ibis
-  type: git
-  repo_url: https://github.com/ibis-project/ibis
-  repo_owner: ibis-project
-  repo_name: ibis
-  branch: main
-  docs_root: docs
-  last_commit_sha: 4556dad2c2a9f04468b12237ade271c2e708db4a
-  last_indexed_at: '2026-07-01T16:14:56Z'
+  - id: ibis
+    type: git
+    repo_url: https://github.com/ibis-project/ibis
+    repo_owner: ibis-project
+    repo_name: ibis
+    branch: main
+    docs_root: docs
+    last_commit_sha: 6b478b94672825928d2b87b71f306e927e586891
+    last_indexed_at: '2026-08-03T09:54:48Z'
 index:
   format: markdown
   last_updated_at: '2026-07-01T16:14:56Z'
 settings:
   include_patterns:
-  - '**/*.qmd'
-  - '**/*.md'
+    - '**/*.qmd'
+    - '**/*.md'
   exclude_patterns:
-  - '**/_freeze/**'
-  - '**/posts/**'
-  - '**/presentations/**'
+    - '**/_freeze/**'
+    - '**/posts/**'
+    - '**/presentations/**'
