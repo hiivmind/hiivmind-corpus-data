@@ -529,8 +529,9 @@ entries:
     links_to: []
     links_from: []
     frontmatter: {}
-    stale: false
+    stale: true
     last_indexed: '2026-04-18T14:38:30Z'
+    stale_since: "2026-08-03T09:54:50Z"
   - id: dlt:dlt-ecosystem/destinations/delta-iceberg.md
     source: dlt
     path: dlt-ecosystem/destinations/delta-iceberg.md
@@ -791,8 +792,9 @@ entries:
     links_to: []
     links_from: []
     frontmatter: {}
-    stale: false
+    stale: true
     last_indexed: '2026-04-18T14:38:30Z'
+    stale_since: "2026-08-03T09:54:50Z"
   - id: dlt:dlt-ecosystem/destinations/ducklake.md
     source: dlt
     path: dlt-ecosystem/destinations/ducklake.md
@@ -870,8 +872,9 @@ entries:
     links_to: []
     links_from: []
     frontmatter: {}
-    stale: false
+    stale: true
     last_indexed: '2026-04-18T14:38:30Z'
+    stale_since: "2026-08-03T09:54:50Z"
   - id: dlt:dlt-ecosystem/destinations/fabric.md
     source: dlt
     path: dlt-ecosystem/destinations/fabric.md
@@ -1238,8 +1241,9 @@ entries:
     links_to: []
     links_from: []
     frontmatter: {}
-    stale: false
+    stale: true
     last_indexed: '2026-04-18T14:38:30Z'
+    stale_since: "2026-08-03T09:54:50Z"
   - id: dlt:dlt-ecosystem/destinations/index.md
     source: dlt
     path: dlt-ecosystem/destinations/index.md
@@ -1470,8 +1474,9 @@ entries:
     links_to: []
     links_from: []
     frontmatter: {}
-    stale: false
+    stale: true
     last_indexed: '2026-04-18T14:38:30Z'
+    stale_since: "2026-08-03T09:54:50Z"
   - id: dlt:dlt-ecosystem/destinations/mssql.md
     source: dlt
     path: dlt-ecosystem/destinations/mssql.md
@@ -1857,8 +1862,9 @@ entries:
     links_to: []
     links_from: []
     frontmatter: {}
-    stale: false
+    stale: true
     last_indexed: '2026-04-18T14:38:30Z'
+    stale_since: "2026-08-03T09:54:50Z"
   - id: dlt:dlt-ecosystem/destinations/sqlalchemy.md
     source: dlt
     path: dlt-ecosystem/destinations/sqlalchemy.md
@@ -5670,8 +5676,9 @@ entries:
     links_to: []
     links_from: []
     frontmatter: {}
-    stale: false
+    stale: true
     last_indexed: '2026-04-18T14:38:30Z'
+    stale_since: "2026-08-03T09:54:50Z"
   - id: dlt:general-usage/dataset-access/marimo.md
     source: dlt
     path: general-usage/dataset-access/marimo.md
@@ -7890,7 +7897,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-07-06T07:45:23Z"
+    stale_since: "2026-08-03T09:54:50Z"
   - id: dlt:reference/explainers/how-dlt-works.md
     source: dlt
     path: reference/explainers/how-dlt-works.md
@@ -8108,8 +8115,9 @@ entries:
     links_to: []
     links_from: []
     frontmatter: {}
-    stale: false
+    stale: true
     last_indexed: '2026-04-18T14:38:30Z'
+    stale_since: "2026-08-03T09:54:50Z"
   - id: dlt:reference/telemetry.md
     source: dlt
     path: reference/telemetry.md
@@ -8660,7 +8668,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-07-06T07:45:23Z"
+    stale_since: "2026-08-03T09:54:50Z"
   - id: dlt:tutorial/advanced-course.md
     source: dlt
     path: tutorial/advanced-course.md
@@ -8807,8 +8815,9 @@ entries:
     links_to: []
     links_from: []
     frontmatter: {}
-    stale: false
+    stale: true
     last_indexed: '2026-04-18T14:38:30Z'
+    stale_since: "2026-08-03T09:54:50Z"
   - id: dlt:tutorial/fundamentals-course.md
     source: dlt
     path: tutorial/fundamentals-course.md
@@ -9026,8 +9035,9 @@ entries:
     links_to: []
     links_from: []
     frontmatter: {}
-    stale: false
+    stale: true
     last_indexed: '2026-04-18T14:38:30Z'
+    stale_since: "2026-08-03T09:54:50Z"
   - id: dlt:tutorial/sql-database.md
     source: dlt
     path: tutorial/sql-database.md
@@ -9851,8 +9861,9 @@ entries:
     links_to: []
     links_from: []
     frontmatter: {}
-    stale: false
+    stale: true
     last_indexed: '2026-04-18T14:38:30Z'
+    stale_since: "2026-08-03T09:54:50Z"
   - id: dlt:walkthroughs/run-in-snowflake/database-connector-app.md
     source: dlt
     path: walkthroughs/run-in-snowflake/database-connector-app.md
@@ -10057,7 +10068,7 @@ entries:
     last_indexed: '2026-04-18T14:38:30Z'
   - id: dlt:dlt-ecosystem/file-formats.md
     source: dlt
-    stale: false
+    stale: true
     category: unknown
     summary: 'Guide to dlt loader file formats: how to configure format at resource level (@dlt.resource(file_format=...)) or pipeline level (pipeline.run(..., loader_file_format=...)). Covers Parquet (requires pyarrow), JSONL, CSV, and insert-values formats.'
     tags:
@@ -10073,6 +10084,7 @@ entries:
       - insert-values
       - pyarrow
       - file_format
+    stale_since: "2026-08-03T09:54:50Z"
   - id: dlt:dlt-ecosystem/transformations/dlthub.md
     source: dlt
     stale: false
@@ -10174,10 +10186,10 @@ entries:
       - playground
       - AI workbench
       - introduction
-    stale_since: "2026-07-06T07:45:23Z"
+    stale_since: "2026-08-03T09:54:50Z"
   - id: dlt:hub/getting-started/oss-and-dlthub.md
     source: dlt
-    stale: false
+    stale: true
     category: unknown
     summary: 'Explains the two dltHub products: dlt (open source, Apache 2.0) and dltHub (commercial). Feature comparison table showing what''s included in each: OSS ingestion, AI Workbench, data quality, transformations, managed runtime, premium sources/destinations.'
     tags:
@@ -10193,6 +10205,7 @@ entries:
       - commercial
       - comparison
       - features
+    stale_since: "2026-08-03T09:54:50Z"
   - id: dlt:hub/getting-started/platform-tutorial.md
     source: dlt
     stale: false
@@ -10314,7 +10327,7 @@ entries:
       - workspace
   - id: dlt:hub/ingestion/rest-api-source.md
     source: dlt
-    stale: false
+    stale: true
     category: unknown
     summary: Guide to building REST API sources with the dltHub AI Workbench rest-api-pipeline toolkit. Provides structured guided workflow (skills, rules, MCP server) for building production-grade connectors in Claude Code, Cursor, and Codex.
     tags:
@@ -10330,6 +10343,7 @@ entries:
       - Codex
       - guided workflow
       - MCP
+    stale_since: "2026-08-03T09:54:50Z"
   - id: dlt:hub/ingestion/snowflake-plus.md
     source: dlt
     stale: false
@@ -10399,7 +10413,7 @@ entries:
       - alerts
   - id: dlt:hub/pipeline-operations/deployments.md
     source: dlt
-    stale: false
+    stale: true
     category: unknown
     summary: 'Guide to deploying code to the dltHub platform: ad-hoc launch via ''dlthub run/serve'', and manifest-based deployment via __deployment__.py with ''dlthub deploy''. Manifest enables scheduling, follow-up triggers, freshness checks, and multi-job workspaces.'
     tags:
@@ -10413,9 +10427,10 @@ entries:
       - manifest
       - scheduling
       - ad-hoc
+    stale_since: "2026-08-03T09:54:50Z"
   - id: dlt:hub/pipeline-operations/job-configuration.md
     source: dlt
-    stale: false
+    stale: true
     category: unknown
     summary: 'Reference for per-job dltHub configuration: execution timeout (execute={''timeout'': ''6h''}), grace period, dependency groups (require=), exposing ports for interactive apps (expose=), and TOML section targeting.'
     tags:
@@ -10430,6 +10445,7 @@ entries:
       - expose
       - require
       - job configuration
+    stale_since: "2026-08-03T09:54:50Z"
   - id: dlt:hub/pipeline-operations/monitoring.md
     source: dlt
     stale: false
@@ -10607,7 +10623,7 @@ entries:
       - relationships
   - id: dlt:hub/transformations/explore-and-transform.md
     source: dlt
-    stale: false
+    stale: true
     category: unknown
     summary: 'dltHub AI Workbench toolkits for post-load exploration and transformation: data-exploration (profiles data, creates marimo dashboard with Altair charts) and transformations (maps to Kimball CDM, generates @dlt.hub.transformation functions).'
     tags:
@@ -10623,9 +10639,10 @@ entries:
       - CDM
       - Kimball
       - Altair
+    stale_since: "2026-08-03T09:54:50Z"
   - id: dlt:hub/transformations/index.md
     source: dlt
-    stale: false
+    stale: true
     category: unknown
     summary: 'Overview of dltHub transformations via @dlt.hub.transformation decorator: reshapes already-loaded data by yielding SQL queries or Ibis expressions compiled to destination dialect. Supports all write dispositions and SQL destinations including filesystems.'
     tags:
@@ -10640,6 +10657,7 @@ entries:
       - write_disposition
       - warehouse
       - filesystem
+    stale_since: "2026-08-03T09:54:50Z"
   - id: dlt:walkthroughs/deploy-a-pipeline/deploy-with-dlthub.md
     source: dlt
     stale: false
@@ -10702,6 +10720,45 @@ entries:
     stale: true
     stale_since: "2026-07-06T07:45:23Z"
     last_indexed: "2026-07-06T07:45:23Z"
+  - id: dlt:hub/ai-harness/installation.md
+    source: dlt
+    path: hub/ai-harness/installation.md
+    title: installation
+    summary: Pending re-scan
+    tags: []
+    keywords: []
+    category: unknown
+    content_type: markdown
+    size: standard
+    stale: true
+    stale_since: "2026-08-03T09:54:50Z"
+    last_indexed: "2026-08-03T09:54:50Z"
+  - id: dlt:hub/ai-harness/introduction.md
+    source: dlt
+    path: hub/ai-harness/introduction.md
+    title: introduction
+    summary: Pending re-scan
+    tags: []
+    keywords: []
+    category: unknown
+    content_type: markdown
+    size: standard
+    stale: true
+    stale_since: "2026-08-03T09:54:50Z"
+    last_indexed: "2026-08-03T09:54:50Z"
+  - id: dlt:hub/ai-harness/toolkits.md
+    source: dlt
+    path: hub/ai-harness/toolkits.md
+    title: toolkits
+    summary: Pending re-scan
+    tags: []
+    keywords: []
+    category: unknown
+    content_type: markdown
+    size: standard
+    stale: true
+    stale_since: "2026-08-03T09:54:50Z"
+    last_indexed: "2026-08-03T09:54:50Z"
 meta:
-  generated_at: '2026-07-06T07:45:23Z'
-  entry_count: 208
+  generated_at: '2026-08-03T09:54:50Z'
+  entry_count: 211

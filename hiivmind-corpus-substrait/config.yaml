@@ -18,8 +18,8 @@ sources:
     repo_name: substrait
     branch: main
     docs_root: site/docs
-    last_commit_sha: e4b7c1b7623ff25b289e3c2cf707cfdb7ac6d9f9
-    last_indexed_at: '2026-07-06T07:45:25Z'
+    last_commit_sha: 4bd6bcc437aea6fc0f75fc5be293ca2f86d22535
+    last_indexed_at: '2026-08-03T09:54:56Z'
 index:
   format: markdown
   last_updated_at: '2026-07-01T16:14:56Z'

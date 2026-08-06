@@ -1,6 +1,6 @@
 # dlt Documentation Index
 
-> Sources: 1 | Entries: 208 | Generated: 2026-07-06T07:45:23Z
+> Sources: 1 | Entries: 211 | Generated: 2026-08-03T09:54:50Z
 > Generated from `index.yaml` — do not edit directly
 
 ---
@@ -229,8 +229,11 @@
 - **null** `dlt:walkthroughs/deploy-a-pipeline/deploy-with-dlthub.md` - Guide to deploying dlt pipelines to the managed dltHub platform. Explains what dltHub provides: one-command deploys, cron/event-driven triggers, isolated profiles, and workspace dashboard.
 - **null** `dlt:walkthroughs/deploy-a-pipeline/index.md` - Overview of dlt deployment options: runs anywhere Python runs. Lists deployment guides for GitHub Actions, Airflow/Composer, Google Cloud Functions, Prefect, and dltHub managed platform. Highlights dlthub deploy as simplest path.
 - **null** `dlt:walkthroughs/deploy-a-pipeline/orchestrate-with-dlthub.md` - Walkthrough for deploying and scheduling dlt pipelines with dltHub's managed orchestrator using @dlt.hub.run decorators. Covers workspace scaffolding, ad-hoc runs, __deployment__.py manifest, and trigger configuration.
+- **installation** `dlt:hub/ai-harness/installation.md` - Pending re-scan
+- **introduction** `dlt:hub/ai-harness/introduction.md` - Pending re-scan
 - **playground workspace** `dlt:hub/getting-started/playground-workspace.md` - Pending re-scan
+- **toolkits** `dlt:hub/ai-harness/toolkits.md` - Pending re-scan
 
 ---
 
-*Rendered from index.yaml at 2026-07-06T07:45:23Z*
+*Rendered from index.yaml at 2026-08-03T09:54:50Z*
