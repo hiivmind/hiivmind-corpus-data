@@ -1,6 +1,6 @@
 # dlt Documentation Index
 
-> Sources: 1 | Entries: 211 | Generated: 2026-08-03T09:54:50Z
+> Sources: 1 | Entries: 223 | Generated: 2026-08-31T13:12:37Z
 > Generated from `index.yaml` — do not edit directly
 
 ---
@@ -67,7 +67,7 @@
 - **ClickHouse** `dlt:dlt-ecosystem/destinations/clickhouse.md` - Setup and configuration for the ClickHouse dlt destination. Covers initializing a dlt project, installing dlt[clickhouse], creating ClickHouse credentials, and write dispositions supported.
 - **Cloud storage and filesystem** `dlt:dlt-ecosystem/destinations/filesystem.md` - Guide to the filesystem dlt destination for writing data to S3, GCS, Azure Blob Storage, and local paths. Covers S3 credential setup, staging dataset configuration, file format selection, and initialization.
 - **Cloud storage and filesystem** `dlt:dlt-ecosystem/verified-sources/filesystem/index.md` - Guide to the dlt filesystem verified source for loading structured files (CSV, Parquet, JSONL) from S3, GCS, Azure Blob, Google Drive, SFTP, and local paths. Two-step loading: first access file metadata, then read content. Supports incremental loading.
-- **Command Line Interface** `dlt:hub/command-line-interface.md` - Reference for the dlthub CLI commands: dlthub workspace info, dlthub pipeline init, dlthub run, dlthub serve, dlthub deploy, dlthub login. Covers workspace management, pipeline deployment, and job scheduling on the dltHub platform. ⚡ GREP - `grep -n '^## ' command-line-interface.md -A 20`
+- **Command Line Interface** `dlt:hub/command-line-interface.md` - Reference for the dlthub CLI commands: dlthub workspace info, dlthub pipeline init, dlthub run, dlthub serve, dlthub deploy, dlthub login. Covers workspace management, pipeline deployment, and job scheduling on the dltHub platform. ⚡ GREP - `grep -n '^## ' command-line-interface.md -A 20` ⏳ STALE
 - **Command Line Interface** `dlt:reference/command-line-interface.md` - Full reference for the dlt CLI: commands (dlt pipeline, dlt init, dlt deploy, dlt schema, dlt dashboard), subcommand options, and flag ordering rules (global flags must precede subcommands). ⚡ GREP - `grep -n '^## ' command-line-interface.md -A 20` ⏳ STALE
 - **Community Destinations** `dlt:dlt-ecosystem/destinations/community-destinations.md` - Community-contributed destinations for dlt
 - **Configuration** `dlt:dlt-ecosystem/verified-sources/sql_database/configuration.md` - configuring the pipeline script, connection, and backend settings in the sql_database source
@@ -200,7 +200,6 @@
 - **null** `dlt:hub/data-quality/index.md` - Introduction to dltHub data quality features (public preview): metrics (scalar properties of data via @with_metrics) and checks (expectations to validate against). Covers defining static metrics on resources and the symmetry between metrics and checks.
 - **null** `dlt:hub/getting-started/introduction.md` - Introduction to dltHub as a managed agentic platform for dlt. Quickstart via 'uvx dlthub-start@latest', which scaffolds a workspace, installs dependencies, logs in, runs a sample pipeline in Playground, and launches an AI coding agent.
 - **null** `dlt:hub/getting-started/oss-and-dlthub.md` - Explains the two dltHub products: dlt (open source, Apache 2.0) and dltHub (commercial). Feature comparison table showing what's included in each: OSS ingestion, AI Workbench, data quality, transformations, managed runtime, premium sources/destinations.
-- **null** `dlt:hub/getting-started/platform-tutorial.md` - Tutorial for deploying a dlt pipeline to the managed dltHub platform: deploying a pipeline, deploying an always-fresh dashboard, and adding Python transformations to ELT jobs. Covers the managed infrastructure benefits.
 - **null** `dlt:hub/ingestion/dashboard.md` - Guide to the dltHub pipeline and dataset troubleshooting dashboard (marimo-based web app). Available locally and on the dltHub platform under Notebooks. Provides pipeline health, schema inspection, run traces, and data quality review.
 - **null** `dlt:hub/ingestion/delta.md` - dltHub commercial Delta Lake destination. Based on the dlt filesystem destination; requires deltalake pip package and a dltHub workspace. Covers setup via uvx dlthub-init and pipeline initialization with dlthub pipeline init.
 - **null** `dlt:hub/ingestion/iceberg.md` - dltHub commercial Apache Iceberg destination using pyiceberg. Supports SQL and REST catalogs, ACID transactions, schema evolution, all write dispositions. Works with S3, Azure, GCS, and local storage.
@@ -229,11 +228,24 @@
 - **null** `dlt:walkthroughs/deploy-a-pipeline/deploy-with-dlthub.md` - Guide to deploying dlt pipelines to the managed dltHub platform. Explains what dltHub provides: one-command deploys, cron/event-driven triggers, isolated profiles, and workspace dashboard.
 - **null** `dlt:walkthroughs/deploy-a-pipeline/index.md` - Overview of dlt deployment options: runs anywhere Python runs. Lists deployment guides for GitHub Actions, Airflow/Composer, Google Cloud Functions, Prefect, and dltHub managed platform. Highlights dlthub deploy as simplest path.
 - **null** `dlt:walkthroughs/deploy-a-pipeline/orchestrate-with-dlthub.md` - Walkthrough for deploying and scheduling dlt pipelines with dltHub's managed orchestrator using @dlt.hub.run decorators. Covers workspace scaffolding, ad-hoc runs, __deployment__.py manifest, and trigger configuration.
+- **1.22** `dlt:release-notes/1.22.md` - Pending re-scan
+- **1.23** `dlt:release-notes/1.23.md` - Pending re-scan
+- **1.24** `dlt:release-notes/1.24.md` - Pending re-scan
+- **1.25** `dlt:release-notes/1.25.md` - Pending re-scan
+- **1.26** `dlt:release-notes/1.26.md` - Pending re-scan
+- **1.27** `dlt:release-notes/1.27.md` - Pending re-scan
+- **1.28** `dlt:release-notes/1.28.md` - Pending re-scan
+- **1.29** `dlt:release-notes/1.29.md` - Pending re-scan
+- **1.30** `dlt:release-notes/1.30.md` - Pending re-scan
+- **build marimo notebook** `dlt:hub/data-apps/build-marimo-notebook.md` - Pending re-scan
+- **environment variables** `dlt:hub/pipeline-operations/environment-variables.md` - Pending re-scan
 - **installation** `dlt:hub/ai-harness/installation.md` - Pending re-scan
 - **introduction** `dlt:hub/ai-harness/introduction.md` - Pending re-scan
+- **onboarding** `dlt:hub/getting-started/onboarding.md` - Pending re-scan
 - **playground workspace** `dlt:hub/getting-started/playground-workspace.md` - Pending re-scan
 - **toolkits** `dlt:hub/ai-harness/toolkits.md` - Pending re-scan
+- **what is a workspace** `dlt:hub/pipeline-operations/what-is-a-workspace.md` - Pending re-scan
 
 ---
 
-*Rendered from index.yaml at 2026-08-03T09:54:50Z*
+*Rendered from index.yaml at 2026-08-31T13:12:37Z*

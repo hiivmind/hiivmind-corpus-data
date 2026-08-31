@@ -1,7 +1,7 @@
 meta:
   corpus: polars
   source: polars
-  generated_at: '2026-08-03T09:54:53Z'
+  generated_at: '2026-08-31T13:12:43Z'
   entry_count: 112
 entries:
   - id: polars:index.md

@@ -1,6 +1,6 @@
 # Ibis Documentation Index
 
-> Sources: 1 | Entries: 95 | Generated: 2026-08-03T09:54:48Z
+> Sources: 1 | Entries: 95 | Generated: 2026-08-31T13:12:47Z
 > Generated from `index.yaml` — do not edit directly
 
 ---
@@ -108,4 +108,4 @@
 
 ---
 
-*Rendered from index.yaml at 2026-08-03T09:54:48Z*
+*Rendered from index.yaml at 2026-08-31T13:12:47Z*

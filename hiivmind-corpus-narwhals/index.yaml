@@ -1,7 +1,7 @@
 meta:
   corpus: narwhals
   source: narwhals
-  generated_at: '2026-08-03T09:54:58Z'
+  generated_at: '2026-08-31T13:12:46Z'
   entry_count: 66
 entries:
   - id: narwhals:index.md
@@ -17,7 +17,7 @@ entries:
     concepts:
       - dataframe-agnostic
       - lazy-support
-    stale: false
+    stale: true
     keywords:
       - from_native
       - narwhalify
@@ -29,6 +29,7 @@ entries:
       - Dask
       - Ibis
     last_indexed: '2026-07-02T00:00:00Z'
+    stale_since: "2026-08-31T13:12:46Z"
   - id: narwhals:why.md
     source: narwhals
     title: Why Narwhals?
@@ -41,8 +42,9 @@ entries:
       - agnostic
     concepts:
       - dataframe-agnostic
-    stale: false
+    stale: true
     last_indexed: '2026-07-02T00:00:00Z'
+    stale_since: "2026-08-31T13:12:46Z"
   - id: narwhals:installation.md
     source: narwhals
     title: Installation
@@ -66,8 +68,9 @@ entries:
       - tutorial
     concepts:
       - dataframe-agnostic
-    stale: false
+    stale: true
     last_indexed: '2026-07-02T00:00:00Z'
+    stale_since: "2026-08-31T13:12:46Z"
   - id: narwhals:basics/series.md
     source: narwhals
     title: Series Operations
@@ -78,8 +81,9 @@ entries:
       - tutorial
     concepts:
       - dataframe-agnostic
-    stale: false
+    stale: true
     last_indexed: '2026-07-02T00:00:00Z'
+    stale_since: "2026-08-31T13:12:46Z"
   - id: narwhals:basics/complete_example.md
     source: narwhals
     title: Complete Example
@@ -123,7 +127,7 @@ entries:
       - expression-model
     stale: true
     last_indexed: '2026-07-02T00:00:00Z'
-    stale_since: "2026-08-03T09:54:58Z"
+    stale_since: "2026-08-31T13:12:46Z"
   - id: narwhals:concepts/boolean.md
     source: narwhals
     title: Boolean Operations
@@ -192,8 +196,9 @@ entries:
       - optimization
     concepts:
       - behavioral-concepts
-    stale: false
+    stale: true
     last_indexed: '2026-07-02T00:00:00Z'
+    stale_since: "2026-08-31T13:12:46Z"
   - id: narwhals:concepts/column_names.md
     source: narwhals
     title: Column Names
@@ -219,7 +224,7 @@ entries:
       - production
     concepts:
       - backwards-compatibility
-    stale: false
+    stale: true
     keywords:
       - stable.v1
       - stable.v2
@@ -227,6 +232,7 @@ entries:
       - library-authors
       - API-stability
     last_indexed: '2026-07-02T00:00:00Z'
+    stale_since: "2026-08-31T13:12:46Z"
   - id: narwhals:overhead.md
     source: narwhals
     title: Overhead
@@ -238,6 +244,8 @@ entries:
       - benchmarks
     concepts:
       - backwards-compatibility
+    stale: true
+    stale_since: "2026-08-31T13:12:46Z"
   - id: narwhals:extending.md
     source: narwhals
     title: Extensions & Plugins
@@ -248,7 +256,7 @@ entries:
       - plugins
       - custom
     stale: true
-    stale_since: "2026-08-03T09:54:58Z"
+    stale_since: "2026-08-31T13:12:46Z"
   - id: narwhals:generating_sql.md
     source: narwhals
     title: Generating SQL
@@ -261,8 +269,9 @@ entries:
       - to_sql
     concepts:
       - sql-generation
-    stale: false
+    stale: true
     last_indexed: '2026-07-02T00:00:00Z'
+    stale_since: "2026-08-31T13:12:46Z"
   - id: narwhals:ecosystem.md
     source: narwhals
     title: Ecosystem
@@ -290,8 +299,9 @@ entries:
     tags:
       - narwhals
       - security
-    stale: false
+    stale: true
     last_indexed: '2026-07-02T00:00:00Z'
+    stale_since: "2026-08-31T13:12:46Z"
   - id: narwhals:resources.md
     source: narwhals
     title: Resources
@@ -313,6 +323,8 @@ entries:
       - support-matrix
     concepts:
       - api-completeness
+    stale: true
+    stale_since: "2026-08-31T13:12:46Z"
   - id: narwhals:api-completeness/dataframe.md
     source: narwhals
     title: DataFrame Methods Completeness
@@ -498,6 +510,8 @@ entries:
       - narwhals
       - api-reference
       - overview
+    stale: true
+    stale_since: "2026-08-31T13:12:46Z"
   - id: narwhals:api-reference/narwhals.md
     source: narwhals
     title: Narwhals Module
@@ -632,8 +646,9 @@ entries:
       - string
     concepts:
       - string-expressions
-    stale: false
+    stale: true
     last_indexed: '2026-07-02T00:00:00Z'
+    stale_since: "2026-08-31T13:12:46Z"
   - id: narwhals:api-reference/expr_struct.md
     source: narwhals
     title: Expr.struct API Reference
@@ -689,8 +704,9 @@ entries:
       - string
     concepts:
       - string-expressions
-    stale: false
+    stale: true
     last_indexed: '2026-07-02T00:00:00Z'
+    stale_since: "2026-08-31T13:12:46Z"
   - id: narwhals:api-reference/series_struct.md
     source: narwhals
     title: Series.struct API Reference
