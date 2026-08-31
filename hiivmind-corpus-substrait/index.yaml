@@ -1,7 +1,7 @@
 meta:
   corpus: substrait
   source: substrait
-  generated_at: '2026-08-03T09:54:56Z'
+  generated_at: '2026-08-31T13:12:41Z'
   entry_count: 62
 entries:
   - id: substrait:index.md
@@ -156,7 +156,7 @@ entries:
       - parsing
     concepts:
       - type-system
-    stale: false
+    stale: true
     keywords:
       - type-syntax
       - struct
@@ -166,6 +166,7 @@ entries:
       - parsing
     category: reference
     last_indexed: '2026-07-02T00:00:00Z'
+    stale_since: "2026-08-31T13:12:41Z"
   - id: substrait:types/named_structs.md
     source: substrait
     title: Named Structs
@@ -177,7 +178,7 @@ entries:
       - read-relation
     concepts:
       - type-system
-    stale: false
+    stale: true
     keywords:
       - named-struct
       - depth-first
@@ -186,6 +187,7 @@ entries:
       - schema
     category: reference
     last_indexed: '2026-07-02T00:00:00Z'
+    stale_since: "2026-08-31T13:12:41Z"
   - id: substrait:expressions/field_references.md
     source: substrait
     title: Field References
@@ -206,7 +208,7 @@ entries:
       - struct-field
     category: reference
     last_indexed: '2026-07-02T00:00:00Z'
-    stale_since: "2026-07-06T07:45:25Z"
+    stale_since: "2026-08-31T13:12:41Z"
   - id: substrait:expressions/scalar_functions.md
     source: substrait
     title: Scalar Functions
@@ -219,7 +221,7 @@ entries:
     concepts:
       - expressions
       - scalar-functions
-    stale: false
+    stale: true
     keywords:
       - function-name
       - arguments
@@ -229,6 +231,7 @@ entries:
       - extension-uri
     category: reference
     last_indexed: '2026-07-02T00:00:00Z'
+    stale_since: "2026-08-31T13:12:41Z"
   - id: substrait:expressions/lambda_expressions.md
     source: substrait
     title: Lambda Expressions
@@ -240,7 +243,7 @@ entries:
       - functions
     concepts:
       - expressions
-    stale: false
+    stale: true
     keywords:
       - lambda
       - anonymous-function
@@ -249,6 +252,7 @@ entries:
       - higher-order
     category: reference
     last_indexed: '2026-07-02T00:00:00Z'
+    stale_since: "2026-08-31T13:12:41Z"
   - id: substrait:expressions/aggregate_functions.md
     source: substrait
     title: Aggregate Functions
@@ -276,6 +280,8 @@ entries:
     concepts:
       - expressions
       - window-functions
+    stale: true
+    stale_since: "2026-08-31T13:12:41Z"
   - id: substrait:expressions/specialized_record_expressions.md
     source: substrait
     title: Specialized Record Expressions
@@ -349,7 +355,7 @@ entries:
       - sql
     concepts:
       - expressions
-    stale: false
+    stale: true
     keywords:
       - scalar-subquery
       - IN-predicate
@@ -359,6 +365,7 @@ entries:
       - set-predicate
     category: reference
     last_indexed: '2026-07-02T00:00:00Z'
+    stale_since: "2026-08-31T13:12:41Z"
   - id: substrait:expressions/extended_expression.md
     source: substrait
     title: Extended Expression
@@ -391,7 +398,7 @@ entries:
       - common-fields
     concepts:
       - relational-algebra
-    stale: false
+    stale: true
     keywords:
       - emit
       - rel_anchor
@@ -401,6 +408,7 @@ entries:
       - output-mapping
     category: reference
     last_indexed: '2026-07-02T00:00:00Z'
+    stale_since: "2026-08-31T13:12:41Z"
   - id: substrait:relations/logical_relations.md
     source: substrait
     title: Logical Relations
@@ -517,7 +525,7 @@ entries:
       - urn
     concepts:
       - extensions
-    stale: false
+    stale: true
     keywords:
       - extension-uri
       - URN
@@ -527,6 +535,7 @@ entries:
       - type-variation
     category: reference
     last_indexed: '2026-07-02T00:00:00Z'
+    stale_since: "2026-08-31T13:12:41Z"
   - id: substrait:functions_arithmetic.yaml
     source: substrait
     title: Arithmetic Functions
@@ -798,6 +807,8 @@ entries:
       - community
       - contributing
       - ai-policy
+    stale: true
+    stale_since: "2026-08-31T13:12:41Z"
   - id: substrait:community/powered_by.md
     source: substrait
     title: Powered By
@@ -823,7 +834,7 @@ entries:
       - governance
       - community
       - contributing
-    stale: false
+    stale: true
     keywords:
       - PMC
       - committers
@@ -832,6 +843,7 @@ entries:
       - decision-making
     category: guide
     last_indexed: '2026-07-02T00:00:00Z'
+    stale_since: "2026-08-31T13:12:41Z"
   - id: substrait:community/active_libraries.md
     source: substrait
     path: community/active_libraries.md
@@ -887,5 +899,6 @@ entries:
     links_to: []
     links_from: []
     frontmatter: {}
-    stale: false
+    stale: true
     last_indexed: '2026-07-02T00:00:00Z'
+    stale_since: "2026-08-31T13:12:41Z"
