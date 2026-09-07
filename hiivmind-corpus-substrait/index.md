@@ -1,6 +1,6 @@
 # Substrait Documentation Index
 
-> Sources: 1 | Entries: 62 | Generated: 2026-08-03T09:54:56Z
+> Sources: 1 | Entries: 62 | Generated: 2026-09-07T12:03:16Z
 > Generated from `index.yaml` — do not edit directly
 
 ---
@@ -81,4 +81,4 @@
 
 ---
 
-*Rendered from index.yaml at 2026-08-03T09:54:56Z*
+*Rendered from index.yaml at 2026-09-07T12:03:16Z*
