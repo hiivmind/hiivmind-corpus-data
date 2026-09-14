@@ -3028,6 +3028,214 @@ entries:
       - spill
       - upgrade guide
       - 55.0.0
+  - id: datafusion-python:source/contributor-guide/ffi-internals.md
+    source: datafusion-python
+    path: source/contributor-guide/ffi-internals.md
+    title: ffi internals
+    summary: Pending re-scan
+    tags: []
+    keywords: []
+    category: unknown
+    content_type: markdown
+    size: standard
+    stale: true
+    stale_since: "2026-09-14T12:19:10Z"
+    last_indexed: "2026-09-14T12:19:10Z"
+  - id: datafusion-python:source/contributor-guide/pyo3-guidelines.md
+    source: datafusion-python
+    path: source/contributor-guide/pyo3-guidelines.md
+    title: pyo3 guidelines
+    summary: Pending re-scan
+    tags: []
+    keywords: []
+    category: unknown
+    content_type: markdown
+    size: standard
+    stale: true
+    stale_since: "2026-09-14T12:19:10Z"
+    last_indexed: "2026-09-14T12:19:10Z"
+  - id: datafusion-python:source/extension-guide/bundles.md
+    source: datafusion-python
+    path: source/extension-guide/bundles.md
+    title: bundles
+    summary: Pending re-scan
+    tags: []
+    keywords: []
+    category: unknown
+    content_type: markdown
+    size: standard
+    stale: true
+    stale_since: "2026-09-14T12:19:10Z"
+    last_indexed: "2026-09-14T12:19:10Z"
+  - id: datafusion-python:source/extension-guide/capsule-protocol.md
+    source: datafusion-python
+    path: source/extension-guide/capsule-protocol.md
+    title: capsule protocol
+    summary: Pending re-scan
+    tags: []
+    keywords: []
+    category: unknown
+    content_type: markdown
+    size: standard
+    stale: true
+    stale_since: "2026-09-14T12:19:10Z"
+    last_indexed: "2026-09-14T12:19:10Z"
+  - id: datafusion-python:source/extension-guide/checklist.md
+    source: datafusion-python
+    path: source/extension-guide/checklist.md
+    title: checklist
+    summary: Pending re-scan
+    tags: []
+    keywords: []
+    category: unknown
+    content_type: markdown
+    size: standard
+    stale: true
+    stale_since: "2026-09-14T12:19:10Z"
+    last_indexed: "2026-09-14T12:19:10Z"
+  - id: datafusion-python:source/extension-guide/codecs.md
+    source: datafusion-python
+    path: source/extension-guide/codecs.md
+    title: codecs
+    summary: Pending re-scan
+    tags: []
+    keywords: []
+    category: unknown
+    content_type: markdown
+    size: standard
+    stale: true
+    stale_since: "2026-09-14T12:19:10Z"
+    last_indexed: "2026-09-14T12:19:10Z"
+  - id: datafusion-python:source/extension-guide/functions.md
+    source: datafusion-python
+    path: source/extension-guide/functions.md
+    title: functions
+    summary: Pending re-scan
+    tags: []
+    keywords: []
+    category: unknown
+    content_type: markdown
+    size: standard
+    stale: true
+    stale_since: "2026-09-14T12:19:10Z"
+    last_indexed: "2026-09-14T12:19:10Z"
+  - id: datafusion-python:source/extension-guide/index.md
+    source: datafusion-python
+    path: source/extension-guide/index.md
+    title: index
+    summary: Pending re-scan
+    tags: []
+    keywords: []
+    category: unknown
+    content_type: markdown
+    size: standard
+    stale: true
+    stale_since: "2026-09-14T12:19:10Z"
+    last_indexed: "2026-09-14T12:19:10Z"
+  - id: datafusion-python:source/extension-guide/other-components.md
+    source: datafusion-python
+    path: source/extension-guide/other-components.md
+    title: other components
+    summary: Pending re-scan
+    tags: []
+    keywords: []
+    category: unknown
+    content_type: markdown
+    size: standard
+    stale: true
+    stale_since: "2026-09-14T12:19:10Z"
+    last_indexed: "2026-09-14T12:19:10Z"
+  - id: datafusion-python:source/extension-guide/query-planners.md
+    source: datafusion-python
+    path: source/extension-guide/query-planners.md
+    title: query planners
+    summary: Pending re-scan
+    tags: []
+    keywords: []
+    category: unknown
+    content_type: markdown
+    size: standard
+    stale: true
+    stale_since: "2026-09-14T12:19:10Z"
+    last_indexed: "2026-09-14T12:19:10Z"
+  - id: datafusion-python:source/extension-guide/sessions.md
+    source: datafusion-python
+    path: source/extension-guide/sessions.md
+    title: sessions
+    summary: Pending re-scan
+    tags: []
+    keywords: []
+    category: unknown
+    content_type: markdown
+    size: standard
+    stale: true
+    stale_since: "2026-09-14T12:19:10Z"
+    last_indexed: "2026-09-14T12:19:10Z"
+  - id: datafusion-python:source/extension-guide/table-providers.md
+    source: datafusion-python
+    path: source/extension-guide/table-providers.md
+    title: table providers
+    summary: Pending re-scan
+    tags: []
+    keywords: []
+    category: unknown
+    content_type: markdown
+    size: standard
+    stale: true
+    stale_since: "2026-09-14T12:19:10Z"
+    last_indexed: "2026-09-14T12:19:10Z"
+  - id: datafusion-python:source/extension-guide/why-ffi.md
+    source: datafusion-python
+    path: source/extension-guide/why-ffi.md
+    title: why ffi
+    summary: Pending re-scan
+    tags: []
+    keywords: []
+    category: unknown
+    content_type: markdown
+    size: standard
+    stale: true
+    stale_since: "2026-09-14T12:19:10Z"
+    last_indexed: "2026-09-14T12:19:10Z"
+  - id: datafusion-python:source/user-guide/distributing-work/index.md
+    source: datafusion-python
+    path: source/user-guide/distributing-work/index.md
+    title: index
+    summary: Pending re-scan
+    tags: []
+    keywords: []
+    category: unknown
+    content_type: markdown
+    size: standard
+    stale: true
+    stale_since: "2026-09-14T12:19:10Z"
+    last_indexed: "2026-09-14T12:19:10Z"
+  - id: datafusion-python:source/user-guide/distributing-work/query-engines.md
+    source: datafusion-python
+    path: source/user-guide/distributing-work/query-engines.md
+    title: query engines
+    summary: Pending re-scan
+    tags: []
+    keywords: []
+    category: unknown
+    content_type: markdown
+    size: standard
+    stale: true
+    stale_since: "2026-09-14T12:19:10Z"
+    last_indexed: "2026-09-14T12:19:10Z"
+  - id: datafusion-python:source/user-guide/extensions.md
+    source: datafusion-python
+    path: source/user-guide/extensions.md
+    title: extensions
+    summary: Pending re-scan
+    tags: []
+    keywords: []
+    category: unknown
+    content_type: markdown
+    size: standard
+    stale: true
+    stale_since: "2026-09-14T12:19:10Z"
+    last_indexed: "2026-09-14T12:19:10Z"
 meta:
-  generated_at: '2026-08-03T09:54:55Z'
-  entry_count: 100
+  generated_at: '2026-09-14T12:19:10Z'
+  entry_count: 116

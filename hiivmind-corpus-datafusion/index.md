@@ -1,6 +1,6 @@
 # DataFusion Documentation Index
 
-> Sources: 2 | Entries: 100 | Generated: 2026-08-03T09:54:55Z
+> Sources: 2 | Entries: 116 | Generated: 2026-09-14T12:19:10Z
 > Generated from `index.yaml` — do not edit directly
 
 ---
@@ -40,6 +40,22 @@
 - **null** `datafusion-python:user-guide/io/table_provider.md` - Guide to integrating custom Rust TableProvider implementations with DataFusion Python via FFI_TableProvider and PyCapsule. Requires DataFusion 43.0.0+. Explains the process and links to complete examples.
 - **null** `datafusion-python:user-guide/sql.md` - Guide to executing SQL in DataFusion Python via SessionContext.sql(). Covers registering tables, running SELECT queries, SQL-to-DataFrame conversion, and mixing SQL with the programmatic DataFrame API.
 - **null** `datafusion-python:user-guide/upgrade-guides.md` - Upgrade guides for DataFusion Python breaking changes. Current entries: 54.0.0 removes the Config class in favor of SessionConfig; provides before/after migration examples.
+- **bundles** `datafusion-python:source/extension-guide/bundles.md` - Pending re-scan
+- **capsule protocol** `datafusion-python:source/extension-guide/capsule-protocol.md` - Pending re-scan
+- **checklist** `datafusion-python:source/extension-guide/checklist.md` - Pending re-scan
+- **codecs** `datafusion-python:source/extension-guide/codecs.md` - Pending re-scan
+- **extensions** `datafusion-python:source/user-guide/extensions.md` - Pending re-scan
+- **ffi internals** `datafusion-python:source/contributor-guide/ffi-internals.md` - Pending re-scan
+- **functions** `datafusion-python:source/extension-guide/functions.md` - Pending re-scan
+- **index** `datafusion-python:source/extension-guide/index.md` - Pending re-scan
+- **index** `datafusion-python:source/user-guide/distributing-work/index.md` - Pending re-scan
+- **other components** `datafusion-python:source/extension-guide/other-components.md` - Pending re-scan
+- **pyo3 guidelines** `datafusion-python:source/contributor-guide/pyo3-guidelines.md` - Pending re-scan
+- **query engines** `datafusion-python:source/user-guide/distributing-work/query-engines.md` - Pending re-scan
+- **query planners** `datafusion-python:source/extension-guide/query-planners.md` - Pending re-scan
+- **sessions** `datafusion-python:source/extension-guide/sessions.md` - Pending re-scan
+- **table providers** `datafusion-python:source/extension-guide/table-providers.md` - Pending re-scan
+- **why ffi** `datafusion-python:source/extension-guide/why-ffi.md` - Pending re-scan
 
 ## Guide
 
@@ -122,4 +138,4 @@
 
 ---
 
-*Rendered from index.yaml at 2026-08-03T09:54:55Z*
+*Rendered from index.yaml at 2026-09-14T12:19:10Z*
