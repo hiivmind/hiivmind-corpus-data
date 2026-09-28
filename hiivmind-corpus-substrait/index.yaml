@@ -1,7 +1,7 @@
 meta:
   corpus: substrait
   source: substrait
-  generated_at: '2026-09-14T12:19:04Z'
+  generated_at: '2026-09-28T13:24:42Z'
   entry_count: 62
 entries:
   - id: substrait:index.md
@@ -231,7 +231,7 @@ entries:
       - extension-uri
     category: reference
     last_indexed: '2026-07-02T00:00:00Z'
-    stale_since: "2026-09-14T12:19:04Z"
+    stale_since: "2026-09-28T13:24:42Z"
   - id: substrait:expressions/lambda_expressions.md
     source: substrait
     title: Lambda Expressions

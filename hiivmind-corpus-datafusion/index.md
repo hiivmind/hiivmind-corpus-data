@@ -1,6 +1,6 @@
 # DataFusion Documentation Index
 
-> Sources: 2 | Entries: 116 | Generated: 2026-09-14T12:19:10Z
+> Sources: 2 | Entries: 116 | Generated: 2026-09-28T13:24:23Z
 > Generated from `index.yaml` — do not edit directly
 
 ---
@@ -138,4 +138,4 @@
 
 ---
 
-*Rendered from index.yaml at 2026-09-14T12:19:10Z*
+*Rendered from index.yaml at 2026-09-28T13:24:23Z*

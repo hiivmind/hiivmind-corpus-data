@@ -3039,7 +3039,7 @@ entries:
     content_type: markdown
     size: standard
     stale: true
-    stale_since: "2026-09-14T12:19:10Z"
+    stale_since: "2026-09-28T13:24:23Z"
     last_indexed: "2026-09-14T12:19:10Z"
   - id: datafusion-python:source/contributor-guide/pyo3-guidelines.md
     source: datafusion-python
@@ -3065,7 +3065,7 @@ entries:
     content_type: markdown
     size: standard
     stale: true
-    stale_since: "2026-09-14T12:19:10Z"
+    stale_since: "2026-09-28T13:24:23Z"
     last_indexed: "2026-09-14T12:19:10Z"
   - id: datafusion-python:source/extension-guide/capsule-protocol.md
     source: datafusion-python
@@ -3237,5 +3237,5 @@ entries:
     stale_since: "2026-09-14T12:19:10Z"
     last_indexed: "2026-09-14T12:19:10Z"
 meta:
-  generated_at: '2026-09-14T12:19:10Z'
+  generated_at: '2026-09-28T13:24:23Z'
   entry_count: 116

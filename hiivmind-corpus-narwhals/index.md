@@ -1,6 +1,6 @@
 # Narwhals Documentation Index
 
-> Sources: 1 | Entries: 66 | Generated: 2026-09-14T12:19:06Z
+> Sources: 1 | Entries: 66 | Generated: 2026-09-28T13:24:44Z
 > Generated from `index.yaml` — do not edit directly
 
 ---
@@ -76,4 +76,4 @@
 
 ---
 
-*Rendered from index.yaml at 2026-09-14T12:19:06Z*
+*Rendered from index.yaml at 2026-09-28T13:24:44Z*
