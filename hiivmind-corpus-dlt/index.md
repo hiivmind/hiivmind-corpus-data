@@ -1,6 +1,6 @@
 # dlt Documentation Index
 
-> Sources: 1 | Entries: 211 | Generated: 2026-09-14T12:19:13Z
+> Sources: 1 | Entries: 213 | Generated: 2026-09-28T13:24:25Z
 > Generated from `index.yaml` — do not edit directly
 
 ---
@@ -67,7 +67,7 @@
 - **ClickHouse** `dlt:dlt-ecosystem/destinations/clickhouse.md` - Setup and configuration for the ClickHouse dlt destination. Covers initializing a dlt project, installing dlt[clickhouse], creating ClickHouse credentials, and write dispositions supported.
 - **Cloud storage and filesystem** `dlt:dlt-ecosystem/destinations/filesystem.md` - Guide to the filesystem dlt destination for writing data to S3, GCS, Azure Blob Storage, and local paths. Covers S3 credential setup, staging dataset configuration, file format selection, and initialization.
 - **Cloud storage and filesystem** `dlt:dlt-ecosystem/verified-sources/filesystem/index.md` - Guide to the dlt filesystem verified source for loading structured files (CSV, Parquet, JSONL) from S3, GCS, Azure Blob, Google Drive, SFTP, and local paths. Two-step loading: first access file metadata, then read content. Supports incremental loading.
-- **Command Line Interface** `dlt:hub/command-line-interface.md` - Reference for the dlthub CLI commands: dlthub workspace info, dlthub pipeline init, dlthub run, dlthub serve, dlthub deploy, dlthub login. Covers workspace management, pipeline deployment, and job scheduling on the dltHub platform. ⚡ GREP - `grep -n '^## ' command-line-interface.md -A 20`
+- **Command Line Interface** `dlt:hub/command-line-interface.md` - Reference for the dlthub CLI commands: dlthub workspace info, dlthub pipeline init, dlthub run, dlthub serve, dlthub deploy, dlthub login. Covers workspace management, pipeline deployment, and job scheduling on the dltHub platform. ⚡ GREP - `grep -n '^## ' command-line-interface.md -A 20` ⏳ STALE
 - **Command Line Interface** `dlt:reference/command-line-interface.md` - Full reference for the dlt CLI: commands (dlt pipeline, dlt init, dlt deploy, dlt schema, dlt dashboard), subcommand options, and flag ordering rules (global flags must precede subcommands). ⚡ GREP - `grep -n '^## ' command-line-interface.md -A 20` ⏳ STALE
 - **Community Destinations** `dlt:dlt-ecosystem/destinations/community-destinations.md` - Community-contributed destinations for dlt
 - **Configuration** `dlt:dlt-ecosystem/verified-sources/sql_database/configuration.md` - configuring the pipeline script, connection, and backend settings in the sql_database source
@@ -137,12 +137,12 @@
 - **Pseudonymizing columns** `dlt:general-usage/customising-pipelines/pseudonymizing_columns.md` - Pseudonymizing (or anonymizing) columns by replacing the special characters
 - **Qdrant** `dlt:dlt-ecosystem/destinations/qdrant.md` - Qdrant is a high-performance vector search engine/database that can be used as a destination in dlt.
 - **REST API Source with dlthub AI Workbench** `dlt:dlt-ecosystem/llm-tooling/llm-native-workflow.md` - Build any REST API source with dltHub AI Workbench toolkits - workflows, skills, rules, and MCP tools
-- **REST API source** `dlt:dlt-ecosystem/verified-sources/rest_api/basic.md` - Basic configuration guide for the dlt REST API source: rest_api_source() configuration dict with client (base_url, auth, paginator), resources list, and resource relationships. Covers common auth methods and pagination types. ⚡ GREP - `grep -n '^## ' basic.md -A 20`
+- **REST API source** `dlt:dlt-ecosystem/verified-sources/rest_api/basic.md` - Basic configuration guide for the dlt REST API source: rest_api_source() configuration dict with client (base_url, auth, paginator), resources list, and resource relationships. Covers common auth methods and pagination types. ⚡ GREP - `grep -n '^## ' basic.md -A 20` ⏳ STALE
 - **REST APIs** `dlt:dlt-ecosystem/verified-sources/rest_api/index.md` - Overview of the dlt REST API source for loading data from any REST API using declarative configuration. Covers endpoint definition, resource relationships, pagination, and authentication. Links to basic and advanced configuration guides.
 - **Removing columns** `dlt:general-usage/customising-pipelines/removing_columns.md` - Removing columns by passing a list of column names
 - **Renaming columns** `dlt:general-usage/customising-pipelines/renaming_columns.md` - Renaming columns by replacing the special characters
 - **Resource** `dlt:general-usage/resource.md` - Reference for dlt resources — the @dlt.resource decorator, write_disposition, table_name, primary_key, merge_key, and incremental hints. Covers dynamic resource creation, apply_hints(), transformer resources, and dispatching data to multiple tables.
-- **Review dlt schema** `dlt:general-usage/dataset-access/view-dlt-schema.md` - View your dlt schema via files, CLI, static and interactive diagram ⚡ GREP - `grep -n '^## ' view-dlt-schema.md -A 20`
+- **Review dlt schema** `dlt:general-usage/dataset-access/view-dlt-schema.md` - View your dlt schema via files, CLI, static and interactive diagram ⚡ GREP - `grep -n '^## ' view-dlt-schema.md -A 20` ⏳ STALE
 - **Running** `dlt:running-in-production/running.md` - Guide to running dlt pipelines in production: inspecting and saving load_info (started_at, packages, jobs, error messages), loading trace info into the destination, monitoring patterns, and retry strategies.
 - **Salesforce** `dlt:dlt-ecosystem/verified-sources/salesforce.md` - dlt verified source for loading Salesforce CRM data via SOQL queries. Covers OAuth/username-password authentication and loading standard/custom Salesforce objects.
 - **Schema** `dlt:general-usage/schema.md` - Comprehensive reference for dlt schemas: content-based version hash, numeric versioning, naming conventions for tables/columns, data types, variant columns, nested data unnesting, compound hints (primary_key, merge_key, partition), and schema import/export.
@@ -229,6 +229,8 @@
 - **null** `dlt:walkthroughs/deploy-a-pipeline/deploy-with-dlthub.md` - Guide to deploying dlt pipelines to the managed dltHub platform. Explains what dltHub provides: one-command deploys, cron/event-driven triggers, isolated profiles, and workspace dashboard.
 - **null** `dlt:walkthroughs/deploy-a-pipeline/index.md` - Overview of dlt deployment options: runs anywhere Python runs. Lists deployment guides for GitHub Actions, Airflow/Composer, Google Cloud Functions, Prefect, and dltHub managed platform. Highlights dlthub deploy as simplest path.
 - **null** `dlt:walkthroughs/deploy-a-pipeline/orchestrate-with-dlthub.md` - Walkthrough for deploying and scheduling dlt pipelines with dltHub's managed orchestrator using @dlt.hub.run decorators. Covers workspace scaffolding, ad-hoc runs, __deployment__.py manifest, and trigger configuration.
+- **agents** `dlt:hub/getting-started/agents.md` - Pending re-scan
+- **dlthub cicd** `dlt:examples/dlthub_cicd.md` - Pending re-scan
 - **installation** `dlt:hub/ai-harness/installation.md` - Pending re-scan
 - **introduction** `dlt:hub/ai-harness/introduction.md` - Pending re-scan
 - **playground workspace** `dlt:hub/getting-started/playground-workspace.md` - Pending re-scan
@@ -236,4 +238,4 @@
 
 ---
 
-*Rendered from index.yaml at 2026-09-14T12:19:13Z*
+*Rendered from index.yaml at 2026-09-28T13:24:25Z*

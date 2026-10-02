@@ -1,7 +1,7 @@
 meta:
   corpus: narwhals
   source: narwhals
-  generated_at: '2026-09-14T12:19:06Z'
+  generated_at: '2026-09-28T13:24:44Z'
   entry_count: 66
 entries:
   - id: narwhals:index.md
@@ -70,7 +70,7 @@ entries:
       - dataframe-agnostic
     stale: true
     last_indexed: '2026-07-02T00:00:00Z'
-    stale_since: "2026-09-14T12:19:06Z"
+    stale_since: "2026-09-28T13:24:44Z"
   - id: narwhals:basics/series.md
     source: narwhals
     title: Series Operations
@@ -83,7 +83,7 @@ entries:
       - dataframe-agnostic
     stale: true
     last_indexed: '2026-07-02T00:00:00Z'
-    stale_since: "2026-09-14T12:19:06Z"
+    stale_since: "2026-09-28T13:24:44Z"
   - id: narwhals:basics/complete_example.md
     source: narwhals
     title: Complete Example
@@ -97,8 +97,9 @@ entries:
       - lazy
     concepts:
       - dataframe-agnostic
-    stale: false
+    stale: true
     last_indexed: '2026-07-02T00:00:00Z'
+    stale_since: "2026-09-28T13:24:44Z"
   - id: narwhals:basics/dataframe_conversion.md
     source: narwhals
     title: DataFrame Conversion
@@ -140,8 +141,9 @@ entries:
       - backends
     concepts:
       - behavioral-concepts
-    stale: false
+    stale: true
     last_indexed: '2026-07-02T00:00:00Z'
+    stale_since: "2026-09-28T13:24:44Z"
   - id: narwhals:concepts/null_handling.md
     source: narwhals
     title: Null Handling
@@ -157,7 +159,7 @@ entries:
       - behavioral-concepts
     stale: true
     last_indexed: '2026-07-02T00:00:00Z'
-    stale_since: "2026-09-14T12:19:06Z"
+    stale_since: "2026-09-28T13:24:44Z"
   - id: narwhals:concepts/order_dependence.md
     source: narwhals
     title: Order Dependence
@@ -184,8 +186,9 @@ entries:
       - reset_index
     concepts:
       - behavioral-concepts
-    stale: false
+    stale: true
     last_indexed: '2026-07-02T00:00:00Z'
+    stale_since: "2026-09-28T13:24:44Z"
   - id: narwhals:concepts/improve_group_by_operation.md
     source: narwhals
     title: Improving Group-By
@@ -199,7 +202,7 @@ entries:
       - behavioral-concepts
     stale: true
     last_indexed: '2026-07-02T00:00:00Z'
-    stale_since: "2026-09-14T12:19:06Z"
+    stale_since: "2026-09-28T13:24:44Z"
   - id: narwhals:concepts/column_names.md
     source: narwhals
     title: Column Names
@@ -233,7 +236,7 @@ entries:
       - library-authors
       - API-stability
     last_indexed: '2026-07-02T00:00:00Z'
-    stale_since: "2026-09-14T12:19:06Z"
+    stale_since: "2026-09-28T13:24:44Z"
   - id: narwhals:overhead.md
     source: narwhals
     title: Overhead
@@ -257,7 +260,7 @@ entries:
       - plugins
       - custom
     stale: true
-    stale_since: "2026-09-14T12:19:06Z"
+    stale_since: "2026-09-28T13:24:44Z"
   - id: narwhals:generating_sql.md
     source: narwhals
     title: Generating SQL
@@ -820,7 +823,7 @@ entries:
       - type-system
     stale: true
     last_indexed: '2026-07-02T00:00:00Z'
-    stale_since: "2026-08-03T09:54:58Z"
+    stale_since: "2026-09-28T13:24:44Z"
   - id: narwhals:api-reference/dependencies.md
     source: narwhals
     title: Dependencies API Reference
