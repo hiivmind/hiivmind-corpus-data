@@ -18,8 +18,8 @@ sources:
     repo_name: narwhals
     branch: main
     docs_root: docs
-    last_commit_sha: 7d3a326100decf6258cc5386fbb5ad70990b36bd
-    last_indexed_at: '2026-09-28T13:24:44Z'
+    last_commit_sha: 18a058e058f8f36adde4fb15c825062aefd72476
+    last_indexed_at: '2026-10-12T14:56:15Z'
 index:
   format: markdown
   last_updated_at: '2026-07-01T16:14:56Z'
