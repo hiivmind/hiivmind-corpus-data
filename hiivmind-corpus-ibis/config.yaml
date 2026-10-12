@@ -19,8 +19,8 @@ sources:
     repo_name: ibis
     branch: main
     docs_root: docs
-    last_commit_sha: 9aac48233972913685d81697be69952e17fb7923
-    last_indexed_at: '2026-09-28T13:24:47Z'
+    last_commit_sha: 05e683ff6ba594b1347d825f0498e75176ec0328
+    last_indexed_at: '2026-10-12T14:56:18Z'
 index:
   format: markdown
   last_updated_at: '2026-07-01T16:14:56Z'
