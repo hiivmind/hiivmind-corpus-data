@@ -16,8 +16,8 @@ sources:
     repo_name: datafusion-python
     branch: main
     docs_root: docs/
-    last_commit_sha: 22b4e4b1669982ec0bf72590886e13d60f486767
-    last_indexed_at: '2026-09-28T13:24:23Z'
+    last_commit_sha: 878e5d3b8d373bca19671af43e49dfb1890f8da2
+    last_indexed_at: '2026-10-19T12:40:40Z'
     extraction:
       wikilinks: false
       frontmatter: true

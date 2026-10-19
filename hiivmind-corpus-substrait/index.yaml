@@ -1,7 +1,7 @@
 meta:
   corpus: substrait
   source: substrait
-  generated_at: '2026-09-28T13:24:42Z'
+  generated_at: '2026-10-19T12:40:48Z'
   entry_count: 62
 entries:
   - id: substrait:index.md
@@ -208,7 +208,7 @@ entries:
       - struct-field
     category: reference
     last_indexed: '2026-07-02T00:00:00Z'
-    stale_since: "2026-09-14T12:19:04Z"
+    stale_since: "2026-10-19T12:40:48Z"
   - id: substrait:expressions/scalar_functions.md
     source: substrait
     title: Scalar Functions
@@ -231,7 +231,7 @@ entries:
       - extension-uri
     category: reference
     last_indexed: '2026-07-02T00:00:00Z'
-    stale_since: "2026-09-28T13:24:42Z"
+    stale_since: "2026-10-19T12:40:48Z"
   - id: substrait:expressions/lambda_expressions.md
     source: substrait
     title: Lambda Expressions
@@ -252,7 +252,7 @@ entries:
       - higher-order
     category: reference
     last_indexed: '2026-07-02T00:00:00Z'
-    stale_since: "2026-09-14T12:19:04Z"
+    stale_since: "2026-10-19T12:40:48Z"
   - id: substrait:expressions/aggregate_functions.md
     source: substrait
     title: Aggregate Functions
@@ -281,7 +281,7 @@ entries:
       - expressions
       - window-functions
     stale: true
-    stale_since: "2026-09-14T12:19:04Z"
+    stale_since: "2026-10-19T12:40:48Z"
   - id: substrait:expressions/specialized_record_expressions.md
     source: substrait
     title: Specialized Record Expressions
@@ -313,6 +313,8 @@ entries:
       - extensibility
     concepts:
       - expressions
+    stale: true
+    stale_since: "2026-10-19T12:40:48Z"
   - id: substrait:expressions/embedded_functions.md
     source: substrait
     title: Embedded Functions
@@ -375,6 +377,8 @@ entries:
       - extended
     concepts:
       - expressions
+    stale: true
+    stale_since: "2026-10-19T12:40:48Z"
   - id: substrait:relations/basics.md
     source: substrait
     title: Relation Basics
@@ -436,7 +440,7 @@ entries:
       - DDL
     category: reference
     last_indexed: '2026-07-02T00:00:00Z'
-    stale_since: "2026-07-06T07:45:25Z"
+    stale_since: "2026-10-19T12:40:48Z"
   - id: substrait:relations/physical_relations.md
     source: substrait
     title: Physical Relations
@@ -460,7 +464,7 @@ entries:
       - physical-aggregate
     category: reference
     last_indexed: '2026-07-02T00:00:00Z'
-    stale_since: "2026-08-03T09:54:56Z"
+    stale_since: "2026-10-19T12:40:48Z"
   - id: substrait:relations/user_defined_relations.md
     source: substrait
     title: User Defined Relations
@@ -501,6 +505,8 @@ entries:
       - performance
     concepts:
       - serialization
+    stale: true
+    stale_since: "2026-10-19T12:40:48Z"
   - id: substrait:serialization/text_serialization.md
     source: substrait
     title: Text Serialization
@@ -535,7 +541,7 @@ entries:
       - type-variation
     category: reference
     last_indexed: '2026-07-02T00:00:00Z'
-    stale_since: "2026-09-14T12:19:04Z"
+    stale_since: "2026-10-19T12:40:48Z"
   - id: substrait:functions_arithmetic.yaml
     source: substrait
     title: Arithmetic Functions
