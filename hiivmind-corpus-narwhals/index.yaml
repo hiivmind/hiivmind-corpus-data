@@ -1,8 +1,8 @@
 meta:
   corpus: narwhals
   source: narwhals
-  generated_at: '2026-09-28T13:24:44Z'
-  entry_count: 66
+  generated_at: '2026-10-26T12:34:49Z'
+  entry_count: 67
 entries:
   - id: narwhals:index.md
     source: narwhals
@@ -260,7 +260,7 @@ entries:
       - plugins
       - custom
     stale: true
-    stale_since: "2026-09-28T13:24:44Z"
+    stale_since: "2026-10-26T12:34:49Z"
   - id: narwhals:generating_sql.md
     source: narwhals
     title: Generating SQL
@@ -284,7 +284,7 @@ entries:
       - narwhals
       - ecosystem
       - integrations
-    stale: false
+    stale: true
     keywords:
       - altair
       - bokeh
@@ -296,6 +296,7 @@ entries:
       - ecosystem
       - integrations
     last_indexed: '2026-07-02T00:00:00Z'
+    stale_since: "2026-10-26T12:34:49Z"
   - id: narwhals:security.md
     source: narwhals
     title: Security
@@ -515,7 +516,7 @@ entries:
       - api-reference
       - overview
     stale: true
-    stale_since: "2026-09-14T12:19:06Z"
+    stale_since: "2026-10-26T12:34:49Z"
   - id: narwhals:api-reference/narwhals.md
     source: narwhals
     title: Narwhals Module
@@ -557,6 +558,8 @@ entries:
       - group_by
     concepts:
       - dataframe-agnostic
+    stale: true
+    stale_since: "2026-10-26T12:34:49Z"
   - id: narwhals:api-reference/lazyframe.md
     source: narwhals
     title: LazyFrame API Reference
@@ -569,6 +572,8 @@ entries:
       - collect
     concepts:
       - lazy-support
+    stale: true
+    stale_since: "2026-10-26T12:34:49Z"
   - id: narwhals:api-reference/series.md
     source: narwhals
     title: Series API Reference
@@ -807,8 +812,9 @@ entries:
       - column-selection
     concepts:
       - type-system
-    stale: false
+    stale: true
     last_indexed: '2026-07-02T00:00:00Z'
+    stale_since: "2026-10-26T12:34:49Z"
   - id: narwhals:api-reference/typing.md
     source: narwhals
     title: Typing API Reference
@@ -851,8 +857,9 @@ entries:
       - api-reference
       - exceptions
       - errors
-    stale: false
+    stale: true
     last_indexed: '2026-07-02T00:00:00Z'
+    stale_since: "2026-10-26T12:34:49Z"
   - id: narwhals:api-reference/testing.md
     source: narwhals
     title: Testing API Reference
@@ -871,3 +878,16 @@ entries:
       - api-reference
       - utils
       - utilities
+  - id: narwhals:api-reference/plugins.md
+    source: narwhals
+    path: api-reference/plugins.md
+    title: plugins
+    summary: Pending re-scan
+    tags: []
+    keywords: []
+    category: unknown
+    content_type: markdown
+    size: standard
+    stale: true
+    stale_since: "2026-10-26T12:34:49Z"
+    last_indexed: "2026-10-26T12:34:49Z"

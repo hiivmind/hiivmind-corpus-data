@@ -1,6 +1,6 @@
 # Narwhals Documentation Index
 
-> Sources: 1 | Entries: 66 | Generated: 2026-09-28T13:24:44Z
+> Sources: 1 | Entries: 67 | Generated: 2026-10-26T12:34:49Z
 > Generated from `index.yaml` — do not edit directly
 
 ---
@@ -74,6 +74,10 @@
 - **Why Narwhals?** `narwhals:why.md` - Subtle differences between pandas and Polars (e.g., 3 in series checks index vs values). Writing dataframe-agnostic code is hard without a unified API. Narwhals handles backwards compatibility internally
 - **pandas Index Handling** `narwhals:concepts/pandas_index.md` - Narwhals ignores pandas index. Use reset_index() before from_native() if you need index as column
 
+## Unknown
+
+- **plugins** `narwhals:api-reference/plugins.md` - Pending re-scan
+
 ---
 
-*Rendered from index.yaml at 2026-09-28T13:24:44Z*
+*Rendered from index.yaml at 2026-10-26T12:34:49Z*

@@ -1,6 +1,6 @@
 # dlt Documentation Index
 
-> Sources: 1 | Entries: 213 | Generated: 2026-09-28T13:24:25Z
+> Sources: 1 | Entries: 219 | Generated: 2026-10-26T12:34:43Z
 > Generated from `index.yaml` — do not edit directly
 
 ---
@@ -229,13 +229,19 @@
 - **null** `dlt:walkthroughs/deploy-a-pipeline/deploy-with-dlthub.md` - Guide to deploying dlt pipelines to the managed dltHub platform. Explains what dltHub provides: one-command deploys, cron/event-driven triggers, isolated profiles, and workspace dashboard.
 - **null** `dlt:walkthroughs/deploy-a-pipeline/index.md` - Overview of dlt deployment options: runs anywhere Python runs. Lists deployment guides for GitHub Actions, Airflow/Composer, Google Cloud Functions, Prefect, and dltHub managed platform. Highlights dlthub deploy as simplest path.
 - **null** `dlt:walkthroughs/deploy-a-pipeline/orchestrate-with-dlthub.md` - Walkthrough for deploying and scheduling dlt pipelines with dltHub's managed orchestrator using @dlt.hub.run decorators. Covers workspace scaffolding, ad-hoc runs, __deployment__.py manifest, and trigger configuration.
+- **1.31** `dlt:release-notes/1.31.md` - Pending re-scan
+- **2026 09 24** `dlt:hub/release-notes/2026-09-24.md` - Pending re-scan
+- **agent definitions** `dlt:hub/agents/agent-definitions.md` - Pending re-scan
 - **agents** `dlt:hub/getting-started/agents.md` - Pending re-scan
 - **dlthub cicd** `dlt:examples/dlthub_cicd.md` - Pending re-scan
+- **index** `dlt:hub/agents/index.md` - Pending re-scan
 - **installation** `dlt:hub/ai-harness/installation.md` - Pending re-scan
 - **introduction** `dlt:hub/ai-harness/introduction.md` - Pending re-scan
+- **job inspector** `dlt:hub/agents/job-inspector.md` - Pending re-scan
+- **partition pruning** `dlt:examples/partition_pruning.md` - Pending re-scan
 - **playground workspace** `dlt:hub/getting-started/playground-workspace.md` - Pending re-scan
 - **toolkits** `dlt:hub/ai-harness/toolkits.md` - Pending re-scan
 
 ---
 
-*Rendered from index.yaml at 2026-09-28T13:24:25Z*
+*Rendered from index.yaml at 2026-10-26T12:34:43Z*
