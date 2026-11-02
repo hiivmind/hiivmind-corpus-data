@@ -1,7 +1,7 @@
 meta:
   corpus: polars
   source: polars
-  generated_at: '2026-10-26T12:34:51Z'
+  generated_at: '2026-11-02T15:15:26Z'
   entry_count: 112
 entries:
   - id: polars:index.md
@@ -187,6 +187,8 @@ entries:
     concepts:
       - lazy-evaluation
     category: reference
+    stale: true
+    stale_since: "2026-11-02T15:15:26Z"
   - id: polars:user-guide/concepts/streaming.md
     source: polars
     title: Streaming
@@ -673,7 +675,7 @@ entries:
       - sql-interface
     category: reference
     stale: true
-    stale_since: '2026-06-30T06:25:20Z'
+    stale_since: '2026-11-02T15:15:26Z'
     last_indexed: '2026-06-30T06:25:20Z'
   - id: polars:user-guide/sql/select.md
     source: polars

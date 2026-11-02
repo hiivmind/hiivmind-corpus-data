@@ -163,7 +163,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:dlt-ecosystem/destinations/bigquery.md
     source: dlt
     path: dlt-ecosystem/destinations/bigquery.md
@@ -245,7 +245,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-10-26T12:34:43Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:dlt-ecosystem/destinations/clickhouse.md
     source: dlt
     path: dlt-ecosystem/destinations/clickhouse.md
@@ -335,7 +335,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-10-26T12:34:43Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:dlt-ecosystem/destinations/community-destinations.md
     source: dlt
     path: dlt-ecosystem/destinations/community-destinations.md
@@ -532,7 +532,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:dlt-ecosystem/destinations/delta-iceberg.md
     source: dlt
     path: dlt-ecosystem/destinations/delta-iceberg.md
@@ -593,7 +593,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-10-26T12:34:43Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:dlt-ecosystem/destinations/destination.md
     source: dlt
     path: dlt-ecosystem/destinations/destination.md
@@ -653,7 +653,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:dlt-ecosystem/destinations/dremio.md
     source: dlt
     path: dlt-ecosystem/destinations/dremio.md
@@ -705,7 +705,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:dlt-ecosystem/destinations/duckdb.md
     source: dlt
     path: dlt-ecosystem/destinations/duckdb.md
@@ -798,7 +798,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:dlt-ecosystem/destinations/ducklake.md
     source: dlt
     path: dlt-ecosystem/destinations/ducklake.md
@@ -878,7 +878,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:dlt-ecosystem/destinations/fabric.md
     source: dlt
     path: dlt-ecosystem/destinations/fabric.md
@@ -971,7 +971,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-10-26T12:34:43Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:dlt-ecosystem/destinations/filesystem.md
     source: dlt
     path: dlt-ecosystem/destinations/filesystem.md
@@ -1082,7 +1082,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-10-26T12:34:43Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:dlt-ecosystem/destinations/huggingface.md
     source: dlt
     path: dlt-ecosystem/destinations/huggingface.md
@@ -1171,7 +1171,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:dlt-ecosystem/destinations/iceberg.md
     source: dlt
     path: dlt-ecosystem/destinations/iceberg.md
@@ -1249,7 +1249,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-10-26T12:34:43Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:dlt-ecosystem/destinations/index.md
     source: dlt
     path: dlt-ecosystem/destinations/index.md
@@ -1354,7 +1354,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:dlt-ecosystem/destinations/lancedb.md
     source: dlt
     path: dlt-ecosystem/destinations/lancedb.md
@@ -1427,7 +1427,7 @@ entries:
     links_from: []
     frontmatter: {}
     stale: true
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
     last_indexed: '2026-04-18T14:38:30Z'
   - id: dlt:dlt-ecosystem/destinations/motherduck.md
     source: dlt
@@ -1484,7 +1484,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:dlt-ecosystem/destinations/mssql.md
     source: dlt
     path: dlt-ecosystem/destinations/mssql.md
@@ -1558,7 +1558,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:dlt-ecosystem/destinations/postgres.md
     source: dlt
     path: dlt-ecosystem/destinations/postgres.md
@@ -1628,7 +1628,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-10-26T12:34:43Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:dlt-ecosystem/destinations/qdrant.md
     source: dlt
     path: dlt-ecosystem/destinations/qdrant.md
@@ -1685,7 +1685,7 @@ entries:
     links_from: []
     frontmatter: {}
     stale: true
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
     last_indexed: '2026-04-18T14:38:30Z'
   - id: dlt:dlt-ecosystem/destinations/redshift.md
     source: dlt
@@ -1761,7 +1761,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:dlt-ecosystem/destinations/snowflake.md
     source: dlt
     path: dlt-ecosystem/destinations/snowflake.md
@@ -1875,7 +1875,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:dlt-ecosystem/destinations/sqlalchemy.md
     source: dlt
     path: dlt-ecosystem/destinations/sqlalchemy.md
@@ -1949,7 +1949,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-10-26T12:34:43Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:dlt-ecosystem/destinations/synapse.md
     source: dlt
     path: dlt-ecosystem/destinations/synapse.md
@@ -2019,7 +2019,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:dlt-ecosystem/destinations/weaviate.md
     source: dlt
     path: dlt-ecosystem/destinations/weaviate.md
@@ -2088,7 +2088,7 @@ entries:
     links_from: []
     frontmatter: {}
     stale: true
-    stale_since: "2026-10-26T12:34:43Z"
+    stale_since: "2026-11-02T15:15:32Z"
     last_indexed: '2026-04-18T14:38:30Z'
   - id: dlt:dlt-ecosystem/llm-tooling/explore-and-transform.md
     source: dlt
@@ -2548,7 +2548,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:dlt-ecosystem/transformations/sql.md
     source: dlt
     path: dlt-ecosystem/transformations/sql.md
@@ -2636,7 +2636,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:dlt-ecosystem/verified-sources/amazon_kinesis.md
     source: dlt
     path: dlt-ecosystem/verified-sources/amazon_kinesis.md
@@ -2690,7 +2690,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:dlt-ecosystem/verified-sources/arrow-pandas.md
     source: dlt
     path: dlt-ecosystem/verified-sources/arrow-pandas.md
@@ -2749,7 +2749,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:dlt-ecosystem/verified-sources/asana.md
     source: dlt
     path: dlt-ecosystem/verified-sources/asana.md
@@ -2805,7 +2805,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:dlt-ecosystem/verified-sources/chess.md
     source: dlt
     path: dlt-ecosystem/verified-sources/chess.md
@@ -2862,7 +2862,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:dlt-ecosystem/verified-sources/facebook_ads.md
     source: dlt
     path: dlt-ecosystem/verified-sources/facebook_ads.md
@@ -2923,7 +2923,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:dlt-ecosystem/verified-sources/filesystem/index.md
     source: dlt
     path: dlt-ecosystem/verified-sources/filesystem/index.md
@@ -2957,7 +2957,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-10-26T12:34:43Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:dlt-ecosystem/verified-sources/freshdesk.md
     source: dlt
     path: dlt-ecosystem/verified-sources/freshdesk.md
@@ -3008,7 +3008,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:dlt-ecosystem/verified-sources/github.md
     source: dlt
     path: dlt-ecosystem/verified-sources/github.md
@@ -3063,7 +3063,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:dlt-ecosystem/verified-sources/google_ads.md
     source: dlt
     path: dlt-ecosystem/verified-sources/google_ads.md
@@ -3121,7 +3121,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:dlt-ecosystem/verified-sources/google_analytics.md
     source: dlt
     path: dlt-ecosystem/verified-sources/google_analytics.md
@@ -3180,7 +3180,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:dlt-ecosystem/verified-sources/google_sheets.md
     source: dlt
     path: dlt-ecosystem/verified-sources/google_sheets.md
@@ -3238,7 +3238,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:dlt-ecosystem/verified-sources/hubspot.md
     source: dlt
     path: dlt-ecosystem/verified-sources/hubspot.md
@@ -3296,7 +3296,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-10-26T12:34:43Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:dlt-ecosystem/verified-sources/inbox.md
     source: dlt
     path: dlt-ecosystem/verified-sources/inbox.md
@@ -3362,7 +3362,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:dlt-ecosystem/verified-sources/index.md
     source: dlt
     path: dlt-ecosystem/verified-sources/index.md
@@ -3454,7 +3454,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:dlt-ecosystem/verified-sources/kafka.md
     source: dlt
     path: dlt-ecosystem/verified-sources/kafka.md
@@ -3504,7 +3504,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:dlt-ecosystem/verified-sources/matomo.md
     source: dlt
     path: dlt-ecosystem/verified-sources/matomo.md
@@ -3560,7 +3560,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:dlt-ecosystem/verified-sources/mongodb.md
     source: dlt
     path: dlt-ecosystem/verified-sources/mongodb.md
@@ -3613,7 +3613,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:dlt-ecosystem/verified-sources/mux.md
     source: dlt
     path: dlt-ecosystem/verified-sources/mux.md
@@ -3667,7 +3667,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:dlt-ecosystem/verified-sources/notion.md
     source: dlt
     path: dlt-ecosystem/verified-sources/notion.md
@@ -3717,7 +3717,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:dlt-ecosystem/verified-sources/openapi-generator.md
     source: dlt
     path: dlt-ecosystem/verified-sources/openapi-generator.md
@@ -3771,7 +3771,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:dlt-ecosystem/verified-sources/personio.md
     source: dlt
     path: dlt-ecosystem/verified-sources/personio.md
@@ -3827,7 +3827,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:dlt-ecosystem/verified-sources/pg_replication.md
     source: dlt
     path: dlt-ecosystem/verified-sources/pg_replication.md
@@ -3882,7 +3882,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:dlt-ecosystem/verified-sources/pipedrive.md
     source: dlt
     path: dlt-ecosystem/verified-sources/pipedrive.md
@@ -3942,7 +3942,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-10-26T12:34:43Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:dlt-ecosystem/verified-sources/rest_api/advanced.md
     source: dlt
     path: dlt-ecosystem/verified-sources/rest_api/advanced.md
@@ -4065,7 +4065,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:dlt-ecosystem/verified-sources/rest_api/index.md
     source: dlt
     path: dlt-ecosystem/verified-sources/rest_api/index.md
@@ -4148,7 +4148,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:dlt-ecosystem/verified-sources/scrapy.md
     source: dlt
     path: dlt-ecosystem/verified-sources/scrapy.md
@@ -4191,7 +4191,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:dlt-ecosystem/verified-sources/shopify.md
     source: dlt
     path: dlt-ecosystem/verified-sources/shopify.md
@@ -4245,7 +4245,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:dlt-ecosystem/verified-sources/slack.md
     source: dlt
     path: dlt-ecosystem/verified-sources/slack.md
@@ -4305,7 +4305,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:dlt-ecosystem/verified-sources/sql_database/advanced.md
     source: dlt
     path: dlt-ecosystem/verified-sources/sql_database/advanced.md
@@ -4465,7 +4465,7 @@ entries:
     links_from: []
     frontmatter: {}
     stale: true
-    stale_since: "2026-10-26T12:34:43Z"
+    stale_since: "2026-11-02T15:15:32Z"
     last_indexed: '2026-04-18T14:38:30Z'
   - id: dlt:dlt-ecosystem/verified-sources/sql_database/index.md
     source: dlt
@@ -4532,7 +4532,7 @@ entries:
     links_from: []
     frontmatter: {}
     stale: true
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
     last_indexed: '2026-04-18T14:38:30Z'
   - id: dlt:dlt-ecosystem/verified-sources/sql_database/troubleshooting.md
     source: dlt
@@ -4679,7 +4679,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:dlt-ecosystem/verified-sources/stripe.md
     source: dlt
     path: dlt-ecosystem/verified-sources/stripe.md
@@ -4739,7 +4739,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:dlt-ecosystem/verified-sources/workable.md
     source: dlt
     path: dlt-ecosystem/verified-sources/workable.md
@@ -4796,7 +4796,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:dlt-ecosystem/verified-sources/zendesk.md
     source: dlt
     path: dlt-ecosystem/verified-sources/zendesk.md
@@ -4854,7 +4854,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:examples/index.md
     source: dlt
     path: examples/index.md
@@ -4944,7 +4944,7 @@ entries:
     links_from: []
     frontmatter: {}
     stale: true
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
     last_indexed: '2026-04-18T14:38:30Z'
   - id: dlt:general-usage/credentials/complex_types.md
     source: dlt
@@ -5038,7 +5038,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:general-usage/credentials/index.md
     source: dlt
     path: general-usage/credentials/index.md
@@ -5206,7 +5206,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-10-26T12:34:43Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:general-usage/credentials/vaults.md
     source: dlt
     path: general-usage/credentials/vaults.md
@@ -5436,7 +5436,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:general-usage/data-enrichments/url-parser-data-enrichment.md
     source: dlt
     path: general-usage/data-enrichments/url-parser-data-enrichment.md
@@ -5483,7 +5483,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:general-usage/data-enrichments/user_agent_device_data_enrichment.md
     source: dlt
     path: general-usage/data-enrichments/user_agent_device_data_enrichment.md
@@ -5529,7 +5529,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:general-usage/data-quality-lifecycle.md
     source: dlt
     path: general-usage/data-quality-lifecycle.md
@@ -5578,7 +5578,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:general-usage/dataset-access/data-quality-dashboard.md
     source: dlt
     path: general-usage/dataset-access/data-quality-dashboard.md
@@ -5617,7 +5617,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:general-usage/dataset-access/dataset.md
     source: dlt
     path: general-usage/dataset-access/dataset.md
@@ -5743,7 +5743,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-10-26T12:34:43Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:general-usage/dataset-access/marimo.md
     source: dlt
     path: general-usage/dataset-access/marimo.md
@@ -5794,7 +5794,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:general-usage/dataset-access/view-dlt-schema.md
     source: dlt
     path: general-usage/dataset-access/view-dlt-schema.md
@@ -5853,7 +5853,7 @@ entries:
     links_from: []
     frontmatter: {}
     stale: true
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
     last_indexed: '2026-04-18T14:38:30Z'
   - id: dlt:general-usage/destination-tables.md
     source: dlt
@@ -6172,7 +6172,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:general-usage/incremental/lag.md
     source: dlt
     path: general-usage/incremental/lag.md
@@ -6247,7 +6247,7 @@ entries:
     links_from: []
     frontmatter: {}
     stale: true
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
     last_indexed: '2026-04-18T14:38:30Z'
   - id: dlt:general-usage/incremental-loading.md
     source: dlt
@@ -6381,7 +6381,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-10-26T12:34:43Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:general-usage/naming-convention.md
     source: dlt
     path: general-usage/naming-convention.md
@@ -6499,7 +6499,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:general-usage/resource.md
     source: dlt
     path: general-usage/resource.md
@@ -6630,7 +6630,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:general-usage/schema-contracts.md
     source: dlt
     path: general-usage/schema-contracts.md
@@ -6919,7 +6919,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:general-usage/state.md
     source: dlt
     path: general-usage/state.md
@@ -6967,146 +6967,8 @@ entries:
     links_from: []
     frontmatter: {}
     stale: true
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
     last_indexed: '2026-04-18T14:38:30Z'
-  - id: dlt:hub/command-line-interface.md
-    source: dlt
-    path: hub/command-line-interface.md
-    title: Command Line Interface
-    summary: 'Reference for the dlthub CLI commands: dlthub workspace info, dlthub pipeline init, dlthub run, dlthub serve, dlthub deploy, dlthub login. Covers workspace management, pipeline deployment, and job scheduling on the dltHub platform.'
-    tags:
-      - hub
-      - cli
-      - reference
-    keywords:
-      - dlthub
-      - CLI
-      - workspace info
-      - pipeline init
-      - deploy
-      - run
-      - serve
-    concepts:
-      - hub
-    category: reference
-    content_type: markdown
-    size: large
-    grep_hint: grep -n '^## ' command-line-interface.md -A 20
-    headings:
-      - anchor: command-line-interface-reference
-        title: Command Line Interface Reference
-      - anchor: dlt
-        title: '`dlt`'
-      - anchor: dlt-workspace
-        title: '`dlt workspace`'
-      - anchor: dlt-workspace-clean
-        title: '`dlt workspace clean`'
-      - anchor: dlt-workspace-info
-        title: '`dlt workspace info`'
-      - anchor: dlt-workspace-show
-        title: '`dlt workspace show`'
-      - anchor: dlt-profile
-        title: '`dlt profile`'
-      - anchor: dlt-profile-info
-        title: '`dlt profile info`'
-      - anchor: dlt-profile-list
-        title: '`dlt profile list`'
-      - anchor: dlt-profile-pin
-        title: '`dlt profile pin`'
-      - anchor: dlt-runtime
-        title: '`dlt runtime`'
-      - anchor: dlt-runtime-login
-        title: '`dlt runtime login`'
-      - anchor: dlt-runtime-logout
-        title: '`dlt runtime logout`'
-      - anchor: dlt-runtime-launch
-        title: '`dlt runtime launch`'
-      - anchor: dlt-runtime-serve
-        title: '`dlt runtime serve`'
-      - anchor: dlt-runtime-publish
-        title: '`dlt runtime publish`'
-      - anchor: dlt-runtime-schedule
-        title: '`dlt runtime schedule`'
-      - anchor: dlt-runtime-logs
-        title: '`dlt runtime logs`'
-      - anchor: dlt-runtime-cancel
-        title: '`dlt runtime cancel`'
-      - anchor: dlt-runtime-dashboard
-        title: '`dlt runtime dashboard`'
-      - anchor: dlt-runtime-deploy
-        title: '`dlt runtime deploy`'
-      - anchor: dlt-runtime-info
-        title: '`dlt runtime info`'
-      - anchor: dlt-runtime-deployment
-        title: '`dlt runtime deployment`'
-      - anchor: dlt-runtime-deployment-list
-        title: '`dlt runtime deployment list`'
-      - anchor: dlt-runtime-deployment-info
-        title: '`dlt runtime deployment info`'
-      - anchor: dlt-runtime-deployment-sync
-        title: '`dlt runtime deployment sync`'
-      - anchor: dlt-runtime-job
-        title: '`dlt runtime job`'
-      - anchor: dlt-runtime-job-list
-        title: '`dlt runtime job list`'
-      - anchor: dlt-runtime-job-info
-        title: '`dlt runtime job info`'
-      - anchor: dlt-runtime-job-create
-        title: '`dlt runtime job create`'
-      - anchor: dlt-runtime-jobs
-        title: '`dlt runtime jobs`'
-      - anchor: dlt-runtime-jobs-list
-        title: '`dlt runtime jobs list`'
-      - anchor: dlt-runtime-jobs-info
-        title: '`dlt runtime jobs info`'
-      - anchor: dlt-runtime-jobs-create
-        title: '`dlt runtime jobs create`'
-      - anchor: dlt-runtime-job-run
-        title: '`dlt runtime job-run`'
-      - anchor: dlt-runtime-job-run-list
-        title: '`dlt runtime job-run list`'
-      - anchor: dlt-runtime-job-run-info
-        title: '`dlt runtime job-run info`'
-      - anchor: dlt-runtime-job-run-create
-        title: '`dlt runtime job-run create`'
-      - anchor: dlt-runtime-job-run-logs
-        title: '`dlt runtime job-run logs`'
-      - anchor: dlt-runtime-job-run-cancel
-        title: '`dlt runtime job-run cancel`'
-      - anchor: dlt-runtime-job-runs
-        title: '`dlt runtime job-runs`'
-      - anchor: dlt-runtime-job-runs-list
-        title: '`dlt runtime job-runs list`'
-      - anchor: dlt-runtime-job-runs-info
-        title: '`dlt runtime job-runs info`'
-      - anchor: dlt-runtime-job-runs-create
-        title: '`dlt runtime job-runs create`'
-      - anchor: dlt-runtime-job-runs-logs
-        title: '`dlt runtime job-runs logs`'
-      - anchor: dlt-runtime-job-runs-cancel
-        title: '`dlt runtime job-runs cancel`'
-      - anchor: dlt-runtime-configuration
-        title: '`dlt runtime configuration`'
-      - anchor: dlt-runtime-configuration-list
-        title: '`dlt runtime configuration list`'
-      - anchor: dlt-runtime-configuration-info
-        title: '`dlt runtime configuration info`'
-      - anchor: dlt-runtime-configuration-sync
-        title: '`dlt runtime configuration sync`'
-      - anchor: dlt-license
-        title: '`dlt license`'
-      - anchor: dlt-license-info
-        title: '`dlt license info`'
-      - anchor: dlt-license-scopes
-        title: '`dlt license scopes`'
-      - anchor: dlt-license-issue
-        title: '`dlt license issue`'
-    links_to: []
-    links_from: []
-    frontmatter: {}
-    stale: true
-    last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-10-26T12:34:43Z"
   - id: dlt:hub/core-concepts/profiles-dlthub.md
     source: dlt
     path: hub/core-concepts/profiles-dlthub.md
@@ -7758,7 +7620,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-10-26T12:34:43Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:hub/getting-started/runtime-tutorial.md
     source: dlt
     path: hub/getting-started/runtime-tutorial.md
@@ -7878,7 +7740,7 @@ entries:
     links_from: []
     frontmatter: {}
     stale: true
-    stale_since: "2026-10-26T12:34:43Z"
+    stale_since: "2026-11-02T15:15:32Z"
     last_indexed: '2026-04-18T14:38:30Z'
   - id: dlt:reference/command-line-interface.md
     source: dlt
@@ -7976,7 +7838,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-10-26T12:34:43Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:reference/explainers/how-dlt-works.md
     source: dlt
     path: reference/explainers/how-dlt-works.md
@@ -8113,7 +7975,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-10-26T12:34:43Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:reference/performance.md
     source: dlt
     path: reference/performance.md
@@ -8199,7 +8061,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-10-26T12:34:43Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:reference/telemetry.md
     source: dlt
     path: reference/telemetry.md
@@ -8241,7 +8103,7 @@ entries:
     links_from: []
     frontmatter: {}
     stale: true
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
     last_indexed: '2026-04-18T14:38:30Z'
   - id: dlt:release-notes/1.12.1.md
     source: dlt
@@ -8757,7 +8619,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:tutorial/advanced-course.md
     source: dlt
     path: tutorial/advanced-course.md
@@ -8907,7 +8769,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:tutorial/fundamentals-course.md
     source: dlt
     path: tutorial/fundamentals-course.md
@@ -9039,7 +8901,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:tutorial/playground.mdx
     source: dlt
     path: tutorial/playground.mdx
@@ -9128,7 +8990,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:tutorial/sql-database.md
     source: dlt
     path: tutorial/sql-database.md
@@ -9182,7 +9044,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-10-26T12:34:43Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:walkthroughs/add-incremental-configuration.md
     source: dlt
     path: walkthroughs/add-incremental-configuration.md
@@ -9321,7 +9183,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:walkthroughs/create-new-destination.md
     source: dlt
     path: walkthroughs/create-new-destination.md
@@ -9395,7 +9257,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:walkthroughs/deploy-a-pipeline/deploy-gcp-cloud-function-as-webhook.md
     source: dlt
     path: walkthroughs/deploy-a-pipeline/deploy-gcp-cloud-function-as-webhook.md
@@ -9509,7 +9371,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:walkthroughs/deploy-a-pipeline/deploy-with-dagster.md
     source: dlt
     path: walkthroughs/deploy-a-pipeline/deploy-with-dagster.md
@@ -9558,7 +9420,7 @@ entries:
     links_from: []
     frontmatter: {}
     stale: true
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
     last_indexed: '2026-04-18T14:38:30Z'
   - id: dlt:walkthroughs/deploy-a-pipeline/deploy-with-github-actions.md
     source: dlt
@@ -9605,7 +9467,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:walkthroughs/deploy-a-pipeline/deploy-with-google-cloud-functions.md
     source: dlt
     path: walkthroughs/deploy-a-pipeline/deploy-with-google-cloud-functions.md
@@ -9646,7 +9508,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:walkthroughs/deploy-a-pipeline/deploy-with-google-cloud-run.md
     source: dlt
     path: walkthroughs/deploy-a-pipeline/deploy-with-google-cloud-run.md
@@ -9684,7 +9546,7 @@ entries:
     links_from: []
     frontmatter: {}
     stale: true
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
     last_indexed: '2026-04-18T14:38:30Z'
   - id: dlt:walkthroughs/deploy-a-pipeline/deploy-with-kestra.md
     source: dlt
@@ -9784,7 +9646,7 @@ entries:
     links_from: []
     frontmatter: {}
     stale: true
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
     last_indexed: '2026-04-18T14:38:30Z'
   - id: dlt:walkthroughs/deploy-a-pipeline/deploy-with-orchestra.md
     source: dlt
@@ -9907,7 +9769,7 @@ entries:
     links_from: []
     frontmatter: {}
     stale: true
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
     last_indexed: '2026-04-18T14:38:30Z'
   - id: dlt:walkthroughs/run-a-pipeline.md
     source: dlt
@@ -9961,7 +9823,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:walkthroughs/run-in-snowflake/database-connector-app.md
     source: dlt
     path: walkthroughs/run-in-snowflake/database-connector-app.md
@@ -10165,7 +10027,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:dlt-ecosystem/file-formats.md
     source: dlt
     stale: true
@@ -10184,7 +10046,7 @@ entries:
       - insert-values
       - pyarrow
       - file_format
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:dlt-ecosystem/transformations/dlthub.md
     source: dlt
     stale: true
@@ -10221,7 +10083,7 @@ entries:
       - app.dlthub.com
       - dataset
       - interactive
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:hub/data-discovery/datasets.md
     source: dlt
     stale: true
@@ -10255,7 +10117,7 @@ entries:
       - disjoint execution
       - dynamic
       - centralized
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:hub/data-quality/index.md
     source: dlt
     stale: true
@@ -10274,7 +10136,7 @@ entries:
       - with_checks
       - dq.metrics
       - preview
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:hub/getting-started/introduction.md
     source: dlt
     stale: true
@@ -10291,7 +10153,7 @@ entries:
       - playground
       - AI workbench
       - introduction
-    stale_since: "2026-10-26T12:34:43Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:hub/getting-started/oss-and-dlthub.md
     source: dlt
     stale: true
@@ -10310,7 +10172,7 @@ entries:
       - commercial
       - comparison
       - features
-    stale_since: "2026-10-26T12:34:43Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:hub/getting-started/platform-tutorial.md
     source: dlt
     stale: false
@@ -10344,7 +10206,7 @@ entries:
       - schema
       - run traces
       - troubleshoot
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:hub/ingestion/delta.md
     source: dlt
     stale: true
@@ -10361,7 +10223,7 @@ entries:
       - dltHub
       - workspace
       - commercial
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:hub/ingestion/iceberg.md
     source: dlt
     stale: true
@@ -10379,7 +10241,7 @@ entries:
       - Polaris
       - ACID
       - commercial
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:hub/ingestion/init.md
     source: dlt
     stale: true
@@ -10396,7 +10258,7 @@ entries:
       - workspace
       - verified source
       - scaffold
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:hub/ingestion/ms-sql.md
     source: dlt
     stale: true
@@ -10434,7 +10296,7 @@ entries:
       - testing
       - demos
       - workspace
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:hub/ingestion/rest-api-source.md
     source: dlt
     stale: true
@@ -10453,7 +10315,7 @@ entries:
       - Codex
       - guided workflow
       - MCP
-    stale_since: "2026-10-26T12:34:43Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:hub/ingestion/snowflake-plus.md
     source: dlt
     stale: true
@@ -10471,7 +10333,7 @@ entries:
       - Polaris
       - CATALOG SYNC
       - commercial
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:hub/license.md
     source: dlt
     stale: true
@@ -10506,7 +10368,7 @@ entries:
       - smtplib
       - alerting
       - success/failure
-    stale_since: "2026-10-26T12:34:43Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:hub/notifications/slack.md
     source: dlt
     stale: true
@@ -10524,7 +10386,7 @@ entries:
       - slack_incoming_hook
       - notifications
       - alerts
-    stale_since: "2026-10-26T12:34:43Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:hub/pipeline-operations/deployments.md
     source: dlt
     stale: true
@@ -10541,7 +10403,7 @@ entries:
       - manifest
       - scheduling
       - ad-hoc
-    stale_since: "2026-10-26T12:34:43Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:hub/pipeline-operations/job-configuration.md
     source: dlt
     stale: true
@@ -10577,7 +10439,7 @@ entries:
       - run status
       - app.dlthub.com
       - debug
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:hub/pipeline-operations/overview.md
     source: dlt
     stale: true
@@ -10594,7 +10456,7 @@ entries:
       - pipelines
       - notebooks
       - overview
-    stale_since: "2026-10-26T12:34:43Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:hub/pipeline-operations/profiles.md
     source: dlt
     stale: true
@@ -10614,7 +10476,7 @@ entries:
       - secrets.toml
       - environments
       - isolation
-    stale_since: "2026-10-26T12:34:43Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:hub/pipeline-operations/secrets-management.md
     source: dlt
     stale: true
@@ -10632,7 +10494,7 @@ entries:
       - Google Secret Manager
       - vault
       - prod secrets
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:hub/pipeline-operations/triggers.md
     source: dlt
     stale: true
@@ -10651,7 +10513,7 @@ entries:
       - freshness
       - backfill
       - schedule
-    stale_since: "2026-10-26T12:34:43Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:hub/pipeline-operations/workspace-setup.md
     source: dlt
     stale: true
@@ -10669,7 +10531,7 @@ entries:
       - profiles
       - AI skills
       - pyproject.toml
-    stale_since: "2026-10-26T12:34:43Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:hub/platform-capabilities/regions.md
     source: dlt
     stale: true
@@ -10744,7 +10606,7 @@ entries:
       - schema
       - incremental
       - relationships
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:hub/transformations/explore-and-transform.md
     source: dlt
     stale: true
@@ -10763,7 +10625,7 @@ entries:
       - CDM
       - Kimball
       - Altair
-    stale_since: "2026-10-26T12:34:43Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:hub/transformations/index.md
     source: dlt
     stale: true
@@ -10781,7 +10643,7 @@ entries:
       - write_disposition
       - warehouse
       - filesystem
-    stale_since: "2026-10-26T12:34:43Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:walkthroughs/deploy-a-pipeline/deploy-with-dlthub.md
     source: dlt
     stale: true
@@ -10833,7 +10695,7 @@ entries:
       - __deployment__.py
       - triggers
       - scheduling
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
   - id: dlt:hub/getting-started/playground-workspace.md
     source: dlt
     path: hub/getting-started/playground-workspace.md
@@ -10858,7 +10720,7 @@ entries:
     content_type: markdown
     size: standard
     stale: true
-    stale_since: "2026-10-26T12:34:43Z"
+    stale_since: "2026-11-02T15:15:32Z"
     last_indexed: "2026-08-03T09:54:50Z"
   - id: dlt:hub/ai-harness/introduction.md
     source: dlt
@@ -10871,7 +10733,7 @@ entries:
     content_type: markdown
     size: standard
     stale: true
-    stale_since: "2026-10-26T12:34:43Z"
+    stale_since: "2026-11-02T15:15:32Z"
     last_indexed: "2026-08-03T09:54:50Z"
   - id: dlt:hub/ai-harness/toolkits.md
     source: dlt
@@ -10884,7 +10746,7 @@ entries:
     content_type: markdown
     size: standard
     stale: true
-    stale_since: "2026-10-26T12:34:43Z"
+    stale_since: "2026-11-02T15:15:32Z"
     last_indexed: "2026-08-03T09:54:50Z"
   - id: dlt:examples/dlthub_cicd.md
     source: dlt
@@ -10897,7 +10759,7 @@ entries:
     content_type: markdown
     size: standard
     stale: true
-    stale_since: "2026-09-28T13:24:25Z"
+    stale_since: "2026-11-02T15:15:32Z"
     last_indexed: "2026-09-28T13:24:25Z"
   - id: dlt:hub/getting-started/agents.md
     source: dlt
@@ -10910,7 +10772,7 @@ entries:
     content_type: markdown
     size: standard
     stale: true
-    stale_since: "2026-10-26T12:34:43Z"
+    stale_since: "2026-11-02T15:15:32Z"
     last_indexed: "2026-09-28T13:24:25Z"
   - id: dlt:examples/partition_pruning.md
     source: dlt
@@ -10936,7 +10798,7 @@ entries:
     content_type: markdown
     size: standard
     stale: true
-    stale_since: "2026-10-26T12:34:43Z"
+    stale_since: "2026-11-02T15:15:32Z"
     last_indexed: "2026-10-26T12:34:43Z"
   - id: dlt:hub/agents/index.md
     source: dlt
@@ -10949,7 +10811,7 @@ entries:
     content_type: markdown
     size: standard
     stale: true
-    stale_since: "2026-10-26T12:34:43Z"
+    stale_since: "2026-11-02T15:15:32Z"
     last_indexed: "2026-10-26T12:34:43Z"
   - id: dlt:hub/agents/job-inspector.md
     source: dlt
@@ -10962,7 +10824,7 @@ entries:
     content_type: markdown
     size: standard
     stale: true
-    stale_since: "2026-10-26T12:34:43Z"
+    stale_since: "2026-11-02T15:15:32Z"
     last_indexed: "2026-10-26T12:34:43Z"
   - id: dlt:hub/release-notes/2026-09-24.md
     source: dlt
@@ -10975,7 +10837,7 @@ entries:
     content_type: markdown
     size: standard
     stale: true
-    stale_since: "2026-10-26T12:34:43Z"
+    stale_since: "2026-11-02T15:15:32Z"
     last_indexed: "2026-10-26T12:34:43Z"
   - id: dlt:release-notes/1.31.md
     source: dlt
@@ -10990,6 +10852,19 @@ entries:
     stale: true
     stale_since: "2026-10-26T12:34:43Z"
     last_indexed: "2026-10-26T12:34:43Z"
+  - id: dlt:hub/reference/api/overview.md
+    source: dlt
+    path: hub/reference/api/overview.md
+    title: overview
+    summary: Pending re-scan
+    tags: []
+    keywords: []
+    category: unknown
+    content_type: markdown
+    size: standard
+    stale: true
+    stale_since: "2026-11-02T15:15:32Z"
+    last_indexed: "2026-11-02T15:15:32Z"
 meta:
-  generated_at: '2026-10-26T12:34:43Z'
+  generated_at: '2026-11-02T15:15:32Z'
   entry_count: 219

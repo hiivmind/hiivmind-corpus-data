@@ -1,6 +1,6 @@
 # dlt Documentation Index
 
-> Sources: 1 | Entries: 219 | Generated: 2026-10-26T12:34:43Z
+> Sources: 1 | Entries: 219 | Generated: 2026-11-02T15:15:32Z
 > Generated from `index.yaml` — do not edit directly
 
 ---
@@ -67,7 +67,6 @@
 - **ClickHouse** `dlt:dlt-ecosystem/destinations/clickhouse.md` - Setup and configuration for the ClickHouse dlt destination. Covers initializing a dlt project, installing dlt[clickhouse], creating ClickHouse credentials, and write dispositions supported.
 - **Cloud storage and filesystem** `dlt:dlt-ecosystem/destinations/filesystem.md` - Guide to the filesystem dlt destination for writing data to S3, GCS, Azure Blob Storage, and local paths. Covers S3 credential setup, staging dataset configuration, file format selection, and initialization.
 - **Cloud storage and filesystem** `dlt:dlt-ecosystem/verified-sources/filesystem/index.md` - Guide to the dlt filesystem verified source for loading structured files (CSV, Parquet, JSONL) from S3, GCS, Azure Blob, Google Drive, SFTP, and local paths. Two-step loading: first access file metadata, then read content. Supports incremental loading.
-- **Command Line Interface** `dlt:hub/command-line-interface.md` - Reference for the dlthub CLI commands: dlthub workspace info, dlthub pipeline init, dlthub run, dlthub serve, dlthub deploy, dlthub login. Covers workspace management, pipeline deployment, and job scheduling on the dltHub platform. ⚡ GREP - `grep -n '^## ' command-line-interface.md -A 20` ⏳ STALE
 - **Command Line Interface** `dlt:reference/command-line-interface.md` - Full reference for the dlt CLI: commands (dlt pipeline, dlt init, dlt deploy, dlt schema, dlt dashboard), subcommand options, and flag ordering rules (global flags must precede subcommands). ⚡ GREP - `grep -n '^## ' command-line-interface.md -A 20` ⏳ STALE
 - **Community Destinations** `dlt:dlt-ecosystem/destinations/community-destinations.md` - Community-contributed destinations for dlt
 - **Configuration** `dlt:dlt-ecosystem/verified-sources/sql_database/configuration.md` - configuring the pipeline script, connection, and backend settings in the sql_database source
@@ -238,10 +237,11 @@
 - **installation** `dlt:hub/ai-harness/installation.md` - Pending re-scan
 - **introduction** `dlt:hub/ai-harness/introduction.md` - Pending re-scan
 - **job inspector** `dlt:hub/agents/job-inspector.md` - Pending re-scan
+- **overview** `dlt:hub/reference/api/overview.md` - Pending re-scan
 - **partition pruning** `dlt:examples/partition_pruning.md` - Pending re-scan
 - **playground workspace** `dlt:hub/getting-started/playground-workspace.md` - Pending re-scan
 - **toolkits** `dlt:hub/ai-harness/toolkits.md` - Pending re-scan
 
 ---
 
-*Rendered from index.yaml at 2026-10-26T12:34:43Z*
+*Rendered from index.yaml at 2026-11-02T15:15:32Z*

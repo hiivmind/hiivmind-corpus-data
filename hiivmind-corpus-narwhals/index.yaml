@@ -1,7 +1,7 @@
 meta:
   corpus: narwhals
   source: narwhals
-  generated_at: '2026-10-26T12:34:49Z'
+  generated_at: '2026-11-02T15:15:28Z'
   entry_count: 67
 entries:
   - id: narwhals:index.md
@@ -787,7 +787,7 @@ entries:
       - hierarchy
     concepts:
       - type-system
-    stale: false
+    stale: true
     keywords:
       - Int128
       - UInt128
@@ -800,6 +800,7 @@ entries:
       - Struct
       - List
     last_indexed: '2026-07-02T00:00:00Z'
+    stale_since: "2026-11-02T15:15:28Z"
   - id: narwhals:api-reference/selectors.md
     source: narwhals
     title: Selectors API Reference
