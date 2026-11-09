@@ -1,6 +1,6 @@
 # dlt Documentation Index
 
-> Sources: 1 | Entries: 219 | Generated: 2026-11-02T15:15:32Z
+> Sources: 1 | Entries: 222 | Generated: 2026-11-09T15:43:21Z
 > Generated from `index.yaml` — do not edit directly
 
 ---
@@ -229,6 +229,7 @@
 - **null** `dlt:walkthroughs/deploy-a-pipeline/index.md` - Overview of dlt deployment options: runs anywhere Python runs. Lists deployment guides for GitHub Actions, Airflow/Composer, Google Cloud Functions, Prefect, and dltHub managed platform. Highlights dlthub deploy as simplest path.
 - **null** `dlt:walkthroughs/deploy-a-pipeline/orchestrate-with-dlthub.md` - Walkthrough for deploying and scheduling dlt pipelines with dltHub's managed orchestrator using @dlt.hub.run decorators. Covers workspace scaffolding, ad-hoc runs, __deployment__.py manifest, and trigger configuration.
 - **1.31** `dlt:release-notes/1.31.md` - Pending re-scan
+- **1.32** `dlt:release-notes/1.32.md` - Pending re-scan
 - **2026 09 24** `dlt:hub/release-notes/2026-09-24.md` - Pending re-scan
 - **agent definitions** `dlt:hub/agents/agent-definitions.md` - Pending re-scan
 - **agents** `dlt:hub/getting-started/agents.md` - Pending re-scan
@@ -240,8 +241,10 @@
 - **overview** `dlt:hub/reference/api/overview.md` - Pending re-scan
 - **partition pruning** `dlt:examples/partition_pruning.md` - Pending re-scan
 - **playground workspace** `dlt:hub/getting-started/playground-workspace.md` - Pending re-scan
+- **servicenow** `dlt:dlt-ecosystem/verified-sources/servicenow.md` - Pending re-scan
+- **sharepoint** `dlt:dlt-ecosystem/verified-sources/sharepoint.md` - Pending re-scan
 - **toolkits** `dlt:hub/ai-harness/toolkits.md` - Pending re-scan
 
 ---
 
-*Rendered from index.yaml at 2026-11-02T15:15:32Z*
+*Rendered from index.yaml at 2026-11-09T15:43:21Z*

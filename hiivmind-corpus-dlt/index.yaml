@@ -3399,7 +3399,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-10-26T12:34:43Z"
+    stale_since: "2026-11-09T15:43:21Z"
   - id: dlt:dlt-ecosystem/verified-sources/jira.md
     source: dlt
     path: dlt-ecosystem/verified-sources/jira.md
@@ -3454,7 +3454,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-11-02T15:15:32Z"
+    stale_since: "2026-11-09T15:43:21Z"
   - id: dlt:dlt-ecosystem/verified-sources/kafka.md
     source: dlt
     path: dlt-ecosystem/verified-sources/kafka.md
@@ -3613,7 +3613,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-11-02T15:15:32Z"
+    stale_since: "2026-11-09T15:43:21Z"
   - id: dlt:dlt-ecosystem/verified-sources/mux.md
     source: dlt
     path: dlt-ecosystem/verified-sources/mux.md
@@ -4148,7 +4148,7 @@ entries:
     frontmatter: {}
     stale: true
     last_indexed: '2026-04-18T14:38:30Z'
-    stale_since: "2026-11-02T15:15:32Z"
+    stale_since: "2026-11-09T15:43:21Z"
   - id: dlt:dlt-ecosystem/verified-sources/scrapy.md
     source: dlt
     path: dlt-ecosystem/verified-sources/scrapy.md
@@ -10865,6 +10865,45 @@ entries:
     stale: true
     stale_since: "2026-11-02T15:15:32Z"
     last_indexed: "2026-11-02T15:15:32Z"
+  - id: dlt:dlt-ecosystem/verified-sources/servicenow.md
+    source: dlt
+    path: dlt-ecosystem/verified-sources/servicenow.md
+    title: servicenow
+    summary: Pending re-scan
+    tags: []
+    keywords: []
+    category: unknown
+    content_type: markdown
+    size: standard
+    stale: true
+    stale_since: "2026-11-09T15:43:21Z"
+    last_indexed: "2026-11-09T15:43:21Z"
+  - id: dlt:dlt-ecosystem/verified-sources/sharepoint.md
+    source: dlt
+    path: dlt-ecosystem/verified-sources/sharepoint.md
+    title: sharepoint
+    summary: Pending re-scan
+    tags: []
+    keywords: []
+    category: unknown
+    content_type: markdown
+    size: standard
+    stale: true
+    stale_since: "2026-11-09T15:43:21Z"
+    last_indexed: "2026-11-09T15:43:21Z"
+  - id: dlt:release-notes/1.32.md
+    source: dlt
+    path: release-notes/1.32.md
+    title: "1.32"
+    summary: Pending re-scan
+    tags: []
+    keywords: []
+    category: unknown
+    content_type: markdown
+    size: standard
+    stale: true
+    stale_since: "2026-11-09T15:43:21Z"
+    last_indexed: "2026-11-09T15:43:21Z"
 meta:
-  generated_at: '2026-11-02T15:15:32Z'
-  entry_count: 219
+  generated_at: '2026-11-09T15:43:21Z'
+  entry_count: 222
