@@ -1,8 +1,8 @@
 meta:
   corpus: polars
   source: polars
-  generated_at: '2026-11-02T15:15:26Z'
-  entry_count: 112
+  generated_at: '2026-11-15T00:53:26Z'
+  entry_count: 79
 entries:
   - id: polars:index.md
     source: polars
@@ -18,13 +18,59 @@ entries:
     category: tutorial
   - id: polars:user-guide/getting-started.md
     source: polars
-    title: Getting Started
-    summary: First steps with Polars, basic DataFrame operations
+    stale: false
+    stale_since: null
+    title: Getting started
+    summary: 'A tour of the fundamentals of Polars: installing it, reading and writing data, using expressions in the select, with_columns, filter and group_by contexts, and combining dataframes with joins and concatenation.'
     tags:
       - getting-started
+      - expressions
+      - contexts
       - tutorial
-      - basics
     category: tutorial
+    keywords:
+      - select
+      - with_columns
+      - filter
+      - group_by
+      - agg
+      - read_csv
+      - write_csv
+      - join
+      - concat
+      - expression expansion
+    concepts:
+      - expressions
+    content_type: markdown
+    size: standard
+    grep_hint: null
+    headings:
+      - anchor: getting-started
+        title: Getting started
+      - anchor: installing-polars
+        title: Installing Polars
+      - anchor: reading-writing
+        title: Reading & writing
+      - anchor: expressions-and-contexts
+        title: Expressions and contexts
+      - anchor: select
+        title: '`select`'
+      - anchor: with_columns
+        title: '`with_columns`'
+      - anchor: filter
+        title: '`filter`'
+      - anchor: group_by
+        title: '`group_by`'
+      - anchor: more-complex-queries
+        title: More complex queries
+      - anchor: combining-dataframes
+        title: Combining dataframes
+      - anchor: joining-dataframes
+        title: Joining dataframes
+      - anchor: concatenating-dataframes
+        title: Concatenating dataframes
+    path: user-guide/getting-started.md
+    last_indexed: '2026-11-15T00:52:35Z'
   - id: polars:user-guide/installation.md
     source: polars
     title: Installation
@@ -175,32 +221,74 @@ entries:
     category: reference
   - id: polars:user-guide/lazy/sources_sinks.md
     source: polars
-    title: Sources and Sinks
-    summary: Lazy reading/writing from various formats. Multiplexing sinks for writing to multiple outputs simultaneously. PartitionBy for splitting output across files with max_rows_per_file
+    title: Sources and sinks
+    summary: Explains why LazyFrame queries should use scan_* readers, and how sinks stream query results to disk or cloud storage, including partitioned output, failure behaviour and multiplexing several sinks in one query.
     tags:
-      - sources
-      - sinks
       - lazy
       - io
-      - multiplexing
-      - partitioning
+      - streaming
+      - sinks
     concepts:
       - lazy-evaluation
-    category: reference
-    stale: true
-    stale_since: "2026-11-02T15:15:26Z"
+    category: guide
+    stale: false
+    stale_since: null
+    keywords:
+      - scan_csv
+      - scan_parquet
+      - sink_parquet
+      - sink_ipc
+      - PartitionBy
+      - max_rows_per_file
+      - collect_all
+      - lazy=True
+    content_type: markdown
+    size: standard
+    grep_hint: null
+    headings:
+      - anchor: sources-and-sinks
+        title: Sources and sinks
+      - anchor: scan
+        title: Scan
+      - anchor: sink
+        title: Sink
+      - anchor: multiplexing-sinks
+        title: Multiplexing sinks
+    path: user-guide/lazy/sources_sinks.md
+    last_indexed: '2026-11-15T00:52:35Z'
   - id: polars:user-guide/concepts/streaming.md
     source: polars
+    stale: false
+    stale_since: null
     title: Streaming
-    summary: Out-of-core processing for datasets larger than RAM
+    summary: Describes executing lazy queries in batches with the streaming engine, how to inspect the physical plan of a streaming query, and how to monitor per-node metrics in Polars Nanook.
     tags:
       - streaming
-      - out-of-core
-      - memory
-      - large-datasets
+      - lazy
+      - performance
+      - concepts
     concepts:
       - lazy-evaluation
-    category: reference
+    category: guide
+    keywords:
+      - engine="streaming"
+      - collect
+      - physical plan
+      - in-memory engine
+      - Polars Nanook
+      - query monitoring
+    content_type: markdown
+    size: standard
+    grep_hint: null
+    headings:
+      - anchor: streaming
+        title: Streaming
+      - anchor: inspecting-a-streaming-query
+        title: Inspecting a streaming query
+      - anchor: monitoring-a-streaming-query
+        title: Monitoring a streaming query
+    path: user-guide/concepts/streaming.md
+    last_indexed: '2026-11-15T00:52:35Z'
   - id: polars:user-guide/expressions/basic-operations.md
     source: polars
     title: Basic Operations
@@ -217,47 +305,180 @@ entries:
     category: reference
   - id: polars:user-guide/expressions/expression-expansion.md
     source: polars
-    title: Expression Expansion
-    summary: 'Apply same transformation to multiple columns: pl.col(''a'', ''b''), pl.col(pl.Float64), pl.all(), pl.exclude()'
+    stale: false
+    stale_since: null
+    title: Expression expansion
+    summary: Shows how one expression can expand to many by column name, data type or regex, how to exclude and rename columns, how to generate expressions programmatically, and how to use selectors with set operations. Ends with a reference of selector functions.
     tags:
+      - expressions
       - expression-expansion
-      - multi-column
-      - pl-col
-      - pl-all
-      - pl-exclude
+      - selectors
+      - columns
     concepts:
       - expressions
-    category: reference
+    category: guide
+    keywords:
+      - col
+      - all
+      - exclude
+      - alias
+      - name.prefix
+      - name.suffix
+      - name.map
+      - selectors
+      - as_expr
+      - expand_selector
+      - is_selector
+    content_type: markdown
+    size: standard
+    grep_hint: null
+    headings:
+      - anchor: expression-expansion
+        title: Expression expansion
+      - anchor: function-col
+        title: Function `col`
+      - anchor: explicit-expansion-by-column-name
+        title: Explicit expansion by column name
+      - anchor: expansion-by-data-type
+        title: Expansion by data type
+      - anchor: expansion-by-pattern-matching
+        title: Expansion by pattern matching
+      - anchor: arguments-cannot-be-of-mixed-types
+        title: Arguments cannot be of mixed types
+      - anchor: selecting-all-columns
+        title: Selecting all columns
+      - anchor: excluding-columns
+        title: Excluding columns
+      - anchor: column-renaming
+        title: Column renaming
+      - anchor: renaming-a-single-column-with-alias
+        title: Renaming a single column with `alias`
+      - anchor: prefixing-and-suffixing-column-names
+        title: Prefixing and suffixing column names
+      - anchor: dynamic-name-replacement
+        title: Dynamic name replacement
+      - anchor: programmatically-generating-expressions
+        title: Programmatically generating expressions
+      - anchor: more-flexible-column-selections
+        title: More flexible column selections
+      - anchor: combining-selectors-with-set-operations
+        title: Combining selectors with set operations
+      - anchor: resolving-operator-ambiguity
+        title: Resolving operator ambiguity
+      - anchor: debugging-selectors
+        title: Debugging selectors
+      - anchor: complete-reference
+        title: Complete reference
+      - anchor: selectors-for-data-types
+        title: Selectors for data types
+      - anchor: selectors-for-column-name-patterns
+        title: Selectors for column name patterns
+      - anchor: positional-selectors
+        title: Positional selectors
+      - anchor: miscellaneous-functions
+        title: Miscellaneous functions
+    path: user-guide/expressions/expression-expansion.md
+    last_indexed: '2026-11-15T00:52:35Z'
   - id: polars:user-guide/expressions/casting.md
     source: polars
+    stale: false
+    stale_since: null
     title: Casting
-    summary: Type conversion with cast(), strict vs lenient casting
+    summary: Explains converting column data types with cast, including the strict parameter, downcasting numerics, string/numeric and boolean conversions, and parsing or formatting temporal types.
     tags:
+      - expressions
       - casting
-      - type-conversion
-      - strict
-      - lenient
+      - data-types
     concepts:
       - expressions
       - casting-expressions
-    category: reference
+    category: guide
+    keywords:
+      - cast
+      - strict
+      - Int16
+      - Float32
+      - estimated_size
+      - dt.to_string
+      - str.to_datetime
+      - str.to_date
+      - epoch
+    content_type: markdown
+    size: standard
+    grep_hint: null
+    headings:
+      - anchor: casting
+        title: Casting
+      - anchor: basic-example
+        title: Basic example
+      - anchor: downcasting-numerical-data-types
+        title: Downcasting numerical data types
+      - anchor: converting-strings-to-numeric-data-types
+        title: Converting strings to numeric data types
+      - anchor: booleans
+        title: Booleans
+      - anchor: parsing-formatting-temporal-data-types
+        title: Parsing / formatting temporal data types
+    path: user-guide/expressions/casting.md
+    last_indexed: '2026-11-15T00:52:35Z'
   - id: polars:user-guide/expressions/strings.md
     source: polars
     title: Strings
-    summary: 'String namespace (str): splitting, slicing, regex matching, replacement, case conversion. Access via col(''name'').str.to_uppercase()'
+    summary: 'Covers working with string data through the str namespace: checking, extracting and replacing patterns with regex, concatenating, changing case, stripping characters and slicing.'
     tags:
+      - expressions
       - strings
-      - str-namespace
       - regex
-      - splitting
-      - case-conversion
+      - text
     concepts:
       - string-expressions
       - data-types
-    category: reference
-    stale: true
-    stale_since: '2026-06-30T06:25:20Z'
-    last_indexed: '2026-06-30T06:25:20Z'
+    category: guide
+    stale: false
+    stale_since: null
+    last_indexed: '2026-11-15T00:52:35Z'
+    keywords:
+      - str.len_bytes
+      - str.len_chars
+      - str.contains
+      - str.extract
+      - str.extract_all
+      - str.replace
+      - str.replace_all
+      - strip_chars
+      - str.slice
+      - to_titlecase
+    content_type: markdown
+    size: standard
+    grep_hint: null
+    headings:
+      - anchor: strings
+        title: Strings
+      - anchor: the-string-namespace
+        title: The string namespace
+      - anchor: parsing-strings
+        title: Parsing strings
+      - anchor: check-for-the-existence-of-a-pattern
+        title: Check for the existence of a pattern
+      - anchor: regex-specification
+        title: Regex specification
+      - anchor: extract-a-pattern
+        title: Extract a pattern
+      - anchor: replace-a-pattern
+        title: Replace a pattern
+      - anchor: modifying-strings
+        title: Modifying strings
+      - anchor: concatenating-strings
+        title: Concatenating strings
+      - anchor: case-conversion
+        title: Case conversion
+      - anchor: stripping-characters-from-the-ends
+        title: Stripping characters from the ends
+      - anchor: slicing
+        title: Slicing
+      - anchor: api-documentation
+        title: API documentation
+    path: user-guide/expressions/strings.md
   - id: polars:user-guide/expressions/lists-and-arrays.md
     source: polars
     title: Lists and Arrays
@@ -276,38 +497,113 @@ entries:
     category: reference
   - id: polars:user-guide/expressions/categorical-data-and-enums.md
     source: polars
-    title: Categorical Data and Enums
-    summary: Efficient string encoding. Categorical (runtime inference) vs Enum (predetermined categories). Cat namespace (cat). v1.32.0+ categoricals always use lexical ordering
+    title: Categorical data and enums
+    summary: Compares the Categorical and Enum data types for string columns with a limited set of values, showing how to create, order and compare them. Also explains why they are more performant than plain strings, including encodings and the shared global mapping.
     tags:
+      - expressions
       - categorical
       - enum
-      - cat-namespace
-      - encoding
-      - lexical-ordering
+      - data-types
+      - performance
     concepts:
       - data-types
-    category: reference
-    stale: true
-    stale_since: '2026-06-30T06:25:20Z'
-    last_indexed: '2026-06-30T06:25:20Z'
+    category: guide
+    stale: false
+    stale_since: null
+    last_indexed: '2026-11-15T00:52:35Z'
+    keywords:
+      - Enum
+      - Categorical
+      - pl.Categories
+      - physical
+      - namespace
+      - encoding
+      - global mapping
+      - lexical comparison
+      - cast
+    content_type: markdown
+    size: standard
+    grep_hint: null
+    headings:
+      - anchor: categorical-data-and-enums
+        title: Categorical data and enums
+      - anchor: enum-vs-categorical
+        title: '`Enum` vs `Categorical`'
+      - anchor: data-type-enum
+        title: Data type `Enum`
+      - anchor: creating-an-enum
+        title: Creating an `Enum`
+      - anchor: invalid-values
+        title: Invalid values
+      - anchor: category-ordering-and-comparison
+        title: Category ordering and comparison
+      - anchor: data-type-categorical
+        title: Data type `Categorical`
+      - anchor: creating-a-categorical-series
+        title: Creating a `Categorical` `Series`
+      - anchor: using-categories-objects
+        title: Using `Categories` objects
+      - anchor: lexical-comparison-with-strings
+        title: Lexical comparison with strings
+      - anchor: combining-categorical-columns
+        title: Combining `Categorical` columns
+      - anchor: performance-considerations-on-categorical-data-types
+        title: Performance considerations on categorical data types
+      - anchor: encodings
+        title: Encodings
+      - anchor: encodings-for-the-data-type-enum-are-fixed
+        title: Encodings for the data type `Enum` are fixed
+      - anchor: data-type-categorical-and-encodings
+        title: Data type `Categorical` and encodings
+    path: user-guide/expressions/categorical-data-and-enums.md
   - id: polars:user-guide/expressions/structs.md
     source: polars
     title: Structs
-    summary: 'Composite type for multiple fields. Struct namespace (struct): unnest() to expand, field() to extract, rename_fields(). Created by value_counts(), dict inference. Use for multi-column deduplication and ranking'
+    summary: 'Introduces the Struct data type: where it arises (such as value_counts), how to unnest, build, extract from and rename its fields, and practical uses like finding duplicate rows, multi-column ranking and passing several columns to one expression.'
     tags:
+      - expressions
       - structs
-      - struct-namespace
-      - unnest
-      - field
-      - composite-type
-      - deduplication
+      - data-types
     concepts:
       - collection-expressions
       - data-types
-    category: reference
-    stale: true
-    stale_since: '2026-06-30T06:25:20Z'
-    last_indexed: '2026-06-30T06:25:20Z'
+    category: guide
+    stale: false
+    stale_since: null
+    last_indexed: '2026-11-15T00:52:35Z'
+    keywords:
+      - Struct
+      - value_counts
+      - unnest
+      - struct.field
+      - struct.rename_fields
+      - is_duplicated
+      - is_unique
+      - over
+      - map_elements
+    content_type: markdown
+    size: standard
+    grep_hint: null
+    headings:
+      - anchor: structs
+        title: Structs
+      - anchor: encountering-the-data-type-struct
+        title: Encountering the data type `Struct`
+      - anchor: inferring-the-data-type-struct-from-dictionaries
+        title: Inferring the data type `Struct` from dictionaries
+      - anchor: extracting-individual-values-of-a-struct
+        title: Extracting individual values of a `Struct`
+      - anchor: renaming-individual-fields-of-a-struct
+        title: Renaming individual fields of a `Struct`
+      - anchor: practical-use-cases-of-struct-columns
+        title: Practical use-cases of `Struct` columns
+      - anchor: identifying-duplicate-rows
+        title: Identifying duplicate rows
+      - anchor: multi-column-ranking
+        title: Multi-column ranking
+      - anchor: using-multiple-columns-in-a-single-expression
+        title: Using multiple columns in a single expression
+    path: user-guide/expressions/structs.md
   - id: polars:user-guide/expressions/missing-data.md
     source: polars
     title: Missing Data
@@ -340,18 +636,51 @@ entries:
     category: reference
   - id: polars:user-guide/expressions/window-functions.md
     source: polars
-    title: Window Functions
-    summary: 'over() for group operations in select context. Ranking within groups, mapping strategies: group_to_rows (default), explode (faster), join. Windowed aggregations broadcast scalars'
+    stale: false
+    stale_since: null
+    title: Window functions
+    summary: 'Explains window functions with over: computing operations per group within select, the mapping strategies group_to_rows, explode and join, windowed aggregations that broadcast scalars, and further exercises using a Pokémon dataset.'
     tags:
+      - expressions
       - window-functions
-      - over
-      - ranking
-      - mapping-strategies
-      - broadcast
+      - aggregation
+      - groups
     concepts:
       - expressions
       - window-expressions
-    category: reference
+    category: guide
+    keywords:
+      - over
+      - mapping_strategy
+      - group_to_rows
+      - explode
+      - join
+      - rank
+      - group_by
+      - broadcast
+      - sort_by
+    content_type: markdown
+    size: standard
+    grep_hint: null
+    headings:
+      - anchor: window-functions
+        title: Window functions
+      - anchor: operations-per-group
+        title: Operations per group
+      - anchor: mapping-results-to-dataframe-rows
+        title: Mapping results to dataframe rows
+      - anchor: group_to_rows
+        title: '`group_to_rows`'
+      - anchor: explode
+        title: '`explode`'
+      - anchor: join
+        title: '`join`'
+      - anchor: windowed-aggregation-expressions
+        title: Windowed aggregation expressions
+      - anchor: more-examples
+        title: More examples
+    path: user-guide/expressions/window-functions.md
+    last_indexed: '2026-11-15T00:52:35Z'
   - id: polars:user-guide/expressions/folds.md
     source: polars
     title: Folds
@@ -412,19 +741,40 @@ entries:
   - id: polars:user-guide/transformations/concatenation.md
     source: polars
     title: Concatenation
-    summary: 'concat() modes: vertical (stack rows), horizontal (add columns), diagonal (combine both). Rechunking considerations'
+    summary: Describes vertical, horizontal and diagonal concatenation of DataFrames with concat, when each fails or produces nulls, and the rechunk option and its default.
     tags:
+      - transformations
       - concatenation
-      - vertical
-      - horizontal
-      - diagonal
-      - rechunking
+      - dataframe
     concepts:
       - transformations
-    category: reference
-    stale: true
-    stale_since: '2026-06-30T06:25:20Z'
-    last_indexed: '2026-06-30T06:25:20Z'
+    category: guide
+    stale: false
+    stale_since: null
+    last_indexed: '2026-11-15T00:52:35Z'
+    keywords:
+      - concat
+      - how="vertical"
+      - how="horizontal"
+      - horizontal_extend
+      - diagonal
+      - rechunk
+      - 'null'
+    content_type: markdown
+    size: standard
+    grep_hint: null
+    headings:
+      - anchor: concatenation
+        title: Concatenation
+      - anchor: vertical-concatenation-getting-longer
+        title: Vertical concatenation - getting longer
+      - anchor: horizontal-concatenation-getting-wider
+        title: Horizontal concatenation - getting wider
+      - anchor: diagonal-concatenation-getting-longer-wider-and-nullier
+        title: Diagonal concatenation - getting longer, wider and `null`ier
+      - anchor: rechunking
+        title: Rechunking
+    path: user-guide/transformations/concatenation.md
   - id: polars:user-guide/transformations/pivot.md
     source: polars
     title: Pivot
@@ -451,17 +801,48 @@ entries:
     category: reference
   - id: polars:user-guide/transformations/time-series/parsing.md
     source: polars
-    title: Parsing Dates and Times
-    summary: String to datetime conversion
+    stale: false
+    stale_since: null
+    title: Parsing
+    summary: Covers Polars' temporal data types and how to parse dates from CSV files, cast strings to dates, extract date features with the dt namespace, and handle datetimes with mixed UTC offsets.
     tags:
       - time-series
       - parsing
       - datetime
-      - conversion
+      - transformations
     concepts:
       - temporal-expressions
       - transformations
-    category: reference
+    category: guide
+    keywords:
+      - Date
+      - Datetime
+      - Duration
+      - Time
+      - try_parse_dates
+      - infer_schema_length
+      - str.to_date
+      - dt.year
+      - str.to_datetime
+      - convert_time_zone
+    content_type: markdown
+    size: standard
+    grep_hint: null
+    headings:
+      - anchor: parsing
+        title: Parsing
+      - anchor: datatypes
+        title: Datatypes
+      - anchor: parsing-dates-from-a-file
+        title: Parsing dates from a file
+      - anchor: casting-strings-to-dates
+        title: Casting strings to dates
+      - anchor: extracting-date-features-from-a-date-column
+        title: Extracting date features from a date column
+      - anchor: mixed-offsets
+        title: Mixed offsets
+    path: user-guide/transformations/time-series/parsing.md
+    last_indexed: '2026-11-15T00:52:35Z'
   - id: polars:user-guide/transformations/time-series/filter.md
     source: polars
     title: Filtering Time Series
@@ -579,15 +960,39 @@ entries:
     category: reference
   - id: polars:user-guide/io/excel.md
     source: polars
+    stale: false
+    stale_since: null
     title: Excel
-    summary: Reading Excel files
+    summary: Explains reading and writing Excel files from Python, the available read engines (fastexcel, xlsx2csv, openpyxl) and the xlsxwriter dependency for write_excel.
     tags:
       - io
       - excel
-      - spreadsheet
+      - python
     concepts:
       - io-operations
-    category: reference
+    category: guide
+    keywords:
+      - read_excel
+      - write_excel
+      - fastexcel
+      - calamine
+      - xlsx2csv
+      - openpyxl
+      - xlsxwriter
+      - sheet_name
+      - worksheet
+    content_type: markdown
+    size: standard
+    grep_hint: null
+    headings:
+      - anchor: excel
+        title: Excel
+      - anchor: read
+        title: Read
+      - anchor: write
+        title: Write
+    path: user-guide/io/excel.md
+    last_indexed: '2026-11-15T00:52:35Z'
   - id: polars:user-guide/io/database.md
     source: polars
     title: Database
@@ -665,29 +1070,96 @@ entries:
     category: reference
   - id: polars:user-guide/sql/intro.md
     source: polars
-    title: SQL Introduction
-    summary: SQL context for Polars DataFrames
+    title: Introduction
+    summary: 'Introduces SQL support in Polars through SQLContext: registering frames, attaching Iceberg catalogs and running DDL/DML against them, executing queries lazily or eagerly, querying multiple sources, and which SQL features are supported.'
     tags:
       - sql
-      - context
-      - interface
+      - sqlcontext
+      - iceberg
+      - catalog
     concepts:
       - sql-interface
-    category: reference
-    stale: true
-    stale_since: '2026-11-02T15:15:26Z'
-    last_indexed: '2026-06-30T06:25:20Z'
+    category: guide
+    stale: false
+    stale_since: null
+    last_indexed: '2026-11-15T00:52:35Z'
+    keywords:
+      - SQLContext
+      - register
+      - register_many
+      - register_globals
+      - unregister
+      - register_catalog
+      - execute
+      - eager
+      - CREATE TABLE
+      - scan_iceberg
+      - CTE
+    content_type: markdown
+    size: standard
+    grep_hint: null
+    headings:
+      - anchor: introduction
+        title: Introduction
+      - anchor: context
+        title: Context
+      - anchor: register-dataframes
+        title: Register Dataframes
+      - anchor: attach-an-iceberg-catalog
+        title: Attach an Iceberg catalog
+      - anchor: create-alter-write-and-drop-catalog-tables-and-schemas
+        title: Create, alter, write and drop catalog tables and schemas
+      - anchor: execute-queries-and-collect-results
+        title: Execute queries and collect results
+      - anchor: execute-queries-from-multiple-sources
+        title: Execute queries from multiple sources
+      - anchor: compatibility
+        title: Compatibility
+    path: user-guide/sql/intro.md
   - id: polars:user-guide/sql/select.md
     source: polars
-    title: SQL SELECT
-    summary: Query syntax for SQL interface
+    stale: false
+    stale_since: null
+    title: SELECT
+    summary: Shows the SELECT statement in Polars SQL, including GROUP BY, ORDER BY, JOIN, built-in functions, and the read_csv, read_ndjson, read_parquet and read_ipc table functions with their named options.
     tags:
       - sql
       - select
-      - query
+      - table-functions
+      - io
     concepts:
       - sql-interface
     category: reference
+    keywords:
+      - SELECT
+      - GROUP BY
+      - ORDER BY
+      - JOIN
+      - read_csv
+      - read_ndjson
+      - read_parquet
+      - read_ipc
+      - hive_partitioning
+      - schema_overrides
+      - infer_schema_length
+    content_type: markdown
+    size: standard
+    grep_hint: null
+    headings:
+      - anchor: select
+        title: SELECT
+      - anchor: group-by
+        title: GROUP BY
+      - anchor: order-by
+        title: ORDER BY
+      - anchor: join
+        title: JOIN
+      - anchor: functions
+        title: Functions
+      - anchor: table-functions
+        title: Table Functions
+    path: user-guide/sql/select.md
+    last_indexed: '2026-11-15T00:52:35Z'
   - id: polars:user-guide/sql/create.md
     source: polars
     title: SQL CREATE
@@ -780,16 +1252,41 @@ entries:
     category: reference
   - id: polars:user-guide/lazy/multiplexing.md
     source: polars
-    title: Multiplexing
-    summary: Efficient query reuse in lazy mode
+    stale: false
+    stale_since: null
+    title: Multiplexing queries
+    summary: Explains why branching a LazyFrame re-evaluates its query plan on every collect, which can give unstable results, and how collect_all combines the diverging plans into one optimized execution with shared subplans.
     tags:
-      - multiplexing
-      - query-reuse
       - lazy
-      - performance
+      - multiplexing
+      - query-plan
+      - optimization
     concepts:
       - lazy-evaluation
-    category: reference
+    category: guide
+    keywords:
+      - LazyFrame
+      - collect
+      - collect_all
+      - explain_all
+      - SINK_MULTIPLE
+      - CACHE
+      - group_by
+      - query plan
+    content_type: markdown
+    size: standard
+    grep_hint: null
+    headings:
+      - anchor: multiplexing-queries
+        title: Multiplexing queries
+      - anchor: eager
+        title: Eager
+      - anchor: lazy
+        title: Lazy
+      - anchor: combine-the-query-plans
+        title: Combine the query plans
+    path: user-guide/lazy/multiplexing.md
+    last_indexed: '2026-11-15T00:52:35Z'
   - id: polars:user-guide/plugins/index.md
     source: polars
     title: Plugins Overview
@@ -803,28 +1300,117 @@ entries:
     category: reference
   - id: polars:user-guide/plugins/expr_plugins.md
     source: polars
+    stale: false
+    stale_since: null
     title: Expression Plugins
-    summary: Custom expression functions in Rust for extending Polars
+    summary: Walks through creating a custom expression plugin in Rust, from the Cargo setup and the polars_expr function to the Python registration, with sections on accepting kwargs and computing output data types.
     tags:
       - plugins
       - expressions
       - rust
-      - custom-functions
+      - udf
     concepts:
       - plugins-extensibility
-    category: reference
+    category: tutorial
+    keywords:
+      - polars_expr
+      - register_plugin_function
+      - pyo3-polars
+      - maturin
+      - is_elementwise
+      - kwargs
+      - output_type_func
+      - FieldsMapper
+      - cdylib
+    content_type: markdown
+    size: standard
+    grep_hint: null
+    headings:
+      - anchor: expression-plugins
+        title: Expression Plugins
+      - anchor: our-first-custom-expression-pig-latin
+        title: 'Our first custom expression: Pig Latin'
+      - anchor: setting-up
+        title: Setting up
+      - anchor: writing-the-expression
+        title: Writing the expression
+      - anchor: accepting-kwargs
+        title: Accepting kwargs
+      - anchor: output-data-types
+        title: Output data types
+    path: user-guide/plugins/expr_plugins.md
+    last_indexed: '2026-11-15T00:52:35Z'
   - id: polars:user-guide/plugins/io_plugins.md
     source: polars
+    stale: false
+    stale_since: null
     title: IO Plugins
-    summary: Custom data source/sink implementations
+    summary: 'Describes the IO plugin interfaces for custom file formats: FileReader/FileReaderBuilder with scan_external_reader, LazyFrameResolver for dynamic path resolution, and generator-based sources registered with register_io_source.'
     tags:
       - plugins
       - io
-      - custom-sources
-      - custom-sinks
+      - custom-readers
+      - lazy
     concepts:
       - plugins-extensibility
-    category: reference
+    category: tutorial
+    keywords:
+      - scan_external_reader
+      - FileReader
+      - FileReaderBuilder
+      - ReaderCapabilities
+      - LazyFrameResolver
+      - register_io_source
+      - predicate pushdown
+      - projection pushdown
+      - pre_slice
+      - row_index
+    content_type: markdown
+    size: standard
+    grep_hint: null
+    headings:
+      - anchor: io-plugins
+        title: IO Plugins
+      - anchor: file-readers
+        title: File readers
+      - anchor: example-format
+        title: Example format
+      - anchor: the-reader
+        title: The reader
+      - anchor: the-builder
+        title: The builder
+      - anchor: using-the-reader
+        title: Using the reader
+      - anchor: filters
+        title: Filters
+      - anchor: tables-with-lazyframeresolver
+        title: Tables with `LazyFrameResolver`
+      - anchor: example-catalog
+        title: Example catalog
+      - anchor: the-resolver
+        title: The resolver
+      - anchor: versions-and-applied-filters
+        title: Versions and applied filters
+      - anchor: using-the-resolver
+        title: Using the resolver
+      - anchor: generator-based-io-sources
+        title: Generator-based IO sources
+      - anchor: use-case
+        title: Use case
+      - anchor: example
+        title: Example
+      - anchor: parsing-the-schema
+        title: Parsing the schema
+      - anchor: writing-the-source
+        title: Writing the source
+      - anchor: taking-it-for-a-very-slow-spin
+        title: Taking it for a (very slow) spin
+      - anchor: for-engine-authors-identifying-a-source
+        title: 'For engine authors: identifying a source'
+      - anchor: further-reading
+        title: Further reading
+    path: user-guide/plugins/io_plugins.md
+    last_indexed: '2026-11-15T00:52:35Z'
   - id: polars:user-guide/misc/visualization.md
     source: polars
     title: Visualization
@@ -838,316 +1424,199 @@ entries:
     category: reference
   - id: polars:user-guide/misc/styling.md
     source: polars
+    stale: false
+    stale_since: null
     title: Styling
-    summary: DataFrame display formatting
+    summary: Shows how to style a DataFrame for presentation with the DataFrame.style property, which returns a Great Tables object, covering headers, row stubs, column spanners, number formatting and cell styling.
     tags:
       - styling
-      - display
-      - formatting
-    category: reference
+      - great-tables
+      - presentation
+    category: guide
+    keywords:
+      - DataFrame.style
+      - Great Tables
+      - GT
+      - header
+      - stub
+      - spanner
+      - format
+      - highlight
+    content_type: markdown
+    size: standard
+    grep_hint: null
+    headings:
+      - anchor: styling
+        title: Styling
+      - anchor: structure-add-header-title
+        title: 'Structure: add header title'
+      - anchor: structure-add-row-stub
+        title: 'Structure: add row stub'
+      - anchor: structure-add-column-spanner
+        title: 'Structure: add column spanner'
+      - anchor: format-limit-decimal-places
+        title: 'Format: limit decimal places'
+      - anchor: style-highlight-max-row
+        title: 'Style: highlight max row'
+      - anchor: style-bold-species-column
+        title: 'Style: bold species column'
+      - anchor: full-example
+        title: Full example
+    path: user-guide/misc/styling.md
+    last_indexed: '2026-11-15T00:52:35Z'
   - id: polars:user-guide/misc/polars_llms.md
     source: polars
-    title: Polars for LLMs
-    summary: Using Polars with language models. Official MCP server at https://mcp.pola.rs/mcp for LLM access to Polars/Cloud docs via npx mcp-remote
+    title: Generating Polars code with LLMs
+    summary: 'Practical approaches for getting LLMs to produce valid Polars code: the Polars skill for agents, the Polars MCP server, system prompts, web search and including examples in prompts.'
     tags:
       - llm
-      - mcp
       - ai
-      - language-models
-    category: reference
-    stale: true
-    stale_since: '2026-06-30T06:25:20Z'
-    last_indexed: '2026-06-30T06:25:20Z'
+      - mcp
+      - prompting
+    category: guide
+    stale: false
+    stale_since: null
+    last_indexed: '2026-11-15T00:52:35Z'
+    keywords:
+      - LLM
+      - MCP server
+      - system prompt
+      - web search
+      - group_by
+      - groupby
+      - Polars skill
+      - Cursor
+      - examples
+    content_type: markdown
+    size: standard
+    grep_hint: null
+    headings:
+      - anchor: generating-polars-code-with-llms
+        title: Generating Polars code with LLMs
+      - anchor: polars-skill
+        title: Polars skill
+      - anchor: polars-mcp-server
+        title: Polars MCP server
+      - anchor: system-prompt
+        title: System prompt
+      - anchor: enable-web-search
+        title: Enable web search
+      - anchor: provide-examples
+        title: Provide examples
+    path: user-guide/misc/polars_llms.md
   - id: polars:user-guide/misc/comparison.md
     source: polars
-    title: Comparison
-    summary: Polars vs other tools
+    title: Comparison with other tools
+    summary: Short comparison of Polars with pandas, Dask, Modin, Spark and DuckDB, with links to benchmarks and migration guides.
     tags:
       - comparison
+      - pandas
+      - spark
+      - duckdb
+    category: guide
+    stale: false
+    stale_since: null
+    last_indexed: '2026-11-15T00:52:35Z'
+    keywords:
+      - pandas
+      - Dask
+      - Modin
+      - Spark
+      - PySpark
+      - DuckDB
       - benchmarks
-      - alternatives
-    category: reference
-    stale: true
-    stale_since: '2026-06-30T06:25:20Z'
-    last_indexed: '2026-06-30T06:25:20Z'
+      - Polars Nanook
+      - distributed engine
+    concepts:
+      - migration
+    content_type: markdown
+    size: standard
+    grep_hint: null
+    headings:
+      - anchor: comparison-with-other-tools
+        title: Comparison with other tools
+      - anchor: pandas
+        title: pandas
+      - anchor: dask
+        title: Dask
+      - anchor: modin
+        title: Modin
+      - anchor: spark
+        title: Spark
+      - anchor: duckdb
+        title: DuckDB
+    path: user-guide/misc/comparison.md
   - id: polars:user-guide/ecosystem.md
     source: polars
     title: Ecosystem
-    summary: Related libraries and integrations
+    summary: A non-exhaustive list of libraries and tools that integrate with Polars, grouped into Apache Arrow, IO, machine learning and other tools such as DuckDB, Great Tables, LanceDB, Mage, marimo and Narwhals.
     tags:
       - ecosystem
       - integrations
-      - libraries
-    category: reference
-    stale: true
-    stale_since: '2026-06-30T06:25:20Z'
-    last_indexed: '2026-06-30T06:25:20Z'
-  - id: polars:polars-cloud/context/compute-context.md
-    source: polars
-    title: Compute Context
-    summary: Create and configure compute contexts for distributed execution. Save as named manifests via register(), set global defaults with pc.set_compute_context(). Ephemeral contexts create new clusters; reuse clusters via manifests
-    tags:
-      - cloud
-      - compute-context
-      - distributed
-      - manifests
-      - clusters
+      - machine-learning
+      - arrow
+    category: navigation
+    stale: false
+    stale_since: null
+    last_indexed: '2026-11-15T00:52:35Z'
+    keywords:
+      - Apache Arrow
+      - Delta Lake
+      - scikit-learn
+      - XGBoost
+      - LightGBM
+      - Hugging Face
+      - to_torch
+      - to_jax
+      - DuckDB
+      - Narwhals
     concepts:
-      - distributed-execution
-    category: guide
-  - id: polars:polars-cloud/run/distributed-engine.md
-    source: polars
-    title: Distributed Engine
-    summary: Running queries on Polars Cloud distributed engine
-    tags:
-      - cloud
-      - distributed
-      - engine
-      - execution
-    concepts:
-      - distributed-execution
-    category: guide
-    stale: true
-    stale_since: '2026-06-30T06:25:20Z'
-    last_indexed: '2026-06-30T06:25:20Z'
-  - id: polars:polars-cloud/run/query-profile.md
-    source: polars
-    title: Query Profiler
-    summary: Visual query profiling with bottleneck indicators (CPU time, I/O time, memory-intensive, single-node, in-memory fallback). Distributed query walkthrough with stage graph analysis and cross-region I/O diagnosis
-    tags:
-      - cloud
-      - profiling
-      - bottleneck
-      - performance
-      - diagnostics
-    concepts:
-      - distributed-execution
-    category: guide
-  - id: polars:polars-cloud/run/glossary.md
-    source: polars
-    title: Distributed Glossary
-    summary: 'Key distributed execution terms: DSL, query, logical/physical plans, scheduler, worker, stage graph, stage, partition, shuffle'
-    tags:
-      - cloud
-      - glossary
-      - distributed
-      - terminology
-    concepts:
-      - distributed-execution
-    category: guide
-  - id: polars:polars-cloud/integrations/airflow.md
-    source: polars
-    title: Airflow Integration
-    summary: 'Comprehensive Airflow patterns: auth decorators, await_result(), cluster lifecycle management (context managers, named manifests, manual shutdown), parallel single-node execution, multi-stage pipelines'
-    tags:
-      - cloud
-      - airflow
-      - orchestration
-      - pipelines
-      - integration
-    concepts:
-      - distributed-execution
-    category: guide
-  - id: polars:polars-on-premises/index.md
-    source: polars
-    title: On-Premises Overview
-    summary: Deploying Polars as a self-hosted distributed engine
-    tags:
-      - on-premises
-      - self-hosted
-      - distributed
-      - deployment
-    concepts:
-      - distributed-execution
-    category: guide
-    stale: true
-    stale_since: '2026-06-30T06:25:20Z'
-    last_indexed: '2026-06-30T06:25:20Z'
-  - id: polars:polars-on-premises/bare-metal/getting-started.md
-    source: polars
-    title: On-Premises Getting Started
-    summary: Initial bare-metal deployment setup
-    tags:
-      - on-premises
-      - bare-metal
-      - setup
-      - getting-started
-    concepts:
-      - distributed-execution
-    category: guide
-    stale: true
-    stale_since: '2026-07-06T07:45:26Z'
-    last_indexed: '2026-06-30T06:25:20Z'
-  - id: polars:polars-on-premises/bare-metal/python-environment.md
-    source: polars
-    title: Python Environment
-    summary: Python environment configuration for on-premises deployment
-    tags:
-      - on-premises
-      - python
-      - environment
-      - configuration
-    concepts:
-      - on-premises-deployment
-    category: guide
-    stale: true
-    stale_since: '2026-06-30T06:25:20Z'
-    last_indexed: '2026-06-30T06:25:20Z'
-  - id: polars:polars-on-premises/bare-metal/environment-variables.md
-    source: polars
-    title: Environment Variables
-    summary: Environment variable reference for on-premises deployment
-    tags:
-      - on-premises
-      - environment-variables
-      - reference
-      - configuration
-    concepts:
-      - on-premises-deployment
-    category: guide
-    stale: true
-    stale_since: '2026-06-30T06:25:20Z'
-    last_indexed: '2026-06-30T06:25:20Z'
-  - id: polars:polars-on-premises/bare-metal/configuration/reference.md
-    source: polars
-    title: Configuration Reference
-    summary: 'Complete TOML config reference: cluster_id, instance_id, license, memory_limit, scheduler, worker, observatory, monitoring, static_leader. Env var overrides via PC_CUBLET__section__key'
-    tags:
-      - on-premises
-      - configuration
-      - toml
-      - reference
-    concepts:
-      - distributed-execution
-    category: config
-    stale: true
-    stale_since: '2026-07-06T07:45:26Z'
-    last_indexed: '2026-06-30T06:25:20Z'
-  - id: polars:polars-on-premises/bare-metal/configuration/example-configurations.md
-    source: polars
-    title: Example Configurations
-    summary: Complete TOML examples for single-node and multi-node clusters with all network ports customized
-    tags:
-      - on-premises
-      - configuration
-      - examples
-      - single-node
-      - multi-node
-    concepts:
-      - on-premises-deployment
-    category: config
-    stale: true
-    stale_since: "2026-07-06T07:45:26Z"
-  - id: polars:polars-on-premises/bare-metal/configuration/network-addresses.md
-    source: polars
-    title: Network Addresses
-    summary: 'All configurable network services: scheduler client/worker, observatory/REST API, worker task/shuffle. Default bind addresses and public address config for NAT/multi-node'
-    tags:
-      - on-premises
-      - network
-      - addresses
-      - ports
-      - nat
-    concepts:
-      - on-premises-deployment
-    category: config
-    stale: true
-    stale_since: '2026-06-30T06:25:20Z'
-    last_indexed: '2026-06-30T06:25:20Z'
-  - id: polars:polars-on-premises/bare-metal/configuration/resource-limits.md
-    source: polars
-    title: Resource Limits
-    summary: 'CPU and memory management: two-process architecture (main + executor), OOM behavior, delegated cgroup setup via memory_limit, manual systemd cgroup config'
-    tags:
-      - on-premises
-      - resources
-      - cpu
-      - memory
-      - cgroups
-      - oom
-    concepts:
-      - on-premises-deployment
-    category: config
-    stale: true
-    stale_since: '2026-07-06T07:45:26Z'
-    last_indexed: '2026-06-30T06:25:20Z'
-  - id: polars:polars-on-premises/bare-metal/configuration/license.md
-    source: polars
-    title: License
-    summary: License key requirements (JSON format), file path config, EULA acceptance via POLARS_EULA_ACCEPTED
-    tags:
-      - on-premises
-      - license
-      - eula
-      - configuration
-    concepts:
-      - on-premises-deployment
-    category: config
-    stale: true
-    stale_since: '2026-07-06T07:45:26Z'
-    last_indexed: '2026-06-30T06:25:20Z'
-  - id: polars:polars-on-premises/bare-metal/configuration/monitoring.md
-    source: polars
-    title: Monitoring
-    summary: 'Observatory and monitoring: SQLite profiling storage, in-memory host metrics buffer, cgroup-based metrics collection'
-    tags:
-      - on-premises
-      - monitoring
-      - observatory
-      - metrics
-      - sqlite
-    concepts:
-      - on-premises-deployment
-    category: config
-    stale: true
-    stale_since: '2026-06-30T06:25:20Z'
-    last_indexed: '2026-06-30T06:25:20Z'
-  - id: polars:polars-on-premises/bare-metal/configuration/anonymous-results.md
-    source: polars
-    title: Anonymous Results
-    summary: 'Configure anonymous results sink for remote queries without explicit output: shared filesystem (NFS/CephFS) and S3-compatible storage backends'
-    tags:
-      - on-premises
-      - anonymous-results
-      - nfs
-      - s3
-      - storage
-    concepts:
-      - on-premises-deployment
-    category: config
-    stale: true
-    stale_since: '2026-07-06T07:45:26Z'
-    last_indexed: '2026-06-30T06:25:20Z'
-  - id: polars:polars-on-premises/bare-metal/configuration/shuffle-data.md
-    source: polars
-    title: Shuffle Data
-    summary: 'Three shuffle storage options: worker-local SSD, shared filesystem (NFS/CephFS), S3-compatible. Performance trade-offs per option'
-    tags:
-      - on-premises
-      - shuffle
-      - storage
-      - ssd
-      - nfs
-      - s3
-      - performance
-    concepts:
-      - on-premises-deployment
-    category: config
-    stale: true
-    stale_since: '2026-07-06T07:45:26Z'
-    last_indexed: '2026-06-30T06:25:20Z'
-  - id: polars:polars-on-premises/bare-metal/configuration/static-leader.md
-    source: polars
-    title: Static Leader
-    summary: static_leader section identifying cluster leader node and public addresses, enabling shared config files with per-node instance_id overrides
-    tags:
-      - on-premises
-      - static-leader
-      - cluster
-      - configuration
-    concepts:
-      - on-premises-deployment
-    category: config
+      - arrow-interop
+    content_type: markdown
+    size: standard
+    grep_hint: null
+    headings:
+      - anchor: ecosystem
+        title: Ecosystem
+      - anchor: introduction
+        title: Introduction
+      - anchor: table-of-contents
+        title: 'Table of contents:'
+      - anchor: apache-arrow
+        title: Apache Arrow
+      - anchor: data-visualisation
+        title: Data visualisation
+      - anchor: io
+        title: IO
+      - anchor: delta-lake
+        title: Delta Lake
+      - anchor: machine-learning
+        title: Machine Learning
+      - anchor: scikit-learn
+        title: Scikit Learn
+      - anchor: xgboost-lightgbm
+        title: XGBoost & LightGBM
+      - anchor: time-series-forecasting
+        title: Time series forecasting
+      - anchor: hugging-face
+        title: Hugging Face
+      - anchor: deep-learning-frameworks
+        title: Deep learning frameworks
+      - anchor: other
+        title: Other
+      - anchor: duckdb
+        title: DuckDB
+      - anchor: great-tables
+        title: Great Tables
+      - anchor: lancedb
+        title: LanceDB
+      - anchor: mage
+        title: Mage
+      - anchor: marimo
+        title: marimo
+      - anchor: narwhals
+        title: Narwhals
+    path: user-guide/ecosystem.md
   - id: polars:api/reference.md
     source: polars
     title: Python/Rust API
@@ -1161,38 +1630,192 @@ entries:
     category: api
   - id: polars:development/contributing/index.md
     source: polars
-    title: Contributing
-    summary: 'How to contribute to Polars. Includes git bisect workflow for bug hunting. AI contribution policy: must disclose AI-generated code, attest personal review, no AI on good first issue tickets'
+    title: Overview
+    summary: 'The contributor guide for Polars: reporting bugs, suggesting enhancements, setting up a local Rust and Python environment, opening pull requests, contributing to documentation and the API reference, and the maintainer release flow.'
     tags:
       - contributing
       - development
-      - git-bisect
-      - ai-policy
+      - pull-requests
+      - documentation
     category: guide
-    stale: true
-    stale_since: '2026-07-06T07:45:26Z'
-    last_indexed: '2026-06-30T06:25:20Z'
+    stale: false
+    stale_since: null
+    last_indexed: '2026-11-15T00:52:35Z'
+    keywords:
+      - make test
+      - make pre-commit
+      - git bisect
+      - dprint
+      - code_block
+      - zensical
+      - conventional commit
+      - rustup
+      - release
+      - AI policy
+    content_type: markdown
+    size: standard
+    grep_hint: null
+    headings:
+      - anchor: overview
+        title: Overview
+      - anchor: reporting-bugs
+        title: Reporting bugs
+      - anchor: suggesting-enhancements
+        title: Suggesting enhancements
+      - anchor: contributing-to-the-codebase
+        title: Contributing to the codebase
+      - anchor: picking-an-issue
+        title: Picking an issue
+      - anchor: setting-up-your-local-environment
+        title: Setting up your local environment
+      - anchor: configuring-git
+        title: Configuring Git
+      - anchor: installing-dependencies
+        title: Installing dependencies
+      - anchor: updating-the-development-environment
+        title: Updating the development environment
+      - anchor: working-on-your-issue
+        title: Working on your issue
+      - anchor: finding-the-commit-that-introduced-a-bug
+        title: Finding the commit that introduced a bug
+      - anchor: pull-requests
+        title: Pull requests
+      - anchor: first-time-contributions
+        title: First-time contributions
+      - anchor: contributing-to-documentation
+        title: Contributing to documentation
+      - anchor: user-guide
+        title: User guide
+      - anchor: building-and-serving-the-user-guide
+        title: Building and serving the user guide
+      - anchor: creating-a-new-user-guide-page
+        title: Creating a new user guide page
+      - anchor: adding-a-shell-code-block
+        title: Adding a shell code block
+      - anchor: adding-a-code-block
+        title: Adding a code block
+      - anchor: linting
+        title: Linting
+      - anchor: api-reference
+        title: API reference
+      - anchor: rust
+        title: Rust
+      - anchor: python
+        title: Python
+      - anchor: stackoverflow
+        title: StackOverflow
+      - anchor: release-flow
+        title: Release flow
+      - anchor: steps
+        title: Steps
+      - anchor: troubleshooting
+        title: Troubleshooting
+      - anchor: license
+        title: License
+    path: development/contributing/index.md
   - id: polars:development/contributing/ide.md
     source: polars
-    title: IDE Setup
-    summary: Development environment setup
+    stale: false
+    stale_since: null
+    title: IDE configuration
+    summary: Recommendations for configuring VS Code (rust-analyzer, Ruff, CodeLLDB) for Polars development, including a combined Rust/Python debugging setup, plus a placeholder for JetBrains IDEs.
     tags:
-      - development
+      - contributing
       - ide
-      - setup
+      - vscode
+      - debugging
     category: guide
+    keywords:
+      - VSCode
+      - rust-analyzer
+      - Ruff
+      - CodeLLDB
+      - launch.json
+      - settings.json
+      - make build-debug
+      - ptrace_scope
+      - JetBrains
+    content_type: markdown
+    size: standard
+    grep_hint: null
+    headings:
+      - anchor: ide-configuration
+        title: IDE configuration
+      - anchor: visual-studio-code
+        title: Visual Studio Code
+      - anchor: extensions
+        title: Extensions
+      - anchor: rust-analyzer
+        title: rust-analyzer
+      - anchor: ruff
+        title: Ruff
+      - anchor: codelldb
+        title: CodeLLDB
+      - anchor: debugging
+        title: Debugging
+      - anchor: preparation
+        title: Preparation
+      - anchor: running-the-debugger
+        title: Running the debugger
+      - anchor: details
+        title: Details
+      - anchor: jetbrains-pycharm-rustrover-clion
+        title: JetBrains (PyCharm, RustRover, CLion)
+    path: development/contributing/ide.md
+    last_indexed: '2026-11-15T00:52:35Z'
   - id: polars:development/contributing/test.md
     source: polars
-    title: Testing
-    summary: Running tests
+    title: Test suite
+    summary: Describes the components of the py-polars test suite (unit, parametric, benchmark tests and doctests), how to run each, and guidelines for writing new tests and docstring examples.
     tags:
-      - development
+      - contributing
       - testing
-      - tests
+      - pytest
+      - doctest
     category: guide
-    stale: true
-    stale_since: '2026-06-30T06:25:20Z'
-    last_indexed: '2026-06-30T06:25:20Z'
+    stale: false
+    stale_since: null
+    last_indexed: '2026-11-15T00:52:35Z'
+    keywords:
+      - pytest
+      - make test
+      - hypothesis
+      - doctest
+      - IGNORE_RESULT
+      - benchmark
+      - pytest-xdist
+      - fixture
+      - parametrize
+      - make doctest
+    content_type: markdown
+    size: standard
+    grep_hint: null
+    headings:
+      - anchor: test-suite
+        title: Test suite
+      - anchor: unit-tests
+        title: Unit tests
+      - anchor: running-unit-tests
+        title: Running unit tests
+      - anchor: writing-unit-tests
+        title: Writing unit tests
+      - anchor: parametric-tests
+        title: Parametric tests
+      - anchor: running-parametric-tests
+        title: Running parametric tests
+      - anchor: doctests
+        title: Doctests
+      - anchor: running-doctest
+        title: Running `doctest`
+      - anchor: writing-doc-examples
+        title: Writing doc examples
+      - anchor: benchmark-tests
+        title: Benchmark tests
+      - anchor: generating-data
+        title: Generating data
+      - anchor: running-the-benchmark-tests
+        title: Running the benchmark tests
+    path: development/contributing/test.md
   - id: polars:development/contributing/ci.md
     source: polars
     title: CI
@@ -1231,23 +1854,168 @@ entries:
     category: reference
   - id: polars:releases/upgrade/1.md
     source: polars
-    title: Upgrade to 1.0
-    summary: Breaking changes in v1.0
+    stale: false
+    stale_since: null
+    title: Version 1.0
+    summary: Upgrade guide for Polars 1.0 listing breaking changes with before/after examples (Series constructor strictness, replace/replace_strict, parquet hive partitioning, pivot, read_excel engine and more) and the LazyFrame schema property deprecation.
     tags:
-      - releases
       - upgrade
       - breaking-changes
-      - v1
-    category: reference
+      - release-notes
+      - '1.0'
+    category: journal
+    keywords:
+      - strict
+      - replace_strict
+      - hive_partitioning
+      - pivot
+      - read_excel
+      - calamine
+      - group_by_dynamic
+      - collect_schema
+      - set_sorted
+      - null_on_oob
+      - serialize
+      - pl.sql
+    concepts:
+      - transformations
+    content_type: markdown
+    size: large
+    grep_hint: grep -n "^### " FILE
+    headings:
+      - anchor: version-10
+        title: Version 1.0
+      - anchor: breaking-changes
+        title: Breaking changes
+      - anchor: properly-apply-strict-parameter-in-series-constructor
+        title: Properly apply `strict` parameter in Series constructor
+      - anchor: change-data-orientation-inference-logic-for-dataframe-construction
+        title: Change data orientation inference logic for DataFrame construction
+      - anchor: consistently-convert-to-given-time-zone-in-series-constructor
+        title: Consistently convert to given time zone in Series constructor
+      - anchor: update-some-error-types-to-more-appropriate-variants
+        title: Update some error types to more appropriate variants
+      - anchor: update-readscan_parquet-to-disable-hive-partitioning-by-default-for-file-inputs
+        title: Update `read/scan_parquet` to disable Hive partitioning by default for file inputs
+      - anchor: update-reshape-to-return-array-types-instead-of-list-types
+        title: Update `reshape` to return Array types instead of List types
+      - anchor: read-2d-numpy-arrays-as-array-type-instead-of-list
+        title: Read 2D NumPy arrays as `Array` type instead of `List`
+      - anchor: split-replace-functionality-into-two-separate-methods
+        title: Split `replace` functionality into two separate methods
+      - anchor: preserve-nulls-in-ewm_mean-ewm_std-and-ewm_var
+        title: Preserve nulls in `ewm_mean`, `ewm_std`, and `ewm_var`
+      - anchor: update-clip-to-no-longer-propagate-nulls-in-the-given-bounds
+        title: Update `clip` to no longer propagate nulls in the given bounds
+      - anchor: change-strto_datetime-to-default-to-microsecond-precision-for-format-specifiers-f-and-f
+        title: Change `str.to_datetime` to default to microsecond precision for format specifiers `"%f"` and `"%.f"`
+      - anchor: example
+        title: Example
+      - anchor: update-resulting-column-names-in-pivot-when-pivoting-by-multiple-values
+        title: Update resulting column names in `pivot` when pivoting by multiple values
+      - anchor: support-decimal-types-by-default-when-converting-from-arrow
+        title: Support Decimal types by default when converting from Arrow
+      - anchor: remove-serde-functionality-from-plread_json-and-dataframewrite_json
+        title: Remove serde functionality from `pl.read_json` and `DataFrame.write_json`
+      - anchor: seriesequals-no-longer-checks-names-by-default
+        title: '`Series.equals` no longer checks names by default'
+      - anchor: remove-columns-parameter-from-nth-expression-function
+        title: Remove `columns` parameter from `nth` expression function
+      - anchor: rename-struct-fields-of-rle-output
+        title: Rename struct fields of `rle` output
+      - anchor: update-set_sorted-to-only-accept-a-single-column
+        title: Update `set_sorted` to only accept a single column
+      - anchor: default-to-raising-on-out-of-bounds-indices-in-all-getgather-operations
+        title: Default to raising on out-of-bounds indices in all `get`/`gather` operations
+      - anchor: change-default-engine-for-read_excel-to-calamine
+        title: Change default engine for `read_excel` to `"calamine"`
+      - anchor: example_1
+        title: Example
+      - anchor: remove-class-variables-from-some-datatypes
+        title: Remove class variables from some DataTypes
+      - anchor: change-default-offset-in-group_by_dynamic-from-negative-every-to-zero
+        title: Change default `offset` in `group_by_dynamic` from 'negative `every`' to 'zero'
+      - anchor: change-default-serialization-format-of-lazyframedataframeexpr
+        title: Change default serialization format of `LazyFrame/DataFrame/Expr`
+      - anchor: constrain-access-to-globals-from-dataframesql-in-favor-of-plsql
+        title: Constrain access to globals from `DataFrame.sql` in favor of `pl.sql`
+      - anchor: remove-re-export-of-type-aliases
+        title: Remove re-export of type aliases
+      - anchor: streamline-optional-dependency-definitions-in-pyprojecttoml
+        title: Streamline optional dependency definitions in `pyproject.toml`
+      - anchor: deprecations
+        title: Deprecations
+      - anchor: issue-performancewarning-when-lazyframe-properties-schemadtypescolumnswidth-are-used
+        title: Issue `PerformanceWarning` when LazyFrame properties `schema/dtypes/columns/width` are used
+    path: releases/upgrade/1.md
+    last_indexed: '2026-11-15T00:52:35Z'
   - id: polars:releases/upgrade/0.20.md
     source: polars
-    title: Upgrade to 0.20
-    summary: Changes in v0.20
+    stale: false
+    stale_since: null
+    title: Version 0.20
+    summary: Upgrade guide for Polars 0.20 listing breaking changes with before/after examples (join null handling, outer join keys, count ignoring nulls, NaN equality, data type instantiation, replace, value_counts) and the cum_* renames.
     tags:
-      - releases
       - upgrade
-      - v0-20
-    category: reference
+      - breaking-changes
+      - release-notes
+      - '0.20'
+    category: journal
+    keywords:
+      - join_nulls
+      - nulls_equal
+      - outer_coalesce
+      - count
+      - len
+      - NaN
+      - value_counts
+      - replace
+      - read_parquet
+      - cum_sum
+      - DataType
+      - Decimal
+    concepts:
+      - null-handling
+    content_type: markdown
+    size: standard
+    grep_hint: null
+    headings:
+      - anchor: version-020
+        title: Version 0.20
+      - anchor: breaking-changes
+        title: Breaking changes
+      - anchor: change-default-join-behavior-with-regard-to-null-values
+        title: Change default `join` behavior with regard to null values
+      - anchor: preserve-left-and-right-join-keys-in-outer-joins
+        title: Preserve left and right join keys in outer joins
+      - anchor: count-now-ignores-null-values
+        title: '`count` now ignores null values'
+      - anchor: nan-values-are-now-considered-equal
+        title: '`NaN` values are now considered equal'
+      - anchor: assertion-utils-updates-to-exact-checking-and-nan-equality
+        title: Assertion utils updates to exact checking and `NaN` equality
+      - anchor: allow-all-datatype-objects-to-be-instantiated
+        title: Allow all `DataType` objects to be instantiated
+      - anchor: update-constructors-for-decimal-and-array-data-types
+        title: Update constructors for `Decimal` and `Array` data types
+      - anchor: datatypeis_nested-changed-from-a-property-to-a-class-method
+        title: '`DataType.is_nested` changed from a property to a class method'
+      - anchor: smaller-integer-data-types-for-datetime-components-dtmonth-dtweek
+        title: Smaller integer data types for datetime components `dt.month`, `dt.week`
+      - anchor: series-now-defaults-to-null-data-type-when-no-data-is-present
+        title: Series now defaults to `Null` data type when no data is present
+      - anchor: replace-reimplemented-with-slightly-different-behavior
+        title: '`replace` reimplemented with slightly different behavior'
+      - anchor: value_counts-resulting-column-renamed-from-counts-to-count
+        title: '`value_counts` resulting column renamed from `counts` to `count`'
+      - anchor: update-read_parquet-to-use-object-store-rather-than-fsspec
+        title: Update `read_parquet` to use Object Store rather than fsspec
+      - anchor: deprecations
+        title: Deprecations
+      - anchor: cumulative-functions-renamed-from-cum-to-cum_
+        title: Cumulative functions renamed from `cum*` to `cum_*`
+    path: releases/upgrade/0.20.md
+    last_indexed: '2026-11-15T00:52:35Z'
   - id: polars:releases/upgrade/0.19.md
     source: polars
     title: Upgrade to 0.19
@@ -1257,260 +2025,3 @@ entries:
       - upgrade
       - v0-19
     category: reference
-  - id: polars:polars-on-premises/bare-metal/configuration/anonymous-users.md
-    source: polars
-    path: polars-on-premises/bare-metal/configuration/anonymous-users.md
-    title: Anonymous Users
-    summary: Pending re-scan
-    tags: []
-    keywords: []
-    concepts: []
-    category: config
-    content_type: markdown
-    size: standard
-    stale: true
-    stale_since: '2026-06-30T06:25:20Z'
-    last_indexed: '2026-06-30T06:25:20Z'
-  - id: polars:polars-on-premises/bare-metal/configuration/openlineage.md
-    source: polars
-    path: polars-on-premises/bare-metal/configuration/openlineage.md
-    title: OpenLineage
-    summary: Pending re-scan
-    tags: []
-    keywords: []
-    concepts: []
-    category: config
-    content_type: markdown
-    size: standard
-    stale: true
-    stale_since: '2026-06-30T06:25:20Z'
-    last_indexed: '2026-06-30T06:25:20Z'
-  - id: polars:polars-on-premises/bare-metal/configuration/persistence.md
-    source: polars
-    path: polars-on-premises/bare-metal/configuration/persistence.md
-    title: Persistence
-    summary: Pending re-scan
-    tags: []
-    keywords: []
-    concepts: []
-    category: config
-    content_type: markdown
-    size: standard
-    stale: true
-    stale_since: '2026-06-30T06:25:20Z'
-    last_indexed: '2026-06-30T06:25:20Z'
-  - id: polars:polars-on-premises/bare-metal/misc/slurm.md
-    source: polars
-    path: polars-on-premises/bare-metal/misc/slurm.md
-    title: Slurm Quickstart
-    summary: 'Guide to running Polars On-Prem on Slurm clusters: static leader election, scheduler/worker TOML config generation, sbatch job scripts using polars-cloud ClusterContext, and parallel query submission via `srun`.'
-    tags:
-      - on-premises
-      - slurm
-      - bare-metal
-      - deployment
-      - scheduler
-      - worker
-    keywords:
-      - sbatch
-      - srun
-      - ClusterContext
-      - static_leader
-      - shuffle_location
-      - polars-on-premises
-      - uv
-    concepts: []
-    category: guide
-    content_type: markdown
-    size: standard
-    stale: true
-    last_indexed: '2026-07-02T00:00:00Z'
-    stale_since: "2026-07-06T07:45:26Z"
-  - id: polars:polars-on-premises/billing/index.md
-    source: polars
-    path: polars-on-premises/billing/index.md
-    title: Billing Overview
-    summary: Pending re-scan
-    tags: []
-    keywords: []
-    concepts: []
-    category: guide
-    content_type: markdown
-    size: standard
-    stale: true
-    stale_since: '2026-06-30T06:25:20Z'
-    last_indexed: '2026-06-30T06:25:20Z'
-  - id: polars:polars-on-premises/getting-started.md
-    source: polars
-    path: polars-on-premises/getting-started.md
-    title: On-Premises Getting Started
-    summary: 'Kubernetes quickstart for Polars On-Prem: create workspace and service account via CLI or portal, deploy 2-worker cluster with Helm chart, port-forward scheduler/observatory/storage, then run a remote LazyFrame query.'
-    tags:
-      - on-premises
-      - kubernetes
-      - getting-started
-      - helm
-      - deployment
-    keywords:
-      - kubectl
-      - helm
-      - ClusterContext
-      - polars_cloud
-      - service-account
-      - pc login
-      - port-forward
-    concepts: []
-    category: tutorial
-    content_type: markdown
-    size: standard
-    stale: false
-    last_indexed: '2026-07-02T00:00:00Z'
-  - id: polars:polars-on-premises/integrations/openlineage.md
-    source: polars
-    path: polars-on-premises/integrations/openlineage.md
-    title: OpenLineage Integration
-    summary: Pending re-scan
-    tags: []
-    keywords: []
-    concepts: []
-    category: guide
-    content_type: markdown
-    size: standard
-    stale: true
-    stale_since: '2026-06-30T06:25:20Z'
-    last_indexed: '2026-06-30T06:25:20Z'
-  - id: polars:polars-on-premises/kubernetes/cloud-providers/amazon-elastic-kubernetes-service.md
-    source: polars
-    path: polars-on-premises/kubernetes/cloud-providers/amazon-elastic-kubernetes-service.md
-    title: EKS Deployment
-    summary: Pending re-scan
-    tags: []
-    keywords: []
-    concepts: []
-    category: guide
-    content_type: markdown
-    size: standard
-    stale: true
-    stale_since: '2026-06-30T06:25:20Z'
-    last_indexed: '2026-06-30T06:25:20Z'
-  - id: polars:polars-on-premises/kubernetes/cloud-providers/azure-kubernetes-service.md
-    source: polars
-    path: polars-on-premises/kubernetes/cloud-providers/azure-kubernetes-service.md
-    title: AKS Deployment
-    summary: Pending re-scan
-    tags: []
-    keywords: []
-    concepts: []
-    category: guide
-    content_type: markdown
-    size: standard
-    stale: true
-    stale_since: '2026-06-30T06:25:20Z'
-    last_indexed: '2026-06-30T06:25:20Z'
-  - id: polars:polars-on-premises/kubernetes/cloud-providers/google-kubernetes-engine.md
-    source: polars
-    path: polars-on-premises/kubernetes/cloud-providers/google-kubernetes-engine.md
-    title: GKE Deployment
-    summary: Pending re-scan
-    tags: []
-    keywords: []
-    concepts: []
-    category: guide
-    content_type: markdown
-    size: standard
-    stale: true
-    stale_since: '2026-06-30T06:25:20Z'
-    last_indexed: '2026-06-30T06:25:20Z'
-  - id: polars:polars-on-premises/kubernetes/index.md
-    source: polars
-    path: polars-on-premises/kubernetes/index.md
-    title: Kubernetes Deployment Overview
-    summary: 'Full Kubernetes deployment reference for Polars On-Prem: Helm chart parameters, deployed resources (scheduler/workers/storage pods), production config for anonymous results (S3/SeaweedFS), shuffle storage options, resource limits, OOM behavior on cgroup v2, and air-gapped Enterprise mode.'
-    tags:
-      - on-premises
-      - kubernetes
-      - deployment
-      - production
-      - helm
-      - configuration
-    keywords:
-      - anonymousResults
-      - shuffleData
-      - oom_score_adj
-      - cgroup-v2
-      - SeaweedFS
-      - MinIO
-      - enterprise
-      - air-gapped
-    concepts: []
-    category: guide
-    content_type: markdown
-    size: standard
-    stale: true
-    last_indexed: '2026-07-02T00:00:00Z'
-    stale_since: "2026-07-06T07:45:26Z"
-  - id: polars:polars-on-premises/releases.md
-    source: polars
-    path: polars-on-premises/releases.md
-    title: On-Premises Releases
-    summary: Release history for Polars On-Prem; latest 0.6.3 (1 Jul 2026) bundles polars 1.42.1 and polars-cloud 0.9.0 with distributed Expression lowering, improved ClusterContext API, distributed Iceberg sink, manual cluster scaling, and new disk I/O metrics.
-    tags:
-      - releases
-      - changelog
-      - on-premises
-      - versioning
-    keywords:
-      - polars-cloud
-      - ClusterContext
-      - Iceberg
-      - distributed
-      - scaling
-      - 0.6.3
-      - helm-chart
-    concepts: []
-    category: journal
-    content_type: markdown
-    size: standard
-    stale: false
-    last_indexed: '2026-07-02T00:00:00Z'
-  - id: polars:polars-on-premises/run/distributed-engine.md
-    source: polars
-    path: polars-on-premises/run/distributed-engine.md
-    title: Distributed Engine
-    summary: Pending re-scan
-    tags: []
-    keywords: []
-    concepts: []
-    category: guide
-    content_type: markdown
-    size: standard
-    stale: true
-    stale_since: '2026-06-30T06:25:20Z'
-    last_indexed: '2026-06-30T06:25:20Z'
-  - id: polars:polars-on-premises/run/remote-query.md
-    source: polars
-    path: polars-on-premises/run/remote-query.md
-    title: Remote Query Execution
-    summary: Pending re-scan
-    tags: []
-    keywords: []
-    concepts: []
-    category: guide
-    content_type: markdown
-    size: standard
-    stale: true
-    stale_since: '2026-06-30T06:25:20Z'
-    last_indexed: '2026-06-30T06:25:20Z'
-  - id: polars:polars-on-premises/bare-metal/configuration/checkpointing.md
-    source: polars
-    path: polars-on-premises/bare-metal/configuration/checkpointing.md
-    title: checkpointing
-    summary: Pending re-scan
-    tags: []
-    keywords: []
-    category: unknown
-    content_type: markdown
-    size: standard
-    stale: true
-    stale_since: "2026-07-06T07:45:26Z"
-    last_indexed: "2026-07-06T07:45:26Z"
