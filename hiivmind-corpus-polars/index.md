@@ -1,6 +1,6 @@
 # Polars Documentation Index
 
-> Sources: 1 | Entries: 112 | Generated: 2026-11-02T15:15:26Z
+> Sources: 1 | Entries: 112 | Generated: 2026-11-16T15:19:06Z
 > Generated from `index.yaml` — do not edit directly
 
 ---
@@ -140,4 +140,4 @@
 
 ---
 
-*Rendered from index.yaml at 2026-11-02T15:15:26Z*
+*Rendered from index.yaml at 2026-11-16T15:19:06Z*

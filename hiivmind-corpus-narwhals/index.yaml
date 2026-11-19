@@ -1,7 +1,7 @@
 meta:
   corpus: narwhals
   source: narwhals
-  generated_at: '2026-11-02T15:15:28Z'
+  generated_at: '2026-11-16T15:18:57Z'
   entry_count: 67
 entries:
   - id: narwhals:index.md
@@ -296,7 +296,7 @@ entries:
       - ecosystem
       - integrations
     last_indexed: '2026-07-02T00:00:00Z'
-    stale_since: "2026-10-26T12:34:49Z"
+    stale_since: "2026-11-16T15:18:57Z"
   - id: narwhals:security.md
     source: narwhals
     title: Security
@@ -587,7 +587,7 @@ entries:
     concepts:
       - dataframe-agnostic
     stale: true
-    stale_since: "2026-09-14T12:19:06Z"
+    stale_since: "2026-11-16T15:18:57Z"
   - id: narwhals:api-reference/expr.md
     source: narwhals
     title: Expr API Reference
@@ -815,7 +815,7 @@ entries:
       - type-system
     stale: true
     last_indexed: '2026-07-02T00:00:00Z'
-    stale_since: "2026-10-26T12:34:49Z"
+    stale_since: "2026-11-16T15:18:57Z"
   - id: narwhals:api-reference/typing.md
     source: narwhals
     title: Typing API Reference
